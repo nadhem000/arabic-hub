@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic Hub Education</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1a936f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Arabic Hub Education">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <style>
+        /* New Teal-Coral Theme */
+        :root {
+            --primary-color: #1a936f;
+            --secondary-color: #ff6b6b;
+            --accent-color: #4ecdc4;
+            --light-color: #f7f9f9;
+            --dark-color: #264653;
+            --text-color: #2d3748;
+            --heading-color: #1a202c;
+            --background-color: #f1faee;
+            --card-bg: #ffffff;
+            --definition-bg: #e9f5f3;
+            --border-color: #a8dadc;
+            --table-even-bg: #f7f9f9;
+            --table-hover-bg: #e9f5f3;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(26, 147, 111, 0.12);
+            --gradient-primary: linear-gradient(135deg, #1a936f 0%, #16855f 100%);
+            --gradient-secondary: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%);
+            --gradient-accent: linear-gradient(135deg, #4ecdc4 0%, #1a936f 100%);
+            --gradient-light: linear-gradient(135deg, #f1faee 0%, #e9f5f3 100%);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #2a9d8f;
+            --secondary-color: #e76f51;
+            --accent-color: #4ecdc4;
+            --light-color: #264653;
+            --dark-color: #1a1a2e;
+            --text-color: #e9ecef;
+            --heading-color: #f8f9fa;
+            --background-color: #1a1a2e;
+            --card-bg: #264653;
+            --definition-bg: #2a9d8f;
+            --border-color: #457b9d;
+            --table-even-bg: #264653;
+            --table-hover-bg: #2a9d8f;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+            --gradient-primary: linear-gradient(135deg, #2a9d8f 0%, #1a936f 100%);
+            --gradient-secondary: linear-gradient(135deg, #e76f51 0%, #ff6b6b 100%);
+            --gradient-accent: linear-gradient(135deg, #4ecdc4 0%, #2a9d8f 100%);
+            --gradient-light: linear-gradient(135deg, #264653 0%, #1a1a2e 100%);
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* RTL/LTR Support */
+        body.rtl {
+            direction: rtl;
+            text-align: right;
+        }
+
+        body.ltr {
+            direction: ltr;
+            text-align: left;
+        }
+
+        /* Homepage specific styles */
+        .ArabicH-homepage {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-homepage-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .ArabicH-homepage-title {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--heading-color);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .ArabicH-homepage-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-color);
+            max-width: 600px;
+            font-weight: 400;
+        }
+
+        .ArabicH-homepage-cards {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .ArabicH-homepage-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ArabicH-homepage-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--gradient-primary);
+        }
+
+        .ArabicH-homepage-card.secondary::before {
+            background: var(--gradient-secondary);
+        }
+
+        .ArabicH-homepage-card.accent::before {
+            background: var(--gradient-accent);
+        }
+
+        .ArabicH-homepage-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            border-color: var(--accent-color);
+        }
+
+        .ArabicH-homepage-card-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .ArabicH-homepage-card.secondary .ArabicH-homepage-card-icon {
+            color: var(--secondary-color);
+        }
+
+        .ArabicH-homepage-card.accent .ArabicH-homepage-card-icon {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-homepage-card-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            font-weight: 700;
+        }
+
+        .ArabicH-homepage-card-description {
+            color: var(--text-color);
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* Modal styles for homepage */
+        .ArabicH-homepage-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .ArabicH-homepage-modal-content {
+            background-color: var(--card-bg);
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            width: 80%;
+            max-width: 800px;
+            position: relative;
+            border-top: 6px solid var(--primary-color);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .ArabicH-homepage-modal.secondary .ArabicH-homepage-modal-content {
+            border-top-color: var(--secondary-color);
+        }
+
+        .ArabicH-homepage-modal.accent .ArabicH-homepage-modal-content {
+            border-top-color: var(--accent-color);
+        }
+
+        .ArabicH-homepage-modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: var(--text-color);
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s ease;
+            background: var(--light-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rtl .ArabicH-homepage-modal-close {
+            right: auto;
+            left: 20px;
+        }
+
+        .ArabicH-homepage-modal-close:hover {
+            color: var(--accent-color);
+            background: var(--table-hover-bg);
+        }
+
+        .ArabicH-homepage-modal-title {
+            color: var(--heading-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--border-color);
+            font-size: 2rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-homepage-year-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .ArabicH-homepage-year {
+            margin-bottom: 1.5rem;
+            background: var(--definition-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border-right: 4px solid var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .ArabicH-homepage-year:hover {
+            transform: translateX(5px);
+        }
+
+        .rtl .ArabicH-homepage-year {
+            border-right: none;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .rtl .ArabicH-homepage-year:hover {
+            transform: translateX(-5px);
+        }
+
+        .ArabicH-homepage-modal.accent .ArabicH-homepage-year {
+            border-right-color: var(--accent-color);
+        }
+
+        .rtl .ArabicH-homepage-modal.accent .ArabicH-homepage-year {
+            border-left-color: var(--accent-color);
+        }
+
+        .ArabicH-homepage-modal.secondary .ArabicH-homepage-year {
+            border-right-color: var(--secondary-color);
+        }
+
+        .rtl .ArabicH-homepage-modal.secondary .ArabicH-homepage-year {
+            border-left-color: var(--secondary-color);
+        }
+
+        .ArabicH-homepage-year-title {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 600;
+        }
+
+        .ArabicH-homepage-modal.accent .ArabicH-homepage-year-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-homepage-modal.secondary .ArabicH-homepage-year-title {
+            color: var(--secondary-color);
+        }
+
+        .ArabicH-homepage-year-title::before {
+            content: "📚";
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+
+        .rtl .ArabicH-homepage-year-title::before {
+            margin-left: 0;
+            margin-right: 10px;
+        }
+
+        .ArabicH-coming-soon {
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Header Styles */
+        .ArabicH-general-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            padding: 3rem 0;
+            box-shadow: var(--box-shadow);
+            border-bottom: 4px solid var(--secondary-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ArabicH-general-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .ArabicH-general-header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ArabicH-general-logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .ArabicH-general-logo {
+            width: 80px;
+            height: 80px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            border-radius: 50%;
+            background: white;
+            padding: 5px;
+        }
+
+        .ArabicH-general-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .ArabicH-general-title-container {
+            text-align: center;
+        }
+
+        .ArabicH-general-title-container h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            margin: 0;
+            background: linear-gradient(45deg, #ffffff, #e0f7fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .ArabicH-general-header-controls {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            justify-content: flex-start;
+        }
+
+        .rtl .ArabicH-general-header-controls {
+            justify-content: flex-end;
+        }
+
+        .ArabicH-general-theme-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .ArabicH-theme-toggle-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .ArabicH-theme-toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .rtl .ArabicH-theme-toggle-switch {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+
+        .ArabicH-theme-toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .ArabicH-theme-toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.3);
+            transition: .4s;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .ArabicH-theme-toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            right: 4px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        input:checked + .ArabicH-theme-toggle-slider {
+            background-color: var(--secondary-color);
+        }
+
+        input:checked + .ArabicH-theme-toggle-slider:before {
+            transform: translateX(-26px);
+        }
+
+        .ArabicH-general-language-selector {
+            position: relative;
+        }
+
+        .ArabicH-general-language-dropdown {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 12px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 500;
+            min-width: 120px;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.7) !important;
+            color: white !important;
+        }
+
+        .ArabicH-general-language-dropdown option {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .ArabicH-general-language-dropdown:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Windows Bar Styles */
+        .ArabicH-windows-bar {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 0.5rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            justify-content: center;
+        }
+
+        [data-theme="dark"] .ArabicH-windows-bar {
+            background: rgba(45, 52, 54, 0.9);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .ArabicH-window-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            border: 1px solid transparent;
+        }
+
+        .ArabicH-window-item:hover {
+            background: rgba(26, 147, 111, 0.1);
+            color: var(--primary-color);
+            border-color: var(--border-color);
+        }
+
+        .ArabicH-window-item.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .ArabicH-window-icon {
+            font-size: 1.1rem;
+        }
+
+        /* Footer Styles */
+        .ArabicH-general-footer {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+            color: white;
+            margin-top: 3rem;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ArabicH-general-footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+
+        .ArabicH-general-footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2rem 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .ArabicH-general-footer-column h4 {
+            color: var(--accent-color);
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .ArabicH-general-footer-column p {
+            margin: 0.3rem 0;
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .ArabicH-general-footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .ArabicH-general-footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            padding: 0.15rem 0;
+            font-size: 0.9rem;
+        }
+
+        .ArabicH-general-footer-links a:hover {
+            opacity: 1;
+            color: var(--accent-color);
+            transform: translateX(-5px);
+        }
+
+        .rtl .ArabicH-general-footer-links a:hover {
+            transform: translateX(5px);
+        }
+
+        .ArabicH-general-footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 1.5rem 2rem;
+            text-align: center;
+            background: rgba(0,0,0,0.1);
+        }
+
+        .ArabicH-general-footer-bottom p {
+            margin: 0;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .ArabicH-homepage-title {
+                font-size: 2.5rem;
+            }
+            
+            .ArabicH-homepage-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .ArabicH-homepage-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .ArabicH-homepage-card {
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .ArabicH-homepage-modal-content {
+                width: 90%;
+                margin: 10% auto;
+            }
+            
+            .ArabicH-windows-bar {
+                padding: 0.5rem 1rem;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .ArabicH-window-item {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+            
+            .ArabicH-general-header-content {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .ArabicH-general-header-controls {
+                justify-content: center;
+            }
+            
+            .ArabicH-general-title-container h1 {
+                font-size: 2rem;
+            }
+            
+            .ArabicH-general-logo {
+                width: 65px;
+                height: 65px;
+            }
+            
+            .ArabicH-general-footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 1.5rem 1rem 1rem;
+                gap: 1.5rem;
+            }
+            
+            .ArabicH-general-footer-links {
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-general-title-container h1 {
+                font-size: 2rem;
+            }
+            
+            .ArabicH-general-logo {
+                width: 55px;
+                height: 55px;
+            }
+            
+            .ArabicH-general-header-controls {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-homepage">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item active">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <div class="ArabicH-window-item" id="lessonsCard">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.lessons">الدروس</span>
+        </div>
+        <div class="ArabicH-window-item" id="exercisesCard">
+            <span class="ArabicH-window-icon">✍️</span>
+            <span data-i18n="ArabicH.windows.exercises">التمارين</span>
+        </div>
+        <div class="ArabicH-window-item" id="testsCard">
+            <span class="ArabicH-window-icon">📝</span>
+            <span data-i18n="ArabicH.windows.tests">الاختبارات</span>
+        </div>
+    </nav>
+    
+    <main class="ArabicH-homepage-main">
+        <h1 class="ArabicH-homepage-title" data-i18n="ArabicH.index.title">مركز تعليم العربية</h1>
+        <p class="ArabicH-homepage-subtitle" data-i18n="ArabicH.index.subtitle">استكشف عالم اللغة العربية مع دروس تفاعلية وتمارين تطبيقية واختبارات تقييمية</p>
+        
+        <div class="ArabicH-homepage-cards">
+            <!-- Lessons Card -->
+            <div class="ArabicH-homepage-card" id="lessonsCard">
+                <div class="ArabicH-homepage-card-icon">📚</div>
+                <h2 class="ArabicH-homepage-card-title" data-i18n="ArabicH.index.lessons">الدروس</h2>
+                <p class="ArabicH-homepage-card-description" data-i18n="ArabicH.index.lessonsDesc">دروس شاملة في اللغة العربية تشمل النحو والصرف والأدب والبلاغة</p>
+            </div>
+            
+            <!-- Exercises Card -->
+            <div class="ArabicH-homepage-card accent" id="exercisesCard">
+                <div class="ArabicH-homepage-card-icon">✍️</div>
+                <h2 class="ArabicH-homepage-card-title" data-i18n="ArabicH.index.exercises">التمارين</h2>
+                <p class="ArabicH-homepage-card-description" data-i18n="ArabicH.index.exercisesDesc">تمارين تطبيقية متنوعة لتعزيز مهاراتك في اللغة العربية</p>
+            </div>
+            
+            <!-- Tests Card -->
+            <div class="ArabicH-homepage-card secondary" id="testsCard">
+                <div class="ArabicH-homepage-card-icon">📝</div>
+                <h2 class="ArabicH-homepage-card-title" data-i18n="ArabicH.index.tests">الاختبارات</h2>
+                <p class="ArabicH-homepage-card-description" data-i18n="ArabicH.index.testsDesc">اختبارات تقييمية لقياس مستوى الطلاب وتحديد نقاط القوة والضعف</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">فريق تعليم العربي</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Modals -->
+    <div id="lessonsModal" class="ArabicH-homepage-modal">
+        <div class="ArabicH-homepage-modal-content">
+            <span class="ArabicH-homepage-modal-close">&times;</span>
+            <h2 class="ArabicH-homepage-modal-title" data-i18n="ArabicH.index.modalLessonsTitle">الدروس تعليمية</h2>
+            
+            <ul class="ArabicH-homepage-year-list">
+                <li class="ArabicH-homepage-year">
+                    <h3 class="ArabicH-homepage-year-title">
+                        <span data-i18n="ArabicH.index.year1">السنة الأولى ثانوي</span>
+                        <span class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</span>
+                    </h3>
+                    <p data-i18n="ArabicH.index.year1Desc">دروس شاملة في اللغة العربية للسنة الأولى ثانوي تشمل النحو والصرف والأدب والبلاغة</p>
+                </li>
+                
+                <li class="ArabicH-homepage-year">
+                    <h3 class="ArabicH-homepage-year-title">
+                        <span data-i18n="ArabicH.index.year2">السنة الثانية ثانوي</span>
+                        <span class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</span>
+                    </h3>
+                    <p data-i18n="ArabicH.index.year2Desc">دروس شاملة في اللغة العربية للسنة الثانية ثانوي تشمل النحو والصرف والأدب والبلاغة</p>
+                </li>
+                
+                <li class="ArabicH-homepage-year">
+                    <h3 class="ArabicH-homepage-year-title">
+                        <span data-i18n="ArabicH.index.year3">السنة الثالثة ثانوي</span>
+                        <span class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</span>
+                    </h3>
+                    <p data-i18n="ArabicH.index.year3Desc">دروس شاملة في اللغة العربية للسنة الثالثة ثانوي تشمل النحو والصرف والأدب والبلاغة</p>
+                </li>
+                
+                <li class="ArabicH-homepage-year">
+                    <h3 class="ArabicH-homepage-year-title">
+                        <span data-i18n="ArabicH.index.year4">السنة الرابعة ثانوي</span>
+                        <span class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</span>
+                    </h3>
+                    <p data-i18n="ArabicH.index.year4Desc">دروس شاملة في اللغة العربية للسنة الرابعة ثانوي تشمل النحو والصرف والأدب والبلاغة</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="exercisesModal" class="ArabicH-homepage-modal accent">
+        <div class="ArabicH-homepage-modal-content">
+            <span class="ArabicH-homepage-modal-close">&times;</span>
+            <h2 class="ArabicH-homepage-modal-title" data-i18n="ArabicH.index.modalExercisesTitle">التمارين التطبيقية</h2>
+            
+            <ul class="ArabicH-homepage-year-list">
+                <li class="ArabicH-homepage-year">
+                    <h3 class="ArabicH-homepage-year-title">
+                        <span data-i18n="ArabicH.index.year1">السنة الأولى ثانوي</span>
+                        <span class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</span>
+                    </h3>
+                    <p data-i18n="ArabicH.index.exercisesYear1Desc">تمارين تطبيقية متنوعة لتعزيز مهارات الطلاب في اللغة العربية للسنة الأولى ثانوي</p>
+                </li>
+                
+                <li class="ArabicH-homepage-year">
+                    <h3 class="ArabicH-homepage-year-title">
+                        <span data-i18n="ArabicH.index.year2">السنة الثانية ثانوي</span>
+                        <span class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</span>
+                    </h3>
+                    <p data-i18n="ArabicH.index.exercisesYear2Desc">تمارين تطبيقية متنوعة لتعزيز مهارات الطلاب في اللغة العربية للسنة الثانية ثانوي</p>
+                </li>
+                
+                <li class="ArabicH-homepage-year">
+                    <h3 class="ArabicH-homepage-year-title">
+                        <span data-i18n="ArabicH.index.year3">السنة الثالثة ثانوي</span>
+                        <span class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</span>
+                    </h3>
+                    <p data-i18n="ArabicH.index.exercisesYear3Desc">تمارين تطبيقية متنوعة لتعزيز مهارات الطلاب في اللغة العربية للسنة الثالثة ثانوي</p>
+                </li>
+                
+                <li class="ArabicH-homepage-year">
+                    <h3 class="ArabicH-homepage-year-title">
+                        <span data-i18n="ArabicH.index.year4">السنة الرابعة ثانوي</span>
+                        <span class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</span>
+                    </h3>
+                    <p data-i18n="ArabicH.index.exercisesYear4Desc">تمارين تطبيقية متنوعة لتعزيز مهارات الطلاب في اللغة العربية للسنة الرابعة ثانوي</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="testsModal" class="ArabicH-homepage-modal secondary">
+        <div class="ArabicH-homepage-modal-content">
+            <span class="ArabicH-homepage-modal-close">&times;</span>
+            <h2 class="ArabicH-homepage-modal-title" data-i18n="ArabicH.index.modalTestsTitle">الاختبارات التقييمية</h2>
+            
+            <ul class="ArabicH-homepage-year-list">
+                <li class="ArabicH-homepage-year">
+                    <h3 class="ArabicH-homepage-year-title">
+                        <span data-i18n="ArabicH.index.year1">السنة الأولى ثانوي</span>
+                        <span class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</span>
+                    </h3>
+                    <p data-i18n="ArabicH.index.testsYear1Desc">اختبارات تقييمية شاملة لقياس مستوى الطلاب في اللغة العربية للسنة الأولى ثانوي</p>
+                </li>
+                
+                <li class="ArabicH-homepage-year">
+                    <h3 class="ArabicH-homepage-year-title">
+                        <span data-i18n="ArabicH.index.year2">السنة الثانية ثانوي</span>
+                        <span class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</span>
+                    </h3>
+                    <p data-i18n="ArabicH.index.testsYear2Desc">اختبارات تقييمية شاملة لقياس مستوى الطلاب في اللغة العربية للسنة الثانية ثانوي</p>
+                </li>
+                
+                <li class="ArabicH-homepage-year">
+                    <h3 class="ArabicH-homepage-year-title">
+                        <span data-i18n="ArabicH.index.year3">السنة الثالثة ثانوي</span>
+                        <span class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</span>
+                    </h3>
+                    <p data-i18n="ArabicH.index.testsYear3Desc">اختبارات تقييمية شاملة لقياس مستوى الطلاب في اللغة العربية للسنة الثالثة ثانوي</p>
+                </li>
+                
+                <li class="ArabicH-homepage-year">
+                    <h3 class="ArabicH-homepage-year-title">
+                        <span data-i18n="ArabicH.index.year4">السنة الرابعة ثانوي</span>
+                        <span class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</span>
+                    </h3>
+                    <p data-i18n="ArabicH.index.testsYear4Desc">اختبارات تقييمية شاملة لقياس مستوى الطلاب في اللغة العربية للسنة الرابعة ثانوي</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- Manual Install Button -->
+<button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+    <span class="ArabicH-pwa-install-icon">📱</span>
+    <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+</button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHindex = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.lessons": "الدروس",
+                "ArabicH.windows.exercises": "التمارين",
+                "ArabicH.windows.tests": "الاختبارات",
+                
+                // Index specific translations
+                "ArabicH.index.title": "مركز تعليم العربية",
+                "ArabicH.index.subtitle": "استكشف عالم اللغة العربية مع دروس تفاعلية وتمارين تطبيقية واختبارات تقييمية",
+                "ArabicH.index.lessons": "الدروس",
+                "ArabicH.index.lessonsDesc": "دروس شاملة في اللغة العربية تشمل النحو والصرف والأدب والبلاغة",
+                "ArabicH.index.exercises": "التمارين",
+                "ArabicH.index.exercisesDesc": "تمارين تطبيقية متنوعة لتعزيز مهاراتك في اللغة العربية",
+                "ArabicH.index.tests": "الاختبارات",
+                "ArabicH.index.testsDesc": "اختبارات تقييمية لقياس مستوى الطلاب وتحديد نقاط القوة والضعف",
+                "ArabicH.index.modalLessonsTitle": "الدروس التعليمية",
+                "ArabicH.index.modalExercisesTitle": "التمارين التطبيقية",
+                "ArabicH.index.modalTestsTitle": "الاختبارات التقييمية",
+                "ArabicH.index.comingSoon": "قريباً",
+                
+                // Year titles
+                "ArabicH.index.year1": "السنة الأولى ثانوي",
+                "ArabicH.index.year2": "السنة الثانية ثانوي",
+                "ArabicH.index.year3": "السنة الثالثة ثانوي",
+                "ArabicH.index.year4": "السنة الرابعة ثانوي",
+                
+                // Lessons descriptions
+                "ArabicH.index.year1Desc": "دروس شاملة في اللغة العربية للسنة الأولى ثانوي تشمل النحو والصرف والأدب والبلاغة",
+                "ArabicH.index.year2Desc": "دروس شاملة في اللغة العربية للسنة الثانية ثانوي تشمل النحو والصرف والأدب والبلاغة",
+                "ArabicH.index.year3Desc": "دروس شاملة في اللغة العربية للسنة الثالثة ثانوي تشمل النحو والصرف والأدب والبلاغة",
+                "ArabicH.index.year4Desc": "دروس شاملة في اللغة العربية للسنة الرابعة ثانوي تشمل النحو والصرف والأدب والبلاغة",
+                
+                // Exercises descriptions
+                "ArabicH.index.exercisesYear1Desc": "تمارين تطبيقية متنوعة لتعزيز مهارات الطلاب في اللغة العربية للسنة الأولى ثانوي",
+                "ArabicH.index.exercisesYear2Desc": "تمارين تطبيقية متنوعة لتعزيز مهارات الطلاب في اللغة العربية للسنة الثانية ثانوي",
+                "ArabicH.index.exercisesYear3Desc": "تمارين تطبيقية متنوعة لتعزيز مهارات الطلاب في اللغة العربية للسنة الثالثة ثانوي",
+                "ArabicH.index.exercisesYear4Desc": "تمارين تطبيقية متنوعة لتعزيز مهارات الطلاب في اللغة العربية للسنة الرابعة ثانوي",
+                
+                // Tests descriptions
+                "ArabicH.index.testsYear1Desc": "اختبارات تقييمية شاملة لقياس مستوى الطلاب في اللغة العربية للسنة الأولى ثانوي",
+                "ArabicH.index.testsYear2Desc": "اختبارات تقييمية شاملة لقياس مستوى الطلاب في اللغة العربية للسنة الثانية ثانوي",
+                "ArabicH.index.testsYear3Desc": "اختبارات تقييمية شاملة لقياس مستوى الطلاب في اللغة العربية للسنة الثالثة ثانوي",
+                "ArabicH.index.testsYear4Desc": "اختبارات تقييمية شاملة لقياس مستوى الطلاب في اللغة العربية للسنة الرابعة ثانوي"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.lessons": "Lessons",
+                "ArabicH.windows.exercises": "Exercises",
+                "ArabicH.windows.tests": "Tests",
+                
+                // Index specific translations
+                "ArabicH.index.title": "Arab Learning Hub",
+                "ArabicH.index.subtitle": "Explore the world of Arabic language with interactive lessons, practical exercises, and assessment tests",
+                "ArabicH.index.lessons": "Lessons",
+                "ArabicH.index.lessonsDesc": "Comprehensive Arabic lessons covering grammar, morphology, literature, and rhetoric",
+                "ArabicH.index.exercises": "Exercises",
+                "ArabicH.index.exercisesDesc": "Various practical exercises to enhance your Arabic language skills",
+                "ArabicH.index.tests": "Tests",
+                "ArabicH.index.testsDesc": "Assessment tests to measure student levels and identify strengths and weaknesses",
+                "ArabicH.index.modalLessonsTitle": "Educational Lessons",
+                "ArabicH.index.modalExercisesTitle": "Practical Exercises",
+                "ArabicH.index.modalTestsTitle": "Assessment Tests",
+                "ArabicH.index.comingSoon": "Coming Soon",
+                
+                // Year titles
+                "ArabicH.index.year1": "First Year Secondary",
+                "ArabicH.index.year2": "Second Year Secondary",
+                "ArabicH.index.year3": "Third Year Secondary",
+                "ArabicH.index.year4": "Fourth Year Secondary",
+                
+                // Lessons descriptions
+                "ArabicH.index.year1Desc": "Comprehensive Arabic lessons for first year secondary covering grammar, morphology, literature, and rhetoric",
+                "ArabicH.index.year2Desc": "Comprehensive Arabic lessons for second year secondary covering grammar, morphology, literature, and rhetoric",
+                "ArabicH.index.year3Desc": "Comprehensive Arabic lessons for third year secondary covering grammar, morphology, literature, and rhetoric",
+                "ArabicH.index.year4Desc": "Comprehensive Arabic lessons for fourth year secondary covering grammar, morphology, literature, and rhetoric",
+                
+                // Exercises descriptions
+                "ArabicH.index.exercisesYear1Desc": "Various practical exercises to enhance students' Arabic language skills for first year secondary",
+                "ArabicH.index.exercisesYear2Desc": "Various practical exercises to enhance students' Arabic language skills for second year secondary",
+                "ArabicH.index.exercisesYear3Desc": "Various practical exercises to enhance students' Arabic language skills for third year secondary",
+                "ArabicH.index.exercisesYear4Desc": "Various practical exercises to enhance students' Arabic language skills for fourth year secondary",
+                
+                // Tests descriptions
+                "ArabicH.index.testsYear1Desc": "Comprehensive assessment tests to measure student levels in Arabic for first year secondary",
+                "ArabicH.index.testsYear2Desc": "Comprehensive assessment tests to measure student levels in Arabic for second year secondary",
+                "ArabicH.index.testsYear3Desc": "Comprehensive assessment tests to measure student levels in Arabic for third year secondary",
+                "ArabicH.index.testsYear4Desc": "Comprehensive assessment tests to measure student levels in Arabic for fourth year secondary"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.lessons": "Leçons",
+                "ArabicH.windows.exercises": "Exercices",
+                "ArabicH.windows.tests": "Tests",
+                
+                // Index specific translations
+                "ArabicH.index.title": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.index.subtitle": "Explorez le monde de la langue arabe avec des leçons interactives, des exercices pratiques et des tests d'évaluation",
+                "ArabicH.index.lessons": "Leçons",
+                "ArabicH.index.lessonsDesc": "Leçons complètes d'arabe couvrant la grammaire, la morphologie, la littérature et la rhétorique",
+                "ArabicH.index.exercises": "Exercices",
+                "ArabicH.index.exercisesDesc": "Divers exercices pratiques pour améliorer vos compétences en arabe",
+                "ArabicH.index.tests": "Tests",
+                "ArabicH.index.testsDesc": "Tests d'évaluation pour mesurer le niveau des étudiants et identifier les forces et les faiblesses",
+                "ArabicH.index.modalLessonsTitle": "Leçons Éducatives",
+                "ArabicH.index.modalExercisesTitle": "Exercices Pratiques",
+                "ArabicH.index.modalTestsTitle": "Tests d'Évaluation",
+                "ArabicH.index.comingSoon": "Bientôt disponible",
+                
+                // Year titles
+                "ArabicH.index.year1": "Première Année Secondaire",
+                "ArabicH.index.year2": "Deuxième Année Secondaire",
+                "ArabicH.index.year3": "Troisième Année Secondaire",
+                "ArabicH.index.year4": "Quatrième Année Secondaire",
+                
+                // Lessons descriptions
+                "ArabicH.index.year1Desc": "Leçons complètes d'arabe pour la première année secondaire couvrant la grammaire, la morphologie, la littérature et la rhétorique",
+                "ArabicH.index.year2Desc": "Leçons complètes d'arabe pour la deuxième année secondaire couvrant la grammaire, la morphologie, la littérature et la rhétorique",
+                "ArabicH.index.year3Desc": "Leçons complètes d'arabe pour la troisième année secondaire couvrant la grammaire, la morphologie, la littérature et la rhétorique",
+                "ArabicH.index.year4Desc": "Leçons complètes d'arabe pour la quatrième année secondaire couvrant la grammaire, la morphologie, la littérature et la rhétorique",
+                
+                // Exercises descriptions
+                "ArabicH.index.exercisesYear1Desc": "Divers exercices pratiques pour améliorer les compétences en arabe des étudiants de première année secondaire",
+                "ArabicH.index.exercisesYear2Desc": "Divers exercices pratiques pour améliorer les compétences en arabe des étudiants de deuxième année secondaire",
+                "ArabicH.index.exercisesYear3Desc": "Divers exercices pratiques pour améliorer les compétences en arabe des étudiants de troisième année secondaire",
+                "ArabicH.index.exercisesYear4Desc": "Divers exercices pratiques pour améliorer les compétences en arabe des étudiants de quatrième année secondaire",
+                
+                // Tests descriptions
+                "ArabicH.index.testsYear1Desc": "Tests d'évaluation complets pour mesurer le niveau des étudiants en arabe pour la première année secondaire",
+                "ArabicH.index.testsYear2Desc": "Tests d'évaluation complets pour mesurer le niveau des étudiants en arabe pour la deuxième année secondaire",
+                "ArabicH.index.testsYear3Desc": "Tests d'évaluation complets pour mesurer le niveau des étudiants en arabe pour la troisième année secondaire",
+                "ArabicH.index.testsYear4Desc": "Tests d'évaluation complets pour mesurer le niveau des étudiants en arabe pour la quatrième année secondaire"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHindex;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+<script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+    // Modal functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        // Modal functionality
+        const lessonsCards = document.querySelectorAll('#lessonsCard');
+        const exercisesCards = document.querySelectorAll('#exercisesCard');
+        const testsCards = document.querySelectorAll('#testsCard');
+        const lessonsModal = document.getElementById('lessonsModal');
+        const exercisesModal = document.getElementById('exercisesModal');
+        const testsModal = document.getElementById('testsModal');
+        const closeButtons = document.querySelectorAll('.ArabicH-homepage-modal-close');
+        
+        // Open modals when cards are clicked (both in windows bar and main body)
+        lessonsCards.forEach(card => {
+            card.addEventListener('click', function() {
+                lessonsModal.style.display = 'block';
+            });
+        });
+        
+        exercisesCards.forEach(card => {
+            card.addEventListener('click', function() {
+                exercisesModal.style.display = 'block';
+            });
+        });
+        
+        testsCards.forEach(card => {
+            card.addEventListener('click', function() {
+                testsModal.style.display = 'block';
+            });
+        });
+        
+        // Close modals when close button is clicked
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const modal = this.closest('.ArabicH-homepage-modal');
+                if (modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+        
+        // Close modals when clicking outside the modal content
+        window.addEventListener('click', function(event) {
+            if (event.target.classList.contains('.ArabicH-homepage-modal')) {
+                event.target.style.display = 'none';
+            }
+        });
+        
+        // Prevent clicks inside modal content from closing the modal
+        document.querySelectorAll('.ArabicH-homepage-modal-content').forEach(content => {
+            content.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+        });
+        
+        // Windows bar active state management
+        const currentPage = window.location.pathname.split('/').pop();
+        const windowItems = document.querySelectorAll('.ArabicH-window-item');
+        
+        windowItems.forEach(item => {
+            if (item.getAttribute('href') === currentPage) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    });
+</script>
+<script>
+// Manual service worker registration as backup
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+                console.log('SW registered: ', registration);
+            })
+            .catch(function(registrationError) {
+                console.log('SW registration failed: ', registrationError);
+            });
+    });
+}
+
+// Manual install button handler
+document.addEventListener('DOMContentLoaded', function() {
+    const manualInstallBtn = document.getElementById('manual-install-btn');
+    let deferredPrompt;
+    
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        manualInstallBtn.style.display = 'flex';
+    });
+    
+    if (manualInstallBtn) {
+        manualInstallBtn.addEventListener('click', async () => {
+            if (!deferredPrompt) return;
+            
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            
+            if (outcome === 'accepted') {
+                manualInstallBtn.style.display = 'none';
+                deferredPrompt = null;
+            }
+        });
+    }
+});
+</script>
+</body>
+</html>
