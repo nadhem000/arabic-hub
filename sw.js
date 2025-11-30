@@ -1,6 +1,6 @@
 // Service Worker for Arabic Hub Education
-const CACHE_NAME = 'arabic-hub-v1.0.2';
-const STATIC_CACHE = 'arabic-static-v1.1.2';
+const CACHE_NAME = 'arabic-hub-v1.0.1';
+const STATIC_CACHE = 'arabic-static-v1.1.1';
 const DYNAMIC_CACHE = 'arabic-dynamic-v1.1.2';
 
 // Assets to cache immediately on install
@@ -220,5 +220,4 @@ self.addEventListener('error', (event) => {
 
 self.addEventListener('unhandledrejection', (event) => {
     console.error('Service Worker: Unhandled promise rejection', event.reason);
-
 });
