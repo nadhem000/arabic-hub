@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبارات السنة الثالثة ثانوي | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#3a506b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="اختبارات السنة الثالثة ثانوي">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+   
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Blue-Teal Theme for Year 3 Tests - Override CSS Variables */
+        :root {
+            --primary-color: #3a506b;
+            --secondary-color: #5d737e;
+            --accent-color: #7a93ac;
+            --light-color: #f8f9fa;
+            --dark-color: #1c2541;
+            --text-color: #2d3748;
+            --heading-color: #1a202c;
+            --background-color: #f1f3f4;
+            --card-bg: #ffffff;
+            --definition-bg: #e9ecef;
+            --border-color: #c1c8d0;
+            --table-even-bg: #f7f9f9;
+            --table-hover-bg: #e2e6ea;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(58, 80, 107, 0.12);
+            --gradient-primary: linear-gradient(135deg, #3a506b 0%, #2c3e50 100%);
+            --gradient-secondary: linear-gradient(135deg, #5d737e 0%, #4a5f6b 100%);
+            --gradient-accent: linear-gradient(135deg, #7a93ac 0%, #5d737e 100%);
+            --gradient-light: linear-gradient(135deg, #f1f3f4 0%, #e9ecef 100%);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #4a6487;
+            --secondary-color: #6d8a9c;
+            --accent-color: #8fa8c2;
+            --light-color: #1c2541;
+            --dark-color: #0b132b;
+            --text-color: #e9ecef;
+            --heading-color: #f8f9fa;
+            --background-color: #0b132b;
+            --card-bg: #1c2541;
+            --definition-bg: #3a506b;
+            --border-color: #4a6487;
+            --table-even-bg: #1c2541;
+            --table-hover-bg: #3a506b;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+            --gradient-primary: linear-gradient(135deg, #4a6487 0%, #3a506b 100%);
+            --gradient-secondary: linear-gradient(135deg, #6d8a9c 0%, #5d737e 100%);
+            --gradient-accent: linear-gradient(135deg, #8fa8c2 0%, #6d8a9c 100%);
+            --gradient-light: linear-gradient(135deg, #1c2541 0%, #0b132b 100%);
+        }
+
+        /* Page specific styles */
+        .ArabicH-tests-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-tests-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-tests-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-tests-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-trim-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-trim-item {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .ArabicH-trim-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: var(--gradient-primary);
+        }
+
+        .ArabicH-trim-item:nth-child(2)::before {
+            background: var(--gradient-secondary);
+        }
+
+        .ArabicH-trim-item:nth-child(3)::before {
+            background: var(--gradient-accent);
+        }
+
+        .ArabicH-trim-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-color: var(--accent-color);
+        }
+
+        .ArabicH-trim-title {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--heading-color);
+            font-weight: 600;
+        }
+
+        .ArabicH-trim-description {
+            color: var(--text-color);
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* Responsive styles for tests page */
+        @media (max-width: 768px) {
+            .ArabicH-tests-title {
+                font-size: 2rem;
+            }
+            
+            .ArabicH-tests-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-trim-item {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-trim-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-tests-main {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-tests-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-tests-main">
+        <h1 class="ArabicH-tests-title" data-i18n="ArabicH.Y3Tests.title">اختبارات السنة الثالثة ثانوي</h1>
+        <p class="ArabicH-tests-subtitle" data-i18n="ArabicH.Y3Tests.subtitle">اختبارات تقييمية شاملة لقياس مستوى الطلاب في اللغة العربية للسنة الثالثة ثانوي</p>
+        
+        <div class="ArabicH-trim-list">
+            <!-- Trim 1 -->
+            <div class="ArabicH-trim-item">
+                <h2 class="ArabicH-trim-title" data-i18n="ArabicH.Y3Tests.trim1">الثلاثي الأول</h2>
+                <p class="ArabicH-trim-description" data-i18n="ArabicH.Y3Tests.trim1Desc">اختبارات الثلاثي الأول في اللغة العربية</p>
+            </div>
+            
+            <!-- Trim 2 -->
+            <div class="ArabicH-trim-item">
+                <h2 class="ArabicH-trim-title" data-i18n="ArabicH.Y3Tests.trim2">الثلاثي الثاني</h2>
+                <p class="ArabicH-trim-description" data-i18n="ArabicH.Y3Tests.trim2Desc">اختبارات الثلاثي الثاني في اللغة العربية</p>
+            </div>
+            
+            <!-- Trim 3 -->
+            <div class="ArabicH-trim-item">
+                <h2 class="ArabicH-trim-title" data-i18n="ArabicH.Y3Tests.trim3">الثلاثي الثالث</h2>
+                <p class="ArabicH-trim-description" data-i18n="ArabicH.Y3Tests.trim3Desc">اختبارات الثلاثي الثالث في اللغة العربية</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHY3Tests = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Year 3 Tests specific translations
+                "ArabicH.Y3Tests.title": "اختبارات السنة الثالثة ثانوي",
+                "ArabicH.Y3Tests.subtitle": "اختبارات تقييمية شاملة لقياس مستوى الطلاب في اللغة العربية للسنة الثالثة ثانوي",
+                "ArabicH.Y3Tests.trim1": "الثلاثي الأول",
+                "ArabicH.Y3Tests.trim1Desc": "اختبارات الثلاثي الأول في اللغة العربية",
+                "ArabicH.Y3Tests.trim2": "الثلاثي الثاني",
+                "ArabicH.Y3Tests.trim2Desc": "اختبارات الثلاثي الثاني في اللغة العربية",
+                "ArabicH.Y3Tests.trim3": "الثلاثي الثالث",
+                "ArabicH.Y3Tests.trim3Desc": "اختبارات الثلاثي الثالث في اللغة العربية",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Year 3 Tests specific translations
+                "ArabicH.Y3Tests.title": "Year 3 Secondary Tests",
+                "ArabicH.Y3Tests.subtitle": "Comprehensive assessment tests to measure student levels in Arabic for third year secondary",
+                "ArabicH.Y3Tests.trim1": "First Trimester",
+                "ArabicH.Y3Tests.trim1Desc": "First trimester tests in Arabic",
+                "ArabicH.Y3Tests.trim2": "Second Trimester",
+                "ArabicH.Y3Tests.trim2Desc": "Second trimester tests in Arabic",
+                "ArabicH.Y3Tests.trim3": "Third Trimester",
+                "ArabicH.Y3Tests.trim3Desc": "Third trimester tests in Arabic",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Year 3 Tests specific translations
+                "ArabicH.Y3Tests.title": "Tests de la Troisième Année Secondaire",
+                "ArabicH.Y3Tests.subtitle": "Tests d'évaluation complets pour mesurer le niveau des étudiants en arabe pour la troisième année secondaire",
+                "ArabicH.Y3Tests.trim1": "Premier Trimestre",
+                "ArabicH.Y3Tests.trim1Desc": "Tests du premier trimestre en arabe",
+                "ArabicH.Y3Tests.trim2": "Deuxième Trimestre",
+                "ArabicH.Y3Tests.trim2Desc": "Tests du deuxième trimestre en arabe",
+                "ArabicH.Y3Tests.trim3": "Troisième Trimestre",
+                "ArabicH.Y3Tests.trim3Desc": "Tests du troisième trimestre en arabe",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHY3Tests;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
