@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار السنة الثالثة ثانوي - الثلاثي الأول - اختبار 2 | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#3a506b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="اختبار السنة الثالثة ثانوي">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Blue-Teal Theme for Year 3 Tests - Override CSS Variables */
+        :root {
+            --primary-color: #3a506b;
+            --secondary-color: #5d737e;
+            --accent-color: #7a93ac;
+            --light-color: #f8f9fa;
+            --dark-color: #1c2541;
+            --text-color: #2d3748;
+            --heading-color: #1a202c;
+            --background-color: #f1f3f4;
+            --card-bg: #ffffff;
+            --definition-bg: #e9ecef;
+            --border-color: #c1c8d0;
+            --table-even-bg: #f7f9f9;
+            --table-hover-bg: #e2e6ea;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(58, 80, 107, 0.12);
+            --gradient-primary: linear-gradient(135deg, #3a506b 0%, #2c3e50 100%);
+            --gradient-secondary: linear-gradient(135deg, #5d737e 0%, #4a5f6b 100%);
+            --gradient-accent: linear-gradient(135deg, #7a93ac 0%, #5d737e 100%);
+            --gradient-light: linear-gradient(135deg, #f1f3f4 0%, #e9ecef 100%);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #4a6487;
+            --secondary-color: #6d8a9c;
+            --accent-color: #8fa8c2;
+            --light-color: #1c2541;
+            --dark-color: #0b132b;
+            --text-color: #e9ecef;
+            --heading-color: #f8f9fa;
+            --background-color: #0b132b;
+            --card-bg: #1c2541;
+            --definition-bg: #3a506b;
+            --border-color: #4a6487;
+            --table-even-bg: #1c2541;
+            --table-hover-bg: #3a506b;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+            --gradient-primary: linear-gradient(135deg, #4a6487 0%, #3a506b 100%);
+            --gradient-secondary: linear-gradient(135deg, #6d8a9c 0%, #5d737e 100%);
+            --gradient-accent: linear-gradient(135deg, #8fa8c2 0%, #6d8a9c 100%);
+            --gradient-light: linear-gradient(135deg, #1c2541 0%, #0b132b 100%);
+        }
+
+        /* Page specific styles */
+        .ArabicH-test-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-test-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-test-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-test-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-test-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-test-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .ArabicH-test-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            background-color: var(--definition-bg);
+        }
+
+        .ArabicH-text-section {
+            margin: 25px 0;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background-color: var(--definition-bg);
+            border-right: 4px solid var(--primary-color);
+        }
+
+        .ArabicH-text-title {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .ArabicH-quote {
+            font-style: italic;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            line-height: 1.8;
+            background-color: var(--light-color);
+        }
+
+        .ArabicH-questions-section {
+            margin: 30px 0;
+        }
+
+        .ArabicH-question {
+            margin-bottom: 25px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background-color: var(--card-bg);
+        }
+
+        .ArabicH-question-title {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .ArabicH-points {
+            float: left;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+            background-color: var(--primary-color);
+        }
+
+        .ArabicH-answer-textarea {
+            width: 100%;
+            min-height: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 16px;
+            resize: vertical;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+
+        .ArabicH-show-solution-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .ArabicH-show-solution-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .ArabicH-solution {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+        }
+
+        .ArabicH-translation-section {
+            margin: 25px 0;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background-color: var(--light-color);
+            border-right: 4px solid var(--secondary-color);
+        }
+
+        .ArabicH-translation-title {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .ArabicH-vocabulary {
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: var(--border-radius);
+            background-color: var(--table-hover-bg);
+        }
+
+        .ArabicH-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .ArabicH-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        .ArabicH-table th, .ArabicH-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: center;
+        }
+
+        .ArabicH-table th {
+            background-color: var(--definition-bg);
+            color: var(--primary-color);
+        }
+
+        /* إضافة تصميم للكلمات المطلوب تحليلها */
+        .ArabicH-underlined {
+            text-decoration: underline;
+            text-decoration-color: var(--secondary-color);
+            text-decoration-thickness: 2px;
+            font-weight: bold;
+        }
+
+        .ArabicH-brackets {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Responsive styles for test page */
+        @media (max-width: 768px) {
+            .ArabicH-test-title {
+                font-size: 1.8rem;
+            }
+            
+            .ArabicH-test-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-test-container {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-test-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .ArabicH-test-info {
+                flex-direction: column;
+            }
+            
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .ArabicH-table {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-test-main {
+                padding: 1rem;
+            }
+            
+            .ArabicH-test-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-test-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-test-main">
+        <h1 class="ArabicH-test-title" data-i18n="ArabicH.Y3Tests.test2Title">اختبار السنة الثالثة ثانوي - الثلاثي الأول - اختبار 2</h1>
+        <p class="ArabicH-test-subtitle" data-i18n="ArabicH.Y3Tests.test2Subtitle">فرض مراقبة 2 في اللغة و التعريب - السنة الثالثة آداب</p>
+        
+        <div class="ArabicH-test-container">
+            <div class="ArabicH-test-header">
+                <h2 class="ArabicH-test-title" data-i18n="ArabicH.Y3Tests.test2Title">اختبار السنة الثالثة ثانوي - الثلاثي الأول - اختبار 2</h2>
+                <div class="date" data-i18n="ArabicH.Y3Tests.test2Duration">التوقيت: ساعة ونصف</div>
+            </div>
+            
+            <div class="ArabicH-test-info">
+                <div>
+                    <p><strong data-i18n="ArabicH.Y3Tests.subject">المادة:</strong> اللغة العربية</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.grade">الصف:</strong> 3 آداب</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.school">المدرسة:</strong> معهد "نهج صيّادة"</p>
+                </div>
+                <div>
+                    <p><strong data-i18n="ArabicH.Y3Tests.teacher">الأستاذة:</strong> فوزيّة الشّطّي</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.text">النص:</strong> من كتاب "الأيام" - طه حسين</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.score">العدد:</strong> ................/20</p>
+                </div>
+            </div>
+            
+            <div class="ArabicH-text-section">
+                <h3 class="ArabicH-text-title" data-i18n="ArabicH.Y3Tests.textTitle">النص الأدبي: من كتاب "الأيام" - طه حسين</h3>
+                <div class="ArabicH-quote">
+                    <p>كان الصبيّ يذهب إلى الكُتّاب كلّ يوم، يخرج من البيت باكرًا، ويرجع إليه متأخرًا، وكان يقطع الطريق ذهابًا وإيابًا وحده، لا يخاف شيئًا، ولا يهاب أحدًا. <span class="ArabicH-underlined">كان يمرّ بالطرقات الضيقة، والأزقة الملتوية، والحارات المظلمة، فلا يلتفت يمنة ولا يسرة</span>. وكان يسمع في طريقه أصواتًا غريبة، ورؤىً عجيبة، فلا يهتمّ بها، ولا يعبأ بها. وكان يتقدّم في طريقه ثابت الخطى، راسخ القدمين، كأنّه يعرف إلى أين يذهب، وكيف يصل. <span class="ArabicH-underlined">وكانت أمّه تنظر إليه من الشباك، فتراه صغيرًا ضئيلاً، يضيع في تلك الطرقات الواسعة، وتلك الأزقة المتشعبة، فتمتلئ عيناها بالدموع، وقلبها بالخوف</span>. وكانت تتمنى لو تستطيع أن تحمله بين ذراعيها، وتوصله إلى الكُتّاب، ثم تعود به إلى البيت. ولكنّها كانت تعلم أنّه لا بدّ للصبيّ أن يعتاد على المشي وحده، وأن يواجه الحياة بنفسه.</p>
+                    <p style="text-align: left; margin-top: 10px;"><em data-i18n="ArabicH.Y3Tests.textAuthor">من كتاب "الأيام" - طه حسين</em></p>
+                </div>
+            </div>
+            
+            <div class="ArabicH-questions-section">
+                <h3 style="color: var(--primary-color); margin-bottom: 20px; text-align: center;" data-i18n="ArabicH.Y3Tests.questionsTitle">أسئلة الفرض</h3>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title" data-i18n="ArabicH.Y3Tests.question1">1- استخرج من النص ثلاثة أساليب إنشائية وبين نوعها ووظيفتها: <span class="ArabicH-points">3 ن</span></h4>
+                    <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+                    <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution1')" data-i18n="ArabicH.Y3Tests.showSolution">إظهار الحل</button>
+                    <div id="solution1" class="ArabicH-solution">
+                        <div class="correct-answer">1. الأسلوب الخبري: "كان الصبيّ يذهب إلى الكُتّاب كلّ يوم" - وظيفته الإخبار عن واقع الصبيّ.</div>
+                        <div class="correct-answer">2. الأسلوب الإنشائي الطلبي: "وكانت تتمنى لو تستطيع أن تحمله" - وظيفته التعبير عن رغبة الأم.</div>
+                        <div class="correct-answer">3. الأسلوب الإنشائي غير الطلبي: "ولكنّها كانت تعلم أنّه لا بدّ للصبيّ أن يعتاد" - وظيفته التقرير عن حقيقة تربوية.</div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title" data-i18n="ArabicH.Y3Tests.question2">2- اشرح العبارتين المسطرتين في النص مبينا الصورة البيانية فيهما: <span class="ArabicH-points">4 ن</span></h4>
+                    <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+                    <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution2')" data-i18n="ArabicH.Y3Tests.showSolution">إظهار الحل</button>
+                    <div id="solution2" class="ArabicH-solution">
+                        <div class="correct-answer">* العبارة الأولى: "كان يمرّ بالطرقات الضيقة، والأزقة الملتوية، والحارات المظلمة، فلا يلتفت يمنة ولا يسرة" - الصورة البيانية: تصوير الطرقات والأزقة والحارات بأوصافها المختلفة لبيان صعوبة الطريق وشجاعة الصبيّ.</div>
+                        <div class="correct-answer">* العبارة الثانية: "وكانت أمّه تنظر إليه من الشباك، فتراه صغيرًا ضئيلاً، يضيع في تلك الطرقات الواسعة، وتلك الأزقة المتشعبة، فتمتلئ عيناها بالدموع، وقلبها بالخوف" - الصورة البيانية: تصوير مشاعر الأم وخوفها على ابنها باستخدام التضاد بين صغر الصبيّ واتساع الطرقات.</div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title" data-i18n="ArabicH.Y3Tests.question3">3- أعرب ما يلي: "وكان يسمع في طريقه أصواتًا غريبة، ورؤىً عجيبة": <span class="ArabicH-points">3 ن</span></h4>
+                    <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+                    <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution3')" data-i18n="ArabicH.Y3Tests.showSolution">إظهار الحل</button>
+                    <div id="solution3" class="ArabicH-solution">
+                        <div class="correct-answer">* وكان: الواو حرف عطف، كان فعل ماض ناقص.</div>
+                        <div class="correct-answer">* يسمع: فعل مضارع مرفوع، وفاعله ضمير مستتر تقديره هو.</div>
+                        <div class="correct-answer">* في طريقه: جار ومجرور متعلق بـ"يسمع".</div>
+                        <div class="correct-answer">* أصواتًا: مفعول به منصوب.</div>
+                        <div class="correct-answer">* غريبة: نعت منصوب.</div>
+                        <div class="correct-answer">* ورؤى: الواو حرف عطف، رؤى معطوف منصوب.</div>
+                        <div class="correct-answer">* عجيبة: نعت منصوب.</div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title" data-i18n="ArabicH.Y3Tests.question4">4- اكتب فقرة تصف فيها مشهدًا من مشاهد الطبيعة مستعملاً أسلوب المقابلة: <span class="ArabicH-points">3 ن</span></h4>
+                    <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+                    <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution4')" data-i18n="ArabicH.Y3Tests.showSolution">إظهار الحل</button>
+                    <div id="solution4" class="ArabicH-solution">
+                        <div class="correct-answer">
+                            <p>كانت الشمس تشرق في الأفق، فتنير الدنيا بنورها الذهبي، بينما كانت النجوم تختفي واحدة تلو الأخرى. كانت الطيور ترفرف في السماء فرحة مبتهجة، بينما كانت الحيوانات تستيقظ من نومها العميق. كانت الأزهار تتفتح وتنشر عبيرها الفواح، بينما كانت أوراق الأشجار تهمس مع نسمات الصباح الهادئة. كل شيء في الطبيعة يبدو حيويًا نابضًا بالحياة، يعلن بداية يوم جديد مليء بالأمل والجمال.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ArabicH-translation-section">
+                <h3 class="ArabicH-translation-title" data-i18n="ArabicH.Y3Tests.translationTitle">التّعريب: عرّب النّصّ الفرنسي التّالي وأُشْكله شكلا تامًّا: <span class="ArabicH-points">7 ن</span></h3>
+                <div style="background-color: var(--table-hover-bg); padding: 15px; border-radius: var(--border-radius); margin-bottom: 15px;">
+                    <p>Le vieux professeur</p>
+                    <p>Le vieux professeur entra dans la salle de classe. Il portait un costume noir, un peu usé, mais propre et bien repassé. Ses cheveux étaient blancs comme la neige, et ses yeux brillaient d'une intelligence rare. Il posa ses livres sur le bureau, regarda ses élèves un par un, et commença son cours. Sa voix était calme et claire, et ses paroles étaient pleines de sagesse et d'expérience. Les élèves l'écoutaient avec attention, fascinés par son savoir et son éloquence.</p>
+                    <p style="text-align: left; margin-top: 10px;"><em>Extrait d'un roman français</em></p>
+                </div>
+                
+                <div class="ArabicH-vocabulary">
+                    <h4 style="color: var(--secondary-color); margin-bottom: 10px;" data-i18n="ArabicH.Y3Tests.vocabularyTitle">الشرح:</h4>
+                    <p>- usé : (adj) qui a été beaucoup utilisé - بالٍ، مهترئ<br>
+                    - repassé : (adj) qui a été repassé au fer - مكوي<br>
+                    - éloquence : (n) art de bien parler - بلاغة، فصاحة</p>
+                </div>
+                
+                <textarea class="ArabicH-answer-textarea" placeholder="اكتب ترجمتك هنا..."></textarea>
+                <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution5')" data-i18n="ArabicH.Y3Tests.showSolution">إظهار الحل</button>
+                <div id="solution5" class="ArabicH-solution">
+                    <div class="correct-answer">
+                        <p>الأُسْتَاذُ الْقَدِيمُ</p>
+                        <p>دَخَلَ الأُسْتَاذُ الْقَدِيمُ قَاعَةَ الدَّرْسِ. كَانَ يَلْبَسُ بَدْلَةً سَوْدَاءَ، قَدْ بَلَتْ قَلِيلًا، لَكِنَّهَا كَانَتْ نَظِيفَةً وَمَكْوِيَّةً جَيِّدًا. كَانَ شَعْرُهُ أَبْيَضَ كَالثَّلْجِ، وَعَيْنَاهُ تَتَلَأْلَأَانِ بِذَكَاءٍ نَادِرٍ. وَضَعَ كُتُبَهُ عَلَى الْمَكْتَبِ، نَظَرَ إِلَى تَلَامِيذِهِ وَاحِدًا وَاحِدًا، وَبَدَأَ دَرْسَهُ. كَانَ صَوْتُهُ هَادِئًا وَوَاضِحًا، وَكَانَتْ كَلِمَاتُهُ مُمْتَلِئَةً بِالْحِكْمَةِ وَالْخِبْرَةِ. كَانَ التَّلَامِيذُ يَسْتَمِعُونَ إِلَيْهِ بِانْتِبَاهٍ، مَأْخُوذِينَ بِعِلْمِهِ وَبَلَاغَتِهِ.</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 15px; text-align: center;">
+                    <p>[1] نقطةٌ على وضوحِ الخطِّ و نظافةِ الورقة</p>
+                    <p style="color: var(--primary-color); font-weight: bold; margin-top: 10px;">☺ عملاً مُوفَّقا ☺</p>
+                </div>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_Y3_Tests_Trim1_Test1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.Y3Tests.previousTest">الاختبار السابق</a>
+                <a href="AH_Y3_Tests.html" class="ArabicH-nav-btn" data-i18n="ArabicH.Y3Tests.backToTests">العودة إلى اختبارات السنة الثالثة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.Y3Tests.backToHome">العودة إلى الصفحة الرئيسية</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHY3Test2 = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Year 3 Test 2 specific translations
+                "ArabicH.Y3Tests.test2Title": "اختبار السنة الثالثة ثانوي - الثلاثي الأول - اختبار 2",
+                "ArabicH.Y3Tests.test2Subtitle": "فرض مراقبة 2 في اللغة و التعريب - السنة الثالثة آداب",
+                "ArabicH.Y3Tests.test2Duration": "التوقيت: ساعة ونصف",
+                "ArabicH.Y3Tests.subject": "المادة",
+                "ArabicH.Y3Tests.grade": "الصف",
+                "ArabicH.Y3Tests.school": "المدرسة",
+                "ArabicH.Y3Tests.teacher": "الأستاذة",
+                "ArabicH.Y3Tests.text": "النص",
+                "ArabicH.Y3Tests.score": "العدد",
+                "ArabicH.Y3Tests.textTitle": "النص الأدبي: من كتاب \"الأيام\" - طه حسين",
+                "ArabicH.Y3Tests.textAuthor": "من كتاب \"الأيام\" - طه حسين",
+                "ArabicH.Y3Tests.questionsTitle": "أسئلة الفرض",
+                "ArabicH.Y3Tests.question1": "1- استخرج من النص ثلاثة أساليب إنشائية وبين نوعها ووظيفتها:",
+                "ArabicH.Y3Tests.question2": "2- اشرح العبارتين المسطرتين في النص مبينا الصورة البيانية فيهما:",
+                "ArabicH.Y3Tests.question3": "3- أعرب ما يلي: \"وكان يسمع في طريقه أصواتًا غريبة، ورؤىً عجيبة\":",
+                "ArabicH.Y3Tests.question4": "4- اكتب فقرة تصف فيها مشهدًا من مشاهد الطبيعة مستعملاً أسلوب المقابلة:",
+                "ArabicH.Y3Tests.translationTitle": "التّعريب: عرّب النّصّ الفرنسي التّالي وأُشْكله شكلا تامًّا:",
+                "ArabicH.Y3Tests.vocabularyTitle": "الشرح:",
+                "ArabicH.Y3Tests.showSolution": "إظهار الحل",
+                "ArabicH.Y3Tests.previousTest": "الاختبار السابق",
+                "ArabicH.Y3Tests.backToTests": "العودة إلى اختبارات السنة الثالثة",
+                "ArabicH.Y3Tests.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Year 3 Test 2 specific translations
+                "ArabicH.Y3Tests.test2Title": "Year 3 Secondary Test - First Trimester - Test 2",
+                "ArabicH.Y3Tests.test2Subtitle": "Monitoring Test 2 in Language and Arabization - Year 3 Arts",
+                "ArabicH.Y3Tests.test2Duration": "Duration: 1.5 hours",
+                "ArabicH.Y3Tests.subject": "Subject",
+                "ArabicH.Y3Tests.grade": "Grade",
+                "ArabicH.Y3Tests.school": "School",
+                "ArabicH.Y3Tests.teacher": "Teacher",
+                "ArabicH.Y3Tests.text": "Text",
+                "ArabicH.Y3Tests.score": "Score",
+                "ArabicH.Y3Tests.textTitle": "Literary Text: From \"The Days\" - Taha Hussein",
+                "ArabicH.Y3Tests.textAuthor": "From \"The Days\" - Taha Hussein",
+                "ArabicH.Y3Tests.questionsTitle": "Test Questions",
+                "ArabicH.Y3Tests.question1": "1- Extract three rhetorical styles from the text and explain their type and function:",
+                "ArabicH.Y3Tests.question2": "2- Explain the two underlined phrases in the text, showing the rhetorical imagery in them:",
+                "ArabicH.Y3Tests.question3": "3- Parse the following: \"وكان يسمع في طريقه أصواتًا غريبة، ورؤىً عجيبة\":",
+                "ArabicH.Y3Tests.question4": "4- Write a paragraph describing a nature scene using the contrast style:",
+                "ArabicH.Y3Tests.translationTitle": "Arabization: Translate the following French text and fully vocalize it:",
+                "ArabicH.Y3Tests.vocabularyTitle": "Explanation:",
+                "ArabicH.Y3Tests.showSolution": "Show Solution",
+                "ArabicH.Y3Tests.previousTest": "Previous Test",
+                "ArabicH.Y3Tests.backToTests": "Back to Year 3 Tests",
+                "ArabicH.Y3Tests.backToHome": "Back to Homepage",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Year 3 Test 2 specific translations
+                "ArabicH.Y3Tests.test2Title": "Test de la Troisième Année Secondaire - Premier Trimestre - Test 2",
+                "ArabicH.Y3Tests.test2Subtitle": "Devoir de contrôle 2 en Langue et Arabisation - Troisième Année Lettres",
+                "ArabicH.Y3Tests.test2Duration": "Durée: 1 heure 30",
+                "ArabicH.Y3Tests.subject": "Matière",
+                "ArabicH.Y3Tests.grade": "Classe",
+                "ArabicH.Y3Tests.school": "École",
+                "ArabicH.Y3Tests.teacher": "Enseignante",
+                "ArabicH.Y3Tests.text": "Texte",
+                "ArabicH.Y3Tests.score": "Score",
+                "ArabicH.Y3Tests.textTitle": "Texte Littéraire: Extrait de \"Les Jours\" - Taha Hussein",
+                "ArabicH.Y3Tests.textAuthor": "Extrait de \"Les Jours\" - Taha Hussein",
+                "ArabicH.Y3Tests.questionsTitle": "Questions du Test",
+                "ArabicH.Y3Tests.question1": "1- Extrayez trois styles rhétoriques du texte et précisez leur type et fonction:",
+                "ArabicH.Y3Tests.question2": "2- Expliquez les deux phrases soulignées dans le texte en montrant l'imagerie rhétorique qu'elles contiennent:",
+                "ArabicH.Y3Tests.question3": "3- Analysez grammaticalement: \"وكان يسمع في طريقه أصواتًا غريبة، ورؤىً عجيبة\":",
+                "ArabicH.Y3Tests.question4": "4- Écrivez un paragraphe décrivant une scène de nature en utilisant le style de contraste:",
+                "ArabicH.Y3Tests.translationTitle": "Arabisation: Traduisez le texte français suivant et vocalisez-le complètement:",
+                "ArabicH.Y3Tests.vocabularyTitle": "Explication:",
+                "ArabicH.Y3Tests.showSolution": "Afficher la Solution",
+                "ArabicH.Y3Tests.previousTest": "Test Précédent",
+                "ArabicH.Y3Tests.backToTests": "Retour aux Tests de 3ème Année",
+                "ArabicH.Y3Tests.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHY3Test2;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Solution toggle functionality
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            const button = event.target;
+            if (solution.style.display === "block") {
+                solution.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إظهار الحل';
+            } else {
+                solution.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء الحل';
+            }
+        }
+
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Set solution button text after translation
+            document.querySelectorAll('.ArabicH-show-solution-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

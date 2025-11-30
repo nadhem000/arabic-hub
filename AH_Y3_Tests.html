@@ -159,6 +159,104 @@
             font-weight: 400;
         }
 
+        /* Modal Styles */
+        .ArabicH-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ArabicH-modal {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .ArabicH-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .ArabicH-modal-title {
+            font-size: 1.5rem;
+            color: var(--heading-color);
+            margin: 0;
+        }
+
+        .ArabicH-modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.2s;
+        }
+
+        .ArabicH-modal-close:hover {
+            background-color: var(--definition-bg);
+        }
+
+        .ArabicH-modal-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .ArabicH-modal-link {
+            display: block;
+            padding: 1rem;
+            background: var(--definition-bg);
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            color: var(--text-color);
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .ArabicH-modal-link:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .modal-section-title {
+            margin: 1rem 0 0.5rem 0;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
         /* Responsive styles for tests page */
         @media (max-width: 768px) {
             .ArabicH-tests-title {
@@ -248,24 +346,50 @@
         
         <div class="ArabicH-trim-list">
             <!-- Trim 1 -->
-            <div class="ArabicH-trim-item">
+            <div class="ArabicH-trim-item" data-trim="1">
                 <h2 class="ArabicH-trim-title" data-i18n="ArabicH.Y3Tests.trim1">الثلاثي الأول</h2>
                 <p class="ArabicH-trim-description" data-i18n="ArabicH.Y3Tests.trim1Desc">اختبارات الثلاثي الأول في اللغة العربية</p>
             </div>
             
             <!-- Trim 2 -->
-            <div class="ArabicH-trim-item">
+            <div class="ArabicH-trim-item" data-trim="2">
                 <h2 class="ArabicH-trim-title" data-i18n="ArabicH.Y3Tests.trim2">الثلاثي الثاني</h2>
                 <p class="ArabicH-trim-description" data-i18n="ArabicH.Y3Tests.trim2Desc">اختبارات الثلاثي الثاني في اللغة العربية</p>
             </div>
             
             <!-- Trim 3 -->
-            <div class="ArabicH-trim-item">
+            <div class="ArabicH-trim-item" data-trim="3">
                 <h2 class="ArabicH-trim-title" data-i18n="ArabicH.Y3Tests.trim3">الثلاثي الثالث</h2>
                 <p class="ArabicH-trim-description" data-i18n="ArabicH.Y3Tests.trim3Desc">اختبارات الثلاثي الثالث في اللغة العربية</p>
             </div>
         </div>
     </main>
+    
+    <!-- Modal for test selection -->
+    <div class="ArabicH-modal-overlay" id="testModal">
+        <div class="ArabicH-modal">
+            <div class="ArabicH-modal-header">
+                <h3 class="ArabicH-modal-title" id="modalTitle">اختبارات الثلاثي الأول</h3>
+                <button class="ArabicH-modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="ArabicH-modal-links">
+                <!-- Grammar Section -->
+                <h4 class="modal-section-title">قواعد اللغة</h4>
+                <a href="AH_Y3_Tests_Trim1_Testgrammar1.html" class="ArabicH-modal-link" data-domain="grammar">اختبار القواعد 1</a>
+                <a href="AH_Y3_Tests_Trim1_Testgrammar2.html" class="ArabicH-modal-link" data-domain="grammar">اختبار القواعد 2</a>
+                
+                <!-- Writing Section -->
+                <h4 class="modal-section-title">التعبير الكتابي</h4>
+                <a href="AH_Y3_Tests_Trim1_Testwriting1.html" class="ArabicH-modal-link" data-domain="writing">اختبار التعبير 1</a>
+                <a href="AH_Y3_Tests_Trim1_Testwriting2.html" class="ArabicH-modal-link" data-domain="writing">اختبار التعبير 2</a>
+                
+                <!-- Comprehension Section -->
+                <h4 class="modal-section-title">الفهم القرائي</h4>
+                <a href="AH_Y3_Tests_Trim1_Testcomprehension1.html" class="ArabicH-modal-link" data-domain="comprehension">اختبار الفهم 1</a>
+                <a href="AH_Y3_Tests_Trim1_Testcomprehension2.html" class="ArabicH-modal-link" data-domain="comprehension">اختبار الفهم 2</a>
+            </div>
+        </div>
+    </div>
     
     <footer class="ArabicH-general-footer">
         <div class="ArabicH-general-footer-content">
@@ -397,8 +521,9 @@
     <script src="scripts/pwa-handler.js"></script>
     
     <script>
-        // Windows bar active state management
+        // Modal functionality
         document.addEventListener('DOMContentLoaded', function() {
+            // Windows bar active state management
             const currentPage = window.location.pathname.split('/').pop();
             const windowItems = document.querySelectorAll('.ArabicH-window-item');
             
@@ -407,6 +532,56 @@
                     item.classList.add('active');
                 } else {
                     item.classList.remove('active');
+                }
+            });
+            
+            // Modal elements
+            const modal = document.getElementById('testModal');
+            const closeModal = document.getElementById('closeModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const trimItems = document.querySelectorAll('.ArabicH-trim-item');
+            
+            // Open modal when a trim item is clicked
+            trimItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const trimNum = this.getAttribute('data-trim');
+                    const trimTitle = this.querySelector('.ArabicH-trim-title').textContent;
+                    
+                    // Set modal title
+                    modalTitle.textContent = `اختبارات ${trimTitle}`;
+                    
+                    // Update all test links with the correct trim number
+                    const modalLinks = modal.querySelectorAll('.ArabicH-modal-link');
+                    modalLinks.forEach(link => {
+                        const domain = link.getAttribute('data-domain');
+                        const currentHref = link.getAttribute('href');
+                        // Extract test number from current href (e.g., "grammar1" -> "1")
+                        const testNumber = currentHref.match(/(\d+)\.html$/)[1];
+                        // Create new href with correct trim number
+                        link.href = `AH_Y3_Tests_Trim${trimNum}_Test${domain}${testNumber}.html`;
+                    });
+                    
+                    // Show modal
+                    modal.style.display = 'flex';
+                });
+            });
+            
+            // Close modal when close button is clicked
+            closeModal.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            // Close modal when clicking outside the modal
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'flex') {
+                    modal.style.display = 'none';
                 }
             });
         });
