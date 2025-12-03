@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار السنة الثالثة ثانوي - الثلاثي الأول - اختبار 3 | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#5d4a8a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="اختبار السنة الثالثة ثانوي">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Purple Theme for Year 3 Test 3 - Override CSS Variables */
+        :root {
+            --primary-color: #5d4a8a;
+            --secondary-color: #7a649c;
+            --accent-color: #9d87c2;
+            --light-color: #f8f9fa;
+            --dark-color: #2d1b4e;
+            --text-color: #2d3748;
+            --heading-color: #1a202c;
+            --background-color: #f5f3f9;
+            --card-bg: #ffffff;
+            --definition-bg: #edeaf2;
+            --border-color: #d1c7e0;
+            --table-even-bg: #f7f4fa;
+            --table-hover-bg: #e9e4f1;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(93, 74, 138, 0.12);
+            --gradient-primary: linear-gradient(135deg, #5d4a8a 0%, #4a3a6e 100%);
+            --gradient-secondary: linear-gradient(135deg, #7a649c 0%, #655286 100%);
+            --gradient-accent: linear-gradient(135deg, #9d87c2 0%, #7a649c 100%);
+            --gradient-light: linear-gradient(135deg, #f5f3f9 0%, #edeaf2 100%);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #6d5ba3;
+            --secondary-color: #8a76b5;
+            --accent-color: #a896d1;
+            --light-color: #2d1b4e;
+            --dark-color: #1a0f30;
+            --text-color: #e9ecef;
+            --heading-color: #f8f9fa;
+            --background-color: #1a0f30;
+            --card-bg: #2d1b4e;
+            --definition-bg: #4a3a6e;
+            --border-color: #6d5ba3;
+            --table-even-bg: #2d1b4e;
+            --table-hover-bg: #4a3a6e;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+            --gradient-primary: linear-gradient(135deg, #6d5ba3 0%, #5d4a8a 100%);
+            --gradient-secondary: linear-gradient(135deg, #8a76b5 0%, #7a649c 100%);
+            --gradient-accent: linear-gradient(135deg, #a896d1 0%, #8a76b5 100%);
+            --gradient-light: linear-gradient(135deg, #2d1b4e 0%, #1a0f30 100%);
+        }
+
+        /* Page specific styles */
+        .ArabicH-test-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-test-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-test-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-test-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-test-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-test-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .ArabicH-test-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            background-color: var(--definition-bg);
+        }
+
+        .ArabicH-text-section {
+            margin: 25px 0;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background-color: var(--definition-bg);
+            border-right: 4px solid var(--primary-color);
+        }
+
+        .ArabicH-text-title {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .ArabicH-quote {
+            font-style: italic;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            line-height: 1.8;
+            background-color: var(--light-color);
+        }
+
+        .ArabicH-questions-section {
+            margin: 30px 0;
+        }
+
+        .ArabicH-question {
+            margin-bottom: 25px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background-color: var(--card-bg);
+        }
+
+        .ArabicH-question-title {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .ArabicH-points {
+            float: left;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+            background-color: var(--primary-color);
+        }
+
+        .ArabicH-answer-textarea {
+            width: 100%;
+            min-height: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 16px;
+            resize: vertical;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+
+        .ArabicH-show-solution-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .ArabicH-show-solution-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .ArabicH-solution {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+        }
+
+        .ArabicH-translation-section {
+            margin: 25px 0;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background-color: var(--light-color);
+            border-right: 4px solid var(--secondary-color);
+        }
+
+        .ArabicH-translation-title {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .ArabicH-vocabulary {
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: var(--border-radius);
+            background-color: var(--table-hover-bg);
+        }
+
+        .ArabicH-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .ArabicH-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        .ArabicH-table th, .ArabicH-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: center;
+        }
+
+        .ArabicH-table th {
+            background-color: var(--definition-bg);
+            color: var(--primary-color);
+        }
+
+        /* إضافة تصميم للكلمات المطلوب تحليلها */
+        .ArabicH-underlined {
+            text-decoration: underline;
+            text-decoration-color: var(--secondary-color);
+            text-decoration-thickness: 2px;
+            font-weight: bold;
+        }
+
+        .ArabicH-brackets {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .student-info {
+            background-color: var(--definition-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .student-info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .student-info-item {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive styles for test page */
+        @media (max-width: 768px) {
+            .ArabicH-test-title {
+                font-size: 1.8rem;
+            }
+            
+            .ArabicH-test-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-test-container {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-test-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .ArabicH-test-info {
+                flex-direction: column;
+            }
+            
+            .student-info-row {
+                flex-direction: column;
+            }
+            
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .ArabicH-table {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-test-main {
+                padding: 1rem;
+            }
+            
+            .ArabicH-test-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-test-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-test-main">
+        <h1 class="ArabicH-test-title" data-i18n="ArabicH.Y3Tests.test3Title">اختبار السنة الثالثة ثانوي - الثلاثي الأول - اختبار 3</h1>
+        <p class="ArabicH-test-subtitle" data-i18n="ArabicH.Y3Tests.test3Subtitle">فرض تأليفي عدد 1 في اللغة - السنة الثالثة آداب</p>
+        
+        <div class="ArabicH-test-container">
+            <div class="ArabicH-test-header">
+                <h2 class="ArabicH-test-title" data-i18n="ArabicH.Y3Tests.test3Title">اختبار السنة الثالثة ثانوي - الثلاثي الأول - اختبار 3</h2>
+                <div class="date" data-i18n="ArabicH.Y3Tests.test3Duration">المدة: ساعة</div>
+            </div>
+            
+            <div class="ArabicH-test-info">
+                <div>
+                    <p><strong data-i18n="ArabicH.Y3Tests.subject">المادة:</strong> اللغة العربية</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.grade">الصف:</strong> 3 آداب</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.school">المدرسة:</strong> معهد أبو الطيب المتنبي - رأس الجبل</p>
+                </div>
+                <div>
+                    <p><strong data-i18n="ArabicH.Y3Tests.teacher">الأستاذ:</strong> أحمد اللطيف</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.year">السنة الدراسية:</strong> 2013-2014</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.score">العدد:</strong> ................/20</p>
+                </div>
+            </div>
+            
+            <div class="student-info">
+                <div class="student-info-row">
+                    <div class="student-info-item">
+                        <strong>الرقم:</strong> ..........................
+                    </div>
+                    <div class="student-info-item">
+                        <strong>اللقب:</strong> ...................
+                    </div>
+                    <div class="student-info-item">
+                        <strong>الاسم:</strong> ...................
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ArabicH-questions-section">
+                <h3 style="color: var(--primary-color); margin-bottom: 20px; text-align: center;" data-i18n="ArabicH.Y3Tests.questionsTitle">أسئلة الفرض</h3>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title" data-i18n="ArabicH.Y3Tests.question1">السؤال الأول: (5 نقاط)<br>استخرج صيغة الأمر من هذه الأمثلة وحدد نوعها:</h4>
+                    <p>1. لينفق ذو سعة من سعته</p>
+                    <p>..........................................................................................</p>
+                    <p>2. رويدك قبل إصدار الحكم</p>
+                    <p>..........................................................................................</p>
+                    <p>3. عش ما بدا لك سالما في ظل شاهقة القصور</p>
+                    <p>..........................................................................................</p>
+                    <p>4. قفا نبك من ذكــــــرى حبيب ومنزل *** بسقط اللوى بين الدخول فحومل</p>
+                    <p>..........................................................................................</p>
+                    <p>5. دع من أعمال السر ما لا يصلح لك في العلانية</p>
+                    <p>..........................................................................................</p>
+                    <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+                    <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution1')" data-i18n="ArabicH.Y3Tests.showSolution">إظهار الحل</button>
+                    <div id="solution1" class="ArabicH-solution">
+                        <div class="correct-answer">
+                            <p><strong>1. لينفق:</strong> أمر حقيقي، نوعه: فعل مضارع مجزوم بـ"لـ" وعلامة جزمه حذف النون لأنه من الأفعال الخمسة.</p>
+                            <p><strong>2. رويدك:</strong> أمر غير حقيقي، نوعه: مصدر مؤول، وظيفته التنبيه والتأني.</p>
+                            <p><strong>3. عش:</strong> أمر حقيقي، نوعه: فعل أمر مبني على السكون، والفاعل ضمير مستتر تقديره أنت.</p>
+                            <p><strong>4. قفا:</strong> أمر حقيقي، نوعه: فعل أمر مبني على حذف النون لأنه من الأفعال الخمسة، والألف فاعل.</p>
+                            <p><strong>5. دع:</strong> أمر حقيقي، نوعه: فعل أمر مبني على السكون، والفاعل ضمير مستتر تقديره أنت.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title" data-i18n="ArabicH.Y3Tests.question2">السؤال الثاني: (6.25 نقاط)<br>استخرج أسلوب النهي من هذه الأمثلة وحدد معانيه (الباث، المتقبل، الرسالة، المرجع):</h4>
+                    <p>1. قال تعالى مخاطبا الإنسان: "ولا تفسدوا في الأرض بعد إصلاحها"</p>
+                    <p>2. الإمام يخاطب ربه: "اللهم لا تخزنا يوم القيامة"</p>
+                    <p>3. قول عمر بن ربيعة لمحبوبته: "فلا تقتليني إن رأيت صبابتي إليك فإني لا يحل لكم قتلي"</p>
+                    <p>4. الصياد يخاطب السماء: "لا تمطري أيتها السماء"</p>
+                    <p>5. قول الأب لابنه: "لا تتدخل فيما لا يعنيك ولا تتبع عورات الناس"</p>
+                    
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="ArabicH.Y3Tests.prohibitionHeader1">فعل النهي</th>
+                                    <th data-i18n="ArabicH.Y3Tests.prohibitionHeader2">الباث</th>
+                                    <th data-i18n="ArabicH.Y3Tests.prohibitionHeader3">المتقبل</th>
+                                    <th data-i18n="ArabicH.Y3Tests.prohibitionHeader4">الرسالة</th>
+                                    <th data-i18n="ArabicH.Y3Tests.prohibitionHeader5">المرجع</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- سيتم إضافة الصفوف هنا من قبل المستخدم -->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+                    <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution2')" data-i18n="ArabicH.Y3Tests.showSolution">إظهار الحل</button>
+                    <div id="solution2" class="ArabicH-solution">
+                        <div class="correct-answer">
+                            <p><strong>1. لا تفسدوا:</strong> الباث: الله تعالى، المتقبل: الإنسان، الرسالة: النهي عن الإفساد، المرجع: القرآن الكريم.</p>
+                            <p><strong>2. لا تخزنا:</strong> الباث: الإمام، المتقبل: الله تعالى، الرسالة: الدعاء بعدم الخزي، المرجع: الدعاء والمناجاة.</p>
+                            <p><strong>3. لا تقتليني:</strong> الباث: عمر بن ربيعة، المتقبل: محبوبته، الرسالة: النهي عن القتل، المرجع: شعر الغزل.</p>
+                            <p><strong>4. لا تمطري:</strong> الباث: الصياد، المتقبل: السماء، الرسالة: النهي عن المطر، المرجع: الخطاب المجازي.</p>
+                            <p><strong>5. لا تتدخل... لا تتبع:</strong> الباث: الأب، المتقبل: الابن، الرسالة: النهي عن التدخل واتباع العورات، المرجع: النصح الأبوي.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title" data-i18n="ArabicH.Y3Tests.question3">السؤال الثالث: (2 نقاط)<br>حلل هذه الجمل بطريقة الصناديق:</h4>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                        <div style="flex: 1; margin-right: 10px;">
+                            <p><strong>1. لا تذهب من هذه الجهة</strong></p>
+                            <div style="border: 1px solid var(--border-color); border-radius: var(--border-radius); min-height: 150px; padding: 10px; background-color: var(--light-color);">
+                                <!-- مساحة لتحليل الجملة الأولى -->
+                            </div>
+                        </div>
+                        <div style="flex: 1; margin-left: 10px;">
+                            <p><strong>2. لا تلمني على ما فعلت</strong></p>
+                            <div style="border: 1px solid var(--border-color); border-radius: var(--border-radius); min-height: 150px; padding: 10px; background-color: var(--light-color);">
+                                <!-- مساحة لتحليل الجملة الثانية -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <textarea class="ArabicH-answer-textarea" placeholder="اكتب تحليلك للجمل هنا..."></textarea>
+                    <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution3')" data-i18n="ArabicH.Y3Tests.showSolution">إظهار الحل</button>
+                    <div id="solution3" class="ArabicH-solution">
+                        <div class="correct-answer">
+                            <p><strong>الجملة الأولى: "لا تذهب من هذه الجهة"</strong></p>
+                            <p>- لا: حرف نهي وجزم</p>
+                            <p>- تذهب: فعل مضارع مجزوم بـ"لا" وعلامة جزمه السكون، والفاعل ضمير مستتر تقديره أنت</p>
+                            <p>- من: حرف جر</p>
+                            <p>- هذه: اسم إشارة مبني على الكسر في محل جر بـ"من"</p>
+                            <p>- الجهة: بدل من "هذه" مجرور وعلامة جره الكسرة</p>
+                            
+                            <p><strong>الجملة الثانية: "لا تلمني على ما فعلت"</strong></p>
+                            <p>- لا: حرف نهي وجزم</p>
+                            <p>- تلمني: فعل مضارع مجزوم بـ"لا" وعلامة جزمه حذف النون لأنه من الأفعال الخمسة، والياء ضمير متصل في محل نصب مفعول به</p>
+                            <p>- على: حرف جر</p>
+                            <p>- ما: اسم موصول مبني على السكون في محل جر بـ"على"</p>
+                            <p>- فعلت: فعل ماضٍ مبني على السكون لاتصاله بتاء الفاعل، والتاء ضمير متصل في محل رفع فاعل</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title" data-i18n="ArabicH.Y3Tests.question4">السؤال الإنشائي: (6.75 نقاط)<br>اكتب فقرة لا تتجاوز عشرة أسطر تحدد فيها مفهوم الحرية مستعملاً صيغتي أمر وثلاثة أفعال نهي:</h4>
+                    <textarea class="ArabicH-answer-textarea" placeholder="اكتب فقرتك هنا..." style="min-height: 200px;"></textarea>
+                    <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution4')" data-i18n="ArabicH.Y3Tests.showSolution">إظهار الحل</button>
+                    <div id="solution4" class="ArabicH-solution">
+                        <div class="correct-answer">
+                            <p>الحرية ليست انفلاتاً من القيود، بل هي انضباطٌ واعٍ ومسؤول. <strong>احرص</strong> على فهم حدود حريتك حتى لا تصطدم بحريات الآخرين. <strong>لا تظنن</strong> أن الحرية تعني الفوضى والعبث، بل هي الحق في التعبير عن الذات ضمن الأطر الأخلاقية والقانونية. <strong>لا تجعل</strong> من حريتك وسيلةً لإيذاء غيرك، و<strong>لا تتصرف</strong> كأنك الوحيد في هذا العالم. تذكر أن الحرية الحقيقية تكمن في احترام حقوق الآخرين كما تحب أن تحترم حقوقك. <strong>انطلق</strong> في تفكيرك وإبداعك، ولكن ضمن حدود المسؤولية الاجتماعية. <strong>لا تخلط</strong> بين الحرية والتعدي على حرمات الناس، فهذا ليس من الحرية في شيء.</p>
+                            <p style="margin-top: 10px; font-weight: bold; color: var(--primary-color);">صيغ الأمر المستخدمة: احرص، انطلق</p>
+                            <p style="font-weight: bold; color: var(--primary-color);">أفعال النهي المستخدمة: لا تظنن، لا تجعل، لا تتصرف، لا تخلط</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; background-color: var(--light-color); border-radius: var(--border-radius); text-align: center;">
+                <p style="color: var(--primary-color); font-size: 1.1rem; margin-bottom: 10px;">☺ عملاً مُوفَّقاً ☺</p>
+                <p style="color: var(--secondary-color);">[1] نقطة على وضوح الخط ونظافة الورقة</p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_Y3_Tests_Trim1_Testgrammar2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.Y3Tests.previousTest">الاختبار السابق</a>
+                <a href="AH_Y3_Tests.html" class="ArabicH-nav-btn" data-i18n="ArabicH.Y3Tests.backToTests">العودة إلى اختبارات السنة الثالثة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.Y3Tests.backToHome">العودة إلى الصفحة الرئيسية</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations for Test 3
+        window.translations_ArabicHY3Test3 = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Year 3 Test 3 specific translations
+                "ArabicH.Y3Tests.test3Title": "اختبار السنة الثالثة ثانوي - الثلاثي الأول - اختبار 3",
+                "ArabicH.Y3Tests.test3Subtitle": "فرض تأليفي عدد 1 في اللغة - السنة الثالثة آداب",
+                "ArabicH.Y3Tests.test3Duration": "المدة: ساعة",
+                "ArabicH.Y3Tests.subject": "المادة",
+                "ArabicH.Y3Tests.grade": "الصف",
+                "ArabicH.Y3Tests.school": "المدرسة",
+                "ArabicH.Y3Tests.teacher": "الأستاذ",
+                "ArabicH.Y3Tests.year": "السنة الدراسية",
+                "ArabicH.Y3Tests.text": "النص",
+                "ArabicH.Y3Tests.score": "العدد",
+                "ArabicH.Y3Tests.questionsTitle": "أسئلة الفرض",
+                "ArabicH.Y3Tests.question1": "السؤال الأول: (5 نقاط)<br>استخرج صيغة الأمر من هذه الأمثلة وحدد نوعها:",
+                "ArabicH.Y3Tests.question2": "السؤال الثاني: (6.25 نقاط)<br>استخرج أسلوب النهي من هذه الأمثلة وحدد معانيه (الباث، المتقبل، الرسالة، المرجع):",
+                "ArabicH.Y3Tests.question3": "السؤال الثالث: (2 نقاط)<br>حلل هذه الجمل بطريقة الصناديق:",
+                "ArabicH.Y3Tests.question4": "السؤال الإنشائي: (6.75 نقاط)<br>اكتب فقرة لا تتجاوز عشرة أسطر تحدد فيها مفهوم الحرية مستعملاً صيغتي أمر وثلاثة أفعال نهي:",
+                "ArabicH.Y3Tests.prohibitionHeader1": "فعل النهي",
+                "ArabicH.Y3Tests.prohibitionHeader2": "الباث",
+                "ArabicH.Y3Tests.prohibitionHeader3": "المتقبل",
+                "ArabicH.Y3Tests.prohibitionHeader4": "الرسالة",
+                "ArabicH.Y3Tests.prohibitionHeader5": "المرجع",
+                "ArabicH.Y3Tests.showSolution": "إظهار الحل",
+                "ArabicH.Y3Tests.previousTest": "الاختبار السابق",
+                "ArabicH.Y3Tests.backToTests": "العودة إلى اختبارات السنة الثالثة",
+                "ArabicH.Y3Tests.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Year 3 Test 3 specific translations
+                "ArabicH.Y3Tests.test3Title": "Year 3 Secondary Test - First Trimester - Test 3",
+                "ArabicH.Y3Tests.test3Subtitle": "Composition Test 1 in Language - Year 3 Arts",
+                "ArabicH.Y3Tests.test3Duration": "Duration: 1 hour",
+                "ArabicH.Y3Tests.subject": "Subject",
+                "ArabicH.Y3Tests.grade": "Grade",
+                "ArabicH.Y3Tests.school": "School",
+                "ArabicH.Y3Tests.teacher": "Teacher",
+                "ArabicH.Y3Tests.year": "Academic Year",
+                "ArabicH.Y3Tests.text": "Text",
+                "ArabicH.Y3Tests.score": "Score",
+                "ArabicH.Y3Tests.questionsTitle": "Test Questions",
+                "ArabicH.Y3Tests.question1": "Question 1: (5 points)<br>Extract the imperative forms from these examples and determine their type:",
+                "ArabicH.Y3Tests.question2": "Question 2: (6.25 points)<br>Extract the prohibition style from these examples and determine its meanings (Sender, Receiver, Message, Reference):",
+                "ArabicH.Y3Tests.question3": "Question 3: (2 points)<br>Analyze these sentences using the box method:",
+                "ArabicH.Y3Tests.question4": "Essay Question: (6.75 points)<br>Write a paragraph not exceeding ten lines defining the concept of freedom using two imperative forms and three prohibition verbs:",
+                "ArabicH.Y3Tests.prohibitionHeader1": "Prohibition Verb",
+                "ArabicH.Y3Tests.prohibitionHeader2": "Sender",
+                "ArabicH.Y3Tests.prohibitionHeader3": "Receiver",
+                "ArabicH.Y3Tests.prohibitionHeader4": "Message",
+                "ArabicH.Y3Tests.prohibitionHeader5": "Reference",
+                "ArabicH.Y3Tests.showSolution": "Show Solution",
+                "ArabicH.Y3Tests.previousTest": "Previous Test",
+                "ArabicH.Y3Tests.backToTests": "Back to Year 3 Tests",
+                "ArabicH.Y3Tests.backToHome": "Back to Homepage",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Year 3 Test 3 specific translations
+                "ArabicH.Y3Tests.test3Title": "Test de la Troisième Année Secondaire - Premier Trimestre - Test 3",
+                "ArabicH.Y3Tests.test3Subtitle": "Devoir de composition 1 en Langue - Troisième Année Lettres",
+                "ArabicH.Y3Tests.test3Duration": "Durée: 1 heure",
+                "ArabicH.Y3Tests.subject": "Matière",
+                "ArabicH.Y3Tests.grade": "Classe",
+                "ArabicH.Y3Tests.school": "École",
+                "ArabicH.Y3Tests.teacher": "Enseignant",
+                "ArabicH.Y3Tests.year": "Année scolaire",
+                "ArabicH.Y3Tests.text": "Texte",
+                "ArabicH.Y3Tests.score": "Score",
+                "ArabicH.Y3Tests.questionsTitle": "Questions du Test",
+                "ArabicH.Y3Tests.question1": "Question 1: (5 points)<br>Extrayez les formes impératives de ces exemples et déterminez leur type:",
+                "ArabicH.Y3Tests.question2": "Question 2: (6.25 points)<br>Extrayez le style de prohibition de ces exemples et déterminez ses significations (Émetteur, Récepteur, Message, Référence):",
+                "ArabicH.Y3Tests.question3": "Question 3: (2 points)<br>Analysez ces phrases en utilisant la méthode des boîtes:",
+                "ArabicH.Y3Tests.question4": "Question de rédaction: (6.75 points)<br>Écrivez un paragraphe ne dépassant pas dix lignes définissant le concept de liberté en utilisant deux formes impératives et trois verbes de prohibition:",
+                "ArabicH.Y3Tests.prohibitionHeader1": "Verbe de prohibition",
+                "ArabicH.Y3Tests.prohibitionHeader2": "Émetteur",
+                "ArabicH.Y3Tests.prohibitionHeader3": "Récepteur",
+                "ArabicH.Y3Tests.prohibitionHeader4": "Message",
+                "ArabicH.Y3Tests.prohibitionHeader5": "Référence",
+                "ArabicH.Y3Tests.showSolution": "Afficher la Solution",
+                "ArabicH.Y3Tests.previousTest": "Test Précédent",
+                "ArabicH.Y3Tests.backToTests": "Retour aux Tests de 3ème Année",
+                "ArabicH.Y3Tests.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHY3Test3;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Solution toggle functionality
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            const button = event.target;
+            if (solution.style.display === "block") {
+                solution.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إظهار الحل';
+            } else {
+                solution.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء الحل';
+            }
+        }
+
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Set solution button text after translation
+            document.querySelectorAll('.ArabicH-show-solution-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

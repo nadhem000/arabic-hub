@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مراجعة علم البيان - الدرس الأول | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1a936f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="مراجعة علم البيان">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Green Theme for Rhetoric Lessons - Override CSS Variables */
+        :root {
+            --primary-color: #1a936f;
+            --secondary-color: #88d498;
+            --accent-color: #c6dabf;
+            --light-color: #f8f9fa;
+            --dark-color: #114b5f;
+            --text-color: #2d3748;
+            --heading-color: #1a202c;
+            --background-color: #f1f3f4;
+            --card-bg: #ffffff;
+            --definition-bg: #e9ecef;
+            --border-color: #c1c8d0;
+            --table-even-bg: #f7f9f9;
+            --table-hover-bg: #e2e6ea;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(26, 147, 111, 0.12);
+            --gradient-primary: linear-gradient(135deg, #1a936f 0%, #0d7a5a 100%);
+            --gradient-secondary: linear-gradient(135deg, #88d498 0%, #6dc081 100%);
+            --gradient-accent: linear-gradient(135deg, #c6dabf 0%, #a8c5aa 100%);
+            --gradient-light: linear-gradient(135deg, #f1f3f4 0%, #e9ecef 100%);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #2aa87c;
+            --secondary-color: #9ae4ab;
+            --accent-color: #d6eadf;
+            --light-color: #114b5f;
+            --dark-color: #0a3447;
+            --text-color: #e9ecef;
+            --heading-color: #f8f9fa;
+            --background-color: #0a3447;
+            --card-bg: #114b5f;
+            --definition-bg: #1a936f;
+            --border-color: #2aa87c;
+            --table-even-bg: #114b5f;
+            --table-hover-bg: #1a936f;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+            --gradient-primary: linear-gradient(135deg, #2aa87c 0%, #1a936f 100%);
+            --gradient-secondary: linear-gradient(135deg, #9ae4ab 0%, #88d498 100%);
+            --gradient-accent: linear-gradient(135deg, #d6eadf 0%, #c6dabf 100%);
+            --gradient-light: linear-gradient(135deg, #114b5f 0%, #0a3447 100%);
+        }
+
+        /* Page specific styles */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-section {
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background-color: var(--definition-bg);
+            border-right: 4px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .ArabicH-exercise-content {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .ArabicH-rule-card {
+        background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%);
+        border-radius: var(--border-radius);
+        margin: 20px 0;
+        padding: 1.5rem;
+        border-left: 6px solid var(--secondary-color);
+        position: relative;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .ArabicH-rule-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .ArabicH-rule-card::before {
+        content: "📘";
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        font-size: 1.2rem;
+        opacity: 0.8;
+    }
+
+    .ArabicH-rule-title {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+        font-weight: 700;
+        padding-left: 30px;
+        border-bottom: 2px dashed var(--secondary-color);
+        padding-bottom: 8px;
+        position: relative;
+    }
+
+    .ArabicH-rule-title::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 60px;
+        height: 2px;
+        background-color: var(--primary-color);
+    }
+
+    /* Enhanced Author Name Style - More Distinctive */
+    .ArabicH-author-name {
+        color: var(--dark-color);
+        font-weight: 700;
+        font-style: normal;
+        padding: 2px 8px;
+        background-color: rgba(26, 147, 111, 0.1);
+        border-radius: 4px;
+        margin-right: 5px;
+        display: inline-block;
+        font-family: 'Arial', 'Segoe UI', sans-serif;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+        border-right: 2px solid var(--primary-color);
+        transition: all 0.3s ease;
+    }
+
+    .ArabicH-author-name:hover {
+        background-color: rgba(26, 147, 111, 0.2);
+        transform: scale(1.05);
+    }
+
+    [data-theme="dark"] .ArabicH-author-name {
+        color: var(--accent-color);
+        background-color: rgba(42, 168, 124, 0.15);
+        border-right: 2px solid var(--secondary-color);
+    }
+
+    [data-theme="dark"] .ArabicH-author-name:hover {
+        background-color: rgba(42, 168, 124, 0.25);
+    }
+
+    /* Optional: Add icon for Quranic references */
+    .ArabicH-author-name[data-type="quran"] {
+        background-color: rgba(220, 53, 69, 0.1);
+        border-right: 2px solid #dc3545;
+    }
+
+    .ArabicH-author-name[data-type="quran"]::before {
+        content: "🕋 ";
+        font-size: 0.9em;
+    }
+
+    /* For poetry verses with author names */
+    .ArabicH-poetry-verse .ArabicH-author-name {
+        margin-top: 5px;
+        display: inline-block;
+        font-size: 0.9rem;
+        padding: 3px 10px;
+    }
+
+    /* Responsive adjustments for enhanced styles */
+    @media (max-width: 768px) {
+        .ArabicH-rule-card {
+            padding: 1.2rem;
+        }
+        
+        .ArabicH-rule-title {
+            font-size: 1.2rem;
+            padding-left: 25px;
+        }
+        
+        .ArabicH-rule-card::before {
+            left: 12px;
+            top: 12px;
+            font-size: 1.1rem;
+        }
+        
+        .ArabicH-author-name {
+            font-size: 0.85rem;
+            padding: 2px 6px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .ArabicH-rule-card {
+            padding: 1rem;
+        }
+        
+        .ArabicH-rule-title {
+            font-size: 1.1rem;
+            padding-left: 22px;
+        }
+        
+        .ArabicH-rule-card::before {
+            left: 10px;
+            top: 10px;
+            font-size: 1rem;
+        }
+    }
+
+        .ArabicH-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .ArabicH-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        .ArabicH-table th, .ArabicH-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: center;
+        }
+
+        .ArabicH-table th {
+            background-color: var(--definition-bg);
+            color: var(--primary-color);
+        }
+
+        .ArabicH-table tr:nth-child(even) {
+            background-color: var(--table-even-bg);
+        }
+
+        .ArabicH-table tr:hover {
+            background-color: var(--table-hover-bg);
+        }
+
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+        }
+
+        .ArabicH-note-box {
+            background-color: #FFF8E1;
+            border-right: 4px solid #FFC107;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        [data-theme="dark"] .ArabicH-note-box {
+            background-color: #5D4037;
+            border-right: 4px solid #FF9800;
+        }
+
+        .ArabicH-exercise-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        .ArabicH-exercise-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .ArabicH-exercise-table td {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .ArabicH-definition-list {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        .ArabicH-definition-list li {
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* New styles for text areas in tables */
+        .ArabicH-table-textarea {
+            width: 100%;
+            min-height: 40px;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: white;
+            resize: vertical;
+            font-family: inherit;
+            font-size: 15px;
+            color: var(--text-color);
+        }
+
+        [data-theme="dark"] .ArabicH-table-textarea {
+            background-color: var(--card-bg);
+            border-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        /* New style for poetry verses */
+        .ArabicH-poetry-verse {
+            font-size: 1.3rem;
+            font-family: 'Arial', 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-color);
+            margin: 15px 0;
+            padding: 10px 15px;
+            background-color: rgba(26, 147, 111, 0.08);
+            border-radius: 10px;
+            border-right: 3px solid var(--secondary-color);
+            text-align: right;
+            direction: rtl;
+        }
+
+        [data-theme="dark"] .ArabicH-poetry-verse {
+            color: #e2e6ea;
+            background-color: rgba(42, 168, 124, 0.15);
+        }
+
+        /* Style for the note before first exercise */
+        .ArabicH-lesson-note {
+            background-color: #F3F7FF;
+            border-right: 4px solid #4A90E2;
+            padding: 15px 20px;
+            border-radius: var(--border-radius);
+            margin: 20px 0 30px 0;
+            font-style: italic;
+            color: #2d3748;
+            line-height: 1.7;
+        }
+
+        [data-theme="dark"] .ArabicH-lesson-note {
+            background-color: rgba(74, 144, 226, 0.15);
+            color: #e9ecef;
+        }
+
+        /* Responsive styles for lesson page */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title {
+                font-size: 2rem;
+            }
+            
+            .ArabicH-lesson-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-lesson-container {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-lesson-section-title {
+                font-size: 1.5rem;
+            }
+            
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .ArabicH-table {
+                font-size: 14px;
+            }
+            
+            .ArabicH-poetry-verse {
+                font-size: 1.15rem;
+                padding: 8px 12px;
+            }
+            
+            .ArabicH-table-textarea {
+                font-size: 14px;
+                padding: 6px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main {
+                padding: 1rem;
+            }
+            
+            .ArabicH-lesson-title {
+                font-size: 1.6rem;
+            }
+            
+            .ArabicH-exercise-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-poetry-verse {
+                font-size: 1.05rem;
+                line-height: 1.7;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.rhetoricLesson.lesson1Title">مراجعة علم البيان - الدرس الأول</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.rhetoricLesson.lesson1Subtitle">دروس شاملة في علم البيان (التشبيه، الاستعارة، الكناية) مع تمارين تفاعلية</p>
+        
+        <div class="ArabicH-lesson-container">
+            <div class="ArabicH-lesson-section">
+                <h2 class="ArabicH-lesson-section-title" data-i18n="ArabicH.rhetoricLesson.section1Title">علم البيان</h2>
+                
+                <!-- Note before first exercise -->
+                <div class="ArabicH-lesson-note">
+                    <p>انجز هذا الدرس في معهد الحسين بوزيان بقفصة تونس، لم نتوصل لمعرفة الاستاذ الذي انجزه.</p>
+                </div>
+                
+                <!-- التمرين 1 -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">التّمرين 1: أنواع التّشبيه</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <p>التشبيه له أنواع مختلفة حسب ذكر أو حذف أركانه (الأداة ووجه الشبه):</p>
+                        <ul class="ArabicH-definition-list">
+                            <li>التّشبيه التّامّ: ذكر فيه الأداة ووجه الشّبه</li>
+                            <li>التّشبيه المجمل: ذكرت فيه الأداة وحُذف وجه الشّبه</li>
+                            <li>التّشبيه المفصّل: ذكرت فيه الأداة ووجه الشّبه مفصّلاً</li>
+                            <li>التّشبيه المؤكّـد: حُذفت فيه الأداة</li>
+                            <li>التّشبيه المرسل: ذكرت فيه الأداة</li>
+                            <li>التّشبيه البليغ: حُذفت فيه الأداة ووجه الشّبه</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> ضع العلامة (×) في الخانة المناسبة للتعرّف على أنواع التّشبيه:</p>
+                        
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">نوع التّشبيه</th>
+                                        <th colspan="2">أداة التّشبيه</th>
+                                        <th colspan="2">وجه الشّبه</th>
+                                    </tr>
+                                    <tr>
+                                        <th>مذكورة</th>
+                                        <th>محذوفة</th>
+                                        <th>مذكور</th>
+                                        <th>محذوف</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>التّشبيه التّامّ</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التّشبيه المجمل</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التّشبيه المفصّل</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التّشبيه المؤكّـد</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التّشبيه المرسل</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التّشبيه البليغ</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer1" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">نوع التّشبيه</th>
+                                        <th colspan="2">أداة التّشبيه</th>
+                                        <th colspan="2">وجه الشّبه</th>
+                                    </tr>
+                                    <tr>
+                                        <th>مذكورة</th>
+                                        <th>محذوفة</th>
+                                        <th>مذكور</th>
+                                        <th>محذوف</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>التّشبيه التّامّ</td>
+                                        <td>×</td>
+                                        <td></td>
+                                        <td>×</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التّشبيه المجمل</td>
+                                        <td>×</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>×</td>
+                                    </tr>
+                                    <tr>
+                                        <td>التّشبيه المفصّل</td>
+                                        <td>×</td>
+                                        <td></td>
+                                        <td>×</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التّشبيه المؤكّـد</td>
+                                        <td></td>
+                                        <td>×</td>
+                                        <td>×</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التّشبيه المرسل</td>
+                                        <td>×</td>
+                                        <td></td>
+                                        <td>×</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التّشبيه البليغ</td>
+                                        <td></td>
+                                        <td>×</td>
+                                        <td></td>
+                                        <td>×</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- التمرين 2 -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">التّمرين 2: تعريف أنواع التّشبيه</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>التّشبيه الضّمنيّ: تشبيه يُجعلَ فيه المشبّه مشبّها به</li>
+                            <li>التّشبيه المقلوب: تشبيه يكون فيه وجه الشّبه صورة منتزعة من متعدّد</li>
+                            <li>التّشبيه التمثيليّ: تشبيه فيه تلميح إلى مشابهة بين معنييْ تركيبين</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> اربط بسهم بين نوع التّشبيه وتعريفه:</p>
+                        <div style="padding: 15px; background-color: var(--light-color); border-radius: var(--border-radius);">
+                            <p>1. التّشبيه الضّمنيّ - ......... - تشبيه يُجعلَ فيه المشبّه مشبّها به</p>
+                            <p>2. التّشبيه المقلوب - ......... - تشبيه يكون فيه وجه الشّبه صورة منتزعة من متعدّد</p>
+                            <p>3. التّشبيه التمثيليّ - ......... - تشبيه فيه تلميح إلى مشابهة بين معنييْ تركيبين</p>
+                        </div>
+                        <textarea class="ArabicH-table-textarea" placeholder="اكتب الإجابة هنا..." rows="3" style="margin-top: 15px;"></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer2" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <div style="padding: 15px; background-color: var(--light-color); border-radius: var(--border-radius);">
+                            <p>1. التّشبيه الضّمنيّ ← تشبيه فيه تلميح إلى مشابهة بين معنييْ تركيبين</p>
+                            <p>2. التّشبيه المقلوب ← تشبيه يُجعلَ فيه المشبّه مشبّها به</p>
+                            <p>3. التّشبيه التمثيليّ ← تشبيه يكون فيه وجه الشّبه صورة منتزعة من متعدّد</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- التمرين 3 -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">التّمرين 3: أركان التّـشبيه ونوعه</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <p>أركان التشبيه: المشبّه، المشبّه به، الأداة، وجه الشبه.</p>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حدّد أركان التّـشبيه ونوعه في الأمثلة التالية:</p>
+                        <div style="margin-bottom: 15px;">
+                            <p class="ArabicH-poetry-verse">1. خـلـقـتَ طـلـيـقـا كـطـيـف الـنّـسـيــــــــــــــــم وحـرّا كـنـور الـضّـحـى فـي سـمـــــــــاه <span class="ArabicH-author-name">(الشّابّي)</span></p>
+                            <p class="ArabicH-poetry-verse">2. كـأنّ دمعــي لـذكـراه إذا خـطــــــــــــــرت فـيـض يـسـيـل عـلـى الـخـدّيـن مــــــدرار <span class="ArabicH-author-name">(الخنساء)</span></p>
+                            <p class="ArabicH-poetry-verse">3. لـو تـرى الـدّنـيـا بـعـيـنـيْ بـصـيــــــــــــــر إنّـمـا الـدنـيـا تـحـاكــي الـسّـرابــــــــــــــا <span class="ArabicH-author-name">(أبو العتاهية)</span></p>
+                            <p class="ArabicH-poetry-verse">4. يـدعـون عـنـتـر والـــرّمـــــــــــــــــــــــاح كـأنّـهـا أشـطـان بـئـر فـي لـبـان الأدهـــــم <span class="ArabicH-author-name">(عنترة)</span></p>
+                            <p class="ArabicH-poetry-verse">5. قـد كـان حـصـنـا شـديـد الـركـن مـمـتـنـعـا لـيـثـا إذا نـزل الـفـتـيـان أو ركـبـــــــــــوا <span class="ArabicH-author-name">(الخنساء)</span></p>
+                        </div>
+                        
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th>المثال</th>
+                                        <th>المشبّه</th>
+                                        <th>المشبّه به</th>
+                                        <th>الأداة</th>
+                                        <th>وجه الشّبه</th>
+                                        <th>نوع التّشبيه</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer3" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th>المثال</th>
+                                        <th>المشبّه</th>
+                                        <th>المشبّه به</th>
+                                        <th>الأداة</th>
+                                        <th>وجه الشّبه</th>
+                                        <th>نوع التّشبيه</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>أنت</td>
+                                        <td>طيف النسيم / نور الضحى</td>
+                                        <td>الكاف</td>
+                                        <td>الحرية والانطلاق</td>
+                                        <td>تام مفصل</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>دمعي</td>
+                                        <td>فيض يسيل</td>
+                                        <td>كأنّ</td>
+                                        <td>كثرة السيلان</td>
+                                        <td>تام مفصل</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>الدنيا</td>
+                                        <td>السراب</td>
+                                        <td>تحاكي</td>
+                                        <td>الزوال والباطل</td>
+                                        <td>تام مجمل</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>الرماح</td>
+                                        <td>أشطان بئر</td>
+                                        <td>كأنّ</td>
+                                        <td>الطول والامتداد</td>
+                                        <td>تام مفصل</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>الحصن</td>
+                                        <td>الليث</td>
+                                        <td>محذوفة</td>
+                                        <td>القوة والشدة</td>
+                                        <td>بليغ</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- التمرين 4 -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">التّمرين 4: التّشبيه التّمثيليّ</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <p>التشبيه التمثيلي هو تشبيه صورة بصورة أو تركيب بتركيب.</p>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> وضّح التّشبيه التّمثيليّ في ما يلي:</p>
+                        <div style="margin-bottom: 15px;">
+                            <p class="ArabicH-poetry-verse">1. قال <span class="ArabicH-author-name">المتنبّي</span> يصف أسدا: يـطــأ الــثّــرى مـتـرفّــقـا فـي تـيـهــــــــــه فـكـأنّـه آس يـجــسّ عــلــيـــــــــــــــــــلا (الآس: الطّبيب)</p>
+                            <p class="ArabicH-poetry-verse">2. أوّل بــدء الـمـشـيــب واحــــــــــــــــــــدة تـــشـعـل مـا جــاورت مـن الـشّــعـــــــــــر<br>
+                               مـثـل الـحــريـق الـعـظــيــم تــبـــــــــدؤه أوّل صـول صـغـيـرة الــشّــــــــــــــــــــــرر (صول: وثبة)</p>
+                        </div>
+                        <textarea class="ArabicH-table-textarea" placeholder="اكتب إجابتك هنا..." rows="5" style="width:100%; margin-bottom:15px;"></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer4" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <ol>
+                            <li>الأسد يشبه الطبيب الذي يجسّ العليل ← صورة القوة مع الرفق.</li>
+                            <li>أول المشيب يشبه الشرر الصغير الذي يشعل الحريق ← صورة البداية الصغيرة التي تؤدي إلى أثر كبير.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <!-- التمرين 5 -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">التّمرين 5: التّشبيه المقلوب والتّشبيه الضّمنيّ</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>التشبيه المقلوب: يُجعل فيه المشبّه به مشبهاً.</li>
+                            <li>التشبيه الضمني: تشبيه يُفهم من السياق دون أداة صريحة.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> وضّح التّشبيه المقلوب والتّشبيه الضّمنيّ:</p>
+                        <div style="margin-bottom: 15px;">
+                            <p class="ArabicH-poetry-verse">1. وبـدا الـصـّبـاحُ كـأنّ غــرّتــــــــــــــــــه وجـهُ الـخــلـيـفــة حـيـن يُـمـتـــــــــــــــــدحُ</p>
+                            <p class="ArabicH-poetry-verse">2. مــن يَـهُــنْ يـسـهـل الـهـوان عـلـيــــــه مـا لـجـرح بـمـيــّت إيـــــــــــــــــــــــــلامُ</p>
+                            <p class="ArabicH-poetry-verse">3. قال شاعر يصف بركة المتوكّل: كـأنّـهـا حـيـن لـجـّـت فـي تـدفـّقـهـــــــــا يـدُ الـخـلـيـفـة لـمّـا سـالَ واديـــــــــــــــها</p>
+                        </div>
+                        <textarea class="ArabicH-table-textarea" placeholder="اكتب إجابتك هنا..." rows="5" style="width:100%; margin-bottom:15px;"></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer5')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer5" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <ol>
+                            <li>الصباح كوجه الخليفة ← تشبيه مقلوب (جُعل المشبّه به "وجه الخليفة" مشبهاً).</li>
+                            <li>من يهن يسهل الهوان عليه ← تشبيه ضمني (فهم من السياق دون أداة صريحة).</li>
+                            <li>البركة كيد الخليفة ← تشبيه مقلوب.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <!-- التمرين 6 -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">التّمرين 6: الحقيقة والمجاز</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>الحقيقة: استعمال اللفظ في معناه الأصلي.</li>
+                            <li>المجاز: استعمال اللفظ في غير معناه الأصلي لعلاقة مع قرينة.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> ميّز بين الحقيقة والمجاز في ما تحته سطر:</p>
+                        <div style="margin-bottom: 15px;">
+                            <p class="ArabicH-poetry-verse">1. قال <span class="ArabicH-author-name">المتنبّي</span> حين مرض بالحمّى: فــإن أمـرض فـمـا مـرض <u>اصـطـبـاري</u> وإن أُحـمـم فـمـا حـُـمّ <u>اعـتـزامـــــــــي</u></p>
+                            <p class="ArabicH-poetry-verse">2. وقال حينما أنذر السّحاب بالمطر وكان معه ممدوحه: تـعـرّض لـي الـسّحـابُ وقـد قـفـلـنــــــــــــــا فـقـلـتُ إلـيـك إنّ <u>مـعـي الـسّــحـــــــاب</u></p>
+                        </div>
+                        <textarea class="ArabicH-table-textarea" placeholder="اكتب إجابتك هنا..." rows="5" style="width:100%; margin-bottom:15px;"></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer6')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer6" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <ol>
+                            <li>"اصطباري" و"اعتمادي" ← مجاز (لأن الصبر والعزم لا يمرضان ولا يحمّان، بل استعارة للثبات).</li>
+                            <li>"معي السحاب" ← مجاز (لأن السحاب ليس معه حقيقة، بل كناية عن النفوذ والقدرة).</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <!-- التمرين 6 (تعريفات) -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">التّمرين 6: تعريفات الاستعارة</h3>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> عرّف بإيجاز:</p>
+                        <div style="padding: 15px; background-color: var(--light-color); border-radius: var(--border-radius); margin-bottom: 15px;">
+                            <p>ــ الاستعارة: ...................................</p>
+                            <p>ــ المستعار: ...................................</p>
+                            <p>ــ المستعار له: ...................................</p>
+                            <p>ــ المستعار منه: ...................................</p>
+                            <p>ــ الاستعارة التصريحيّة: ...................................</p>
+                            <p>ــ الاستعارة المكنيّة: ...................................</p>
+                        </div>
+                        <textarea class="ArabicH-table-textarea" placeholder="اكتب إجابتك هنا..." rows="8" style="width:100%; margin-bottom:15px;"></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer7')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer7" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <ol>
+                            <li><strong>الاستعارة:</strong> تشبيه حذف أحد طرفيه.</li>
+                            <li><strong>المستعار:</strong> اللفظ المنقول.</li>
+                            <li><strong>المستعار له:</strong> المعنى الجديد.</li>
+                            <li><strong>المستعار منه:</strong> المعنى الأصلي.</li>
+                            <li><strong>الاستعارة التصريحية:</strong> ذكر المستعار منه.</li>
+                            <li><strong>الاستعارة المكنية:</strong> حذف المستعار منه وإبقاء لازم من لوازمه.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <!-- التمرين 7 -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">التّمرين 7: التّشبيه والاستعارة</h3>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> أكمل الفراغات محدّدا أركان التّشبيه والاستعارة:</p>
+                        <div style="margin-bottom: 15px;">
+                            <p class="ArabicH-poetry-verse" style="text-align: center;"><strong>لَمَعَ البَرْقُ في كَفِّ المُقاتِلِ</strong></p>
+                        </div>
+                        <div style="padding: 15px; background-color: var(--light-color); border-radius: var(--border-radius); margin-bottom: 15px;">
+                            <p>التّـشبيه ← شُبّه السّيف (<strong><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1" style="width: 150px; display: inline-block; vertical-align: middle;"></textarea></strong>) بالبرق (<strong><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1" style="width: 150px; display: inline-block; vertical-align: middle;"></textarea></strong>)</p>
+                            <p>الاستعارة ← السّيف: <strong><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1" style="width: 150px; display: inline-block; vertical-align: middle;"></textarea></strong>          البرق: <strong><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="1" style="width: 150px; display: inline-block; vertical-align: middle;"></textarea></strong></p>
+                        </div>
+                        <textarea class="ArabicH-table-textarea" placeholder="اكتب إجابتك هنا..." rows="3" style="width:100%; margin-bottom:15px;"></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer8')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer8" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <p>التّـشبيه ← شُبّه السّيف (<strong>المشبّه</strong>) بالبرق (<strong>المشبّه به</strong>)</p>
+                        <p>الاستعارة ← السّيف: <strong>المستعار له</strong>          البرق: <strong>المستعار منه</strong></p>
+                    </div>
+                </div>
+                
+                <!-- التمرين 8 -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">التّمرين 8: أركان الاستعارة ونوعها</h3>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حدّد أركان الاستعارة ونوعها:</p>
+                        <div style="margin-bottom: 15px;">
+                            <!-- In التمرين 8 -->
+<p class="ArabicH-poetry-verse">1. كتاب أنزلناه إليك لتخرج النّـاس من الظّلمات إلى النّور. <span class="ArabicH-author-name" data-type="quran">(قرآن)</span></p>
+<p class="ArabicH-poetry-verse">2. قال تعالى على لسان زكريّا: ربّ إنّي وهن العظم منّي واشتعل الرّأس شيبا. <span class="ArabicH-author-name" data-type="quran">(قرآن)</span></p>
+                            <p class="ArabicH-poetry-verse">3. قال <span class="ArabicH-author-name">المتنبّي</span> وقد قابله ممدوحه سيف الدّولة وعانقه: فَـلـم أرَ قَـبـلـي مـن مـشـى الـبـحـر نـحـوه ولا رجـلا قـامـت تُـعـانــقـه الأُسْــد</p>
+                            <p class="ArabicH-poetry-verse">4. عـــضّــنــا الــدّهـــر بِـنـابِـــــــــــــــــــــه لــيــت مــا حــلّ بــنــا بــــــــــــــه</p>
+                        </div>
+                        
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th>المثال</th>
+                                        <th>المستعار</th>
+                                        <th>المستعار له</th>
+                                        <th>المستعار منه</th>
+                                        <th>نوع الاستعارة</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أdخل الإجابة هنا..." rows="2"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="أدخل الإجابة هنا..." rows="2"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer9')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer9" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th>المثال</th>
+                                        <th>المستعار</th>
+                                        <th>المستعار له</th>
+                                        <th>المستعار منه</th>
+                                        <th>نوع الاستعارة</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>الظلمات / النور</td>
+                                        <td>الضلال / الهداية</td>
+                                        <td>الظلام / النور</td>
+                                        <td>تصريحية</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>اشتعل</td>
+                                        <td>الشيب</td>
+                                        <td>النار</td>
+                                        <td>مكنية</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>البحر / الأسد</td>
+                                        <td>الممدوح</td>
+                                        <td>البحر / الأسد</td>
+                                        <td>تصريحية</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>ناب الدهر</td>
+                                        <td>الدهر</td>
+                                        <td>الحيوان المفترس</td>
+                                        <td>مكنية</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- التمرين 9 -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">التّمرين 9: استعارة تركيبية</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <p>الاستعارة التركيبية: استعمال تركيب في غير معناه الأصلي.</p>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> افترض حالا تجعلها مستعارا للتّركيبين التّاليين وحدّد نوع الاستعارة:</p>
+                        <div style="padding: 15px; background-color: var(--light-color); border-radius: var(--border-radius); margin-bottom: 15px;">
+                            <p>1. أنت تنفخ في رماد . <textarea class="ArabicH-table-textarea" placeholder="اكتب الحال المستعارة هنا..." rows="1" style="width: 70%; display: inline-block; vertical-align: middle;"></textarea></p>
+                            <p>2. لكلّ جواد كَبوةٌ . <textarea class="ArabicH-table-textarea" placeholder="اكتب الحال المستعارة هنا..." rows="1" style="width: 70%; display: inline-block; vertical-align: middle;"></textarea></p>
+                        </div>
+                        <textarea class="ArabicH-table-textarea" placeholder="اكتب إجابتك هنا..." rows="4" style="width:100%; margin-bottom:15px;"></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer10')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer10" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <ol>
+                            <li>"أنت تنفخ في رماد" ← استعارة عن العمل بلا جدوى (الاستعارة مكنية).</li>
+                            <li>"لكل جواد كبوة" ← استعارة عن أن لكل إنسان خطأ (الاستعارة مكنية).</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <!-- التمرين 10 -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">التّمرين 10: الكناية</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <p>الكناية: لفظ أريد به معنى ملازم له. أنواعها: كناية عن صفة، عن موصوف، عن نسبة.</p>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حدّد موطن الكناية ونوعها:</p>
+                        <div style="margin-bottom: 15px;">
+                            <p class="ArabicH-poetry-verse">1. صَــبـّـحـهـم وبُسْـطـهـم حــريـــــــــــــــر ومـسـّــاهــم وبُـــسْــطـهـم تـــراب</p>
+                            <p class="ArabicH-poetry-verse">2. قـوم تَـرى أرمـاحـهـم يـوم الـوغــــــــى مـشـغـوفـةً بـمـواطـن الـكـتـمـــان</p>
+                            <p class="ArabicH-poetry-verse">3. تـرى الـمـجـد يـهـوي إلـى بـيْــتــــــــــه يـرى أفـضـل الـكـسْـبِ أنْ يُـحـمـدا <span class="ArabicH-author-name">(الخنساء)</span></p>
+                        </div>
+                        <textarea class="ArabicH-table-textarea" placeholder="اكتب إجابتك هنا..." rows="5" style="width:100%; margin-bottom:15px;"></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer11')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer11" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <ol>
+                            <li>"بسطهم حرير/تراب" ← كناية عن الغنى والفقر (كناية عن صفة).</li>
+                            <li>"الرماح مشغوفة بالكتمان" ← كناية عن الشجاعة (كناية عن صفة).</li>
+                            <li>"المجد يهوي إلى بيته" ← كناية عن رفعة الممدوح (كناية عن نسبة).</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">☺ تمارين مفيدة وناجحة ☺</p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.rhetoricLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.rhetoricLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_General_Lesson_Rhetoric_Prosody_lesson2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.rhetoricLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHRhetoricLesson1 = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Rhetoric Lesson 1 specific translations
+                "ArabicH.rhetoricLesson.lesson1Title": "مراجعة علم البيان - الدرس الأول",
+                "ArabicH.rhetoricLesson.lesson1Subtitle": "دروس شاملة في علم البيان (التشبيه، الاستعارة، الكناية) مع تمارين تفاعلية",
+                "ArabicH.rhetoricLesson.section1Title": "علم البيان",
+                "ArabicH.rhetoricLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.rhetoricLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.rhetoricLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.rhetoricLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Rhetoric Lesson 1 specific translations
+                "ArabicH.rhetoricLesson.lesson1Title": "Review of Rhetoric - Lesson 1",
+                "ArabicH.rhetoricLesson.lesson1Subtitle": "Comprehensive lessons in rhetoric (simile, metaphor, metonymy) with interactive exercises",
+                "ArabicH.rhetoricLesson.section1Title": "Rhetoric",
+                "ArabicH.rhetoricLesson.showAnswer": "Show Answer",
+                "ArabicH.rhetoricLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.rhetoricLesson.backToHome": "Back to Homepage",
+                "ArabicH.rhetoricLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Rhetoric Lesson 1 specific translations
+                "ArabicH.rhetoricLesson.lesson1Title": "Révision de la Rhétorique - Leçon 1",
+                "ArabicH.rhetoricLesson.lesson1Subtitle": "Leçons complètes en rhétorique (comparaison, métaphore, métonymie) avec exercices interactifs",
+                "ArabicH.rhetoricLesson.section1Title": "Rhétorique",
+                "ArabicH.rhetoricLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.rhetoricLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.rhetoricLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.rhetoricLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHRhetoricLesson1;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Answer toggle functionality
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إظهار الإجابة';
+            } else {
+                answer.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء الإجابة';
+            }
+        }
+
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Set answer button text after translation
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

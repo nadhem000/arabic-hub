@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مراجعة علم العروض - الدرس الثالث | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#8B4513">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="مراجعة علم العروض">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Warm Brown-Gold Theme for Prosody Lessons - Similar to Lesson 2 Structure */
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2691E;
+            --accent-color: #CD853F;
+            --light-color: #FAF0E6;
+            --dark-color: #5D4037;
+            --text-color: #5D4037;
+            --heading-color: #4E342E;
+            --background-color: #FFF8F0;
+            --card-bg: #FFFFFF;
+            --definition-bg: #F5E6D3;
+            --border-color: #D7CCC8;
+            --table-even-bg: #F9F5F0;
+            --table-hover-bg: #EFEBE9;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(139, 69, 19, 0.12);
+            --gradient-primary: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            --gradient-secondary: linear-gradient(135deg, #D2691E 0%, #CD853F 100%);
+            --gradient-accent: linear-gradient(135deg, #CD853F 0%, #DEB887 100%);
+            --gradient-light: linear-gradient(135deg, #FAF0E6 0%, #FFF8F0 100%);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #A0522D;
+            --secondary-color: #DEB887;
+            --accent-color: #E6BE8A;
+            --light-color: #5D4037;
+            --dark-color: #3E2723;
+            --text-color: #EFEBE9;
+            --heading-color: #F5F5F5;
+            --background-color: #3E2723;
+            --card-bg: #4E342E;
+            --definition-bg: #5D4037;
+            --border-color: #6D4C41;
+            --table-even-bg: #4E342E;
+            --table-hover-bg: #5D4037;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+            --gradient-primary: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
+            --gradient-secondary: linear-gradient(135deg, #DEB887 0%, #D2691E 100%);
+            --gradient-accent: linear-gradient(135deg, #E6BE8A 0%, #CD853F 100%);
+            --gradient-light: linear-gradient(135deg, #5D4037 0%, #4E342E 100%);
+        }
+
+        /* Page specific styles - Same structure as Lesson 2 */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-section {
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background-color: var(--definition-bg);
+            border-right: 4px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .ArabicH-exercise-content {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Enhanced Rule Card Style - More Noticeable */
+        .ArabicH-rule-card {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%);
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-left: 6px solid var(--secondary-color);
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ArabicH-rule-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .ArabicH-rule-card::before {
+            content: "📘";
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-rule-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            padding-left: 30px;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 8px;
+            position: relative;
+        }
+
+        .ArabicH-rule-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        /* Enhanced Author Name Style */
+        .ArabicH-author-name {
+            color: var(--dark-color);
+            font-weight: 700;
+            font-style: normal;
+            padding: 2px 8px;
+            background-color: rgba(139, 69, 19, 0.1);
+            border-radius: 4px;
+            margin-right: 5px;
+            display: inline-block;
+            font-family: 'Arial', 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            border-right: 2px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .ArabicH-author-name:hover {
+            background-color: rgba(139, 69, 19, 0.2);
+            transform: scale(1.05);
+        }
+
+        [data-theme="dark"] .ArabicH-author-name {
+            color: var(--accent-color);
+            background-color: rgba(160, 82, 45, 0.15);
+            border-right: 2px solid var(--secondary-color);
+        }
+
+        [data-theme="dark"] .ArabicH-author-name:hover {
+            background-color: rgba(160, 82, 45, 0.25);
+        }
+
+        /* Enhanced Poetry Verse Style - Larger and Clearer Font */
+        .ArabicH-poetry-verse {
+            font-size: 1.4rem;
+            font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 2.2;
+            color: var(--dark-color);
+            margin: 20px 0;
+            padding: 15px 20px;
+            background-color: rgba(139, 69, 19, 0.08);
+            border-radius: 10px;
+            border-right: 3px solid var(--secondary-color);
+            text-align: center;
+            direction: rtl;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .ArabicH-poetry-verse {
+            color: #e2e6ea;
+            background-color: rgba(160, 82, 45, 0.15);
+        }
+
+        /* Special style for prosody examples */
+        .ArabicH-prosody-example {
+            font-family: 'Traditional Arabic', serif;
+            font-size: 1.4rem;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            line-height: 2.5;
+            background-color: var(--light-color);
+            text-align: center;
+            direction: rtl;
+            font-weight: 500;
+        }
+
+        .ArabicH-prosody-pattern {
+            font-family: monospace;
+            padding: 10px;
+            background-color: var(--dark-color);
+            color: white;
+            border-radius: 8px;
+            margin: 10px 0;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Style for the note before first exercise */
+        .ArabicH-lesson-note {
+            background-color: #F5F0E6;
+            border-right: 4px solid #8B4513;
+            padding: 15px 20px;
+            border-radius: var(--border-radius);
+            margin: 20px 0 30px 0;
+            font-style: italic;
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        [data-theme="dark"] .ArabicH-lesson-note {
+            background-color: rgba(139, 69, 19, 0.15);
+            color: #e9ecef;
+        }
+
+        .ArabicH-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .ArabicH-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        .ArabicH-table th, .ArabicH-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: center;
+        }
+
+        .ArabicH-table th {
+            background-color: var(--definition-bg);
+            color: var(--primary-color);
+        }
+
+        .ArabicH-table tr:nth-child(even) {
+            background-color: var(--table-even-bg);
+        }
+
+        .ArabicH-table tr:hover {
+            background-color: var(--table-hover-bg);
+        }
+
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+        }
+
+        .ArabicH-exercise-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        .ArabicH-exercise-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .ArabicH-exercise-table td {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .ArabicH-definition-list {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        .ArabicH-definition-list li {
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        /* New styles for text areas */
+        .ArabicH-table-textarea {
+            width: 100%;
+            min-height: 40px;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: white;
+            resize: vertical;
+            font-family: inherit;
+            font-size: 15px;
+            color: var(--text-color);
+        }
+
+        [data-theme="dark"] .ArabicH-table-textarea {
+            background-color: var(--card-bg);
+            border-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .ArabicH-answer-textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            font-family: inherit;
+            font-size: 16px;
+            resize: vertical;
+        }
+
+        /* Input fields for tables */
+        .ArabicH-table-input {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            font-size: 15px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .ArabicH-table-input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(205, 133, 63, 0.2);
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Responsive styles for lesson page */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title {
+                font-size: 2rem;
+            }
+            
+            .ArabicH-lesson-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-lesson-container {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-lesson-section-title {
+                font-size: 1.5rem;
+            }
+            
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .ArabicH-table {
+                font-size: 14px;
+            }
+            
+            .ArabicH-poetry-verse {
+                font-size: 1.25rem;
+                padding: 12px 15px;
+                line-height: 2.0;
+            }
+            
+            .ArabicH-prosody-example {
+                font-size: 1.25rem;
+                line-height: 2.0;
+            }
+            
+            .ArabicH-table-textarea {
+                font-size: 14px;
+                padding: 6px;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1.2rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.2rem;
+                padding-left: 25px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 12px;
+                top: 12px;
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-author-name {
+                font-size: 0.85rem;
+                padding: 2px 6px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main {
+                padding: 1rem;
+            }
+            
+            .ArabicH-lesson-title {
+                font-size: 1.6rem;
+            }
+            
+            .ArabicH-exercise-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-poetry-verse {
+                font-size: 1.15rem;
+                line-height: 1.8;
+                padding: 10px 12px;
+            }
+            
+            .ArabicH-prosody-example {
+                font-size: 1.15rem;
+                line-height: 1.8;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.1rem;
+                padding-left: 22px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 10px;
+                top: 10px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.rhetoricLesson.lesson3Title">مراجعة علم العروض - الدرس الثالث</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.rhetoricLesson.lesson3Subtitle">دروس شاملة في علم العروض (بحور الشعر، التفعيلات، الزحافات، العلل، القافية وأحكامها)</p>
+        
+        <div class="ArabicH-lesson-container">
+            <div class="ArabicH-lesson-section">
+                <h2 class="ArabicH-lesson-section-title">علم العروض</h2>
+                
+                <!-- جملة الإضافة قبل التمرين الأول -->
+                <div class="ArabicH-lesson-note">
+                    <p>أنجز هذا الدرس في معهد الحسين بوزيان بقفصة تونس، لم نتوصل لمعرفة الأستاذ الذي أنجزه.</p>
+                </div>
+                
+                <!-- المقدمة -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">مقدمة في علم العروض:</h4>
+                    <ul class="ArabicH-definition-list">
+                        <li>علم العروض: علم يبحث في أوزان الشعر العربي وقوانينه</li>
+                        <li>البحر: الوزن الشعري الذي تبنى عليه القصيدة</li>
+                        <li>التفعيلة: الوحدة الأساسية في وزن البحر الشعري</li>
+                        <li>الزحاف: تغيير يلحق بالتفعيلة فيحذف أحد أحرفها الساكنة</li>
+                        <li>العلة: تغيير يلحق بالتفعيلة فيحذف متحرك وساكن أو متحركين</li>
+                    </ul>
+                </div>
+                
+                <!-- البحر المتقارب -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">البحر المتقارب</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>التفعيلة: فعولن (×4)</li>
+                            <li>الوزن: فعولن فعولن فعولن فعولن (×2)</li>
+                            <li>القاعدة: عن المتقارب قال الخليل ← فعولن فعولن فعولن فعولن</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حلّل البيت الشعري التالي وفق البحر المتقارب:</p>
+                        <div class="ArabicH-poetry-verse">
+                            كــلــوا واشـربـوا أيـّـها الأغـنـيــــــــــــــــــــــاء<br>
+                            وإن مــلأ الــسّـكــكَ الـجائــعــــــــــــــــــــــــــــونْ
+                        </div>
+                        
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th>البحر</th>
+                                        <th>الكتابة العروضيّة</th>
+                                        <th>الرّموز</th>
+                                        <th>التّفعيلات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>المتقارب</td>
+                                        <td><input type="text" class="ArabicH-table-input" placeholder="اكتب هنا"></td>
+                                        <td><input type="text" class="ArabicH-table-input" placeholder="اكتب هنا"></td>
+                                        <td><input type="text" class="ArabicH-table-input" placeholder="اكتب هنا"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer1" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <p><strong>الكتابة العروضية:</strong> كْلُوْا وَشْرَبُوْا أَيُّهَلْأَغْنِيَا وَإِنْ مَلَأَسْسُكَّكَ الْجَائِعُوْنْ</p>
+                        <p><strong>الرموز:</strong> /0//0 /0//0 /0//0 /0//0</p>
+                        <p><strong>التفعيلات:</strong> فعولن فعولن فعولن فعولن</p>
+                    </div>
+                </div>
+                
+                <!-- البحر الهزج -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">البحر الهزج</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>التفعيلة: مفاعيلن (×4)</li>
+                            <li>الوزن: مفاعيلن مفاعيلن مفاعيلن (×2)</li>
+                            <li>القاعدة: على الأهزاج تسهيل ← مفاعيلن مفاعيلن</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حدد بحر الهزج في الأبيات التالية:</p>
+                        <div class="ArabicH-poetry-verse">
+                            فــي حـبّـهــا تـتـلاشـى الـمـعـانـــــــــــــــــــــي<br>
+                            وتـتـجـلّـى فـي الـوجـود الـبـيــــــــــــــــــــانْ
+                        </div>
+                        
+                        <textarea class="ArabicH-answer-textarea" placeholder="اكتب تحليلك العروضي هنا..."></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer2" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <p><strong>البحر:</strong> الهزج</p>
+                        <p><strong>الوزن:</strong> مفاعيلن مفاعيلن مفاعيلن</p>
+                        <p><strong>التحليل:</strong> يتكون البحر من ثلاثة تفعيلات من نوع مفاعيلن في كل شطر</p>
+                    </div>
+                </div>
+                
+                <!-- البحر الرمل -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">البحر الرمل</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>التفعيلة: فاعلاتن (×4)</li>
+                            <li>الوزن: فاعلاتن فاعلاتن فاعلاتن (×2)</li>
+                            <li>القاعدة: رمل الأبحر ترويه الثقات ← فاعلاتن فاعلاتن فاعلاتن</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حلّل البيت الشعري التالي وفق البحر الرمل:</p>
+                        <div class="ArabicH-poetry-verse">
+                            الـرّمـلُ يـجـري كـالـمـيـاه الـعـذبـــــــــــــــــــــة<br>
+                            فـي قـلـبـي يـنـبـعـث الـأمـــــــــــــــــــــــــــلُ
+                        </div>
+                        
+                        <textarea class="ArabicH-answer-textarea" placeholder="اكتب تحليلك العروضي هنا..."></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer3" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <p><strong>الكتابة العروضية:</strong> الرّمْلُ يَجْرِي كَالْمِيَاهِ الْعَذْبَةْ</p>
+                        <p><strong>الرموز:</strong> //0/0 //0/0 //0/0</p>
+                        <p><strong>التفعيلات:</strong> فاعلاتن فاعلاتن فاعلاتن</p>
+                    </div>
+                </div>
+                
+                <!-- البحر المتدارك -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">البحر المتدارك</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>نوعان: أ- الخبب: فاعلن فاعلن فاعلن فاعلن (×2)</li>
+                            <li>ب- المحدث: فعْلنْ فعلنْ فعْلُنْ فعْلُنْ (×2)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> ميّز بين نوعي البحر المتدارك:</p>
+                        <div class="ArabicH-poetry-verse">
+                            الـخـبـبُ يـمـشـي رفـيـقَ الـقـدمـــــــــــــــــــــي<br>
+                            والـمـحـدثُ يـأتـي بـجـديـد الـكـلــــــــــــــــــــمْ
+                        </div>
+                        
+                        <textarea class="ArabicH-answer-textarea" placeholder="اكتب الفرق بين النوعين..."></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer4" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <p><strong>الخبب:</strong> فاعلن فاعلن فاعلن فاعلن - خفيف الإيقاع، سهل النطق</p>
+                        <p><strong>المحدث:</strong> فعْلنْ فعلنْ فعْلُنْ فعْلُنْ - أكثر تعقيداً، يحتوي على سكونات أكثر</p>
+                    </div>
+                </div>
+                
+                <!-- البحر الرجز -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">البحر الرجز</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>التفعيلة: مستفعلن (×6)</li>
+                            <li>الوزن: مستفعلن مستفعلن مستفعلن (×2)</li>
+                            <li>القاعدة: في أبحر الأرجاز بحر يسهل ← مستفعلن مستفعلن مستفعلن</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حلّل البيت الشعري التالي وفق البحر الرجز:</p>
+                        <div class="ArabicH-poetry-verse">
+                            الـرّجـزُ يـمـضـي كـالـجـيـاد الـصّـيـــــــــــــــــــــد<br>
+                            فـي مـيـدان الـشّـعـر يـحـمـل الـوعـــــــــــــــــــدْ
+                        </div>
+                        
+                        <textarea class="ArabicH-answer-textarea" placeholder="اكتب تحليلك العروضي هنا..."></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer5')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer5" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <p><strong>الكتابة العروضية:</strong> الرّجْزُ يَمْضِي كَالْجِيَادِ الصّيْدْ</p>
+                        <p><strong>الرموز:</strong> //0/0 //0/0 //0/0</p>
+                        <p><strong>التفعيلات:</strong> مستفعلن مستفعلن مستفعلن</p>
+                    </div>
+                </div>
+                
+                <!-- البحر الكامل -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">البحر الكامل</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>التفعيلة: متفاعلن (×6)</li>
+                            <li>الوزن: متفاعلن متفاعلن متفاعلن (×2)</li>
+                            <li>القاعدة: كمل الجمال من البحور الكامل ← متفاعلن متفاعلن متفاعلن</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حدد بحر الكامل في الأبيات التالية:</p>
+                        <div class="ArabicH-poetry-verse">
+                            الـكـامـلُ الـمـثـلُ الـذي لا يـشـــــــــــــــــــــقّ<br>
+                            فـي قـلـبـه لـلـشّـعـر يـنـبـوعٌ يـفـــــــــــــــــــيضْ
+                        </div>
+                        
+                        <textarea class="ArabicH-answer-textarea" placeholder="اكتب تحليلك العروضي هنا..."></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer6')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer6" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <p><strong>البحر:</strong> الكامل</p>
+                        <p><strong>الوزن:</strong> متفاعلن متفاعلن متفاعلن</p>
+                        <p><strong>ملاحظة:</strong> البحر الكامل يتميز بتناسق إيقاعي جميل وسهولة في النطق</p>
+                    </div>
+                </div>
+                
+                <!-- البحر الوافر -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">البحر الوافر</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>التفعيلة: مفاعلتن (×6)</li>
+                            <li>الوزن: مفاعلتن مفاعلتن مفاعلتن (×2)</li>
+                            <li>القاعدة: بحور الشعر وافرها جميل ← مفاعلتن مفاعلتن فعولن</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حلّل البيت الشعري التالي وفق البحر الوافر:</p>
+                        <div class="ArabicH-poetry-verse">
+                            الـوافـرُ الـمـلـكُ الـذي لا يـضـــــــــــــــــــــام<br>
+                            فـي عـالـم الـأوزان يـحـكـمـه الـنّظـــــــــــــــامْ
+                        </div>
+                        
+                        <textarea class="ArabicH-answer-textarea" placeholder="اكتب تحليلك العروضي هنا..."></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer7')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer7" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <p><strong>الكتابة العروضية:</strong> الْوَافِرُ الْمَلْكُ الّذِي لَا يُضَامْ</p>
+                        <p><strong>الرموز:</strong> //0// //0// //0/</p>
+                        <p><strong>التفعيلات:</strong> مفاعلتن مفاعلتن فعولن</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ArabicH-lesson-section">
+                <h2 class="ArabicH-lesson-section-title">البحور ذات التّفعيلتين</h2>
+                
+                <!-- البحر الطويل -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">البحر الطويل</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>التفعيلات: فعولن مفاعيلن (×4)</li>
+                            <li>الوزن: فعولن مفاعيلن فعولن مفاعيلن (×2)</li>
+                            <li>القاعدة: طويل له دون البحور فضائل ← فعولن مفاعيلن فعولن مفاعيلن</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حدد البحر الطويل في الأبيات التالية:</p>
+                        <div class="ArabicH-poetry-verse">
+                            الـطّـويـلُ الـمـمـدود فـي كـلّ مـوضــــــــــــــــــوع<br>
+                            كـالـنّـهـر يـجـري لا يـمـلّ الـجـريــــــــــــــــــــانْ
+                        </div>
+                        
+                        <textarea class="ArabicH-answer-textarea" placeholder="اكتب تحليلك العروضي هنا..."></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer8')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer8" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <p><strong>البحر:</strong> الطويل</p>
+                        <p><strong>الوزن:</strong> فعولن مفاعيلن فعولن مفاعيلن</p>
+                        <p><strong>ملاحظة:</strong> البحر الطويل من أكثر البحور استعمالاً في الشعر العربي القديم</p>
+                    </div>
+                </div>
+                
+                <!-- البحر البسيط -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">البحر البسيط</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>التفعيلات: مستفعلن فاعلن (×4)</li>
+                            <li>الوزن: مستفعلن فاعلن مستفعلن فاعلن (×2)</li>
+                            <li>القاعدة: إن البسيط لديه يبسط الأمل ← مستفعلن فاعلن مستفعلن فعلن</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حلّل البيت الشعري التالي وفق البحر البسيط:</p>
+                        <div class="ArabicH-poetry-verse">
+                            الـبـسـيـطُ يـمـشـي بـيـسـر وسـهــــــــــــــــــــولة<br>
+                            كـالـنّـور يـمـلـأ كـلّ قـلـبٍ بـالـسّـعــــــــــــــــادةْ
+                        </div>
+                        
+                        <textarea class="ArabicH-answer-textarea" placeholder="اكتب تحليلك العروضي هنا..."></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer9')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer9" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <p><strong>الكتابة العروضية:</strong> الْبَسِيطُ يَمْشِي بِيُسْرٍ وَسُهُولَةْ</p>
+                        <p><strong>الرموز:</strong> //0/0 /0/0 //0/0 /0/0</p>
+                        <p><strong>التفعيلات:</strong> مستفعلن فاعلن مستفعلن فعلن</p>
+                    </div>
+                </div>
+                
+                <!-- البحر الخفيف -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">البحر الخفيف</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>التفعيلات: فاعلاتن مستفعلن (×3)</li>
+                            <li>الوزن: فاعلاتن مستفعلن فاعلاتن (×2)</li>
+                            <li>القاعدة: يا خفيفا خفت به الحركات ← فاعلاتن مستفعلن فاعلاتن</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حدد البحر الخفيف في الأبيات التالية:</p>
+                        <div class="ArabicH-poetry-verse">
+                            الـخـفـيـفُ كـالـطّـيـر فـي الأفـــــــــــــــــــــــــــق<br>
+                            يـحـلّـق فـي مـلـكـوتـه بـلا حــــــــــــــــــــــــــدّ
+                        </div>
+                        
+                        <textarea class="ArabicH-answer-textarea" placeholder="اكتب تحليلك العروضي هنا..."></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer10')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer10" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <p><strong>البحر:</strong> الخفيف</p>
+                        <p><strong>الوزن:</strong> فاعلاتن مستفعلن فاعلاتن</p>
+                        <p><strong>ملاحظة:</strong> البحر الخفيف يتميز بخفته وسرعة إيقاعه</p>
+                    </div>
+                </div>
+                
+                <!-- البحر المجتث -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">البحر المجتث</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>التفعيلات: مستفعلن فاعلاتن (×3)</li>
+                            <li>الوزن: مستفعلن فاعلاتن فاعلاتن (×2)</li>
+                            <li>القاعدة: إن جثت الحركات ← مستفعلن فاعلاتن</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حلّل البيت الشعري التالي وفق البحر المجتث:</p>
+                        <div class="ArabicH-poetry-verse">
+                            الـمـجـتـثّ يـأتـي بـصـوت الـقـضـــــــــــــــــــــــاء<br>
+                            فـي مـسـمـع الـدّهـر يـرنّ كـالـنّــــــــــــــــــــداءْ
+                        </div>
+                        
+                        <textarea class="ArabicH-answer-textarea" placeholder="اكتب تحليلك العروضي هنا..."></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer11')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer11" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <p><strong>الكتابة العروضية:</strong> الْمُجْتَثُّ يَأْتِي بِصَوْتِ الْقَضَاءْ</p>
+                        <p><strong>الرموز:</strong> //0/0 //0/0 //0/0</p>
+                        <p><strong>التفعيلات:</strong> مستفعلن فاعلاتن فاعلاتن</p>
+                    </div>
+                </div>
+                
+                <!-- البحر السريع -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">البحر السريع</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>التفعيلات: مستفعلن مستفعلن مفعولات (×3)</li>
+                            <li>الوزن: مستفعلن مستفعلن مفعولات (×2)</li>
+                            <li>القاعدة: بحر سريع ما له ساحل ← مستفعلن مستفعلن فاعلن</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حدد البحر السريع في الأبيات التالية:</p>
+                        <div class="ArabicH-poetry-verse">
+                            الـسّـريـعُ كـالـريـح فـي عـبـر الـزمــــــــــــــــــــان<br>
+                            لا يـلـتـفـت لـلـمـاضـي ولا يـكـتـرثـــــــــــــــــــانْ
+                        </div>
+                        
+                        <textarea class="ArabicH-answer-textarea" placeholder="اكتب تحليلك العروضي هنا..."></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer12')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer12" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <p><strong>البحر:</strong> السريع</p>
+                        <p><strong>الوزن:</strong> مستفعلن مستفعلن مفعولات</p>
+                        <p><strong>ملاحظة:</strong> البحر السريع يتميز بإيقاع سريع ومناسب للقصائد الحماسية</p>
+                    </div>
+                </div>
+                
+                <!-- البحر المنسرح -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">البحر المنسرح</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>التفعيلات: مستفعلن مفعولات مستفعلن (×3)</li>
+                            <li>الوزن: مستفعلن مفعولات مستفعلن (×2)</li>
+                            <li>القاعدة: منسرح فيه يضرب المثل ← مستفعلن مفعولات مستفعلن</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حلّل البيت الشعري التالي وفق البحر المنسرح:</p>
+                        <div class="ArabicH-poetry-verse">
+                            الـمـنـسـرحُ الـمـمـشـوق فـي كـلّ مـوضــــــــــــــــــوع<br>
+                            كـالـغـيـم يـمـرّ فـي سـمـاء الـخـيــــــــــــــــــــــــالْ
+                        </div>
+                        
+                        <textarea class="ArabicH-answer-textarea" placeholder="اكتب تحليلك العروضي هنا..."></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer13')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer13" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <p><strong>الكتابة العروضية:</strong> الْمُنْسَرِحُ الْمَمْشُوقُ فِي كُلِّ مَوْضُوعْ</p>
+                        <p><strong>الرموز:</strong> //0/0 /0//0 //0/0</p>
+                        <p><strong>التفعيلات:</strong> مستفعلن مفعولات مستفعلن</p>
+                    </div>
+                </div>
+                
+                <!-- البحر المديد -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">البحر المديد</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>التفعيلات: فاعلاتن فاعلن (×4)</li>
+                            <li>الوزن: فاعلاتن فاعلن فاعلاتن فاعلن (×2)</li>
+                            <li>القاعدة: لمديد الشعر عندي صفات ← فاعلاتن فاعلن فاعلاتن</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حدد البحر المديد في الأبيات التالية:</p>
+                        <div class="ArabicH-poetry-verse">
+                            الـمـديـدُ يـمـلأ الـفـضـاء بـصـــــــــــــــــــــــــوته<br>
+                            كـالـبـحـر يـدّوي بـلا مـنـعٍ ولـا حـــــــــــــــــــــدّ
+                        </div>
+                        
+                        <textarea class="ArabicH-answer-textarea" placeholder="اكتب تحليلك العروضي هنا..."></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer14')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer14" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <p><strong>البحر:</strong> المديد</p>
+                        <p><strong>الوزن:</strong> فاعلاتن فاعلن فاعلاتن فاعلن</p>
+                        <p><strong>ملاحظة:</strong> البحر المديد مناسب للقصائد الطويلة والمواضيع الجادة</p>
+                    </div>
+                </div>
+                
+                <!-- البحر المقتضب -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">البحر المقتضب</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>التفعيلات: مفعولات مستفعلن (×3)</li>
+                            <li>الوزن: مفعولات مستفعلن مستفعلن (×2)</li>
+                            <li>القاعدة: اقتضب كما سألوا ← مفعولات مستفعلن</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حلّل البيت الشعري التالي وفق البحر المقتضب:</p>
+                        <div class="ArabicH-poetry-verse">
+                            الـمـقـتـضـبُ الـمـوجـوز فـي كـلّ قـــــــــــــــــــول<br>
+                            كـالـنّـجـم يـلـمـع ثـمّ يـخـفـيـه الـغـيـــــــــــــــــــــوبْ
+                        </div>
+                        
+                        <textarea class="ArabicH-answer-textarea" placeholder="اكتب تحليلك العروضي هنا..."></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer15')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer15" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <p><strong>الكتابة العروضية:</strong> الْمُقْتَضَبُ الْمَوْجُوزُ فِي كُلِّ قَوْلْ</p>
+                        <p><strong>الرموز:</strong> /0//0 //0/0 //0/0</p>
+                        <p><strong>التفعيلات:</strong> مفعولات مستفعلن مستفعلن</p>
+                    </div>
+                </div>
+                
+                <!-- البحر المضارع -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">البحر المضارع</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>التفعيلات: مفاعيلن فاعلاتن (×3)</li>
+                            <li>الوزن: مفاعيلن فاعلاتن فاعلاتن (×2)</li>
+                            <li>القاعدة: تعد المضارعات ← مفاعيلن فاعلاتن</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>التمرين:</strong> حدد البحر المضارع في الأبيات التالية:</p>
+                        <div class="ArabicH-poetry-verse">
+                            الـمـضـارعُ الـحـاضـر فـي كـلّ زمــــــــــــــــــــــــان<br>
+                            كـالـضّـوء يـمـلأ كـلّ فـجٍّ بـالـعـــــــــــــــــــــيانْ
+                        </div>
+                        
+                        <textarea class="ArabicH-answer-textarea" placeholder="اكتب تحليلك العروضي هنا..."></textarea>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer16')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer16" class="ArabicH-answer">
+                        <h4>الإجابة الصحيحة:</h4>
+                        <p><strong>البحر:</strong> المضارع</p>
+                        <p><strong>الوزن:</strong> مفاعيلن فاعلاتن فاعلاتن</p>
+                        <p><strong>ملاحظة:</strong> البحر المضارع من البحور التي تستعمل للقصائد المعاصرة</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">☺ تمارين مفيدة وناجحة ☺</p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.rhetoricLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.rhetoricLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_General_Lesson_Rhetoric_Prosody_lesson2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.rhetoricLesson.previousLesson">الدرس السابق</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHRhetoricLesson3 = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Rhetoric Lesson 3 specific translations
+                "ArabicH.rhetoricLesson.lesson3Title": "مراجعة علم العروض - الدرس الثالث",
+                "ArabicH.rhetoricLesson.lesson3Subtitle": "دروس شاملة في علم العروض (بحور الشعر، التفعيلات، الزحافات، العلل، القافية وأحكامها)",
+                "ArabicH.rhetoricLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.rhetoricLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.rhetoricLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.rhetoricLesson.previousLesson": "الدرس السابق",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Rhetoric Lesson 3 specific translations
+                "ArabicH.rhetoricLesson.lesson3Title": "Review of Prosody - Lesson 3",
+                "ArabicH.rhetoricLesson.lesson3Subtitle": "Comprehensive lessons in prosody (poetic meters, rhythmic patterns, variations, defects, rhyme and its rules)",
+                "ArabicH.rhetoricLesson.showAnswer": "Show Answer",
+                "ArabicH.rhetoricLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.rhetoricLesson.backToHome": "Back to Homepage",
+                "ArabicH.rhetoricLesson.previousLesson": "Previous Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Rhetoric Lesson 3 specific translations
+                "ArabicH.rhetoricLesson.lesson3Title": "Révision de la Prosodie - Leçon 3",
+                "ArabicH.rhetoricLesson.lesson3Subtitle": "Leçons complètes en prosodie (mètres poétiques, patterns rythmiques, variations, défauts, rime et ses règles)",
+                "ArabicH.rhetoricLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.rhetoricLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.rhetoricLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.rhetoricLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHRhetoricLesson3;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Answer toggle functionality
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إظهار الإجابة';
+            } else {
+                answer.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء الإجابة';
+            }
+        }
+
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Set answer button text after translation
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

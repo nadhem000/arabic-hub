@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنتاج كتابي: فهم موضوع وتفكيكه - الدرس الأول | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#5d5bcc">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="إنتاج كتابي">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Blue-Purple Theme for Writing Lessons */
+        :root {
+            --primary-color: #5d5bcc;
+            --secondary-color: #7b79e0;
+            --accent-color: #9d9bf2;
+            --light-color: #f8f9fa;
+            --dark-color: #3f3d99;
+            --text-color: #2d3748;
+            --heading-color: #1a202c;
+            --background-color: #f5f7ff;
+            --card-bg: #ffffff;
+            --definition-bg: #e9ecff;
+            --border-color: #d1d6ff;
+            --table-even-bg: #f7f9ff;
+            --table-hover-bg: #e2e6ff;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(93, 91, 204, 0.12);
+            --gradient-primary: linear-gradient(135deg, #5d5bcc 0%, #3f3d99 100%);
+            --gradient-secondary: linear-gradient(135deg, #7b79e0 0%, #5d5bcc 100%);
+            --gradient-accent: linear-gradient(135deg, #9d9bf2 0%, #7b79e0 100%);
+            --gradient-light: linear-gradient(135deg, #f5f7ff 0%, #e9ecff 100%);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #6d6bdc;
+            --secondary-color: #8b89f0;
+            --accent-color: #a9a7ff;
+            --light-color: #3f3d99;
+            --dark-color: #2d2b77;
+            --text-color: #e9ecff;
+            --heading-color: #f8f9ff;
+            --background-color: #2d2b77;
+            --card-bg: #3f3d99;
+            --definition-bg: #5d5bcc;
+            --border-color: #6d6bdc;
+            --table-even-bg: #3f3d99;
+            --table-hover-bg: #5d5bcc;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+            --gradient-primary: linear-gradient(135deg, #6d6bdc 0%, #5d5bcc 100%);
+            --gradient-secondary: linear-gradient(135deg, #8b89f0 0%, #7b79e0 100%);
+            --gradient-accent: linear-gradient(135deg, #a9a7ff 0%, #9d9bf2 100%);
+            --gradient-light: linear-gradient(135deg, #3f3d99 0%, #2d2b77 100%);
+        }
+
+        /* Page specific styles */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-lesson-teacher {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .ArabicH-lesson-content {
+            margin: 30px 0;
+        }
+
+        .ArabicH-goals-section {
+            background: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-right: 4px solid var(--secondary-color);
+        }
+
+        .ArabicH-goals-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .ArabicH-goals-list {
+            list-style-type: none;
+            padding-right: 20px;
+        }
+
+        .ArabicH-goals-list li {
+            margin-bottom: 10px;
+            padding-right: 10px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .ArabicH-goals-list li:before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            right: -20px;
+        }
+
+        .ArabicH-topic-section {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .ArabicH-topic-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .ArabicH-topic-quote {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: center;
+            padding: 1rem;
+            background: rgba(93, 91, 204, 0.08);
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            border-right: 3px solid var(--secondary-color);
+        }
+
+        .ArabicH-topic-task {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            text-align: center;
+            padding: 1rem;
+            background: var(--light-color);
+            border-radius: var(--border-radius);
+        }
+
+        .ArabicH-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .ArabicH-activity-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+            background: var(--card-bg);
+        }
+
+        .ArabicH-activity-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 10px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-activity-table td {
+            padding: 12px 10px;
+            border: 1px solid var(--border-color);
+            vertical-align: top;
+            text-align: right;
+            line-height: 1.6;
+        }
+
+        .ArabicH-activity-table tr:nth-child(even) {
+            background-color: var(--table-even-bg);
+        }
+
+        .ArabicH-activity-table tr:hover {
+            background-color: var(--table-hover-bg);
+        }
+
+        .ArabicH-time-cell {
+            width: 15%;
+            text-align: center;
+            font-weight: 600;
+            color: var(--primary-color);
+            background-color: rgba(93, 91, 204, 0.05);
+        }
+
+        .ArabicH-instructions-cell {
+            width: 35%;
+        }
+
+        .ArabicH-activities-cell {
+            width: 50%;
+        }
+
+        .ArabicH-activity-list {
+            list-style-type: none;
+            padding-right: 0;
+            margin: 0;
+        }
+
+        .ArabicH-activity-list li {
+            margin-bottom: 8px;
+            padding-right: 5px;
+        }
+
+        .ArabicH-activity-list li:before {
+            content: "-";
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .ArabicH-homework-row {
+            background-color: rgba(255, 193, 7, 0.1);
+            font-weight: 600;
+        }
+
+        .ArabicH-homework-row td {
+            border-top: 2px solid #FFC107;
+        }
+
+        .ArabicH-sub-activity {
+            padding-right: 20px;
+            margin-top: 5px;
+        }
+
+        .ArabicH-sub-activity:before {
+            content: "↳";
+            color: var(--accent-color);
+            margin-left: 5px;
+        }
+
+        /* Textareas for interactive responses */
+        .ArabicH-response-textarea {
+            width: 100%;
+            min-height: 80px;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: white;
+            resize: vertical;
+            font-family: inherit;
+            font-size: 15px;
+            color: var(--text-color);
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        [data-theme="dark"] .ArabicH-response-textarea {
+            background-color: var(--card-bg);
+            border-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .ArabicH-response-label {
+            font-weight: 600;
+            color: var(--primary-color);
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title {
+                font-size: 2rem;
+            }
+            
+            .ArabicH-lesson-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-lesson-container {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-lesson-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .ArabicH-activity-table {
+                font-size: 14px;
+            }
+            
+            .ArabicH-activity-table th,
+            .ArabicH-activity-table td {
+                padding: 8px 6px;
+            }
+            
+            .ArabicH-time-cell {
+                width: 20%;
+            }
+            
+            .ArabicH-instructions-cell {
+                width: 30%;
+            }
+            
+            .ArabicH-activities-cell {
+                width: 50%;
+            }
+            
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main {
+                padding: 1rem;
+            }
+            
+            .ArabicH-lesson-title {
+                font-size: 1.6rem;
+            }
+            
+            .ArabicH-table-container {
+                font-size: 12px;
+            }
+            
+            .ArabicH-activity-table th,
+            .ArabicH-activity-table td {
+                padding: 6px 4px;
+            }
+            
+            .ArabicH-time-cell {
+                width: 25%;
+            }
+            
+            .ArabicH-instructions-cell {
+                width: 25%;
+            }
+            
+            .ArabicH-activities-cell {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.writingLesson.lesson1Title">إنتاج كتابي: فهم موضوع وتفكيكه</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.writingLesson.lesson1Subtitle">درس تطبيقي في فهم وتحليل الموضوعات الكتابية وتفكيكها إلى عناصرها الأساسية</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher">الأستاذة: س ن</div>
+                <div class="ArabicH-lesson-title" style="color: white; margin: 0; font-size: 1.5rem;">إنتاج كتابي: فهم موضوع وتفكيكه</div>
+                <div class="ArabicH-lesson-class">3 آداب</div>
+            </div>
+            
+            <!-- Note about the lesson -->
+            <div class="ArabicH-lesson-note" style="background-color: #F3F7FF; border-right: 4px solid #4A90E2; padding: 15px 20px; border-radius: var(--border-radius); margin-bottom: 30px; font-style: italic; color: #2d3748; line-height: 1.7;">
+                <p>تم إعداد هذا الدرس وفق المنهاج التونسي لمستوى السنة الثالثة آداب.</p>
+            </div>
+            
+            <!-- الأهداف Section -->
+            <div class="ArabicH-goals-section">
+                <h2 class="ArabicH-goals-title">الأهداف</h2>
+                <ul class="ArabicH-goals-list">
+                    <li>القدرة على فهم الموضوع وتحديد نوعه وضبط مجالات التفكير.</li>
+                    <li>القدرة على تفكيك الموضوع ووضع خطة للجوهر.</li>
+                </ul>
+            </div>
+            
+            <!-- الموضوع Section -->
+            <div class="ArabicH-topic-section">
+                <h2 class="ArabicH-topic-title">الموضوع</h2>
+                <div class="ArabicH-topic-quote">
+                    قال أحدُهم: "تجدُ في غزل الأندلسيّين براعة في الوصف وجمالا في الأسلوب دون أن تجد خيالا قويّا."
+                </div>
+                <div class="ArabicH-topic-task">
+                    حلّل هذا القول مستندا إلى شواهد دقيقة من الشعر الأندلسي.
+                </div>
+            </div>
+            
+            <!-- Activity Table -->
+            <div class="ArabicH-table-container">
+                <table class="ArabicH-activity-table">
+                    <thead>
+                        <tr>
+                            <th class="ArabicH-time-cell">التوقيت</th>
+                            <th class="ArabicH-instructions-cell">التّوجيهات</th>
+                            <th class="ArabicH-activities-cell">الأنشطة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Row 1 -->
+                        <tr>
+                            <td class="ArabicH-time-cell">5 دق</td>
+                            <td class="ArabicH-instructions-cell">
+                                * قراءة الموضوع بتمعّن.<br>
+                                * وضع علامات على التراكيب والروابط.<br>
+                                * تسطير الكلمات المفاتيح.<br>
+                                * توضيح المفاهيم.
+                                
+                                <label class="ArabicH-response-label">تدوين الملاحظات:</label>
+                                <textarea class="ArabicH-response-textarea" placeholder="سجّل ملاحظاتك هنا..."></textarea>
+                            </td>
+                            <td class="ArabicH-activities-cell">
+                                <ul class="ArabicH-activity-list">
+                                    <li>النّشاط الأوّل:
+                                        <div class="ArabicH-sub-activity">أ- حدّد أقسام الموضوع:</div>
+                                        <textarea class="ArabicH-response-textarea" placeholder="اكتب أقسام الموضوع هنا..." style="min-height: 60px;"></textarea>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        
+                        <!-- Row 2 -->
+                        <tr>
+                            <td class="ArabicH-time-cell">5 دق</td>
+                            <td class="ArabicH-instructions-cell">
+                                تغيير التركيب النحوي والروابط المنطقية.
+                            </td>
+                            <td class="ArabicH-activities-cell">
+                                <ul class="ArabicH-activity-list">
+                                    <li>النّشاط الثاني: فهم المعطى:
+                                        <div class="ArabicH-sub-activity">أ- اشطب ما لا يلائم:</div>
+                                        <div style="background: rgba(93, 91, 204, 0.08); padding: 10px; border-radius: 8px; margin: 8px 0;">
+                                            <p>تمكننا دراسة المعطى من:</p>
+                                            <p>- تبيّن إطار العمل ومجالات التفكير.</p>
+                                            <p>- تبيّن نوع الموضوع.</p>
+                                            <p>- تحديد محاور الاهتمام.</p>
+                                            <p>- تحديد الإشكاليّة.</p>
+                                        </div>
+                                        
+                                        <div class="ArabicH-sub-activity">ب- ادرس صياغة المعطى وحدّد أقسامه:</div>
+                                        <textarea class="ArabicH-response-textarea" placeholder="اكتب تحليلك لصياغة المعطى هنا..." style="min-height: 60px;"></textarea>
+                                        
+                                        <div class="ArabicH-sub-activity">ج- غيّر صياغة المعطى حسب ما هو مطلوب:</div>
+                                        <div style="margin-top: 8px;">
+                                            <p>* صياغة قائمة على النفي والإثبات:</p>
+                                            <textarea class="ArabicH-response-textarea" placeholder="اكتب الصياغة الجديدة هنا..." style="min-height: 40px;"></textarea>
+                                            
+                                            <p>* صياغة قائمة على الموازنة بين العنصرين:</p>
+                                            <textarea class="ArabicH-response-textarea" placeholder="اكتب الصياغة الجديدة هنا..." style="min-height: 40px;"></textarea>
+                                            
+                                            <p>* صياغة قائمة على المفاضلة:</p>
+                                            <textarea class="ArabicH-response-textarea" placeholder="اكتب الصياغة الجديدة هنا..." style="min-height: 40px;"></textarea>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        
+                        <!-- Row 3 -->
+                        <tr>
+                            <td class="ArabicH-time-cell">5 دق</td>
+                            <td class="ArabicH-instructions-cell">
+                                * تعليمة مبنيّة على فعل أمر.
+                            </td>
+                            <td class="ArabicH-activities-cell">
+                                <ul class="ArabicH-activity-list">
+                                    <li>النّشاط الثالث: فهم المطلوب:
+                                        <div class="ArabicH-sub-activity">1- يمكن المطلوب من تحديد .........................</div>
+                                        <textarea class="ArabicH-response-textarea" placeholder="أكمل الجملة..." style="min-height: 40px;"></textarea>
+                                        
+                                        <div class="ArabicH-sub-activity">* حدّد صياغة المطلوب:</div>
+                                        <textarea class="ArabicH-response-textarea" placeholder="اكتب تحليلك لصياغة المطلوب..." style="min-height: 40px;"></textarea>
+                                        
+                                        <div class="ArabicH-sub-activity">* حدّد نوع الموضوع:</div>
+                                        <textarea class="ArabicH-response-textarea" placeholder="حدّد نوع الموضوع..." style="min-height: 40px;"></textarea>
+                                        
+                                        <div class="ArabicH-sub-activity">2- غيّر نوع الموضوع حسب ما يلي:</div>
+                                        <div style="margin-top: 8px;">
+                                            <p>* موضوع جدلي:</p>
+                                            <textarea class="ArabicH-response-textarea" placeholder="اكتب الصياغة الجديدة هنا..." style="min-height: 40px;"></textarea>
+                                            
+                                            <p>* موضوع تحليلي يتطلّب إبداء الرأي:</p>
+                                            <textarea class="ArabicH-response-textarea" placeholder="اكتب الصياغة الجديدة هنا..." style="min-height: 40px;"></textarea>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        
+                        <!-- Row 4 -->
+                        <tr>
+                            <td class="ArabicH-time-cell">10 دق</td>
+                            <td class="ArabicH-instructions-cell">
+                                * اعتماد الموضوع الجدلي.
+                            </td>
+                            <td class="ArabicH-activities-cell">
+                                <ul class="ArabicH-activity-list">
+                                    <li>النّشاط الرابع: تحديد أقسام الجوهر وتفكيكها:
+                                        <div class="ArabicH-sub-activity">1- حدّد أقسام الجوهر:</div>
+                                        <textarea class="ArabicH-response-textarea" placeholder="اكتب أقسام الجوهر هنا..." style="min-height: 60px;"></textarea>
+                                        
+                                        <div class="ArabicH-sub-activity">2- فكّك قسم التحليل إلى عناصره الرئيسية ثمّ فرّعها:</div>
+                                        <textarea class="ArabicH-response-textarea" placeholder="اكتب تفكيك العناصر هنا..." style="min-height: 100px;"></textarea>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        
+                        <!-- Homework Row -->
+                        <tr class="ArabicH-homework-row">
+                            <td class="ArabicH-time-cell">عمل منزلي</td>
+                            <td class="ArabicH-instructions-cell"></td>
+                            <td class="ArabicH-activities-cell">
+                                <ul class="ArabicH-activity-list">
+                                    <li>4- الامتداد:
+                                        <div class="ArabicH-sub-activity">* ضع تخطيطا لبقيّة أقسام الجوهر:</div>
+                                        <textarea class="ArabicH-response-textarea" placeholder="اكتب التخطيط هنا..." style="min-height: 60px;"></textarea>
+                                        
+                                        <div class="ArabicH-sub-activity">* استحضّر الشواهد الملائمة لكلّ عنصر:</div>
+                                        <textarea class="ArabicH-response-textarea" placeholder="اكتب الشواهد هنا..." style="min-height: 80px;"></textarea>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">☺ درس تطبيقي مفيد في الإنتاج الكتابي ☺</p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.writingLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.writingLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_General_Lesson_Rhetoric_Prosody_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.writingLesson.previousLesson">الدرس السابق</a>
+                <a href="#" class="ArabicH-nav-btn" data-i18n="ArabicH.writingLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHWritingLesson1 = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Writing Lesson 1 specific translations
+                "ArabicH.writingLesson.lesson1Title": "إنتاج كتابي: فهم موضوع وتفكيكه",
+                "ArabicH.writingLesson.lesson1Subtitle": "درس تطبيقي في فهم وتحليل الموضوعات الكتابية وتفكيكها إلى عناصرها الأساسية",
+                "ArabicH.writingLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.writingLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.writingLesson.previousLesson": "الدرس السابق",
+                "ArabicH.writingLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Writing Lesson 1 specific translations
+                "ArabicH.writingLesson.lesson1Title": "Written Production: Understanding and Deconstructing a Topic",
+                "ArabicH.writingLesson.lesson1Subtitle": "Practical lesson in understanding and analyzing written topics and deconstructing them into basic elements",
+                "ArabicH.writingLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.writingLesson.backToHome": "Back to Homepage",
+                "ArabicH.writingLesson.previousLesson": "Previous Lesson",
+                "ArabicH.writingLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Writing Lesson 1 specific translations
+                "ArabicH.writingLesson.lesson1Title": "Production Écrite : Comprendre et Déconstruire un Sujet",
+                "ArabicH.writingLesson.lesson1Subtitle": "Leçon pratique pour comprendre et analyser les sujets écrits et les déconstruire en éléments de base",
+                "ArabicH.writingLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.writingLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.writingLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.writingLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHWritingLesson1;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                // Check for saved theme or prefer-color-scheme
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.checked = true;
+                }
+                
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

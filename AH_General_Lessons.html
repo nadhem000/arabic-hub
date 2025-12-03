@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدروس العامة | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1a936f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="الدروس العامة">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+    /* Green Theme for General Lessons - Override CSS Variables */
+    :root {
+        --primary-color: #1a936f;
+        --secondary-color: #88d498;
+        --accent-color: #c6dabf;
+        --light-color: #f8f9fa;
+        --dark-color: #114b5f;
+        --text-color: #2d3748;
+        --heading-color: #1a202c;
+        --background-color: #f1f3f4;
+        --card-bg: #ffffff;
+        --definition-bg: #e9ecef;
+        --border-color: #c1c8d0;
+        --table-even-bg: #f7f9f9;
+        --table-hover-bg: #e2e6ea;
+        --border-radius: 12px;
+        --box-shadow: 0 6px 16px rgba(26, 147, 111, 0.12);
+        --gradient-primary: linear-gradient(135deg, #1a936f 0%, #0d7a5a 100%);
+        --gradient-secondary: linear-gradient(135deg, #88d498 0%, #6dc081 100%);
+        --gradient-accent: linear-gradient(135deg, #c6dabf 0%, #a8c5aa 100%);
+        --gradient-light: linear-gradient(135deg, #f1f3f4 0%, #e9ecef 100%);
+    }
+    
+    [data-theme="dark"] {
+        --primary-color: #2aa87c;
+        --secondary-color: #9ae4ab;
+        --accent-color: #d6eadf;
+        --light-color: #114b5f;
+        --dark-color: #0a3447;
+        --text-color: #e9ecef;
+        --heading-color: #f8f9fa;
+        --background-color: #0a3447;
+        --card-bg: #114b5f;
+        --definition-bg: #1a936f;
+        --border-color: #2aa87c;
+        --table-even-bg: #114b5f;
+        --table-hover-bg: #1a936f;
+        --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+        --gradient-primary: linear-gradient(135deg, #2aa87c 0%, #1a936f 100%);
+        --gradient-secondary: linear-gradient(135deg, #9ae4ab 0%, #88d498 100%);
+        --gradient-accent: linear-gradient(135deg, #d6eadf 0%, #c6dabf 100%);
+        --gradient-light: linear-gradient(135deg, #114b5f 0%, #0a3447 100%);
+    }
+    
+    /* Page specific styles */
+    .ArabicH-lessons-page {
+        min-height: 100vh;
+        background: var(--background-color);
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .ArabicH-lessons-main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .ArabicH-lessons-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--heading-color);
+        text-align: center;
+        font-weight: 700;
+    }
+    
+    .ArabicH-lessons-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        color: var(--text-color);
+        text-align: center;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ArabicH-lessons-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 800px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .ArabicH-lesson-item {
+        background: var(--card-bg);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        padding: 2rem;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 2px solid var(--border-color);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+    
+    .ArabicH-lesson-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: var(--gradient-primary);
+    }
+    
+    .ArabicH-lesson-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        border-color: var(--accent-color);
+    }
+    
+    .ArabicH-lesson-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+    
+    .ArabicH-lesson-link:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .ArabicH-lesson-title {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: var(--heading-color);
+        font-weight: 600;
+    }
+    
+    .ArabicH-lesson-description {
+        color: var(--text-color);
+        line-height: 1.6;
+        font-weight: 400;
+    }
+    
+    /* Coming Soon Badge */
+    .ArabicH-coming-soon {
+        background: var(--secondary-color);
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        display: inline-block;
+        margin-left: 0.5rem;
+    }
+    
+    /* Responsive styles for lessons page */
+    @media (max-width: 768px) {
+        .ArabicH-lessons-title {
+            font-size: 2rem;
+        }
+        
+        .ArabicH-lessons-subtitle {
+            font-size: 1.1rem;
+        }
+        
+        .ArabicH-lesson-item {
+            padding: 1.5rem;
+        }
+        
+        .ArabicH-lesson-title {
+            font-size: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .ArabicH-lessons-main {
+            padding: 1rem;
+        }
+    }
+    </style>
+</head>
+<body class="ArabicH-lessons-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-lessons-main">
+        <h1 class="ArabicH-lessons-title" data-i18n="ArabicH.generalLessons.title">الدروس العامة</h1>
+        <p class="ArabicH-lessons-subtitle" data-i18n="ArabicH.generalLessons.subtitle">دروس شاملة في اللغة العربية تشمل النحو والصرف والأدب والبلاغة لجميع السنوات الدراسية</p>
+        
+        <div class="ArabicH-lessons-list">
+            <!-- Lesson 1: Review of البديع -->
+            <div class="ArabicH-lesson-item">
+                <a href="AH_General_Lesson_Rhetoric_Prosody_lesson1.html" class="ArabicH-lesson-link">
+                    <h2 class="ArabicH-lesson-title" data-i18n="ArabicH.generalLessons.lesson1">مراجعة علم البديع</h2>
+                    <p class="ArabicH-lesson-description" data-i18n="ArabicH.generalLessons.lesson1Desc">مراجعة شاملة لأهم مفاهيم علم البديع (المحسنات البديعية، الجناس، الطباق، المقابلة، السجع وغيرها)</p>
+                </a>
+            </div>
+            
+            <!-- Lesson 2: Review of المعاني -->
+            <div class="ArabicH-lesson-item">
+                <a href="AH_General_Lesson_Rhetoric_Prosody_lesson2.html" class="ArabicH-lesson-link">
+                    <h2 class="ArabicH-lesson-title" data-i18n="ArabicH.generalLessons.lesson2">مراجعة علم المعاني</h2>
+                    <p class="ArabicH-lesson-description" data-i18n="ArabicH.generalLessons.lesson2Desc">مراجعة شاملة لأهم مفاهيم علم المعاني (الخبر والإنشاء، الأساليب البلاغية، التقديم والتأخير، القصر وغيرها)</p>
+                </a>
+            </div>
+            
+            <!-- Lesson 3: Review of العروض -->
+            <div class="ArabicH-lesson-item">
+                <a href="AH_General_Lesson_Rhetoric_Prosody_lesson3.html" class="ArabicH-lesson-link">
+                    <h2 class="ArabicH-lesson-title" data-i18n="ArabicH.generalLessons.lesson3">مراجعة علم العروض</h2>
+                    <p class="ArabicH-lesson-description" data-i18n="ArabicH.generalLessons.lesson3Desc">مراجعة شاملة لأهم مفاهيم علم العروض (بحور الشعر، التفعيلات، الزحافات، العلل، القافية وأحكامها)</p>
+                </a>
+            </div>
+            
+            <!-- Lesson 4: إنتاج كتابي -->
+            <div class="ArabicH-lesson-item">
+                <a href="AH_General_Lesson_Writing_lesson1.html" class="ArabicH-lesson-link">
+                    <h2 class="ArabicH-lesson-title" data-i18n="ArabicH.generalLessons.lesson4">إنتاج كتابي : فهم موضوع و تفكيكه</h2>
+                    <p class="ArabicH-lesson-description" data-i18n="ArabicH.generalLessons.lesson4Desc">تعلم كيفية فهم وتحليل الموضوعات الكتابية وتفكيكها إلى عناصرها الأساسية لكتابة منظمة وواضحة</p>
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHGeneralLessons = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // General Lessons specific translations
+                "ArabicH.generalLessons.title": "الدروس العامة",
+                "ArabicH.generalLessons.subtitle": "دروس شاملة في اللغة العربية تشمل النحو والصرف والأدب والبلاغة لجميع السنوات الدراسية",
+                "ArabicH.generalLessons.lesson1": "مراجعة علم البديع",
+                "ArabicH.generalLessons.lesson1Desc": "مراجعة شاملة لأهم مفاهيم علم البديع (المحسنات البديعية، الجناس، الطباق، المقابلة، السجع وغيرها)",
+                "ArabicH.generalLessons.lesson2": "مراجعة علم المعاني",
+                "ArabicH.generalLessons.lesson2Desc": "مراجعة شاملة لأهم مفاهيم علم المعاني (الخبر والإنشاء، الأساليب البلاغية، التقديم والتأخير، القصر وغيرها)",
+                "ArabicH.generalLessons.lesson3": "مراجعة علم العروض",
+                "ArabicH.generalLessons.lesson3Desc": "مراجعة شاملة لأهم مفاهيم علم العروض (بحور الشعر، التفعيلات، الزحافات، العلل، القافية وأحكامها)",
+                "ArabicH.generalLessons.lesson4": "إنتاج كتابي : فهم موضوع و تفكيكه",
+                "ArabicH.generalLessons.lesson4Desc": "تعلم كيفية فهم وتحليل الموضوعات الكتابية وتفكيكها إلى عناصرها الأساسية لكتابة منظمة وواضحة",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // General Lessons specific translations
+                "ArabicH.generalLessons.title": "General Lessons",
+                "ArabicH.generalLessons.subtitle": "Comprehensive Arabic lessons covering grammar, morphology, literature, and rhetoric for all academic years",
+                "ArabicH.generalLessons.lesson1": "Review of Rhetorical Embellishments",
+                "ArabicH.generalLessons.lesson1Desc": "Comprehensive review of the most important concepts in rhetorical embellishments (verbal and semantic beautification, paronomasia, antithesis, contrast, rhymed prose and more)",
+                "ArabicH.generalLessons.lesson2": "Review of Rhetorical Meanings",
+                "ArabicH.generalLessons.lesson2Desc": "Comprehensive review of the most important concepts in rhetorical meanings (news and creation, rhetorical styles, precedence and delay, restriction and more)",
+                "ArabicH.generalLessons.lesson3": "Review of Prosody",
+                "ArabicH.generalLessons.lesson3Desc": "Comprehensive review of the most important concepts in prosody (poetic meters, rhythmic patterns, variations, defects, rhyme and its rules)",
+                "ArabicH.generalLessons.lesson4": "Written Production: Understanding and Deconstructing a Topic",
+                "ArabicH.generalLessons.lesson4Desc": "Learn how to understand and analyze written topics and deconstruct them into their basic elements for organized and clear writing",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // General Lessons specific translations
+                "ArabicH.generalLessons.title": "Leçons Générales",
+                "ArabicH.generalLessons.subtitle": "Leçons complètes d'arabe couvrant la grammaire, la morphologie, la littérature et la rhétorique pour tous les niveaux académiques",
+                "ArabicH.generalLessons.lesson1": "Révision des Embellissements Rhétoriques",
+                "ArabicH.generalLessons.lesson1Desc": "Révision complète des concepts les plus importants en embellissements rhétoriques (embellissements verbaux et sémantiques, paronomase, antithèse, contraste, prose rimée et plus)",
+                "ArabicH.generalLessons.lesson2": "Révision des Sens Rhétoriques",
+                "ArabicH.generalLessons.lesson2Desc": "Révision complète des concepts les plus importants en sens rhétoriques (information et création, styles rhétoriques, antéposition et postposition, restriction et plus)",
+                "ArabicH.generalLessons.lesson3": "Révision de la Prosodie",
+                "ArabicH.generalLessons.lesson3Desc": "Révision complète des concepts les plus importants en prosodie (mètres poétiques, patterns rythmiques, variations, défauts, rime et ses règles)",
+                "ArabicH.generalLessons.lesson4": "Production Écrite : Comprendre et Déconstruire un Sujet",
+                "ArabicH.generalLessons.lesson4Desc": "Apprenez à comprendre et analyser les sujets écrits et à les déconstruire en leurs éléments de base pour une écriture organisée et claire",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHGeneralLessons;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+        
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) {
+                        console.log('No deferred prompt available');
+                        return;
+                    }
+                    
+                    try {
+                        deferredPrompt.prompt();
+                        const { outcome } = await deferredPrompt.userChoice;
+                        
+                        if (outcome === 'accepted') {
+                            manualInstallBtn.style.display = 'none';
+                            deferredPrompt = null;
+                        }
+                    } catch (error) {
+                        console.error('Error showing install prompt:', error);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

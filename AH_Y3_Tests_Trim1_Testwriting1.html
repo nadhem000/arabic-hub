@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار التعبير الكتابي - السنة الثالثة ثانوي - الثلاثي الأول | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#4A6572">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="اختبار التعبير الكتابي">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Deep Teal-Purple Theme for Writing Test - Override CSS Variables */
+        :root {
+            --primary-color: #4A6572;
+            --secondary-color: #5D4037;
+            --accent-color: #7E57C2;
+            --light-color: #F5F7FA;
+            --dark-color: #263238;
+            --text-color: #37474F;
+            --heading-color: #263238;
+            --background-color: #ECEFF1;
+            --card-bg: #FFFFFF;
+            --definition-bg: #F0F4F8;
+            --border-color: #CFD8DC;
+            --table-even-bg: #FAFBFC;
+            --table-hover-bg: #EDE7F6;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(74, 101, 114, 0.12);
+            --gradient-primary: linear-gradient(135deg, #4A6572 0%, #344955 100%);
+            --gradient-secondary: linear-gradient(135deg, #5D4037 0%, #8D6E63 100%);
+            --gradient-accent: linear-gradient(135deg, #7E57C2 0%, #5E35B1 100%);
+            --gradient-light: linear-gradient(135deg, #F5F7FA 0%, #ECEFF1 100%);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #546E7A;
+            --secondary-color: #8D6E63;
+            --accent-color: #9575CD;
+            --light-color: #37474F;
+            --dark-color: #263238;
+            --text-color: #E0E0E0;
+            --heading-color: #FFFFFF;
+            --background-color: #1A237E;
+            --card-bg: #263238;
+            --definition-bg: #37474F;
+            --border-color: #546E7A;
+            --table-even-bg: #2C387E;
+            --table-hover-bg: #3949AB;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+            --gradient-primary: linear-gradient(135deg, #546E7A 0%, #455A64 100%);
+            --gradient-secondary: linear-gradient(135deg, #8D6E63 0%, #6D4C41 100%);
+            --gradient-accent: linear-gradient(135deg, #9575CD 0%, #7E57C2 100%);
+            --gradient-light: linear-gradient(135deg, #37474F 0%, #263238 100%);
+        }
+
+        /* Page specific styles */
+        .ArabicH-test-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-test-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-test-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-test-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-test-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-test-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .ArabicH-test-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            background-color: var(--definition-bg);
+        }
+
+        /* Writing Cards Layout */
+        .ArabicH-writing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .ArabicH-writing-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-writing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .ArabicH-writing-card-header {
+            padding: 18px 25px;
+            color: white;
+        }
+
+        .ArabicH-writing-card-title {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .ArabicH-writing-card-body {
+            padding: 25px;
+        }
+
+        .ArabicH-writing-subject {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .ArabicH-writing-institute {
+            text-align: center;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .ArabicH-writing-topic {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 15px 0 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Planning Section */
+        .ArabicH-planning-section {
+            margin: 15px 0;
+        }
+
+        .ArabicH-section-title {
+            font-weight: 700;
+            color: var(--accent-color);
+            margin: 20px 0 15px;
+            font-size: 1.3rem;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .ArabicH-section-title:first-child {
+            margin-top: 0;
+        }
+
+        .ArabicH-planning-item {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: var(--light-color);
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .ArabicH-planning-subtitle {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .ArabicH-planning-list {
+            padding-right: 20px;
+            margin: 10px 0;
+        }
+
+        .ArabicH-planning-list li {
+            margin-bottom: 10px;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Writing Proposal */
+        .ArabicH-proposal-content {
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .ArabicH-proposal-part {
+            margin: 25px 0;
+        }
+
+        .ArabicH-proposal-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 25px 0 15px;
+            font-size: 1.2rem;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .ArabicH-proposal-title:first-child {
+            margin-top: 0;
+        }
+
+        .ArabicH-quote-inline {
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Traditional Arabic', serif;
+            direction: rtl;
+            font-weight: 500;
+            background-color: rgba(126, 87, 194, 0.1);
+            color: var(--accent-color);
+            border-right: 3px solid var(--accent-color);
+        }
+
+        .ArabicH-note-box {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            background-color: var(--light-color);
+            border-right: 4px solid var(--secondary-color);
+        }
+
+        .ArabicH-note-title {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        /* Answer textarea */
+        .ArabicH-answer-section {
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background-color: var(--definition-bg);
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-answer-title {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .ArabicH-answer-textarea {
+            width: 100%;
+            min-height: 300px;
+            margin: 10px 0;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 16px;
+            resize: vertical;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            line-height: 1.8;
+            font-family: 'Traditional Arabic', serif;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-points {
+            float: left;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+            background-color: var(--primary-color);
+        }
+
+        .ArabicH-show-solution-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .ArabicH-show-solution-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .ArabicH-solution {
+            display: none;
+            margin-top: 15px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .ArabicH-test-title {
+                font-size: 1.8rem;
+            }
+            
+            .ArabicH-test-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-test-container {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-test-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .ArabicH-test-info {
+                flex-direction: column;
+            }
+            
+            .ArabicH-writing-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-test-main {
+                padding: 1rem;
+            }
+            
+            .ArabicH-test-title {
+                font-size: 1.6rem;
+            }
+            
+            .ArabicH-writing-card-body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-test-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-test-main">
+        <h1 class="ArabicH-test-title" data-i18n="ArabicH.Y3Tests.writingTitle">اختبار التعبير الكتابي - السنة الثالثة ثانوي</h1>
+        <p class="ArabicH-test-subtitle" data-i18n="ArabicH.Y3Tests.writingSubtitle">فرض مراقبة في التعبير الكتابي - السنة الثالثة آداب</p>
+        
+        <div class="ArabicH-test-container">
+            <div class="ArabicH-test-header">
+                <h2 class="ArabicH-test-title" data-i18n="ArabicH.Y3Tests.writingTitle">اختبار التعبير الكتابي - السنة الثالثة ثانوي</h2>
+                <div class="date" data-i18n="ArabicH.Y3Tests.writingDuration">التوقيت: ساعتان</div>
+            </div>
+            
+            <div class="ArabicH-test-info">
+                <div>
+                    <p><strong data-i18n="ArabicH.Y3Tests.school">المدرسة:</strong> معهد أبو الطيب المتنبي - رأس الجبل</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.subject">المادة:</strong> اللغة العربية</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.grade">الصف:</strong> 3 آداب</p>
+                </div>
+                <div>
+                    <p><strong data-i18n="ArabicH.Y3Tests.teacher">الأستاذ:</strong> لم نتوصل لمعرفة الأستاذ الذي أنجزه</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.testType">نوع الاختبار:</strong> التعبير الكتابي - المقال</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.score">العدد:</strong> ................/20</p>
+                </div>
+            </div>
+            
+            <div class="ArabicH-writing-cards">
+                <!-- Card 1: Subject -->
+                <div class="ArabicH-writing-card">
+                    <div class="ArabicH-writing-card-header" style="background: var(--gradient-primary);">
+                        <h4 class="ArabicH-writing-card-title">📝 الموضوع</h4>
+                    </div>
+                    <div class="ArabicH-writing-card-body">
+                        <div class="ArabicH-writing-institute">معهد أبو الطيب المتنبي - رأس الجبل</div>
+                        <div class="ArabicH-writing-topic">الموضوع:</div>
+                        <div class="ArabicH-writing-subject">
+                            لا تكمن جمالية الشعر الأندلسي في تغزل الشاعر بالمرأة بقدر ما تكمن في جمال الصور والمعاني.
+                            <br><br>
+                            حلل هذا القول مدعماً ذلك بشواهد مما درست من الشعر الأندلسي.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2: Planning -->
+                <div class="ArabicH-writing-card">
+                    <div class="ArabicH-writing-card-header" style="background: var(--gradient-secondary);">
+                        <h4 class="ArabicH-writing-card-title">✨ التخطيط</h4>
+                    </div>
+                    <div class="ArabicH-writing-card-body">
+                        <div class="ArabicH-planning-section">
+                            <div class="ArabicH-section-title">المقدمة</div>
+                            <div class="ArabicH-planning-item">
+                                <div class="ArabicH-planning-subtitle">تمهيد:</div>
+                                <ul class="ArabicH-planning-list">
+                                    <li>الشعر الأندلسي مرآة للحياة الأندلسية، جمع بين الرقة والخيال.</li>
+                                </ul>
+                            </div>
+                            <div class="ArabicH-planning-item">
+                                <div class="ArabicH-planning-subtitle">طرح القضية:</div>
+                                <ul class="ArabicH-planning-list">
+                                    <li>هل تكمن جمالية الشعر الأندلسي في التغزل بالمرأة أم في الصور والمعاني؟</li>
+                                </ul>
+                            </div>
+                            <div class="ArabicH-planning-item">
+                                <div class="ArabicH-planning-subtitle">الإشكالية:</div>
+                                <ul class="ArabicH-planning-list">
+                                    <li>بيان أن الجمال الحقيقي للشعر الأندلسي يتجلى في الصور الفنية والمعاني العميقة أكثر من مجرد التغزل.</li>
+                                </ul>
+                            </div>
+                            <div class="ArabicH-planning-item">
+                                <div class="ArabicH-planning-subtitle">خطة العرض:</div>
+                                <ul class="ArabicH-planning-list">
+                                    <li>إبراز مظاهر التغزل بالمرأة في الشعر الأندلسي.</li>
+                                    <li>بيان أن الصور والمعاني هي مصدر الجمال الأصيل.</li>
+                                    <li>استخلاص أهمية هذا القول.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="ArabicH-planning-section">
+                            <div class="ArabicH-section-title">الجوهر</div>
+                            <div class="ArabicH-planning-item">
+                                <div class="ArabicH-planning-subtitle">المحور الأول: التغزل بالمرأة في الشعر الأندلسي</div>
+                                <ul class="ArabicH-planning-list">
+                                    <li>حضور المرأة في الشعر الأندلسي كموضوع بارز.</li>
+                                    <li>مظاهر التغزل: وصف الجمال الخارجي، العيون، القدّ، الابتسامة.</li>
+                                    <li>مثال: قول ابن زيدون في ولادة بنت المستكفي حيث يصف محاسنها.</li>
+                                    <li>لكن هذا التغزل يبقى سطحياً إذا لم يرافقه تصوير فني ومعنى عميق.</li>
+                                </ul>
+                            </div>
+                            <div class="ArabicH-planning-item">
+                                <div class="ArabicH-planning-subtitle">المحور الثاني: الصور والمعاني مصدر الجمال</div>
+                                <ul class="ArabicH-planning-list">
+                                    <li>الصور الفنية: التشبيه، الاستعارة، الكناية، المحسنات البديعية.</li>
+                                    <li>المعاني: التعبير عن الشوق، الحنين، الفقد، الطبيعة، الأمل.</li>
+                                    <li>مثال: وصف الطبيعة الأندلسية (الأنهار، البساتين، الطيور) حيث يمتزج الحب بجمال الطبيعة.</li>
+                                    <li>الصور والمعاني تجعل الشعر الأندلسي لوحة فنية تتجاوز مجرد التغزل.</li>
+                                    <li>مثال: قول ابن خفاجة في وصف الطبيعة حيث تتحول الطبيعة إلى كائن حي يشارك الإنسان مشاعره.</li>
+                                </ul>
+                            </div>
+                            <div class="ArabicH-planning-item">
+                                <div class="ArabicH-planning-subtitle">المحور الثالث: التوازن بين الموضوع والصورة</div>
+                                <ul class="ArabicH-planning-list">
+                                    <li>الشعر الأندلسي لم يقتصر على المرأة، بل جعلها جزءاً من مشهد أوسع.</li>
+                                    <li>الجمال يكمن في قدرة الشاعر على تحويل المعنى البسيط إلى صورة بديعة.</li>
+                                    <li>الصور والمعاني هي التي منحت الشعر الأندلسي خلوده وجاذبيته.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="ArabicH-planning-section">
+                            <div class="ArabicH-section-title">الخاتمة</div>
+                            <div class="ArabicH-planning-item">
+                                <ul class="ArabicH-planning-list">
+                                    <li>تأكيد الفكرة: جمالية الشعر الأندلسي لا تكمن في التغزل بالمرأة وحده، بل في الصور والمعاني التي أبدعها الشعراء.</li>
+                                    <li>نتيجة: الصور والمعاني هي التي جعلت الشعر الأندلسي فناً راقياً يعكس حضارة الأندلس.</li>
+                                    <li>انفتاح: يمكن القول إن الشعر الأندلسي مدرسة في الجمال الفني، أثرت في الشعر العربي اللاحق.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3: Writing Proposal -->
+            <div class="ArabicH-writing-card" style="grid-column: 1 / -1;">
+                <div class="ArabicH-writing-card-header" style="background: var(--gradient-accent);">
+                    <h4 class="ArabicH-writing-card-title">🖋️ التحرير - المقال المقترح</h4>
+                </div>
+                <div class="ArabicH-writing-card-body">
+                    <div class="ArabicH-proposal-content">
+                        <div class="ArabicH-proposal-part">
+                            <div class="ArabicH-proposal-title">المقدمة</div>
+                            <p>الشعر الأندلسي صورة ناطقة عن حضارة الأندلس وما فيها من جمال ورقة وثراء ثقافي. وقد اعتاد الدارسون أن يربطوا جماليته بموضوع الغزل، حيث يتغنى الشاعر بالمرأة ويصف محاسنها، غير أن القول الذي نحلّله اليوم يذهب إلى أن الجمال الحقيقي للشعر الأندلسي لا يكمن في التغزل بالمرأة بقدر ما يكمن في الصور الفنية والمعاني العميقة التي أبدعها الشعراء. وهذا رأي وجيه، إذ إن الشعر الأندلسي لم يخلُ من الغزل، لكنه تجاوز حدود الوصف السطحي ليصوغ لوحات شعرية متكاملة تجمع بين العاطفة والخيال والفكر.</p>
+                        </div>
+                        
+                        <div class="ArabicH-proposal-part">
+                            <div class="ArabicH-proposal-title">المحور الأول: التغزل بالمرأة في الشعر الأندلسي</div>
+                            <p>لقد شكّل التغزل بالمرأة جانباً بارزاً في الشعر الأندلسي، حيث وصف الشعراء جمالها الخارجي من قدّ ممشوق وعيون ساحرة وابتسامة آسرة، كما فعل ابن زيدون في قصائده التي وجهها إلى ولادة بنت المستكفي، إذ يقول في إحدى قصائده الشهيرة: <span class="ArabicH-quote-inline">أضحى التنائي بديلاً من تدانينا … وناب عن طيب لُقْيانا تجافينا</span>. فهو هنا لا يكتفي بوصف المرأة، بل يعبّر عن ألم الفراق وحرقة البعد، مما يجعل الغزل مدخلاً إلى تجربة إنسانية أوسع. ومع ذلك، فإن الاقتصار على التغزل لا يفسّر سرّ جمالية الشعر الأندلسي، لأنه يظل محدوداً إذا لم يرافقه تصوير فني ومعنى عميق.</p>
+                        </div>
+                        
+                        <div class="ArabicH-proposal-part">
+                            <div class="ArabicH-proposal-title">المحور الثاني: الصور والمعاني مصدر الجمال</div>
+                            <p>إن الصور الفنية هي التي منحت الشعر الأندلسي بريقه الخاص، فقد أبدع الشعراء في توظيف التشبيه والاستعارة والكناية والمحسنات البديعية، فجعلوا من الطبيعة لوحة تشكيلية تنبض بالحياة. ويكفي أن نذكر ابن خفاجة الذي وصف الطبيعة الأندلسية وصفاً بديعاً، حيث يقول: <span class="ArabicH-quote-inline">يا ربوةً تَزْهُو على نَضْرَةٍ … كأنها في الحُسنِ فردوسُ</span>. ففي هذا البيت تتحول الطبيعة إلى كائن حي يشارك الإنسان مشاعره، ويصبح وصفها أداة للتعبير عن الجمال المطلق. وهكذا امتزج الحب بجمال الطبيعة، فصار الشعر الأندلسي فناً راقياً يتجاوز مجرد التغزل بالمرأة ليعانق أفقاً أوسع من الإبداع.</p>
+                            
+                            <p>وإذا كانت الصور الفنية قد أضفت على الشعر الأندلسي طابعاً جمالياً، فإن المعاني العميقة هي التي منحته بعداً إنسانياً وحضارياً. فقد عبّر الشعراء عن الشوق والحنين والفقد والأمل، كما في رثاء المدن الأندلسية بعد سقوطها، حيث يقول أبو البقاء الرندي: <span class="ArabicH-quote-inline">لكل شيءٍ إذا ما تمّ نقصانُ … فلا يُغرّ بطيب العيش إنسانُ</span>. هذا البيت يختزل فلسفة كاملة عن زوال الحضارات وتقلب الأيام، وهو أعمق بكثير من مجرد التغزل بالمرأة، لأنه يعكس تجربة جماعية وألماً حضارياً عاشه الأندلسيون. وهكذا يتضح أن المعاني في الشعر الأندلسي لم تكن سطحية، بل حملت دلالات إنسانية وفكرية جعلت هذا الشعر يتجاوز حدود الزمان والمكان.</p>
+                        </div>
+                        
+                        <div class="ArabicH-proposal-part">
+                            <div class="ArabicH-proposal-title">المحور الثالث: التوازن بين الموضوع والصورة</div>
+                            <p>إن جمالية الشعر الأندلسي تكمن في قدرته على الجمع بين العاطفة والخيال والفكر، فهو لم يقتصر على المرأة، بل جعلها جزءاً من مشهد أوسع، حيث تتحول المعاني البسيطة إلى صور بديعة تثير الإعجاب. وقد استطاع الشعراء أن يحوّلوا تجاربهم الفردية إلى رموز إنسانية عامة، فجعلوا من الحب والفقد والحنين معاني تتردد في وجدان كل قارئ. ومن هنا يمكن القول إن الصور والمعاني هي التي منحت الشعر الأندلسي خلوده وجاذبيته، وجعلته مدرسة في الجمال الفني والفكري أثرت في الشعر العربي اللاحق.</p>
+                        </div>
+                        
+                        <div class="ArabicH-proposal-part">
+                            <div class="ArabicH-proposal-title">الخاتمة</div>
+                            <p>وخلاصة القول، إن جمالية الشعر الأندلسي لا تكمن في التغزل بالمرأة وحده، بل في الصور الفنية والمعاني العميقة التي أبدعها الشعراء. فالتغزل كان مجرد مدخل، أما الصور والمعاني فهي الجوهر الذي منح هذا الشعر خلوده وجاذبيته، وحوّله إلى فن راقٍ يعكس حضارة الأندلس ويؤثر في الشعر العربي عبر العصور.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-note-box">
+                        <div class="ArabicH-note-title">ملاحظات تقييمية:</div>
+                        <ul class="ArabicH-planning-list">
+                            <li><strong>التسلسل المنطقي:</strong> الانتقال المنسجم بين المقدمة والمحاور والخاتمة.</li>
+                            <li><strong>الاستشهاد:</strong> استخدام شواهد مناسبة من الشعر الأندلسي.</li>
+                            <li><strong>اللغة والأسلوب:</strong> سلامة اللغة وجمالية التعبير.</li>
+                            <li><strong>التركيز على الموضوع:</strong> الالتزام بموضوع التحليل دون تشتيت.</li>
+                            <li><strong>الإبداع والرؤية:</strong> إضافة لمسة شخصية ورؤية نقدية.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Answer Section -->
+            <div class="ArabicH-answer-section">
+                <h3 class="ArabicH-answer-title" data-i18n="ArabicH.Y3Tests.writeEssay">اكتب مقالك هنا: <span class="ArabicH-points">20 ن</span></h3>
+                <textarea class="ArabicH-answer-textarea" placeholder="اكتب مقالك هنا..."></textarea>
+                <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution1')" data-i18n="ArabicH.Y3Tests.showModelAnswer">إظهار النموذج المقترح</button>
+                <div id="solution1" class="ArabicH-solution">
+                    <div class="correct-answer">
+                        <p><strong>النموذج المقترح:</strong></p>
+                        <p>الشعر الأندلسي مرآة صادقة تعكس جمال الطبيعة الأندلسية وثراءها الحضاري، حيث امتزجت فيه العاطفة بالخيال والفكر. ورغم أن التغزل بالمرأة كان أحد أبرز موضوعاته، إلا أن الجمال الحقيقي للشعر الأندلسي لا يكمن في التغزل بذاته، بل في الصور الفنية والمعاني العميقة التي أبدعها الشعراء.</p>
+                        
+                        <p>لقد أبدع الشعراء الأندلسيون في وصف المرأة بكل دقة وجمال، كما نرى في شعر ابن زيدون الذي تغنى بمحاسن ولادة بنت المستكفي، لكن هذا التغزل لم يكن غاية في ذاته، بل كان مدخلاً للتعبير عن تجارب إنسانية أوسع. فالشاعر الأندلسي لم يقف عند حد وصف الجمال الخارجي، بل استخدم هذا الوصف كوسيلة لبناء صور فنية رائعة تعبر عن المشاعر والأحاسيس.</p>
+                        
+                        <p>والحقيقة أن الصور الفنية هي سر جاذبية الشعر الأندلسي، حيث استطاع الشعراء تحويل الطبيعة إلى لوحة فنية حية تنبض بالجمال. فابن خفاجة مثلاً يصور الطبيعة ككائن حي يشارك الإنسان مشاعره، مما يجعل شعره يتجاوز الوصف المادي إلى التعبير عن الجمال المطلق. وهكذا يصبح الشعر الأندلسي فناً راقياً يجمع بين العاطفة والخيال.</p>
+                        
+                        <p>أما المعاني العميقة فهي التي منحت الشعر الأندلسي بعده الإنساني والحضاري، كما نرى في شعر أبي البقاء الرندي الذي يعبر عن ألم فراق الأندلس وفلسفة الزوال. هذه المعاني جعلت الشعر الأندلسي يتجاوز حدود الزمان والمكان ليصبح تراثاً إنسانياً خالداً.</p>
+                        
+                        <p>وختاماً، يمكن القول إن جمالية الشعر الأندلسي تكمن في ذلك التكامل بين الصورة والمعنى، حيث استطاع الشعراء تحويل التجارب الفردية إلى رموز إنسانية عامة. فلم يكن التغزل بالمرأة سوى مدخل إلى عالم أوسع من الجمال الفني والفكري، وهو ما جعل الشعر الأندلسي مدرسة فنية أثرت في الشعر العربي عبر العصور.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 15px; text-align: center;">
+                <p>[1] نقطةٌ على وضوحِ الخطِّ و نظافةِ الورقة</p>
+                <p style="color: var(--primary-color); font-weight: bold; margin-top: 10px;">☺ عملاً مُوفَّقا ☺</p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_Y3_Tests_Trim1_Testgrammar2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.Y3Tests.previousTest">الاختبار السابق</a>
+                <a href="AH_Y3_Tests.html" class="ArabicH-nav-btn" data-i18n="ArabicH.Y3Tests.backToTests">العودة إلى اختبارات السنة الثالثة</a>
+                <a href="AH_Y3_Tests_Trim1_Testwriting2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.Y3Tests.nextTest">الاختبار التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHY3Writing1 = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Year 3 Writing Test 1 specific translations
+                "ArabicH.Y3Tests.writingTitle": "اختبار التعبير الكتابي - السنة الثالثة ثانوي",
+                "ArabicH.Y3Tests.writingSubtitle": "فرض مراقبة في التعبير الكتابي - السنة الثالثة آداب",
+                "ArabicH.Y3Tests.writingDuration": "التوقيت: ساعتان",
+                "ArabicH.Y3Tests.school": "المدرسة",
+                "ArabicH.Y3Tests.subject": "المادة",
+                "ArabicH.Y3Tests.grade": "الصف",
+                "ArabicH.Y3Tests.teacher": "الأستاذ",
+                "ArabicH.Y3Tests.testType": "نوع الاختبار",
+                "ArabicH.Y3Tests.score": "العدد",
+                "ArabicH.Y3Tests.writeEssay": "اكتب مقالك هنا:",
+                "ArabicH.Y3Tests.showModelAnswer": "إظهار النموذج المقترح",
+                "ArabicH.Y3Tests.previousTest": "الاختبار السابق",
+                "ArabicH.Y3Tests.backToTests": "العودة إلى اختبارات السنة الثالثة",
+                "ArabicH.Y3Tests.nextTest": "الاختبار التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Year 3 Writing Test 1 specific translations
+                "ArabicH.Y3Tests.writingTitle": "Writing Test - Year 3 Secondary",
+                "ArabicH.Y3Tests.writingSubtitle": "Monitoring Test in Writing - Year 3 Arts",
+                "ArabicH.Y3Tests.writingDuration": "Duration: 2 hours",
+                "ArabicH.Y3Tests.school": "School",
+                "ArabicH.Y3Tests.subject": "Subject",
+                "ArabicH.Y3Tests.grade": "Grade",
+                "ArabicH.Y3Tests.teacher": "Teacher",
+                "ArabicH.Y3Tests.testType": "Test Type",
+                "ArabicH.Y3Tests.score": "Score",
+                "ArabicH.Y3Tests.writeEssay": "Write your essay here:",
+                "ArabicH.Y3Tests.showModelAnswer": "Show Model Answer",
+                "ArabicH.Y3Tests.previousTest": "Previous Test",
+                "ArabicH.Y3Tests.backToTests": "Back to Year 3 Tests",
+                "ArabicH.Y3Tests.nextTest": "Next Test",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Year 3 Writing Test 1 specific translations
+                "ArabicH.Y3Tests.writingTitle": "Test d'Expression Écrite - Troisième Année Secondaire",
+                "ArabicH.Y3Tests.writingSubtitle": "Devoir de contrôle en Expression Écrite - Troisième Année Lettres",
+                "ArabicH.Y3Tests.writingDuration": "Durée: 2 heures",
+                "ArabicH.Y3Tests.school": "École",
+                "ArabicH.Y3Tests.subject": "Matière",
+                "ArabicH.Y3Tests.grade": "Classe",
+                "ArabicH.Y3Tests.teacher": "Enseignant",
+                "ArabicH.Y3Tests.testType": "Type de test",
+                "ArabicH.Y3Tests.score": "Score",
+                "ArabicH.Y3Tests.writeEssay": "Écrivez votre essai ici:",
+                "ArabicH.Y3Tests.showModelAnswer": "Afficher la réponse modèle",
+                "ArabicH.Y3Tests.previousTest": "Test Précédent",
+                "ArabicH.Y3Tests.backToTests": "Retour aux Tests de 3ème Année",
+                "ArabicH.Y3Tests.nextTest": "Test Suivant",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHY3Writing1;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Solution toggle functionality
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            const button = event.target;
+            if (solution.style.display === "block") {
+                solution.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إظهار النموذج المقترح';
+            } else {
+                solution.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء النموذج المقترح';
+            }
+        }
+
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Set solution button text after translation
+            document.querySelectorAll('.ArabicH-show-solution-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

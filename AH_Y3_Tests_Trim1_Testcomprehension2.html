@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار التحليل الأدبي 2 - السنة الثالثة ثانوي - الثلاثي الأول | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2C5530">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="اختبار التحليل الأدبي 2">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Green Theme for Literary Analysis 2 - Override CSS Variables */
+        :root {
+            --primary-color: #2C5530;
+            --secondary-color: #4A7C59;
+            --accent-color: #6B9F7A;
+            --light-color: #F5F9F7;
+            --dark-color: #1C3B1F;
+            --text-color: #1C3B1F;
+            --heading-color: #153017;
+            --background-color: #F0F7F2;
+            --card-bg: #FFFFFF;
+            --definition-bg: #E8F4EC;
+            --border-color: #C8DFD2;
+            --table-even-bg: #F5FBF7;
+            --table-hover-bg: #E8F4EC;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(44, 85, 48, 0.12);
+            --gradient-primary: linear-gradient(135deg, #2C5530 0%, #3D6B42 100%);
+            --gradient-secondary: linear-gradient(135deg, #4A7C59 0%, #5B8F6B 100%);
+            --gradient-accent: linear-gradient(135deg, #6B9F7A 0%, #8BC19A 100%);
+            --gradient-light: linear-gradient(135deg, #F5F9F7 0%, #F0F7F2 100%);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #4A7C59;
+            --secondary-color: #6B9F7A;
+            --accent-color: #8BC19A;
+            --light-color: #1C3B1F;
+            --dark-color: #0F2512;
+            --text-color: #E8F4EC;
+            --heading-color: #F5F9F7;
+            --background-color: #0F2512;
+            --card-bg: #1C3B1F;
+            --definition-bg: #2C5530;
+            --border-color: #3D6B42;
+            --table-even-bg: #1C3B1F;
+            --table-hover-bg: #2C5530;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+            --gradient-primary: linear-gradient(135deg, #4A7C59 0%, #2C5530 100%);
+            --gradient-secondary: linear-gradient(135deg, #6B9F7A 0%, #4A7C59 100%);
+            --gradient-accent: linear-gradient(135deg, #8BC19A 0%, #6B9F7A 100%);
+            --gradient-light: linear-gradient(135deg, #1C3B1F 0%, #0F2512 100%);
+        }
+
+        /* Page specific styles */
+        .ArabicH-test-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-test-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-test-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-test-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-test-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-test-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .ArabicH-test-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            background-color: var(--definition-bg);
+        }
+
+        .ArabicH-text-section {
+            margin: 25px 0;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background-color: var(--definition-bg);
+            border-right: 4px solid var(--primary-color);
+        }
+
+        .ArabicH-text-title {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .ArabicH-poem {
+            font-family: 'Traditional Arabic', serif;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            line-height: 2.5;
+            background-color: var(--light-color);
+            text-align: center;
+            direction: rtl;
+        }
+
+        .ArabicH-questions-section {
+            margin: 30px 0;
+        }
+
+        .ArabicH-question {
+            margin-bottom: 25px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background-color: var(--card-bg);
+        }
+
+        .ArabicH-question-title {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .ArabicH-points {
+            float: left;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+            background-color: var(--primary-color);
+        }
+
+        .ArabicH-answer-textarea {
+            width: 100%;
+            min-height: 120px;
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 16px;
+            resize: vertical;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .ArabicH-show-solution-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .ArabicH-show-solution-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .ArabicH-solution {
+            display: none;
+            margin-top: 15px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+        }
+
+        .ArabicH-vocabulary {
+            margin: 25px 0;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background-color: var(--light-color);
+            border-right: 4px solid var(--secondary-color);
+        }
+
+        .ArabicH-vocabulary-title {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .ArabicH-source {
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: var(--border-radius);
+            background-color: var(--table-hover-bg);
+            text-align: center;
+            font-style: italic;
+        }
+
+        .ArabicH-poem-line {
+            margin-bottom: 10px;
+        }
+
+        .ArabicH-poem-line-number {
+            display: inline-block;
+            width: 25px;
+            text-align: left;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Responsive styles for test page */
+        @media (max-width: 768px) {
+            .ArabicH-test-title {
+                font-size: 1.8rem;
+            }
+            
+            .ArabicH-test-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-test-container {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-test-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .ArabicH-test-info {
+                flex-direction: column;
+            }
+            
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-test-main {
+                padding: 1rem;
+            }
+            
+            .ArabicH-test-title {
+                font-size: 1.6rem;
+            }
+            
+            .ArabicH-poem {
+                font-size: 0.9rem;
+                line-height: 2;
+            }
+        }
+        
+        /* أنماط قسم المقال الجديد */
+        .ArabicH-essay-section {
+            margin: 40px 0;
+            padding: 20px 0;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .ArabicH-essay-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .ArabicH-essay-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            border-top: 6px solid var(--secondary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .ArabicH-essay-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .ArabicH-essay-card-header {
+            padding: 18px 25px;
+            color: white;
+        }
+
+        .ArabicH-essay-card-title {
+            margin: 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .ArabicH-essay-card-body {
+            padding: 25px;
+        }
+
+        .ArabicH-essay-outline {
+            line-height: 1.8;
+        }
+
+        .ArabicH-essay-section-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 20px 0 10px;
+            font-size: 1.1rem;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .ArabicH-essay-section-title:first-child {
+            margin-top: 0;
+        }
+
+        .ArabicH-essay-idea {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: var(--light-color);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .ArabicH-essay-idea-title {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .ArabicH-quote-example {
+            padding: 10px 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+            font-family: 'Traditional Arabic', serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            direction: rtl;
+        }
+
+        .ArabicH-essay-list {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        .ArabicH-essay-list li {
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+
+        .ArabicH-full-essay {
+            line-height: 1.8;
+        }
+
+        .ArabicH-essay-part-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 25px 0 15px;
+            font-size: 1.1rem;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .ArabicH-essay-part-title:first-child {
+            margin-top: 0;
+        }
+
+        .ArabicH-quote-inline {
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Traditional Arabic', serif;
+            direction: rtl;
+            font-weight: 500;
+        }
+
+        /* أنماط الوضع الداكن لقسم المقال */
+        [data-theme="dark"] .ArabicH-essay-idea {
+            background-color: var(--definition-bg);
+        }
+
+        [data-theme="dark"] .ArabicH-quote-example {
+            background-color: #2C3B2E;
+            border-right: 4px solid var(--accent-color);
+            color: #D4EDDA;
+        }
+
+        [data-theme="dark"] .ArabicH-quote-inline {
+            background-color: #2C3B2E;
+            color: #D4EDDA;
+        }
+
+        /* أنماط متجاوبة لقسم المقال */
+        @media (max-width: 768px) {
+            .ArabicH-essay-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .ArabicH-essay-card-body {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-essay-card-header {
+                padding: 15px 20px;
+            }
+            
+            .ArabicH-essay-card-title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-test-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-test-main">
+        <h1 class="ArabicH-test-title" data-i18n="ArabicH.Y3Tests.comprehensionTitle">اختبار التحليل الأدبي - السنة الثالثة ثانوي</h1>
+        <p class="ArabicH-test-subtitle" data-i18n="ArabicH.Y3Tests.comprehensionSubtitle">فرض تأليفي في التحليل الأدبي - السنة الثالثة آداب</p>
+        
+        <div class="ArabicH-test-container">
+            <div class="ArabicH-test-header">
+                <h2 class="ArabicH-test-title" data-i18n="ArabicH.Y3Tests.comprehensionTitle">اختبار التحليل الأدبي - السنة الثالثة ثانوي</h2>
+                <div class="date" data-i18n="ArabicH.Y3Tests.comprehensionDuration">التوقيت: ساعتان</div>
+            </div>
+            
+            <div class="ArabicH-test-info">
+                <div>
+                    <p><strong data-i18n="ArabicH.Y3Tests.school">المدرسة:</strong> معهد أبو الطيب المتنبي - رأس الجبل</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.subject">المادة:</strong> اللغة العربية</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.grade">الصف:</strong> 3 آداب</p>
+                </div>
+                <div>
+                    <p><strong data-i18n="ArabicH.Y3Tests.teacher">الأستاذ:</strong> أحمد اللطيف</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.text">النص:</strong> ديوان ابن زيدون / ص 5-6</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.score">العدد:</strong> ................/20</p>
+                </div>
+            </div>
+            
+            <div class="ArabicH-text-section">
+                <h3 class="ArabicH-text-title" data-i18n="ArabicH.Y3Tests.poemTitle">النص الأدبي: ديوان ابن زيدون</h3>
+                <div class="ArabicH-poem">
+                    <div class="ArabicH-poem-line"><span class="ArabicH-poem-line-number">(1)</span>أضحى التنائي بديلاً من َتدانينا *** ونابَ عن طيبِ ُلقيانا تجافينا</div>
+                    <div class="ArabicH-poem-line"><span class="ArabicH-poem-line-number">(2)</span>ألاّ وَقَد حانَ صُبحُ البَينِ، صَبّحَنا ***   حَيْنٌ، فَقَامَ بِنَا للحَيْنِ نَاعيِنَا</div>
+                    <div class="ArabicH-poem-line"><span class="ArabicH-poem-line-number">(3)</span>مَنْ مبلغُ الملبسِينا، بانتزاحِهمُ   ***   حُزْنـاً، معَ الدهرِ لا يبلى ويُبْلينَا</div>
+                    <div class="ArabicH-poem-line"><span class="ArabicH-poem-line-number">(4)</span>أن الزمان الذي ما زال يضحكنا *** أنــسا بقربهـم قـد عـاد يبكينا</div>
+                    <div class="ArabicH-poem-line"><span class="ArabicH-poem-line-number">(5)</span>غيظ العدا من تساقينا الهوى *** فدعوا بأن نغص فقال الدهر آمينا</div>
+                    <div class="ArabicH-poem-line"><span class="ArabicH-poem-line-number">(6)</span>فَانحَلّ ما كانَ مَعقُوداً بأَنْفُسِنَا  ***  وَانْبَتّ ما كانَ مَوْصُولاً بأيْدِينَا</div>
+                    <div class="ArabicH-poem-line"><span class="ArabicH-poem-line-number">(7)</span> وَقَدْ نَكُونُ، وَمَا يُخشَى تَفَرّقُنا  ***  فاليومَ نحنُ، ومَا يُرْجى تَلاقينَا</div>
+                    <div class="ArabicH-poem-line"><span class="ArabicH-poem-line-number">(8)</span>يـا ليتَ شعرِي، ولم نُعتِبْ أعاديَكم *** هَـلْ  نَـالَ  حَظّاً منَ العُتبَى أعادينَا</div>
+                    <div class="ArabicH-poem-line"><span class="ArabicH-poem-line-number">(9)</span> لـم نعتقـــدْ بعدكـــمْ إلاّ الوفـاء لكُـمْ *** رَأيـــاً، ولَـــمْ نَـتَـقـلّـــدْ غَيـــرَهُ دِينَا</div>
+                    <div class="ArabicH-poem-line"><span class="ArabicH-poem-line-number">(10)</span>مـا حـقّنا أن تُقِرّوا عينَ ذي حَسَدٍ ***   بِـنـا ولا أن تَسُرّوا كاشِحا فِينَا</div>
+                    <div class="ArabicH-poem-line"><span class="ArabicH-poem-line-number">(11)</span>كُـنّـا نرَى اليَأسَ تُسْلِينا عَوَارِضُه  ***  وَقَـدْ  يَـئِـسْـنَا فَمَا لليأسِ يُغْرِينَا</div>
+                    <div class="ArabicH-poem-line"><span class="ArabicH-poem-line-number">(12)</span>بنْتُمْ وبنّا فما ابتلّتْ جوانحُنا   ***   شوقاً إليكمْ ولا جفّتْ مآقينا</div>
+                    <div class="ArabicH-poem-line"><span class="ArabicH-poem-line-number">(13)</span>نَكادُ حينَ تُناجيكمْ ضمائرُنا  ***  يَقْضي علينا الأسى لولا تأسّينا</div>
+                </div>
+                
+                <div class="ArabicH-source">
+                    <p data-i18n="ArabicH.Y3Tests.textSource">ديوان ابن زيدون / ص 5-6</p>
+                </div>
+            </div>
+            
+            <div class="ArabicH-vocabulary">
+                <h3 class="ArabicH-vocabulary-title" data-i18n="ArabicH.Y3Tests.vocabularyTitle">الشرح والمفردات</h3>
+                <p><strong>التنائي:</strong> البعد / <strong>تدانينا:</strong> القرب / <strong>البَينِ:</strong> الفراق أو الموت / <strong>معقوداً:</strong> مرتبط، ملتصق / <strong>نغص:</strong> نفترق / <strong>نُعتِبْ:</strong> نفرح، نرضي / <strong>كاشحا:</strong> حاقداً / <strong>عوارضه:</strong> آثاره / <strong>يُغْرِينَا:</strong> يغوينا / <strong>جوانحنا:</strong> قلوبنا / <strong>مآقينا:</strong> عيوننا</p>
+            </div>
+            
+            <div class="ArabicH-questions-section">
+                <h3 style="color: var(--primary-color); margin-bottom: 20px; text-align: center;" data-i18n="ArabicH.Y3Tests.questionsTitle">أسئلة الفرض</h3>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- قسم النص حسب معيار الزمان: <span class="ArabicH-points">4 ن</span></h4>
+                    <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+                    <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution1')">إظهار الحل</button>
+                    <div id="solution1" class="ArabicH-solution">
+                        <h4>تقسيم النص حسب معيار الزمان:</h4>
+                        <p><strong>1. مقطع الحاضر الأليم (الأبيات 1-4):</strong> تصوير حال الفراق والبعد، حيث أصبح التنائي والجفاء بديلاً عن القرب واللقاء، وانقلب الزمان من باعث على السرور إلى باعث على البكاء.</p>
+                        <p><strong>2. مقطع أسباب الفراق ونتائجه (الأبيات 5-8):</strong> يوضح الشاعر أن العذال والوشاة كانوا سبب الفراق، وأن الدهر استجاب لدعائهم، فانفرط عقد المحبة وانقطع الوصل.</p>
+                        <p><strong>3. مقطع العتاب والوفاء (الأبيات 9-11):</strong> يظهر الشاعر وفاءه وإخلاصه رغم البعد، ويعاتب المحبوبة عتابًا عفيفًا، مؤكّدًا أنه لم يبدل دين الوفاء، وأن اليأس لم يخفف من شوقه بل زاده تعلقًا.</p>
+                        <p><strong>4. مقطع الشوق والدموع (الأبيات 12-13):</strong> تصوير الشوق العارم الذي يذيب القلوب، والدموع التي لا تجف، مع محاولة التسلية والتصبر للاحتمال.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- أدرس صورة الشاعر مستخلصا من خلالها علاقته بالحبيبة: <span class="ArabicH-points">4 ن</span></h4>
+                    <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+                    <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution2')">إظهار الحل</button>
+                    <div id="solution2" class="ArabicH-solution">
+                        <h4>صورة الشاعر وعلاقته بالحبيبة:</h4>
+                        <ul>
+                            <li><strong>الشاعر يظهر بصورة العاشق الوفي:</strong> الذي لم يبدل البعد إخلاصه، بل زاده تعلقًا.</li>
+                            <li><strong>علاقة وفاء دائم:</strong> يصرّح أنه لم يعتنق بعدهم إلا الوفاء ولم يتقلد غيره دينًا.</li>
+                            <li><strong>صورة المتألم المتحسر:</strong> الذي يذرف الدموع ويعيش على الذكرى.</li>
+                            <li><strong>صورة المتجلد الصابر:</strong> الذي يحاول أن يخفف ألمه بالتصبر والتسلية.</li>
+                            <li><strong>علاقة تسودها العتاب العفيف:</strong> حيث يعاتب محبوبته بلطف دون قسوة، مما يدل على عمق المحبة.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">3- أدرس الظواهر الايقاعية في النص مبرزا قيمتها في الشعر الاندلسي: <span class="ArabicH-points">4 ن</span></h4>
+                    <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+                    <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution3')">إظهار الحل</button>
+                    <div id="solution3" class="ArabicH-solution">
+                        <h4>الظواهر الإيقاعية وقيمتها في الشعر الأندلسي:</h4>
+                        <ul>
+                            <li><strong>الوزن:</strong> البحر البسيط، وهو بحر شائع في الغزل الأندلسي لما فيه من انسياب موسيقي يناسب العاطفة.</li>
+                            <li><strong>القافية:</strong> موحدة (النون المضمومة)، مما يضفي إيقاعًا منتظمًا يعكس وحدة التجربة الشعورية.</li>
+                            <li><strong>التكرار:</strong> تكرار الألفاظ ذات الحروف الممدودة (التنائي، تدانينا، تجافينا) يعكس طول المعاناة وامتداد الشوق.</li>
+                            <li><strong>المحسنات البديعية:</strong> الطباق (التنائي/تدانينا، يضحكنا/يبكينا)، الجناس (البين/حين)، المقابلة.</li>
+                            <li><strong>القيمة:</strong> هذه الظواهر الإيقاعية تعكس <strong>روح الغنائية الأندلسية</strong> التي تمزج بين الموسيقى الداخلية والوزن الخارجي، لتجعل الشعر أقرب إلى الغناء.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">4- استخلص المعاني الغزلية في النص: <span class="ArabicH-points">4 ن</span></h4>
+                    <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+                    <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution4')">إظهار الحل</button>
+                    <div id="solution4" class="ArabicH-solution">
+                        <h4>المعاني الغزلية في النص:</h4>
+                        <ul>
+                            <li><strong>الوفاء والإخلاص:</strong> لم يبدل البعد إخلاص الشاعر، بل بقي وفيًا.</li>
+                            <li><strong>التحسر على الفراق:</strong> تصوير الألم الناتج عن البعد والهجر.</li>
+                            <li><strong>الحنين إلى الماضي:</strong> استحضار أيام الوصل والصفاء.</li>
+                            <li><strong>الدموع والشوق:</strong> تصوير البكاء المستمر والشوق الذي لا ينطفئ.</li>
+                            <li><strong>العتاب العفيف:</strong> مخاطبة المحبوبة بلطف وعتاب رقيق دون قسوة.</li>
+                            <li><strong>التحدي للحساد:</strong> رفض إرضاء الحساد بإظهار الفراق.</li>
+                            <li><strong>اليأس الذي لا ينسي:</strong> تأكيد أن اليأس زاد الشاعر تعلقًا لا نسيانًا.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">5- إلى أي مدى عبَر النص عن تجديد في التجربة الشعرية الاندلسية؟ <span class="ArabicH-points">4 ن</span></h4>
+                    <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+                    <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution5')">إظهار الحل</button>
+                    <div id="solution5" class="ArabicH-solution">
+                        <h4>التجديد في التجربة الشعرية الأندلسية:</h4>
+                        <p>النص يعبر عن <strong>تجديد</strong> من خلال:</p>
+                        <ul>
+                            <li><strong>الصدق العاطفي:</strong> تصوير تجربة ذاتية صادقة بعيدة عن التكلّف، حيث يعبر الشاعر عن مشاعره بصراحة ووضوح.</li>
+                            <li><strong>الطابع الغنائي:</strong> النص أقرب إلى الأغنية العاطفية، وهو من سمات الشعر الأندلسي الذي تميز بالموسيقى الداخلية والخارجية.</li>
+                            <li><strong>الصور الفنية المبتكرة:</strong> مثل تشبيه الحزن باللباس، والوفاء بالحبل الموصول، والزمان بالإنسان الذي يضحك ويبكي.</li>
+                            <li><strong>التركيز على الجانب النفسي:</strong> عمق التحليل النفسي للمشاعر والأحاسيس في حالتي الوصل والفراق.</li>
+                            <li><strong>الانزياح عن النمط التقليدي:</strong> حيث يظهر الغزل الأندلسي هنا أكثر عمقًا وتركيزًا على الجوانب النفسية منه على الوصف الجسدي.</li>
+                        </ul>
+                        <p>هذا التجديد جعل الشعر الأندلسي أكثر قربًا من وجدان المتلقي، وأكثر تعبيرًا عن التجربة الإنسانية في عمقها النفسي.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- قسم المقال المضاف -->
+            <div class="ArabicH-essay-section">
+                <h3 style="color: var(--primary-color); margin: 40px 0 25px; text-align: center; border-bottom: 3px solid var(--accent-color); padding-bottom: 10px;">مقال التحليل الأدبي</h3>
+                
+                <div class="ArabicH-essay-cards">
+                    <!-- بطاقة تخطيط المقال -->
+                    <div class="ArabicH-essay-card">
+                        <div class="ArabicH-essay-card-header" style="background: var(--gradient-primary);">
+                            <h4 class="ArabicH-essay-card-title">📋 تخطيط المقال</h4>
+                        </div>
+                        <div class="ArabicH-essay-card-body">
+                            <div class="ArabicH-essay-outline">
+                                <div class="ArabicH-essay-section-title">المقدمة:</div>
+                                <ul class="ArabicH-essay-list">
+                                    <li>تقديم الشاعر: ابن زيدون (1003-1070م)، شاعر أندلسي كبير، صاحب تجربة غزلية عميقة مع ولادة بنت المستكفي.</li>
+                                    <li>تقديم القصيدة: من ديوانه، روي النون المضمومة، قافية موحّدة، بحر البسيط.</li>
+                                    <li>إبراز انسجام الإيقاع مع موضوع الفراق والشوق.</li>
+                                    <li>طرح الإشكالية: كيف عبّر النص عن تجربة غزلية متجددة في الشعر الأندلسي؟</li>
+                                </ul>
+                                
+                                <div class="ArabicH-essay-section-title">الجوهر:</div>
+                                
+                                <div class="ArabicH-essay-idea">
+                                    <div class="ArabicH-essay-idea-title">الفكرة الأولى: البعد الزمني في النص</div>
+                                    <div class="ArabicH-quote-example" style="background-color: #E8F5E9; border-right: 4px solid #4CAF50; color: #1B5E20;">
+                                        الشاهد: [أضحى التنائي بديلاً من تدانينا] - [أن الزمان الذي ما زال يضحكنا قد عاد يبكينا]
+                                    </div>
+                                    <ul class="ArabicH-essay-list">
+                                        <li>الدلالة: تباين زمني بين الماضي (القرب، الضحك) والحاضر (البعد، البكاء).</li>
+                                        <li>التقاطع الزمني: الحاضر المؤلم يستحضر الماضي الجميل.</li>
+                                        <li>الانزياح عن النمط: التركيز على التحول الزمني الدراماتيكي في المشاعر.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="ArabicH-essay-idea">
+                                    <div class="ArabicH-essay-idea-title">الفكرة الثانية: صورة الشاعر وعلاقته بالحبيبة</div>
+                                    <div class="ArabicH-quote-example" style="background-color: #E8F5E9; border-right: 4px solid #4CAF50; color: #1B5E20;">
+                                        الشاهد: [لم نعتقد بعدكم إلا الوفاء لكم رأياً، ولم نتقلد غيره ديناً] - [بنتم وبنّا فما ابتلّت جوانحنا شوقاً إليكم ولا جفّت مآقينا]
+                                    </div>
+                                    <ul class="ArabicH-essay-list">
+                                        <li>الدلالة: العاشق الوفي رغم البعد، المتألم المتحسر، المتجلد الصابر.</li>
+                                        <li>علاقة الوفاء المطلق: تجاوز الغزل التقليدي إلى ارتباط روحي عميق.</li>
+                                        <li>العتاب العفيف: دليل على عمق المحبة ورقتها.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="ArabicH-essay-idea">
+                                    <div class="ArabicH-essay-idea-title">الفكرة الثالثة: الظواهر الإيقاعية</div>
+                                    <div class="ArabicH-quote-example" style="background-color: #E8F5E9; border-right: 4px solid #4CAF50; color: #1B5E20;">
+                                        الشاهد: البحر البسيط - القافية الموحدة - التكرار الصوتي
+                                    </div>
+                                    <ul class="ArabicH-essay-list">
+                                        <li>الدلالة: انسجام الموسيقى الخارجية مع المشاعر الداخلية.</li>
+                                        <li>التوازن الإيقاعي: يعكس التوتر العاطفي بين الأمل واليأس.</li>
+                                        <li>الغنائية الأندلسية: تحويل القصيدة إلى أغنية عاطفية.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="ArabicH-essay-idea">
+                                    <div class="ArabicH-essay-idea-title">الفكرة الرابعة: المعاني الغزلية المتجددة</div>
+                                    <div class="ArabicH-quote-example" style="background-color: #E8F5E9; border-right: 4px solid #4CAF50; color: #1B5E20;">
+                                        الشاهد: [وقد يئسنا فما لليأس يغرينا] - [ما حقنا أن تقروا عين ذي حسد بنا ولا أن تسروا كاشحا فينا]
+                                    </div>
+                                    <ul class="ArabicH-essay-list">
+                                        <li>الدلالة: الوفاء رغم اليأس، التحدي للحساد، الشوق الدائم.</li>
+                                        <li>الانزياح: تحويل الغزل من وصف جسدي إلى تحليل نفسي عميق.</li>
+                                        <li>التجديد: الغزل كقيمة أخلاقية وروحية وليس مجرد عاطفة.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="ArabicH-essay-section-title">الخاتمة:</div>
+                                <ul class="ArabicH-essay-list">
+                                    <li>النص يمثل تجربة غزلية أندلسية متجددة تجمع بين الوفاء والحنين.</li>
+                                    <li>يبرز جماليات الشعر الأندلسي في صورته الغنائية المؤثرة.</li>
+                                    <li>يقدم نموذجًا للغزل النفسي العميق الذي يتجاوز الوصف الحسي إلى التحليل العاطفي.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- بطاقة اقتراح المقال -->
+                    <div class="ArabicH-essay-card">
+                        <div class="ArabicH-essay-card-header" style="background: var(--gradient-secondary);">
+                            <h4 class="ArabicH-essay-card-title">✍️ المقال المقترح</h4>
+                        </div>
+                        <div class="ArabicH-essay-card-body">
+                            <div class="ArabicH-full-essay">
+                                <div class="ArabicH-essay-intro">
+                                    <h5 class="ArabicH-essay-part-title">المقدمة</h5>
+                                    <p>ابن زيدون (1003-1070م) شاعر أندلسي كبير، عُرف بتجربته الغزلية العميقة مع ولادة بنت المستكفي، والتي أصبحت رمزًا للوفاء والعشق الخالد في الشعر الأندلسي. والقصيدة التي بين أيدينا، المأخوذة من ديوانه، تمثل نموذجًا رفيعًا للشعر الغزلي الأندلسي، بقالبها الشعري المنضبط على بحر البسيط ذي الإيقاع الانسيابي، وقافيتها الموحدة بالنون المضمومة التي تضفي نغمة حزينة تتناسب مع موضوع الفراق والشوق. ومن خلال هذا النص، يطرح ابن زيدون تجربة غزلية تختلف عن النمط التقليدي، فتتجاوز الوصف الحسي إلى التحليل النفسي العميق، مما يثير التساؤل: كيف عبّر النص عن تجربة غزلية متجددة في الشعر الأندلسي؟</p>
+                                </div>
+                                
+                                <div class="ArabicH-essay-body">
+                                    <h5 class="ArabicH-essay-part-title">الجوهر</h5>
+                                    <p>يبدأ الشاعر قصيدته بتحول دراماتيكي في الزمن والمشاعر، فيصور التحول من القرب إلى البعد، ومن الفرح إلى الحزن: 
+                                        <span class="ArabicH-quote-inline" style="background-color: #E8F5E9; color: #1B5E20;">[أضحى التنائي بديلاً من تدانينا وناب عن طيب لقيانا تجافينا]</span>. 
+                                        هذا الانزياح الزمني ليس مجرد تغير في الظروف، بل هو تحول في الجوهر العاطفي، حيث يصبح البعد "بديلاً" عن القرب، والجفاء "نائباً" عن اللقاء. ثم يتجسد هذا التحول في صورة بلاغية مؤثرة: 
+                                        <span class="ArabicH-quote-inline" style="background-color: #E8F5E9; color: #1B5E20;">[أن الزمان الذي ما زال يضحكنا أنسا بقربهم قد عاد يبكينا]</span>، 
+                                        حيث يتحول الزمان من صديق ضاحك إلى عدو باكٍ، مما يعكس عمق التحول النفسي الذي يعيشه الشاعر.</p>
+                                    
+                                    <p>تتجلى صورة الشاعر في النص كعاشق وفّي رغم البعد، متألم رغم الصبر، صادق رغم اليأس. فهو يصرح بوفائه المطلق: 
+                                        <span class="ArabicH-quote-inline" style="background-color: #E8F5E9; color: #1B5E20;">[لم نعتقد بعدكم إلا الوفاء لكم رأياً، ولم نتقلد غيره ديناً]</span>، 
+                                        حيث يتحول الوفاء من مجرد عاطفة إلى "رأي" و"دين"، أي إلى عقيدة وجودية تتحكم في سلوكه وفكره. هذه الصورة تختلف عن صورة العاشق التقليدي الذي يسهل عليه النسيان أو التغير، فابن زيدون يقدم نموذجًا للعاشق الثابت المبدأ، العميق الإحساس. حتى عتابه لمحبوبه عتاب عفيف رقيق: 
+                                        <span class="ArabicH-quote-inline" style="background-color: #E8F5E9; color: #1B5E20;">[يا ليت شعري، ولم نعتب أعاديكم هل نال حظاً من العتبى أعادينا]</span>، 
+                                        مما يدل على أن العلاقة ما زالت قائمة على المحبة والاحترام رغم البعد.</p>
+                                    
+                                    <p>تساهم الظواهر الإيقاعية في النص في تعميق هذه التجربة العاطفية. فبحر البسيط بإيقاعه الانسيابي يناسب تدفق المشاعر، والقافية الموحدة بالنون المضمومة تضفي نغمة حزينة متواصلة. كما أن التكرار الصوتي في ألفاظ مثل "التنائي، تدانينا، تجافينا" يعكس استمرارية المعاناة وامتداد الشوق. وقد وظف الشاعر المحسنات البديعية توظيفًا دلاليًا، فالطباق بين "التنائي وتدانينا" و"يضحكنا ويبكينا" يعكس التناقض الدراماتيكي في تجربته، والجناس بين "البين وحين" يربط بين الفراق والزمن، مما يضفي عمقًا فلسفيًا على المعاناة العاطفية.</p>
+                                    
+                                    <p>أما المعاني الغزلية في النص فتتميز بتجددها وعمقها النفسي. فالشاعر لا يكتفي بوصف الجمال أو التعبير عن الشوق، بل يغوص في التحليل النفسي للمشاعر. فهو يقدم معنى جديدًا لليأس: 
+                                        <span class="ArabicH-quote-inline" style="background-color: #E8F5E9; color: #1B5E20;">[وقد يئسنا فما لليأس يغرينا]</span>، 
+                                        حيث يصبح اليأس لا يغري بالنسيان بل يزيد التعلق. كما يقدم موقفًا أخلاقيًا من الحسد والحساد: 
+                                        <span class="ArabicH-quote-inline" style="background-color: #E8F5E9; color: #1B5E20;">[ما حقنا أن تقروا عين ذي حسد بنا ولا أن تسروا كاشحا فينا]</span>، 
+                                        حيث يرفض إرضاء الحساد بإظهار الفراق، مما يجعل الغزل قيمة أخلاقية وليس مجرد عاطفة.</p>
+                                    
+                                    <p>من خلال هذه المقومات الفنية والمعنوية، يتجلى تجديد ابن زيدون في التجربة الشعرية الأندلسية. فالنص يقدم نموذجًا للغزل النفسي العميق، الذي يتجاوز الوصف الحسي إلى التحليل العاطفي، والوصف الجسدي إلى الغوص في الأعماق النفسية. كما يربط الغزل بقيم أخلاقية كالوفاء والتحدي والصبر، مما يرفعه من مستوى العاطفة العابرة إلى مستوى المبدأ الوجودي. هذا التجديد جعل الشعر الأندلسي في تجربة ابن زيدون أكثر نضجًا وعمقًا، وأقدر على التعبير عن تعقيدات النفس البشرية في حالتي الوصل والفراق.</p>
+                                </div>
+                                
+                                <div class="ArabicH-essay-conclusion">
+                                    <h5 class="ArabicH-essay-part-title">الخاتمة</h5>
+                                    <p>إن قصيدة ابن زيدون تمثل تجربة غزلية أندلسية متجددة، تجمع بين الأصالة والتجديد. فهي تحافظ على الخصائص الشكلية للشعر الأندلسي من حيث الوزن والقافية والغنائية، ولكنها تتجاوز المضمون التقليدي إلى آفاق جديدة. فالنص لا يقتصر على وصف الجمال أو التعبير عن الشوق، بل يغوص في أعماق النفس البشرية ليكشف عن تعقيدات المشاعر في حالتي الوصل والفراق. كما يربط الغزل بقيم أخلاقية وروحية، ويقدم نموذجًا للعاشق الوفي المبدئي. وهكذا يصبح غزل ابن زيدون ليس مجرد تعبير عن عاطفة، بل هو تصوير لفلسفة حياة، وموقف وجودي، مما يجعله علامة مضيئة في تاريخ الشعر الأندلسي عامة، والغزل العربي خاصة.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 15px; text-align: center;">
+                <p>[1] نقطةٌ على وضوحِ الخطِّ و نظافةِ الورقة</p>
+                <p style="color: var(--primary-color); font-weight: bold; margin-top: 10px;">☺ عملاً مُوفَّقا ☺</p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_Y3_Tests_Trim1_Testcomprehension1.html" class="ArabicH-nav-btn">اختبار التحليل الأدبي 1</a>
+                <a href="AH_Y3_Tests.html" class="ArabicH-nav-btn">العودة إلى اختبارات السنة الثالثة</a>
+                <a href="index.html" class="ArabicH-nav-btn">العودة إلى الصفحة الرئيسية</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHY3Comprehension2 = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Year 3 Comprehension specific translations
+                "ArabicH.Y3Tests.comprehensionTitle": "اختبار التحليل الأدبي - السنة الثالثة ثانوي",
+                "ArabicH.Y3Tests.comprehensionSubtitle": "فرض تأليفي في التحليل الأدبي - السنة الثالثة آداب",
+                "ArabicH.Y3Tests.comprehensionDuration": "التوقيت: ساعتان",
+                "ArabicH.Y3Tests.school": "المدرسة",
+                "ArabicH.Y3Tests.subject": "المادة",
+                "ArabicH.Y3Tests.grade": "الصف",
+                "ArabicH.Y3Tests.teacher": "الأستاذ",
+                "ArabicH.Y3Tests.text": "النص",
+                "ArabicH.Y3Tests.score": "العدد",
+                "ArabicH.Y3Tests.poemTitle": "النص الأدبي: ديوان ابن زيدون",
+                "ArabicH.Y3Tests.textSource": "ديوان ابن زيدون / ص 5-6",
+                "ArabicH.Y3Tests.vocabularyTitle": "الشرح والمفردات",
+                "ArabicH.Y3Tests.questionsTitle": "أسئلة الفرض",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Year 3 Comprehension specific translations
+                "ArabicH.Y3Tests.comprehensionTitle": "Literary Analysis Test - Year 3 Secondary",
+                "ArabicH.Y3Tests.comprehensionSubtitle": "Composition Test in Literary Analysis - Year 3 Arts",
+                "ArabicH.Y3Tests.comprehensionDuration": "Duration: 2 hours",
+                "ArabicH.Y3Tests.school": "School",
+                "ArabicH.Y3Tests.subject": "Subject",
+                "ArabicH.Y3Tests.grade": "Grade",
+                "ArabicH.Y3Tests.teacher": "Teacher",
+                "ArabicH.Y3Tests.text": "Text",
+                "ArabicH.Y3Tests.score": "Score",
+                "ArabicH.Y3Tests.poemTitle": "Literary Text: Diwan Ibn Zaydun",
+                "ArabicH.Y3Tests.textSource": "Diwan Ibn Zaydun / p. 5-6",
+                "ArabicH.Y3Tests.vocabularyTitle": "Vocabulary and Notes",
+                "ArabicH.Y3Tests.questionsTitle": "Test Questions",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Year 3 Comprehension specific translations
+                "ArabicH.Y3Tests.comprehensionTitle": "Test d'Analyse Littéraire - Troisième Année Secondaire",
+                "ArabicH.Y3Tests.comprehensionSubtitle": "Devoir de composition en Analyse Littéraire - Troisième Année Lettres",
+                "ArabicH.Y3Tests.comprehensionDuration": "Durée: 2 heures",
+                "ArabicH.Y3Tests.school": "École",
+                "ArabicH.Y3Tests.subject": "Matière",
+                "ArabicH.Y3Tests.grade": "Classe",
+                "ArabicH.Y3Tests.teacher": "Enseignant",
+                "ArabicH.Y3Tests.text": "Texte",
+                "ArabicH.Y3Tests.score": "Score",
+                "ArabicH.Y3Tests.poemTitle": "Texte Littéraire: Diwan Ibn Zaydun",
+                "ArabicH.Y3Tests.textSource": "Diwan Ibn Zaydun / p. 5-6",
+                "ArabicH.Y3Tests.vocabularyTitle": "Explication et Vocabulaire",
+                "ArabicH.Y3Tests.questionsTitle": "Questions du Test",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHY3Comprehension2;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Solution toggle functionality
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            const button = event.target;
+            if (solution.style.display === "block") {
+                solution.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إظهار الحل';
+            } else {
+                solution.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء الحل';
+            }
+        }
+
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Set solution button text after translation
+            document.querySelectorAll('.ArabicH-show-solution-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
