@@ -1,7 +1,7 @@
 // Service Worker for Arabic Hub Education
 const CACHE_NAME = 'arabic-hub-v1.0.1';
 const STATIC_CACHE = 'arabic-static-v1.1.1';
-const DYNAMIC_CACHE = 'arabic-dynamic-v1.1.3';
+const DYNAMIC_CACHE = 'arabic-dynamic-v1.1.4';
 
 // Assets to cache immediately on install
 const STATIC_ASSETS = [
