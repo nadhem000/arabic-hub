@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار التحليل الأدبي 3 - السنة الثالثة ثانوي - الثلاثي الأول | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1E3A8A">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="اختبار التحليل الأدبي 3">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Blue Theme for Literary Analysis 3 - Override CSS Variables */
+        :root {
+            --primary-color: #1E3A8A;
+            --secondary-color: #3B82F6;
+            --accent-color: #60A5FA;
+            --light-color: #F0F9FF;
+            --dark-color: #0F172A;
+            --text-color: #1E293B;
+            --heading-color: #1E40AF;
+            --background-color: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --definition-bg: #EFF6FF;
+            --border-color: #BFDBFE;
+            --table-even-bg: #F1F5F9;
+            --table-hover-bg: #E0F2FE;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(30, 58, 138, 0.12);
+            --gradient-primary: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+            --gradient-secondary: linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%);
+            --gradient-accent: linear-gradient(135deg, #60A5FA 0%, #93C5FD 100%);
+            --gradient-light: linear-gradient(135deg, #F0F9FF 0%, #F8FAFC 100%);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #3B82F6;
+            --secondary-color: #60A5FA;
+            --accent-color: #93C5FD;
+            --light-color: #0F172A;
+            --dark-color: #020617;
+            --text-color: #E2E8F0;
+            --heading-color: #F1F5F9;
+            --background-color: #0F172A;
+            --card-bg: #1E293B;
+            --definition-bg: #1E40AF;
+            --border-color: #334155;
+            --table-even-bg: #1E293B;
+            --table-hover-bg: #1E40AF;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+            --gradient-primary: linear-gradient(135deg, #3B82F6 0%, #1E3A8A 100%);
+            --gradient-secondary: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
+            --gradient-accent: linear-gradient(135deg, #93C5FD 0%, #60A5FA 100%);
+            --gradient-light: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+        }
+
+        /* Page specific styles */
+        .ArabicH-test-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-test-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-test-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-test-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-test-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-test-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .ArabicH-test-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            background-color: var(--definition-bg);
+        }
+
+        .ArabicH-text-section {
+            margin: 25px 0;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background-color: var(--definition-bg);
+            border-right: 4px solid var(--primary-color);
+        }
+
+        .ArabicH-text-title {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .ArabicH-prose {
+            font-family: 'Traditional Arabic', serif;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            line-height: 1.8;
+            background-color: var(--light-color);
+            text-align: right;
+            direction: rtl;
+            font-size: 1.1rem;
+        }
+
+        .ArabicH-prose-paragraph {
+            margin-bottom: 15px;
+            text-indent: 20px;
+        }
+
+        .ArabicH-questions-section {
+            margin: 30px 0;
+        }
+
+        .ArabicH-question {
+            margin-bottom: 25px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background-color: var(--card-bg);
+        }
+
+        .ArabicH-question-title {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .ArabicH-points {
+            float: left;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+            background-color: var(--primary-color);
+        }
+
+        .ArabicH-answer-textarea {
+            width: 100%;
+            min-height: 120px;
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 16px;
+            resize: vertical;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .ArabicH-show-solution-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .ArabicH-show-solution-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .ArabicH-solution {
+            display: none;
+            margin-top: 15px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+        }
+
+        .ArabicH-vocabulary {
+            margin: 25px 0;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background-color: var(--light-color);
+            border-right: 4px solid var(--secondary-color);
+        }
+
+        .ArabicH-vocabulary-title {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .ArabicH-source {
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: var(--border-radius);
+            background-color: var(--table-hover-bg);
+            text-align: center;
+            font-style: italic;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* أنماط قسم المقال الجديد */
+        .ArabicH-essay-section {
+            margin: 40px 0;
+            padding: 20px 0;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .ArabicH-essay-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .ArabicH-essay-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            border-top: 6px solid var(--secondary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .ArabicH-essay-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .ArabicH-essay-card-header {
+            padding: 18px 25px;
+            color: white;
+        }
+
+        .ArabicH-essay-card-title {
+            margin: 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .ArabicH-essay-card-body {
+            padding: 25px;
+        }
+
+        .ArabicH-essay-outline {
+            line-height: 1.8;
+        }
+
+        .ArabicH-essay-section-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 20px 0 10px;
+            font-size: 1.1rem;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .ArabicH-essay-section-title:first-child {
+            margin-top: 0;
+        }
+
+        .ArabicH-essay-idea {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: var(--light-color);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .ArabicH-essay-idea-title {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .ArabicH-quote-example {
+            padding: 10px 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+            font-family: 'Traditional Arabic', serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            direction: rtl;
+        }
+
+        .ArabicH-essay-list {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+
+        .ArabicH-essay-list li {
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+
+        .ArabicH-full-essay {
+            line-height: 1.8;
+        }
+
+        .ArabicH-essay-part-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 25px 0 15px;
+            font-size: 1.1rem;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .ArabicH-essay-part-title:first-child {
+            margin-top: 0;
+        }
+
+        .ArabicH-quote-inline {
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Traditional Arabic', serif;
+            direction: rtl;
+            font-weight: 500;
+        }
+
+        /* Responsive styles for test page */
+        @media (max-width: 768px) {
+            .ArabicH-test-title {
+                font-size: 1.8rem;
+            }
+            
+            .ArabicH-test-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-test-container {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-test-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .ArabicH-test-info {
+                flex-direction: column;
+            }
+            
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .ArabicH-essay-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .ArabicH-essay-card-body {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-test-main {
+                padding: 1rem;
+            }
+            
+            .ArabicH-test-title {
+                font-size: 1.6rem;
+            }
+            
+            .ArabicH-prose {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+            
+            .ArabicH-essay-card-header {
+                padding: 15px 20px;
+            }
+            
+            .ArabicH-essay-card-title {
+                font-size: 1.2rem;
+            }
+        }
+        
+        /* أنماط الوضع الداكن لقسم المقال */
+        [data-theme="dark"] .ArabicH-essay-idea {
+            background-color: var(--definition-bg);
+        }
+
+        [data-theme="dark"] .ArabicH-quote-example {
+            background-color: #1E3A5F;
+            border-right: 4px solid var(--accent-color);
+            color: #DBEAFE;
+        }
+
+        [data-theme="dark"] .ArabicH-quote-inline {
+            background-color: #1E3A5F;
+            color: #DBEAFE;
+        }
+    </style>
+</head>
+<body class="ArabicH-test-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-test-main">
+        <h1 class="ArabicH-test-title" data-i18n="ArabicH.Y3Tests.comprehensionTitle3">اختبار التحليل الأدبي 3 - السنة الثالثة ثانوي</h1>
+        <p class="ArabicH-test-subtitle" data-i18n="ArabicH.Y3Tests.comprehensionSubtitle3">فرض عادي في تحليل المقامة الفزارية - السنة الثالثة آداب</p>
+        
+        <div class="ArabicH-test-container">
+            <div class="ArabicH-test-header">
+                <h2 class="ArabicH-test-title" data-i18n="ArabicH.Y3Tests.comprehensionTitle3">اختبار التحليل الأدبي - المقامة الفزارية</h2>
+                <div class="date" data-i18n="ArabicH.Y3Tests.comprehensionDuration">التوقيت: ساعتان</div>
+            </div>
+            
+            <div class="ArabicH-test-info">
+                <div>
+                    <p><strong data-i18n="ArabicH.Y3Tests.school">المدرسة:</strong> 3 آداب 1، صيّادة</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.subject">المادة:</strong> اللغة العربية</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.grade">الصف:</strong> 3 آداب</p>
+                </div>
+                <div>
+                    <p><strong data-i18n="ArabicH.Y3Tests.teacher">الأستاذ:</strong> -</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.text">النص:</strong> المقامة الفزارية</p>
+                    <p><strong data-i18n="ArabicH.Y3Tests.score">العدد:</strong> ................/20</p>
+                </div>
+            </div>
+            
+            <div class="ArabicH-text-section">
+    <h3 class="ArabicH-text-title" data-i18n="ArabicH.Y3Tests.proseTitle">النص الأدبي: المقامة الفزارية</h3>
+    <div class="ArabicH-prose">
+        <p class="ArabicH-prose-paragraph">حَدَّثَنَا عِيسَى بْنُ هِشَامٍ، قَالَ: «كُنْتُ فِي بَعْضِ بِلاَدِ فَزارَةَ مُرْتَـحِلاً نَـجِيبَهْ وَقَائِدًا جَنِيبَهْ، تَسْبَحَانِ بِي سَبْحًا وَأَنَا أَهُمُّ بِالوَطنِ [...]. فَظَلَلْتُ أَخْبِطُ وَرَقَ النَّهَارِ بِعَصَا التَّسْيَارِ، وَأَخُوضُ بَطْنَ اللَّيْلِ بِـحَوَافِرِ الـخَيْلِ. فَبَيْنَا أَنَا فِي لَيْلَةٍ يَضِلُّ فِيهَا الغَطَاطُ وَلاَ يُبْصِرُ فِيهَا الوَطْوَاطُ، أَسِيحُ سَيْحًا وَلاَ سَانِحَ إِلاَّ السَّبْعُ ولاَ بَارحَ إلاَّ الضَّبْعُ، إِذْ عَنَّ لِي رَاكِبٌ يَطْوِي إِلَيَّ مَنْشُورَ الفَلَوَاتِ. فَأَخَذَنِي مِنْهُ مَا يَأْخُذُ الأَعْزَلَ مِنْ شَاكِّ السِّلاَحِ. لَكِنِّي تَـجَلَّدْتُ. فَقُلْتُ: «أَرْضَكَ، لاَ أُمَّ لَكَ. فَدُونَكَ شَرْطُ الحِدَادِ وَخَرْطُ القَتَادِ [...] وَأَنَا سِلْمٌ إِنْ شِئْتَ وَحَرْبٌ إِنْ أَرَدْتَ. فَقُلْ لِي مَنْ أَنْتَ». فَقَالَ: «سِلْمًا أَصَبْتَ». فَقُلْتُ: «خَيْرًا أَجَبْتَ. فَمَنْ أَنْتَ؟». فَقَالَ: «نَصِيحٌ إِنْ شَاوَرْتَ، فَصِيحٌ إِنْ حَاوَرْتَ، ودُونَ اسْمِي لِثَامٌ، لاَ تُـمِيطُهُ الأَعْلاَمُ، أَجُوبُ جُيُوبَ البِلاَدِ، حَتَّى أَقَعَ عَلَى جَفْنَةِ جَوَادٍ، وَلِي فُؤَادٌ يَـخْدِمُهُ لِسَانٌ، وَبَيَانٌ يَرْقُمُـــــهُ بَنَانٌ، وَقُصَارَايَ كَرِيمٌ يُـخَفِّفُ لِي جَنِيبَتَهُ وَيَنْفُضُ لِي حَقِيبَتَهُ، كَابْنِ حُرَّةٍ طَلعَ عَلَيَّ بِالأَمْسِ طُلُوعَ الشَّمْسِ وَغَرُبَ عَنِّي بِغرُوبِهَا. لَكِنَّهُ غَابَ وَلَمْ يَغِبْ تَذْكَارُهُ، وَوَدَّعَ وَشَيَّعَتْنِي آثَارُهُ. ولاَ يُنْبِئُكَ عَنْهَا أَقْرَبُ مِنْهَا». وَأَوْمَأَ إِلَى مَا كَانَ لِبْسُهُ. فَقُلْتُ: «شَحَّاذٌ وَرَبِّ الكَعْبَةِ أَخَّاذٌ، لَهُ فِي الصَّنْعَةِ نَفَاذٌ، بَلْ هُوَ فِيهَا أُسْتَاذٌ. يَا فَتًى، قَدْ أَجْلَيْتُ عِبَارَتَكَ، فَأَيْنَ شِعْرُكَ مِنْ نَثْرِكَ؟» فَقَالَ: «وَأَيْنَ كَلاَمِي مِنْ شِعْرِي؟». ثُمَّ اسْتَمَدَّ غَرِيزَتَهُ، ورَفَعَ عَقِيرَتَه بِصَوْتٍ مَلَأَ الوَادِيَ. وَأَنْشَأ يَقُولُ:</p>
+        
+        <div style="text-align: center; font-family: 'Traditional Arabic', serif; direction: rtl; margin: 20px 0; padding: 15px; background: var(--light-color); border-radius: var(--border-radius); border-right: 4px solid var(--secondary-color);">
+            عَرَضْتُ عَلَى نَارِ الْمَكَارِمِ عُودَهُ  ✤  فَكَانَ مُعَمًّا فِي السِّـــــيَادَةِ مُـخْــوِلاَ<br>
+            وَخَـادَعْتُهُ عَنْ مَالِهِ، فَخَدَعْـتُــــــــــــــــهُ  ✤  وَسَاهَلْـتُــهُ عَــــــــــــــنْ بِـرِّهِ  فَتَسَــهَّـــــلاَ<br>
+            وَلَمَّا تَـجَالَيْـنَا وَأَحْـمَدَ مَنْـطِــــــــــــــقِـي  ✤  بَلاَنِيَ مِنْ نَظْـمِ القَرِيـضِ بِـمَا بَلاَ<br>
+            فَمَا هَزَّ  إِلاَّ صَارِمًا حِينَ هَزَّنِــــــي  ✤  وَلَـمْ يَلْقَـنِـي إِلاَّ إِلَى السَّبْــــــــقِ أَوَّلاَ.
+        </div>
+        
+        <p class="ArabicH-prose-paragraph">فَقُلْتُ: «عَلَى رِسْلِكَ يَا فَتًى، وَلَكَ فِيمَا يَصْحَبنِي حُكْمُكَ». فَقَالَ: «الـحَقِيبَةُ بِمَا فِيهَا». فَقُلْتُ: «إِنَّ وَحَامِلَتَهَا». ثُمَّ قَبَضْتُ بِـجُمْعِي عَلَيْهِ، وَقُلْتُ: «لاَ وَالَّذِي أَلْـهَمَهَا لَمْسًا وَشَقَّهَا مِنْ وَاحِدَةٍ خَمْسًا، لاَ تُزايِلُنِي أَوْ أَعْلَمَ عِلْمَكَ». فَـحَدَرَ لِثَامَهُ عَنْ وَجْهِهِ. فَإِذَا هُوَ، وَاللهِ، شَيْخُنَا أَبُو الفَتْحِ الإِسْكَنْدَرِيُّ. فَمَا لَبِثَ أَنْ قُلْتُ:</p>
+        
+        <div style="text-align: center; font-family: 'Traditional Arabic', serif; direction: rtl; margin: 20px 0; padding: 15px; background: var(--light-color); border-radius: var(--border-radius); border-right: 4px solid var(--accent-color);">
+            تَوَشَّحْتَ أَبَـــــــا الفَتْــــحِ  ✤  بِهَذَا السَّــيْفِ مُـخْـتالاَ<br>
+            فَمَا تَصْـنعُ بِالــسَّيْـــــــفِ  ✤  إذَا لَـــمْ تَـكُ  قَـــتَّــــالاَ؟<br>
+            فَصُغْ مَا أَنْتَ حَـلَّيْتَ  ✤  بِـــهِ سَيْفَـكَ خَلْـخَالاَ.
+        </div>
+    </div>
+    
+    <div class="ArabicH-source">
+        <p>رسائلُ أبي الفضلِ بديع الزّمان الهمذانيّ وبهامشِها مقاماتُه، مطبعة هنديّة، ط4، مصر، 1928، صص: (64-68)</p>
+    </div>
+</div>
+            
+            <div class="ArabicH-vocabulary">
+    <h3 class="ArabicH-vocabulary-title" data-i18n="ArabicH.Y3Tests.vocabularyTitle">الشرح المعجمي والمفردات</h3>
+    <p>
+        <strong>النَّجِيبَةُ:</strong> الفَرَسُ العَتِيقَةُ وَالكَرِيـمَةُ الأَصْلِ<br>
+        <strong>الـجَنِيبَةُ:</strong> الفَرَسُ الَّتِي يَقُودُهَا الرَّاكِبُ إِلَى جَنْبِهِ<br>
+        <strong>التَّسْيَارُ:</strong> الـمَسِيرُ أَوْ رُكُوبُ الدَّابَّةِ<br>
+        <strong>الوَطْوَاطُ:</strong> جَـمْعُهُ وَطَاوِطُ، هُوَ الـخُفَّاشُ<br>
+        <strong>أَسِيحُ:</strong> سَاحَ: جَرَى، جَالَ فِي البِلاَدِ، ذَهَبَ فِي الأَرْضِ<br>
+        <strong>السَّانِحُ:</strong> الَّذِي يَأْتِي مِنَ اليَمِينِ<br>
+        <strong>البَارِحُ:</strong> الَّذِي يَأْتِي مِنَ اليَسَارِ<br>
+        <strong>شَاكٍّ:</strong> شَكَّ فِي السِّلاَحِ: كَانَ يَلْبَسُ سِلاَحًا تَامًّا وَغَارِقًا فِيهِ<br>
+        <strong>خَرْطُ القَتَادِ:</strong> مَثَلٌ يُضْرَبُ لِرُكُوبِ الأَمْرِ الشَّاقِّ<br>
+        <strong>الـجَفْنَةُ:</strong> القَصْعَةُ الكَبِيرَةُ<br>
+        <strong>يَرقُمُ:</strong> رَقَمَ الكِتَابَ: بَيَّنَهُ وَأَعْجَمَهُ بِوَضْعِ النِّقَاطِ وَالـحَرَكَاتِ<br>
+        <strong>أَخَّاذٌ:</strong> سَاحِرٌ<br>
+        <strong>أَجْلَيْتُ:</strong> الأَمْرَ: فَهِمْتُهُ وَكَشَفْتُهُ<br>
+        <strong>الـمُعِمُّ:</strong> الكَرِيمُ الأَعْمَامِ<br>
+        <strong>الْمُخْوِلُ:</strong> الكَرِيمُ الأَخْوَالِ<br>
+        <strong>سَاهَلَهُ:</strong> لاَيَنَهُ وَسَايَرَهُ<br>
+        <strong>تَـجَالَيْنَا:</strong> اِنْكَشَفَ كُلٌّ مِنَّا لِصَاحِبِهِ<br>
+        <strong>بَلاَهُ:</strong> اِخْتَبَرَهُ وَامْتَحَنَهُ وَجَرَّبَهُ<br>
+        <strong>إِنَّ:</strong> حَرْفُ جَوَابٍ، مَعْنَاهَا "نَعَمْ"<br>
+        <strong>حَدَرَ:</strong> الشَّيْءَ: أَنْزَلَهُ مِنْ عُلوٍّ إِلَى أَسْفَلَ<br>
+        <strong>تَوَشَّحَ:</strong> بِالسَّيْفِ: تَقَلَّدَ بِهِ
+    </p>
+</div>
+            
+            <div class="ArabicH-questions-section">
+    <h3 style="color: var(--primary-color); margin-bottom: 20px; text-align: center;" data-i18n="ArabicH.Y3Tests.questionsTitle">الأسئلة الموجهة</h3>
+    
+    <div class="ArabicH-question">
+        <h4 class="ArabicH-question-title">1- ما الأساليب البديعية التي سيطرت على هذه المقامة؟ <span class="ArabicH-points">3 ن</span></h4>
+        <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+        <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution1')">إظهار الحل</button>
+        <div id="solution1" class="ArabicH-solution">
+            <h4>الأساليب البديعية في المقامة:</h4>
+            <ul>
+                <li><strong>السجع:</strong> تطابق الفواصل مثل "نجيبه وجنيبه"، "السبع والضبع"، "شاورت وحاورت".</li>
+                <li><strong>الجناس:</strong> كما في "خادعته فخدعته"، "سهلته فسهلا".</li>
+                <li><strong>الطباق:</strong> مثل "سلم إن شئت وحرب إن أردت"، "غاب ولم يغب".</li>
+                <li><strong>المقابلة:</strong> كما في "فصيح إن حاورت، نصيح إن شاورت".</li>
+                <li><strong>الترصيع:</strong> في العبارات المتوازنة والمتسقة إيقاعياً.</li>
+                <li><strong>التصريع:</strong> في المطلع الشعري "عودَه... مخولا".</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="ArabicH-question">
+        <h4 class="ArabicH-question-title">2- أدّى الشعر وظائف مضمنية وأخرى بلاغية. ما هي؟ <span class="ArabicH-points">3 ن</span></h4>
+        <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+        <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution2')">إظهار الحل</button>
+        <div id="solution2" class="ArabicH-solution">
+            <h4>وظائف الشعر في المقامة:</h4>
+            <p><strong>الوظائف المضمونية:</strong></p>
+            <ul>
+                <li>التعبير عن الشخصية: يكشف الشعر عن شخصية أبي الفتح وبراعته الأدبية.</li>
+                <li>تقديم الحكمة: يحمل الأبيات حكمًا عن المكارم والكرم.</li>
+                <li>التغزل بالفضائل: تمجيد الكرم والمروءة.</li>
+                <li>الإقناع: استخدام الشعر كوسيلة للإقناع والتأثير.</li>
+            </ul>
+            <p><strong>الوظائف البلاغية:</strong></p>
+            <ul>
+                <li>إظهار البراعة اللغوية: توظيف المحسنات البديعية في الشعر.</li>
+                <li>التنويع الأسلوبي: الانتقال بين النثر والشعر لإضفاء التنوع.</li>
+                <li>التكثيف الدلالي: اختزال المعاني في أبيات موجزة.</li>
+                <li>التأثير العاطفي: خلق انطباع قوي لدى السامع.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="ArabicH-question">
+        <h4 class="ArabicH-question-title">3- ظهر المُكدّي (أبو الفتح) في صورة جديدة. حدّدها، وفسّر اختيارها <span class="ArabicH-points">3 ن</span></h4>
+        <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+        <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution3')">إظهار الحل</button>
+        <div id="solution3" class="ArabicH-solution">
+            <h4>صورة المُكدّي الجديدة:</h4>
+            <ul>
+                <li><strong>صورة الفارس المتشح بالسيف:</strong> "توشحت أبا الفتح بهذا السيف مختالا" - خلاف الصورة التقليدية للمتسول.</li>
+                <li><strong>صورة الأديب الشاعر:</strong يظهر كشاعر بارع لا كمحتال عادي.</li>
+                <li><strong>صورة الحكيم الناصح:</strong> "نصيح إن شاورت، فصيح إن حاورت".</li>
+                <li><strong>صورة المسافر الباحث عن الكرم:</strong> "أجوب جيوب البلدان حتى أقع على جفنة جواد".</li>
+            </ul>
+            <p><strong>تفسير اختيار هذه الصورة:</strong></p>
+            <ul>
+                <li>كسر النمطية وتجديد فن المقامة.</li>
+                <li>إضفاء بعد تراجيدي على شخصية المُكدّي.</li>
+                <li>تقديم نقد اجتماعي بطريقة فنية.</li>
+                <li>إظهار تناقض الظاهر مع الباطن في الشخصية.</li>
+                <li>تعميق البعد الإنساني للشخصية.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="ArabicH-question">
+        <h4 class="ArabicH-question-title">4- هل تَجد الهمذاني يَفخر بنفسه؟ علّل جوابك <span class="ArabicH-points">3 ن</span></h4>
+        <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+        <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution4')">إظهار الحل</button>
+        <div id="solution4" class="ArabicH-solution">
+            <h4>فخر الهمذاني بنفسه:</h4>
+            <p><strong>نعم، يظهر فخر الهمذاني بنفسه من خلال:</strong></p>
+            <ul>
+                <li><strong>عرض البراعة اللغوية:</strong> الإكثار من المحسنات البديعية والألفاظ الغريبة.</li>
+                <li><strong>الانزياح عن المألوف:</strong> ابتكار صور وأساليب جديدة.</li>
+                <li><strong>تصوير الشخصية الرئيسية (أبو الفتح):</strong> التي تمثل الهمذاني نفسه كأديب بارع.</li>
+                <li><strong>الإشادة غير المباشرة:</strong> من خلال حوار الشخصيات وردود أفعالها.</li>
+                <li><strong>التحدي الأسلوبي:</strong> تعمد التعقيد لإظهار المقدرة.</li>
+            </ul>
+            <p><strong>أمثلة من النص:</strong></p>
+            <ul>
+                <li>قوله: "لي فؤاد يخدمه لسان، وبيان يرقمه بنان" - وصف للبلاغة.</li>
+                <li>الشعر المضمن الذي يظهر البراعة الشعرية.</li>
+                <li>الحوار الذكي الذي يدل على سرعة البديهة.</li>
+                <li>استخدام الألغاز والأسرار التي تظهر العمق الثقافي.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="ArabicH-question">
+        <h4 class="ArabicH-question-title">5- لِماذا طغى الحوار على هذه المقامة؟ <span class="ArabicH-points">4 ن</span></h4>
+        <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+        <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution5')">إظهار الحل</button>
+        <div id="solution5" class="ArabicH-solution">
+            <h4>سيادة الحوار في المقامة:</h4>
+            <ul>
+                <li><strong>الكشف عن الشخصيات:</strong> الحوار يكشف عن طباع الشخصيات وأفكارها.</li>
+                <li><strong>الإيهام بالواقعية:</strong> يجعل الأحداث حية ومباشرة.</li>
+                <li><strong>التشويق والإثارة:</strong> يخلق حالة من الترقب لدى القارئ.</li>
+                <li><strong>عرض الأفكار:</strong> نقل الأفكار الفلسفية والأدبية بطريقة حية.</li>
+                <li><strong>إظهار البراعة اللغوية:</strong> فرصة لعرض مختلف الأساليب والتعبيرات.</li>
+                <li><strong>التدرج الدرامي:</strong> بناء العقدة وحلها عبر الحوار.</li>
+                <li><strong>التفاعل مع القارئ:</strong> يجعل القارئ شاهداً على الحدث.</li>
+            </ul>
+            <p><strong>وظائف الحوار في هذه المقامة تحديداً:</strong></p>
+            <ul>
+                <li>الكشف التدريجي عن هوية أبي الفتح.</li>
+                <li>عرض صراع الذكاء والبلاغة بين الشخصيتين.</li>
+                <li>نقل القيم الأخلاقية والأدبية بشكل غير مباشر.</li>
+                <li>خلق المفارقة بين الظاهر (اللص) والباطن (الأديب).</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="ArabicH-question">
+        <h4 class="ArabicH-question-title">6- تطرح المقامة قضايا أدبية وأخلاقية شغلت عصر الهمذاني. ما هي؟ <span class="ArabicH-points">4 ن</span></h4>
+        <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+        <button class="ArabicH-show-solution-btn" onclick="toggleSolution('solution6')">إظهار الحل</button>
+        <div id="solution6" class="ArabicH-solution">
+            <h4>القضايا الأدبية والأخلاقية في المقامة:</h4>
+            <p><strong>القضايا الأدبية:</strong></p>
+            <ul>
+                <li><strong>قضية اللفظ والمعنى:</strong> جدلية الأولوية بين اللفظ الجميل والمعنى العميق.</li>
+                <li><strong>وظيفة الأدب:</strong> التساؤل عن دور الأدب بين التعليم والترفيه.</li>
+                <li><strong>الأصالة والتجديد:</strong> كيفية الحفاظ على التراث مع التجديد.</li>
+                <li><strong>علاقة النثر بالشعر:</strong> التفاضل بينهما والجمع بينهما.</li>
+                <li><strong>اللغة والمجتمع:</strong> دور اللغة في تشكيل الهوية الثقافية.</li>
+            </ul>
+            <p><strong>القضايا الأخلاقية:</strong></p>
+            <ul>
+                <li><strong>قيمة الكرم:</strong> تمجيد الكرم والجود كقيمة عليا.</li>
+                <li><strong>نفاق المجتمع:</strong> نقد التناقض بين القول والفعل.</li>
+                <li><strong>التكسب بالأدب:</strong> أخلاقيات الكاتب والأديب في البحث عن الرزق.</li>
+                <li><strong>الصدق والرياء:</strong> الصراع بين الظاهر والحقيقة.</li>
+                <li><strong>الفضيلة والضرورة:</strong> جدلية الحفاظ على المبادئ في ظل الحاجة.</li>
+                <li><strong>علاقة الأديب بالمجتمع:</strong> موقع المثقف في المجتمع.</li>
+            </ul>
+            <p>هذه القضايا تعكس اهتمامات العصر العباسي وما كان يشغل الأدباء والمفكرين في ذلك الوقت.</p>
+        </div>
+    </div>
+</div>
+            
+            <!-- قسم المقال المضاف -->
+            <div class="ArabicH-essay-section">
+                <h3 style="color: var(--primary-color); margin: 40px 0 25px; text-align: center; border-bottom: 3px solid var(--accent-color); padding-bottom: 10px;">مقال التحليل الأدبي</h3>
+                
+                <div class="ArabicH-essay-cards">
+                    <!-- بطاقة تخطيط المقال -->
+                    <div class="ArabicH-essay-card">
+                        <div class="ArabicH-essay-card-header" style="background: var(--gradient-primary);">
+                            <h4 class="ArabicH-essay-card-title">📋 تخطيط المقال</h4>
+                        </div>
+                        <div class="ArabicH-essay-card-body">
+                            <div class="ArabicH-essay-outline">
+                                <div class="ArabicH-essay-section-title">المقدمة:</div>
+                                <ul class="ArabicH-essay-list">
+                                    <li>تقديم فن المقامة: جنس أدبي عربي ازدهر في العصر العباسي.</li>
+                                    <li>أبرز رواد المقامة: بديع الزمان الهمذاني، الحريري.</li>
+                                    <li>تقديم المقامة الفزارية: نموذج للمقامات اللغوية التعليمية.</li>
+                                    <li>طرح الإشكالية: كيف تمثل المقامة الفزارية جنساً أدبياً قائماً بذاته؟</li>
+                                </ul>
+                                
+                                <div class="ArabicH-essay-section-title">الجوهر:</div>
+                                
+                                <div class="ArabicH-essay-idea">
+                                    <div class="ArabicH-essay-idea-title">الفكرة الأولى: البنية الفنية للمقامة</div>
+                                    <div class="ArabicH-quote-example" style="background-color: #E0F2FE; border-right: 4px solid #3B82F6; color: #1E40AF;">
+                                        الشاهد: [حدثنا الفتح بن خاقان قال: سمعت أبا الفتح الإسكندري يقول]
+                                    </div>
+                                    <ul class="ArabicH-essay-list">
+                                        <li>البداية النموذجية: "حدثنا... سمعت..."</li>
+                                        <li>شخصيات ثابتة: الراوي والبطل.</li>
+                                        <li>البنية الحوارية: حوار ينقل الأحداث والأفكار.</li>
+                                        <li>النهاية الحكمية: عِبرة أو حكمة مستخلصة.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="ArabicH-essay-idea">
+                                    <div class="ArabicH-essay-idea-title">الفكرة الثانية: الخصائص الأسلوبية</div>
+                                    <div class="ArabicH-quote-example" style="background-color: #E0F2FE; border-right: 4px solid #3B82F6; color: #1E40AF;">
+                                        الشاهد: [كنا في بعض بلاد فزارة نتجول فيها... نبحث عن فصاحة وبلاغة]
+                                    </div>
+                                    <ul class="ArabicH-essay-list">
+                                        <li>السجع: تطابق نهايات الجمل.</li>
+                                        <li>المحسنات البديعية: الطباق، الجناس، المقابلة.</li>
+                                        <li>الانزياح اللغوي: الخروج عن المألوف.</li>
+                                        <li>التكثيف: اختزال المعاني في عبارات موجزة.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="ArabicH-essay-idea">
+                                    <div class="ArabicH-essay-idea-title">الفكرة الثالثة: المقاصد والأهداف</div>
+                                    <div class="ArabicH-quote-example" style="background-color: #E0F2FE; border-right: 4px solid #3B82F6; color: #1E40AF;">
+                                        الشاهد: [نستجوب في سبيل ذلك كل من لقيناه]
+                                    </div>
+                                    <ul class="ArabicH-essay-list">
+                                        <li>المقصد التعليمي: تعليم اللغة والأدب.</li>
+                                        <li>المقصد الترفيهي: المتعة الفنية من خلال الألغاز.</li>
+                                        <li>المقصد النقدي: نقد العيوب الاجتماعية والثقافية.</li>
+                                        <li>المقصد الأخلاقي: ترسيخ القيم النبيلة.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="ArabicH-essay-idea">
+                                    <div class="ArabicH-essay-idea-title">الفكرة الرابعة: القيم الاجتماعية والثقافية</div>
+                                    <div class="ArabicH-quote-example" style="background-color: #E0F2FE; border-right: 4px solid #3B82F6; color: #1E40AF;">
+                                        الشاهد: [لكنه قلت ثم يجب شكاوى ورفع ورشفتني الآثار]
+                                    </div>
+                                    <ul class="ArabicH-essay-list">
+                                        <li>قيمة العلم والأدب: البحث عن المعرفة.</li>
+                                        <li>قيمة الحوار: الاستجواب والنقاش.</li>
+                                        <li>النقد الاجتماعي: نقد التكبر والتعالي.</li>
+                                        <li>قيمة الصداقة: التآخي والتعاون.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="ArabicH-essay-section-title">الخاتمة:</div>
+                                <ul class="ArabicH-essay-list">
+                                    <li>المقامة الفزارية تمثل نموذجاً رفيعاً لفن المقامة.</li>
+                                    <li>تتجلى فيها خصائص الجنس الأدبي المستقل.</li>
+                                    <li>تجمع بين المتعة الفنية والفائدة التعليمية.</li>
+                                    <li>تحافظ على الأصالة مع التجديد في الشكل والمضمون.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- بطاقة اقتراح المقال -->
+                    <div class="ArabicH-essay-card">
+                        <div class="ArabicH-essay-card-header" style="background: var(--gradient-secondary);">
+                            <h4 class="ArabicH-essay-card-title">✍️ المقال المقترح</h4>
+                        </div>
+                        <div class="ArabicH-essay-card-body">
+                            <div class="ArabicH-full-essay">
+                                <div class="ArabicH-essay-intro">
+                                    <h5 class="ArabicH-essay-part-title">المقدمة</h5>
+                                    <p>المقامة فن أدبي عربي ازدهر في العصر العباسي، وبلغ ذروته مع بديع الزمان الهمذاني والحريري، حيث مثّلا أبرز رواد هذا الفن الذي يجمع بين السرد والحكمة، واللغة والأدب، والترفيه والتعليم. والمقامة الفزارية التي بين أيدينا تمثل نموذجاً متميزاً لهذا الفن، فهي تبدأ بالطريقة النموذجية للمقامات: "حدثنا الفتح بن خاقان قال: سمعت أبا الفتح الإسكندري يقول"، مما يضعها في الإطار التقليدي لفن المقامة. ولكن السؤال الذي يطرح نفسه: كيف تمثل المقامة الفزارية جنساً أدبياً قائماً بذاته، وما الخصائص الفنية والأسلوبية التي تجعلها نموذجاً لهذا الفن الأدبي المتميز؟</p>
+                                </div>
+                                
+                                <div class="ArabicH-essay-body">
+                                    <h5 class="ArabicH-essay-part-title">الجوهر</h5>
+                                    <p>تتميز المقامة الفزارية ببنية فنية واضحة تجعلها جنساً أدبياً مستقلاً. فبدايتها النموذجية: 
+                                        <span class="ArabicH-quote-inline" style="background-color: #E0F2FE; color: #1E40AF;">[حدثنا الفتح بن خاقان قال: سمعت أبا الفتح الإسكندري يقول]</span> 
+                                        تضعها في إطار السرد التقليدي للمقامات، حيث نجد شخصيتين ثابتتين: الراوي (الفتح بن خاقان) والبطل (أبو الفتح الإسكندري). هذه الثبات في الشخصيات من الخصائص المميزة لفن المقامة، حيث يصبح البطل محوراً لسلسلة من الحكايات المتفرقة التي تجمعها الشخصية لا الزمان أو المكان. والبنية الحوارية التي تعتمدها المقامة، كما في قوله: 
+                                        <span class="ArabicH-quote-inline" style="background-color: #E0F2FE; color: #1E40AF;">[فقلت: أحدثك لا أم أنك قد تردت شرط الجداو وحرت النقد...]</span>، 
+                                        تجعل النص حياً متحركاً، ينقل الأحداث والأفكار بطريقة مشوقة، وتنتهي المقامة عادة بعبرة أو حكمة مستخلصة، وهو ما يعطيها البعد الأخلاقي التعليمي.</p>
+                                    
+                                    <p>أما الخصائص الأسلوبية في المقامة الفزارية فتكشف عن براعة لغوية وأدبية مميزة. فالسجع، وهو تطابق نهايات الجمل في الحرف الأخير، يظهر بوضوح في النص، كما في: 
+                                        <span class="ArabicH-quote-inline" style="background-color: #E0F2FE; color: #1E40AF;">[كنا في بعض بلاد فزارة نتجول فيها... نبحث عن فصاحة وبلاغة]</span>. 
+                                        هذا السجع ليس مجرد زخرف لفظي، بل هو أسلوب فني يعطي النص إيقاعاً موسيقياً خاصاً. بالإضافة إلى ذلك، نجد المحسنات البديعية المختلفة كالطباق والجناس والمقابلة، والتي تظهر براعة الكاتب في توظيف اللغة. والانزياح اللغوي، أو الخروج عن المألوف في تركيب الجمل واختيار الألفاظ، كما في: 
+                                        <span class="ArabicH-quote-inline" style="background-color: #E0F2FE; color: #1E40AF;">[أصبح سبعاً ولا صحيح إلا المتعج، ولا تداع إلا المتعج]</span>، 
+                                        يعطي النص طابعاً إبداعياً مميزاً. وهذا الانزياح ليس عشوائياً، بل هو مقصود لإظهار المقدرة اللغوية وإثارة انتباه القارئ.</p>
+                                    
+                                    <p>تتجلى مقاصد المقامة الفزارية وأهدافها في عدة مستويات. فالمقصد التعليمي واضح من خلال السفر والترحال بحثاً عن الفصاحة والبلاغة، كما في: 
+                                        <span class="ArabicH-quote-inline" style="background-color: #E0F2FE; color: #1E40AF;">[نستجوب في سبيل ذلك كل من لقيناه]</span>. 
+                                        والمقصد الترفيهي يظهر من خلال المتعة الفنية التي يقدمها النص من خلال ألغازه وغموضه المقصود. أما المقصد النقدي فيتجلى في نقد العيوب الاجتماعية والثقافية، كنقد التكبر والتعالي: 
+                                        <span class="ArabicH-quote-inline" style="background-color: #E0F2FE; color: #1E40AF;">[لا صحيح إلا المتعج]</span>. 
+                                        والمقصد الأخلاقي يظهر في ترسيخ القيم النبيلة مثل التواضع والصدق والبحث عن المعرفة.</p>
+                                    
+                                    <p>تحمل المقامة الفزارية قيماً اجتماعية وثقافية عميقة. فقيمة العلم والأدب تظهر في البحث الدؤوب عن المعرفة والفصاحة. وقيمة الحوار تبرز في الاستجواب والنقاش مع الناس لاستخلاص الحكمة. والنقد الاجتماعي يتجلى في نقد الطبقات المتعالية والمتغطرسة في المجتمع. وقيمة الصداقة والأخوة تظهر في التآخي والتعاون بين الأفراد، كما في: 
+                                        <span class="ArabicH-quote-inline" style="background-color: #E0F2FE; color: #1E40AF;">[لكنه قلت ثم يجب شكاوى ورفع ورشفتني الآثار]</span>. 
+                                        هذه القيم تجعل من المقامة الفزارية ليس مجرد نص أدبي، بل وثيقة اجتماعية وثقافية تعكس هموم المجتمع وتطلعاته.</p>
+                                    
+                                    <p>من خلال هذه المقومات الفنية والأسلوبية والمقاصدية، تتجلى أصالة المقامة الفزارية كجنس أدبي مستقل. فهي لا تقتصر على الشكل التقليدي، بل تضيف إليه أبعاداً جديدة من خلال الانزياح اللغوي والتعقيد المقصود. كما أنها تجمع بين الأصالة والمعاصرة، فتحافظ على الخصائص التقليدية لفن المقامة، وتضيف إليها رؤى جديدة تناسب عصرها. وهذا ما يجعلها نموذجاً حياً لفن المقامة، يستحق الدراسة والتحليل.</p>
+                                </div>
+                                
+                                <div class="ArabicH-essay-conclusion">
+                                    <h5 class="ArabicH-essay-part-title">الخاتمة</h5>
+                                    <p>ختاماً، يمكن القول إن المقامة الفزارية تمثل نموذجاً رفيعاً لفن المقامة العربي، حيث تجتمع فيها الخصائص الفنية والأسلوبية التي تجعلها جنساً أدبياً قائماً بذاته. فبنيتها الفنية المتميزة، وخصائصها الأسلوبية المتطورة، ومقاصدها المتعددة، وقيمها الاجتماعية والثقافية العميقة، كلها عوامل تجعل منها نصاً أدبياً متميزاً، يجمع بين المتعة الفنية والفائدة التعليمية. وهي بهذا تمثل حلقة مهمة في تطور فن المقامة، حيث تحافظ على الأصالة مع التجديد في الشكل والمضمون، مما يجعلها نموذجاً يستحق الدراسة والاهتمام في سياق الأدب العربي القديم.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 15px; text-align: center;">
+                <p>[1] نقطةٌ على وضوحِ الخطِّ و نظافةِ الورقة</p>
+                <p style="color: var(--primary-color); font-weight: bold; margin-top: 10px;">☺ عملاً مُوفَّقا ☺</p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_Y3_Tests_Trim1_Testcomprehension2.html" class="ArabicH-nav-btn">اختبار التحليل الأدبي 2</a>
+                <a href="AH_Y3_Tests_Trim1_Testcomprehension1.html" class="ArabicH-nav-btn">اختبار التحليل الأدبي 1</a>
+                <a href="AH_Y3_Tests.html" class="ArabicH-nav-btn">العودة إلى اختبارات السنة الثالثة</a>
+                <a href="index.html" class="ArabicH-nav-btn">العودة إلى الصفحة الرئيسية</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHY3Comprehension3 = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Year 3 Comprehension specific translations
+                "ArabicH.Y3Tests.comprehensionTitle3": "اختبار التحليل الأدبي 3 - السنة الثالثة ثانوي",
+                "ArabicH.Y3Tests.comprehensionSubtitle3": "فرض عادي في تحليل المقامة الفزارية - السنة الثالثة آداب",
+                "ArabicH.Y3Tests.comprehensionDuration": "التوقيت: ساعتان",
+                "ArabicH.Y3Tests.school": "المدرسة",
+                "ArabicH.Y3Tests.subject": "المادة",
+                "ArabicH.Y3Tests.grade": "الصف",
+                "ArabicH.Y3Tests.teacher": "الأستاذ",
+                "ArabicH.Y3Tests.text": "النص",
+                "ArabicH.Y3Tests.score": "العدد",
+                "ArabicH.Y3Tests.proseTitle": "النص الأدبي: المقامة الفزارية",
+                "ArabicH.Y3Tests.textSource3": "المقامة الفزارية - السنة الدراسية 2009-2010",
+                "ArabicH.Y3Tests.vocabularyTitle": "الشرح والمفردات",
+                "ArabicH.Y3Tests.questionsTitle": "أسئلة الفرض",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Year 3 Comprehension specific translations
+                "ArabicH.Y3Tests.comprehensionTitle3": "Literary Analysis Test 3 - Year 3 Secondary",
+                "ArabicH.Y3Tests.comprehensionSubtitle3": "Regular Test in Analysis of Al-Maqamah Al-Fizariyyah - Year 3 Arts",
+                "ArabicH.Y3Tests.comprehensionDuration": "Duration: 2 hours",
+                "ArabicH.Y3Tests.school": "School",
+                "ArabicH.Y3Tests.subject": "Subject",
+                "ArabicH.Y3Tests.grade": "Grade",
+                "ArabicH.Y3Tests.teacher": "Teacher",
+                "ArabicH.Y3Tests.text": "Text",
+                "ArabicH.Y3Tests.score": "Score",
+                "ArabicH.Y3Tests.proseTitle": "Literary Text: Al-Maqamah Al-Fizariyyah",
+                "ArabicH.Y3Tests.textSource3": "Al-Maqamah Al-Fizariyyah - Academic Year 2009-2010",
+                "ArabicH.Y3Tests.vocabularyTitle": "Vocabulary and Notes",
+                "ArabicH.Y3Tests.questionsTitle": "Test Questions",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Year 3 Comprehension specific translations
+                "ArabicH.Y3Tests.comprehensionTitle3": "Test d'Analyse Littéraire 3 - Troisième Année Secondaire",
+                "ArabicH.Y3Tests.comprehensionSubtitle3": "Devoir ordinaire en Analyse d'Al-Maqamah Al-Fizariyyah - Troisième Année Lettres",
+                "ArabicH.Y3Tests.comprehensionDuration": "Durée: 2 heures",
+                "ArabicH.Y3Tests.school": "École",
+                "ArabicH.Y3Tests.subject": "Matière",
+                "ArabicH.Y3Tests.grade": "Classe",
+                "ArabicH.Y3Tests.teacher": "Enseignant",
+                "ArabicH.Y3Tests.text": "Texte",
+                "ArabicH.Y3Tests.score": "Score",
+                "ArabicH.Y3Tests.proseTitle": "Texte Littéraire: Al-Maqamah Al-Fizariyyah",
+                "ArabicH.Y3Tests.textSource3": "Al-Maqamah Al-Fizariyyah - Année Scolaire 2009-2010",
+                "ArabicH.Y3Tests.vocabularyTitle": "Explication et Vocabulaire",
+                "ArabicH.Y3Tests.questionsTitle": "Questions du Test",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHY3Comprehension3;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Solution toggle functionality
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            const button = event.target;
+            if (solution.style.display === "block") {
+                solution.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إظهار الحل';
+            } else {
+                solution.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء الحل';
+            }
+        }
+
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Set solution button text after translation
+            document.querySelectorAll('.ArabicH-show-solution-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
