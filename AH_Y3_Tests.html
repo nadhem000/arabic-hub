@@ -574,82 +574,132 @@
 		<script>
 			// Modal functionality
 			document.addEventListener('DOMContentLoaded', function() {
-				// Windows bar active state management
-				const currentPage = window.location.pathname.split('/').pop();
-				const windowItems = document.querySelectorAll('.ArabicH-window-item');
-				
-				windowItems.forEach(item => {
-					if (item.getAttribute('href') === currentPage) {
-						item.classList.add('active');
-						} else {
-						item.classList.remove('active');
-					}
-				});
-				
-				// Modal elements
-				const modal = document.getElementById('testModal');
-				const closeModal = document.getElementById('closeModal');
-				const modalTitle = document.getElementById('modalTitle');
-				const trimItems = document.querySelectorAll('.ArabicH-trim-item');
-				
-				// Open modal when a trim item is clicked
-				trimItems.forEach(item => {
-					item.addEventListener('click', function() {
-						const trimNum = this.getAttribute('data-trim');
-						const trimTitle = this.querySelector('.ArabicH-trim-title').textContent;
-						
-						// Set modal title
-						modalTitle.textContent = `اختبارات ${trimTitle}`;
-						
-						// Update all test links with the correct trim number
-						const modalLinks = modal.querySelectorAll('.ArabicH-modal-link');
-						modalLinks.forEach(link => {
-							const domain = link.getAttribute('data-domain');
-							const currentHref = link.getAttribute('href');
-							
-							// FIXED: More robust test number extraction
-							let testNumber = "1"; // default
-							
-							// Try to extract test number from current href
-							const match = currentHref.match(/(\d+)\.html$/);
-							if (match && match[1]) {
-								testNumber = match[1];
-								} else {
-								// Alternative extraction method
-								const altMatch = currentHref.match(/Test(\w+)(\d+)\.html$/);
-								if (altMatch && altMatch[2]) {
-									testNumber = altMatch[2];
-								}
-							}
-							
-							// Create new href with correct trim number
-							link.href = `AH_Y3_Tests_Trim${trimNum}_Test${domain}${testNumber}.html`;
-						});
-						
-						// Show modal
-						modal.style.display = 'flex';
-					});
-				});
-				
-				// Close modal when close button is clicked
-				closeModal.addEventListener('click', function() {
-					modal.style.display = 'none';
-				});
-				
-				// Close modal when clicking outside the modal
-				modal.addEventListener('click', function(e) {
-					if (e.target === modal) {
-						modal.style.display = 'none';
-					}
-				});
-				
-				// Close modal with Escape key
-				document.addEventListener('keydown', function(e) {
-					if (e.key === 'Escape' && modal.style.display === 'flex') {
-						modal.style.display = 'none';
-					}
-				});
-			});
+    // Windows bar active state management
+    const currentPage = window.location.pathname.split('/').pop();
+    const windowItems = document.querySelectorAll('.ArabicH-window-item');
+    
+    windowItems.forEach(item => {
+        if (item.getAttribute('href') === currentPage) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+        }
+    });
+    
+    // Modal elements
+    const modal = document.getElementById('testModal');
+    const closeModal = document.getElementById('closeModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const trimItems = document.querySelectorAll('.ArabicH-trim-item');
+    
+    // Cache control function to prevent caching issues
+    function addCacheBuster(url) {
+        // Add timestamp to prevent caching issues in HTTPS
+        const timestamp = new Date().getTime();
+        const separator = url.includes('?') ? '&' : '?';
+        return url + separator + '_nocache=' + timestamp;
+    }
+    
+    // Open modal when a trim item is clicked
+    trimItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const trimNum = this.getAttribute('data-trim');
+            const trimTitle = this.querySelector('.ArabicH-trim-title').textContent;
+            
+            // Set modal title
+            modalTitle.textContent = `اختبارات ${trimTitle}`;
+            
+            // Clear and rebuild modal links to prevent stale references
+            const modalLinksContainer = modal.querySelector('.ArabicH-modal-links');
+            const originalLinks = [
+                {domain: 'grammar', count: 3, label: 'اختبار القواعد'},
+                {domain: 'writing', count: 2, label: 'اختبار التعبير'},
+                {domain: 'comprehension', count: 4, label: 'اختبار الفهم'}
+            ];
+            
+            // Clear existing content
+            modalLinksContainer.innerHTML = '';
+            
+            // Rebuild modal links dynamically
+            originalLinks.forEach(section => {
+                // Add section title
+                const sectionTitle = document.createElement('h4');
+                sectionTitle.className = 'modal-section-title';
+                sectionTitle.textContent = section.domain === 'grammar' ? 'قواعد اللغة' : 
+                                         section.domain === 'writing' ? 'التعبير الكتابي' : 
+                                         'الفهم القرائي';
+                modalLinksContainer.appendChild(sectionTitle);
+                
+                // Add test links for this section
+                for (let i = 1; i <= section.count; i++) {
+                    const link = document.createElement('a');
+                    link.className = 'ArabicH-modal-link';
+                    link.setAttribute('data-domain', section.domain);
+                    link.setAttribute('data-test', i);
+                    link.setAttribute('data-trim', trimNum);
+                    
+                    // Use absolute path to avoid relative path issues
+                    const basePath = window.location.pathname.includes('AH_Y3_Tests') ? 
+                                   window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1) : 
+                                   './';
+                    
+                    // Construct clean URL without cache buster initially
+                    const cleanUrl = `${basePath}AH_Y3_Tests_Trim${trimNum}_Test${section.domain}${i}.html`;
+                    link.href = cleanUrl;
+                    
+                    // Store clean URL as data attribute for cache busting on click
+                    link.setAttribute('data-clean-url', cleanUrl);
+                    
+                    link.textContent = `${section.label} ${i}`;
+                    modalLinksContainer.appendChild(link);
+                }
+            });
+            
+            // Add fresh click handlers to prevent event listener conflicts
+            const newLinks = modalLinksContainer.querySelectorAll('.ArabicH-modal-link');
+            newLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (window.location.protocol === 'https:' || window.location.protocol === 'http:') {
+                        // For HTTPS/HTTP environments, use cache buster
+                        const cleanUrl = this.getAttribute('data-clean-url');
+                        this.href = addCacheBuster(cleanUrl);
+                        
+                        // Add a small delay to ensure URL is updated
+                        setTimeout(() => {
+                            window.location.href = this.href;
+                        }, 50);
+                        
+                        e.preventDefault();
+                        return false;
+                    }
+                    // For file:// protocol, allow normal navigation
+                });
+            });
+            
+            // Show modal
+            modal.style.display = 'flex';
+        });
+    });
+    
+    // Close modal when close button is clicked
+    closeModal.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+    
+    // Close modal when clicking outside the modal
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            modal.style.display = 'none';
+        }
+    });
+});
 		</script>
 		
 		<script>
