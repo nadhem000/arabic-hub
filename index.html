@@ -292,6 +292,19 @@
         margin-right: 10px;
     }
 
+    .ArabicH-card-year {
+        background: var(--secondary-color);
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
     .ArabicH-coming-soon {
         background: var(--secondary-color);
         color: white;
@@ -359,6 +372,102 @@
 .ArabicH-homepage-year:hover {
     background: var(--table-hover-bg);
     cursor: pointer;
+}
+
+/* Language Module Lessons Styles */
+.ArabicH-language-modules {
+    margin-top: 1rem;
+}
+
+.ArabicH-language-module {
+    margin-bottom: 1.5rem;
+    background: var(--table-even-bg);
+    border-radius: 8px;
+    padding: 1rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.rtl .ArabicH-language-module {
+    border-left: none;
+    border-right: 4px solid var(--primary-color);
+}
+
+.ArabicH-language-module-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.ArabicH-language-module-title::before {
+    content: "📘";
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+.rtl .ArabicH-language-module-title::before {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.ArabicH-language-lessons {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ArabicH-language-lesson {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ArabicH-language-lesson:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.ArabicH-language-lesson-title {
+    flex: 1;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.ArabicH-language-lesson-link {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    margin-left: 1rem;
+}
+
+.rtl .ArabicH-language-lesson-link {
+    margin-left: 0;
+    margin-right: 1rem;
+}
+
+.ArabicH-language-lesson-link:hover {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.ArabicH-language-lesson-link.disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.ArabicH-language-lesson-link.disabled:hover {
+    background: #cccccc;
 }
 </style>
 </head>
@@ -473,48 +582,45 @@
             <h2 class="ArabicH-homepage-modal-title" data-i18n="ArabicH.index.modalLessonsTitle">الدروس تعليمية</h2>
             
         <!-- رابط الدروس العامة -->
-        <div class="ArabicH-homepage-year">
-            <a href="AH_General_Lessons.html" class="ArabicH-homepage-year-link">
-                <h3 class="ArabicH-homepage-year-title">
-                    <span data-i18n="ArabicH.index.generalLessons">دروس عامة لجميع السنوات</span>
-                </h3>
-                <p data-i18n="ArabicH.index.generalLessonsDesc">دروس شاملة في اللغة العربية تشمل النحو والصرف والأدب والبلاغة لجميع السنوات الدراسية</p>
-            </a>
-        </div>
         
             <ul class="ArabicH-homepage-year-list">
-                <li class="ArabicH-homepage-year">
-                    <h3 class="ArabicH-homepage-year-title">
-                        <span data-i18n="ArabicH.index.year1">السنة الأولى ثانوي</span>
-                        <span class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</span>
-                    </h3>
-                    <p data-i18n="ArabicH.index.year1Desc">دروس شاملة في اللغة العربية للسنة الأولى ثانوي تشمل النحو والصرف والأدب والبلاغة</p>
-                </li>
-                
-                <li class="ArabicH-homepage-year">
-                    <h3 class="ArabicH-homepage-year-title">
-                        <span data-i18n="ArabicH.index.year2">السنة الثانية ثانوي</span>
-                        <span class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</span>
-                    </h3>
-                    <p data-i18n="ArabicH.index.year2Desc">دروس شاملة في اللغة العربية للسنة الثانية ثانوي تشمل النحو والصرف والأدب والبلاغة</p>
-                </li>
-                
-                <li class="ArabicH-homepage-year">
-                    <h3 class="ArabicH-homepage-year-title">
-                        <span data-i18n="ArabicH.index.year3">السنة الثالثة ثانوي</span>
-                        <span class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</span>
-                    </h3>
-                    <p data-i18n="ArabicH.index.year3Desc">دروس شاملة في اللغة العربية للسنة الثالثة ثانوي تشمل النحو والصرف والأدب والبلاغة</p>
-                </li>
-                
-                <li class="ArabicH-homepage-year">
-                    <h3 class="ArabicH-homepage-year-title">
-                        <span data-i18n="ArabicH.index.year4">السنة الرابعة ثانوي</span>
-                        <span class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</span>
-                    </h3>
-                    <p data-i18n="ArabicH.index.year4Desc">دروس شاملة في اللغة العربية للسنة الرابعة ثانوي تشمل النحو والصرف والأدب والبلاغة</p>
-                </li>
-            </ul>
+    <li class="ArabicH-homepage-year">
+        <a href="AH_General_Lessons.html" class="ArabicH-homepage-year-link">
+            <h3 class="ArabicH-homepage-year-title">
+                <span class="ArabicH-card-year" data-i18n="ArabicH.index.generalLessons">دروس عامة لجميع السنوات</span>
+            </h3>
+            <p data-i18n="ArabicH.index.generalLessonsDesc">دروس شاملة في اللغة العربية تشمل النحو والصرف والأدب والبلاغة لجميع السنوات الدراسية</p>
+        </a>
+    </li>
+    
+    <li class="ArabicH-homepage-year" id="year1Item">
+        <h3 class="ArabicH-homepage-year-title">
+            <span class="ArabicH-card-year" data-i18n="ArabicH.index.year1">السنة الأولى ثانوي</span>
+        </h3>
+        <p data-i18n="ArabicH.index.year1Desc">دروس شاملة في اللغة العربية للسنة الأولى ثانوي تشمل النحو والصرف والأدب والبلاغة</p>
+    </li>
+    
+    <li class="ArabicH-homepage-year" id="year2Item">
+        <h3 class="ArabicH-homepage-year-title">
+            <span class="ArabicH-card-year" data-i18n="ArabicH.index.year2">السنة الثانية ثانوي</span>
+        </h3>
+        <p data-i18n="ArabicH.index.year2Desc">دروس شاملة في اللغة العربية للسنة الثانية ثانوي تشمل النحو والصرف والأدب والبلاغة</p>
+    </li>
+    
+    <li class="ArabicH-homepage-year" id="year3Item">
+        <h3 class="ArabicH-homepage-year-title">
+            <span class="ArabicH-card-year" data-i18n="ArabicH.index.year3">السنة الثالثة ثانوي</span>
+        </h3>
+        <p data-i18n="ArabicH.index.year3Desc">دروس شاملة في اللغة العربية للسنة الثالثة ثانوي تشمل النحو والصرف والأدب والبلاغة</p>
+    </li>
+    
+    <li class="ArabicH-homepage-year" id="year4Item">
+        <h3 class="ArabicH-homepage-year-title">
+            <span class="ArabicH-card-year" data-i18n="ArabicH.index.year4">السنة الرابعة ثانوي</span>
+        </h3>
+        <p data-i18n="ArabicH.index.year4Desc">دروس شاملة في اللغة العربية للسنة الرابعة ثانوي تشمل النحو والصرف والأدب والبلاغة</p>
+    </li>
+</ul>
         </div>
     </div>
 
@@ -603,6 +709,520 @@
         </ul>
     </div>
 </div>
+
+<!-- Modals for Year 1-4 -->
+<div id="year1Modal" class="ArabicH-year-modal ArabicH-homepage-modal">
+    <div class="ArabicH-homepage-modal-content">
+        <span class="ArabicH-homepage-modal-close">&times;</span>
+        <h2 class="ArabicH-homepage-modal-title" data-i18n="ArabicH.index.year1">السنة الأولى ثانوي</h2>
+        
+        <div class="ArabicH-year-sections">
+            <!-- الأدب Section - Updated with modules -->
+            <div class="ArabicH-year-section">
+                <h3>📖 <span data-i18n="ArabicH.sections.literature">الأدب</span></h3>
+                <!-- Literature Modules Content -->
+                <div class="ArabicH-language-modules">
+                    <!-- Module 1 -->
+                    <div class="ArabicH-language-module">
+                        <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.literature.module1.title">المحور الاول: شعر الغزل في القرن الأول الهجري</div>
+                        <div class="ArabicH-language-submodule">
+                            <div class="ArabicH-language-module-title" style="font-size: 1rem; color: var(--secondary-color); margin-bottom: 0.5rem;" data-i18n="ArabicH.index.year1.literature.module1.section1.title">جميل بن معمر</div>
+                            <ul class="ArabicH-language-lessons">
+                                <li class="ArabicH-language-lesson">
+                                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.literature.module1.section1.lesson1.title">النص الأول</span>
+                                    <a href="AH_1SY_literature_module1_section1_lesson1.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                                </li>
+                                <li class="ArabicH-language-lesson">
+                                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.literature.module1.section1.lesson2.title">النص الثاني</span>
+                                    <a href="AH_1SY_literature_module1_section1_lesson2.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                                </li>
+                                <li class="ArabicH-language-lesson">
+                                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.literature.module1.section1.lesson3.title">النص الثالث</span>
+                                    <a href="AH_1SY_literature_module1_section1_lesson3.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ArabicH-language-submodule">
+                            <div class="ArabicH-language-module-title" style="font-size: 1rem; color: var(--secondary-color); margin-bottom: 0.5rem;" data-i18n="ArabicH.index.year1.literature.module1.section2.title">عمر ابن ابي ربيعة</div>
+                            <ul class="ArabicH-language-lessons">
+                                <li class="ArabicH-language-lesson">
+                                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.literature.module1.section2.lesson1.title">النص الأول</span>
+                                    <a href="AH_1SY_literature_module1_section2_lesson1.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                                </li>
+                                <li class="ArabicH-language-lesson">
+                                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.literature.module1.section2.lesson2.title">النص الثاني</span>
+                                    <a href="AH_1SY_literature_module1_section2_lesson2.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                                </li>
+                                <li class="ArabicH-language-lesson">
+                                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.literature.module1.section2.lesson3.title">النص الثالث</span>
+                                    <a href="AH_1SY_literature_module1_section2_lesson3.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Module 2 -->
+                    <div class="ArabicH-language-module">
+                        <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.literature.module2.title">المحور الثاني: من أشكال القص العربي القديم: الحكاية المثلية</div>
+                        <ul class="ArabicH-language-lessons">
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.literature.module2.lesson1.title">النص الأول</span>
+                                <a href="AH_1SY_literature_module2_lesson1.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.literature.module2.lesson2.title">النص الثاني</span>
+                                <a href="AH_1SY_literature_module2_lesson2.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.literature.module2.lesson3.title">النص الثالث</span>
+                                <a href="AH_1SY_literature_module2_lesson3.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Module 3 -->
+                    <div class="ArabicH-language-module">
+                        <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.literature.module3.title">المحور الثالث: من الشعر العربي المعاصر: الشعر الوطني</div>
+                        <ul class="ArabicH-language-lessons">
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.literature.module3.lesson1.title">النص الأول</span>
+                                <a href="AH_1SY_literature_module3_lesson1.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.literature.module3.lesson2.title">النص الثاني</span>
+                                <a href="AH_1SY_literature_module3_lesson2.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.literature.module3.lesson3.title">النص الثالث</span>
+                                <a href="AH_1SY_literature_module3_lesson3.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Module 4 -->
+                    <div class="ArabicH-language-module">
+                        <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.literature.module4.title">المحور الرابع: من أشكال القص العربي المعاصر: الأقصوصة</div>
+                        <ul class="ArabicH-language-lessons">
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.literature.module4.lesson1.title">النص الأول</span>
+                                <a href="AH_1SY_literature_module4_lesson1.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.literature.module4.lesson2.title">النص الثاني</span>
+                                <a href="AH_1SY_literature_module4_lesson2.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.literature.module4.lesson3.title">النص الثالث</span>
+                                <a href="AH_1SY_literature_module4_lesson3.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- باقي الأقسام كما هي -->
+            <div class="ArabicH-year-section">
+    <h3>💬 <span data-i18n="ArabicH.sections.communication">التواصل</span></h3>
+    <!-- Communication Modules Content -->
+    <div class="ArabicH-language-modules">
+        <!-- Module 1 -->
+        <div class="ArabicH-language-module">
+            <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.communication.module1.title">المحور الاول: موسيقى وأذواق</div>
+            <ul class="ArabicH-language-lessons">
+                <li class="ArabicH-language-lesson">
+                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.communication.module1.lesson1.title">النص 1</span>
+                    <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض النص</a>
+                </li>
+                <li class="ArabicH-language-lesson">
+                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.communication.module1.lesson2.title">النص 2</span>
+                    <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض النص</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Module 2 -->
+        <div class="ArabicH-language-module">
+            <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.communication.module2.title">المحور الثاني: مظاهر من الحياة المعاصرة</div>
+            <ul class="ArabicH-language-lessons">
+                <li class="ArabicH-language-lesson">
+                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.communication.module2.lesson1.title">النص 1</span>
+                    <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض النص</a>
+                </li>
+                <li class="ArabicH-language-lesson">
+                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.communication.module2.lesson2.title">النص 2</span>
+                    <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض النص</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Module 3 -->
+        <div class="ArabicH-language-module">
+            <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.communication.module3.title">المحور الثالث: الرياضة والقيم</div>
+            <ul class="ArabicH-language-lessons">
+                <li class="ArabicH-language-lesson">
+                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.communication.module3.lesson1.title">النص 1</span>
+                    <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض النص</a>
+                </li>
+                <li class="ArabicH-language-lesson">
+                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.communication.module3.lesson2.title">النص 2</span>
+                    <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض النص</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+            
+            <!-- اللغة Section -->
+            <div class="ArabicH-year-section">
+                <h3>🔤 <span data-i18n="ArabicH.sections.language">اللغة</span></h3>
+                <!-- Language Module Content -->
+                <div class="ArabicH-language-modules">
+                    <!-- Module 1 -->
+                    <div class="ArabicH-language-module">
+                        <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.language.module1.title">المحور الاول: الجملة وتركيبها ورتبتها</div>
+                        <ul class="ArabicH-language-lessons">
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.language.module1.lesson1.title">الدرس الاول: مفهوم الجملة</span>
+                                <a href="AH_1SY_language_module1_lesson1.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.language.module1.lesson2.title">الدرس الثاني: تركيب الجملة</span>
+                                <a href="AH_1SY_language_module1_lesson2.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.language.module1.lesson3.title">الدرس الثالث: رتبة الجملة</span>
+                                <a href="AH_1SY_language_module1_lesson3.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.language.module1.lesson4.title">الدرس الرابع: ادوات الربط بين الجمل</span>
+                                <a href="AH_1SY_language_module1_lesson4.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Module 2 -->
+                    <div class="ArabicH-language-module">
+                        <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.language.module2.title">المحور الثاني: المركب شبه الاسنادي</div>
+                        <ul class="ArabicH-language-lessons">
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.language.module2.lesson1.title">الدرس الاول: قواعد عامة وتطبيقات</span>
+                                <a href="AH_1SY_language_module2_lesson1.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.language.module2.lesson2.title">الدرس الثاني: تطبيقات</span>
+                                <a href="AH_1SY_language_module2_lesson2.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Module 3 -->
+                    <div class="ArabicH-language-module">
+                        <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.language.module3.title">المحور الثالث: المركب الموصولي</div>
+                        <ul class="ArabicH-language-lessons">
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.language.module3.lesson1.title">الدرس الاول: قواعد عامة وتطبيقات</span>
+                                <a href="AH_1SY_language_module3_lesson1.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.language.module3.lesson2.title">الدرس الثاني: تطبيقات</span>
+                                <a href="#" class="ArabicH-language-lesson-link disabled" data-i18n="ArabicH.index.comingSoon">قريباً</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Module 4 -->
+                    <div class="ArabicH-language-module">
+                        <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.language.module4.title">المحور الرابع: التخيير والتسوية والاستنتاج</div>
+                        <ul class="ArabicH-language-lessons">
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.language.module4.lesson1.title">الدرس الاول: قواعد عامة وتطبيقات</span>
+                                <a href="AH_1SY_language_module4_lesson1.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.language.module4.lesson2.title">الدرس الثاني: تطبيقات</span>
+                                <a href="#" class="ArabicH-language-lesson-link disabled" data-i18n="ArabicH.index.comingSoon">قريباً</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Module 5 -->
+                    <div class="ArabicH-language-module">
+                        <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.language.module5.title">المحور الخامس: الاستثناء والحصر</div>
+                        <ul class="ArabicH-language-lessons">
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.language.module5.lesson1.title">الدرس الاول: قواعد عامة وتطبيقات</span>
+                                <a href="AH_1SY_language_module5_lesson1.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.language.module5.lesson2.title">الدرس الثاني: تطبيقات</span>
+                                <a href="#" class="ArabicH-language-lesson-link disabled" data-i18n="ArabicH.index.comingSoon">قريباً</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Module 6 -->
+                    <div class="ArabicH-language-module">
+                        <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.language.module6.title">المحور السادس: حروف الجر ومعانيها</div>
+                        <ul class="ArabicH-language-lessons">
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.language.module6.lesson1.title">الدرس الاول: قواعد عامة وتطبيقات</span>
+                                <a href="AH_1SY_language_module6_lesson1.html" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                            </li>
+                            <li class="ArabicH-language-lesson">
+                                <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.language.module6.lesson2.title">الدرس الثاني: تطبيقات</span>
+                                <a href="#" class="ArabicH-language-lesson-link disabled" data-i18n="ArabicH.index.comingSoon">قريباً</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ArabicH-year-section">
+    <h3>🎭 <span data-i18n="ArabicH.sections.rhetoric">البلاغة</span></h3>
+    <!-- Rhetoric Modules Content -->
+    <div class="ArabicH-language-modules">
+        <!-- Module 1 -->
+        <div class="ArabicH-language-module">
+            <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.rhetoric.module1.title">المحور الأول: التخاطب</div>
+            <ul class="ArabicH-language-lessons">
+                <li class="ArabicH-language-lesson">
+                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.rhetoric.module1.lesson1.title">الدرس الأول: عملية التخاطب وأركانها</span>
+                    <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                </li>
+                <li class="ArabicH-language-lesson">
+                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.rhetoric.module1.lesson2.title">الدرس الثاني: تطبيقات</span>
+                    <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Module 2 -->
+        <div class="ArabicH-language-module">
+            <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.rhetoric.module2.title">المحور الثاني: علم المعاني</div>
+            
+            <!-- Part 1: الخبر -->
+            <div class="ArabicH-language-submodule">
+                <div class="ArabicH-language-module-title" style="font-size: 1rem; color: var(--secondary-color); margin-bottom: 0.5rem;" data-i18n="ArabicH.index.year1.rhetoric.module2.part1.title">القسم الاول: الخبر</div>
+                <ul class="ArabicH-language-lessons">
+                    <li class="ArabicH-language-lesson">
+                        <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.rhetoric.module2.part1.lesson1.title">الدرس الأول: أنواع الخبر</span>
+                        <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                    </li>
+                    <li class="ArabicH-language-lesson">
+                        <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.rhetoric.module2.part1.lesson2.title">الدرس الثاني: المعاني المستفادة</span>
+                        <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Part 2: الانشاء -->
+            <div class="ArabicH-language-submodule">
+                <div class="ArabicH-language-module-title" style="font-size: 1rem; color: var(--secondary-color); margin-bottom: 0.5rem;" data-i18n="ArabicH.index.year1.rhetoric.module2.part2.title">القسم الثاني: الانشاء</div>
+                <ul class="ArabicH-language-lessons">
+                    <li class="ArabicH-language-lesson">
+                        <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.rhetoric.module2.part2.lesson1.title">الدرس الأول: الانشاء الطلبي</span>
+                        <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                    </li>
+                    <li class="ArabicH-language-lesson">
+                        <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.rhetoric.module2.part2.lesson2.title">الدرس الثاني: الإنشاء غير الطلبي</span>
+                        <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Module 3 -->
+        <div class="ArabicH-language-module">
+            <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.rhetoric.module3.title">المحور الثالث: علم البيان</div>
+            
+            <!-- Part 1: التشبيه -->
+            <div class="ArabicH-language-submodule">
+                <div class="ArabicH-language-module-title" style="font-size: 1rem; color: var(--secondary-color); margin-bottom: 0.5rem;" data-i18n="ArabicH.index.year1.rhetoric.module3.part1.title">القسم الاول: التشبيه</div>
+                <ul class="ArabicH-language-lessons">
+                    <li class="ArabicH-language-lesson">
+                        <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.rhetoric.module3.part1.lesson1.title">الدرس الأول: أركان التشبيه</span>
+                        <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                    </li>
+                    <li class="ArabicH-language-lesson">
+                        <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.rhetoric.module3.part1.lesson2.title">الدرس الثاني: أنواع التشبيه</span>
+                        <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Part 2: الاستعارة -->
+            <div class="ArabicH-language-submodule">
+                <div class="ArabicH-language-module-title" style="font-size: 1rem; color: var(--secondary-color); margin-bottom: 0.5rem;" data-i18n="ArabicH.index.year1.rhetoric.module3.part2.title">القسم الثاني: الاستعارة</div>
+                <ul class="ArabicH-language-lessons">
+                    <li class="ArabicH-language-lesson">
+                        <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.rhetoric.module3.part2.lesson1.title">الدرس الأول: أركان الاستعارة</span>
+                        <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                    </li>
+                    <li class="ArabicH-language-lesson">
+                        <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.rhetoric.module3.part2.lesson2.title">الدرس الثاني: أنواع الاستعارة</span>
+                        <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Part 3: الكناية -->
+            <div class="ArabicH-language-submodule">
+                <div class="ArabicH-language-module-title" style="font-size: 1rem; color: var(--secondary-color); margin-bottom: 0.5rem;" data-i18n="ArabicH.index.year1.rhetoric.module3.part3.title">القسم الثالث: الكناية</div>
+                <ul class="ArabicH-language-lessons">
+                    <li class="ArabicH-language-lesson">
+                        <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.rhetoric.module3.part3.lesson1.title">الدرس الأول</span>
+                        <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                    </li>
+                    <li class="ArabicH-language-lesson">
+                        <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.rhetoric.module3.part3.lesson2.title">الدرس الثاني</span>
+                        <a href="#" class="ArabicH-language-lesson-link" data-i18n="ArabicH.index.viewLesson">عرض الدرس</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+            
+            <div class="ArabicH-year-section">
+    <h3>✍️ <span data-i18n="ArabicH.sections.production">الإنتاج</span></h3>
+    <!-- Production Modules Content -->
+    <div class="ArabicH-language-modules">
+        <!-- Module 1: Article Writing -->
+        <div class="ArabicH-language-module">
+            <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.production.module1.title">القسم الأول: التدريب على إنتاج المقال</div>
+            <ul class="ArabicH-language-lessons">
+                <li class="ArabicH-language-lesson">
+                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.production.module1.lesson1.title">النص الأول</span>
+                    <a href="#" class="ArabicH-language-lesson-link disabled" data-i18n="ArabicH.index.comingSoon">قريباً</a>
+                </li>
+                <li class="ArabicH-language-lesson">
+                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.production.module1.lesson2.title">النص الثاني</span>
+                    <a href="#" class="ArabicH-language-lesson-link disabled" data-i18n="ArabicH.index.comingSoon">قريباً</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Module 2: Literary Text Analysis -->
+        <div class="ArabicH-language-module">
+            <div class="ArabicH-language-module-title" data-i18n="ArabicH.index.year1.production.module2.title">القسم الثاني: التدريب على إنتاج تحليل النص الأدبي</div>
+            <ul class="ArabicH-language-lessons">
+                <li class="ArabicH-language-lesson">
+                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.production.module2.lesson1.title">النص الأول</span>
+                    <a href="#" class="ArabicH-language-lesson-link disabled" data-i18n="ArabicH.index.comingSoon">قريباً</a>
+					</li>
+                <li class="ArabicH-language-lesson">
+                    <span class="ArabicH-language-lesson-title" data-i18n="ArabicH.index.year1.production.module2.lesson2.title">النص الثاني</span>
+                    <a href="#" class="ArabicH-language-lesson-link disabled" data-i18n="ArabicH.index.comingSoon">قريباً</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+
+<div id="year2Modal" class="ArabicH-year-modal ArabicH-homepage-modal">
+    <div class="ArabicH-homepage-modal-content">
+        <span class="ArabicH-homepage-modal-close">&times;</span>
+        <h2 class="ArabicH-homepage-modal-title" data-i18n="ArabicH.index.year2">السنة الثانية ثانوي</h2>
+        
+        <div class="ArabicH-year-sections">
+            <div class="ArabicH-year-section">
+                <h3>📖 <span data-i18n="ArabicH.sections.literature">الأدب</span></h3>
+                <p class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</p>
+            </div>
+            
+            <div class="ArabicH-year-section">
+                <h3>💬 <span data-i18n="ArabicH.sections.communication">التواصل</span></h3>
+                <p class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</p>
+            </div>
+            
+            <div class="ArabicH-year-section">
+                <h3>🔤 <span data-i18n="ArabicH.sections.language">اللغة</span></h3>
+                <p class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</p>
+            </div>
+            
+            <div class="ArabicH-year-section">
+                <h3>🎭 <span data-i18n="ArabicH.sections.rhetoric">البلاغة</span></h3>
+                <p class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</p>
+            </div>
+            
+            <div class="ArabicH-year-section">
+                <h3>✍️ <span data-i18n="ArabicH.sections.production">الإنتاج</span></h3>
+                <p class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="year3Modal" class="ArabicH-year-modal ArabicH-homepage-modal">
+    <div class="ArabicH-homepage-modal-content">
+        <span class="ArabicH-homepage-modal-close">&times;</span>
+        <h2 class="ArabicH-homepage-modal-title" data-i18n="ArabicH.index.year3">السنة الثالثة ثانوي</h2>
+        
+        <div class="ArabicH-year-sections">
+            <div class="ArabicH-year-section">
+                <h3>📖 <span data-i18n="ArabicH.sections.literature">الأدب</span></h3>
+                <p class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</p>
+            </div>
+            
+            <div class="ArabicH-year-section">
+                <h3>💬 <span data-i18n="ArabicH.sections.communication">التواصل</span></h3>
+                <p class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</p>
+            </div>
+            
+            <div class="ArabicH-year-section">
+                <h3>🔤 <span data-i18n="ArabicH.sections.language">اللغة</span></h3>
+                <p class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</p>
+            </div>
+            
+            <div class="ArabicH-year-section">
+                <h3>🎭 <span data-i18n="ArabicH.sections.rhetoric">البلاغة</span></h3>
+                <p class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</p>
+            </div>
+            
+            <div class="ArabicH-year-section">
+                <h3>✍️ <span data-i18n="ArabicH.sections.production">الإنتاج</span></h3>
+                <p class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="year4Modal" class="ArabicH-year-modal ArabicH-homepage-modal">
+    <div class="ArabicH-homepage-modal-content">
+        <span class="ArabicH-homepage-modal-close">&times;</span>
+        <h2 class="ArabicH-homepage-modal-title" data-i18n="ArabicH.index.year4">السنة الرابعة ثانوي</h2>
+        
+        <div class="ArabicH-year-sections">
+            <div class="ArabicH-year-section">
+                <h3>📖 <span data-i18n="ArabicH.sections.literature">الأدب</span></h3>
+                <p class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</p>
+            </div>
+            
+            <div class="ArabicH-year-section">
+                <h3>💬 <span data-i18n="ArabicH.sections.communication">التواصل</span></h3>
+                <p class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</p>
+            </div>
+            
+            <div class="ArabicH-year-section">
+                <h3>🔤 <span data-i18n="ArabicH.sections.language">اللغة</span></h3>
+                <p class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</p>
+            </div>
+            
+            <div class="ArabicH-year-section">
+                <h3>🎭 <span data-i18n="ArabicH.sections.rhetoric">البلاغة</span></h3>
+                <p class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</p>
+            </div>
+            
+            <div class="ArabicH-year-section">
+                <h3>✍️ <span data-i18n="ArabicH.sections.production">الإنتاج</span></h3>
+                <p class="ArabicH-coming-soon" data-i18n="ArabicH.index.comingSoon">قريباً</p>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Manual Install Button -->
 <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
     <span class="ArabicH-pwa-install-icon">📱</span>
@@ -630,9 +1250,9 @@
                 "ArabicH.windows.lessons": "الدروس",
                 "ArabicH.windows.exercises": "التمارين",
                 "ArabicH.windows.tests": "الاختبارات",
-"ArabicH.windows.authors": "ادباء",
-"ArabicH.windows.evidences": "شواهد",
-"ArabicH.windows.resources": "موارد",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.evidences": "شواهد",
+                "ArabicH.windows.resources": "موارد",
                 
                 // Index specific translations
                 "ArabicH.index.title": "مركز تعليم العربية",
@@ -647,6 +1267,7 @@
                 "ArabicH.index.modalExercisesTitle": "التمارين التطبيقية",
                 "ArabicH.index.modalTestsTitle": "الاختبارات التقييمية",
                 "ArabicH.index.comingSoon": "قريباً",
+                "ArabicH.index.viewLesson": "عرض الدرس",
                 
                 // Year titles
                 "ArabicH.index.year1": "السنة الأولى ثانوي",
@@ -655,12 +1276,109 @@
                 "ArabicH.index.year4": "السنة الرابعة ثانوي",
                 
                 // Lessons descriptions
-"ArabicH.index.generalLessons": "دروس عامة لجميع السنوات",
-"ArabicH.index.generalLessonsDesc": "دروس شاملة في اللغة العربية تشمل النحو والصرف والأدب والبلاغة لجميع السنوات الدراسية",
+                "ArabicH.index.generalLessons": "دروس عامة لجميع السنوات",
+                "ArabicH.index.generalLessonsDesc": "دروس شاملة في اللغة العربية تشمل النحو والصرف والأدب والبلاغة لجميع السنوات الدراسية",
                 "ArabicH.index.year1Desc": "دروس شاملة في اللغة العربية للسنة الأولى ثانوي تشمل النحو والصرف والأدب والبلاغة",
                 "ArabicH.index.year2Desc": "دروس شاملة في اللغة العربية للسنة الثانية ثانوي تشمل النحو والصرف والأدب والبلاغة",
                 "ArabicH.index.year3Desc": "دروس شاملة في اللغة العربية للسنة الثالثة ثانوي تشمل النحو والصرف والأدب والبلاغة",
                 "ArabicH.index.year4Desc": "دروس شاملة في اللغة العربية للسنة الرابعة ثانوي تشمل النحو والصرف والأدب والبلاغة",
+                "ArabicH.sections.literature": "الأدب",
+                "ArabicH.sections.communication": "التواصل",
+                "ArabicH.sections.language": "اللغة",
+                "ArabicH.sections.rhetoric": "البلاغة",
+                "ArabicH.sections.production": "الإنتاج",
+				
+"ArabicH.index.year1.literature.module1.title": "المحور الاول: شعر الغزل في القرن الأول الهجري",
+"ArabicH.index.year1.literature.module1.section1.title": "جميل بن معمر",
+"ArabicH.index.year1.literature.module1.section1.lesson1.title": "النص الأول",
+"ArabicH.index.year1.literature.module1.section1.lesson2.title": "النص الثاني",
+"ArabicH.index.year1.literature.module1.section1.lesson3.title": "النص الثالث",
+"ArabicH.index.year1.literature.module1.section2.title": "عمر ابن ابي ربيعة",
+"ArabicH.index.year1.literature.module1.section2.lesson1.title": "النص الأول",
+"ArabicH.index.year1.literature.module1.section2.lesson2.title": "النص الثاني",
+"ArabicH.index.year1.literature.module1.section2.lesson3.title": "النص الثالث",
+
+"ArabicH.index.year1.literature.module2.title": "المحور الثاني: من أشكال القص العربي القديم: الحكاية المثلية",
+"ArabicH.index.year1.literature.module2.lesson1.title": "النص الأول",
+"ArabicH.index.year1.literature.module2.lesson2.title": "النص الثاني",
+"ArabicH.index.year1.literature.module2.lesson3.title": "النص الثالث",
+
+"ArabicH.index.year1.literature.module3.title": "المحور الثالث: من الشعر العربي المعاصر: الشعر الوطني",
+"ArabicH.index.year1.literature.module3.lesson1.title": "النص الأول",
+"ArabicH.index.year1.literature.module3.lesson2.title": "النص الثاني",
+"ArabicH.index.year1.literature.module3.lesson3.title": "النص الثالث",
+
+"ArabicH.index.year1.literature.module4.title": "المحور الرابع: من أشكال القص العربي المعاصر: الأقصوصة",
+"ArabicH.index.year1.literature.module4.lesson1.title": "النص الأول",
+"ArabicH.index.year1.literature.module4.lesson2.title": "النص الثاني",
+"ArabicH.index.year1.literature.module4.lesson3.title": "النص الثالث",
+
+// التواصل Translations
+"ArabicH.index.year1.communication.module1.title": "المحور الاول: موسيقى وأذواق",
+"ArabicH.index.year1.communication.module1.lesson1.title": "النص 1",
+"ArabicH.index.year1.communication.module1.lesson2.title": "النص 2",
+"ArabicH.index.year1.communication.module2.title": "المحور الثاني: مظاهر من الحياة المعاصرة",
+"ArabicH.index.year1.communication.module2.lesson1.title": "النص 1",
+"ArabicH.index.year1.communication.module2.lesson2.title": "النص 2",
+"ArabicH.index.year1.communication.module3.title": "المحور الثالث: الرياضة والقيم",
+"ArabicH.index.year1.communication.module3.lesson1.title": "النص 1",
+"ArabicH.index.year1.communication.module3.lesson2.title": "النص 2",
+
+// البلاغة Translations
+"ArabicH.index.year1.rhetoric.module1.title": "المحور الأول: التخاطب",
+"ArabicH.index.year1.rhetoric.module1.lesson1.title": "الدرس الأول: عملية التخاطب وأركانها",
+"ArabicH.index.year1.rhetoric.module1.lesson2.title": "الدرس الثاني: تطبيقات",
+"ArabicH.index.year1.rhetoric.module2.title": "المحور الثاني: علم المعاني",
+"ArabicH.index.year1.rhetoric.module2.part1.title": "القسم الاول: الخبر",
+"ArabicH.index.year1.rhetoric.module2.part1.lesson1.title": "الدرس الأول: أنواع الخبر",
+"ArabicH.index.year1.rhetoric.module2.part1.lesson2.title": "الدرس الثاني: المعاني المستفادة",
+"ArabicH.index.year1.rhetoric.module2.part2.title": "القسم الثاني: الانشاء",
+"ArabicH.index.year1.rhetoric.module2.part2.lesson1.title": "الدرس الأول: الانشاء الطلبي",
+"ArabicH.index.year1.rhetoric.module2.part2.lesson2.title": "الدرس الثاني: الإنشاء غير الطلبي",
+"ArabicH.index.year1.rhetoric.module3.title": "المحور الثالث: علم البيان",
+"ArabicH.index.year1.rhetoric.module3.part1.title": "القسم الاول: التشبيه",
+"ArabicH.index.year1.rhetoric.module3.part1.lesson1.title": "الدرس الأول: أركان التشبيه",
+"ArabicH.index.year1.rhetoric.module3.part1.lesson2.title": "الدرس الثاني: أنواع التشبيه",
+"ArabicH.index.year1.rhetoric.module3.part2.title": "القسم الثاني: الاستعارة",
+"ArabicH.index.year1.rhetoric.module3.part2.lesson1.title": "الدرس الأول: أركان الاستعارة",
+"ArabicH.index.year1.rhetoric.module3.part2.lesson2.title": "الدرس الثاني: أنواع الاستعارة",
+"ArabicH.index.year1.rhetoric.module3.part3.title": "القسم الثالث: الكناية",
+"ArabicH.index.year1.rhetoric.module3.part3.lesson1.title": "الدرس الأول",
+"ArabicH.index.year1.rhetoric.module3.part3.lesson2.title": "الدرس الثاني",
+                "ArabicH.index.year1.production.module1.title": "القسم الأول: التدريب على إنتاج المقال",
+"ArabicH.index.year1.production.module1.lesson1.title": "النص الأول",
+"ArabicH.index.year1.production.module1.lesson2.title": "النص الثاني",
+"ArabicH.index.year1.production.module2.title": "القسم الثاني: التدريب على إنتاج تحليل النص الأدبي",
+"ArabicH.index.year1.production.module2.lesson1.title": "النص الأول",
+"ArabicH.index.year1.production.module2.lesson2.title": "النص الثاني",
+
+                // Year 1 Language Module translations
+                "ArabicH.index.year1.language.module1.title": "المحور الاول: الجملة وتركيبها ورتبتها",
+                "ArabicH.index.year1.language.module1.lesson1.title": "الدرس الاول: مفهوم الجملة",
+                "ArabicH.index.year1.language.module1.lesson2.title": "الدرس الثاني: تركيب الجملة",
+                "ArabicH.index.year1.language.module1.lesson3.title": "الدرس الثالث: رتبة الجملة",
+                "ArabicH.index.year1.language.module1.lesson4.title": "الدرس الرابع: ادوات الربط بين الجمل",
+                
+                "ArabicH.index.year1.language.module2.title": "المحور الثاني: المركب شبه الاسنادي",
+                "ArabicH.index.year1.language.module2.lesson1.title": "الدرس الاول: قواعد عامة وتطبيقات",
+                "ArabicH.index.year1.language.module2.lesson2.title": "الدرس الثاني: تطبيقات",
+                
+                "ArabicH.index.year1.language.module3.title": "المحور الثالث: المركب الموصولي",
+                "ArabicH.index.year1.language.module3.lesson1.title": "الدرس الاول: قواعد عامة وتطبيقات",
+                "ArabicH.index.year1.language.module3.lesson2.title": "الدرس الثاني: تطبيقات",
+                
+                "ArabicH.index.year1.language.module4.title": "المحور الرابع: التخيير والتسوية والاستنتاج",
+                "ArabicH.index.year1.language.module4.lesson1.title": "الدرس الاول: قواعد عامة وتطبيقات",
+                "ArabicH.index.year1.language.module4.lesson2.title": "الدرس الثاني: تطبيقات",
+                
+                "ArabicH.index.year1.language.module5.title": "المحور الخامس: الاستثناء والحصر",
+                "ArabicH.index.year1.language.module5.lesson1.title": "الدرس الاول: قواعد عامة وتطبيقات",
+                "ArabicH.index.year1.language.module5.lesson2.title": "الدرس الثاني: تطبيقات",
+        
+        // New Module 6 translations
+        "ArabicH.index.year1.language.module6.title": "المحور السادس: حروف الجر ومعانيها",
+        "ArabicH.index.year1.language.module6.lesson1.title": "الدرس الاول: قواعد عامة وتطبيقات",
+        "ArabicH.index.year1.language.module6.lesson2.title": "الدرس الثاني: تطبيقات",
                 
                 // Exercises descriptions
                 "ArabicH.index.exercisesYear1Desc": "تمارين تطبيقية متنوعة لتعزيز مهارات الطلاب في اللغة العربية للسنة الأولى ثانوي",
@@ -672,7 +1390,10 @@
                 "ArabicH.index.testsYear1Desc": "اختبارات تقييمية شاملة لقياس مستوى الطلاب في اللغة العربية للسنة الأولى ثانوي",
                 "ArabicH.index.testsYear2Desc": "اختبارات تقييمية شاملة لقياس مستوى الطلاب في اللغة العربية للسنة الثانية ثانوي",
                 "ArabicH.index.testsYear3Desc": "اختبارات تقييمية شاملة لقياس مستوى الطلاب في اللغة العربية للسنة الثالثة ثانوي",
-                "ArabicH.index.testsYear4Desc": "اختبارات تقييمية شاملة لقياس مستوى الطلاب في اللغة العربية للسنة الرابعة ثانوي"
+                "ArabicH.index.testsYear4Desc": "اختبارات تقييمية شاملة لقياس مستوى الطلاب في اللغة العربية للسنة الرابعة ثانوي",
+                
+                // PWA translations
+                "ArabicH.pwa.install": "تثبيت التطبيق"
             },
             en: {
                 // General translations
@@ -692,9 +1413,9 @@
                 "ArabicH.windows.lessons": "Lessons",
                 "ArabicH.windows.exercises": "Exercises",
                 "ArabicH.windows.tests": "Tests",
-"ArabicH.windows.authors": "Authors",
-"ArabicH.windows.quotes": "Quotes",
-"ArabicH.windows.resources": "Resources",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
                 
                 // Index specific translations
                 "ArabicH.index.title": "Arab Learning Hub",
@@ -709,6 +1430,7 @@
                 "ArabicH.index.modalExercisesTitle": "Practical Exercises",
                 "ArabicH.index.modalTestsTitle": "Assessment Tests",
                 "ArabicH.index.comingSoon": "Coming Soon",
+                "ArabicH.index.viewLesson": "View Lesson",
                 
                 // Year titles
                 "ArabicH.index.year1": "First Year Secondary",
@@ -717,12 +1439,108 @@
                 "ArabicH.index.year4": "Fourth Year Secondary",
                 
                 // Lessons descriptions
-"ArabicH.index.generalLessons": "General Lessons for All Years",
-"ArabicH.index.generalLessonsDesc": "Comprehensive Arabic lessons covering grammar, morphology, literature, and rhetoric for all academic years",
+                "ArabicH.index.generalLessons": "General Lessons for All Years",
+                "ArabicH.index.generalLessonsDesc": "Comprehensive Arabic lessons covering grammar, morphology, literature, and rhetoric for all academic years",
                 "ArabicH.index.year1Desc": "Comprehensive Arabic lessons for first year secondary covering grammar, morphology, literature, and rhetoric",
                 "ArabicH.index.year2Desc": "Comprehensive Arabic lessons for second year secondary covering grammar, morphology, literature, and rhetoric",
                 "ArabicH.index.year3Desc": "Comprehensive Arabic lessons for third year secondary covering grammar, morphology, literature, and rhetoric",
                 "ArabicH.index.year4Desc": "Comprehensive Arabic lessons for fourth year secondary covering grammar, morphology, literature, and rhetoric",
+                "ArabicH.sections.literature": "Literature",
+                "ArabicH.sections.communication": "Communication",
+                "ArabicH.sections.language": "Language",
+                "ArabicH.sections.rhetoric": "Rhetoric",
+                "ArabicH.sections.production": "Production",
+                
+"ArabicH.index.year1.literature.module1.title": "Module 1: Ghazal Poetry in the 1st Century AH",
+"ArabicH.index.year1.literature.module1.section1.title": "Jamil bin Mu'ammar",
+"ArabicH.index.year1.literature.module1.section1.lesson1.title": "Text 1",
+"ArabicH.index.year1.literature.module1.section1.lesson2.title": "Text 2",
+"ArabicH.index.year1.literature.module1.section1.lesson3.title": "Text 3",
+"ArabicH.index.year1.literature.module1.section2.title": "Umar Ibn Abi Rabi'ah",
+"ArabicH.index.year1.literature.module1.section2.lesson1.title": "Text 1",
+"ArabicH.index.year1.literature.module1.section2.lesson2.title": "Text 2",
+"ArabicH.index.year1.literature.module1.section2.lesson3.title": "Text 3",
+
+"ArabicH.index.year1.literature.module2.title": "Module 2: Forms of Ancient Arabic Narrative: The Moral Tale",
+"ArabicH.index.year1.literature.module2.lesson1.title": "Text 1",
+"ArabicH.index.year1.literature.module2.lesson2.title": "Text 2",
+"ArabicH.index.year1.literature.module2.lesson3.title": "Text 3",
+
+"ArabicH.index.year1.literature.module3.title": "Module 3: Modern Arabic Poetry: Patriotic Poetry",
+"ArabicH.index.year1.literature.module3.lesson1.title": "Text 1",
+"ArabicH.index.year1.literature.module3.lesson2.title": "Text 2",
+"ArabicH.index.year1.literature.module3.lesson3.title": "Text 3",
+
+"ArabicH.index.year1.literature.module4.title": "Module 4: Forms of Modern Arabic Narrative: The Short Story",
+"ArabicH.index.year1.literature.module4.lesson1.title": "Text 1",
+"ArabicH.index.year1.literature.module4.lesson2.title": "Text 2",
+"ArabicH.index.year1.literature.module4.lesson3.title": "Text 3",
+
+// Communication Translations
+"ArabicH.index.year1.communication.module1.title": "Module 1: Music and Tastes",
+"ArabicH.index.year1.communication.module1.lesson1.title": "Text 1",
+"ArabicH.index.year1.communication.module1.lesson2.title": "Text 2",
+"ArabicH.index.year1.communication.module2.title": "Module 2: Aspects of Contemporary Life",
+"ArabicH.index.year1.communication.module2.lesson1.title": "Text 1",
+"ArabicH.index.year1.communication.module2.lesson2.title": "Text 2",
+"ArabicH.index.year1.communication.module3.title": "Module 3: Sports and Values",
+"ArabicH.index.year1.communication.module3.lesson1.title": "Text 1",
+"ArabicH.index.year1.communication.module3.lesson2.title": "Text 2",
+
+// Rhetoric Translations
+"ArabicH.index.year1.rhetoric.module1.title": "Module 1: Communication",
+"ArabicH.index.year1.rhetoric.module1.lesson1.title": "Lesson 1: Communication Process and Its Pillars",
+"ArabicH.index.year1.rhetoric.module1.lesson2.title": "Lesson 2: Applications",
+"ArabicH.index.year1.rhetoric.module2.title": "Module 2: Semantics",
+"ArabicH.index.year1.rhetoric.module2.part1.title": "Part 1: Information",
+"ArabicH.index.year1.rhetoric.module2.part1.lesson1.title": "Lesson 1: Types of Information",
+"ArabicH.index.year1.rhetoric.module2.part1.lesson2.title": "Lesson 2: Derived Meanings",
+"ArabicH.index.year1.rhetoric.module2.part2.title": "Part 2: Construction",
+"ArabicH.index.year1.rhetoric.module2.part2.lesson1.title": "Lesson 1: Requestive Construction",
+"ArabicH.index.year1.rhetoric.module2.part2.lesson2.title": "Lesson 2: Non-Requestive Construction",
+"ArabicH.index.year1.rhetoric.module3.title": "Module 3: Eloquence",
+"ArabicH.index.year1.rhetoric.module3.part1.title": "Part 1: Simile",
+"ArabicH.index.year1.rhetoric.module3.part1.lesson1.title": "Lesson 1: Pillars of Simile",
+"ArabicH.index.year1.rhetoric.module3.part1.lesson2.title": "Lesson 2: Types of Simile",
+"ArabicH.index.year1.rhetoric.module3.part2.title": "Part 2: Metaphor",
+"ArabicH.index.year1.rhetoric.module3.part2.lesson1.title": "Lesson 1: Pillars of Metaphor",
+"ArabicH.index.year1.rhetoric.module3.part2.lesson2.title": "Lesson 2: Types of Metaphor",
+"ArabicH.index.year1.rhetoric.module3.part3.title": "Part 3: Metonymy",
+"ArabicH.index.year1.rhetoric.module3.part3.lesson1.title": "Lesson 1",
+"ArabicH.index.year1.rhetoric.module3.part3.lesson2.title": "Lesson 2",
+"ArabicH.index.year1.production.module1.title": "Section 1: Training on Article Writing",
+"ArabicH.index.year1.production.module1.lesson1.title": "Text 1",
+"ArabicH.index.year1.production.module1.lesson2.title": "Text 2",
+"ArabicH.index.year1.production.module2.title": "Section 2: Training on Literary Text Analysis",
+"ArabicH.index.year1.production.module2.lesson1.title": "Text 1",
+"ArabicH.index.year1.production.module2.lesson2.title": "Text 2",
+                // Year 1 Language Module translations
+                "ArabicH.index.year1.language.module1.title": "Module 1: The Sentence, Its Structure and Order",
+                "ArabicH.index.year1.language.module1.lesson1.title": "Lesson 1: Concept of the Sentence",
+                "ArabicH.index.year1.language.module1.lesson2.title": "Lesson 2: Sentence Structure",
+                "ArabicH.index.year1.language.module1.lesson3.title": "Lesson 3: Sentence Order",
+                "ArabicH.index.year1.language.module1.lesson4.title": "Lesson 4: Sentence Connectors",
+                
+                "ArabicH.index.year1.language.module2.title": "Module 2: Semi-Predicative Compound",
+                "ArabicH.index.year1.language.module2.lesson1.title": "Lesson 1: General Rules and Applications",
+                "ArabicH.index.year1.language.module2.lesson2.title": "Lesson 2: Applications",
+                
+                "ArabicH.index.year1.language.module3.title": "Module 3: Relative Compound",
+                "ArabicH.index.year1.language.module3.lesson1.title": "Lesson 1: General Rules and Applications",
+                "ArabicH.index.year1.language.module3.lesson2.title": "Lesson 2: Applications",
+                
+                "ArabicH.index.year1.language.module4.title": "Module 4: Choice, Equalization and Conclusion",
+                "ArabicH.index.year1.language.module4.lesson1.title": "Lesson 1: General Rules and Applications",
+                "ArabicH.index.year1.language.module4.lesson2.title": "Lesson 2: Applications",
+                
+                "ArabicH.index.year1.language.module5.title": "Module 5: Exception and Restriction",
+                "ArabicH.index.year1.language.module5.lesson1.title": "Lesson 1: General Rules and Applications",
+                "ArabicH.index.year1.language.module5.lesson2.title": "Lesson 2: Applications",
+        
+        // New Module 6 translations
+        "ArabicH.index.year1.language.module6.title": "Module 6: Prepositions and Their Meanings",
+        "ArabicH.index.year1.language.module6.lesson1.title": "Lesson 1: General Rules and Applications",
+        "ArabicH.index.year1.language.module6.lesson2.title": "Lesson 2: Applications",
                 
                 // Exercises descriptions
                 "ArabicH.index.exercisesYear1Desc": "Various practical exercises to enhance students' Arabic language skills for first year secondary",
@@ -734,7 +1552,10 @@
                 "ArabicH.index.testsYear1Desc": "Comprehensive assessment tests to measure student levels in Arabic for first year secondary",
                 "ArabicH.index.testsYear2Desc": "Comprehensive assessment tests to measure student levels in Arabic for second year secondary",
                 "ArabicH.index.testsYear3Desc": "Comprehensive assessment tests to measure student levels in Arabic for third year secondary",
-                "ArabicH.index.testsYear4Desc": "Comprehensive assessment tests to measure student levels in Arabic for fourth year secondary"
+                "ArabicH.index.testsYear4Desc": "Comprehensive assessment tests to measure student levels in Arabic for fourth year secondary",
+                
+                // PWA translations
+                "ArabicH.pwa.install": "Install App"
             },
             fr: {
                 // General translations
@@ -754,9 +1575,9 @@
                 "ArabicH.windows.lessons": "Leçons",
                 "ArabicH.windows.exercises": "Exercices",
                 "ArabicH.windows.tests": "Tests",
-"ArabicH.windows.authors": "Auteurs",
-"ArabicH.windows.quotes": "Quotes", 
-"ArabicH.windows.resources": "Ressources",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Quotes", 
+                "ArabicH.windows.resources": "Ressources",
                 
                 // Index specific translations
                 "ArabicH.index.title": "Centre d'Apprentissage d'Arabe",
@@ -771,6 +1592,7 @@
                 "ArabicH.index.modalExercisesTitle": "Exercices Pratiques",
                 "ArabicH.index.modalTestsTitle": "Tests d'Évaluation",
                 "ArabicH.index.comingSoon": "Bientôt disponible",
+                "ArabicH.index.viewLesson": "Voir la Leçon",
                 
                 // Year titles
                 "ArabicH.index.year1": "Première Année Secondaire",
@@ -779,12 +1601,109 @@
                 "ArabicH.index.year4": "Quatrième Année Secondaire",
                 
                 // Lessons descriptions
-"ArabicH.index.generalLessons": "Leçons Générales pour Tous les Niveaux",
-"ArabicH.index.generalLessonsDesc": "Leçons complètes d'arabe couvrant la grammaire, la morphologie, la littérature et la rhétorique pour tous les niveaux académiques",
+                "ArabicH.index.generalLessons": "Leçons Générales pour Tous les Niveaux",
+                "ArabicH.index.generalLessonsDesc": "Leçons complètes d'arabe couvrant la grammaire, la morphologie, la littérature et la rhétorique pour tous les niveaux académiques",
                 "ArabicH.index.year1Desc": "Leçons complètes d'arabe pour la première année secondaire couvrant la grammaire, la morphologie, la littérature et la rhétorique",
                 "ArabicH.index.year2Desc": "Leçons complètes d'arabe pour la deuxième année secondaire couvrant la grammaire, la morphologie, la littérature et la rhétorique",
                 "ArabicH.index.year3Desc": "Leçons complètes d'arabe pour la troisième année secondaire couvrant la grammaire, la morphologie, la littérature et la rhétorique",
                 "ArabicH.index.year4Desc": "Leçons complètes d'arabe pour la quatrième année secondaire couvrant la grammaire, la morphologie, la littérature et la rhétorique",
+                "ArabicH.sections.literature": "Littérature",
+                "ArabicH.sections.communication": "Communication",
+                "ArabicH.sections.language": "Langue",
+                "ArabicH.sections.rhetoric": "Rhétorique",
+                "ArabicH.sections.production": "Production",
+                
+"ArabicH.index.year1.literature.module1.title": "Module 1 : Poésie amoureuse (Ghazal) au 1er siècle de l'Hégire",
+"ArabicH.index.year1.literature.module1.section1.title": "Jamil bin Mu'ammar",
+"ArabicH.index.year1.literature.module1.section1.lesson1.title": "Texte 1",
+"ArabicH.index.year1.literature.module1.section1.lesson2.title": "Texte 2",
+"ArabicH.index.year1.literature.module1.section1.lesson3.title": "Texte 3",
+"ArabicH.index.year1.literature.module1.section2.title": "Omar Ibn Abi Rabi'ah",
+"ArabicH.index.year1.literature.module1.section2.lesson1.title": "Texte 1",
+"ArabicH.index.year1.literature.module1.section2.lesson2.title": "Texte 2",
+"ArabicH.index.year1.literature.module1.section2.lesson3.title": "Texte 3",
+
+"ArabicH.index.year1.literature.module2.title": "Module 2 : Formes du récit arabe ancien : Le conte moral",
+"ArabicH.index.year1.literature.module2.lesson1.title": "Texte 1",
+"ArabicH.index.year1.literature.module2.lesson2.title": "Texte 2",
+"ArabicH.index.year1.literature.module2.lesson3.title": "Texte 3",
+
+"ArabicH.index.year1.literature.module3.title": "Module 3 : De la poésie arabe contemporaine : La poésie patriotique",
+"ArabicH.index.year1.literature.module3.lesson1.title": "Texte 1",
+"ArabicH.index.year1.literature.module3.lesson2.title": "Texte 2",
+"ArabicH.index.year1.literature.module3.lesson3.title": "Texte 3",
+
+"ArabicH.index.year1.literature.module4.title": "Module 4 : Formes du récit arabe contemporain : La nouvelle",
+"ArabicH.index.year1.literature.module4.lesson1.title": "Texte 1",
+"ArabicH.index.year1.literature.module4.lesson2.title": "Texte 2",
+"ArabicH.index.year1.literature.module4.lesson3.title": "Texte 3",
+
+// Communication Translations
+"ArabicH.index.year1.communication.module1.title": "Module 1 : Musique et Goûts",
+"ArabicH.index.year1.communication.module1.lesson1.title": "Texte 1",
+"ArabicH.index.year1.communication.module1.lesson2.title": "Texte 2",
+"ArabicH.index.year1.communication.module2.title": "Module 2 : Aspects de la vie contemporaine",
+"ArabicH.index.year1.communication.module2.lesson1.title": "Texte 1",
+"ArabicH.index.year1.communication.module2.lesson2.title": "Texte 2",
+"ArabicH.index.year1.communication.module3.title": "Module 3 : Sports et Valeurs",
+"ArabicH.index.year1.communication.module3.lesson1.title": "Texte 1",
+"ArabicH.index.year1.communication.module3.lesson2.title": "Texte 2",
+
+// Rhetoric Translations
+"ArabicH.index.year1.rhetoric.module1.title": "Module 1 : Communication",
+"ArabicH.index.year1.rhetoric.module1.lesson1.title": "Leçon 1 : Processus de communication et ses piliers",
+"ArabicH.index.year1.rhetoric.module1.lesson2.title": "Leçon 2 : Applications",
+"ArabicH.index.year1.rhetoric.module2.title": "Module 2 : Sémantique",
+"ArabicH.index.year1.rhetoric.module2.part1.title": "Partie 1 : Information",
+"ArabicH.index.year1.rhetoric.module2.part1.lesson1.title": "Leçon 1 : Types d'information",
+"ArabicH.index.year1.rhetoric.module2.part1.lesson2.title": "Leçon 2 : Significations dérivées",
+"ArabicH.index.year1.rhetoric.module2.part2.title": "Partie 2 : Construction",
+"ArabicH.index.year1.rhetoric.module2.part2.lesson1.title": "Leçon 1 : Construction impérative",
+"ArabicH.index.year1.rhetoric.module2.part2.lesson2.title": "Leçon 2 : Construction non-impérative",
+"ArabicH.index.year1.rhetoric.module3.title": "Module 3 : Éloquence",
+"ArabicH.index.year1.rhetoric.module3.part1.title": "Partie 1 : Comparaison",
+"ArabicH.index.year1.rhetoric.module3.part1.lesson1.title": "Leçon 1 : Piliers de la comparaison",
+"ArabicH.index.year1.rhetoric.module3.part1.lesson2.title": "Leçon 2 : Types de comparaison",
+"ArabicH.index.year1.rhetoric.module3.part2.title": "Partie 2 : Métaphore",
+"ArabicH.index.year1.rhetoric.module3.part2.lesson1.title": "Leçon 1 : Piliers de la métaphore",
+"ArabicH.index.year1.rhetoric.module3.part2.lesson2.title": "Leçon 2 : Types de métaphore",
+"ArabicH.index.year1.rhetoric.module3.part3.title": "Partie 3 : Métonymie",
+"ArabicH.index.year1.rhetoric.module3.part3.lesson1.title": "Leçon 1",
+"ArabicH.index.year1.rhetoric.module3.part3.lesson2.title": "Leçon 2",
+"ArabicH.index.year1.production.module1.title": "Section 1 : Formation à la production d'article",
+"ArabicH.index.year1.production.module1.lesson1.title": "Texte 1",
+"ArabicH.index.year1.production.module1.lesson2.title": "Texte 2",
+"ArabicH.index.year1.production.module2.title": "Section 2 : Formation à l'analyse de texte littéraire",
+"ArabicH.index.year1.production.module2.lesson1.title": "Texte 1",
+"ArabicH.index.year1.production.module2.lesson2.title": "Texte 2",
+
+                // Year 1 Language Module translations
+                "ArabicH.index.year1.language.module1.title": "Module 1: La Phrase, Sa Structure et Son Ordre",
+                "ArabicH.index.year1.language.module1.lesson1.title": "Leçon 1: Concept de la Phrase",
+                "ArabicH.index.year1.language.module1.lesson2.title": "Leçon 2: Structure de la Phrase",
+                "ArabicH.index.year1.language.module1.lesson3.title": "Leçon 3: Ordre de la Phrase",
+                "ArabicH.index.year1.language.module1.lesson4.title": "Leçon 4: Connecteurs de Phrases",
+                
+                "ArabicH.index.year1.language.module2.title": "Module 2: Le Composé Semi-Prédicatif",
+                "ArabicH.index.year1.language.module2.lesson1.title": "Leçon 1: Règles Générales et Applications",
+                "ArabicH.index.year1.language.module2.lesson2.title": "Leçon 2: Applications",
+                
+                "ArabicH.index.year1.language.module3.title": "Module 3: Le Composé Relatif",
+                "ArabicH.index.year1.language.module3.lesson1.title": "Leçon 1: Règles Générales et Applications",
+                "ArabicH.index.year1.language.module3.lesson2.title": "Leçon 2: Applications",
+                
+                "ArabicH.index.year1.language.module4.title": "Module 4: Choix, Égalisation et Conclusion",
+                "ArabicH.index.year1.language.module4.lesson1.title": "Leçon 1: Règles Générales et Applications",
+                "ArabicH.index.year1.language.module4.lesson2.title": "Leçon 2: Applications",
+                
+                "ArabicH.index.year1.language.module5.title": "Module 5: Exception et Restriction",
+                "ArabicH.index.year1.language.module5.lesson1.title": "Leçon 1: Règles Générales et Applications",
+                "ArabicH.index.year1.language.module5.lesson2.title": "Leçon 2: Applications",
+        
+        // New Module 6 translations
+        "ArabicH.index.year1.language.module6.title": "Module 6: Les Prépositions et Leurs Significations",
+        "ArabicH.index.year1.language.module6.lesson1.title": "Leçon 1: Règles Générales et Applications",
+        "ArabicH.index.year1.language.module6.lesson2.title": "Leçon 2: Applications",
                 
                 // Exercises descriptions
                 "ArabicH.index.exercisesYear1Desc": "Divers exercices pratiques pour améliorer les compétences en arabe des étudiants de première année secondaire",
@@ -796,7 +1715,10 @@
                 "ArabicH.index.testsYear1Desc": "Tests d'évaluation complets pour mesurer le niveau des étudiants en arabe pour la première année secondaire",
                 "ArabicH.index.testsYear2Desc": "Tests d'évaluation complets pour mesurer le niveau des étudiants en arabe pour la deuxième année secondaire",
                 "ArabicH.index.testsYear3Desc": "Tests d'évaluation complets pour mesurer le niveau des étudiants en arabe pour la troisième année secondaire",
-                "ArabicH.index.testsYear4Desc": "Tests d'évaluation complets pour mesurer le niveau des étudiants en arabe pour la quatrième année secondaire"
+                "ArabicH.index.testsYear4Desc": "Tests d'évaluation complets pour mesurer le niveau des étudiants en arabe pour la quatrième année secondaire",
+                
+                // PWA translations
+                "ArabicH.pwa.install": "Installer l'Application"
             }
         };
         
@@ -820,6 +1742,52 @@
         const testsModal = document.getElementById('testsModal');
         const closeButtons = document.querySelectorAll('.ArabicH-homepage-modal-close');
         
+
+// Year modals functionality
+const yearItems = {
+    'year1Item': 'year1Modal',
+    'year2Item': 'year2Modal',
+    'year3Item': 'year3Modal',
+    'year4Item': 'year4Modal'
+};
+
+// Add click events to year items
+Object.keys(yearItems).forEach(itemId => {
+    const item = document.getElementById(itemId);
+    const modalId = yearItems[itemId];
+    
+    if (item) {
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', function() {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                // Close lessons modal first
+                lessonsModal.style.display = 'none';
+                // Open year modal
+                modal.style.display = 'block';
+            }
+        });
+    }
+});
+
+// Close all year modals when clicking close button
+document.querySelectorAll('.ArabicH-year-modal .ArabicH-homepage-modal-close').forEach(button => {
+    button.addEventListener('click', function() {
+        const modal = this.closest('.ArabicH-year-modal');
+        if (modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+
+// Close year modals when clicking outside
+document.querySelectorAll('.ArabicH-year-modal').forEach(modal => {
+    modal.addEventListener('click', function(event) {
+        if (event.target === this) {
+            this.style.display = 'none';
+        }
+    });
+});
         // Open modals when cards are clicked (both in windows bar and main body)
         lessonsCards.forEach(card => {
             card.addEventListener('click', function() {

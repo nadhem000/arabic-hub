@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لغة: حروف الجر ومعانيها - الدرس الأول | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2e8b57">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="حروف الجر ومعانيها">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Unique Olive Green Theme for Prepositions Lesson */
+        :root {
+            --primary-color: #2e8b57;
+            --secondary-color: #3cb371;
+            --accent-color: #66cdaa;
+            --light-color: #f0f8f2;
+            --dark-color: #1a5a3a;
+            --text-color: #2e4635;
+            --heading-color: #1a2f21;
+            --background-color: #f7fcf9;
+            --card-bg: #ffffff;
+            --definition-bg: #e8f5eb;
+            --border-color: #b8d4c5;
+            --table-even-bg: #f0f9f3;
+            --table-hover-bg: #e6f3ec;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(46, 139, 87, 0.12);
+            --gradient-primary: linear-gradient(135deg, #2e8b57 0%, #1e6b47 100%);
+            --gradient-secondary: linear-gradient(135deg, #3cb371 0%, #2e8b57 100%);
+            --gradient-accent: linear-gradient(135deg, #66cdaa 0%, #3cb371 100%);
+            --gradient-light: linear-gradient(135deg, #f0f8f2 0%, #e8f5eb 100%);
+            --highlight-color: #daa520;
+            --highlight-bg: rgba(218, 165, 32, 0.1);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #3cb371;
+            --secondary-color: #66cdaa;
+            --accent-color: #90ee90;
+            --light-color: #1a5a3a;
+            --dark-color: #0f3d26;
+            --text-color: #e8f5eb;
+            --heading-color: #f0f8f2;
+            --background-color: #0f3d26;
+            --card-bg: #1a5a3a;
+            --definition-bg: #2e8b57;
+            --border-color: #4ca878;
+            --table-even-bg: #1e6b47;
+            --table-hover-bg: #2e8b57;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #3cb371 0%, #2e8b57 100%);
+            --gradient-secondary: linear-gradient(135deg, #66cdaa 0%, #3cb371 100%);
+            --gradient-accent: linear-gradient(135deg, #90ee90 0%, #66cdaa 100%);
+            --gradient-light: linear-gradient(135deg, #1a5a3a 0%, #0f3d26 100%);
+            --highlight-color: #ffd700;
+            --highlight-bg: rgba(255, 215, 0, 0.15);
+        }
+
+        /* Page specific styles - Consistent with other lessons */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-lesson-teacher {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-content {
+            margin: 30px 0;
+        }
+
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        [data-theme="dark"] .ArabicH-exercise-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-exercise-content {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .ArabicH-rule-card {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%);
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-left: 6px solid var(--secondary-color);
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ArabicH-rule-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .ArabicH-rule-card::before {
+            content: "📘";
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-rule-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            padding-left: 30px;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 8px;
+            position: relative;
+        }
+
+        [data-theme="dark"] .ArabicH-rule-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-rule-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .ArabicH-example-text {
+            font-size: 1.3rem;
+            font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 2.0;
+            color: var(--dark-color);
+            margin: 15px 0;
+            padding: 12px 18px;
+            background-color: rgba(46, 139, 87, 0.08);
+            border-radius: 10px;
+            border-right: 3px solid var(--secondary-color);
+            text-align: right;
+            direction: rtl;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .ArabicH-example-text {
+            color: #f0f8f2;
+            background-color: rgba(60, 179, 113, 0.2);
+            border-right: 3px solid var(--accent-color);
+        }
+
+        .ArabicH-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .ArabicH-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        .ArabicH-table th, .ArabicH-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-table th {
+            background-color: var(--definition-bg);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        [data-theme="dark"] .ArabicH-table th {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-table tr:nth-child(even) {
+            background-color: var(--table-even-bg);
+        }
+
+        .ArabicH-table tr:hover {
+            background-color: var(--table-hover-bg);
+        }
+
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .ArabicH-exercise-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        .ArabicH-exercise-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .ArabicH-exercise-table td {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-definition-list {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        .ArabicH-definition-list li {
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        /* Enhanced styles for text to replace - Consistent with module 3 */
+        .ArabicH-to-replace {
+            background-color: var(--highlight-bg);
+            border-bottom: 3px solid var(--highlight-color);
+            border-top: 1px solid var(--highlight-color);
+            padding: 4px 8px;
+            border-radius: 6px;
+            color: #b8860b;
+            font-weight: 700;
+            font-style: italic;
+            position: relative;
+            transition: all 0.3s ease;
+            cursor: help;
+            display: inline-block;
+            margin: 0 2px;
+        }
+
+        [data-theme="dark"] .ArabicH-to-replace {
+            color: #ffd700;
+            background-color: rgba(255, 215, 0, 0.15);
+            border-bottom: 3px solid var(--highlight-color);
+            border-top: 1px solid var(--highlight-color);
+        }
+
+        .ArabicH-to-replace:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            background-color: rgba(218, 165, 32, 0.2);
+        }
+
+        .ArabicH-to-replace::before {
+            content: "⇨";
+            margin-left: 5px;
+            color: var(--highlight-color);
+            font-weight: bold;
+        }
+
+        .ArabicH-to-replace::after {
+            content: "⇦";
+            margin-right: 5px;
+            color: var(--highlight-color);
+            font-weight: bold;
+        }
+
+        .ArabicH-table-textarea {
+            width: 100%;
+            min-height: 40px;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--card-bg);
+            resize: vertical;
+            font-family: inherit;
+            font-size: 15px;
+            color: var(--text-color);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .ArabicH-table-textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(102, 205, 170, 0.2);
+        }
+
+        [data-theme="dark"] .ArabicH-table-textarea {
+            background-color: var(--definition-bg);
+            border-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        /* Knowledge Box - Consistent with other modules */
+        .ArabicH-knowledge-box {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 25px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-knowledge-box::before {
+            content: "💡";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        .ArabicH-knowledge-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        [data-theme="dark"] .ArabicH-knowledge-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-knowledge-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Application item styling - Consistent with module 3 */
+        .ArabicH-application-item {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--secondary-color);
+        }
+
+        .ArabicH-application-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .ArabicH-blank-textarea {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 15px;
+            width: 250px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 10px;
+        }
+
+        .ArabicH-blank-textarea::placeholder {
+            color: var(--secondary-color);
+            opacity: 0.7;
+        }
+
+        [data-theme="dark"] .ArabicH-blank-textarea::placeholder {
+            color: var(--accent-color);
+            opacity: 0.6;
+        }
+
+        /* Flower decoration for headers - Consistent with module 3 */
+        .ArabicH-flower-decoration {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Instructions box - Consistent with module 3 */
+        .ArabicH-instructions-box {
+            background-color: rgba(218, 165, 32, 0.1);
+            border-radius: var(--border-radius);
+            padding: 1.2rem;
+            margin: 15px 0 25px 0;
+            border-right: 4px solid var(--highlight-color);
+            border-left: 4px solid var(--highlight-color);
+            position: relative;
+        }
+
+        .ArabicH-instructions-box::before {
+            content: "⚠️";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-instructions-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--highlight-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .ArabicH-instructions-content {
+            line-height: 1.6;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        /* Original text column styling - Consistent with module 3 */
+        .ArabicH-original-text {
+            text-align: right;
+            direction: rtl;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+            font-size: 1.1rem;
+            color: var(--dark-color);
+            line-height: 1.6;
+            padding: 8px;
+            background-color: rgba(46, 139, 87, 0.05);
+            border-radius: 6px;
+        }
+
+        [data-theme="dark"] .ArabicH-original-text {
+            color: #f0f8f2;
+            background-color: rgba(60, 179, 113, 0.1);
+        }
+
+        /* Special quote styling */
+        .ArabicH-poetry-verse {
+            background-color: rgba(240, 248, 242, 0.3);
+            border-right: 4px solid var(--accent-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+        }
+
+        [data-theme="dark"] .ArabicH-poetry-verse {
+            background-color: rgba(102, 205, 170, 0.2);
+            color: #f0f8f2;
+        }
+
+        /* Preposition table styling */
+        .ArabicH-preposition-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-preposition-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-preposition-table td {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+
+        .ArabicH-preposition-table tr:nth-child(even) td {
+            background-color: var(--table-even-bg);
+        }
+
+        .ArabicH-preposition-table tr:hover td {
+            background-color: var(--table-hover-bg);
+        }
+
+        /* Sentence Analysis Table with hierarchical levels - LIKE MODULE 2 and 3 */
+        .ArabicH-sentence-analysis-table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            direction: rtl;
+        }
+
+        .ArabicH-sentence-analysis-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-sentence-analysis-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+
+        .ArabicH-analysis-level {
+            background-color: var(--definition-bg);
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        [data-theme="dark"] .ArabicH-analysis-level {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-grammar-term {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        [data-theme="dark"] .ArabicH-grammar-term {
+            color: var(--accent-color);
+            opacity: 0.9;
+        }
+
+        .merged-cell {
+            background-color: rgba(46, 139, 87, 0.1);
+        }
+
+        [data-theme="dark"] .merged-cell {
+            background-color: rgba(60, 179, 113, 0.15);
+        }
+
+        .ArabicH-sentence-analysis-table tr:hover {
+            background-color: var(--table-hover-bg);
+        }
+
+        /* تحسينات إضافية للوضوح في الوضع الداكن - Consistent with other modules */
+        [data-theme="dark"] p,
+        [data-theme="dark"] li,
+        [data-theme="dark"] div:not(.ArabicH-example-text):not(.ArabicH-box-cell) {
+            color: var(--text-color) !important;
+        }
+
+        [data-theme="dark"] strong {
+            color: var(--accent-color);
+        }
+
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) {
+            color: var(--accent-color);
+        }
+
+        /* Responsive styles for lesson page - Consistent with other modules */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title {
+                font-size: 2rem;
+            }
+            
+            .ArabicH-lesson-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-lesson-container {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-lesson-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .ArabicH-table {
+                font-size: 14px;
+            }
+            
+            .ArabicH-example-text {
+                font-size: 1.15rem;
+                padding: 10px 15px;
+                line-height: 1.8;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1.2rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.2rem;
+                padding-left: 25px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 12px;
+                top: 12px;
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-blank-textarea {
+                width: 200px;
+            }
+            
+            .ArabicH-preposition-table {
+                font-size: 0.9rem;
+            }
+            
+            .ArabicH-sentence-analysis-table th,
+            .ArabicH-sentence-analysis-table td {
+                padding: 8px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main {
+                padding: 1rem;
+            }
+            
+            .ArabicH-lesson-title {
+                font-size: 1.6rem;
+            }
+            
+            .ArabicH-exercise-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-example-text {
+                font-size: 1.05rem;
+                line-height: 1.7;
+                padding: 8px 12px;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.1rem;
+                padding-left: 22px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 10px;
+                top: 10px;
+                font-size: 1rem;
+            }
+            
+            .ArabicH-blank-textarea {
+                width: 150px;
+            }
+            
+            .ArabicH-preposition-table {
+                font-size: 0.8rem;
+            }
+            
+            .ArabicH-preposition-table th,
+            .ArabicH-preposition-table td {
+                padding: 6px;
+            }
+            
+            .ArabicH-sentence-analysis-table th,
+            .ArabicH-sentence-analysis-table td {
+                padding: 6px;
+                font-size: 0.8rem;
+            }
+            
+            .ArabicH-analysis-level {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <!-- العنوان المعدل -->
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.languageLesson.module6Lesson1Title">لغة: حروف الجر ومعانيها</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.languageLesson.module6Lesson1Subtitle">الدرس الأول: أهم معاني حروف الجر ووظائف مركب الجر</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher"><span class="ArabicH-flower-decoration">❦</span> أستاذة العربية: فوزية الشطي <span class="ArabicH-flower-decoration">❦</span></div>
+                <div class="ArabicH-lesson-class"><span class="ArabicH-flower-decoration">✿</span> معهد "قرطاج درمش" <span class="ArabicH-flower-decoration">❦</span> 1 ثانوي <span class="ArabicH-flower-decoration">✿</span></div>
+            </div>
+            
+            <!-- Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">مقدمة الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p>يُعنى هذا الدرس بدراسة حروف الجر ومعانيها في اللغة العربية. حروف الجر هي أدوات تربط الأسماء بالأفعال أو الأسماء بالأسماء، وتنصب الاسم الذي يليها بالجر. لكل حرف جر معانٍ متعددة حسب سياق الجملة.</p>
+                    <p>في هذا الدرس سنتعرف على أهم حروف الجر ومعانيها المختلفة، مع أمثلة توضيحية ووظائف مركب الجر في الجملة.</p>
+                    <p><strong>ملاحظة:</strong> (مف = مفعول) في الجدول التالي.</p>
+                </div>
+            </div>
+            
+            <!-- جدول حروف الجر الرئيسي -->
+            <div class="ArabicH-exercise-card">
+    <h3 class="ArabicH-exercise-title">أهم معاني حروف الجر ووظائف مركب الجر</h3>
+    
+    <div class="ArabicH-rule-card">
+        <h4 class="ArabicH-rule-title">القاعدة العامة:</h4>
+        <p>حروف الجر: أدوات تربط الأسماء وتنصبها بالجر. لكل حرف معانٍ متعددة حسب السياق.</p>
+    </div>
+    
+    <div class="ArabicH-exercise-content">
+        <div class="ArabicH-table-container">
+            <table class="ArabicH-preposition-table">
+                <thead>
+                    <tr>
+                        <th width="25%">الحرف</th>
+                        <th width="25%">وظائف مركب الجر</th>
+                        <th width="25%">معاني حروف الجر</th>
+                        <th width="25%">الأمثلة</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- مِنْ -->
+                    <tr>
+                        <td rowspan="6" style="background-color: var(--definition-bg); font-weight: bold; font-size: 1.2rem;">مِنْ</td>
+                        <td>مف. ابتداء الغاية في المكان</td>
+                        <td>ابتداء الغاية في المكان</td>
+                        <td class="ArabicH-original-text">خرج المناضل من السجن معاندا.</td>
+                    </tr>
+                    <tr>
+                        <td>مف. ابتداء الغاية في الزمان</td>
+                        <td>ابتداء الغاية في الزمان</td>
+                        <td class="ArabicH-original-text">يعمل الكادحون من الصباح الباكر.</td>
+                    </tr>
+                    <tr>
+                        <td>مف. لأجله</td>
+                        <td>الأجلية = سبب الحدث</td>
+                        <td class="ArabicH-original-text">بكى التاجر الصبي من شدة الخوف.</td>
+                    </tr>
+                    <tr>
+                        <td>خبر</td>
+                        <td>الانتساب إلى المكان</td>
+                        <td class="ArabicH-original-text">نحن من تونس.</td>
+                    </tr>
+                    <tr>
+                        <td>نعت</td>
+                        <td>بيان نوع اسم غير مبهم</td>
+                        <td class="ArabicH-original-text">ابتعلنا حقائب من الجلد.</td>
+                    </tr>
+                    <tr>
+                        <td>تمييز</td>
+                        <td>بيان نوع اسم مبهم</td>
+                        <td class="ArabicH-original-text">بعنا قنطارا من القمح الصلب.</td>
+                    </tr>
+                    
+                    <!-- إلى -->
+                    <tr>
+                        <td rowspan="2" style="background-color: var(--definition-bg); font-weight: bold; font-size: 1.2rem;">إلى</td>
+                        <td>مف. انتهاء الغاية في المكان</td>
+                        <td>انتهاء الغاية في المكان</td>
+                        <td class="ArabicH-original-text">نفي أحمد شوقي إلى إسبانيا.</td>
+                    </tr>
+                    <tr>
+                        <td>مف. انتهاء الغاية في الزمان</td>
+                        <td>انتهاء الغاية في الزمان</td>
+                        <td class="ArabicH-original-text">تسكع الأحب الصغير إلى الغروب.</td>
+                    </tr>
+                    
+                    <!-- حتى -->
+                    <tr>
+                        <td rowspan="3" style="background-color: var(--definition-bg); font-weight: bold; font-size: 1.2rem;">حتى</td>
+                        <td>مف. انتهاء الغاية في المكان</td>
+                        <td>انتهاء الغاية في المكان</td>
+                        <td class="ArabicH-original-text">سرنا حتى آخر الشارع.</td>
+                    </tr>
+                    <tr>
+                        <td>مف. انتهاء الغاية في الزمان</td>
+                        <td>انتهاء الغاية في الزمان</td>
+                        <td class="ArabicH-original-text">يقيم السكير بالخمارة حتى الفجر.</td>
+                    </tr>
+                    <tr>
+                        <td>مف. لأجله</td>
+                        <td>الأجلية = غاية الحدث</td>
+                        <td class="ArabicH-original-text">كذب المحامي حتى ينقذ نفسه.</td>
+                    </tr>
+                    
+                    <!-- في -->
+                    <tr>
+                        <td rowspan="5" style="background-color: var(--definition-bg); font-weight: bold; font-size: 1.2rem;">في</td>
+                        <td>مف. فيه للزمان</td>
+                        <td>الظرفية الزمانية</td>
+                        <td class="ArabicH-original-text">أقبل الغزاة في عتمة الليل.</td>
+                    </tr>
+                    <tr>
+                        <td>مف. فيه للمكان</td>
+                        <td>الظرفية المكانية، ج.فعليّة</td>
+                        <td class="ArabicH-original-text">يسكن الأحب في بيت حقير.</td>
+                    </tr>
+                    <tr>
+                        <td>حال</td>
+                        <td>الحالية</td>
+                        <td class="ArabicH-original-text">عاش صادق في قلق الانتظار.</td>
+                    </tr>
+                    <tr>
+                        <td>مف. لأجله</td>
+                        <td>الأجلية = غاية الحدث</td>
+                        <td class="ArabicH-original-text">قصدنا المدينة في قضاء حاجة.</td>
+                    </tr>
+                    <tr>
+                        <td>خبر الناسخ الفعلي</td>
+                        <td>الظرفية المكانية، ج.اسميّة</td>
+                        <td class="ArabicH-original-text">ما زلنا في قاعة الدرس.</td>
+                    </tr>
+                    
+                    <!-- على -->
+                    <tr>
+                        <td rowspan="3" style="background-color: var(--definition-bg); font-weight: bold; font-size: 1.2rem;">على</td>
+                        <td>مف. فيه للمكان</td>
+                        <td>الظرفية المكانية، ج.فعليّة</td>
+                        <td class="ArabicH-original-text">على الرصيف جلس التاجر الجوال.</td>
+                    </tr>
+                    <tr>
+                        <td>خبر</td>
+                        <td>الظرفية المكانية، ج.اسميّة</td>
+                        <td class="ArabicH-original-text">على سطوح المنازل عدة هوائيات.</td>
+                    </tr>
+                    <tr>
+                        <td>حال</td>
+                        <td>بمعنى "رغم"</td>
+                        <td class="ArabicH-original-text">ظل "الأب" سكيرا على كبره.</td>
+                    </tr>
+                    
+                    <!-- بـ -->
+                    <tr>
+                        <td rowspan="3" style="background-color: var(--definition-bg); font-weight: bold; font-size: 1.2rem;">بـ</td>
+                        <td>مف. به</td>
+                        <td>الاستعانة</td>
+                        <td class="ArabicH-original-text">قتل الشهداء بالرصاص الحي.</td>
+                    </tr>
+                    <tr>
+                        <td>مف. فيه للمكان</td>
+                        <td>الظرفية المكانية</td>
+                        <td class="ArabicH-original-text">التقى الثوار بشارع بورقيبة.</td>
+                    </tr>
+                    <tr>
+                        <td>حال</td>
+                        <td>الحالية</td>
+                        <td class="ArabicH-original-text">خدم صادق المحامي بلا كلل أو ملل.</td>
+                    </tr>
+                    
+                    <!-- لـ -->
+                    <tr>
+                        <td rowspan="3" style="background-color: var(--definition-bg); font-weight: bold; font-size: 1.2rem;">لـ</td>
+                        <td>مفعول 1</td>
+                        <td>الاستفادة</td>
+                        <td class="ArabicH-original-text">وفر المحامي للشاب عملا قارا.</td>
+                    </tr>
+                    <tr>
+                        <td>مف. لأجله</td>
+                        <td>الأجلية = غاية الحدث</td>
+                        <td class="ArabicH-original-text">ازرع لتحصد.</td>
+                    </tr>
+                    <tr>
+                        <td>خبر الناسخ الحرفي</td>
+                        <td>الملكية/ج.اسميّة</td>
+                        <td class="ArabicH-original-text">إن للفقراء أحلاما عظيمة.</td>
+                    </tr>
+                    
+                    <!-- كـ -->
+                    <tr>
+                        <td rowspan="2" style="background-color: var(--definition-bg); font-weight: bold; font-size: 1.2rem;">كـ</td>
+                        <td>مف مطلق</td>
+                        <td>التشبيه/ج.فعليّة</td>
+                        <td class="ArabicH-original-text">حلقت الطائرة كما يحلق النسر.</td>
+                    </tr>
+                    <tr>
+                        <td>خبر الناسخ الفعلي</td>
+                        <td>التشبيه/ج.اسميّة</td>
+                        <td class="ArabicH-original-text">كان البدر كوجه الطفل الضاحك.</td>
+                    </tr>
+                    
+                    <!-- عن -->
+                    <tr>
+                        <td rowspan="3" style="background-color: var(--definition-bg); font-weight: bold; font-size: 1.2rem;">عن</td>
+                        <td>مف. لأجله</td>
+                        <td>التعليل = سبب الحدث</td>
+                        <td class="ArabicH-original-text">تعنف الشرطي عن اضطرار.</td>
+                    </tr>
+                    <tr>
+                        <td>مف. فيه للزمان</td>
+                        <td>بمعنى الظرف "بعد"</td>
+                        <td class="ArabicH-original-text">عما قليل ينتهي العام الدراسي.</td>
+                    </tr>
+                    <tr>
+                        <td>مف. به</td>
+                        <td>المجاوزة</td>
+                        <td class="ArabicH-original-text">رغب الصالحون عن المال الحرام.</td>
+                    </tr>
+                    
+                    <!-- رب -->
+                    <tr>
+                        <td style="background-color: var(--definition-bg); font-weight: bold; font-size: 1.2rem;">رب</td>
+                        <td>مبتدأ</td>
+                        <td>القلة أو الكثرة</td>
+                        <td class="ArabicH-original-text">رب ضارة نافعة.</td>
+                    </tr>
+                    
+                    <!-- واو القسم -->
+                    <tr>
+                        <td style="background-color: var(--definition-bg); font-weight: bold; font-size: 1.2rem;">واو القسم</td>
+                        <td>[جملة قسم]</td>
+                        <td>القسم</td>
+                        <td class="ArabicH-original-text">ورحمة الشهداء، [سينتصر الحق].</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+            
+            <!-- التطبيق أ - SEPARATE EXERCISE WITH ITS OWN ANSWER BUTTON -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التطبيق أ: استخرج حروف الجر محددا معانيها</h3>
+                
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تعليمات التطبيق:</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p><strong>يجب حل التطبيق التالي وفق ما تعلمته في جدول حروف الجر.</strong></p>
+                        <p>اكتب الإجابات في الخانات المخصصة ثم اضغط على زر "إظهار الإجابة" للتحقق من صحة إجاباتك.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0;">☻ استخرج حروف الجر محددا معانيها:</h4>
+                    
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="45%">الجملة</th>
+                                    <th width="45%">حرف الجر ومعناه</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="ArabicH-original-text">تَـجَمَّعَ البَاعَةُ الـجَوَّالُونَ <span class="ArabicH-to-replace">فِي</span> صَفٍّ مَـمْدُودٍ</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب حرف الجر ومعناه..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="ArabicH-original-text">يَطْوُونَ بِضَاعَتَهُمْ <span class="ArabicH-to-replace">عَلَى</span> عَجَلٍ</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب حرف الجر ومعناه..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="ArabicH-original-text">صَارَتِ الـحَاسَّةُ <span class="ArabicH-to-replace">كَ</span>ـجِهَازِ الرَّاصِدِ</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب حرف الجر ومعناه..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="ArabicH-original-text">لاَ يَعْدُو الصَّبِـيُّ العَاشِرَةَ <span class="ArabicH-to-replace">مِنْ</span> عُمْرِهِ</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب حرف الجر ومعناه..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td class="ArabicH-original-text">عَمِلَ السِّكِّيرُ <span class="ArabicH-to-replace">فِي</span> شَبَابِهِ فِي مَصْنَعِ الـحَلْوَى</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب حرف الجر ومعناه..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td class="ArabicH-original-text">يَدُقُّ الشُّرْطِيُّ الأَرْضَ <span class="ArabicH-to-replace">بِـ</span>ـخَطْوِه الثَّقِيلِ</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب حرف الجر ومعناه..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="ArabicH-original-text">تَسَكَّعَ الأَحْدَبُ الصَّغِيرُ <span class="ArabicH-to-replace">حَتَّى</span> أَقْبَلَ اللَّيْلُ</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب حرف الجر ومعناه..." rows="2"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.languageLesson.showAnswer">إظهار إصلاح التطبيق أ</button>
+                
+                <div id="answer1" class="ArabicH-answer">
+                    <h4>إصلاح التطبيق أ:</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="45%">الجملة</th>
+                                    <th width="45%">حرف الجر ومعناه</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="ArabicH-original-text">تَـجَمَّعَ البَاعَةُ الـجَوَّالُونَ <span class="ArabicH-to-replace">فِي</span> صَفٍّ مَـمْدُودٍ</td>
+                                    <td>« فِي = الظّرفيّةُ المكانيّة</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="ArabicH-original-text">يَطْوُونَ بِضَاعَتَهُمْ <span class="ArabicH-to-replace">عَلَى</span> عَجَلٍ</td>
+                                    <td>« عَلَى = الحاليّةُ (يُسْأَل عنه بـ 'كيْفَ')</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="ArabicH-original-text">صَارَتِ الـحَاسَّةُ <span class="ArabicH-to-replace">كَ</span>ـجِهَازِ الرَّاصِدِ</td>
+                                    <td>« كَـ = التّشبيهُ</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="ArabicH-original-text">لاَ يَعْدُو الصَّبِـيُّ العَاشِرَةَ <span class="ArabicH-to-replace">مِنْ</span> عُمْرِهِ</td>
+                                    <td>« مِنْ = بيانُ نوعِ اسم مبْهَم (أسماءُ العددِ مُبْهَمةٌ كلُّها)</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td class="ArabicH-original-text">عَمِلَ السِّكِّيرُ <span class="ArabicH-to-replace">فِي</span> شَبَابِهِ فِي مَصْنَعِ الـحَلْوَى</td>
+                                    <td>« (1) فِي = الظّرفيّةُ الزّمانيّة، (2) فِي = الظّرفيّةُ المكانيّة</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td class="ArabicH-original-text">يَدُقُّ الشُّرْطِيُّ الأَرْضَ <span class="ArabicH-to-replace">بِـ</span>ـخَطْوِه الثَّقِيلِ</td>
+                                    <td>« بِــــ = الاسْتعانةُ</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="ArabicH-original-text">تَسَكَّعَ الأَحْدَبُ الصَّغِيرُ <span class="ArabicH-to-replace">حَتَّى</span> أَقْبَلَ اللَّيْلُ</td>
+                                    <td>« حَتَّى = اِنتهاءُ الغاية في الزّمان</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التطبيق ب - SEPARATE EXERCISE WITH HIERARCHICAL ANALYSIS -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التطبيق ب: صندق الجملة التالية محددا الأشكال والوظائف النحوية</h3>
+                
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تعليمات الصندقة:</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p><strong>يجب تحليل الجملة إلى مستويات تراتبية كما في الدروس السابقة.</strong></p>
+                        <p>اكتب التحليل في الخانات المخصصة ثم اضغط على زر "إظهار الإجابة" للتحقق من صحة إجاباتك.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0;">☻ صندق الجملة التالية محددا الأشكال والوظائف النحوية:</h4>
+                    
+                    <div class="ArabicH-example-text" style="text-align: center; font-size: 1.4rem; font-weight: bold;">
+                        تَسَكَّعَ الـمُشَرَّدُ فِي الشَّوَارِعِ الـمُعْتِمَةِ حَتَّى مَطْلَعِ الفَجْرِ
+                    </div>
+                    
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.languageLesson.showAnswer">إظهار إصلاح التطبيق ب</button>
+                
+                <div id="answer2" class="ArabicH-answer">
+                    <h4>إصلاح التطبيق ب:</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-sentence-analysis-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الجملة</th>
+                                    <th width="10%">تَسَكَّعَ</th>
+                                    <th width="10%">الـمُشَرَّدُ</th>
+                                    <th width="10%">فِي</th>
+                                    <th width="10%">الشَّوَارِعِ</th>
+                                    <th width="10%">الـمُعْتِمَةِ</th>
+                                    <th width="10%">حَتَّى</th>
+                                    <th width="10%">مَطْلَعِ</th>
+                                    <th width="10%">الفَجْرِ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="ArabicH-analysis-level">م3</td>
+                                    <td class="ArabicH-analysis-level"></td>
+                                    <td class="ArabicH-analysis-level"></td>
+                                    <td class="ArabicH-analysis-level"></td>
+                                    <td class="ArabicH-analysis-level">منعوت</td>
+                                    <td class="ArabicH-analysis-level">نعت</td>
+                                    <td class="ArabicH-analysis-level"></td>
+                                    <td class="ArabicH-analysis-level">مضاف</td>
+                                    <td class="ArabicH-analysis-level">مضاف إليه</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="ArabicH-analysis-level">م2</td>
+                                    <td class="ArabicH-grammar-term"></td>
+                                    <td class="ArabicH-grammar-term"></td>
+                                    <td class="ArabicH-grammar-term">جار</td>
+                                    <td colspan="2" class="ArabicH-grammar-term">مجرور مركب نعتي</td>
+                                    <td class="ArabicH-grammar-term">جار</td>
+                                    <td colspan="2" class="ArabicH-grammar-term">مجرور مركب إضافيّ</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="ArabicH-analysis-level">م1</td>
+                                    <td class="ArabicH-grammar-term">فعل ماض</td>
+                                    <td class="ArabicH-grammar-term">فاعل مرفوع</td>
+                                    <td colspan="3" class="ArabicH-grammar-term">مفعولٌ فيه للمكان مركب بالجر</td>
+                                    <td colspan="3" class="ArabicH-grammar-term">مفعول فيه للزمان مركب بالجر</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="ArabicH-analysis-level" style="background-color: var(--primary-color); color: white;">التركيب</td>
+                                    <td colspan="8" class="ArabicH-grammar-term merged-cell" style="font-weight: bold; text-align: center;">
+                                        جملة فعليّة بسيطة
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التطبيق ج - SEPARATE EXERCISE -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التطبيق ج: استخرج مركبات الجر محددا وظائفها</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0;">☻ استخرج مركبات الجر من الجمل السابقة محددا وظائفها:</h4>
+                    
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="45%">مركب الجر</th>
+                                    <th width="45%">الوظيفة النحوية</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب مركب الجر..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الوظيفة..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب مركب الجر..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الوظيفة..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب مركب الجر..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الوظيفة..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب مركب الجر..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الوظيفة..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب مركب الجر..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الوظيفة..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب مركب الجر..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الوظيفة..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب مركب الجر..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الوظيفة..." rows="1"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.languageLesson.showAnswer">إظهار إصلاح التطبيق ج</button>
+                
+                <div id="answer3" class="ArabicH-answer">
+                    <h4>إصلاح التطبيق ج:</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="45%">مركب الجر</th>
+                                    <th width="45%">الوظيفة النحوية</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>فِي صَفٍّ مَـمْدودٍ</td>
+                                    <td>مفعولٌ فيه للمكان</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>عَلَى عَجَلٍ</td>
+                                    <td>حالٌ</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>كَـجِهَازِ الرَّاصِدِ</td>
+                                    <td>خبرُ النّاسخ الفعليّ (صَارَ)</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>مِنْ عُمْرِهِ</td>
+                                    <td>تَـمييزٌ</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>فِي شَبَابِهِ / فِي مَصْنَعِ الـحَلْوَى</td>
+                                    <td>مفعولٌ فيه للزّمان / مفعولٌ فيه للمكان</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>بِـخَطْوِه الثَّقِيلِ</td>
+                                    <td>مفعولٌ 2 (ثانٍ)</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>حَتَّى أَقْبَلَ اللَّيْلُ</td>
+                                    <td>مفعولُ انتهاءِ الغاية في الزّمان</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التطبيق د - SEPARATE EXERCISE -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التطبيق د: كون جملا تحتوي حروف جر متنوعة المعاني</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0;">☻ كون جملا تحتوي حروف جر متنوعة المعاني مستفيدا من محور الأقصوصة:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>اكتب ثلاث جمل مختلفة تحتوي على حروف جر مختلفة المعاني:</strong></p>
+                        <p>1. <textarea class="ArabicH-blank-textarea" placeholder="اكتب الجملة الأولى..." rows="2" style="width: 100%;"></textarea></p>
+                        <p>2. <textarea class="ArabicH-blank-textarea" placeholder="اكتب الجملة الثانية..." rows="2" style="width: 100%;"></textarea></p>
+                        <p>3. <textarea class="ArabicH-blank-textarea" placeholder="اكتب الجملة الثالثة..." rows="2" style="width: 100%;"></textarea></p>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.languageLesson.showAnswer">إظهار إصلاح التطبيق د</button>
+                
+                <div id="answer4" class="ArabicH-answer">
+                    <h4>إصلاح التطبيق د:</h4>
+                    <div class="ArabicH-application-item">
+                        <p><strong>أمثلة على جمل تحتوي حروف جر متنوعة المعاني:</strong></p>
+                        <p>1. "خرج الولد <strong>من</strong> بيته <strong>في</strong> الصباح الباكر، وسار <strong>إلى</strong> المدرسة <strong>على</strong> قدميه."</p>
+                        <p>2. "مر <strong>ب</strong>ساحة الحي ثم تجاوزها <strong>عن</strong> يمينه."</p>
+                        <p>3. "دخل <strong>إلى</strong> الفصل <strong>في</strong> الوقت المحدد، وبدأ الدراسة <strong>حتى</strong> انتهاء الحصة."</p>
+                        <p><strong>ملاحظة:</strong> هذه أمثلة توضيحية، وقد تختلف إجابات الطلاب باختلاف إبداعهم.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- فقرة تطبيق عملي -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">تطبيق عملي: كتابة فقرة باستخدام حروف جر متنوعة</h3>
+                <div class="ArabicH-knowledge-content">
+                    <div class="ArabicH-example-text" style="font-style: italic;">
+                        "خرج الولد <strong>من</strong> بيته <strong>في</strong> الصباح الباكر، وسار <strong>إلى</strong> المدرسة <strong>على</strong> قدميه. مر <strong>ب</strong>ساحة الحي ثم تجاوزها <strong>عن</strong> يمينه. دخل <strong>إلى</strong> الفصل <strong>في</strong> الوقت المحدد، وبدأ الدراسة <strong>حتى</strong> انتهاء الحصة. كان مجتهدا <strong>في</strong> عمله <strong>مِنْ</strong> أجل مستقبل مشرق."
+                    </div>
+                    <p style="margin-top: 15px; color: var(--secondary-color); font-weight: bold;">ملاحظة: هذه الفقرة تطبيق عملي لاستخدام حروف جر مختلفة المعاني في نص واحد.</p>
+                </div>
+            </div>
+            
+            <!-- الملخص -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">ملخص الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <ul class="ArabicH-definition-list" style="margin-right: 20px; text-align: right;">
+                        <li><strong>حروف الجر</strong> تنصب الأسماء وتكون معمولة للأفعال أو مكملة للمعنى.</li>
+                        <li>كل حرف جر له معانٍ متعددة حسب السياق.</li>
+                        <li><strong>مركب الجر</strong> = حرف الجر + الاسم المجرور.</li>
+                        <li>من أهم حروف الجر: مِنْ، إلى، حتى، في، على، بـ، لـ، كـ، عن، رب، واو القسم.</li>
+                        <li>وظائف مركب الجر متنوعة: مفعول فيه، حال، تمييز، نعت، خبر، إلخ.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- تبسيط نهاية الدرس كما في درسي المركب الموصولي وشبه الإسنادي -->
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                    <span class="ArabicH-flower-decoration">♪</span> 
+                    <span class="ArabicH-flower-decoration">◘</span> 
+                    <span class="ArabicH-flower-decoration">♣</span> 
+                    أستاذة العربية: فوزية الشطي
+                    <span class="ArabicH-flower-decoration">♣</span> 
+                    <span class="ArabicH-flower-decoration">◘</span> 
+                    <span class="ArabicH-flower-decoration">♪</span>
+                </p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_1SY_language_module5_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.previousLesson">الدرس السابق</a>
+                <a href="#" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHLanguageModule6Lesson1 = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Language Lesson specific translations
+                "ArabicH.languageLesson.module6Lesson1Title": "لغة: حروف الجر ومعانيها",
+                "ArabicH.languageLesson.module6Lesson1Subtitle": "الدرس الأول: أهم معاني حروف الجر ووظائف مركب الجر",
+                "ArabicH.languageLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.languageLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.languageLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.languageLesson.previousLesson": "الدرس السابق",
+                "ArabicH.languageLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Language Lesson specific translations
+                "ArabicH.languageLesson.module6Lesson1Title": "Language: Prepositions and Their Meanings",
+                "ArabicH.languageLesson.module6Lesson1Subtitle": "Lesson 1: Important Meanings of Prepositions and Functions of Prepositional Phrases",
+                "ArabicH.languageLesson.showAnswer": "Show Answer",
+                "ArabicH.languageLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.languageLesson.backToHome": "Back to Homepage",
+                "ArabicH.languageLesson.previousLesson": "Previous Lesson",
+                "ArabicH.languageLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Language Lesson specific translations
+                "ArabicH.languageLesson.module6Lesson1Title": "Langue: Les Prépositions et Leurs Significations",
+                "ArabicH.languageLesson.module6Lesson1Subtitle": "Leçon 1: Significations Importantes des Prépositions et Fonctions des Compléments Prépositionnels",
+                "ArabicH.languageLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.languageLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.languageLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.languageLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.languageLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHLanguageModule6Lesson1;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Answer toggle functionality - Consistent with other modules
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إظهار الإجابة';
+            } else {
+                answer.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء الإجابة';
+            }
+        }
+
+        // Enhanced text to replace interaction - Consistent with module 3
+        function enhanceReplaceElements() {
+            const replaceElements = document.querySelectorAll('.ArabicH-to-replace');
+            
+            replaceElements.forEach(element => {
+                // Add title attribute for tooltip
+                element.setAttribute('title', 'انقر لمعرفة المزيد عن حرف الجر هذا');
+                
+                // Add click event for additional info
+                element.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const preposition = this.textContent.trim();
+                    alert(`حرف الجر: ${preposition}\n\nهذا حرف جر يجب تحديد معناه حسب سياق الجملة.`);
+                });
+                
+                // Add hover effects
+                element.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px) scale(1.02)';
+                    this.style.boxShadow = '0 4px 12px rgba(218, 165, 32, 0.3)';
+                    this.style.zIndex = '10';
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = 'none';
+                    this.style.zIndex = '1';
+                });
+            });
+        }
+
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Set answer button text after translation
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+            
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                // Check for saved theme or prefer-color-scheme
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.checked = true;
+                }
+                
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+            
+            // Enhance the text to replace elements
+            enhanceReplaceElements();
+            
+            // Add focus to first textarea when page loads
+            const firstTextarea = document.querySelector('.ArabicH-table-textarea');
+            if (firstTextarea) {
+                setTimeout(() => {
+                    firstTextarea.focus();
+                }, 500);
+            }
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

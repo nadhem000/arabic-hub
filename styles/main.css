@@ -31,7 +31,7 @@
     --heading-color: #f8f9fa;
     --background-color: #1a1a2e;
     --card-bg: #264653;
-    --definition-bg: #2a9d8f;
+    --definition-bg: #1a4d5f;
     --border-color: #457b9d;
     --table-even-bg: #264653;
     --table-hover-bg: #2a9d8f;
@@ -40,6 +40,7 @@
     --gradient-secondary: linear-gradient(135deg, #e76f51 0%, #ff6b6b 100%);
     --gradient-accent: linear-gradient(135deg, #4ecdc4 0%, #2a9d8f 100%);
     --gradient-light: linear-gradient(135deg, #264653 0%, #1a1a2e 100%);
+    --definition-text: #f8f9fa;
 }
 
 /* Base Styles */
@@ -471,4 +472,183 @@ input:checked + .ArabicH-theme-toggle-slider:before {
         flex-direction: column;
         gap: 1rem;
     }
+}
+
+/* Year Sections Grid - Updated for horizontal scrolling */
+.ArabicH-year-sections {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding: 1rem 0.5rem 2rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) transparent;
+    
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        height: 8px;
+    }
+    
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 4px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--primary-color);
+        border-radius: 4px;
+    }
+    
+    /* Smooth scrolling */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ArabicH-year-section {
+    flex: 0 0 auto;
+    width: 280px;
+    min-height: 180px;
+    background: var(--definition-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ArabicH-year-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-color: var(--primary-color);
+}
+
+.ArabicH-year-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.ArabicH-year-section .ArabicH-coming-soon {
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 0.5rem;
+    width: fit-content;
+}
+
+/* Dark Mode Fixes for Year Sections */
+[data-theme="dark"] .ArabicH-year-section {
+    background: var(--definition-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .ArabicH-year-section h3 {
+    color: var(--definition-text) !important;
+}
+
+[data-theme="dark"] .ArabicH-year-section p {
+    color: rgba(248, 249, 250, 0.9) !important;
+}
+
+/* Fix for modal year items in dark mode */
+[data-theme="dark"] .ArabicH-homepage-year {
+    background: var(--definition-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .ArabicH-homepage-year .ArabicH-homepage-year-title {
+    color: var(--accent-color) !important;
+}
+
+[data-theme="dark"] .ArabicH-homepage-year p {
+    color: rgba(248, 249, 250, 0.9) !important;
+}
+
+[data-theme="dark"] .ArabicH-card-year {
+    background: var(--accent-color);
+    color: var(--dark-color) !important;
+}
+
+[data-theme="dark"] .ArabicH-coming-soon {
+    background: var(--secondary-color);
+    color: var(--dark-color) !important;
+}
+
+/* Responsive adjustments for year sections */
+@media (max-width: 768px) {
+    .ArabicH-year-sections {
+        gap: 1rem;
+        padding: 0.5rem 0.5rem 1.5rem;
+    }
+    
+    .ArabicH-year-section {
+        width: 240px;
+        min-height: 160px;
+        padding: 1.2rem;
+    }
+    
+    .ArabicH-year-section h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .ArabicH-year-section {
+        width: 220px;
+        min-height: 150px;
+        padding: 1rem;
+    }
+    
+    .ArabicH-year-section h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Scroll indicator for year sections (optional enhancement) */
+.ArabicH-year-sections-container {
+    position: relative;
+}
+
+.ArabicH-year-sections-container::after {
+    content: '→';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    opacity: 0.6;
+    animation: bounceRight 2s infinite;
+    pointer-events: none;
+}
+
+.rtl .ArabicH-year-sections-container::after {
+    content: '←';
+    right: auto;
+    left: 10px;
+}
+
+@keyframes bounceRight {
+    0%, 100% { transform: translateY(-50%) translateX(0); }
+    50% { transform: translateY(-50%) translateX(5px); }
+}
+
+.rtl @keyframes bounceRight {
+    0%, 100% { transform: translateY(-50%) translateX(0); }
+    50% { transform: translateY(-50%) translateX(-5px); }
 }
