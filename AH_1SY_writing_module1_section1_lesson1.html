@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التدريب على إنتاج المقال - الدرس الأول | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#6a1b9a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="تدريب إنتاج المقال">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Unique Purple-Lavender Theme for Essay Writing Lesson */
+        :root {
+            --primary-color: #6a1b9a;
+            --secondary-color: #9c4dcc;
+            --accent-color: #ba68c8;
+            --light-color: #f3e5f5;
+            --dark-color: #4a148c;
+            --text-color: #4a148c;
+            --heading-color: #4a148c;
+            --background-color: #faf5ff;
+            --card-bg: #ffffff;
+            --definition-bg: #f3e5f5;
+            --border-color: #d1c4e9;
+            --table-even-bg: #f9f5ff;
+            --table-hover-bg: #ede7f6;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(106, 27, 154, 0.12);
+            --gradient-primary: linear-gradient(135deg, #6a1b9a 0%, #9c4dcc 100%);
+            --gradient-secondary: linear-gradient(135deg, #9c4dcc 0%, #ba68c8 100%);
+            --gradient-accent: linear-gradient(135deg, #ba68c8 0%, #ce93d8 100%);
+            --gradient-light: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+            --highlight-color: #ab47bc;
+            --highlight-bg: rgba(171, 71, 188, 0.1);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #9c4dcc;
+            --secondary-color: #ba68c8;
+            --accent-color: #ce93d8;
+            --light-color: #4a148c;
+            --dark-color: #311b92;
+            --text-color: #f3e5f5;
+            --heading-color: #ffffff;
+            --background-color: #311b92;
+            --card-bg: #4a148c;
+            --definition-bg: #6a1b9a;
+            --border-color: #7e57c2;
+            --table-even-bg: #5e35b1;
+            --table-hover-bg: #512da8;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #9c4dcc 0%, #6a1b9a 100%);
+            --gradient-secondary: linear-gradient(135deg, #ba68c8 0%, #9c4dcc 100%);
+            --gradient-accent: linear-gradient(135deg, #ce93d8 0%, #ba68c8 100%);
+            --gradient-light: linear-gradient(135deg, #4a148c 0%, #311b92 100%);
+            --highlight-color: #d500f9;
+            --highlight-bg: rgba(213, 0, 249, 0.15);
+        }
+
+        /* Page specific styles - Consistent with other lessons */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-lesson-level {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-topic {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-content {
+            margin: 30px 0;
+        }
+
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        [data-theme="dark"] .ArabicH-exercise-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-exercise-content {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .ArabicH-rule-card {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%);
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-left: 6px solid var(--secondary-color);
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ArabicH-rule-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .ArabicH-rule-card::before {
+            content: "✍️";
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-rule-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            padding-left: 30px;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 8px;
+            position: relative;
+        }
+
+        [data-theme="dark"] .ArabicH-rule-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-rule-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .ArabicH-example-text {
+            font-size: 1.3rem;
+            font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 2.0;
+            color: var(--dark-color);
+            margin: 15px 0;
+            padding: 12px 18px;
+            background-color: rgba(106, 27, 154, 0.08);
+            border-radius: 10px;
+            border-right: 3px solid var(--secondary-color);
+            text-align: right;
+            direction: rtl;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .ArabicH-example-text {
+            color: #f3e5f5;
+            background-color: rgba(156, 77, 204, 0.2);
+            border-right: 3px solid var(--accent-color);
+        }
+
+        .ArabicH-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .ArabicH-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-table th, .ArabicH-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-table th {
+            background-color: var(--definition-bg);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        [data-theme="dark"] .ArabicH-table th {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-table tr:nth-child(even) {
+            background-color: var(--table-even-bg);
+        }
+
+        .ArabicH-table tr:hover {
+            background-color: var(--table-hover-bg);
+        }
+
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .ArabicH-exercise-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-exercise-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .ArabicH-exercise-table td {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-definition-list {
+            padding-right: 20px;
+            margin: 15px 0;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-definition-list li {
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        /* Textarea styling */
+        .ArabicH-table-textarea {
+            width: 100%;
+            min-height: 40px;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--card-bg);
+            resize: vertical;
+            font-family: inherit;
+            font-size: 15px;
+            color: var(--text-color);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .ArabicH-table-textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(186, 104, 200, 0.2);
+        }
+
+        [data-theme="dark"] .ArabicH-table-textarea {
+            background-color: var(--definition-bg);
+            border-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        /* Knowledge Box - Consistent with other modules */
+        .ArabicH-knowledge-box {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 25px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-knowledge-box::before {
+            content: "📝";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        .ArabicH-knowledge-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        [data-theme="dark"] .ArabicH-knowledge-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-knowledge-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Application item styling */
+        .ArabicH-application-item {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--secondary-color);
+            direction: rtl;
+            text-align: right;
+        }
+
+        .ArabicH-application-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .ArabicH-blank-textarea {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 15px;
+            width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 10px;
+            direction: rtl;
+            min-height: 100px;
+        }
+
+        .ArabicH-blank-textarea::placeholder {
+            color: var(--secondary-color);
+            opacity: 0.7;
+        }
+
+        [data-theme="dark"] .ArabicH-blank-textarea::placeholder {
+            color: var(--accent-color);
+            opacity: 0.6;
+        }
+
+        /* Decoration for headers */
+        .ArabicH-writing-decoration {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Instructions box */
+        .ArabicH-instructions-box {
+            background-color: rgba(186, 104, 200, 0.1);
+            border-radius: var(--border-radius);
+            padding: 1.2rem;
+            margin: 15px 0 25px 0;
+            border-right: 4px solid var(--highlight-color);
+            border-left: 4px solid var(--highlight-color);
+            position: relative;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .ArabicH-instructions-box::before {
+            content: "📌";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-instructions-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--highlight-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .ArabicH-instructions-content {
+            line-height: 1.6;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        /* Poetry verse styling */
+        .ArabicH-poetry-verse {
+            background-color: rgba(243, 229, 245, 0.3);
+            border-right: 4px solid var(--secondary-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+            font-size: 1.2rem;
+        }
+
+        [data-theme="dark"] .ArabicH-poetry-verse {
+            background-color: rgba(156, 77, 204, 0.2);
+            color: #f3e5f5;
+        }
+
+        /* Author name styling */
+        .ArabicH-author-name {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-style: normal;
+            padding: 2px 8px;
+            background-color: rgba(106, 27, 154, 0.1);
+            border-radius: 4px;
+            margin-right: 5px;
+            display: inline-block;
+            font-family: 'Arial', 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            border-right: 2px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .ArabicH-author-name:hover {
+            background-color: rgba(106, 27, 154, 0.2);
+            transform: scale(1.05);
+        }
+
+        [data-theme="dark"] .ArabicH-author-name {
+            color: var(--accent-color);
+            background-color: rgba(156, 77, 204, 0.15);
+            border-right: 2px solid var(--secondary-color);
+        }
+
+        [data-theme="dark"] .ArabicH-author-name:hover {
+            background-color: rgba(156, 77, 204, 0.25);
+        }
+
+        /* تحسينات إضافية للوضوح في الوضع الداكن */
+        [data-theme="dark"] p,
+        [data-theme="dark"] li,
+        [data-theme="dark"] div:not(.ArabicH-example-text):not(.ArabicH-box-cell) {
+            color: var(--text-color) !important;
+        }
+
+        [data-theme="dark"] strong {
+            color: var(--accent-color);
+        }
+
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) {
+            color: var(--accent-color);
+        }
+
+        /* Style for essay topic */
+        .ArabicH-essay-topic {
+            background-color: var(--highlight-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 20px 0;
+            border-right: 4px solid var(--primary-color);
+            border-left: 4px solid var(--primary-color);
+            font-weight: 600;
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        [data-theme="dark"] .ArabicH-essay-topic {
+            background-color: rgba(156, 77, 204, 0.2);
+            color: var(--accent-color);
+        }
+
+        /* Step indicator */
+        .ArabicH-step-indicator {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        /* Responsive styles for lesson page */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title {
+                font-size: 2rem;
+            }
+            
+            .ArabicH-lesson-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-lesson-container {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-lesson-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .ArabicH-table {
+                font-size: 14px;
+            }
+            
+            .ArabicH-example-text {
+                font-size: 1.15rem;
+                padding: 10px 15px;
+                line-height: 1.8;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1.2rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.2rem;
+                padding-left: 25px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 12px;
+                top: 12px;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main {
+                padding: 1rem;
+            }
+            
+            .ArabicH-lesson-title {
+                font-size: 1.6rem;
+            }
+            
+            .ArabicH-exercise-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-example-text {
+                font-size: 1.05rem;
+                line-height: 1.7;
+                padding: 8px 12px;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.1rem;
+                padding-left: 22px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 10px;
+                top: 10px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.writingLesson.module1Section1Lesson1Title">التدريب على إنتاج المقال</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.writingLesson.module1Section1Lesson1Subtitle">الدرس الأول: تحليل موضوع أدبي حول شعر الغزل عند جميل بن معمر</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-level">
+                    <span class="ArabicH-writing-decoration">📚</span> المرحلة: الأولى ثانوي <span class="ArabicH-writing-decoration">📚</span>
+                </div>
+                <div class="ArabicH-lesson-topic">
+                    <span class="ArabicH-writing-decoration">✍️</span> التخصص: التعبير الكتابي <span class="ArabicH-writing-decoration">✍️</span>
+                </div>
+            </div>
+            
+            <!-- Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">مقدمة الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p>هذا الدرس مخصص للتدريب على إنتاج المقال الأدبي من خلال تحليل موضوع حول شعر الغزل عند الشاعر جميل بن معمر. سنتعلم كيفية تفكيك الموضوع وفهمه، ثم التخطيط لكتابة مقال متكامل معتمدين على شواهد مناسبة من الشعر.</p>
+                    <p>الهدف من الدرس هو تعلم كيفية تحليل موضوع أدبي والتخطيط لكتابة مقال متكامل الأركان، مع التركيز على اختيار الشواهد المناسبة وتحليل الأساليب الفنية والمعاني.</p>
+                </div>
+            </div>
+            
+            <!-- Topic Presentation -->
+            <div class="ArabicH-essay-topic">
+                <p>تبدو غزليّات جميل بن معمر في أساليبها ومعانيها شعرًا وجدانيًا قائمًا على تصوير معاناة الشاعر العاشق.</p>
+                <p><strong>حلل هذا الرأي معتمدًا شواهد مناسبة من شعر جميل.</strong></p>
+            </div>
+            
+            <!-- Step 1: Deconstruction and Understanding -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title"><span class="ArabicH-step-indicator">1</span> مرحلة التفكيك والفهم</h3>
+                
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">خطوات التفكيك والفهم:</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p>قبل البدء في كتابة المقال، يجب فهم الموضوع جيدًا من خلال الخطوات التالية:</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 1: تقسيم الموضوع إلى معطى ومطلوب</strong></p>
+                        <p>اقرأ الموضوع قراءة متأنية ثم قسمه إلى قسمين: المعطى (المعلومات الموجودة) والمطلوب (ما يطلب منك فعله).</p>
+                        
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="50%">المعطى (ما هو موجود في الموضوع)</th>
+                                        <th width="50%">المطلوب (ما يطلب منك)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب المعطى هنا..." rows="3"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب المطلوب هنا..." rows="3"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 2: فهم المعطى</strong></p>
+                        <p>حلل المعطى من خلال الإجابة على الأسئلة التالية:</p>
+                        
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="30%">نقطة التحليل</th>
+                                        <th width="70%">الإجابة</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>صيغة المعطى</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="ما هي صيغة المعطى (تقريرية، استفهامية...)؟" rows="2"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>الكلمات المفاتيح</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="ما هي الكلمات المفاتيح في المعطى؟" rows="2"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>محاور الاهتمام</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="ما هي محاور الاهتمام الرئيسية في المعطى؟" rows="2"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 3: فهم المطلوب</strong></p>
+                        <p>ما معنى "حلل" في هذا السياق؟ وما متطلبات التحليل المطلوبة منك؟</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب فهمك للمطلوب هنا..." rows="4"></textarea>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.writingLesson.showAnswer">إظهار الإجابة النموذجية</button>
+                
+                <div id="answer1" class="ArabicH-answer">
+                    <h4>الإجابة النموذجية:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 1: تقسيم الموضوع إلى معطى ومطلوب</strong></p>
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="50%">المعطى</th>
+                                        <th width="50%">المطلوب</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>"تبدو غزليّات جميل بن معمر في أساليبها ومعانيها شعرًا وجدانيًا قائمًا على تصوير معاناة الشاعر العاشق."</td>
+                                        <td>"حلل هذا الرأي معتمدًا شواهد مناسبة من شعر جميل."</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 2: فهم المعطى</strong></p>
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="30%">نقطة التحليل</th>
+                                        <th width="70%">الإجابة</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>صيغة المعطى</td>
+                                        <td>صيغة تقريرية قائمة على جملة فعلية.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>الكلمات المفاتيح</td>
+                                        <td>غزليات جميل، أساليبها، معانيها، شعر وجداني، تصوير معاناة، الشاعر العاشق.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>محاور الاهتمام</td>
+                                        <td>1- الأساليب الفنية المعبرة عن المعاناة.<br>2- المعاني التي تترجم هذه المعاناة.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 3: فهم المطلوب</strong></p>
+                        <p>"حلل" تعني: التوضيح، التفسير، التوسع في العرض مع الدعم بالشواهد المناسبة المنتقاة بدقة من شعر جميل بن معمر.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 2: Planning Stage -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title"><span class="ArabicH-step-indicator">2</span> مرحلة التخطيط للمقال</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">خطوات التخطيط للمقال:</h4>
+                    <ul class="ArabicH-definition-list">
+                        <li>المقدمة: التمهيد للموضوع وطرح الإشكالية.</li>
+                        <li>الجوهر (العرض): تقسيم إلى محاور مع الدعم بالشواهد.</li>
+                        <li>الخاتمة: تلخيص النتائج والتوصية أو التساؤل.</li>
+                    </ul>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 4: التخطيط للمقدمة</strong></p>
+                        <p>اكمس مسودة للمقدمة بناءً على التوجيهات التالية:</p>
+                        
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-table">
+                                <thead>
+                                    <tr>
+                                        <th width="30%">عنصر المقدمة</th>
+                                        <th width="70%">المحتوى المقترح</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>التمهيد</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب التمهيد هنا..." rows="2"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>عرض الموضوع</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب عرض الموضوع هنا..." rows="2"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>الإشكالية</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الإشكالية هنا..." rows="2"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 5: التخطيط لعرض المقال (الجوهر)</strong></p>
+                        <p>قسم العرض إلى محورين رئيسيين وحدد لكل محور النقاط الفرعية والشواهد المناسبة:</p>
+                        
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="20%">المحور الرئيسي</th>
+                                        <th width="40%">النقاط الفرعية</th>
+                                        <th width="40%">الشواهد المقترحة</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>الأساليب الفنية المعبرة عن المعاناة</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النقاط الفرعية هنا..." rows="4"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الشواهد المقترحة هنا..." rows="4"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>المعاني التي تترجم معاناة الشاعر</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النقاط الفرعية هنا..." rows="4"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الشواهد المقترحة هنا..." rows="4"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 6: التخطيط للخاتمة</strong></p>
+                        <p>اكتب مسودة للخاتمة تشمل النقاط التالية:</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب مسودة الخاتمة هنا..." rows="5"></textarea>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.writingLesson.showAnswer">إظهار الإجابة النموذجية</button>
+                
+                <div id="answer2" class="ArabicH-answer">
+                    <h4>الإجابة النموذجية:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 4: التخطيط للمقدمة</strong></p>
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-table">
+                                <thead>
+                                    <tr>
+                                        <th width="30%">عنصر المقدمة</th>
+                                        <th width="70%">المحتوى المقترح</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>التمهيد</td>
+                                        <td>كثيرًا ما استوقف الدارسين لشعر الغزل البدوي الطابع الوجداني العميق الذي يتسم به.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>عرض الموضوع</td>
+                                        <td>من ذلك غزليات جميل بن معمر، فهي تبدو في أساليبها ومعانيها شعرًا وجدانيًا قائمًا على تصوير معاناة الشاعر العاشق.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>الإشكالية</td>
+                                        <td>ما الأساليب الفنية التي توسلها الشاعر للتعبير عن معاناته؟ وما المعاني التي تجسدها؟</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 5: التخطيط لعرض المقال (الجوهر)</strong></p>
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="20%">المحور الرئيسي</th>
+                                        <th width="40%">النقاط الفرعية</th>
+                                        <th width="40%">الشواهد المقترحة</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>الأساليب الفنية المعبرة عن المعاناة</td>
+                                        <td>
+                                            1. الأساليب الإنشائية (الاستفهام، النداء، الدعاء)<br>
+                                            2. الأساليب الخبرية (الجملة الاسمية، الجملة الفعلية)<br>
+                                            3. الصورة الشعرية القائمة على التشبيه<br>
+                                            4. المعجم (معجم الحزن، معجم الموت)
+                                        </td>
+                                        <td>
+                                            "أفي الناس أمثالي أحبّوا فحالهم كحالي أم أحببت من بينهم وحدي؟"<br>
+                                            "فوا حزنا لو ينفع الحزن أهله ووا جزعا لو كان للنفس مجزع"<br>
+                                            "وما صاديات حمن يوما وليلة على الماء يخشين العصيّ حوان"
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>المعاني التي تترجم معاناة الشاعر</td>
+                                        <td>
+                                            1. التعلق والهيام والحب الأزلي<br>
+                                            2. البين والفراق<br>
+                                            3. الوفاء وحفظ العهد<br>
+                                            4. الذكرى والشوق<br>
+                                            5. الموت والخلاص
+                                        </td>
+                                        <td>
+                                            "تعلق روحي روحها قبل خلقنا ومن بعد ما كنا نطافا وفي المهد"<br>
+                                            "كفى حزنا للمرء ما عاش أنه ببين حبيب لا يزال يروع"<br>
+                                            "ياحبّذا موتي إذا جاورت قبري"
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 6: التخطيط للخاتمة</strong></p>
+                        <p>شعر جميل في أساليبه ومعانيه هو ترجمة فنية لتجربة قوامها الحرمان والمعاناة، أي أن للغزل وظيفة نفسية. ويتساءل المرء عن تجربة عمر بن أبي ربيعة (الغزل الحضري) مقارنة بتجربة جميل البدوية.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 3: Analysis of Poetic Evidence -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title"><span class="ArabicH-step-indicator">3</span> تحليل الشواهد الشعرية</h3>
+                
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تعليمات التحليل:</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p>اختر شواهد مناسبة من شعر جميل بن معمر وحللها من حيث الأسلوب والمعنى، مبينًا كيف تعبر عن معاناة الشاعر العاشق.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 7: تحليل شواهد الأساليب الإنشائية</strong></p>
+                        <p>حلل الشاهد التالي من حيث الأسلوب والمعنى:</p>
+                        <div class="ArabicH-poetry-verse">
+                            أفي الناس أمثالي أحبّوا فحالهم كحالي أم أحببت من بينهم وحدي؟
+                        </div>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب تحليلك هنا..." rows="4"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 8: تحليل شواهد الأساليب الخبرية</strong></p>
+                        <p>حلل الشاهد التالي من حيث الأسلوب والمعنى:</p>
+                        <div class="ArabicH-poetry-verse">
+                            غريب مشوق مولع بادّكاركم
+                        </div>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب تحليلك هنا..." rows="4"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 9: تحليل شواهد معاني المعاناة</strong></p>
+                        <p>حلل الشاهد التالي من حيث المعنى الذي يعبر عن معاناة الشاعر:</p>
+                        <div class="ArabicH-poetry-verse">
+                            كفى حزنا للمرء ما عاش أنه ببين حبيب لا يزال يروع
+                        </div>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب تحليلك هنا..." rows="4"></textarea>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.writingLesson.showAnswer">إظهار الإجابة النموذجية</button>
+                
+                <div id="answer3" class="ArabicH-answer">
+                    <h4>الإجابة النموذجية:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 7: تحليل شواهد الأساليب الإنشائية</strong></p>
+                        <div class="ArabicH-poetry-verse">
+                            أفي الناس أمثالي أحبّوا فحالهم كحالي أم أحببت من بينهم وحدي؟
+                        </div>
+                        <p><strong>التحليل:</strong> هذا الشاهد يمثل استفهامًا يفيد الحيرة والضياع. الشاعر يتساءل عما إذا كان وحده من يحب بهذه الشدة أم أن هناك من يشبهه. الأسلوب الإنشائي (الاستفهام) يعكس حالة الاضطراب النفسي والحيرة التي يعيشها الشاعر العاشق.</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 8: تحليل شواهد الأساليب الخبرية</strong></p>
+                        <div class="ArabicH-poetry-verse">
+                            غريب مشوق مولع بادّكاركم
+                        </div>
+                        <p><strong>التحليل:</strong> الجملة الاسمية هنا (غريب مشوق مولع) تقدم صورة ثابتة للحالة النفسية للشاعر. صيغة "غريب" تشير إلى الاغتراب والعزلة، و"مشوق" تعبر عن الشوق الدائم، و"مولع" تدل على شدة التعلق. هذه الجملة الاسمية تعطي صورة ثابتة ودائمة لمعاناة الشاعر.</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 9: تحليل شواهد معاني المعاناة</strong></p>
+                        <div class="ArabicH-poetry-verse">
+                            كفى حزنا للمرء ما عاش أنه ببين حبيب لا يزال يروع
+                        </div>
+                        <p><strong>التحليل:</strong> هذا البيت يعبر عن معنى "البين" (الفراق) الذي يمثل مصدرًا أساسيًا للمعاناة عند جميل. الشاعر يرى أن أكبر مصدر للحزن في حياة الإنسان هو فراق الحبيب المستمر. كلمة "يروع" تعني يخيف ويرهب، مما يعطي صورة للفراق ككابوس مستمر يلاحق الشاعر.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Final Integration Exercise -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title"><span class="ArabicH-step-indicator">4</span> التمرين النهائي: كتابة فقرة متكاملة</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تعليمات الكتابة:</h4>
+                    <p>اكتب فقرة متكاملة (مقدمة، عرض، خاتمة) تلخص تحليلك للموضوع، مع دعم أفكارك بالشواهد المناسبة.</p>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <textarea class="ArabicH-blank-textarea" placeholder="اكتب فقرتك المتكاملة هنا..." rows="12"></textarea>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.writingLesson.showAnswer">إظهار نموذج للإجابة</button>
+                
+                <div id="answer4" class="ArabicH-answer">
+    <h4>نموذج للإجابة:</h4>
+    <div class="ArabicH-application-item">
+        <p><strong>فقرة متكاملة:</strong></p>
+        <p>تُعدّ غزليات جميل بن معمر من أبرز النماذج التي تجسد الشعر الوجداني في التراث العربي، فهي لا تقتصر على مجرد التغزل بالمحبوبة، بل تتجاوز ذلك إلى تصوير شامل لمعاناة العاشق وما يعتريه من اضطراب نفسي وقلق وجودي. يتجلى هذا البعد الوجداني في توظيفه لأساليب إنشائية متعددة، مثل الاستفهام الذي يعكس حيرته واغترابه عن العالم: «أفي الناس أمثالي أحبّوا فحالهم كحالي أم أحببت من بينهم وحدي؟»، والنداء الذي يبرز تفجعه واستعطافه: «فوا حزنا لو ينفع الحزن أهله». كما يكثر من الأساليب الخبرية التي تثبت حالة المعاناة وتصورها في صورة ثابتة، مثل قوله: «غريب مشوق مولع بادّكاركم»، حيث يختزل إحساسه بالوحدة والاغتراب في جملة اسمية مكثفة.</p>
+        
+        <p>ولا يقف جميل عند حدود الأسلوب، بل ينسج معاني عميقة تتعلق بالفراق والبين، فيصور البعد عن الحبيب كعذاب دائم لا ينقطع: «كفى حزنا للمرء ما عاش أنه ببين حبيب لا يزال يروع». ويضيف إلى ذلك معنى الشوق الأبدي الذي يتجاوز حدود الحياة والموت، فيقول: «وإن يكُ جثماني بأرض سواكم فإنّ فؤادي عندك الدهر أجمع». هذا المزج بين المعاناة الجسدية والوجدانية يفتح أفقًا فلسفيًا للشعر الغزلي، حيث يصبح الموت ذاته خلاصًا من العذاب: «يا حبّذا موتي إذا جاورت قبري».</p>
+        
+        <p>إن هذه الغزليات لا تُقرأ بوصفها مجرد نصوص عاطفية، بل باعتبارها ترجمة فنية لتجربة إنسانية شاملة، تجمع بين العمق النفسي والبراعة الأسلوبية، وتكشف عن قدرة الشعر العربي القديم على التعبير عن أرقى صور المعاناة الإنسانية. فهي بذلك تمثل علامة فارقة في مسار الشعر الوجداني، وتؤكد أن الغزل عند جميل ليس ترفًا فنّيًا، بل شهادة صادقة على مأساة العاشق في مواجهة الفقد والحرمان.</p>
+    </div>
+</div>
+            </div>
+            
+            <!-- Lesson Summary -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">ملخص الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <ul class="ArabicH-definition-list">
+                        <li><strong>مرحلة التفكيك والفهم:</strong> تقسيم الموضوع إلى معطى ومطلوب، فهم الكلمات المفاتيح، تحديد محاور الاهتمام.</li>
+                        <li><strong>مرحلة التخطيط:</strong> تقسيم المقال إلى مقدمة وعرض وخاتمة، تحديد المحاور الرئيسية والنقاط الفرعية.</li>
+                        <li><strong>الأساليب الفنية في شعر جميل:</strong>
+                            <ol>
+                                <li>الأساليب الإنشائية (استفهام، نداء، دعاء).</li>
+                                <li>الأساليب الخبرية (جملة اسمية، جملة فعلية).</li>
+                                <li>الصور الشعرية القائمة على التشبيه.</li>
+                                <li>المعجم الخاص (معجم الحزن، معجم الموت).</li>
+                            </ol>
+                        </li>
+                        <li><strong>المعاني في شعر جميل:</strong>
+                            <ul>
+                                <li>التعلق والهيام والحب الأزلي.</li>
+                                <li>البين والفراق الدائم.</li>
+                                <li>الوفاء وحفظ العهد.</li>
+                                <li>الذكرى والشوق المستمر.</li>
+                                <li>الموت كخلاص من المعاناة.</li>
+                            </ul>
+                        </li>
+                        <li><strong>نصائح للكتابة:</strong>
+                            <ul>
+                                <li>اختيار الشواهد المناسبة والموثقة.</li>
+                                <li>تحليل الشواهد من حيث الأسلوب والمعنى.</li>
+                                <li>ربط الأفكار بشكل منطقي ومتسلسل.</li>
+                                <li>الحرص على الوضوح والدقة في التعبير.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- End of Lesson -->
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                    <span class="ArabicH-writing-decoration">✍️</span> 
+                    تمارين مفيدة وناجحة في التدريب على إنتاج المقال 
+                    <span class="ArabicH-writing-decoration">✍️</span>
+                </p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.writingLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.writingLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="#" class="ArabicH-nav-btn" data-i18n="ArabicH.writingLesson.previousLesson">الدرس السابق</a>
+                <a href="#" class="ArabicH-nav-btn" data-i18n="ArabicH.writingLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHWritingModule1Section1Lesson1 = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Writing Lesson specific translations
+                "ArabicH.writingLesson.module1Section1Lesson1Title": "التدريب على إنتاج المقال",
+                "ArabicH.writingLesson.module1Section1Lesson1Subtitle": "الدرس الأول: تحليل موضوع أدبي حول شعر الغزل عند جميل بن معمر",
+                "ArabicH.writingLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.writingLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.writingLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.writingLesson.previousLesson": "الدرس السابق",
+                "ArabicH.writingLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Writing Lesson specific translations
+                "ArabicH.writingLesson.module1Section1Lesson1Title": "Essay Writing Training",
+                "ArabicH.writingLesson.module1Section1Lesson1Subtitle": "Lesson 1: Analysis of a Literary Topic on Jamil bin Ma'mar's Love Poetry",
+                "ArabicH.writingLesson.showAnswer": "Show Answer",
+                "ArabicH.writingLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.writingLesson.backToHome": "Back to Homepage",
+                "ArabicH.writingLesson.previousLesson": "Previous Lesson",
+                "ArabicH.writingLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Writing Lesson specific translations
+                "ArabicH.writingLesson.module1Section1Lesson1Title": "Entraînement à la Rédaction",
+                "ArabicH.writingLesson.module1Section1Lesson1Subtitle": "Leçon 1: Analyse d'un Sujet Littéraire sur la Poésie Amoureuse de Jamil bin Ma'mar",
+                "ArabicH.writingLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.writingLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.writingLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.writingLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.writingLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHWritingModule1Section1Lesson1;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Answer toggle functionality
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إظهار الإجابة';
+            } else {
+                answer.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء الإجابة';
+            }
+        }
+
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Set answer button text after translation
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+            
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                // Check for saved theme or prefer-color-scheme
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.checked = true;
+                }
+                
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+            
+            // Add focus to first textarea when page loads
+            const firstTextarea = document.querySelector('.ArabicH-table-textarea');
+            if (firstTextarea) {
+                setTimeout(() => {
+                    firstTextarea.focus();
+                }, 500);
+            }
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

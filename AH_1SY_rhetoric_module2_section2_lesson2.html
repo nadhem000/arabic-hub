@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بلاغة: الإنشاء غير الطلبي - الدرس الثاني | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#654321">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="الإنشاء غير الطلبي">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Unique SaddleBrown-BurlyWood Theme for Non-Requestive Construction Lesson */
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #A0522D;
+            --accent-color: #D2691E;
+            --light-color: #FAEBD7;
+            --dark-color: #5D2906;
+            --text-color: #3E2723;
+            --heading-color: #311A0D;
+            --background-color: #FFF8F0;
+            --card-bg: #FFFFFF;
+            --definition-bg: #FAEBD7;
+            --border-color: #DEB887;
+            --table-even-bg: #F5F5DC;
+            --table-hover-bg: #F0E0C2;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(139, 69, 19, 0.12);
+            --gradient-primary: linear-gradient(135deg, #8B4513 0%, #5D2906 100%);
+            --gradient-secondary: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
+            --gradient-accent: linear-gradient(135deg, #D2691E 0%, #A0522D 100%);
+            --gradient-light: linear-gradient(135deg, #FAEBD7 0%, #F5DEB3 100%);
+            --highlight-color: #CD853F;
+            --highlight-bg: rgba(205, 133, 63, 0.1);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #A0522D;
+            --secondary-color: #D2691E;
+            --accent-color: #DEB887;
+            --light-color: #3E2723;
+            --dark-color: #311A0D;
+            --text-color: #FAEBD7;
+            --heading-color: #FFFFFF;
+            --background-color: #311A0D;
+            --card-bg: #3E2723;
+            --definition-bg: #5D2906;
+            --border-color: #A0522D;
+            --table-even-bg: #5D2906;
+            --table-hover-bg: #8B4513;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
+            --gradient-secondary: linear-gradient(135deg, #D2691E 0%, #A0522D 100%);
+            --gradient-accent: linear-gradient(135deg, #DEB887 0%, #D2691E 100%);
+            --gradient-light: linear-gradient(135deg, #3E2723 0%, #311A0D 100%);
+            --highlight-color: #E6B17E;
+            --highlight-bg: rgba(230, 177, 126, 0.15);
+        }
+
+        /* Page specific styles - Consistent with other lessons */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-lesson-teacher {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-content {
+            margin: 30px 0;
+        }
+
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        [data-theme="dark"] .ArabicH-exercise-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-exercise-content {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .ArabicH-rule-card {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%);
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-left: 6px solid var(--secondary-color);
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ArabicH-rule-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .ArabicH-rule-card::before {
+            content: "📘";
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-rule-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            padding-left: 30px;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 8px;
+            position: relative;
+        }
+
+        [data-theme="dark"] .ArabicH-rule-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-rule-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .ArabicH-example-text {
+            font-size: 1.3rem;
+            font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 2.0;
+            color: var(--dark-color);
+            margin: 15px 0;
+            padding: 12px 18px;
+            background-color: rgba(139, 69, 19, 0.08);
+            border-radius: 10px;
+            border-right: 3px solid var(--secondary-color);
+            text-align: right;
+            direction: rtl;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .ArabicH-example-text {
+            color: #FAEBD7;
+            background-color: rgba(160, 82, 45, 0.2);
+            border-right: 3px solid var(--accent-color);
+        }
+
+        .ArabicH-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .ArabicH-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-table th, .ArabicH-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-table th {
+            background-color: var(--definition-bg);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        [data-theme="dark"] .ArabicH-table th {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-table tr:nth-child(even) {
+            background-color: var(--table-even-bg);
+        }
+
+        .ArabicH-table tr:hover {
+            background-color: var(--table-hover-bg);
+        }
+
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .ArabicH-exercise-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-exercise-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .ArabicH-exercise-table td {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-definition-list {
+            padding-right: 20px;
+            margin: 15px 0;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-definition-list li {
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        /* Textarea styling */
+        .ArabicH-table-textarea {
+            width: 100%;
+            min-height: 40px;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--card-bg);
+            resize: vertical;
+            font-family: inherit;
+            font-size: 15px;
+            color: var(--text-color);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .ArabicH-table-textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(210, 105, 30, 0.2);
+        }
+
+        [data-theme="dark"] .ArabicH-table-textarea {
+            background-color: var(--definition-bg);
+            border-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        /* Knowledge Box - Consistent with other modules */
+        .ArabicH-knowledge-box {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 25px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-knowledge-box::before {
+            content: "💡";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        .ArabicH-knowledge-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        [data-theme="dark"] .ArabicH-knowledge-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-knowledge-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Application item styling */
+        .ArabicH-application-item {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--secondary-color);
+            direction: rtl;
+            text-align: right;
+        }
+
+        .ArabicH-application-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .ArabicH-blank-textarea {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 15px;
+            width: 250px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 10px;
+            direction: rtl;
+        }
+
+        .ArabicH-blank-textarea::placeholder {
+            color: var(--secondary-color);
+            opacity: 0.7;
+        }
+
+        [data-theme="dark"] .ArabicH-blank-textarea::placeholder {
+            color: var(--accent-color);
+            opacity: 0.6;
+        }
+
+        /* Flower decoration for headers */
+        .ArabicH-flower-decoration {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Instructions box */
+        .ArabicH-instructions-box {
+            background-color: rgba(205, 133, 63, 0.1);
+            border-radius: var(--border-radius);
+            padding: 1.2rem;
+            margin: 15px 0 25px 0;
+            border-right: 4px solid var(--highlight-color);
+            border-left: 4px solid var(--highlight-color);
+            position: relative;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .ArabicH-instructions-box::before {
+            content: "⚠️";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-instructions-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--highlight-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .ArabicH-instructions-content {
+            line-height: 1.6;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        /* Quran and Poetry verse styling */
+        .ArabicH-quran-verse {
+            background-color: rgba(250, 235, 215, 0.3);
+            border-right: 4px solid var(--accent-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+            font-size: 1.2rem;
+        }
+
+        [data-theme="dark"] .ArabicH-quran-verse {
+            background-color: rgba(210, 105, 30, 0.2);
+            color: #FAEBD7;
+        }
+
+        .ArabicH-poetry-verse {
+            background-color: rgba(250, 235, 215, 0.3);
+            border-right: 4px solid var(--secondary-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+        }
+
+        [data-theme="dark"] .ArabicH-poetry-verse {
+            background-color: rgba(160, 82, 45, 0.2);
+            color: #FAEBD7;
+        }
+
+        /* Author name styling */
+        .ArabicH-author-name {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-style: normal;
+            padding: 2px 8px;
+            background-color: rgba(139, 69, 19, 0.1);
+            border-radius: 4px;
+            margin-right: 5px;
+            display: inline-block;
+            font-family: 'Arial', 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            border-right: 2px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .ArabicH-author-name:hover {
+            background-color: rgba(139, 69, 19, 0.2);
+            transform: scale(1.05);
+        }
+
+        [data-theme="dark"] .ArabicH-author-name {
+            color: var(--accent-color);
+            background-color: rgba(160, 82, 45, 0.15);
+            border-right: 2px solid var(--secondary-color);
+        }
+
+        [data-theme="dark"] .ArabicH-author-name:hover {
+            background-color: rgba(160, 82, 45, 0.25);
+        }
+
+        /* تحسينات إضافية للوضوح في الوضع الداكن */
+        [data-theme="dark"] p,
+        [data-theme="dark"] li,
+        [data-theme="dark"] div:not(.ArabicH-example-text):not(.ArabicH-box-cell) {
+            color: var(--text-color) !important;
+        }
+
+        [data-theme="dark"] strong {
+            color: var(--accent-color);
+        }
+
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) {
+            color: var(--accent-color);
+        }
+
+        /* Responsive styles for lesson page */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title {
+                font-size: 2rem;
+            }
+            
+            .ArabicH-lesson-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-lesson-container {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-lesson-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .ArabicH-table {
+                font-size: 14px;
+            }
+            
+            .ArabicH-example-text {
+                font-size: 1.15rem;
+                padding: 10px 15px;
+                line-height: 1.8;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1.2rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.2rem;
+                padding-left: 25px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 12px;
+                top: 12px;
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-blank-textarea {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main {
+                padding: 1rem;
+            }
+            
+            .ArabicH-lesson-title {
+                font-size: 1.6rem;
+            }
+            
+            .ArabicH-exercise-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-example-text {
+                font-size: 1.05rem;
+                line-height: 1.7;
+                padding: 8px 12px;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.1rem;
+                padding-left: 22px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 10px;
+                top: 10px;
+                font-size: 1rem;
+            }
+            
+            .ArabicH-blank-textarea {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.rhetoricLesson.module2Section2Lesson2Title">بلاغة: الإنشاء غير الطلبي</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.rhetoricLesson.module2Section2Lesson2Subtitle">الدرس الثاني: القسم - التعجب - المدح والذم</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher">
+                    <span class="ArabicH-flower-decoration">❦</span> الاستاذ: غير معروف <span class="ArabicH-flower-decoration">❦</span>
+                </div>
+                <div class="ArabicH-lesson-class">
+                    <span class="ArabicH-flower-decoration">✿</span> المعهد: غير معروف <span class="ArabicH-flower-decoration">✿</span>
+                </div>
+            </div>
+            
+            <!-- Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">مقدمة الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p>الإنشاء غير الطلبي هو الكلام الذي لا يستدعي مطلوبًا وقت الطلب، أي أن حصول الطلب غير مرتبط بالطلب نفسه. يتضمن هذا النوع من الإنشاء أساليب متعددة مثل القسم والتعجب والمدح والذم والرجاء وغيرها.</p>
+                    <p>في هذا الدرس سنتناول ثلاثة أنواع رئيسية من الإنشاء غير الطلبي: القسم، التعجب، والمدح والذم، مع التعرف على صيغها وأدواتها وأمثلة تطبيقية عليها.</p>
+                </div>
+            </div>
+            
+            <!-- جدول تعريف الإنشاء غير الطلبي -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">تعريف الإنشاء غير الطلبي</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">التعريف:</h4>
+                    <p>الإنشاء غير الطلبي هو الكلام الذي لا يستدعي مطلوبًا وقت الطلب، حيث أن حصول الطلب غير مرتبط بالطلب نفسه. لم يركز علماء البلاغة على دراسته بشكل معمق لأن صيغه لا تستعمل إلا في معانيها الأصلية.</p>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="25%">النوع</th>
+                                    <th width="75%">التعريف والملاحظات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>الإنشاء غير الطلبي</strong></td>
+                                    <td>كلام لا يستدعي مطلوبًا وقت الطلب (حصول الطلب غير مرتبط بالطلب)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>سبب عدم التركيز عليه</strong></td>
+                                    <td>
+                                        <ol>
+                                            <li>صيغه لا تستعمل إلا في معانيها الأصلية (التعجب لا يفيد إلا التعجب، القسم لا يفيد إلا القسم)</li>
+                                            <li>أكثر هذه الأساليب في الأصل أخبار نُقلت إلى معنى الإنشاء</li>
+                                        </ol>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- القسم -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">1- القسم</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تعريف القسم:</h4>
+                    <p>إنشاء غير طلبي يؤكد من خلاله المتكلم المقسم عليه، وذلك باستعمال أدوات القسم أو أفعال تفيد القسم أو عبارات خاصة.</p>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">☻ أمثلة على القسم:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>مثال 1:</strong> (جميل)</p>
+                        <div class="ArabicH-poetry-verse">
+                            زعم النـاس أن دائي طبّي<br>
+                            أنـتِ والله يا بثيـنـة طبّي
+                        </div>
+                        <p><strong>الشرح:</strong> يؤكد جميل أن وصال بثينة هو دواؤه الوحيد مما يجد في حبها.</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>مثال 2:</strong> (عمر)</p>
+                        <div class="ArabicH-poetry-verse">
+                            قلتُ: اسمعي لا تعجلي بقطيعةٍ،<br>
+                            باللهِ، احلفُ صادقاً أيمانا
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>مثال 3:</strong> (جميل)</p>
+                        <div class="ArabicH-poetry-verse">
+                            يقولون مهلا يا جميلُ إنّني<br>
+                            لأُقسِمُ مالي عن بثينة من مهلِ
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>مثال قرآني:</strong></p>
+                        <div class="ArabicH-quran-verse">
+                            ﴿قَالُواْ تَاللّهِ لَقَدْ عَلِمْتُم مَّا جِئْنَا لِنُفْسِدَ فِي الأَرْضِ وَمَا كُنَّا سَارِقِينَ﴾ [يوسف: 73]
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>مثال من كليلة ودمنة:</strong></p>
+                        <div class="ArabicH-example-text">
+                            فقال الحكيم بيدبا: لعمري لقد قلتم فأحسنتم، لكن ذا الرأي الحازم لا يدع أن يشاور من هو دونه أو فوقه في المنزلة
+                        </div>
+                    </div>
+                    
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">☻ أركان القسم:</h4>
+                    
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="25%">الركن</th>
+                                    <th width="75%">التوضيح</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>أداة القسم</strong></td>
+                                    <td>الواو، الباء، التاء، اللام، أو فعل (أقسم، أحلف...)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>المقسم به</strong></td>
+                                    <td>اسم الله تعالى أو غيره</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>المقسم عليه</strong></td>
+                                    <td>جواب القسم (المطلوب تأكيده)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">☻ أدوات القسم:</h4>
+                    
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="25%">الأداة</th>
+                                    <th width="75%">الاستعمال والشروط</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>الواو</strong></td>
+                                    <td>تدخل على الاسم الظاهر فقط (والله)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الباء</strong></td>
+                                    <td>تدخل على كل مقسم به، ظاهراً كان أو ضميراً (بالله)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>التاء</strong></td>
+                                    <td>تدخل على اسم الله تعالى فقط (تالله)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الفعل</strong></td>
+                                    <td>أقسم، أحلف، أعاهد...</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>العبارة</strong></td>
+                                    <td>لعمري، لعمرك...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التعجب -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">2- التعجب</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تعريف التعجب:</h4>
+                    <p>إنشاء غير طلبي يعبر من خلاله المتكلم عن استعظام صفة في شيء ما، استحساناً لها أو استقباحاً.</p>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">☻ أمثلة على التعجب:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>مثال 1:</strong> (جميل)</p>
+                        <div class="ArabicH-poetry-verse">
+                            وتثاقلـت لما رأت كلفي بهـا<br>
+                            أحبـب إليّ بـذاك من متثاقـل
+                        </div>
+                        <p><strong>الشرح:</strong> تعجب من صفة التثاقل في المحبوبة.</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>مثال 2:</strong> (أبو القاسم الشابي)</p>
+                        <div class="ArabicH-poetry-verse">
+                            إنّ وادِي الظَّلامِ يَطْفَحُ بالهَوْ<br>
+                            لِ، فما أبعد ابتسام القلوبِ!
+                        </div>
+                        <p><strong>الشرح:</strong> تعجب من صفة البعد في ابتسام القلوب.</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>مثال 3:</strong> (عمر)</p>
+                        <div class="ArabicH-poetry-verse">
+                            فقالت: أَتَحْقِيقًا لِمَا قال كَاشِحٌ<br>
+                            علينا، وتَصْدِيقًا لما كان يُؤْثَرُ؟
+                        </div>
+                        <p><strong>الشرح:</strong> تعجب من صفة التواطؤ مع الكاشح.</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>مثال قرآني:</strong></p>
+                        <div class="ArabicH-quran-verse">
+                            ﴿وَإِن تَعْجَبْ فَعَجَبٌ قَوْلُهُمْ أَئِذَا كُنَّا تُرَاباً أَئِنَّا لَفِي خَلْقٍ جَدِيدٍ أُوْلَـئِكَ الَّذِينَ كَفَرُواْ بِرَبِّهِمْ وَأُوْلَئِكَ الأَغْلاَلُ فِي أَعْنَاقِهِمْ وَأُوْلَـئِكَ أَصْحَابُ النَّارِ هُمْ فِيهَا خَالِدونَ﴾ [الرعد: 5]
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>مثال 5:</strong> (عمر)</p>
+                        <div class="ArabicH-poetry-verse">
+                            فيالَكَ مِنْ لَيْلٍ تقاصر طولُهُ<br>
+                            وما كان ليلي قبل ذاك يَقْصُرُ
+                        </div>
+                    </div>
+                    
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">☻ صيغ التعجب:</h4>
+                    
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="25%">النوع</th>
+                                    <th width="35%">الصيغة</th>
+                                    <th width="40%">مثال</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>قياسية</strong></td>
+                                    <td>أفعِلْ بـِ</td>
+                                    <td>أحبب بـ (المثال 1)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>قياسية</strong></td>
+                                    <td>ما أفعل</td>
+                                    <td>ما أبعد (المثال 2)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>سماعية</strong></td>
+                                    <td>يا لـ / لله درّ</td>
+                                    <td>يا لك من ليل (المثال 5)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>سماعية</strong></td>
+                                    <td>عَجَبٌ / أَيَّ</td>
+                                    <td>فعَجَبٌ قولهم (المثال 4)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>بأساليب أخرى</strong></td>
+                                    <td>الاستفهام</td>
+                                    <td>أتحقيقًا لما قال كاشح (المثال 3)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="ArabicH-instructions-box">
+                        <h4 class="ArabicH-instructions-title">ملاحظة هامة:</h4>
+                        <div class="ArabicH-instructions-content">
+                            <p>يمكن التعبير عن التعجب باستعمال فعل "عَجِبَ" أو أحد مشتقاته، كما يمكن أن تعبر بعض أساليب الإنشاء الطلبي عن معنى التعجب كالاستفهام.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- المدح والذم -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">3- المدح والذم</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تعريف المدح والذم:</h4>
+                    <p>أسلوبان إنشائيان غير طلبيين، يعبر بهما المتكلم عن موقف الاستحسان (المدح) أو الاستهجان (الذم).</p>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">☻ أمثلة على المدح:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>مثال من كليلة ودمنة:</strong></p>
+                        <div class="ArabicH-example-text">
+                            فقالت المرأة: نِعْمَ ما قلت! وعندنا من الأرز والسمسم ما يكفي ستة نفر أو سبعة
+                        </div>
+                        <p><strong>الشرح:</strong> تعبير عن استحسان كلام زوجها باستعمال فعل المدح "نِعْمَ".</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>مثال آخر:</strong></p>
+                        <div class="ArabicH-example-text">
+                            حبّذا الصديقُ أنتَ
+                        </div>
+                        <p><strong>الشرح:</strong> تعبير عن المدح باستعمال "حبّذا".</p>
+                    </div>
+                    
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">☻ أمثلة على الذم:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>مثال قرآني:</strong></p>
+                        <div class="ArabicH-quran-verse">
+                            ﴿ادْخُلُوا أَبْوَابَ جَهَنَّمَ خَالِدِينَ فِيهَا فَبِئْسَ مَثْوَى الْمُتَكَبِّرِينَ﴾ [غافر: 76]
+                        </div>
+                        <p><strong>الشرح:</strong> تعبير عن استهجان مثوى المتكبرين باستعمال فعل الذم "بِئْسَ".</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>مثال آخر:</strong></p>
+                        <div class="ArabicH-example-text">
+                            لاحبَّذا ما تعوّدته من فعلٍ (لقولك لمن تعود الكذب)
+                        </div>
+                    </div>
+                    
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">☻ أفعال المدح والذم:</h4>
+                    
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="25%">النوع</th>
+                                    <th width="35%">الفعل الجامد</th>
+                                    <th width="40%">مثال</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>المدح</strong></td>
+                                    <td>نِعْمَ</td>
+                                    <td>نِعْمَ ما قلت!</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>المدح</strong></td>
+                                    <td>حَبَّذَا</td>
+                                    <td>حَبَّذَا الصديقُ أنتَ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الذم</strong></td>
+                                    <td>بِئْسَ</td>
+                                    <td>فَبِئْسَ مَثْوَى الْمُتَكَبِّرِينَ</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الذم</strong></td>
+                                    <td>لاحَبَّذَا</td>
+                                    <td>لاحَبَّذَا ما تعوّدته</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الذم</strong></td>
+                                    <td>سَاءَ</td>
+                                    <td>سَاءَ مَثَلاً القَوْمُ الفَاسِقُونَ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- صيغ الإنشاء غير الطلبي -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">صيغ الإنشاء غير الطلبي الأخرى</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="20%">الصيغة</th>
+                                    <th width="40%">الأفعال والألفاظ الدالة</th>
+                                    <th width="40%">مثال</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>العقود</strong></td>
+                                    <td>تكون بالماضي غالباً: بعتُ، اشتريتُ، وهبتُ</td>
+                                    <td>أنا بائع، بعتُ سيارتي، قبلتُ هذا الزواج</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الرجاء</strong></td>
+                                    <td>لعلّ، عسى، حرى، اخلولق</td>
+                                    <td>لعل انحدار الدمع يعقب راحة، عسى فرج يأتي به الله</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>رب، وكم الخبرية</strong></td>
+                                    <td>تُستخدم للدلالة على التقليل أو التكثير</td>
+                                    <td>رب أخ لك لم تلده أمك، كم من فئة قليلة غلبت فئة كثيرة</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التطبيق 1 -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التطبيق 1: تحديد نوع الإنشاء غير الطلبي</h3>
+                
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تعليمات التطبيق:</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p><strong>حدد نوع الإنشاء غير الطلبي في الأمثلة التالية مع ذكر السبب:</strong></p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-application-item">
+                        <p>1. ﴿وَاللَّيْلِ إِذا يَغْشَى * وَالنَّهارِ إِذا تَجَلَّى * وَما خَلَقَ الذَّكَرَ وَالْأُنْثى * إِنَّ سَعْيَكُمْ لَشَتَّى﴾ [الليل: 1-4]</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب النوع وسببه..." rows="2" style="width: 100%;"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>2. وقول الأعشى: إن يقل هنّ من بني عبد شمس *** فحرى أن يكون ذاك، وكانا</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب النوع وسببه..." rows="2" style="width: 100%;"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>3. خبث بكر أصلاً</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب النوع وسببه..." rows="2" style="width: 100%;"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>4. عبدي حرٌ لوجه الله تعالى</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب النوع وسببه..." rows="2" style="width: 100%;"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>5. قال حرير: يا حبذا جبل الريّان من جبل *** وحبذا ساكن الريّان من كانا</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب النوع وسببه..." rows="2" style="width: 100%;"></textarea>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار إصلاح التطبيق 1</button>
+                
+                <div id="answer1" class="ArabicH-answer">
+                    <h4>إصلاح التطبيق 1:</h4>
+                    <div class="ArabicH-application-item">
+                        <p><strong>1. ﴿وَاللَّيْلِ إِذا يَغْشَى ...﴾</strong></p>
+                        <p><strong>النوع:</strong> قسم</p>
+                        <p><strong>السبب:</strong> لأنه بدأ بأداة القسم "الواو" في "والليل" وتكرر القسم في "والنهار" و"وما خلق"</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>2. إن يقل هنّ من بني عبد شمس ...</strong></p>
+                        <p><strong>النوع:</strong> رجاء</p>
+                        <p><strong>السبب:</strong> لأنه استعمل فعل الرجاء "حرى"</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>3. خبث بكر أصلاً</strong></p>
+                        <p><strong>النوع:</strong> ذم</p>
+                        <p><strong>السبب:</strong> لأنه عبر عن الاستهجان لصفة الخبث في بكر</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>4. عبدي حرٌ لوجه الله تعالى</strong></p>
+                        <p><strong>النوع:</strong> عقود</p>
+                        <p><strong>السبب:</strong> لأنه تصريح بالعتق (عقد عتق)</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>5. يا حبذا جبل الريّان من جبل ...</strong></p>
+                        <p><strong>النوع:</strong> مدح</p>
+                        <p><strong>السبب:</strong> لأنه استعمل فعل المدح "حبذا" للإشادة بجبل الريان وساكنيه</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التطبيق 2 -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التطبيق 2: تصنيف الأمثلة</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">☻ صنف الأمثلة التالية حسب نوع الإنشاء غير الطلبي:</h4>
+                    
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="60%">المثال</th>
+                                    <th width="30%">النوع</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td>﴿كيف تكفرون بالله وكنتم أمواتاً فأحياكم﴾ [البقرة: 28]</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td>قول معن بن أوس: لعمرك ما أدري وإني لأوجل *** على أينا تعدو المنية أول</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td>اخلوقت السماء أن تمطر</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td>ما أَبعَدَ العَيبَ وَالنُقصانَ عَن شخصيّتي</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>⑤</td>
+                                    <td>وهبتُ مالاً كثيراً للفقراء</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>⑥</td>
+                                    <td>قول الشاعر: بنفسي تلك الأرض ما أطيب الرُّبا *** وما أحسن المُصطاف والمتربعا</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>⑦</td>
+                                    <td>﴿وَتَاللَّهِ لَأَكِيدَنَّ أَصْنَامَكُمْ بَعْدَ أَنْ تُوَلُّوا مُدْبِرِينَ﴾ [الأنبياء: 57]</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع..." rows="1"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار إصلاح التطبيق 2</button>
+                
+                <div id="answer2" class="ArabicH-answer">
+                    <h4>إصلاح التطبيق 2:</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="60%">المثال</th>
+                                    <th width="30%">النوع</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td>﴿كيف تكفرون بالله وكنتم أمواتاً فأحياكم﴾</td>
+                                    <td>تعجب</td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td>قول معن بن أوس: لعمرك ما أدري وإني لأوجل ...</td>
+                                    <td>قسم</td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td>اخلوقت السماء أن تمطر</td>
+                                    <td>رجاء</td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td>ما أَبعَدَ العَيبَ وَالنُقصانَ عَن شخصيّتي</td>
+                                    <td>تعجب</td>
+                                </tr>
+                                <tr>
+                                    <td>⑤</td>
+                                    <td>وهبتُ مالاً كثيراً للفقراء</td>
+                                    <td>عقود</td>
+                                </tr>
+                                <tr>
+                                    <td>⑥</td>
+                                    <td>قول الشاعر: بنفسي تلك الأرض ما أطيب الرُّبا ...</td>
+                                    <td>تعجب</td>
+                                </tr>
+                                <tr>
+                                    <td>⑦</td>
+                                    <td>﴿وَتَاللَّهِ لَأَكِيدَنَّ أَصْنَامَكُمْ بَعْدَ أَنْ تُوَلُّوا مُدْبِرِينَ﴾</td>
+                                    <td>قسم</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التطبيق 3 -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التطبيق 3: إنشاء أمثلة</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">☻ أنشئ أمثلة على أنواع الإنشاء غير الطلبي التالية:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>1. قسم باستخدام أداة "الباء":</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب المثال هنا..." rows="2" style="width: 100%;"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>2. تعجب باستخدام صيغة "ما أفعل":</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب المثال هنا..." rows="2" style="width: 100%;"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>3. مدح باستخدام "نعم":</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب المثال هنا..." rows="2" style="width: 100%;"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>4. ذم باستخدام "بئس":</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب المثال هنا..." rows="2" style="width: 100%;"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>5. رجاء باستخدام "لعل":</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب المثال هنا..." rows="2" style="width: 100%;"></textarea>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار أمثلة مقترحة</button>
+                
+                <div id="answer3" class="ArabicH-answer">
+                    <h4>أمثلة مقترحة (قد تختلف إجابات الطلاب):</h4>
+                    <div class="ArabicH-application-item">
+                        <p><strong>1. قسم باستخدام أداة "الباء":</strong></p>
+                        <p>بالله لأذاكرنّ الدرس حتى أتفوق</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>2. تعجب باستخدام صيغة "ما أفعل":</strong></p>
+                        <p>ما أجمُلَ الطبيعةَ في فصل الربيع!</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>3. مدح باستخدام "نعم":</strong></p>
+                        <p>نِعْمَ الصديقُ الذي يُساعدك في الشدة</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>4. ذم باستخدام "بئس":</strong></p>
+                        <p>بِئْسَ الخُلُقُ الكذبُ والغش</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>5. رجاء باستخدام "لعل":</strong></p>
+                        <p>لعل الله يفرج همي ويرزقني الصبر</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ملخص الدرس -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">ملخص الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <ul class="ArabicH-definition-list">
+                        <li><strong>الإنشاء غير الطلبي:</strong> كلام لا يستدعي مطلوبًا وقت الطلب (حصول الطلب غير مرتبط بالطلب).</li>
+                        <li><strong>القسم:</strong> إنشاء غير طلبي يؤكد به المتكلم المقسم عليه.
+                            <ul>
+                                <li><strong>أدواته:</strong> الواو، الباء، التاء، اللام، أو فعل (أقسم، أحلف...)، أو العبارة (لعمري).</li>
+                                <li><strong>أركانه:</strong> أداة القسم + المقسم به + المقسم عليه.</li>
+                            </ul>
+                        </li>
+                        <li><strong>التعجب:</strong> إنشاء غير طلبي يعبر عن استعظام صفة في شيء ما.
+                            <ul>
+                                <li><strong>صيغه القياسية:</strong> أفعِلْ بـِ / ما أفعل.</li>
+                                <li><strong>صيغه السماعية:</strong> يا لـ / لله درّ / عجبٌ / أيّ.</li>
+                                <li>يمكن التعبير عنه بالاستفهام أو فعل "عَجِبَ".</li>
+                            </ul>
+                        </li>
+                        <li><strong>المدح والذم:</strong> أسلوبان إنشائيان غير طلبيين للتعبير عن الاستحسان أو الاستهجان.
+                            <ul>
+                                <li><strong>أفعال المدح:</strong> نِعْمَ، حَبَّذَا.</li>
+                                <li><strong>أفعال الذم:</strong> بِئْسَ، لاحَبَّذَا، سَاءَ.</li>
+                            </ul>
+                        </li>
+                        <li><strong>أنواع أخرى:</strong> العقود، الرجاء، رب وكم الخبرية.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- نهاية الدرس -->
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                    <span class="ArabicH-flower-decoration">❦</span> 
+                    <span class="ArabicH-flower-decoration">✿</span> 
+                    <span class="ArabicH-flower-decoration">❦</span>
+                </p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.rhetoricLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.rhetoricLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_1SY_rhetoric_module2_section2_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.rhetoricLesson.previousLesson">الدرس السابق</a>
+                <a href="AH_1SY_rhetoric_module2_section2_lesson3.html" class="ArabicH-nav-btn" data-i18n="ArabicH.rhetoricLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHRhetoricModule2Section2Lesson2 = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Rhetoric Lesson specific translations
+                "ArabicH.rhetoricLesson.module2Section2Lesson2Title": "بلاغة: الإنشاء غير الطلبي",
+                "ArabicH.rhetoricLesson.module2Section2Lesson2Subtitle": "الدرس الثاني: القسم - التعجب - المدح والذم",
+                "ArabicH.rhetoricLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.rhetoricLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.rhetoricLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.rhetoricLesson.previousLesson": "الدرس السابق",
+                "ArabicH.rhetoricLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Rhetoric Lesson specific translations
+                "ArabicH.rhetoricLesson.module2Section2Lesson2Title": "Rhetoric: Non-Requestive Construction",
+                "ArabicH.rhetoricLesson.module2Section2Lesson2Subtitle": "Lesson 2: Oath - Exclamation - Praise and Blame",
+                "ArabicH.rhetoricLesson.showAnswer": "Show Answer",
+                "ArabicH.rhetoricLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.rhetoricLesson.backToHome": "Back to Homepage",
+                "ArabicH.rhetoricLesson.previousLesson": "Previous Lesson",
+                "ArabicH.rhetoricLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Rhetoric Lesson specific translations
+                "ArabicH.rhetoricLesson.module2Section2Lesson2Title": "Rhétorique: Construction Non-Impérative",
+                "ArabicH.rhetoricLesson.module2Section2Lesson2Subtitle": "Leçon 2: Serment - Exclamation - Louange et Blâme",
+                "ArabicH.rhetoricLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.rhetoricLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.rhetoricLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.rhetoricLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.rhetoricLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHRhetoricModule2Section2Lesson2;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Answer toggle functionality
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إظهار الإجابة';
+            } else {
+                answer.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء الإجابة';
+            }
+        }
+
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Set answer button text after translation
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+            
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                // Check for saved theme or prefer-color-scheme
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.checked = true;
+                }
+                
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+            
+            // Add focus to first textarea when page loads
+            const firstTextarea = document.querySelector('.ArabicH-table-textarea');
+            if (firstTextarea) {
+                setTimeout(() => {
+                    firstTextarea.focus();
+                }, 500);
+            }
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

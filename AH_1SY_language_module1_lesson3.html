@@ -1,0 +1,1930 @@
+[file name]: AH_1SY_language_module1_lesson2.html
+[file content begin]
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لغة: رتبة الجملة - الدرس الثاني | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#795548">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="رتبة الجملة">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Unique Brown-Orange Theme for Sentence Rank Lesson */
+        :root {
+            --primary-color: #795548;
+            --secondary-color: #8d6e63;
+            --accent-color: #a1887f;
+            --light-color: #efebe9;
+            --dark-color: #5d4037;
+            --text-color: #3e2723;
+            --heading-color: #4e342e;
+            --background-color: #f5f1ee;
+            --card-bg: #ffffff;
+            --definition-bg: #d7ccc8;
+            --border-color: #bcaaa4;
+            --table-even-bg: #efebe9;
+            --table-hover-bg: #d7ccc8;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(121, 85, 72, 0.12);
+            --gradient-primary: linear-gradient(135deg, #795548 0%, #5d4037 100%);
+            --gradient-secondary: linear-gradient(135deg, #8d6e63 0%, #795548 100%);
+            --gradient-accent: linear-gradient(135deg, #a1887f 0%, #8d6e63 100%);
+            --gradient-light: linear-gradient(135deg, #efebe9 0%, #d7ccc8 100%);
+            --highlight-color: #f57c00;
+            --highlight-bg: rgba(245, 124, 0, 0.1);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #a1887f;
+            --secondary-color: #bcaaa4;
+            --accent-color: #d7ccc8;
+            --light-color: #5d4037;
+            --dark-color: #3e2723;
+            --text-color: #efebe9;
+            --heading-color: #ffffff;
+            --background-color: #3e2723;
+            --card-bg: #5d4037;
+            --definition-bg: #795548;
+            --border-color: #8d6e63;
+            --table-even-bg: #5d4037;
+            --table-hover-bg: #6d4c41;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #8d6e63 0%, #6d4c41 100%);
+            --gradient-secondary: linear-gradient(135deg, #a1887f 0%, #8d6e63 100%);
+            --gradient-accent: linear-gradient(135deg, #d7ccc8 0%, #a1887f 100%);
+            --gradient-light: linear-gradient(135deg, #5d4037 0%, #4e342e 100%);
+            --highlight-color: #ffb74d;
+            --highlight-bg: rgba(255, 183, 77, 0.15);
+        }
+
+        /* Page specific styles - Consistent with other lessons */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-lesson-teacher {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-content {
+            margin: 30px 0;
+        }
+
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        [data-theme="dark"] .ArabicH-exercise-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-exercise-content {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .ArabicH-rule-card {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%);
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-left: 6px solid var(--secondary-color);
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ArabicH-rule-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .ArabicH-rule-card::before {
+            content: "📘";
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-rule-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            padding-left: 30px;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 8px;
+            position: relative;
+        }
+
+        [data-theme="dark"] .ArabicH-rule-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-rule-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .ArabicH-example-text {
+            font-size: 1.3rem;
+            font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 2.0;
+            color: var(--dark-color);
+            margin: 15px 0;
+            padding: 12px 18px;
+            background-color: rgba(121, 85, 72, 0.08);
+            border-radius: 10px;
+            border-right: 3px solid var(--secondary-color);
+            text-align: right;
+            direction: rtl;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .ArabicH-example-text {
+            color: #efebe9;
+            background-color: rgba(141, 110, 99, 0.2);
+            border-right: 3px solid var(--accent-color);
+        }
+
+        .ArabicH-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .ArabicH-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        .ArabicH-table th, .ArabicH-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-table th {
+            background-color: var(--definition-bg);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        [data-theme="dark"] .ArabicH-table th {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-table tr:nth-child(even) {
+            background-color: var(--table-even-bg);
+        }
+
+        .ArabicH-table tr:hover {
+            background-color: var(--table-hover-bg);
+        }
+
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .ArabicH-exercise-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        .ArabicH-exercise-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .ArabicH-exercise-table td {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-definition-list {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        .ArabicH-definition-list li {
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        /* Enhanced styles for text to replace - Consistent with other modules */
+        .ArabicH-to-replace {
+            background-color: var(--highlight-bg);
+            border-bottom: 3px solid var(--highlight-color);
+            border-top: 1px solid var(--highlight-color);
+            padding: 4px 8px;
+            border-radius: 6px;
+            color: #e65100;
+            font-weight: 700;
+            font-style: italic;
+            position: relative;
+            transition: all 0.3s ease;
+            cursor: help;
+            display: inline-block;
+            margin: 0 2px;
+        }
+
+        [data-theme="dark"] .ArabicH-to-replace {
+            color: #ffe0b2;
+            background-color: rgba(255, 183, 77, 0.15);
+            border-bottom: 3px solid var(--highlight-color);
+            border-top: 1px solid var(--highlight-color);
+        }
+
+        .ArabicH-to-replace:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            background-color: rgba(245, 124, 0, 0.2);
+        }
+
+        .ArabicH-to-replace::before {
+            content: "⇨";
+            margin-left: 5px;
+            color: var(--highlight-color);
+            font-weight: bold;
+        }
+
+        .ArabicH-to-replace::after {
+            content: "⇦";
+            margin-right: 5px;
+            color: var(--highlight-color);
+            font-weight: bold;
+        }
+
+        .ArabicH-table-textarea {
+            width: 100%;
+            min-height: 40px;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--card-bg);
+            resize: vertical;
+            font-family: inherit;
+            font-size: 15px;
+            color: var(--text-color);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .ArabicH-table-textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(161, 136, 127, 0.2);
+        }
+
+        [data-theme="dark"] .ArabicH-table-textarea {
+            background-color: var(--definition-bg);
+            border-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .ArabicH-answer-textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            font-family: inherit;
+            font-size: 16px;
+            resize: vertical;
+        }
+
+        /* Input fields for tables - Consistent with other modules */
+        .ArabicH-table-input {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            font-size: 15px;
+            text-align: center;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .ArabicH-table-input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(161, 136, 127, 0.2);
+        }
+
+        /* Knowledge Box - Consistent with other modules */
+        .ArabicH-knowledge-box {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 25px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-knowledge-box::before {
+            content: "💡";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        .ArabicH-knowledge-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        [data-theme="dark"] .ArabicH-knowledge-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-knowledge-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Application item styling - Consistent with other modules */
+        .ArabicH-application-item {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--secondary-color);
+        }
+
+        .ArabicH-application-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .ArabicH-blank-textarea {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 15px;
+            width: 250px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 10px;
+        }
+
+        .ArabicH-blank-textarea::placeholder {
+            color: var(--secondary-color);
+            opacity: 0.7;
+        }
+
+        [data-theme="dark"] .ArabicH-blank-textarea::placeholder {
+            color: var(--accent-color);
+            opacity: 0.6;
+        }
+
+        /* Flower decoration for headers - Consistent with other modules */
+        .ArabicH-flower-decoration {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Instructions box - Consistent with other modules */
+        .ArabicH-instructions-box {
+            background-color: rgba(245, 124, 0, 0.1);
+            border-radius: var(--border-radius);
+            padding: 1.2rem;
+            margin: 15px 0 25px 0;
+            border-right: 4px solid var(--highlight-color);
+            border-left: 4px solid var(--highlight-color);
+            position: relative;
+        }
+
+        .ArabicH-instructions-box::before {
+            content: "⚠️";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-instructions-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--highlight-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .ArabicH-instructions-content {
+            line-height: 1.6;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        /* Original text column styling - Consistent with other modules */
+        .ArabicH-original-text {
+            text-align: right;
+            direction: rtl;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+            font-size: 1.1rem;
+            color: var(--dark-color);
+            line-height: 1.6;
+            padding: 8px;
+            background-color: rgba(121, 85, 72, 0.05);
+            border-radius: 6px;
+        }
+
+        [data-theme="dark"] .ArabicH-original-text {
+            color: #efebe9;
+            background-color: rgba(141, 110, 99, 0.1);
+        }
+
+        /* Special quote styling */
+        .ArabicH-poetic-verse {
+            background-color: rgba(215, 204, 200, 0.8);
+            border-right: 4px solid var(--secondary-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+            font-family: 'Traditional Arabic', serif;
+            font-size: 1.2rem;
+            line-height: 2.0;
+        }
+
+        [data-theme="dark"] .ArabicH-poetic-verse {
+            background-color: rgba(93, 64, 55, 0.5);
+            color: #d7ccc8;
+        }
+
+        /* Complex sentence styling */
+        .ArabicH-complex-example {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid var(--accent-color);
+            border-right: 5px solid var(--accent-color);
+            position: relative;
+        }
+
+        .ArabicH-complex-example::before {
+            content: "⚡";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-complex-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: center;
+        }
+
+        /* Tool icon decoration */
+        .ArabicH-tool-icon {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Box Styling Function (from module 2) */
+        .ArabicH-box-container {
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ArabicH-box-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        [data-theme="dark"] .ArabicH-box-title {
+            color: var(--accent-color);
+        }
+
+        /* Sentence Analysis Table (from module 2) */
+        .ArabicH-sentence-analysis-table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            direction: rtl;
+        }
+
+        .ArabicH-sentence-analysis-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-sentence-analysis-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+
+        .ArabicH-analysis-level {
+            background-color: var(--definition-bg);
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        [data-theme="dark"] .ArabicH-analysis-level {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-grammar-term {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        [data-theme="dark"] .ArabicH-grammar-term {
+            color: var(--accent-color);
+            opacity: 0.9;
+        }
+
+        .merged-cell {
+            background-color: rgba(121, 85, 72, 0.1);
+        }
+
+        [data-theme="dark"] .merged-cell {
+            background-color: rgba(141, 110, 99, 0.15);
+        }
+
+        .ArabicH-sentence-analysis-table tr:hover {
+            background-color: var(--table-hover-bg);
+        }
+
+        /* تحسينات إضافية للوضوح في الوضع الداكن - Consistent with other modules */
+        [data-theme="dark"] p,
+        [data-theme="dark"] li,
+        [data-theme="dark"] div:not(.ArabicH-example-text):not(.ArabicH-box-cell) {
+            color: var(--text-color) !important;
+        }
+
+        [data-theme="dark"] strong {
+            color: var(--accent-color);
+        }
+
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) {
+            color: var(--accent-color);
+        }
+
+        /* Responsive styles for lesson page - Consistent with other modules */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title {
+                font-size: 2rem;
+            }
+            
+            .ArabicH-lesson-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-lesson-container {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-lesson-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .ArabicH-table {
+                font-size: 14px;
+            }
+            
+            .ArabicH-example-text {
+                font-size: 1.15rem;
+                padding: 10px 15px;
+                line-height: 1.8;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1.2rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.2rem;
+                padding-left: 25px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 12px;
+                top: 12px;
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-blank-textarea {
+                width: 200px;
+            }
+            
+            .ArabicH-poetic-verse {
+                font-size: 1.1rem;
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main {
+                padding: 1rem;
+            }
+            
+            .ArabicH-lesson-title {
+                font-size: 1.6rem;
+            }
+            
+            .ArabicH-exercise-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-example-text {
+                font-size: 1.05rem;
+                line-height: 1.7;
+                padding: 8px 12px;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.1rem;
+                padding-left: 22px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 10px;
+                top: 10px;
+                font-size: 1rem;
+            }
+            
+            .ArabicH-blank-textarea {
+                width: 150px;
+            }
+            
+            .ArabicH-poetic-verse {
+                font-size: 1rem;
+                padding: 10px;
+                line-height: 1.8;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <!-- العنوان المعدل ليتوافق مع أسلوب العرض الموحد -->
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.languageLesson.module1Lesson2Title">لغة: رتبة الجملة</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.languageLesson.module1Lesson2Subtitle">الدرس الثاني: ابتدائية، استئنافية، اعتراضية</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher"><span class="ArabicH-flower-decoration">❦</span> الاستاذ: غير معروف <span class="ArabicH-flower-decoration">❦</span></div>
+                <div class="ArabicH-lesson-class"><span class="ArabicH-flower-decoration">✿</span> المعهد: غير معروف <span class="ArabicH-flower-decoration">❦</span> المستوى: أولى ثانوي <span class="ArabicH-flower-decoration">✿</span></div>
+            </div>
+            
+            <!-- Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">تمهيد الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p>يُقدم هذا الدرس مفهوم رتبة الجملة من منظور وظيفي، مع التركيز على الأنواع الثلاثة الرئيسية: الابتدائية، الاستئنافية، والاعتراضية، وتحديد مواضعها ودلالاتها في السياق اللغوي.</p>
+                    <p>سنتناول في هذا الدرس: تعريف رتبة الجملة، الأنواع الثلاثة (ابتدائية، استئنافية، اعتراضية)، شروط كل نوع، مع تحليل أمثلة تطبيقية متنوعة وصعبة.</p>
+                </div>
+            </div>
+            
+            <!-- التمرين 1: التعريفات والأمثلة الأساسية -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التمرين 1: التعريفات والأمثلة الأساسية</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">مقدمة:</h4>
+                    <p>رتبة الجملة هي الوضع الذي تحتله الجملة في سياق الكلام من حيث صلتها بما قبلها وما بعدها. تنقسم إلى ثلاثة أنواع رئيسية: ابتدائية، استئنافية، اعتراضية.</p>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0;">حدد رتبة الجملة في الأمثلة التالية:</h4>
+                    
+                    <!-- Instructions box -->
+                    <div class="ArabicH-instructions-box">
+                        <h4 class="ArabicH-instructions-title">تعليمات التمرين:</h4>
+                        <div class="ArabicH-instructions-content">
+                            <p><strong>يجب تحديد رتبة الجملة <span class="ArabicH-to-replace" style="font-size: 1em;">الملوّنة والمحصورة بين السهمين</span> في السياقات التالية مع تعليل الإجابة.</strong></p>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <div class="ArabicH-example-text">
+                            "ذهب الطالب إلى المدرسة. <span class="ArabicH-to-replace">كان الجو جميلًا</span>. ثم بدأت الحصة."
+                        </div>
+                        <p><strong>رتبة الجملة:</strong> <textarea class="ArabicH-blank-textarea" placeholder="اكتب رتبة الجملة..." rows="1"></textarea></p>
+                        <p><strong>التعليل:</strong> <textarea class="ArabicH-blank-textarea" placeholder="اكتب التعليل..." rows="1"></textarea></p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <div class="ArabicH-example-text">
+                            "الطالب المجتهد - <span class="ArabicH-to-replace">وهذا ما نتمناه للجميع</span> - يحصل على الدرجات العالية."
+                        </div>
+                        <p><strong>رتبة الجملة:</strong> <textarea class="ArabicH-blank-textarea" placeholder="اكتب رتبة الجملة..." rows="1"></textarea></p>
+                        <p><strong>التعليل:</strong> <textarea class="ArabicH-blank-textarea" placeholder="اكتب التعليل..." rows="1"></textarea></p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <div class="ArabicH-example-text">
+                            "<span class="ArabicH-to-replace">إن العلم نور</span>. فهو يضيء الطريق للإنسان."
+                        </div>
+                        <p><strong>رتبة الجملة:</strong> <textarea class="ArabicH-blank-textarea" placeholder="اكتب رتبة الجملة..." rows="1"></textarea></p>
+                        <p><strong>التعليل:</strong> <textarea class="ArabicH-blank-textarea" placeholder="اكتب التعليل..." rows="1"></textarea></p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <div class="ArabicH-example-text">
+                            "ذهبت إلى المكتبة. اشتريت كتابًا. <span class="ArabicH-to-replace">عادلت إلى البيت</span>."
+                        </div>
+                        <p><strong>رتبة الجملة:</strong> <textarea class="ArabicH-blank-textarea" placeholder="اكتب رتبة الجملة..." rows="1"></textarea></p>
+                        <p><strong>التعليل:</strong> <textarea class="ArabicH-blank-textarea" placeholder="اكتب التعليل..." rows="1"></textarea></p>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.languageLesson.showAnswer">إظهار الإجابة</button>
+                
+                <div id="answer1" class="ArabicH-answer">
+                    <h4>إجابات التمرين 1:</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">المثال</th>
+                                    <th width="45%">الجملة</th>
+                                    <th width="20%">الرتبة</th>
+                                    <th width="25%">التعليل</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="ArabicH-original-text">"ذهب الطالب إلى المدرسة. <strong>كان الجو جميلًا</strong>. ثم بدأت الحصة."</td>
+                                    <td>استئنافية</td>
+                                    <td>تأتي بعد جملة تامة المعنى لا ترتبط بها ارتباطًا وثيقًا</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="ArabicH-original-text">"الطالب المجتهد - <strong>وهذا ما نتمناه للجميع</strong> - يحصل على الدرجات العالية."</td>
+                                    <td>اعتراضية</td>
+                                    <td>تقع بين متصلين لفظيًا ومعنويًا</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="ArabicH-original-text">"<strong>إن العلم نور</strong>. فهو يضيء الطريق للإنسان."</td>
+                                    <td>ابتدائية</td>
+                                    <td>تأتي في بداية الكلام ولا تتعلق بما قبلها</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="ArabicH-original-text">"ذهبت إلى المكتبة. اشتريت كتابًا. <strong>عادلت إلى البيت</strong>."</td>
+                                    <td>استئنافية</td>
+                                    <td>تأتي في سياق سرد الأحداث بعد جمل تامة المعنى</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التمرين 2: القواعد العامة والتمييز بين الرتب -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التمرين 2: القواعد العامة والتمييز بين الرتب</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ملاحظات أساسية:</h4>
+                    <ul class="ArabicH-definition-list">
+                        <li>الجملة الابتدائية: تبدأ بها الجملة ولا تتعلق بما قبلها، وتكون مفيدة بذاتها أو تحتاج إلى تتمة.</li>
+                        <li>الجملة الاستئنافية: تأتي بعد جملة تامة المعنى، وتكون إما مؤكدة أو شارحة أو مقررة.</li>
+                        <li>الجملة الاعتراضية: تقع بين متصلين لفظيًا ومعنويًا، وتأتي للدعاء أو التمني أو التعليل.</li>
+                        <li>قد تكون الجملة الواحدة ابتدائية واستئنافية في الوقت نفسه حسب السياق.</li>
+                    </ul>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0;">املأ الفراغات بالكلمات المناسبة:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>1- الجملة <span class="ArabicH-to-replace">_____</span> هي التي تبدأ بها الجملة ولا تتعلق بما قبلها، وتكون مفيدة بذاتها أو تحتاج إلى تتمة.</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب الإجابة هنا..." rows="1"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>2- الجملة <span class="ArabicH-to-replace">_____</span> تأتي بعد جملة تامة المعنى، وتكون إما مؤكدة أو شارحة أو مقررة لما قبلها.</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب الإجابة هنا..." rows="1"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>3- الجملة <span class="ArabicH-to-replace">_____</span> تقع بين متصلين لفظيًا ومعنويًا، وتأتي للدعاء أو التمني أو التعليل أو الاعتذار.</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب الإجابة هنا..." rows="1"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>4- من علامات الجملة الاستئنافية: <span class="ArabicH-to-replace">_____</span> [قد تقترن بأداة استئناف مثل: لكن، بل، أما، فإن]، <span class="ArabicH-to-replace">_____</span> [تأتي بعد جملة تامة المعنى].</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب الإجابة هنا..." rows="2"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>5- من علامات الجملة الاعتراضية: <span class="ArabicH-to-replace">_____</span> [تقع بين متصلين لفظيًا ومعنويًا]، <span class="ArabicH-to-replace">_____</span> [غالبًا ما تحذف منها الأداة المفسرة].</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب الإجابة هنا..." rows="2"></textarea>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.languageLesson.showAnswer">إظهار الإجابة</button>
+                
+                <div id="answer2" class="ArabicH-answer">
+                    <h4>إجابات التمرين 2:</h4>
+                    <div class="ArabicH-application-item">
+                        <p>1- الجملة <strong>الابتدائية</strong> هي التي تبدأ بها الجملة ولا تتعلق بما قبلها، وتكون مفيدة بذاتها أو تحتاج إلى تتمة.</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>2- الجملة <strong>الاستئنافية</strong> تأتي بعد جملة تامة المعنى، وتكون إما مؤكدة أو شارحة أو مقررة لما قبلها.</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>3- الجملة <strong>الاعتراضية</strong> تقع بين متصلين لفظيًا ومعنويًا، وتأتي للدعاء أو التمني أو التعليل أو الاعتذار.</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>4- من علامات الجملة الاستئنافية: <strong>الاقتران بأداة استئناف</strong> [قد تقترن بأداة استئناف مثل: لكن، بل، أما، فإن]، <strong>تأتي بعد جملة تامة المعنى</strong> [تأتي بعد جملة تامة المعنى].</p>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p>5- من علامات الجملة الاعتراضية: <strong>الوقوع بين متصلين</strong> [تقع بين متصلين لفظيًا ومعنويًا]، <strong>حذف الأداة المفسرة</strong> [غالبًا ما تحذف منها الأداة المفسرة].</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التمرين 3: تمارين صعبة في تحديد الرتب -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التمرين 3: تمارين صعبة في تحديد الرتب</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ملاحظات صعبة:</h4>
+                    <p>هناك حالات صعبة تحتاج إلى تحليل دقيق للسياق لتحديد رتبة الجملة، خاصة عندما تتداخل الوظائف أو عندما تكون العلامات غير واضحة.</p>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0;">حلل الجمل التالية وحدد رتبتها مع التعليل الدقيق:</h4>
+                    
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="50%">الجملة في سياقها</th>
+                                    <th width="20%">رتبة الجملة</th>
+                                    <th width="20%">التعليل الدقيق</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="ArabicH-original-text">"أحب القراءة؛ لأنها توسع مدارك الإنسان. <strong>وبالتالي تنمي ثقافته</strong>."</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب التعليل..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="ArabicH-original-text">"الطالب - <strong>وفقك الله</strong> - مجتهد في دراسته."</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب التعليل..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="ArabicH-original-text">"<strong>سافر والدي إلى المدينة</strong>. ولم أتمكن من وداعه."</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب التعليل..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="ArabicH-original-text">"ذهبت إلى السوق. اشتريت حاجياتي. <strong>ثم عدت إلى البيت</strong>."</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب التعليل..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td class="ArabicH-original-text">"الكتاب الجديد - <strong>وهو من تأليف كاتب مشهور</strong> - يحظى بإقبال كبير."</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب التعليل..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td class="ArabicH-original-text">"لا تهمل دروسك. <strong>فالنجاح يتطلب الجهد</strong>."</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب التعليل..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="ArabicH-original-text">"<strong>إن الحمد لله</strong>، نحمده ونستعينه ونستغفره."</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب التعليل..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td class="ArabicH-original-text">"الطقس اليوم جميل. <strong>لذلك قررت الخروج للتنزه</strong>."</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب التعليل..." rows="1"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.languageLesson.showAnswer">إظهار الإجابة</button>
+                
+                <div id="answer3" class="ArabicH-answer">
+                    <h4>إجابات التمرين 3:</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="50%">الجملة في سياقها</th>
+                                    <th width="20%">رتبة الجملة</th>
+                                    <th width="20%">التعليل الدقيق</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="ArabicH-original-text">"أحب القراءة؛ لأنها توسع مدارك الإنسان. <strong>وبالتالي تنمي ثقافته</strong>."</td>
+                                    <td>استئنافية</td>
+                                    <td>جاءت بعد جملة تامة المعنى واقترنت بأداة استئناف (وبالتالي)</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="ArabicH-original-text">"الطالب - <strong>وفقك الله</strong> - مجتهد في دراسته."</td>
+                                    <td>اعتراضية</td>
+                                    <td>وقعت بين متصلين (الطالب - مجتهد) وهي جملة دعاء</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="ArabicH-original-text">"<strong>سافر والدي إلى المدينة</strong>. ولم أتمكن من وداعه."</td>
+                                    <td>ابتدائية</td>
+                                    <td>جاءت في بداية الكلام ولا تتعلق بما قبلها</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="ArabicH-original-text">"ذهبت إلى السوق. اشتريت حاجياتي. <strong>ثم عدت إلى البيت</strong>."</td>
+                                    <td>استئنافية</td>
+                                    <td>جاءت بعد جملتين تامتين المعنى واقترنت بأداة عطف (ثم)</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td class="ArabicH-original-text">"الكتاب الجديد - <strong>وهو من تأليف كاتب مشهور</strong> - يحظى بإقبال كبير."</td>
+                                    <td>اعتراضية</td>
+                                    <td>وقعت بين متصلين (الكتاب الجديد - يحظى) وهي جملة شارحة</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td class="ArabicH-original-text">"لا تهمل دروسك. <strong>فالنجاح يتطلب الجهد</strong>."</td>
+                                    <td>استئنافية</td>
+                                    <td>جاءت بعد جملة تامة المعنى واقترنت بأداة استئناف (فاء السببية)</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="ArabicH-original-text">"<strong>إن الحمد لله</strong>، نحمده ونستعينه ونستغفره."</td>
+                                    <td>ابتدائية</td>
+                                    <td>جاءت في بداية الكلام وهي جملة مستقلة بذاتها</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td class="ArabicH-original-text">"الطقس اليوم جميل. <strong>لذلك قررت الخروج للتنزه</strong>."</td>
+                                    <td>استئنافية</td>
+                                    <td>جاءت بعد جملة تامة المعنى واقترنت بأداة استئناف (لذلك)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التمرين 4: التطبيقات المتقدمة والسياقات المعقدة -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التمرين 4: التطبيقات المتقدمة والسياقات المعقدة</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تطبيقات عملية صعبة:</h4>
+                    <p>التطبيق العملي على تحليل النصوص المعقدة وتحديد رتب الجمل في سياقات متشابكة مع تعليل كل حالة.</p>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0;">حلل النص التالي وحدد رتب الجمل مع التعليل:</h4>
+                    
+                    <div class="ArabicH-poetic-verse" style="margin-bottom: 20px;">
+                        "ذهب الطالب إلى المدرسة. وكان الجو جميلاً. فقرر - بعد وصوله - أن يلعب في الفناء. ثم دخل الفصل. وبدأت الحصة."
+                    </div>
+                    
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="40%">الجملة</th>
+                                    <th width="25%">رتبة الجملة</th>
+                                    <th width="25%">التعليل</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="ArabicH-original-text">ذهب الطالب إلى المدرسة.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب التعليل..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="ArabicH-original-text">وكان الجو جميلاً.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب التعليل..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="ArabicH-original-text">فقرر - بعد وصوله - أن يلعب في الفناء.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب التعليل..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="ArabicH-original-text">ثم دخل الفصل.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب التعليل..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td class="ArabicH-original-text">وبدأت الحصة.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب التعليل..." rows="1"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="ArabicH-application-item" style="margin-top: 20px;">
+                        <h4 style="color: var(--primary-color);">حدد الجملة الاعتراضية في النص السابق وحلل وظيفتها:</h4>
+                        <textarea class="ArabicH-table-textarea" placeholder="اكتب التحليل هنا..." rows="3"></textarea>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.languageLesson.showAnswer">إظهار الإجابة</button>
+                
+                <div id="answer4" class="ArabicH-answer">
+                    <h4>إجابات التمرين 4:</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="40%">الجملة</th>
+                                    <th width="25%">رتبة الجملة</th>
+                                    <th width="25%">التعليل</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="ArabicH-original-text">ذهب الطالب إلى المدرسة.</td>
+                                    <td>ابتدائية</td>
+                                    <td>جاءت في بداية النص ولا تتعلق بما قبلها</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="ArabicH-original-text">وكان الجو جميلاً.</td>
+                                    <td>استئنافية</td>
+                                    <td>جاءت بعد جملة تامة المعنى واقترنت بأداة عطف (الواو)</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="ArabicH-original-text">فقرر - بعد وصوله - أن يلعب في الفناء.</td>
+                                    <td>استئنافية</td>
+                                    <td>جاءت بعد جملة تامة المعنى واقترنت بأداة استئناف (فاء السببية)</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="ArabicH-original-text">ثم دخل الفصل.</td>
+                                    <td>استئنافية</td>
+                                    <td>جاءت بعد جملة تامة المعنى واقترنت بأداة عطف (ثم)</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td class="ArabicH-original-text">وبدأت الحصة.</td>
+                                    <td>استئنافية</td>
+                                    <td>جاءت بعد جملة تامة المعنى واقترنت بأداة عطف (الواو)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="ArabicH-application-item" style="margin-top: 20px;">
+                        <h4 style="color: var(--primary-color);">الجملة الاعتراضية في النص:</h4>
+                        <div class="ArabicH-example-text">
+                            <strong>"بعد وصوله"</strong>
+                        </div>
+                        <p><strong>التحليل:</strong> هذه جملة اعتراضية وقعت بين متصلين (فقرر - أن يلعب)، وهي جملة ظرفية تعبر عن زمان حدوث الفعل (قرر)، وتأتي لتوضيح الوقت الذي تم فيه الفعل.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التمرين 5: التطبيق الشامل - كتابة فقرة -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التمرين 5: التطبيق الشامل - كتابة فقرة أدبية</h3>
+                
+                <!-- Instructions box - Consistent with other modules -->
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تعليمات التمرين:</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p><strong>يجب كتابة فقرة أدبية لا تقل عن 5 أسطر تستخدم فيها الأنواع الثلاثة من رتب الجمل (ابتدائية، استئنافية، اعتراضية).</strong></p>
+                        <p>يجب أن تشمل الفقرة جملة ابتدائية على الأقل، وجملتين استئنافيتين، وجملة اعتراضية واحدة على الأقل.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <textarea class="ArabicH-answer-textarea" placeholder="اكتب فقرتك الأدبية هنا..." rows="8"></textarea>
+                    
+                    <div class="ArabicH-application-item" style="margin-top: 20px;">
+                        <h4 style="color: var(--primary-color);">حدد رتب الجمل التي استخدمتها:</h4>
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="10%">الرقم</th>
+                                        <th width="45%">الجملة</th>
+                                        <th width="45%">رتبة الجملة</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الجملة..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الجملة..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الجملة..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الجملة..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الجملة..." rows="1"></textarea></td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الرتبة..." rows="1"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer5')" data-i18n="ArabicH.languageLesson.showAnswer">إظهار الإجابة النموذجية</button>
+                
+                <div id="answer5" class="ArabicH-answer">
+                    <h4>فقرة أدبية نموذجية:</h4>
+                    <div class="ArabicH-poetic-verse" style="margin-bottom: 20px;">
+                        "<strong>إن القراءة غذاء العقل</strong>. فهي تزيد من معرفة الإنسان وتوسع آفاقه. والكتاب الجيد - <strong>وهو خير جليس</strong> - يصحب القارئ في رحلة معرفية شيقة. لذلك يجب أن نحرص على القراءة اليومية. <strong>فالمعرفة قوة</strong>."
+                    </div>
+                    
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="45%">الجملة</th>
+                                    <th width="45%">رتبة الجملة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="ArabicH-original-text">إن القراءة غذاء العقل.</td>
+                                    <td>ابتدائية</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="ArabicH-original-text">فهي تزيد من معرفة الإنسان وتوسع آفاقه.</td>
+                                    <td>استئنافية</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="ArabicH-original-text">والكتاب الجيد - وهو خير جليس - يصحب القارئ في رحلة معرفية شيقة.</td>
+                                    <td>استئنافية (تحتوي على جملة اعتراضية)</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="ArabicH-original-text">لذلك يجب أن نحرص على القراءة اليومية.</td>
+                                    <td>استئنافية</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td class="ArabicH-original-text">فالمعرفة قوة.</td>
+                                    <td>استئنافية</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="ArabicH-application-item" style="margin-top: 20px;">
+                        <h4 style="color: var(--primary-color);">الجملة الاعتراضية في النص:</h4>
+                        <div class="ArabicH-example-text">
+                            <strong>"وهو خير جليس"</strong>
+                        </div>
+                        <p><strong>التحليل:</strong> هذه جملة اعتراضية وقعت بين متصلين (الكتاب الجيد - يصحب)، وهي جملة شارحة توضح صفة الكتاب.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التمرين 6: تمارين صندقة متقدمة -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التمرين 6: تحليل متقدم باستخدام صندقة الجمل</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">القاعدة:</h4>
+                    <p>تحليل الجملة تحليلاً شاملاً يشمل تحديد رتبتها ونوعها ووظيفتها في السياق.</p>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-box-container">
+                        <h4 class="ArabicH-box-title">إن العلم نورٌ - وهو خير ما يُكتسب - يضيء طريق الحياة.</h4>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer6')" data-i18n="ArabicH.languageLesson.showAnswer">إظهار الإجابة</button>
+                
+                <div id="answer6" class="ArabicH-answer">
+                    <h4>تحليل التمرين 6:</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table ArabicH-sentence-analysis-table">
+                            <thead>
+                                <tr>
+                                <!-- سطر الجملة -->
+                                    <th width="8%">الجملة</th>
+                                    <th width="8%">إنَّ</th>
+                                    <th width="8%">العلمَ</th>
+                                    <th width="8%">نورٌ</th>
+                                    <th width="8%">-</th>
+                                    <th width="8%">وهو</th>
+                                    <th width="8%">خيرٌ</th>
+                                    <th width="8%">ما</th>
+                                    <th width="8%">يُكتسبُ</th>
+                                    <th width="8%">-</th>
+                                    <th width="8%">يضيءُ</th>
+                                    <th width="8%">طريقَ</th>
+                                    <th width="8%">الحياةِ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <!-- مستوى 5 -->
+                                <tr>
+                                    <td class="ArabicH-analysis-level">م4</td>
+                                    <td colspan="1" class="ArabicH-grammar-term"></td>
+                                    <td colspan="1" class="ArabicH-grammar-term"></td>
+                                    <td colspan="1" class="ArabicH-grammar-term"></td>
+                                    <td colspan="1" class="ArabicH-grammar-term"></td>
+                                    <td colspan="1" class="ArabicH-grammar-term"></td>
+                                    <td colspan="1" class="ArabicH-grammar-term"></td>
+                                    <td colspan="1" class="ArabicH-grammar-term">اسم موصول</td>
+                                    <td colspan="1" class="ArabicH-grammar-term">صلة الموصول</td>
+                                    <td colspan="1" class="ArabicH-grammar-term"></td>
+                                    <td colspan="1" class="ArabicH-grammar-term"></td>
+                                    <td colspan="1" class="ArabicH-grammar-term">مضاف</td>
+                                    <td colspan="1" class="ArabicH-grammar-term">مضاف إليه</td>
+                                </tr>
+                                
+                                <!-- مستوى 4 -->
+                                <tr>
+                                    <td class="ArabicH-analysis-level">م3</td>
+                                    <td colspan="1" class="ArabicH-grammar-term">حرف توكيد ونصب</td>
+                                    <td colspan="1" class="ArabicH-grammar-term">اسم إن منصوب</td>
+                                    <td colspan="1" class="ArabicH-grammar-term">خبر إن مرفوع</td>
+                                    <td colspan="1" class="ArabicH-grammar-term"></td>
+                                    <td colspan="1" class="ArabicH-grammar-term">ضمير منفصل</td>
+                                    <td colspan="2" class="ArabicH-grammar-term">خبر مقدم</td>
+                                    <td colspan="1" class="ArabicH-grammar-term">مبتدأ مؤخر</td>
+                                    <td colspan="1" class="ArabicH-grammar-term"></td>
+                                    <td colspan="1" class="ArabicH-grammar-term">فعل مضارع</td>
+                                    <td colspan="2" class="ArabicH-grammar-term">مفعول به</td>
+                                </tr>
+                                
+                                <!-- مستوى 3 -->
+                                <tr>
+                                    <td class="ArabicH-analysis-level">م2</td>
+                                    <td colspan="3" class="ArabicH-grammar-term">جملة اسمية (رتبة ابتدائية)</td>
+                                    <td colspan="1" class="ArabicH-grammar-term">أداة اعتراض</td>
+                                    <td colspan="4" class="ArabicH-grammar-term">جملة اعتراضية</td>
+                                    <td colspan="1" class="ArabicH-grammar-term">أداة اعتراض</td>
+                                    <td colspan="3" class="ArabicH-grammar-term">جملة فعلية (رتبة استئنافية)</td>
+                                </tr>
+                                
+                                <!-- مستوى 2 -->
+                                <tr>
+                                    <td class="ArabicH-analysis-level">م2</td>
+                                    <td colspan="12" class="ArabicH-grammar-term merged-cell">جملة مركبة من ثلاث جمل: ابتدائية، اعتراضية، استئنافية</td>
+                                </tr>
+                                
+                                <!-- مستوى 1 -->
+                                <tr>
+                                    <td class="ArabicH-analysis-level">م1</td>
+                                    <td colspan="12" class="ArabicH-grammar-term merged-cell">جملة اسمية مركبة ذات رتب متعددة</td>
+                                </tr>
+                                
+                                <!-- مستوى التركيب العام -->
+                                <tr>
+                                    <td class="ArabicH-analysis-level" style="background-color: var(--primary-color); color: white;">التركيب</td>
+                                    <td colspan="12" class="ArabicH-grammar-term merged-cell">جملة مركبة تحتوي على ثلاث رتب: ابتدائية، اعتراضية، استئنافية</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="ArabicH-application-item" style="margin-top: 20px;">
+                        <h4 style="color: var(--primary-color);">تحليل الرتب في الجملة:</h4>
+                        <ul class="ArabicH-definition-list" style="margin-right: 20px; text-align: right;">
+                            <li><strong>الجملة الابتدائية:</strong> "إن العلم نور" - جاءت في بداية الكلام ولا تتعلق بما قبلها.</li>
+                            <li><strong>الجملة الاعتراضية:</strong> "وهو خير ما يُكتسب" - وقعت بين متصلين (إن العلم نور - يضيء) وهي جملة شارحة.</li>
+                            <li><strong>الجملة الاستئنافية:</strong> "يضيء طريق الحياة" - جاءت بعد الجملة الابتدائية والاعتراضية لاستكمال المعنى.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- الخلاصة -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">خلاصة الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <ul class="ArabicH-definition-list" style="margin-right: 20px; text-align: right;">
+                        <li><strong>رتبة الجملة:</strong> هي الوضع الذي تحتله الجملة في سياق الكلام من حيث صلتها بما قبلها وما بعدها.</li>
+                        <li><strong>الجملة الابتدائية:</strong> تبدأ بها الجملة ولا تتعلق بما قبلها، وتكون مفيدة بذاتها أو تحتاج إلى تتمة.</li>
+                        <li><strong>الجملة الاستئنافية:</strong> تأتي بعد جملة تامة المعنى، وتكون إما مؤكدة أو شارحة أو مقررة لما قبلها.</li>
+                        <li><strong>الجملة الاعتراضية:</strong> تقع بين متصلين لفظيًا ومعنويًا، وتأتي للدعاء أو التمني أو التعليل أو الاعتذار أو الشرح.</li>
+                        <li><strong>علامات الجملة الاستئنافية:</strong> قد تقترن بأداة استئناف، تأتي بعد جملة تامة المعنى.</li>
+                        <li><strong>علامات الجملة الاعتراضية:</strong> تقع بين متصلين، غالبًا ما تحذف منها الأداة المفسرة.</li>
+                        <li><strong>الحالات الصعبة:</strong> قد تتداخل الوظائف، وقد تكون الجملة الواحدة ابتدائية واستئنافية حسب السياق.</li>
+                    </ul>
+                    <p style="margin-top: 15px; font-weight: bold; color: var(--primary-color);">
+                        فهم رتبة الجملة وتحليلها في السياق يُعدُّ أساسًا لفهم النص العربي وتحليله تحليلاً دقيقًا يُظهر جماليات التركيب اللغوي.
+                    </p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                    <span class="ArabicH-flower-decoration">☻</span> 
+                    <span class="ArabicH-flower-decoration">❋</span> 
+                    <span class="ArabicH-flower-decoration">❀</span> 
+                    <span class="ArabicH-flower-decoration">❋</span> 
+                    <span class="ArabicH-flower-decoration">☻</span>
+                </p>
+                <p style="color: var(--secondary-color); font-weight: bold; font-size: 1.1rem; margin-top: 10px;">
+                    الاستاذ: غير معروف
+                </p>
+                <p style="color: var(--accent-color); font-weight: bold; font-size: 1rem; margin-top: 5px;">
+                    المعهد: غير معروف - المستوى: أولى ثانوي
+                </p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_1SY_language_module1_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.previousLesson">الدرس السابق</a>
+                <a href="AH_1SY_language_module2_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHLanguageModule1Lesson2 = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Language Lesson specific translations
+                "ArabicH.languageLesson.module1Lesson2Title": "لغة: رتبة الجملة",
+                "ArabicH.languageLesson.module1Lesson2Subtitle": "الدرس الثاني: ابتدائية، استئنافية، اعتراضية",
+                "ArabicH.languageLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.languageLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.languageLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.languageLesson.previousLesson": "الدرس السابق",
+                "ArabicH.languageLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Language Lesson specific translations
+                "ArabicH.languageLesson.module1Lesson2Title": "Language: Sentence Rank",
+                "ArabicH.languageLesson.module1Lesson2Subtitle": "Lesson 2: Initial, Resumptive, Parenthetical",
+                "ArabicH.languageLesson.showAnswer": "Show Answer",
+                "ArabicH.languageLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.languageLesson.backToHome": "Back to Homepage",
+                "ArabicH.languageLesson.previousLesson": "Previous Lesson",
+                "ArabicH.languageLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Language Lesson specific translations
+                "ArabicH.languageLesson.module1Lesson2Title": "Langue: Rang de la Phrase",
+                "ArabicH.languageLesson.module1Lesson2Subtitle": "Leçon 2: Initiale, Reprise, Parenthétique",
+                "ArabicH.languageLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.languageLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.languageLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.languageLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.languageLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHLanguageModule1Lesson2;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Answer toggle functionality - Consistent with other modules
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إظهار الإجابة';
+            } else {
+                answer.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء الإجابة';
+            }
+        }
+
+        // Enhanced text to replace interaction - Consistent with other modules
+        function enhanceReplaceElements() {
+            const replaceElements = document.querySelectorAll('.ArabicH-to-replace');
+            
+            replaceElements.forEach(element => {
+                // Add title attribute for tooltip
+                element.setAttribute('title', 'انقر لمعرفة المزيد عن هذا النص المطلوب تحليله');
+                
+                // Add click event for additional info
+                element.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const exampleNumber = this.closest('tr') ? this.closest('tr').querySelector('td:first-child').textContent : '';
+                    alert(`هذا هو النص المطلوب تحليله (${exampleNumber}).\n\nيجب تحديد رتبة هذه الجملة في سياقها.`);
+                });
+                
+                // Add hover effects
+                element.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px) scale(1.02)';
+                    this.style.boxShadow = '0 4px 12px rgba(245, 124, 0, 0.3)';
+                    this.style.zIndex = '10';
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                    this.style.boxShadow = 'none';
+                    this.style.zIndex = '1';
+                });
+            });
+        }
+
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Set answer button text after translation
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+            
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                // Check for saved theme or prefer-color-scheme
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.checked = true;
+                }
+                
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+            
+            // Enhance the text to replace elements
+            enhanceReplaceElements();
+            
+            // Add focus to first textarea when page loads
+            const firstTextarea = document.querySelector('.ArabicH-table-textarea');
+            if (firstTextarea) {
+                setTimeout(() => {
+                    firstTextarea.focus();
+                }, 500);
+            }
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+[file content end]

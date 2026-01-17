@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التدريب على إنتاج تحليل نص أدبي - الدرس الأول | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#00695c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="تحليل نص أدبي">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Unique Emerald-Teal Theme for Literary Analysis Lesson */
+        :root {
+            --primary-color: #00695c;
+            --secondary-color: #00897b;
+            --accent-color: #4db6ac;
+            --light-color: #e0f2f1;
+            --dark-color: #004d40;
+            --text-color: #004d40;
+            --heading-color: #004d40;
+            --background-color: #f0f9f7;
+            --card-bg: #ffffff;
+            --definition-bg: #e0f2f1;
+            --border-color: #b2dfdb;
+            --table-even-bg: #f0f9f7;
+            --table-hover-bg: #e0f2f1;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(0, 105, 92, 0.12);
+            --gradient-primary: linear-gradient(135deg, #00695c 0%, #004d40 100%);
+            --gradient-secondary: linear-gradient(135deg, #00897b 0%, #00695c 100%);
+            --gradient-accent: linear-gradient(135deg, #4db6ac 0%, #00897b 100%);
+            --gradient-light: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);
+            --highlight-color: #00796b;
+            --highlight-bg: rgba(0, 121, 107, 0.1);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #00897b;
+            --secondary-color: #4db6ac;
+            --accent-color: #80cbc4;
+            --light-color: #004d40;
+            --dark-color: #00251a;
+            --text-color: #e0f2f1;
+            --heading-color: #ffffff;
+            --background-color: #00251a;
+            --card-bg: #004d40;
+            --definition-bg: #00695c;
+            --border-color: #00897b;
+            --table-even-bg: #00695c;
+            --table-hover-bg: #004d40;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #00897b 0%, #00695c 100%);
+            --gradient-secondary: linear-gradient(135deg, #4db6ac 0%, #00897b 100%);
+            --gradient-accent: linear-gradient(135deg, #80cbc4 0%, #4db6ac 100%);
+            --gradient-light: linear-gradient(135deg, #004d40 0%, #00251a 100%);
+            --highlight-color: #4db6ac;
+            --highlight-bg: rgba(77, 182, 172, 0.15);
+        }
+
+        /* Page specific styles - Consistent with other lessons */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+
+
+        .ArabicH-lesson-content {
+            margin: 30px 0;
+        }
+
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        [data-theme="dark"] .ArabicH-exercise-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-exercise-content {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .ArabicH-rule-card {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%);
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-left: 6px solid var(--secondary-color);
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ArabicH-rule-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .ArabicH-rule-card::before {
+            content: "📘";
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-rule-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            padding-left: 30px;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 8px;
+            position: relative;
+        }
+
+        [data-theme="dark"] .ArabicH-rule-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-rule-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .ArabicH-example-text {
+            font-size: 1.3rem;
+            font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 2.0;
+            color: var(--dark-color);
+            margin: 15px 0;
+            padding: 12px 18px;
+            background-color: rgba(0, 105, 92, 0.08);
+            border-radius: 10px;
+            border-right: 3px solid var(--secondary-color);
+            text-align: right;
+            direction: rtl;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .ArabicH-example-text {
+            color: #e0f2f1;
+            background-color: rgba(0, 137, 123, 0.2);
+            border-right: 3px solid var(--accent-color);
+        }
+
+        .ArabicH-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .ArabicH-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-table th, .ArabicH-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-table th {
+            background-color: var(--definition-bg);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        [data-theme="dark"] .ArabicH-table th {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-table tr:nth-child(even) {
+            background-color: var(--table-even-bg);
+        }
+
+        .ArabicH-table tr:hover {
+            background-color: var(--table-hover-bg);
+        }
+
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .ArabicH-exercise-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-exercise-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .ArabicH-exercise-table td {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-definition-list {
+            padding-right: 20px;
+            margin: 15px 0;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-definition-list li {
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        /* Textarea styling */
+        .ArabicH-table-textarea {
+            width: 100%;
+            min-height: 40px;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--card-bg);
+            resize: vertical;
+            font-family: inherit;
+            font-size: 15px;
+            color: var(--text-color);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .ArabicH-table-textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(77, 182, 172, 0.2);
+        }
+
+        [data-theme="dark"] .ArabicH-table-textarea {
+            background-color: var(--definition-bg);
+            border-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        /* Knowledge Box - Consistent with other modules */
+        .ArabicH-knowledge-box {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 25px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-knowledge-box::before {
+            content: "📝";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        .ArabicH-knowledge-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        [data-theme="dark"] .ArabicH-knowledge-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-knowledge-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Application item styling */
+        .ArabicH-application-item {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--secondary-color);
+            direction: rtl;
+            text-align: right;
+        }
+
+        .ArabicH-application-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .ArabicH-blank-textarea {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 15px;
+            width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 10px;
+            direction: rtl;
+            min-height: 100px;
+        }
+
+        .ArabicH-blank-textarea::placeholder {
+            color: var(--secondary-color);
+            opacity: 0.7;
+        }
+
+        [data-theme="dark"] .ArabicH-blank-textarea::placeholder {
+            color: var(--accent-color);
+            opacity: 0.6;
+        }
+
+        /* Decoration for headers */
+        .ArabicH-analysis-decoration {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Instructions box */
+        .ArabicH-instructions-box {
+            background-color: rgba(0, 121, 107, 0.1);
+            border-radius: var(--border-radius);
+            padding: 1.2rem;
+            margin: 15px 0 25px 0;
+            border-right: 4px solid var(--highlight-color);
+            border-left: 4px solid var(--highlight-color);
+            position: relative;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .ArabicH-instructions-box::before {
+            content: "📌";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-instructions-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--highlight-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .ArabicH-instructions-content {
+            line-height: 1.6;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        /* Literary text styling */
+        .ArabicH-literary-text {
+            background-color: rgba(224, 242, 241, 0.3);
+            border-right: 4px solid var(--secondary-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        [data-theme="dark"] .ArabicH-literary-text {
+            background-color: rgba(0, 137, 123, 0.2);
+            color: #e0f2f1;
+        }
+
+        /* Step indicator */
+        .ArabicH-step-indicator {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        /* Question styling */
+        .ArabicH-question-item {
+            margin: 15px 0;
+            padding: 12px;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--secondary-color);
+            direction: rtl;
+            text-align: right;
+        }
+
+        .ArabicH-question-number {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            margin-left: 8px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive styles for lesson page */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title {
+                font-size: 2rem;
+            }
+            
+            .ArabicH-lesson-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-lesson-container {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-lesson-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .ArabicH-table {
+                font-size: 14px;
+            }
+            
+            .ArabicH-example-text {
+                font-size: 1.15rem;
+                padding: 10px 15px;
+                line-height: 1.8;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1.2rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.2rem;
+                padding-left: 25px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 12px;
+                top: 12px;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main {
+                padding: 1rem;
+            }
+            
+            .ArabicH-lesson-title {
+                font-size: 1.6rem;
+            }
+            
+            .ArabicH-exercise-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-example-text {
+                font-size: 1.05rem;
+                line-height: 1.7;
+                padding: 8px 12px;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.1rem;
+                padding-left: 22px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 10px;
+                top: 10px;
+                font-size: 1rem;
+            }
+        }
+
+        /* تحسينات إضافية للوضوح في الوضع الداكن */
+        [data-theme="dark"] p,
+        [data-theme="dark"] li,
+        [data-theme="dark"] div:not(.ArabicH-example-text):not(.ArabicH-box-cell) {
+            color: var(--text-color) !important;
+        }
+
+        [data-theme="dark"] strong {
+            color: var(--accent-color);
+        }
+
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) {
+            color: var(--accent-color);
+        }
+.ArabicH-lesson-teacher {
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.ArabicH-lesson-class {
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 15px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.writingAnalysis.module1Section2Lesson1Title">التدريب على إنتاج تحليل نص أدبي</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.writingAnalysis.module1Section2Lesson1Subtitle">الدرس الأول: منهجية تحليل النص الأدبي (شعري أو نثري)</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+    <div class="ArabicH-lesson-teacher">معهد غير معروف - استاذ غير معروف</div>
+    <div class="ArabicH-lesson-title" style="color: white; margin: 0; font-size: 1.5rem;">التدريب على إنتاج تحليل نص أدبي</div>
+    <div class="ArabicH-lesson-class">غير معروف</div>
+</div>
+            
+            <!-- Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">مقدمة الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p>هذا الدرس مخصص للتدريب على منهجية تحليل النص الأدبي (شعري أو نثري). سنتعلم كيفية مقاربة النص الأدبي بطريقة منهجية تنقسم إلى ثلاثة أقسام رئيسية: المقدمة، الجوهر، والخاتمة. سنطبق هذه المنهجية على نص "دمنة في مجلس القضاء (1)" الذي يمثل مشهدًا حجاجيًا في مجلس الحكم.</p>
+                    <p>الهدف من الدرس هو تعلم كيفية تفكيك النص، تحليله، وتأليف تحليل متكامل يلتزم بالمنهجية العلمية مع الاستشهاد بقرائن من النص.</p>
+                </div>
+            </div>
+            
+            <!-- Part 1: Methodology -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title"><span class="ArabicH-step-indicator">1</span> منهجية تحليل النص الأدبي</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">القسم الأول: المقدمة</h4>
+                    <div class="ArabicH-definition-list">
+                        <li><strong>التمهيد:</strong> وضع النص في إطاره التاريخي والسياق الفكري، دون إطالة أو أحكام مسبقة.</li>
+                        <li><strong>التقديم المادي للنص:</strong> تأطير النص (نوعه، مؤلفه، المصدر، الصفحات).</li>
+                        <li><strong>التقديم المعنوي:</strong> ضبط موضوع النص بصيغة جملة فعلية.</li>
+                        <li><strong>الإشكالية أو محاور الاهتمام:</strong> طرح أسئلة التحليل مع الالتزام بالإجابة عنها جميعًا.</li>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">القسم الثاني: الجوهر (التحليل)</h4>
+                    <div class="ArabicH-definition-list">
+                        <li><strong>بنية النص/التفكيك:</strong> تقسيم النص إلى وحداته المعنوية مع التصريح بمعيار التقسيم والتعليق عليه.</li>
+                        <li><strong>التحليل:</strong> النظر في كل وحدة (من الأساليب إلى الدلالات إلى المقاصد) مع الاستشهاد بقرائن من النص.</li>
+                        <li><strong>التقويم:</strong>
+                            <ul>
+                                <li>التقويم الداخلي: طرافة النص، إضافاته، رأي المحلل في مبانيه ومعانيه.</li>
+                                <li>التقويم الخارجي: مقارنة النص بنصوص أخرى لنفس المؤلف أو لغيره.</li>
+                            </ul>
+                        </li>
+                        <li><strong>التأليف الكلي:</strong> جمع أهم الاستنتاجات في مستوى الأساليب والمضامين.</li>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">القسم الثالث: الخاتمة</h4>
+                    <div class="ArabicH-definition-list">
+                        <li><strong>عصارة الأفكار:</strong> تلخيص أهم ما توصل إليه التحليل بإيجاز.</li>
+                        <li><strong>فتح الآفاق:</strong> الإشارة إلى مداخل جديدة أو نصوص قريبة تشترك في الدلالة وتختلف في طرق التعبير.</li>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Part 2: Application to the Text -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title"><span class="ArabicH-step-indicator">2</span> تطبيق على نص "دمنة في مجلس القضاء (1)"</h3>
+                
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">النص المدروس:</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p><strong>دمنة في مجلس القضاء (1)</strong> - يتناول النص مشهدًا حجاجيًا في مجلس الحكم، حيث يُواجه دمنة اتهامًا بقتل شِبل الأسد. القاضي يحث الشهود على قول الحق، بينما يُراوغ دمنة عبر مثلية بلاغية لتقويض شهاداتهم. النص يُجسد صراعًا بين سلطة العدالة ومنطق الحيلة، ويُبرز أهمية الشهادة في كشف الحقيقة.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-literary-text">
+                    <p>القاضي يحث الشهود على قول الحق، ويحذرهم من كتمان الشهادة، مستعملًا أساليب الترهيب الأخلاقي والديني، والتعليل المنطقي، والنداء والتكرار، والاستشهاد بالمأثور. دمنة يُراوغ بحكاية مثلية، محاولًا التشويش على الشهود وتبرير موقفه. الصراع بينهما يُظهر مواجهة بين قيم العدالة وقيم المصلحة الذاتية. أم الأسد تُجسد الضمير الجمعي، وتدفع السلطة القضائية للتحرك. الشهود هم محور الحجاج، بين ضغط القاضي ومراوغة دمنة.</p>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 1: التقسيم إلى وحدات</strong></p>
+                        <p>قسّم النص إلى وحداته المعنوية الرئيسية مع تحديد معيار التقسيم:</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب تقسيم النص إلى وحداته هنا..." rows="4"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 2: تحديد الوضعية الحجاجية</strong></p>
+                        <p>في النص وضعية حجاجية ذات ثلاثة أطراف. بين منزلة كل طرف بالنسبة إلى الآخر:</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب تحليل الوضعية الحجاجية هنا..." rows="4"></textarea>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.writingAnalysis.showAnswer">إظهار الإجابة النموذجية</button>
+                
+                <div id="answer1" class="ArabicH-answer">
+                    <h4>الإجابة النموذجية:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 1: التقسيم إلى وحدات</strong></p>
+                        <p><strong>معيار التقسيم:</strong> التطور الحجاجي والمواقف المتعاقبة.</p>
+                        <p><strong>الوحدات:</strong></p>
+                        <ol>
+                            <li>من السطر 1 إلى 10: خطاب القاضي – دعوة للشهادة وتأكيد على القيم العدلية.</li>
+                            <li>من السطر 11 إلى 14: تردد الجماعة ورد دمنة – بداية الحجاج الدفاعي.</li>
+                            <li>من السطر 15 إلى 27: حكاية دمنة – المثل الحجاجي لتبرير موقفه.</li>
+                            <li>السطر 28: خلاصة دمنة – تحذير من الزلل بالشبهة.</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين 2: تحديد الوضعية الحجاجية</strong></p>
+                        <p><strong>الأطراف الثلاثة:</strong></p>
+                        <ol>
+                            <li><strong>القاضي:</strong> يمثل سلطة العدالة، له منزلة عليا كحاكم ومفصل في النزاع.</li>
+                            <li><strong>الجماعة (الشهود):</strong> تمثل الرأي العام والضمير الجمعي، منزلتها وسطى بين القاضي والمتهم.</li>
+                            <li><strong>دمنة:</strong> يمثل المتهم، منزلته دنيا كمحتج عليه، يحاول الارتقاء بحجته.</li>
+                        </ol>
+                        <p>العلاقة بين الأطراف علاقة هرمية: القاضي في القمة، ثم الجماعة، ثم دمنة في القاعدة.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Part 3: Questions Analysis -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title"><span class="ArabicH-step-indicator">3</span> تحليل أسئلة النص</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-question-item">
+                        <p><span class="ArabicH-question-number">1</span> مم حذر القاضي الشهود؟ وما الأساليب الحجاجية التي توخاها للتأثير فيهم؟</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب إجابتك هنا..." rows="3"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-question-item">
+                        <p><span class="ArabicH-question-number">2</span> استخلص من كلام القاضي ما يدل على انحيازه إلى صف أم الأسد وعلل ذلك.</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب إجابتك هنا..." rows="3"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-question-item">
+                        <p><span class="ArabicH-question-number">3</span> حذر دمنة الشهود من شهادة الزور وأيد كلامه بحكاية مثلية، بين مدى انطباق هذه الحكاية على الوضعية الحجاجية.</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب إجابتك هنا..." rows="3"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-question-item">
+                        <p><span class="ArabicH-question-number">4</span> ما مدار الصراع والتنافس بين القاضي ودمنة؟ وهل هيمن أحدهما على الآخر؟ استدل على جوابك بقرائن نصية.</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب إجابتك هنا..." rows="3"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-question-item">
+                        <p><span class="ArabicH-question-number">5</span> استخلص من النص ملامح كل من القاضي ودمنة والقيم التي يصدر عنها كل واحد منهما.</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب إجابتك هنا..." rows="3"></textarea>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.writingAnalysis.showAnswer">إظهار الإجابة النموذجية</button>
+                
+                <div id="answer2" class="ArabicH-answer">
+                    <h4>الإجابة النموذجية:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>السؤال 1:</strong> حذر القاضي الشهود من كتمان الشهادة، مستعملاً الأساليب الحجاجية التالية:</p>
+                        <ul>
+                            <li>الترهيب الأخلاقي والديني: بتذكيرهم بخطورة الكذب على العدالة.</li>
+                            <li>التعليل المنطقي: ببيان عواقب كتمان الشهادة على المجتمع.</li>
+                            <li>النداء والتكرار: لتأكيد أهمية الموقف.</li>
+                            <li>الاستشهاد بالمأثور: لتعزيز موقفه بسلطة النص.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>السؤال 2:</strong> يدل انحياز القاضي إلى صف أم الأسد من خلال:</p>
+                        <ul>
+                            <li>تركيزه على خطورة قتل البريء وضرورة الإنصاف.</li>
+                            <li>توجيه خطابه للشهود ليكشفوا الحقيقة مما يفيد أن الحقيقة مع أم الأسد.</li>
+                            <li>إدانته الضمنية لدمنة من خلال التأكيد على ضرورة العقاب للجاني.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>السؤال 3:</strong> حكاية دمنة (الطبيب الجاهل) لا تنطبق تمامًا على الوضعية لأن:</p>
+                        <ul>
+                            <li>الحكاية تتحدث عن جهل في التخصص، بينما الشهادة مسألة مشهود بها.</li>
+                            <li>دمنة يستعمل الحكاية مراوغة للتهرب من التهمة، لا للتحذير الحقيقي من الشهادة الزور.</li>
+                            <li>الوضعية الحجاجية تتطلب شهادة صادقة، بينما الحكاية تشكك في قدرة الشهود على الشهادة أصلاً.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>السؤال 4:</strong> مدار الصراع بين العدالة (القاضي) والحيلة (دمنة). القاضي هيمن حجاجيًا لأنه:</p>
+                        <ul>
+                            <li>يمثل سلطة قانونية ومعنوية.</li>
+                            <li>يستند إلى قيم مجتمعية راسخة.</li>
+                            <li>يوجه الحوار ويضبط إيقاع الجلسة.</li>
+                            <li>قرائن نصية: "أيها الشهود... قولوا الحق ولا تكتموا الشهادة".</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>السؤال 5:</strong></p>
+                        <ul>
+                            <li><strong>القاضي:</strong> حازم، أخلاقي، منظم، يصدر عن قيم الحق والصدق والعدالة.</li>
+                            <li><strong>دمنة:</strong> مراوغ، بليغ، ماكر، يصدر عن المصلحة الذاتية والنجاة من العقاب.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Part 4: Advanced Analysis -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title"><span class="ArabicH-step-indicator">4</span> تحليل متقدم وتأليف</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-question-item">
+                        <p><span class="ArabicH-question-number">6</span> لو اعتبرنا الأسد ممثل السلطة التنفيذية والقاضي ممثل السلطة القضائية فماذا تمثل أم الأسد؟ أيد جوابك بأدلة.</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب إجابتك هنا..." rows="3"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-question-item">
+                        <p><span class="ArabicH-question-number">7</span> لو كنت أحد الشهود وحذرك القاضي ثم حذرك المتهم، فكيف ستتصرف؟ وما الأخلاق والاعتبارات التي ستستند إليها في أقوالك ومواقفك؟</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب إجابتك هنا..." rows="4"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>التمرين النهائي: كتابة تحليل كامل للنص</strong></p>
+                        <p>اكتب تحليلاً كاملاً للنص وفق المنهجية التي تعلمتها (مقدمة، جوهر، خاتمة):</p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب تحليلك الكامل هنا..." rows="12"></textarea>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.writingAnalysis.showAnswer">إظهار الإجابة النموذجية</button>
+                
+                <div id="answer3" class="ArabicH-answer">
+                    <h4>الإجابة النموذجية:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>السؤال 6:</strong> أم الأسد تمثل السلطة الأخلاقية والاجتماعية، لأن:</p>
+                        <ul>
+                            <li>هي الطرف المتضرر الذي يطالب بالعدالة.</li>
+                            <li>تمثل الضمير الجمعي والرأي العام.</li>
+                            <li>دفعها للقضاء يمثل تفعيل المجتمع للآليات القانونية.</li>
+                            <li>أدلة: حديثها عن فقدان الولد واستنجادها بالعدالة.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>السؤال 7:</strong> سأتصرف كالتالي:</p>
+                        <ul>
+                            <li>أقول الحق كما رأيته دون زيادة أو نقصان.</li>
+                            <li>أستند إلى أخلاق الصدق والأمانة والعدالة.</li>
+                            <li>أعطي الشهادة بموضوعية دون خوف من تهديدات المتهم.</li>
+                            <li>أحترم سلطة القضاء وأهمية الشهادة في إقامة العدل.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>تحليل كامل للنص:</strong></p>
+                        <p><strong>المقدمة:</strong> يعرض النص مشهدًا حجاجيًا في مجلس القضاء، حيث يتقاطع خطاب القاضي الحازم مع مراوغة دمنة، في مواجهة تُبرز قيمة الشهادة ودورها في كشف الحقيقة، وتُجسد الصراع بين العدالة والحيلة في مجتمع تحكمه القيم والأخلاق.</p>
+                        
+                        <p><strong>الجوهر:</strong> ينقسم النص إلى أربع وحدات: خطاب القاضي، تردد الجماعة، حكاية دمنة، خلاصة دمنة. القاضي يمثل سلطة الحق ويحذر الشهود من كتمان الشهادة مستعملاً أساليب حجاجية قوية. دمنة يراوغ بحكاية مثلية محاولاً التشويش على الشهود. الصراع بينهما يظهر مواجهة بين قيم العدالة وقيم المصلحة الذاتية. أم الأسد تجسد الضمير الجمعي وتدفع السلطة القضائية للتحرك.</p>
+                        
+                        <p><strong>الخاتمة:</strong> النص يبرز أن العدالة لا تبنى على المراوغة، بل على قول الحق والشهادة الصادقة. القاضي يهيمن حجاجيًا، بينما دمنة يحاول الدفاع بالحيلة. المواجهة تجسد صراعًا أبديًا بين الحقيقة والزيف، وترسخ قيمة الصدق كركيزة للعدل في المجتمع.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lesson Summary -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">ملخص الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <ul class="ArabicH-definition-list">
+                        <li><strong>منهجية تحليل النص الأدبي:</strong>
+                            <ol>
+                                <li><strong>المقدمة:</strong> التمهيد، التقديم المادي والمعنوي، الإشكالية.</li>
+                                <li><strong>الجوهر:</strong> بنية النص، التحليل (أساليب ← دلالات ← مقاصد)، التقويم الداخلي والخارجي، التأليف الكلي.</li>
+                                <li><strong>الخاتمة:</strong> عصارة الأفكار، فتح الآفاق.</li>
+                            </ol>
+                        </li>
+                        <li><strong>تحليل نص "دمنة في مجلس القضاء (1)":</strong>
+                            <ul>
+                                <li>وضعية حجاجية ثلاثية الأطراف (القاضي، الجماعة، دمنة).</li>
+                                <li>صراع بين العدالة (القاضي) والحيلة (دمنة).</li>
+                                <li>أهمية الشهادة في كشف الحقيقة وإقامة العدل.</li>
+                                <li>القيم المتصارعة: الحق والصدق مقابل المصلحة الذاتية.</li>
+                            </ul>
+                        </li>
+                        <li><strong>نصائح للتحليل الجيد:</strong>
+                            <ul>
+                                <li>الالتزام بالمنهجية والترتيب المنطقي.</li>
+                                <li>الاستشهاد بقرائن نصية داعمة.</li>
+                                <li>تجنب الأحكام المسبقة والانطباعية.</li>
+                                <li>ربط التحليل بالقيم والأفكار الكبرى.</li>
+                                <li>الوضوح والدقة في التعبير.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.writingAnalysis.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.writingAnalysis.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_1SY_writing_module1_section1_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.writingAnalysis.previousLesson">الدرس السابق</a>
+                <a href="#" class="ArabicH-nav-btn" data-i18n="ArabicH.writingAnalysis.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHWritingAnalysisModule1Section2Lesson1 = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Writing Analysis specific translations
+                "ArabicH.writingAnalysis.module1Section2Lesson1Title": "التدريب على إنتاج تحليل نص أدبي",
+                "ArabicH.writingAnalysis.module1Section2Lesson1Subtitle": "الدرس الأول: منهجية تحليل النص الأدبي (شعري أو نثري)",
+                "ArabicH.writingAnalysis.showAnswer": "إظهار الإجابة",
+                "ArabicH.writingAnalysis.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.writingAnalysis.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.writingAnalysis.previousLesson": "الدرس السابق",
+                "ArabicH.writingAnalysis.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Writing Analysis specific translations
+                "ArabicH.writingAnalysis.module1Section2Lesson1Title": "Training on Literary Text Analysis",
+                "ArabicH.writingAnalysis.module1Section2Lesson1Subtitle": "Lesson 1: Methodology of Literary Text Analysis (Poetry or Prose)",
+                "ArabicH.writingAnalysis.showAnswer": "Show Answer",
+                "ArabicH.writingAnalysis.backToLessons": "Back to General Lessons",
+                "ArabicH.writingAnalysis.backToHome": "Back to Homepage",
+                "ArabicH.writingAnalysis.previousLesson": "Previous Lesson",
+                "ArabicH.writingAnalysis.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Writing Analysis specific translations
+                "ArabicH.writingAnalysis.module1Section2Lesson1Title": "Entraînement à l'Analyse de Texte Littéraire",
+                "ArabicH.writingAnalysis.module1Section2Lesson1Subtitle": "Leçon 1: Méthodologie d'Analyse de Texte Littéraire (Poésie ou Prose)",
+                "ArabicH.writingAnalysis.showAnswer": "Afficher la Réponse",
+                "ArabicH.writingAnalysis.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.writingAnalysis.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.writingAnalysis.previousLesson": "Leçon Précédente",
+                "ArabicH.writingAnalysis.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHWritingAnalysisModule1Section2Lesson1;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Answer toggle functionality
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إظهار الإجابة';
+            } else {
+                answer.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء الإجابة';
+            }
+        }
+
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Set answer button text after translation
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+            
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                // Check for saved theme or prefer-color-scheme
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.checked = true;
+                }
+                
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+            
+            // Add focus to first textarea when page loads
+            const firstTextarea = document.querySelector('.ArabicH-table-textarea');
+            if (firstTextarea) {
+                setTimeout(() => {
+                    firstTextarea.focus();
+                }, 500);
+            }
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

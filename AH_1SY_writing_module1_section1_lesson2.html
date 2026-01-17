@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التدريب على إنتاج المقال - الدرس الثاني | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2E8B57">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="إنتاج المقال">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Sea Green Theme for Essay Writing Lesson - Rare Color Palette */
+        :root {
+            --primary-color: #2E8B57;
+            --secondary-color: #3CB371;
+            --accent-color: #66CDAA;
+            --light-color: #F0FFF0;
+            --dark-color: #228B22;
+            --text-color: #2F4F4F;
+            --heading-color: #006400;
+            --background-color: #FAFFF5;
+            --card-bg: #FFFFFF;
+            --definition-bg: #E8F5E8;
+            --border-color: #C1E1C1;
+            --table-even-bg: #F5FFF5;
+            --table-hover-bg: #E0F8E0;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(46, 139, 87, 0.12);
+            --gradient-primary: linear-gradient(135deg, #2E8B57 0%, #3CB371 100%);
+            --gradient-secondary: linear-gradient(135deg, #3CB371 0%, #66CDAA 100%);
+            --gradient-accent: linear-gradient(135deg, #66CDAA 0%, #98FB98 100%);
+            --gradient-light: linear-gradient(135deg, #F0FFF0 0%, #FAFFF5 100%);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #3CB371;
+            --secondary-color: #66CDAA;
+            --accent-color: #98FB98;
+            --light-color: #2E8B57;
+            --dark-color: #006400;
+            --text-color: #E8F5E8;
+            --heading-color: #F5FFF5;
+            --background-color: #1C3D2A;
+            --card-bg: #2E8B57;
+            --definition-bg: #3CB371;
+            --border-color: #66CDAA;
+            --table-even-bg: #2E8B57;
+            --table-hover-bg: #3CB371;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+            --gradient-primary: linear-gradient(135deg, #3CB371 0%, #2E8B57 100%);
+            --gradient-secondary: linear-gradient(135deg, #66CDAA 0%, #3CB371 100%);
+            --gradient-accent: linear-gradient(135deg, #98FB98 0%, #66CDAA 100%);
+            --gradient-light: linear-gradient(135deg, #2E8B57 0%, #1C3D2A 100%);
+        }
+
+        /* Page specific styles */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-lesson-teacher {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .ArabicH-lesson-section {
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background-color: var(--definition-bg);
+            border-right: 4px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        /* Enhanced Rule Card Style */
+        .ArabicH-rule-card {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%);
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-left: 6px solid var(--secondary-color);
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ArabicH-rule-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .ArabicH-rule-card::before {
+            content: "📝";
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-rule-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            padding-left: 30px;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 8px;
+            position: relative;
+        }
+
+        .ArabicH-rule-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .ArabicH-exercise-content {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .ArabicH-topic-quote {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: center;
+            padding: 1rem;
+            background: rgba(46, 139, 87, 0.08);
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            border-right: 3px solid var(--secondary-color);
+        }
+
+        .ArabicH-topic-task {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            text-align: center;
+            padding: 1rem;
+            background: var(--light-color);
+            border-radius: var(--border-radius);
+        }
+
+        .ArabicH-note-box {
+            background-color: #F0F8FF;
+            border-right: 4px solid #4682B4;
+            padding: 15px 20px;
+            border-radius: var(--border-radius);
+            margin: 20px 0 30px 0;
+            font-style: italic;
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        [data-theme="dark"] .ArabicH-note-box {
+            background-color: rgba(70, 130, 180, 0.15);
+            color: #e9ecef;
+        }
+
+        .ArabicH-definition-list {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        .ArabicH-definition-list li {
+            margin-bottom: 10px;
+            color: var(--text-color);
+            padding-right: 10px;
+        }
+
+        .ArabicH-sub-list {
+            padding-right: 20px;
+            margin: 10px 0;
+        }
+
+        .ArabicH-sub-list li {
+            margin-bottom: 8px;
+            color: var(--dark-color);
+        }
+
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+        }
+
+        .ArabicH-answer-textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            font-family: inherit;
+            font-size: 16px;
+            resize: vertical;
+            margin: 10px 0;
+        }
+
+        .ArabicH-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .ArabicH-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        .ArabicH-table th, .ArabicH-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: right;
+        }
+
+        .ArabicH-table th {
+            background-color: var(--definition-bg);
+            color: var(--primary-color);
+        }
+
+        .ArabicH-table tr:nth-child(even) {
+            background-color: var(--table-even-bg);
+        }
+
+        .ArabicH-table tr:hover {
+            background-color: var(--table-hover-bg);
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title {
+                font-size: 2rem;
+            }
+            
+            .ArabicH-lesson-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-lesson-container {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-lesson-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .ArabicH-lesson-section-title {
+                font-size: 1.5rem;
+            }
+            
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1.2rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.2rem;
+                padding-left: 25px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 12px;
+                top: 12px;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main {
+                padding: 1rem;
+            }
+            
+            .ArabicH-lesson-title {
+                font-size: 1.6rem;
+            }
+            
+            .ArabicH-exercise-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.1rem;
+                padding-left: 22px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 10px;
+                top: 10px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.essayLesson.lesson2Title">القسم الأول: التدريب على إنتاج المقال</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.essayLesson.lesson2Subtitle">الدرس الثاني: التدريب على إنتاج المقال - تحليل الغزل البدوي في شعر جميل بن معمر</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher">معهد 'قرطاج حنّبعل' - فوزيّة الشّـطّي</div>
+                <div class="ArabicH-lesson-title" style="color: white; margin: 0; font-size: 1.5rem;">التدريب على إنتاج المقال</div>
+                <div class="ArabicH-lesson-class">نوفمبر 2014</div>
+            </div>
+            
+            <!-- Note about the lesson -->
+            <div class="ArabicH-note-box">
+                <p>❀ هذا الدرس يهدف إلى تدريب الطلاب على إنتاج المقال الأدبي التحليلي مع التركيز على شعر جميل بن معمر.</p>
+            </div>
+            
+            <!-- الموضوع Section -->
+            <div class="ArabicH-lesson-section">
+                <h2 class="ArabicH-lesson-section-title">❀ الموضوع</h2>
+                
+                <div class="ArabicH-topic-quote">
+                    يَتَغَنَّـى الغَزَلُ البَدَوِيُّ بِعَاطِفَةِ الـحُبِّ الَّتِـي أَجَّجَهَا الـحِرْمَانُ مِنَ الوِصَالِ وَقَوَّاهَا الـخَوْفُ مِنَ الفَضِيحَةِ.
+                </div>
+                
+                <div class="ArabicH-topic-task">
+                    حَلِّلْ هذَا القَوْلَ مُعْتَمِدًا مَا دَرَسْتَ مِنْ شِعْرِ جَمِيلٍ بْنِ مَعْمَرٍ.
+                </div>
+                
+                <div class="ArabicH-note-box" style="font-weight: bold; font-size: 1.2rem;">
+                    <p>[نقطة على وضوح الخطّ ونظافة الورقة]</p>
+                </div>
+            </div>
+            
+            <!-- الإصلاح Section -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">±♣ الإصْـــــلاح ♣±</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">التّدريب على المقال الأدبيّ التّحليليّ</h4>
+                    
+                    <div class="ArabicH-exercise-content">
+                        <h4>❀ المنطلق: موضوعٌ إنشائيّ تحليليّ:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li><strong>المُعطَى:</strong> [يَتَغَنَّى الغَزَلُ البَدَوِيُّ بِعَاطِفَةِ الـحُبِّ الَّتِـي أَجَّجَهَا (1) الـحِرْمَانُ مِنَ الوِصَالِ وَقَوَّاهَا (2) الـخَوْفُ مِنَ الفَضِيحَةِ]</li>
+                            <li><strong>الـمَطلوبُ:</strong> [حَلِّلْ هَذَا القَوْلَ مُعْتَمِدًا شَوَاهِدَ دَقِيقَةً مِنْ شِعْرِ جَمِيلٍ بْنِ مَعْمَرٍ]</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.essayLesson.showAnalysis">إظهار التحليل</button>
+                
+                <div id="answer1" class="ArabicH-answer">
+                    <h4>تحليل الموضوع:</h4>
+                    <p>الموضوع ينقسم إلى قسمين رئيسيين:</p>
+                    <ol>
+                        <li><strong>الحرمان من الوصال:</strong> كعامل يُججج عاطفة الحب</li>
+                        <li><strong>الخوف من الفضيحة:</strong> كعامل يقوي هذه العاطفة</li>
+                    </ol>
+                    <p>المطلوب هو تحليل هذا القول باستشهادات دقيقة من شعر جميل بن معمر.</p>
+                </div>
+            </div>
+            
+            <!-- ملاحظات منهجية Section -->
+            <div class="ArabicH-lesson-section">
+                <h2 class="ArabicH-lesson-section-title">❀ ملاحظاتٌ منهجيّة:</h2>
+                
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">تمرين 1: فهم مكوّنات المقال</h3>
+                    
+                    <p><strong>السؤال:</strong> اذكر مكوّنات المقدّمة والجوهر والخاتمة في المقال التحليلي بناءً على الملاحظات المنهجية التالية:</p>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">1- مكوّناتُ المقدّمة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>تأطيرُ الأطروحة (زمانا، مكانا، مضمونا...)</li>
+                            <li>إدراجُ الأطروحة في السّياق وربطُها به</li>
+                            <li>التّصريحُ بالمنهج المتَّبع (هو هنا المنهجُ التّحليليّ أي دعمُ الأطروحة المقترَحة)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">2- مكوّناتُ الجوهر:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>الالتزام بالأفكار الرّئيسة (الكلمات المفاتيح) والمدوَّنة المحدَّدة (أشعار جميل بن معمَر)</li>
+                            <li>تقسيمُ الجوهر إلى قسميْن، على الأقلّ، متوازنيْن كمّيّا ومضمونيّا</li>
+                            <li>الانتقالُ مِن قسمٍ إلى آخر بواسطة عنصرِ تخلّص (جملة خبريّة أو استفهاميّة)</li>
+                            <li>توزيعُ الشّواهد الشّعريّة على أقسامِ الجوهر بعدلٍ وانتظام</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">3- مكوّناتُ الخاتمة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>اِستنتاجُ خلاصةٍ إجماليّة مِن أقسامِ الجوهر</li>
+                            <li>فتحُ آفاقٍ جديدة (المقارنة مع الغزل الحضريّ، الاستفهامُ عن مصيرِ الحبيبيْن البدويّيْن، إلخ)</li>
+                        </ul>
+                    </div>
+                    
+                    <textarea class="ArabicH-answer-textarea" placeholder="اكتب إجابتك هنا..."></textarea>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.essayLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer2" class="ArabicH-answer">
+                        <h4>الإجابة النموذجية:</h4>
+                        <p><strong>مكوّنات المقدّمة:</strong> تأطير الأطروحة زمانياً ومكانياً، ربطها بالسياق التاريخي والأدبي، التصريح باتباع المنهج التحليلي لدعم الأطروحة.</p>
+                        <p><strong>مكوّنات الجوهر:</strong> تقسيمه إلى قسمين رئيسيين (الحرمان من الوصال، الخوف من الفضيحة)، استخدام عناصر انتقال بين الأقسام، توزيع الشواهد الشعرية بشكل منتظم.</p>
+                        <p><strong>مكوّنات الخاتمة:</strong> استخلاص النتائج من التحليل، فتح آفاق للمقارنة مع أنواع شعرية أخرى أو طرح أسئلة جديدة.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التطبيق Section -->
+            <div class="ArabicH-lesson-section">
+                <h2 class="ArabicH-lesson-section-title">❀ التّطبيق:</h2>
+                
+                <!-- المقدمة -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">1- المقدّمة:</h3>
+                    
+                    <div class="ArabicH-topic-quote" style="text-align: right; font-style: normal;">
+                        لقدْ نَشأ الغزلُ البدويُّ العفيفُ في القرنِ الأوّلِ لِلهجرةِ (ق1ه) داخلَ إقليمِ الحجاز مِن شبهِ الجزيرة العربيّة. وقد تَغنَّـى هذا الشّعرُ بعاطفةِ الحبِّ الّتي أجَّجها الحرمانُ مِنَ الوصَالِ وقوَّاها الخوفُ منَ الفَضيحةِ. فكيف تَـجلَّى ذلكَ عند 'جميلٍ بنِ مَعْمر' زعيمِ الغَزِلِين العُذريّين الّذي تعلّق قلبُه بحبيبةٍ واحدة، وهي 'بثينة'، طولَ حياته؟
+                    </div>
+                    
+                    <p><strong>تمرين 2:</strong> حلّل المقدمة أعلاه وحدّد العناصر الثلاثة المطلوبة في المقدمة النموذجية.</p>
+                    
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th>العنصر</th>
+                                    <th>كيف تجلّى في المقدمة؟</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>تأطير الأطروحة</td>
+                                    <td><textarea class="ArabicH-answer-textarea" style="min-height: 60px;" placeholder="اكتب تحليلك هنا..."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>إدراج الأطروحة في السياق</td>
+                                    <td><textarea class="ArabicH-answer-textarea" style="min-height: 60px;" placeholder="اكتب تحليلك هنا..."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>التصريح بالمنهج المتبع</td>
+                                    <td><textarea class="ArabicH-answer-textarea" style="min-height: 60px;" placeholder="اكتب تحليلك هنا..."></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.essayLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer3" class="ArabicH-answer">
+                        <h4>تحليل المقدمة:</h4>
+                        <ul>
+                            <li><strong>تأطير الأطروحة:</strong> تم تحديد الزمان (القرن الأول للهجرة) والمكان (إقليم الحجاز) والمضمون (الغزل البدوي العفيف).</li>
+                            <li><strong>إدراج الأطروحة في السياق:</strong> ربط الموضوع بالشاعر جميل بن معمر كزعيم للغزلين العذريين وقصة حبه لبثينة.</li>
+                            <li><strong>التصريح بالمنهج المتبع:</strong> السؤال الاستفهامي الأخير يدل على أن المنهج تحليلي يستكشف كيف تجلّت العاطفة في شعر جميل.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- الجوهر -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">2- الجوهر: (تخطيطٌ)</h3>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">أ‌- الحرمانُ مِن الوصال:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>المجتمعُ البدويّ يَـمنعُ علاقةَ الحبِّ قبل الزّواجِ ويَحرمُ أيَّ رجل تغزّل بامرأةٍ حرّة مِن الارتباط بها.</li>
+                            <li>تَكثرُ العناصرُ المعرقلة الّتي تحاصر الحبيبيْن البدويّين بالتّجسّس والرّقابة والوشاية والنّميمة.</li>
+                            <li>شبّه جميلٌ الحبيبيْن «الغَرِيبَيْنِ الأَسِيرَيْنِ» بقطيعِ الإبل العطشَى المرهَقات الفزِعات.</li>
+                            <li>الحرمانُ مِنَ اللّقاءِ قَوَّى مشاعرَ الشّوقِ وجَعلَ الحبَّ يَتأجَّجُ في قلبيْهما.</li>
+                            <li>دعا العاشقُ اللهَ أن يجعلَه يجاورُ الحبيبةَ في القبر تعويضًا عن الحرمان مِن لقائها في الدّنيا.</li>
+                            <li>تـمنَّى الشّاعرُ الموتَ لغايةٍ واحدة، هي لقاءُ روحِ بثينةَ وتحقيقُ الوصال الرّوحيّ معها.</li>
+                        </ul>
+                        
+                        <div class="ArabicH-topic-quote" style="font-size: 1rem; margin-top: 15px;">
+                            <strong>شواهد شعرية:</strong><br>
+                            [خَلِيلَيَّ، عُوجَا اليَوْمَ حَتَّى تُسَلِّمَا ... عَلَى عَذْبَةِ الأَنْيَابِ طَيِّبَةِ النَّشْرِ]<br>
+                            [وَجَاوِرْ، إِذَا مَا مِتُّ، بَيْنِي وَبَيْنَهَا]<br>
+                            [فَيَا حَبَّذَا مَوْتِي إِذَا جَاوَرَتْ قَبْرِي]
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-note-box" style="font-weight: bold; font-size: 1.2rem;">
+                        <p><strong>❀ عنصرُ التّخلّص:</strong> إذا كان الحرمانُ مِن الوصال قد أجّجَ الحبَّ العفيف في قلبِ العاشقيْن، فكيف كان الخوفُ مِن الفضيحةَ عاملَ قوّةٍ لهذه العاطفة الصّلبةِ الصّامدة؟</p>
+                    </div>
+                    
+                    <div class="ArabicH-rule-card">
+                        <h4 class="ArabicH-rule-title">ب‌- الخوفُ مِن الفضيحة:</h4>
+                        <ul class="ArabicH-definition-list">
+                            <li>عاشَ جميلٌ وبثينةُ حالةَ خوفٍ دائم مِن انفضاحِ حبِّهما لأنّهُما يَعرفانِ جيّدا الضَّوابطَ الأخلاقيّةَ في مجتمعِهما البدويّ.</li>
+                            <li>لَـجأ الحبيبانِ إلى التّمويهِ علَى «الأَعْدَاءِ»: كانَا يُـحَاولانِ إبعادَ الشُّبُهاتِ عنْ نفسيْهما.</li>
+                            <li>اِدّعى جميلٌ أنّه سيتجنّبُ التّصريحَ باسمِ الحبيبة المحاصَرة حمايةً لها ولنفسِه.</li>
+                            <li>تعاهد الحبيبان على كتمانِ قصّةِ حبّهما وعلى خطّةِ تـمويهٍ تُـخاتل «الأَعْدَاءَ» وتُضلّلهم.</li>
+                            <li>لا يكفي أنّ اللّقاءَ بين الـمُحبّيْن العذريّيْن نادرٌ جدّا، بل هما مضطرّان إلى التّظاهرِ بالتّجاهل والتّنافر.</li>
+                        </ul>
+                        
+                        <div class="ArabicH-topic-quote" style="font-size: 1rem; margin-top: 15px;">
+                            <strong>شواهد شعرية:</strong><br>
+                            [سَأَمْنَحُ طَرْفِي حِينَ أَلْقَاكِ غَيْرَكُمْ ... لِكَيْمَا يَرَوْا أَنَّ الـهَوَى حَيْثُ أَنْظُرُ]<br>
+                            [سَأَكْنِي بِأَسْـمَاءٍ سِوَاكِ]<br>
+                            [وَظَاهِرْ بِبُغْضٍ، إِنَّ ذَلِكَ أَسْتَرُ]
+                        </div>
+                    </div>
+                    
+                    <p><strong>تمرين 3:</strong> قارن بين القسمين الرئيسيين في الجوهر من حيث:</p>
+                    <ul class="ArabicH-definition-list">
+                        <li>عدد النقاط الفرعية في كل قسم</li>
+                        <li>نوع الشواهد المستخدمة</li>
+                        <li>طبيعة المعاناة الموصوفة</li>
+                    </ul>
+                    
+                    <textarea class="ArabicH-answer-textarea" placeholder="اكتب مقارنتك هنا..."></textarea>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.essayLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer4" class="ArabicH-answer">
+                        <h4>المقارنة بين قسمي الجوهر:</h4>
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th>وجه المقارنة</th>
+                                    <th>الحرمان من الوصال</th>
+                                    <th>الخوف من الفضيحة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>عدد النقاط الفرعية</td>
+                                    <td>6 نقاط</td>
+                                    <td>5 نقاط</td>
+                                </tr>
+                                <tr>
+                                    <td>نوع الشواهد</td>
+                                    <td>شواهد تُعبّر عن الشوق والحرمان والتمني بالموت للوصال الروحي</td>
+                                    <td>شواهد تُعبّر عن التمويه والخوف والكتمان والتظاهر بالبغض</td>
+                                </tr>
+                                <tr>
+                                    <td>طبيعة المعاناة</td>
+                                    <td>معاناة داخلية نابعة من الحرمان والشوق</td>
+                                    <td>معاناة خارجية نابعة من ضغوط المجتمع والخوف من العقاب</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- الخاتمة -->
+                <div class="ArabicH-exercise-card">
+                    <h3 class="ArabicH-exercise-title">3- الخاتمة: (تحريرٌ)</h3>
+                    
+                    <div class="ArabicH-topic-quote" style="text-align: right; font-style: normal;">
+                        لقد أدَّى الحرمانُ مِنَ الوصالِ والخوفُ مِنَ الفضيحةِ إلى نَشأةِ غَزَلٍ عفيف يُصوِّرُ علاقةً عاطفيّة مُعَذِّبةٍ بائِسةِ الأجْواءِ مَأساويّة النّهايةِ. لكنْ رغمَ قسوةِ الحرمان مِن الوصال وشدّةِ الخوف مِن الفضيحة، فإنّ قصّةَ هُيامِ 'جميلٍ' بحبيبتِه 'بثينةَ' شغلتْ كلَّ عمره. إنْ كانت هذه حالُ الـمحبِّين البدويّين، فكيف صوّر زعيمُ الغزِلِين الإباحيِّين 'عمرُ بنُ أبي ربيعةَ' حالَ الـمُحبِّين الحضريِّين الّذين سكنوا مُدنَ الحجاز العامرةَ بالثّراءِ والتّنوّع والانفتاح؟
+                    </div>
+                    
+                    <p><strong>تمرين 4:</strong> حلّل الخاتمة أعلاه وحدّد العنصرين الرئيسيين فيها.</p>
+                    
+                    <textarea class="ArabicH-answer-textarea" placeholder="اكتب تحليلك هنا..."></textarea>
+                    
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer5')" data-i18n="ArabicH.essayLesson.showAnswer">إظهار الإجابة</button>
+                    
+                    <div id="answer5" class="ArabicH-answer">
+                        <h4>تحليل الخاتمة:</h4>
+                        <ol>
+                            <li><strong>استنتاج خلاصة إجمالية:</strong> تلخيص النتائج الرئيسية التي توصل إليها التحليل، وهي أن الحرمان من الوصال والخوف من الفضيحة أديا إلى نشأة غزل عفيف يعبر عن علاقة عاطفية معذبة.</li>
+                            <li><strong>فتح آفاق جديدة:</strong️> طرح سؤال مقارني يفتح الباب للبحث في كيفية تصوير الغزل الحضري (عمر بن أبي ربيعة) لحال المحبين في بيئة مختلفة (مدن الحجاز الغنية المنفتحة).</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التمرين الشامل -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">تمرين شامل: التطبيق العملي</h3>
+                
+                <p><strong>السؤال:</strong> باستخدام ما تعلمته في هذا الدرس، اكتب مقدمة وجوهراً وخاتمة لمقال تحليلي حول الموضوع التالي:</p>
+                
+                <div class="ArabicH-topic-quote">
+                    "يتميز الغزل العذري بالعفّة والطهر والوفاء، بينما يتسم الغزل الحضري بالجرأة والصراحة والتنوع."
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <p><strong>تعليمات:</strong></p>
+                    <ol class="ArabicH-definition-list">
+                        <li>اكتب مقدمة تحتوي على تأطير الأطروحة وإدراجها في السياق والتصريح بالمنهج.</li>
+                        <li>قسّم الجوهر إلى قسمين رئيسيين (الغزل العذري والغزل الحضري) مع عنصر انتقال بينهما.</li>
+                        <li>اختم بخاتمة تحتوي على استنتاج وفتح آفاق جديدة.</li>
+                        <li>يمكنك الافتراض بأن المدوّنة الشعرية تشمل شعر جميل بن معمر (للغزل العذري) وعمر بن أبي ربيعة (للغزل الحضري).</li>
+                    </ol>
+                </div>
+                
+                <textarea class="ArabicH-answer-textarea" placeholder="اكتب مقالك الكامل هنا..." style="min-height: 300px;"></textarea>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer6')" data-i18n="ArabicH.essayLesson.showExample">إظهار نموذج إجابة</button>
+                
+                <div id="answer6" class="ArabicH-answer">
+    <h4>نموذج إجابة:</h4>
+    
+    <h5>1- المقدّمة: (تحريرٌ)</h5>
+    <p>لقدْ نَشأ الغزلُ البدويُّ العفيفُ في القرنِ الأوّلِ لِلهجرةِ (ق1ه) داخلَ إقليمِ الحجاز مِن شبهِ الجزيرة العربيّة. وقد تَغنَّـى هذا الشّعرُ بعاطفةِ الحبِّ الّتي أجَّجها الحرمانُ مِنَ الوصَالِ وقوَّاها الخوفُ منَ الفَضيحةِ. فكيف تَـجلَّى ذلكَ عند 'جميلٍ بنِ مَعْمر' زعيمِ الغَزِلِين العُذريّين الّذي تعلّق قلبُه بحبيبةٍ واحدة، وهي 'بثينة'، طولَ حياته؟</p>
+    
+    <h5>2- الجوهر: (تخطيطٌ)</h5>
+    <h6>أ‌- الحرمانُ مِن الوصال:</h6>
+    <ul>
+        <li>المجتمعُ البدويّ يَـمنعُ علاقةَ الحبِّ قبل الزّواجِ ويَحرمُ أيَّ رجل تغزّل بامرأةٍ حرّة مِن الارتباط بها. لِذا كان الحرمانُ مِنْ وصَالِ بثينةَ هو الغالبَ على هذهِ العلاقةِ العاطفيّة الممنوعة.</li>
+        <li>تَكثرُ العناصرُ المعرقلة الّتي تحاصر الحبيبيْن البدويّين بالتّجسّس والرّقابة والوشاية والنّميمة. حتّى إنّ الشّاعرَ اعتبرهم جميعا، أهلاً كانوا أو وُشاة أو حُسّادا أو منافسين، مِن قبيل «الأَعْدَاءِ».</li>
+        <li>شبّه جميلٌ الحبيبيْن «الغَرِيبَيْنِ الأَسِيرَيْنِ» بقطيعِ الإبل العطشَى المرهَقات الفزِعات. وذلك لِـما طغى عليها مِن تشوّقٍ وحرمان وعذاب: شبّه العطشَ إلى الوصال بالعطشِ إلى الماء الّذي هو أساسُ الحياة.</li>
+        <li>الحرمانُ مِنَ اللّقاءِ قَوَّى مشاعرَ الشّوقِ وجَعلَ الحبَّ يَتأجَّجُ في قلبيْهما: (الاستعانةُ بوساطَة الخلِيليْن، تخيّلُ الحبيب النّائي، الحلمُ باللّقاء، استرجاعُ اللّحظات السّعيدة النّادرة..): [خَلِيلَيَّ، عُوجَا اليَوْمَ حَتَّى تُسَلِّمَا ... عَلَى عَذْبَةِ الأَنْيَابِ طَيِّبَةِ النَّشْرِ]...</li>
+        <li>دعا العاشقُ اللهَ أن يجعلَه يجاورُ الحبيبةَ في القبر تعويضًا عن الحرمان مِن لقائها في الدّنيا: [وَجَاوِرْ، إِذَا مَا مِتُّ، بَيْنِي وَبَيْنَهَا]...</li>
+        <li>تـمنَّى الشّاعرُ الموتَ لغايةٍ واحدة، هي لقاءُ روحِ بثينةَ وتحقيقُ الوصال الرّوحيّ معها لامتناع الوصال الواقعيّ: [فَيَا حَبَّذَا مَوْتِي إِذَا جَاوَرَتْ قَبْرِي]...</li>
+    </ul>
+    
+    <p>❀ عنصرُ التّخلّص: إذا كان الحرمانُ مِن الوصال قد أجّجَ الحبَّ العفيف في قلبِ العاشقيْن، فكيف كان الخوفُ مِن الفضيحةَ عاملَ قوّةٍ لهذه العاطفة الصّلبةِ الصّامدة؟</p>
+    
+    <h6>ب‌- الخوفُ مِن الفضيحة:</h6>
+    <ul>
+        <li>عاشَ جميلٌ وبثينةُ حالةَ خوفٍ دائم مِن انفضاحِ حبِّهما لأنّهُما يَعرفانِ جيّدا الضَّوابطَ الأخلاقيّةَ في مجتمعِهما البدويّ الـحَرِيصِ على نصاعَةِ العِرْض وعلى احترام التّقاليد.</li>
+        <li>لَـجأ الحبيبانِ إلى التّمويهِ علَى «الأَعْدَاءِ»: كانَا يُـحَاولانِ إبعادَ الشُّبُهاتِ عنْ نفسيْهما. فيتظاهرانِ بأنّهما يَـجهلانِ بعضَهُما بعضًا، أو يَتجنّبان اللّقاءَ، أو يمثّل جميلٌ دورَ الـمُهْتمِّ بنساءٍ أخرياتٍ: [سَأَمْنَحُ طَرْفِي حِينَ أَلْقَاكِ غَيْرَكُمْ ... لِكَيْمَا يَرَوْا أَنَّ الـهَوَى حَيْثُ أَنْظُرُ]...</li>
+        <li>اِدّعى جميلٌ أنّه سيتجنّبُ التّصريحَ باسمِ الحبيبة المحاصَرة حمايةً لها ولنفسِه مِن قسوةِ الأهلِ ومِن شرِّ الحسّاد: [سَأَكْنِي بِأَسْـمَاءٍ سِوَاكِ]...</li>
+        <li>تعاهد الحبيبان على كتمانِ قصّةِ حبّهما وعلى خطّةِ تـمويهٍ تُـخاتل «الأَعْدَاءَ» وتُضلّلهم. وذلك كي يَنْجُوَا مِن العِقاب القَبَليّ العنيف. فالتزم العاشقُ العذريّ بإظهارِ بُغضِه الزّائف لبثينةَ خوفا مِن انفضاحِ سرّ حبّهما. قال على لسانها وهي تحثّه على التّخفّي: [وَظَاهِرْ بِبُغْضٍ، إِنَّ ذَلِكَ أَسْتَرُ]...</li>
+        <li>لا يكفي أنّ اللّقاءَ بين الـمُحبّيْن العذريّيْن نادرٌ جدّا. زدْ على ذلك أنّهما مضطرّان، إن التقيا، إلى التّظاهرِ بالتّجاهل والتّنافر والتّباغض. وهذا ما يزيدُ القلبَ المحروم عذابا.</li>
+    </ul>
+    
+    <h5>3- الخاتمة: (تحريرٌ)</h5>
+    <p>لقد أدَّى الحرمانُ مِنَ الوصالِ والخوفُ مِنَ الفضيحةِ إلى نَشأةِ غَزَلٍ عفيف يُصوِّرُ علاقةً عاطفيّة مُعَذِّبةٍ بائِسةِ الأجْواءِ مَأساويّة النّهايةِ. لكنْ رغمَ قسوةِ الحرمان مِن الوصال وشدّةِ الخوف مِن الفضيحة، فإنّ قصّةَ هُيامِ 'جميلٍ' بحبيبتِه 'بثينةَ' شغلتْ كلَّ عمره. إنْ كانت هذه حالُ الـمحبِّين البدويّين، فكيف صوّر زعيمُ الغزِلِين الإباحيِّين 'عمرُ بنُ أبي ربيعةَ' حالَ الـمُحبِّين الحضريِّين الّذين سكنوا مُدنَ الحجاز العامرةَ بالثّراءِ والتّنوّع والانفتاح؟</p>
+</div>
+            </div>
+            
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.essayLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.essayLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_1SY_writing_module1_section1_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.essayLesson.previousLesson">الدرس السابق</a>
+                <a href="#" class="ArabicH-nav-btn" data-i18n="ArabicH.essayLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHEssayLesson2 = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Essay Lesson 2 specific translations
+                "ArabicH.essayLesson.lesson2Title": "القسم الأول: التدريب على إنتاج المقال",
+                "ArabicH.essayLesson.lesson2Subtitle": "الدرس الثاني: التدريب على إنتاج المقال - تحليل الغزل البدوي في شعر جميل بن معمر",
+                "ArabicH.essayLesson.showAnalysis": "إظهار التحليل",
+                "ArabicH.essayLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.essayLesson.showExample": "إظهار نموذج إجابة",
+                "ArabicH.essayLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.essayLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.essayLesson.previousLesson": "الدرس السابق",
+                "ArabicH.essayLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Essay Lesson 2 specific translations
+                "ArabicH.essayLesson.lesson2Title": "Section One: Essay Writing Training",
+                "ArabicH.essayLesson.lesson2Subtitle": "Lesson 2: Essay Writing Training - Analysis of Bedouin Love Poetry in Jamil bin Ma'mar's Poetry",
+                "ArabicH.essayLesson.showAnalysis": "Show Analysis",
+                "ArabicH.essayLesson.showAnswer": "Show Answer",
+                "ArabicH.essayLesson.showExample": "Show Example Answer",
+                "ArabicH.essayLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.essayLesson.backToHome": "Back to Homepage",
+                "ArabicH.essayLesson.previousLesson": "Previous Lesson",
+                "ArabicH.essayLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Essay Lesson 2 specific translations
+                "ArabicH.essayLesson.lesson2Title": "Section Un : Formation à la Production d'Essais",
+                "ArabicH.essayLesson.lesson2Subtitle": "Leçon 2 : Formation à la Production d'Essais - Analyse de la Poésie d'Amour Bédouine chez Jamil bin Ma'mar",
+                "ArabicH.essayLesson.showAnalysis": "Afficher l'Analyse",
+                "ArabicH.essayLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.essayLesson.showExample": "Afficher un Exemple de Réponse",
+                "ArabicH.essayLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.essayLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.essayLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.essayLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHEssayLesson2;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Answer toggle functionality
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || button.getAttribute('data-i18n');
+            } else {
+                answer.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء الإجابة';
+            }
+        }
+
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Set answer button text after translation
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+            
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                // Check for saved theme or prefer-color-scheme
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.checked = true;
+                }
+                
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
