@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بديع: الطباق - الدرس الثالث | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#6A1B9A">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="الطباق">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Unique Purple Theme for Tibaq Lesson */
+        :root {
+            --primary-color: #6A1B9A;
+            --secondary-color: #8E24AA;
+            --accent-color: #AB47BC;
+            --light-color: #F3E5F5;
+            --dark-color: #4A148C;
+            --text-color: #4A235A;
+            --heading-color: #4A148C;
+            --background-color: #FAF5FF;
+            --card-bg: #FFFFFF;
+            --definition-bg: #F3E5F5;
+            --border-color: #CE93D8;
+            --table-even-bg: #F8F0FF;
+            --table-hover-bg: #EDE7F6;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(106, 27, 154, 0.12);
+            --gradient-primary: linear-gradient(135deg, #6A1B9A 0%, #4A148C 100%);
+            --gradient-secondary: linear-gradient(135deg, #8E24AA 0%, #6A1B9A 100%);
+            --gradient-accent: linear-gradient(135deg, #AB47BC 0%, #8E24AA 100%);
+            --gradient-light: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);
+            --highlight-color: #FF9800;
+            --highlight-bg: rgba(255, 152, 0, 0.1);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #8E24AA;
+            --secondary-color: #AB47BC;
+            --accent-color: #CE93D8;
+            --light-color: #4A148C;
+            --dark-color: #311B92;
+            --text-color: #F3E5F5;
+            --heading-color: #FFFFFF;
+            --background-color: #311B92;
+            --card-bg: #4A148C;
+            --definition-bg: #6A1B9A;
+            --border-color: #8E24AA;
+            --table-even-bg: #6A1B9A;
+            --table-hover-bg: #8E24AA;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #8E24AA 0%, #6A1B9A 100%);
+            --gradient-secondary: linear-gradient(135deg, #AB47BC 0%, #8E24AA 100%);
+            --gradient-accent: linear-gradient(135deg, #CE93D8 0%, #AB47BC 100%);
+            --gradient-light: linear-gradient(135deg, #4A148C 0%, #311B92 100%);
+            --highlight-color: #FFB74D;
+            --highlight-bg: rgba(255, 183, 77, 0.15);
+        }
+
+        /* Page specific styles - Consistent with other lessons */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-lesson-teacher {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-content {
+            margin: 30px 0;
+        }
+
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        [data-theme="dark"] .ArabicH-exercise-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-exercise-content {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .ArabicH-rule-card {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%);
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-left: 6px solid var(--secondary-color);
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ArabicH-rule-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .ArabicH-rule-card::before {
+            content: "📘";
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-rule-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            padding-left: 30px;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 8px;
+            position: relative;
+        }
+
+        [data-theme="dark"] .ArabicH-rule-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-rule-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .ArabicH-example-text {
+            font-size: 1.3rem;
+            font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 2.0;
+            color: var(--dark-color);
+            margin: 15px 0;
+            padding: 12px 18px;
+            background-color: rgba(106, 27, 154, 0.08);
+            border-radius: 10px;
+            border-right: 3px solid var(--secondary-color);
+            text-align: right;
+            direction: rtl;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .ArabicH-example-text {
+            color: #F3E5F5;
+            background-color: rgba(142, 36, 170, 0.2);
+            border-right: 3px solid var(--accent-color);
+        }
+
+        .ArabicH-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .ArabicH-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-table th, .ArabicH-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-table th {
+            background-color: var(--definition-bg);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        [data-theme="dark"] .ArabicH-table th {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-table tr:nth-child(even) {
+            background-color: var(--table-even-bg);
+        }
+
+        .ArabicH-table tr:hover {
+            background-color: var(--table-hover-bg);
+        }
+
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .ArabicH-exercise-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-exercise-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .ArabicH-exercise-table td {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-definition-list {
+            padding-right: 20px;
+            margin: 15px 0;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-definition-list li {
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        /* Textarea styling */
+        .ArabicH-table-textarea {
+            width: 100%;
+            min-height: 40px;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--card-bg);
+            resize: vertical;
+            font-family: inherit;
+            font-size: 15px;
+            color: var(--text-color);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .ArabicH-table-textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(171, 71, 188, 0.2);
+        }
+
+        [data-theme="dark"] .ArabicH-table-textarea {
+            background-color: var(--definition-bg);
+            border-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        /* Knowledge Box - Consistent with other modules */
+        .ArabicH-knowledge-box {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 25px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-knowledge-box::before {
+            content: "💡";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        .ArabicH-knowledge-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        [data-theme="dark"] .ArabicH-knowledge-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-knowledge-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Application item styling */
+        .ArabicH-application-item {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--secondary-color);
+            direction: rtl;
+            text-align: right;
+        }
+
+        .ArabicH-application-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .ArabicH-blank-textarea {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 15px;
+            width: 250px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 10px;
+            direction: rtl;
+        }
+
+        .ArabicH-blank-textarea::placeholder {
+            color: var(--secondary-color);
+            opacity: 0.7;
+        }
+
+        [data-theme="dark"] .ArabicH-blank-textarea::placeholder {
+            color: var(--accent-color);
+            opacity: 0.6;
+        }
+
+        /* Flower decoration for headers */
+        .ArabicH-flower-decoration {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Instructions box */
+        .ArabicH-instructions-box {
+            background-color: rgba(255, 152, 0, 0.1);
+            border-radius: var(--border-radius);
+            padding: 1.2rem;
+            margin: 15px 0 25px 0;
+            border-right: 4px solid var(--highlight-color);
+            border-left: 4px solid var(--highlight-color);
+            position: relative;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .ArabicH-instructions-box::before {
+            content: "⚠️";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-instructions-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--highlight-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .ArabicH-instructions-content {
+            line-height: 1.6;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        /* Quran and Poetry verse styling */
+        .ArabicH-quran-verse {
+            background-color: rgba(243, 229, 245, 0.3);
+            border-right: 4px solid var(--accent-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+            font-size: 1.2rem;
+        }
+
+        [data-theme="dark"] .ArabicH-quran-verse {
+            background-color: rgba(171, 71, 188, 0.2);
+            color: #F3E5F5;
+        }
+
+        .ArabicH-poetry-verse {
+            background-color: rgba(243, 229, 245, 0.3);
+            border-right: 4px solid var(--secondary-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+        }
+
+        [data-theme="dark"] .ArabicH-poetry-verse {
+            background-color: rgba(142, 36, 170, 0.2);
+            color: #F3E5F5;
+        }
+
+        /* Author name styling */
+        .ArabicH-author-name {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-style: normal;
+            padding: 2px 8px;
+            background-color: rgba(106, 27, 154, 0.1);
+            border-radius: 4px;
+            margin-right: 5px;
+            display: inline-block;
+            font-family: 'Arial', 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            border-right: 2px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .ArabicH-author-name:hover {
+            background-color: rgba(106, 27, 154, 0.2);
+            transform: scale(1.05);
+        }
+
+        [data-theme="dark"] .ArabicH-author-name {
+            color: var(--accent-color);
+            background-color: rgba(142, 36, 170, 0.15);
+            border-right: 2px solid var(--secondary-color);
+        }
+
+        [data-theme="dark"] .ArabicH-author-name:hover {
+            background-color: rgba(142, 36, 170, 0.25);
+        }
+
+        /* تحسينات إضافية للوضوح في الوضع الداكن */
+        [data-theme="dark"] p,
+        [data-theme="dark"] li,
+        [data-theme="dark"] div:not(.ArabicH-example-text):not(.ArabicH-box-cell) {
+            color: var(--text-color) !important;
+        }
+
+        [data-theme="dark"] strong {
+            color: var(--accent-color);
+        }
+
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) {
+            color: var(--accent-color);
+        }
+
+        /* Responsive styles for lesson page */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title {
+                font-size: 2rem;
+            }
+            
+            .ArabicH-lesson-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-lesson-container {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-lesson-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .ArabicH-table {
+                font-size: 14px;
+            }
+            
+            .ArabicH-example-text {
+                font-size: 1.15rem;
+                padding: 10px 15px;
+                line-height: 1.8;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1.2rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.2rem;
+                padding-left: 25px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 12px;
+                top: 12px;
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-blank-textarea {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main {
+                padding: 1rem;
+            }
+            
+            .ArabicH-lesson-title {
+                font-size: 1.6rem;
+            }
+            
+            .ArabicH-exercise-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-example-text {
+                font-size: 1.05rem;
+                line-height: 1.7;
+                padding: 8px 12px;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.1rem;
+                padding-left: 22px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 10px;
+                top: 10px;
+                font-size: 1rem;
+            }
+            
+            .ArabicH-blank-textarea {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.languageLesson.module1Lesson3Title">بديع: الطباق</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.languageLesson.module1Lesson3Subtitle">الدرس الثالث: تعريف الطباق، أنواعه مع تمارين تطبيقية متقدمة</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher">
+                    <span class="ArabicH-flower-decoration">❦</span> القسم: ثالثة ثانوي آداب <span class="ArabicH-flower-decoration">❦</span>
+                </div>
+                <div class="ArabicH-lesson-class">
+                    <span class="ArabicH-flower-decoration">✿</span> الأستاذ: غير معروف <span class="ArabicH-flower-decoration">✿</span>
+                </div>
+            </div>
+            
+            <!-- Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">مقدمة الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p><strong>الطباق:</strong> هو أحد المحسنات البديعية، والتي يستخدم من خلالها المتحدث لفظين متضادين أي متعاكسين في المعنى، مثل: الليل والنهار، والأسود والأبيض، والكبير والصغير، ويُسمى بمسميات عدة، ومنها: المطابقة، والتطبيق، والتضاد، والتكافؤ.</p>
+                    <p><strong>أثره في المعنى:</strong> يُبرز الطباق الفكرة من خلال المقابلة بين الضدين، مما يجعل المعنى أوضح وأكثر تأثيراً في نفس المتلقي. كما أنه يضفي جمالاً بيانياً على النص من خلال التناظر والتوازن بين المعاني المتضادة.</p>
+                    <p>الطباق من المحسنات المعنوية التي تُستخدم في الشعر والنثر على حد سواء، حيث يعمل على إبراز المعنى من خلال المقابلة بين الأضداد، مما يجعل الفكرة أكثر وضوحاً وتأثيراً.</p>
+                </div>
+            </div>
+            
+            <!-- أنواع الطباق -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أنواع الطباق الرئيسية</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تعريف الأنواع:</h4>
+                    <p>ينقسم الطباق إلى عدة أنواع رئيسية حسب طبيعة التضاد بين الألفاظ:</p>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="20%">النوع</th>
+                                    <th width="40%">التعريف والتفصيل</th>
+                                    <th width="40%">أمثلة توضيحية</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>الطباق الحقيقي</strong></td>
+                                    <td>وهو الطباق الذي يجمع بين لفظين حقيقيين متضادين في المعنى، ويكون التضاد واضحاً ومباشراً بين اللفظين.</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            "وَتَحْسَبُهُمْ أَيْقَاظًا وَهُمْ رُقُودٌ"<br>
+                                            <small>سورة الكهف: الآية 18 - (أيقاظًا/رقود)</small>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الطباق المجازي</strong></td>
+                                    <td>وهو الطباق الذي يجمع بين لفظين متضادين في المعنى غير حقيقيين على سبيل المجاز، حيث يُستخدم اللفظ في معنى غير حقيقي.</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            "أَوَمَن كَانَ مَيْتًا فَأَحْيَيْنَاهُ"<br>
+                                            <small>سورة الأنعام: الآية 122 - (ميتًا/أحييناه)</small>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الطباق المعنوي</strong></td>
+                                    <td>وهو الطباق الذي يكون بين شيئين متضادين في المعنى، وليس في الألفاظ نفسها، حيث يتضح التضاد من خلال السياق.</td>
+                                    <td>
+                                        <div class="ArabicH-quran-verse">
+                                            "إِنْ أَنْتُمْ إِلَّا تَكْذِبُونَ* قالُوا رَبُّنا يَعْلَمُ إِنَّا إِلَيْكُمْ لَمُرْسَلُونَ"<br>
+                                            <small>سورة يس: الآية 16-17</small>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- أقسام الطباق باعتبار الإثبات والنفي -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أقسام الطباق باعتبار الإثبات والنفي</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="25%">النوع</th>
+                                    <th width="35%">التعريف والشرح</th>
+                                    <th width="40%">مثال توضيحي</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>طباق الإيجاب</strong></td>
+                                    <td>وهو الطباق الذي يكون بين معنيين متضادين سواء أكانا مثبتين أم منفيين، أي أن كلا اللفظين مثبت أو كليهما منفي.</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            "خيرُ المال عينٌ ساهرةٌ لعينَ نائمةٍ"<br>
+                                            <small>حديث شريف - (ساهرة/نائمة)</small>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>طباق السلب</strong></td>
+                                    <td>وهو الطباق الذي يجمع بين معنيين أحدهما مثبت والآخر منفي، حيث يُثبت أحد اللفظين وينفي الآخر.</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            "قُلْ هَلْ يَسْتَوِي الَّذِينَ يَعْلَمُونَ وَالَّذِينَ لا يَعْلَمُونَ"<br>
+                                            <small>سورة الزمر: الآية 9 - (يعلمون/لا يعلمون)</small>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>طباق الخفي</strong></td>
+                                    <td>وهو الطباق الذي يكون التضاد فيه غير مباشر ويحتاج إلى تأمل لاستخراجه، حيث لا يكون التضاد واضحاً للوهلة الأولى.</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            "أَشِدَّاءُ عَلَى الْكُفَّارِ رُحَماءُ بَيْنَهُمْ"<br>
+                                            <small>سورة الفتح: الآية 29 - (أشداء/رحماء)</small>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- أقسام الطباق باعتبار أجزاء الكلام -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أقسام الطباق باعتبار أجزاء الكلام</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="20%">النوع</th>
+                                    <th width="30%">التعريف والخصائص</th>
+                                    <th width="25%">أجزاء الكلام</th>
+                                    <th width="25%">مثال توضيحي</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>طباق بين اسمين</strong></td>
+                                    <td>التضاد يكون بين اسمين متعارضين في المعنى، وهو الأكثر شيوعاً في الطباق.</td>
+                                    <td>اسم + اسم</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            "الليل والنهار"
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>طباق بين فعلين</strong></td>
+                                    <td>التضاد يكون بين فعلين متعارضين في المعنى، حيث يكون أحد الفعلين ضد الآخر.</td>
+                                    <td>فعل + فعل</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            "يُضحك ويُبكي"
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>طباق بين حرفين</strong></td>
+                                    <td>التضاد يكون بين حرفين متعارضين في المعنى، وهو أقل أنواع الطباق شيوعاً.</td>
+                                    <td>حرف + حرف</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            "له وعليه"
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>طباق بين أنواع مختلفة</strong></td>
+                                    <td>التضاد يكون بين نوعين مختلفين من الكلام، مثل اسم وفعل أو فعل وحرف.</td>
+                                    <td>مختلفة</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            "أحيي الموتى"
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- أمثلة إضافية على الطباق -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أمثلة إضافية على الطباق</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="40%">الجملة</th>
+                                    <th width="30%">موضع الطباق</th>
+                                    <th width="30%">نوع الطباق</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="ArabicH-example-text">
+                                        "وَأَنَّهُ هُوَ أَضْحَكَ وَأَبْكَىٰ"<br>
+                                        <small>سورة النجم: الآية 43</small>
+                                    </td>
+                                    <td>أضحك وأبكى</td>
+                                    <td>طباق حقيقي بين فعلين</td>
+                                </tr>
+                                <tr>
+                                    <td class="ArabicH-example-text">
+                                        "وَلَهُنَّ مِثْلُ الَّذِي عَلَيْهِنَّ"<br>
+                                        <small>سورة البقرة: الآية 228</small>
+                                    </td>
+                                    <td>لهن وعليهن</td>
+                                    <td>طباق حقيقي بين حرفين</td>
+                                </tr>
+                                <tr>
+                                    <td class="ArabicH-example-text">
+                                        "والذي أبكى وأضحك والذي أمات وأحيا"<br>
+                                        <small>شعر</small>
+                                    </td>
+                                    <td>أبكى/أضحك - أمات/أحيا</td>
+                                    <td>طباق حقيقي بين فعلين</td>
+                                </tr>
+                                <tr>
+                                    <td class="ArabicH-example-text">
+                                        "فليس سواء عالم وجهول"<br>
+                                        <small>شعر</small>
+                                    </td>
+                                    <td>عالم وجهول</td>
+                                    <td>طباق إيجاب بين اسمين</td>
+                                </tr>
+                                <tr>
+                                    <td class="ArabicH-example-text">
+                                        "حلو الشمائل وهو مر باسل"<br>
+                                        <small>شعر</small>
+                                    </td>
+                                    <td>حلو ومر</td>
+                                    <td>طباق مجازي بين صفتين</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التدريب الأول -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التدريب الأول: تحديد موضع ونوع الطباق</h3>
+                
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تعليمات التطبيق:</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p><strong>بيّن/ي موضع الطباق ثم اذكر/ي نوعه فيما يأتي:</strong></p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="50%">الجملة</th>
+                                    <th width="20%">موضع الطباق</th>
+                                    <th width="20%">نوع الطباق</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td class="ArabicH-example-text">
+                                        قال تعالى: "أَشِدَّاءُ عَلَى الْكُفَّارِ رُحَماءُ بَيْنَهُمْ"<br>
+                                        <small>سورة الفتح: الآية 29</small>
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب موضع الطباق..." rows="2"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td class="ArabicH-example-text">
+                                        قال تعالى: "تَعْلَمُ ما فِي نَفْسِي وَلا أَعْلَمُ ما فِي نَفْسِكَ"<br>
+                                        <small>سورة المائدة: الآية 116</small>
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب موضع الطباق..." rows="2"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td class="ArabicH-example-text">
+                                        إذا نحن سرنا بين شرق ومغرب *** تحرّك يقظان التراب ونائمه<br>
+                                        <small>شعر</small>
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب موضع الطباق..." rows="2"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td class="ArabicH-example-text">
+                                        قال تعالى: "الَّذِي جَعَلَ لَكُمُ الْأَرْضَ فِراشاً وَالسَّماءَ بِناءً"<br>
+                                        <small>سورة البقرة: الآية 22</small>
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب موضع الطباق..." rows="2"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>⑤</td>
+                                    <td class="ArabicH-example-text">
+                                        أما والذي أبكى وأضحك والذي *** أمات وأحيا والذي أمره الأمر<br>
+                                        <small>شعر</small>
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب موضع الطباق..." rows="2"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>⑥</td>
+                                    <td class="ArabicH-example-text">
+                                        سلي إن جهلت الناس عنّا وعنهم*** فليس سواء عالم وجهول<br>
+                                        <small>شعر</small>
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب موضع الطباق..." rows="2"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>⑦</td>
+                                    <td class="ArabicH-example-text">
+                                        حلو الشمائل وهو مر باسل *** يحمي الذمار صبيحة الإرهاق<br>
+                                        <small>شعر</small>
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب موضع الطباق..." rows="2"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع..." rows="2"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.languageLesson.showAnswer">إظهار إصلاح التدريب الأول</button>
+                
+                <div id="answer1" class="ArabicH-answer">
+                    <h4>إصلاح التدريب الأول:</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="50%">الجملة</th>
+                                    <th width="20%">موضع الطباق</th>
+                                    <th width="20%">نوع الطباق</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td class="ArabicH-example-text">قال تعالى: "أَشِدَّاءُ عَلَى الْكُفَّارِ رُحَماءُ بَيْنَهُمْ"</td>
+                                    <td><strong>أشداء - رحماء</strong></td>
+                                    <td><strong>طباق خفي</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td class="ArabicH-example-text">قال تعالى: "تَعْلَمُ ما فِي نَفْسِي وَلا أَعْلَمُ ما فِي نَفْسِكَ"</td>
+                                    <td><strong>تعلم - لا أعلم</strong></td>
+                                    <td><strong>طباق سلب</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td class="ArabicH-example-text">إذا نحن سرنا بين شرق ومغرب *** تحرّك يقظان التراب ونائمه</td>
+                                    <td><strong>شرق - مغرب<br>يقظان - نائمة</strong></td>
+                                    <td><strong>طباق مجازي<br>طباق مجازي</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td class="ArabicH-example-text">قال تعالى: "الَّذِي جَعَلَ لَكُمُ الْأَرْضَ فِراشاً وَالسَّماءَ بِناءً"</td>
+                                    <td><strong>فراشاً - بناءً</strong></td>
+                                    <td><strong>طباق معنوي</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>⑤</td>
+                                    <td class="ArabicH-example-text">أما والذي أبكى وأضحك والذي *** أمات وأحيا والذي أمره الأمر</td>
+                                    <td><strong>أبكى - أضحك<br>أمات - أحيا</strong></td>
+                                    <td><strong>طباق حقيقي بين فعلين<br>طباق حقيقي بين فعلين</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>⑥</td>
+                                    <td class="ArabicH-example-text">سلي إن جهلت الناس عنّا وعنهم*** فليس سواء عالم وجهول</td>
+                                    <td><strong>عالم - جهول</strong></td>
+                                    <td><strong>طباق إيجاب</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>⑦</td>
+                                    <td class="ArabicH-example-text">حلو الشمائل وهو مر باسل *** يحمي الذمار صبيحة الإرهاق</td>
+                                    <td><strong>حلو - مر</strong></td>
+                                    <td><strong>طباق مجازي</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التدريب الثاني -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التدريب الثاني: إنشاء أمثلة على أنواع الطباق</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">☻ قدّم/ي مثالًا من إنشائك على كلٍّ مما يأتي:</h4>
+                    
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="15%">نوع الطباق</th>
+                                    <th width="60%">المثال من إنشائك</th>
+                                    <th width="25%">شرح المثال</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>طباق السلب</strong></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب مثالاً من إنشائك..." rows="2"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الشرح..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>طباق الخفي</strong></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب مثالاً من إنشائك..." rows="2"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الشرح..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>طباق مجازي</strong></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب مثالاً من إنشائك..." rows="2"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الشرح..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>طباق إيجاب</strong></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب مثالاً من إنشائك..." rows="2"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الشرح..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>طباق حقيقي بين فعلين</strong></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب مثالاً من إنشائك..." rows="2"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الشرح..." rows="2"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="ArabicH-application-item" style="margin-top: 20px;">
+                        <h4 style="color: var(--primary-color);">سؤال إضافي:</h4>
+                        <p>ما الفرق بين الطباق الحقيقي والطباق المجازي؟ اشرح بالتفصيل مع الأمثلة.</p>
+                        <textarea class="ArabicH-table-textarea" placeholder="اكتب إجابتك هنا..." rows="4"></textarea>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.languageLesson.showAnswer">إظهار إصلاح التدريب الثاني</button>
+                
+                <div id="answer2" class="ArabicH-answer">
+                    <h4>إصلاح التدريب الثاني:</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="15%">نوع الطباق</th>
+                                    <th width="60%">المثال من إنشائك</th>
+                                    <th width="25%">شرح المثال</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>طباق السلب</strong></td>
+                                    <td class="ArabicH-example-text">إن كنت تدري فهي مصيبة، وإن كنت لا تدري فهي مصيبة أعظم.</td>
+                                    <td><strong>تدري/لا تدري</strong><br>أحدهما مثبت والآخر منفي</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>طباق الخفي</strong></td>
+                                    <td class="ArabicH-example-text">قوله تعالى: "محمدٌ رسول الله والذين معه، أشدّاء على الكفار رحماء بينهم".</td>
+                                    <td><strong>أشداء/رحماء</strong><br>تضاد غير مباشر بين الشدة والرحمة</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>طباق مجازي</strong></td>
+                                    <td class="ArabicH-example-text">أخرجهم الله من الظلمات إلى النور.</td>
+                                    <td><strong>الظلمات/النور</strong><br>تضاد مجازي بين الضلال والهدى</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>طباق إيجاب</strong></td>
+                                    <td class="ArabicH-example-text">من آيات إعجاز الله تعالى خلقه الليل والنهار.</td>
+                                    <td><strong>الليل/النهار</strong><br>تضاد بين اسمين متضادين</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>طباق حقيقي بين فعلين</strong></td>
+                                    <td class="ArabicH-example-text">يحن الوالد تارة على أبنائه ويقسو عليهم تارة أخرى ليربيهم.</td>
+                                    <td><strong>يَحن/يقسو</strong><br>تضاد حقيقي بين فعلين متضادين</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="ArabicH-application-item" style="margin-top: 20px;">
+                        <h4 style="color: var(--primary-color);">إجابة السؤال الإضافي:</h4>
+                        <div class="ArabicH-example-text">
+                            <p><strong>الفرق بين الطباق الحقيقي والطباق المجازي:</strong></p>
+                            <ol>
+                                <li><strong>الطباق الحقيقي:</strong> يكون التضاد بين اللفظين واضحاً ومباشراً، حيث يكون اللفظان مستعملين في معناهما الحقيقي. مثال: "الليل والنهار" - كل منهما مستعمل في معناه الحقيقي المتضاد مع الآخر.</li>
+                                <li><strong>الطباق المجازي:</strong> يكون التضاد بين اللفظين غير حقيقي، حيث يُستعمل أحد اللفظين أو كليهما في معنى مجازي. مثال: "أخرجهم الله من الظلمات إلى النور" - الظلمات مجاز عن الضلال، والنور مجاز عن الهدى.</li>
+                            </ol>
+                            <p>الخلاصة: الطباق الحقيقي = تضاد بين معنيين حقيقيين، الطباق المجازي = تضاد بين معنيين مجازيين.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التدريب الثالث المتقدم -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التدريب الثالث المتقدم: إكمال الفراغات</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تعليمات:</h4>
+                    <div class="ArabicH-example-text" style="font-style: italic;">
+                        املأ/ئي الفراغ بما يناسبه من الكلمات التالية:<br>
+                        (دانية - أبيضًا - لا يعلم - عالية - يعلم - السيئة - الأغبرا - يعفو - الحسنة - لا يعفو)
+                    </div>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">أكمل الجمل التالية بالكلمات المناسبة:</h4>
+                    
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="70%">الجملة مع الفراغ</th>
+                                    <th width="20%">الكلمة المناسبة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td class="ArabicH-original-text">يعلم الإنسان ما في اليوم والأمس، و ______ ما يأتي به الغد.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الكلمة..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td class="ArabicH-original-text">قال تعالى: {فِي جَنَّةٍ ______ قُطُوفُهَا ______}.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الكلمتين..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td class="ArabicH-original-text">اللئيم يعفو عند العجز، و ______ عند المقدرة.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الكلمة..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td class="ArabicH-original-text">العدو يظهر الحسنة، ويخفي ______.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الكلمة..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>⑤</td>
+                                    <td class="ArabicH-original-text">يبدي وشاحًا ______ من سيبه *** والجو قد لبس الوشاح ______.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الكلمتين..." rows="1"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="ArabicH-application-item" style="margin-top: 20px;">
+                        <h4 style="color: var(--primary-color);">تحليل إضافي:</h4>
+                        <p>حدد نوع الطباق في كل جملة من الجمل السابقة مع التعليل.</p>
+                        <textarea class="ArabicH-table-textarea" placeholder="اكتب تحليلك هنا..." rows="4"></textarea>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.languageLesson.showAnswer">إظهار إصلاح التدريب الثالث</button>
+                
+                <div id="answer3" class="ArabicH-answer">
+                    <h4>إصلاح التدريب الثالث:</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="70%">الجملة مع الفراغ</th>
+                                    <th width="20%">الكلمة المناسبة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td class="ArabicH-original-text">يعلم الإنسان ما في اليوم والأمس، و ______ ما يأتي به الغد.</td>
+                                    <td><strong>لا يعلم</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td class="ArabicH-original-text">قال تعالى: {فِي جَنَّةٍ ______ قُطُوفُهَا ______}.</td>
+                                    <td><strong>عالية - دانية</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td class="ArabicH-original-text">اللئيم يعفو عند العجز، و ______ عند المقدرة.</td>
+                                    <td><strong>لا يعفو</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td class="ArabicH-original-text">العدو يظهر الحسنة، ويخفي ______.</td>
+                                    <td><strong>السيئة</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>⑤</td>
+                                    <td class="ArabicH-original-text">يبدي وشاحًا ______ من سيبه *** والجو قد لبس الوشاح ______.</td>
+                                    <td><strong>أبيضًا - الأغبرا</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="ArabicH-application-item" style="margin-top: 20px;">
+                        <h4 style="color: var(--primary-color);">تحليل أنواع الطباق:</h4>
+                        <div class="ArabicH-example-text">
+                            <p><strong>أنواع الطباق في الجمل السابقة:</strong></p>
+                            <ol>
+                                <li><strong>الجملة الأولى:</strong> طباق سلب بين (يعلم/لا يعلم) - أحدهما مثبت والآخر منفي.</li>
+                                <li><strong>الجملة الثانية:</strong> طباق حقيقي بين (عالية/دانية) - تضاد في المكانة والارتفاع.</li>
+                                <li><strong>الجملة الثالثة:</strong> طباق سلب بين (يعفو/لا يعفو) - أحدهما مثبت والآخر منفي.</li>
+                                <li><strong>الجملة الرابعة:</strong> طباق إيجاب بين (الحسنة/السيئة) - تضاد بين الصفتين.</li>
+                                <li><strong>الجملة الخامسة:</strong> طباق مجازي بين (أبيضًا/الأغبرا) - تضاد مجازي بين اللونين.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- أمثلة مفصلة على الطباق -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أمثلة مفصلة على أنواع الطباق</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">أمثلة على الطباق الحقيقي:</h4>
+                    
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="40%">الجملة</th>
+                                    <th width="30%">موضع الطباق</th>
+                                    <th width="30%">التفصيل</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="ArabicH-example-text">قال تعالى: "وَتَحْسَبُهُمْ أَيْقَاظًا وَهُمْ رُقُودٌ"</td>
+                                    <td>أيقاظًا - رقود</td>
+                                    <td>طباق حقيقي بين اسمين متضادين</td>
+                                </tr>
+                                <tr>
+                                    <td class="ArabicH-example-text">قال تعالى: "وَأَنَّهُ هُوَ أَضْحَكَ وَأَبْكَىٰ"</td>
+                                    <td>أضحك - أبكى</td>
+                                    <td>طباق حقيقي بين فعلين متضادين</td>
+                                </tr>
+                                <tr>
+                                    <td class="ArabicH-example-text">قال تعالى: "وَلَهُنَّ مِثْلُ الَّذِي عَلَيْهِنَّ"</td>
+                                    <td>لهن - عليهن</td>
+                                    <td>طباق حقيقي بين حرفين متضادين</td>
+                                </tr>
+                                <tr>
+                                    <td class="ArabicH-example-text">قال تعالى: "وَأُحْيِ الْمَوْتى بِإِذْنِ اللهِ"</td>
+                                    <td>أحيي - الموتى</td>
+                                    <td>طباق حقيقي بين فعل واسم</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">أمثلة على الطباق المجازي:</h4>
+                    <div class="ArabicH-application-item">
+                        <p><strong>الآية:</strong> "أَوَمَن كَانَ مَيْتًا فَأَحْيَيْنَاهُ" (سورة الأنعام: 122)</p>
+                        <p><strong>التفسير:</strong> كلمة (ميتًا) جاءت هنا بمعنى الضلال والكفر على سبيل المجاز، وجملة (فأحييناه) جاءت الحياة هنا بمعنى الهدى والإيمان على سبيل المجاز، والكلمتان متضادتان في معنيهما.</p>
+                    </div>
+                    
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">أمثلة على الطباق المعنوي:</h4>
+                    <div class="ArabicH-application-item">
+                        <p><strong>الآية:</strong> "إِنْ أَنْتُمْ إِلَّا تَكْذِبُونَ* قالُوا رَبُّنا يَعْلَمُ إِنَّا إِلَيْكُمْ لَمُرْسَلُونَ" (سورة يس: 16-17)</p>
+                        <p><strong>التفسير:</strong> إنّ كلمة مرسلون تعني هنا صادقون، فتوضّح الطباق من خلال المعنى بين التكذيب والصدق.</p>
+                    </div>
+                    
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">أمثلة على طباق الإيجاب:</h4>
+                    <div class="ArabicH-application-item">
+                        <p><strong>الحديث النبوي:</strong> "خيرُ المال عينٌ ساهرةٌ لعينَ نائمةٍ"</p>
+                        <p><strong>التفسير:</strong> كلمتا (ساهرة - نائمة) متضادتان في المعنى مثبتتان، حيث أن كلتيهما جاءت بالإثبات دون نفي.</p>
+                    </div>
+                    
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">أمثلة على طباق السلب:</h4>
+                    <div class="ArabicH-application-item">
+                        <p><strong>الآية:</strong> "قُلْ هَلْ يَسْتَوِي الَّذِينَ يَعْلَمُونَ وَالَّذِينَ لا يَعْلَمُونَ" (سورة الزمر: 9)</p>
+                        <p><strong>التفسير:</strong> الفعل يعلمون كان مثبتًا في الشق الأول، ومنفيًا ب(لا) في الشق الثاني، مما يشكل طباقاً بالسلب.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ملخص الدرس -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">ملخص الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <ul class="ArabicH-definition-list">
+                        <li><strong>تعريف الطباق:</strong> محسن بديعي يعني استخدام لفظين متضادين متعاكسين في المعنى، ويسمى أيضاً المطابقة أو التضاد.</li>
+                        <li><strong>أثر الطباق:</strong> يُبرز الفكرة من خلال المقابلة بين الضدين، ويجعل المعنى أوضح وأكثر تأثيراً، ويمنح النص جمالاً بيانياً.</li>
+                        <li><strong>أنواع الطباق الرئيسية:</strong>
+                            <ul>
+                                <li><strong>الطباق الحقيقي:</strong> تضاد بين لفظين حقيقيين في المعنى.</li>
+                                <li><strong>الطباق المجازي:</strong> تضاد بين لفظين مستعملين في معنى مجازي.</li>
+                                <li><strong>الطباق المعنوي:</strong> تضاد في المعنى وليس في اللفظ.</li>
+                            </ul>
+                        </li>
+                        <li><strong>أقسام الطباق باعتبار الإثبات والنفي:</strong>
+                            <ul>
+                                <li><strong>طباق الإيجاب:</strong> تضاد بين معنيين مثبتين أو منفيين.</li>
+                                <li><strong>طباق السلب:</strong> تضاد بين معنى مثبت وآخر منفي.</li>
+                                <li><strong>طباق الخفي:</strong> تضاد غير مباشر يحتاج إلى تأمل.</li>
+                            </ul>
+                        </li>
+                        <li><strong>أقسام الطباق باعتبار أجزاء الكلام:</strong>
+                            <ul>
+                                <li><strong>طباق بين اسمين:</strong> مثل الليل والنهار.</li>
+                                <li><strong>طباق بين فعلين:</strong> مثل يضحك ويبكي.</li>
+                                <li><strong>طباق بين حرفين:</strong> مثل له وعليه.</li>
+                                <li><strong>طباق بين أنواع مختلفة:</strong> مثل أحيي الموتى.</li>
+                            </ul>
+                        </li>
+                        <li><strong>أمثلة شهيرة:</strong>
+                            <ul>
+                                <li>"أَشِدَّاءُ عَلَى الْكُفَّارِ رُحَماءُ بَيْنَهُمْ" (طباق خفي)</li>
+                                <li>"تَعْلَمُ ما فِي نَفْسِي وَلا أَعْلَمُ" (طباق سلب)</li>
+                                <li>"الَّذِي جَعَلَ لَكُمُ الْأَرْضَ فِراشاً وَالسَّماءَ بِناءً" (طباق معنوي)</li>
+                                <li>"وَأَنَّهُ هُوَ أَضْحَكَ وَأَبْكَىٰ" (طباق حقيقي بين فعلين)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- نهاية الدرس -->
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                    <span class="ArabicH-flower-decoration">❦</span> 
+                    المعهد: غير معروف
+                    <span class="ArabicH-flower-decoration">✿</span>
+                </p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_3SY_language_module1_lesson2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.previousLesson">الدرس السابق</a>
+                <a href="#" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHLanguageModule1Lesson3 = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Language Lesson specific translations
+                "ArabicH.languageLesson.module1Lesson3Title": "بديع: الطباق",
+                "ArabicH.languageLesson.module1Lesson3Subtitle": "الدرس الثالث: تعريف الطباق، أنواعه مع تمارين تطبيقية متقدمة",
+                "ArabicH.languageLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.languageLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.languageLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.languageLesson.previousLesson": "الدرس السابق",
+                "ArabicH.languageLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Language Lesson specific translations
+                "ArabicH.languageLesson.module1Lesson3Title": "Rhetoric: Antithesis (Tibaq)",
+                "ArabicH.languageLesson.module1Lesson3Subtitle": "Lesson 3: Definition, Types of Tibaq with Advanced Practical Exercises",
+                "ArabicH.languageLesson.showAnswer": "Show Answer",
+                "ArabicH.languageLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.languageLesson.backToHome": "Back to Homepage",
+                "ArabicH.languageLesson.previousLesson": "Previous Lesson",
+                "ArabicH.languageLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Language Lesson specific translations
+                "ArabicH.languageLesson.module1Lesson3Title": "Rhétorique: Antithèse (Tibaq)",
+                "ArabicH.languageLesson.module1Lesson3Subtitle": "Leçon 3: Définition, Types de Tibaq avec Exercices Pratiques Avancés",
+                "ArabicH.languageLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.languageLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.languageLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.languageLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.languageLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHLanguageModule1Lesson3;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Answer toggle functionality
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إظهار الإجابة';
+            } else {
+                answer.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء الإجابة';
+            }
+        }
+
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Set answer button text after translation
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+            
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                // Check for saved theme or prefer-color-scheme
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.checked = true;
+                }
+                
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+            
+            // Add focus to first textarea when page loads
+            const firstTextarea = document.querySelector('.ArabicH-table-textarea');
+            if (firstTextarea) {
+                setTimeout(() => {
+                    firstTextarea.focus();
+                }, 500);
+            }
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
