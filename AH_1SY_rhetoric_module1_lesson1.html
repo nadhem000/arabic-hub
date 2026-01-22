@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بلاغة: عمليّة التّخاطب وأركانها - الدرس الأول | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#6A4C93">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="عمليّة التّخاطب">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Unique Lavender-Dark Purple Theme for Communication Process Lesson */
+        :root {
+            --primary-color: #6A4C93;
+            --secondary-color: #8A6DBE;
+            --accent-color: #B39DDB;
+            --light-color: #F3E5F5;
+            --dark-color: #4A2C6D;
+            --text-color: #3E2A5E;
+            --heading-color: #4A2C6D;
+            --background-color: #FAF5FF;
+            --card-bg: #FFFFFF;
+            --definition-bg: #F3E5F5;
+            --border-color: #D1C4E9;
+            --table-even-bg: #F8F4FF;
+            --table-hover-bg: #EDE7F6;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(106, 76, 147, 0.12);
+            --gradient-primary: linear-gradient(135deg, #6A4C93 0%, #4A2C6D 100%);
+            --gradient-secondary: linear-gradient(135deg, #8A6DBE 0%, #6A4C93 100%);
+            --gradient-accent: linear-gradient(135deg, #B39DDB 0%, #8A6DBE 100%);
+            --gradient-light: linear-gradient(135deg, #F3E5F5 0%, #E8EAF6 100%);
+            --highlight-color: #9575CD;
+            --highlight-bg: rgba(149, 117, 205, 0.1);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #8A6DBE;
+            --secondary-color: #B39DDB;
+            --accent-color: #D1C4E9;
+            --light-color: #3E2A5E;
+            --dark-color: #4A2C6D;
+            --text-color: #F3E5F5;
+            --heading-color: #FFFFFF;
+            --background-color: #2D1B4E;
+            --card-bg: #3E2A5E;
+            --definition-bg: #4A2C6D;
+            --border-color: #6A4C93;
+            --table-even-bg: #4A2C6D;
+            --table-hover-bg: #5D3A8C;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #8A6DBE 0%, #6A4C93 100%);
+            --gradient-secondary: linear-gradient(135deg, #B39DDB 0%, #8A6DBE 100%);
+            --gradient-accent: linear-gradient(135deg, #D1C4E9 0%, #B39DDB 100%);
+            --gradient-light: linear-gradient(135deg, #3E2A5E 0%, #2D1B4E 100%);
+            --highlight-color: #B39DDB;
+            --highlight-bg: rgba(179, 157, 219, 0.15);
+        }
+
+        /* Page specific styles - Consistent with other lessons */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-lesson-teacher {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-content {
+            margin: 30px 0;
+        }
+
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        [data-theme="dark"] .ArabicH-exercise-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-exercise-content {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .ArabicH-rule-card {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%);
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-left: 6px solid var(--secondary-color);
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ArabicH-rule-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .ArabicH-rule-card::before {
+            content: "📘";
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-rule-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            padding-left: 30px;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 8px;
+            position: relative;
+        }
+
+        [data-theme="dark"] .ArabicH-rule-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-rule-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .ArabicH-example-text {
+            font-size: 1.3rem;
+            font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 2.0;
+            color: var(--dark-color);
+            margin: 15px 0;
+            padding: 12px 18px;
+            background-color: rgba(106, 76, 147, 0.08);
+            border-radius: 10px;
+            border-right: 3px solid var(--secondary-color);
+            text-align: right;
+            direction: rtl;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .ArabicH-example-text {
+            color: #F3E5F5;
+            background-color: rgba(138, 109, 190, 0.2);
+            border-right: 3px solid var(--accent-color);
+        }
+
+        .ArabicH-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .ArabicH-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-table th, .ArabicH-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-table th {
+            background-color: var(--definition-bg);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        [data-theme="dark"] .ArabicH-table th {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-table tr:nth-child(even) {
+            background-color: var(--table-even-bg);
+        }
+
+        .ArabicH-table tr:hover {
+            background-color: var(--table-hover-bg);
+        }
+
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .ArabicH-exercise-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-exercise-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .ArabicH-exercise-table td {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-definition-list {
+            padding-right: 20px;
+            margin: 15px 0;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-definition-list li {
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        /* Textarea styling */
+        .ArabicH-table-textarea {
+            width: 100%;
+            min-height: 40px;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--card-bg);
+            resize: vertical;
+            font-family: inherit;
+            font-size: 15px;
+            color: var(--text-color);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .ArabicH-table-textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(179, 157, 219, 0.2);
+        }
+
+        [data-theme="dark"] .ArabicH-table-textarea {
+            background-color: var(--definition-bg);
+            border-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        /* Knowledge Box - Consistent with other modules */
+        .ArabicH-knowledge-box {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 25px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-knowledge-box::before {
+            content: "💡";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        .ArabicH-knowledge-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        [data-theme="dark"] .ArabicH-knowledge-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-knowledge-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Application item styling */
+        .ArabicH-application-item {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--secondary-color);
+            direction: rtl;
+            text-align: right;
+        }
+
+        .ArabicH-application-title {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .ArabicH-blank-textarea {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 15px;
+            width: 250px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 10px;
+            direction: rtl;
+        }
+
+        .ArabicH-blank-textarea::placeholder {
+            color: var(--secondary-color);
+            opacity: 0.7;
+        }
+
+        [data-theme="dark"] .ArabicH-blank-textarea::placeholder {
+            color: var(--accent-color);
+            opacity: 0.6;
+        }
+
+        /* Flower decoration for headers */
+        .ArabicH-flower-decoration {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Instructions box */
+        .ArabicH-instructions-box {
+            background-color: rgba(149, 117, 205, 0.1);
+            border-radius: var(--border-radius);
+            padding: 1.2rem;
+            margin: 15px 0 25px 0;
+            border-right: 4px solid var(--highlight-color);
+            border-left: 4px solid var(--highlight-color);
+            position: relative;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .ArabicH-instructions-box::before {
+            content: "⚠️";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-instructions-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--highlight-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .ArabicH-instructions-content {
+            line-height: 1.6;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        /* Quran and Poetry verse styling */
+        .ArabicH-quran-verse {
+            background-color: rgba(243, 229, 245, 0.3);
+            border-right: 4px solid var(--accent-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+            font-size: 1.2rem;
+        }
+
+        [data-theme="dark"] .ArabicH-quran-verse {
+            background-color: rgba(179, 157, 219, 0.2);
+            color: #F3E5F5;
+        }
+
+        .ArabicH-poetry-verse {
+            background-color: rgba(243, 229, 245, 0.3);
+            border-right: 4px solid var(--secondary-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+        }
+
+        [data-theme="dark"] .ArabicH-poetry-verse {
+            background-color: rgba(138, 109, 190, 0.2);
+            color: #F3E5F5;
+        }
+
+        /* Author name styling */
+        .ArabicH-author-name {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-style: normal;
+            padding: 2px 8px;
+            background-color: rgba(106, 76, 147, 0.1);
+            border-radius: 4px;
+            margin-right: 5px;
+            display: inline-block;
+            font-family: 'Arial', 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            border-right: 2px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .ArabicH-author-name:hover {
+            background-color: rgba(106, 76, 147, 0.2);
+            transform: scale(1.05);
+        }
+
+        [data-theme="dark"] .ArabicH-author-name {
+            color: var(--accent-color);
+            background-color: rgba(138, 109, 190, 0.15);
+            border-right: 2px solid var(--secondary-color);
+        }
+
+        [data-theme="dark"] .ArabicH-author-name:hover {
+            background-color: rgba(138, 109, 190, 0.25);
+        }
+
+        /* تحسينات إضافية للوضوح في الوضع الداكن */
+        [data-theme="dark"] p,
+        [data-theme="dark"] li,
+        [data-theme="dark"] div:not(.ArabicH-example-text):not(.ArabicH-box-cell) {
+            color: var(--text-color) !important;
+        }
+
+        [data-theme="dark"] strong {
+            color: var(--accent-color);
+        }
+
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) {
+            color: var(--accent-color);
+        }
+
+        /* Responsive styles for lesson page */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title {
+                font-size: 2rem;
+            }
+            
+            .ArabicH-lesson-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-lesson-container {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-lesson-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .ArabicH-table {
+                font-size: 14px;
+            }
+            
+            .ArabicH-example-text {
+                font-size: 1.15rem;
+                padding: 10px 15px;
+                line-height: 1.8;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1.2rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.2rem;
+                padding-left: 25px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 12px;
+                top: 12px;
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-blank-textarea {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main {
+                padding: 1rem;
+            }
+            
+            .ArabicH-lesson-title {
+                font-size: 1.6rem;
+            }
+            
+            .ArabicH-exercise-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-example-text {
+                font-size: 1.05rem;
+                line-height: 1.7;
+                padding: 8px 12px;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.1rem;
+                padding-left: 22px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 10px;
+                top: 10px;
+                font-size: 1rem;
+            }
+            
+            .ArabicH-blank-textarea {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.rhetoricLesson.module1Lesson1Title">بلاغة: عمليّة التّخاطب وأركانها</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.rhetoricLesson.module1Lesson1Subtitle">الدرس الأول: أركان التّخاطب ووظائف اللّغة</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher">
+                    <span class="ArabicH-flower-decoration">❦</span> الأستاذ: غير معروف <span class="ArabicH-flower-decoration">❦</span>
+                </div>
+                <div class="ArabicH-lesson-class">
+                    <span class="ArabicH-flower-decoration">✿</span> المعهد: غير معروف <span class="ArabicH-flower-decoration">✿</span>
+                </div>
+            </div>
+            
+            <!-- Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">مقدمة الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p>عمليّة التّخاطب هي أساس التواصل البشريّ، وهي العملية التي يتمّ من خلالها تبادل الأفكار والمشاعر بين الأشخاص. تدرس البلاغة هذه العملية لمعرفة كيفيّة تأثير الكلام في المخاطَبين وكيفيّة تحقيق أهداف التواصل.</p>
+                    <p>يتكوّن التّخاطب من مجموعة من الأركان الأساسيّة التي تشكّل معًا منظومة متكاملة للتواصل، ولكلّ ركن دور أساسيّ في نجاح عمليّة التّخاطب.</p>
+                </div>
+            </div>
+            
+            <!-- الجزء النظري: أركان عملية التخاطب -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">❀ أركان عمليّة التّخاطب ❀</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">التعريف:</h4>
+                    <p>عمليّة التّخاطب هي عمليّة تواصل تقوم على تبادل الرّسائل بين طرفين أو أكثر، وتتكوّن من ستّة أركان أساسيّة لا تكتمل العمليّة بدونها.</p>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="20%">الركن</th>
+                                    <th width="40%">التعريف</th>
+                                    <th width="40%">مثال توضيحي</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>المتكلّم (الباثّ)</strong></td>
+                                    <td>الشخص الذي يبدأ عمليّة التّخاطب وينشئ الرّسالة</td>
+                                    <td>الشاعر جميل بن معمر عند مخاطبة بثينة</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>المخاطَب (المتقبّل)</strong></td>
+                                    <td>الشخص الذي يتمّ توجيه الرّسالة إليه</td>
+                                    <td>بثينة في قصائد جميل بن معمر</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>نصّ المقول (الرّسالة)</strong></td>
+                                    <td>المحتوى الذي يريد المتكلّم إبلاغه إلى المخاطَب</td>
+                                    <td>بيت شعري، خطبة، نصّ نثري</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>اللّغة (السّنن)</strong></td>
+                                    <td>النظام اللغويّ المستخدم في صياغة الرّسالة</td>
+                                    <td>لغة شعريّة، لغة خطابيّة، لغة سجعيّة</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>القناة</strong></td>
+                                    <td>الوسيلة التي تنتقل بها الرّسالة من المتكلّم إلى المخاطَب</td>
+                                    <td>الهواء (الصوت)، الكتابة، الهاتف، الرّسالة</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>المقام (السّياق)</strong></td>
+                                    <td>الظرف الذي يدعو المتكلّم إلى اختيار خطاب معيّن</td>
+                                    <td>مقام الغزل، مقام الحرب، مقام الذمّ، مقام الافتخار</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="ArabicH-instructions-box">
+                        <h4 class="ArabicH-instructions-title">ملاحظات هامة:</h4>
+                        <div class="ArabicH-instructions-content">
+                            <ul>
+                                <li><strong>القناة:</strong> هي الوسيلة التي ينتقل بواسطتها الخطاب من المتكلّم إلى المخاطب (الهواء – الهاتف – الرّسالة...).</li>
+                                <li><strong>المقام:</strong> هو الأمر الذي يدعو المتكلّم إلى اختيار خطاب على آخر، ويؤثر في اختيار الألفاظ والأسلوب.</li>
+                                <li>قد يكون المتكلّم فردًا أو جماعة، وقد يكون المخاطَب فردًا أو جماعة أو حتى المتكلّم نفسه (في حالات الحديث مع الذات).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- الجزء النظري: وظائف اللغة -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">❀ وظائف اللّغة في التّخاطب ❀</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">التعريف:</h4>
+                    <p>اللّغة ليست مجرّد أداة للتواصل، بل لها وظائف متعدّدة تتجاوز الإبلاغ المباشر إلى التعبير عن المشاعر والتأثير في الآخرين وخلق الجمال الفنّي.</p>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="25%">الوظيفة</th>
+                                    <th width="35%">التعريف</th>
+                                    <th width="40%">مثال</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>الوظيفة الأساسيّة</strong></td>
+                                    <td>الإبلاغ والتواصل المباشر</td>
+                                    <td>إخبار شخص بمعلومة جديدة</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الوظيفة التعبيريّة</strong></td>
+                                    <td>التعبير عن مشاعر وأحاسيس المتكلّم</td>
+                                    <td>استعمال ضمير المتكلّم (أنا)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الوظيفة التأثيريّة</strong></td>
+                                    <td>التأثير في المخاطَب وحثّه على فعل ما</td>
+                                    <td>استعمال ضمير المخاطَب (أنت، أنتم)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الوظيفة الشعريّة</strong></td>
+                                    <td>التركيز على الجمال الفنّي للّغة</td>
+                                    <td>استخدام الصور البيانيّة والمحسّنات البديعيّة</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الوظيفة المرجعيّة</strong></td>
+                                    <td>الإحالة إلى عناصر خارج النصّ</td>
+                                    <td>ذكر أسماء الأشخاص، الأماكن، الأحداث</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الوظيفة الاجتماعيّة</strong></td>
+                                    <td>تعزيز الروابط الاجتماعيّة</td>
+                                    <td>التحيّة، المجاملة، التعازي</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="ArabicH-instructions-box">
+                        <h4 class="ArabicH-instructions-title">ملاحظة هامة:</h4>
+                        <div class="ArabicH-instructions-content">
+                            <p>قد تجتمع عدّة وظائف ثانويّة في نصّ واحد، حيث يمكن أن يجمع النصّ بين الوظيفة التعبيريّة والتأثيريّة والشعريّة في آن واحد.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التمرين 1 -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التمرين 1: حدّد أركان التّخاطب</h3>
+                
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تعليمات التمرين:</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p><strong>حدّد أركان التّخاطب في النصوص التالية:</strong></p>
+                        <p>اكتب إجاباتك في الخانات المخصّصة ثم اضغط على زر "إظهار الإجابة" للتحقّق من صحّة إجاباتك.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">❀ النصوص المدروسة:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>النص 1:</strong> قال عليّ بن أبي طالب في ذمّ أهل العراق:</p>
+                        <div class="ArabicH-poetry-verse">
+                            أمّا بعدُ يا أهلَ العراقِ فإنّما أنتم كالمرأةِ الحامِلِ حَمَلتْ فلمّا أتَمَّتْ أمْلَصَتْ و مَاتَ قيّمُهَا و طالَ تَأَيّمُهَا وَ وَرِثَهَا أبْعَدُهَا. أمّا و اللهِ ما أتَيْتُكُمْ اُخْتِيَارًا و لكنْ جِئْتُ إلَيْكُمْ سَوْقًا – و لَقَدْ بَلَغَنِي أنَّكُمْ تَقُولُونَ عَلِيٌّ يَكْذِبُ. قاتَلَكُمُ اللهُ! فعَلَى مَنْ أكْذِبُ؟
+                        </div>
+                        
+                        <div class="ArabicH-table-container" style="margin-top: 20px;">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="20%">الركن</th>
+                                        <th width="80%">التحديد</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>المتكلّم</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>المخاطَب</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>نصّ المقول</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>اللّغة</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>القناة</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>المقام</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>النص 2:</strong> قال طَرَفَة بن العبد البكريّ:</p>
+                        <div class="ArabicH-poetry-verse">
+                            ألاَ أيّهَذَا اللاّئِمِي أحْضُرَ الوَغَى _ و أنْ أشْهَدَ اللّذّاتِ هل أنتَ مُخْلِدِي؟<br>
+                            فإنْ كنتَ لا تَسْطيعُ دفْعَ مَنِيَّتِي _ فَدَعْنِي أبَادِرْهَا بِمَا مَلَكَتْ يَدِي
+                        </div>
+                        
+                        <div class="ArabicH-table-container" style="margin-top: 20px;">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="20%">الركن</th>
+                                        <th width="80%">التحديد</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>المتكلّم</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>المخاطَب</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>نصّ المقول</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>اللّغة</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>القناة</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>المقام</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>النص 3:</strong> خطب طارق بن زياد في جيشه فقال:</p>
+                        <div class="ArabicH-poetry-verse">
+                            أيّها النّاسُ! أيْن المفَرُّ؟ البحرُ من ورائكم و العَدُوُّ أمَامَكُم، و ليس لَكُمْ، و اللهِ، إلاّ الصِّدْقُ و الصّبْرُ.<br>
+                            و اُعْلَمُوا أنكُمْ في هذه الجزيرَةِ أضْيَعُ مِن الأيْتَامِ في مآدِبِ اللِّئامِ
+                        </div>
+                        
+                        <div class="ArabicH-table-container" style="margin-top: 20px;">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="20%">الركن</th>
+                                        <th width="80%">التحديد</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>المتكلّم</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>المخاطَب</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>نصّ المقول</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>اللّغة</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>القناة</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>المقام</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="1"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار إصلاح التمرين 1</button>
+                
+                <div id="answer1" class="ArabicH-answer">
+                    <h4>إصلاح التمرين 1:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>النص 1 (علي بن أبي طالب):</strong></p>
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="20%">الركن</th>
+                                        <th width="80%">التحديد</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>المتكلّم</td>
+                                        <td>عليّ بن أبي طالب</td>
+                                    </tr>
+                                    <tr>
+                                        <td>المخاطَب</td>
+                                        <td>أهل العراق</td>
+                                    </tr>
+                                    <tr>
+                                        <td>نصّ المقول</td>
+                                        <td>جزء من خطبة</td>
+                                    </tr>
+                                    <tr>
+                                        <td>اللّغة</td>
+                                        <td>منتقاة (سجع)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>القناة</td>
+                                        <td>الهواء (الصوت)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>المقام</td>
+                                        <td>الذمّ</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>النص 2 (طرفة بن العبد):</strong></p>
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="20%">الركن</th>
+                                        <th width="80%">التحديد</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>المتكلّم</td>
+                                        <td>طرفة بن العبد البكريّ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>المخاطَب</td>
+                                        <td>اللاّئم</td>
+                                    </tr>
+                                    <tr>
+                                        <td>نصّ المقول</td>
+                                        <td>بيتان شعريّان</td>
+                                    </tr>
+                                    <tr>
+                                        <td>اللّغة</td>
+                                        <td>شعريّة</td>
+                                    </tr>
+                                    <tr>
+                                        <td>القناة</td>
+                                        <td>الهواء (الصوت)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>المقام</td>
+                                        <td>افتخار أو لوم معًا</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>النص 3 (طارق بن زياد):</strong></p>
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="20%">الركن</th>
+                                        <th width="80%">التحديد</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>المتكلّم</td>
+                                        <td>طارق بن زياد</td>
+                                    </tr>
+                                    <tr>
+                                        <td>المخاطَب</td>
+                                        <td>الجيش</td>
+                                    </tr>
+                                    <tr>
+                                        <td>نصّ المقول</td>
+                                        <td>جزء من خطبة</td>
+                                    </tr>
+                                    <tr>
+                                        <td>اللّغة</td>
+                                        <td>خطابيّة منتقاة</td>
+                                    </tr>
+                                    <tr>
+                                        <td>القناة</td>
+                                        <td>الهواء (الصوت)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>المقام</td>
+                                        <td>التحريض على القتال والجهاد</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التمرين 2 -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التمرين 2: حدّد وظيفة اللّغة</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">❀ حدّد وظيفة اللّغة في النصوص السابقة:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>وظيفة اللّغة في خطبة علي بن أبي طالب:</strong></p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب وظيفة اللّغة هنا..." rows="3" style="width: 100%;"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>وظيفة اللّغة في بيتي طرفة بن العبد:</strong></p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب وظيفة اللّغة هنا..." rows="3" style="width: 100%;"></textarea>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>وظيفة اللّغة في خطبة طارق بن زياد:</strong></p>
+                        <textarea class="ArabicH-blank-textarea" placeholder="اكتب وظيفة اللّغة هنا..." rows="3" style="width: 100%;"></textarea>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار إصلاح التمرين 2</button>
+                
+                <div id="answer2" class="ArabicH-answer">
+                    <h4>إصلاح التمرين 2:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>وظيفة اللّغة في خطبة علي بن أبي طالب:</strong></p>
+                        <ul class="ArabicH-definition-list">
+                            <li><strong>الوظيفة الأساسيّة:</strong> الإبلاغ والتواصل (إيصال رسالة الذمّ لأهل العراق)</li>
+                            <li><strong>الوظيفة الثانويّة:</strong>
+                                <ul>
+                                    <li><strong>التعبيريّة:</strong> استعمال ضمير المتكلّم (أنا) في "ما أتيْتُكُمْ"، "أكْذِبُ"</li>
+                                    <li><strong>التأثيريّة:</strong> استعمال ضمير المخاطَب (أنتم) في الخطاب</li>
+                                    <li><strong>الشعريّة:</strong> استخدام السجع في "أمْلَصَتْ... تَأَيّمُهَا... أبْعَدُهَا"</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>وظيفة اللّغة في بيتي طرفة بن العبد:</strong></p>
+                        <ul class="ArabicH-definition-list">
+                            <li><strong>الوظيفة الأساسيّة:</strong> الإبلاغ والتواصل (ردّ على اللائم)</li>
+                            <li><strong>الوظيفة الثانويّة:</strong>
+                                <ul>
+                                    <li><strong>التعبيريّة:</strong> التعبير عن رغبة الشاعر في التمتّع بالحياة</li>
+                                    <li><strong>التأثيريّة:</strong> استفهام تخييري للتأثير على اللائم</li>
+                                    <li><strong>الشعريّة:</strong> بيتان من الشعر مع وزن وقافية</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>وظيفة اللّغة في خطبة طارق بن زياد:</strong></p>
+                        <ul class="ArabicH-definition-list">
+                            <li><strong>الوظيفة الأساسيّة:</strong> الإبلاغ والتواصل (تحريض الجيش على القتال)</li>
+                            <li><strong>الوظيفة الثانويّة:</strong>
+                                <ul>
+                                    <li><strong>التأثيريّة:</strong> استخدام الاستفهام الإنكاري "أين المفرّ؟" للتأثير النفسي</li>
+                                    <li><strong>الشعريّة:</strong> استخدام الصور البيانيّة (التشبيه: أضيع من الأيتام في مآدب اللئام)</li>
+                                    <li><strong>الاجتماعيّة:</strong> تعزيز روح الجماعة والتضامن في الموقف الصعب</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التمرين المنزلي -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التمرين المنزلي: تحديد أركان التخاطب ووظائف اللغة</h3>
+                
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تعليمات التمرين المنزلي:</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p><strong>حَدِّد أركانَ التّخاطُبِ ووظيفةَ اللّغة في النصوص التالية:</strong></p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-application-item">
+                        <p><strong>النص 1:</strong> قال أبو القاسم الشابي:</p>
+                        <div class="ArabicH-poetry-verse">
+                            خُلِقْتَ طَليقًا كطَيْفِ النّسيم — و حُرًّا كَنُورِ الضُّحَى في سَمَاهْ<br>
+                            فَمَالَكَ ترضى بِذُلِّ القُيُود — و تَحْنِي لِمَنْ كَبَّلُوكَ الجِبَاهْ؟
+                        </div>
+                        
+                        <div class="ArabicH-table-container" style="margin-top: 20px;">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="30%">المطلوب</th>
+                                        <th width="70%">التحديد</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>أركان التخاطب</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="3"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>وظيفة اللغة</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="3"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>النص 2:</strong> قال جميل بن معمر:</p>
+                        <div class="ArabicH-poetry-verse">
+                            اِرْحَمِيني، فَقَدْ بَلِيتُ، فَحَسْبي — بعضُ ذا الدّاءِ، يا بُثَيْنَةُ، حَسْبِي!
+                        </div>
+                        
+                        <div class="ArabicH-table-container" style="margin-top: 20px;">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="30%">المطلوب</th>
+                                        <th width="70%">التحديد</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>أركان التخاطب</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="3"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>وظيفة اللغة</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="3"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>النص 3:</strong> قال جميل بن معمر مخاطبًا بثينة:</p>
+                        <div class="ArabicH-poetry-verse">
+                            سأمنحُ طرفي حين ألقاك غيركم — لكي ما يروا أن الهوى حيث أنظر
+                        </div>
+                        
+                        <div class="ArabicH-table-container" style="margin-top: 20px;">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="30%">المطلوب</th>
+                                        <th width="70%">التحديد</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>أركان التخاطب</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="3"></textarea></td>
+                                    </tr>
+                                    <tr>
+                                        <td>وظيفة اللغة</td>
+                                        <td><textarea class="ArabicH-table-textarea" placeholder="اكتب هنا..." rows="3"></textarea></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.rhetoricLesson.showAnswer">إظهار إصلاح التمرين المنزلي</button>
+                
+                <div id="answer3" class="ArabicH-answer">
+                    <h4>إصلاح التمرين المنزلي:</h4>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>النص 1 (أبو القاسم الشابي):</strong></p>
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="30%">المطلوب</th>
+                                        <th width="70%">التحديد</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>أركان التخاطب</td>
+                                        <td>
+                                            <ul>
+                                                <li><strong>المتكلّم:</strong> الشابي</li>
+                                                <li><strong>المخاطَب:</strong> الشعب</li>
+                                                <li><strong>نصّ المقول:</strong> بيت شعري</li>
+                                                <li><strong>اللّغة:</strong> لغة شعريّة</li>
+                                                <li><strong>القناة:</strong> الهواء (الصوت)</li>
+                                                <li><strong>المقام:</strong> التحريض على الحرية والثورة</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>وظيفة اللغة</td>
+                                        <td>
+                                            <ul>
+                                                <li><strong>الوظيفة الأساسيّة:</strong> الإبلاغ والتواصل (دعوة الشعب للتحرر)</li>
+                                                <li><strong>الوظيفة الثانويّة:</strong> التأثيريّة (نداء مباشر للشعب) + الشعريّة (صور بيانية: كطيف النسيم، كنور الضحى)</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>النص 2 (جميل بن معمر):</strong></p>
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="30%">المطلوب</th>
+                                        <th width="70%">التحديد</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>أركان التخاطب</td>
+                                        <td>
+                                            <ul>
+                                                <li><strong>المتكلّم:</strong> جميل بن معمر</li>
+                                                <li><strong>المخاطَب:</strong> بثينة</li>
+                                                <li><strong>نصّ المقول:</strong> بيت شعري</li>
+                                                <li><strong>اللّغة:</strong> لغة شعريّة</li>
+                                                <li><strong>القناة:</strong> الهواء (الصوت)</li>
+                                                <li><strong>المقام:</strong> الغزل والاستعطاف</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>وظيفة اللغة</td>
+                                        <td>
+                                            <ul>
+                                                <li><strong>الوظيفة الأساسيّة:</strong> الإبلاغ والتواصل (طلب الرحمة)</li>
+                                                <li><strong>الوظيفة الثانويّة:</strong> التعبيريّة (التعبير عن الألم) + التأثيريّة (طلب الرحمة) + الشعريّة (تكرار "حسبي" للتوازن الموسيقي)</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="ArabicH-application-item">
+                        <p><strong>النص 3 (جميل بن معمر):</strong></p>
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-exercise-table">
+                                <thead>
+                                    <tr>
+                                        <th width="30%">المطلوب</th>
+                                        <th width="70%">التحديد</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>أركان التخاطب</td>
+                                        <td>
+                                            <ul>
+                                                <li><strong>المتكلّم:</strong> جميل بن معمر</li>
+                                                <li><strong>المخاطَب:</strong> بثينة</li>
+                                                <li><strong>نصّ المقول:</strong> بيت شعري</li>
+                                                <li><strong>اللّغة:</strong> لغة شعريّة</li>
+                                                <li><strong>القناة:</strong> الهواء (الصوت)</li>
+                                                <li><strong>المقام:</strong> الغزل والتواصل العاطفي</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>وظيفة اللغة</td>
+                                        <td>
+                                            <ul>
+                                                <li><strong>الوظيفة الأساسيّة:</strong> الإبلاغ والتواصل (إخبار بثينة بحيلة لإخفاء الحب)</li>
+                                                <li><strong>الوظيفة الثانويّة:</strong> التعبيريّة (كشف المشاعر) + الشعريّة (بناء بيت متوازن موسيقيًا)</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- مثال تطبيقي إضافي -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">مثال تطبيقي: تحليل شامل</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-application-item">
+                        <p><strong>النص:</strong> قال جميل بن معمر:</p>
+                        <div class="ArabicH-poetry-verse">
+                            خليليّ، عوجا اليومَ حتى تُسَلّما على عذبةِ الأنياب، طيبةِ النشرِ<br>
+                            فإنكما إن عُجتما ليَ ساعة ً، شكرتكما ، حتى أغيّبَ في قبري
+                        </div>
+                        
+                        <div class="ArabicH-instructions-box">
+                            <h4 class="ArabicH-instructions-title">التحليل:</h4>
+                            <div class="ArabicH-instructions-content">
+                                <p><strong>أركان عملية التخاطب:</strong></p>
+                                <ul>
+                                    <li><strong>المتكلّم:</strong> جميل</li>
+                                    <li><strong>المخاطَب:</strong> خليلاه (صديقاه)</li>
+                                    <li><strong>نصّ المقول:</strong> بيتان شعريان</li>
+                                    <li><strong>اللّغة المستعملة:</strong> لغة شعريّة</li>
+                                    <li><strong>القناة:</strong> الهواء</li>
+                                    <li><strong>المقام:</strong> الغزل</li>
+                                </ul>
+                                
+                                <p><strong>وظيفة اللّغة في البيتين:</strong></p>
+                                <ul>
+                                    <li><strong>الوظيفة الأساسيّة:</strong> الإبلاغ والتواصل (طلب من الخليلين)</li>
+                                    <li><strong>الوظيفة الثانويّة:</strong>
+                                        <ul>
+                                            <li><strong>التعبيريّة:</strong> الحديث في أمر ذاتي (أنا)</li>
+                                            <li><strong>التأثيريّة:</strong> استعمال ضمير المخاطب (أنتما)</li>
+                                            <li><strong>الشعريّة:</strong> بيتان من الشّعر مع صور بيانية (عذبة الأنياب، طيبة النشر)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ملخص الدرس -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">ملخص الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <ul class="ArabicH-definition-list">
+                        <li><strong>عمليّة التّخاطب:</strong> هي عملية تواصل تقوم على تبادل الرّسائل بين طرفين أو أكثر.</li>
+                        <li><strong>أركان عمليّة التخاطب (6 أركان):</strong>
+                            <ol>
+                                <li><strong>المتكلّم (الباثّ):</strong> الشخص الذي يبدأ عمليّة التّخاطب وينشئ الرّسالة.</li>
+                                <li><strong>المخاطَب (المتقبّل):</strong> الشخص الذي يتمّ توجيه الرّسالة إليه.</li>
+                                <li><strong>نصّ المقول (الرّسالة):</strong> المحتوى الذي يريد المتكلّم إبلاغه إلى المخاطَب.</li>
+                                <li><strong>اللّغة (السّنن):</strong> النظام اللغويّ المستخدم في صياغة الرّسالة.</li>
+                                <li><strong>القناة:</strong> الوسيلة التي تنتقل بها الرّسالة من المتكلّم إلى المخاطَب (الهواء، الكتابة، الهاتف...).</li>
+                                <li><strong>المقام (السّياق):</strong> الظرف الذي يدعو المتكلّم إلى اختيار خطاب معيّن.</li>
+                            </ol>
+                        </li>
+                        <li><strong>وظائف اللّغة:</strong>
+                            <ul>
+                                <li><strong>الوظيفة الأساسيّة:</strong> الإبلاغ والتواصل.</li>
+                                <li><strong>الوظائف الثانويّة:</strong>
+                                    <ul>
+                                        <li><strong>التعبيريّة:</strong> التعبير عن مشاعر وأحاسيس المتكلّم.</li>
+                                        <li><strong>التأثيريّة:</strong> التأثير في المخاطَب وحثّه على فعل ما.</li>
+                                        <li><strong>الشعريّة:</strong> التركيز على الجمال الفنّي للّغة.</li>
+                                        <li><strong>المرجعيّة:</strong> الإحالة إلى عناصر خارج النصّ.</li>
+                                        <li><strong>الاجتماعيّة:</strong> تعزيز الروابط الاجتماعيّة.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>ملاحظة هامة:</strong> قد تجتمع عدّة وظائف ثانويّة في نصّ واحد.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- معلومات إضافية -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">معلومات إضافية:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p><strong>المستوى:</strong> الأولى ثانويًّا</p>
+                    <p><strong>المادة:</strong> تعليميّة البلاغة</p>
+                    <p><strong>مثال من منهجية التحليل:</strong></p>
+                    <div class="ArabicH-instructions-box">
+                        <div class="ArabicH-instructions-content">
+                            <p>عند تحليل أيّ نصّ من نصوص التّخاطب، يمكن اتّباع الخطوات التالية:</p>
+                            <ol>
+                                <li>تحديد المتكلّم والمخاطَب</li>
+                                <li>وصف نصّ المقول (شعري، نثري، خطابي...)</li>
+                                <li>تحليل اللّغة المستخدمة (بسيطة، مركّبة، شعريّة...)</li>
+                                <li>تحديد القناة (كيف وصلت الرّسالة)</li>
+                                <li>تحليل المقام (السياق والظروف)</li>
+                                <li>تحليل وظائف اللّغة في النصّ</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.rhetoricLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.rhetoricLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_1SY_rhetoric_module1_lesson2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.rhetoricLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHRhetoricModule1Lesson1 = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Rhetoric Lesson specific translations
+                "ArabicH.rhetoricLesson.module1Lesson1Title": "بلاغة: عمليّة التّخاطب وأركانها",
+                "ArabicH.rhetoricLesson.module1Lesson1Subtitle": "الدرس الأول: أركان التّخاطب ووظائف اللّغة",
+                "ArabicH.rhetoricLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.rhetoricLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.rhetoricLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.rhetoricLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Rhetoric Lesson specific translations
+                "ArabicH.rhetoricLesson.module1Lesson1Title": "Rhetoric: Communication Process and Its Elements",
+                "ArabicH.rhetoricLesson.module1Lesson1Subtitle": "Lesson 1: Elements of Communication and Language Functions",
+                "ArabicH.rhetoricLesson.showAnswer": "Show Answer",
+                "ArabicH.rhetoricLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.rhetoricLesson.backToHome": "Back to Homepage",
+                "ArabicH.rhetoricLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Rhetoric Lesson specific translations
+                "ArabicH.rhetoricLesson.module1Lesson1Title": "Rhétorique: Processus de Communication et Ses Éléments",
+                "ArabicH.rhetoricLesson.module1Lesson1Subtitle": "Leçon 1: Éléments de Communication et Fonctions du Langage",
+                "ArabicH.rhetoricLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.rhetoricLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.rhetoricLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.rhetoricLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHRhetoricModule1Lesson1;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Answer toggle functionality
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إظهار الإجابة';
+            } else {
+                answer.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء الإجابة';
+            }
+        }
+
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Set answer button text after translation
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+            
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                // Check for saved theme or prefer-color-scheme
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.checked = true;
+                }
+                
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+            
+            // Add focus to first textarea when page loads
+            const firstTextarea = document.querySelector('.ArabicH-table-textarea');
+            if (firstTextarea) {
+                setTimeout(() => {
+                    firstTextarea.focus();
+                }, 500);
+            }
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
