@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحال - الدرس الثاني | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#8A2BE2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="الحال">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Unique Violet/Purple Theme for الحال Lesson */
+        :root {
+            --primary-color: #8A2BE2;
+            --secondary-color: #9370DB;
+            --accent-color: #BA55D3;
+            --light-color: #F3E8FF;
+            --dark-color: #6A0DAD;
+            --text-color: #4B0082;
+            --heading-color: #7B1FA2;
+            --background-color: #FAF5FF;
+            --card-bg: #FFFFFF;
+            --definition-bg: #F3E8FF;
+            --border-color: #D8BFD8;
+            --table-even-bg: #F0E6FF;
+            --table-hover-bg: #E6D6FF;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(138, 43, 226, 0.12);
+            --gradient-primary: linear-gradient(135deg, #8A2BE2 0%, #6A0DAD 100%);
+            --gradient-secondary: linear-gradient(135deg, #9370DB 0%, #8A2BE2 100%);
+            --gradient-accent: linear-gradient(135deg, #BA55D3 0%, #9370DB 100%);
+            --gradient-light: linear-gradient(135deg, #F3E8FF 0%, #E6D6FF 100%);
+            --highlight-color: #FF7043;
+            --highlight-bg: rgba(255, 112, 67, 0.1);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #9370DB;
+            --secondary-color: #BA55D3;
+            --accent-color: #DA70D6;
+            --light-color: #6A0DAD;
+            --dark-color: #4B0082;
+            --text-color: #F3E8FF;
+            --heading-color: #FFFFFF;
+            --background-color: #4B0082;
+            --card-bg: #6A0DAD;
+            --definition-bg: #8A2BE2;
+            --border-color: #9370DB;
+            --table-even-bg: #8A2BE2;
+            --table-hover-bg: #9370DB;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #9370DB 0%, #8A2BE2 100%);
+            --gradient-secondary: linear-gradient(135deg, #BA55D3 0%, #9370DB 100%);
+            --gradient-accent: linear-gradient(135deg, #DA70D6 0%, #BA55D3 100%);
+            --gradient-light: linear-gradient(135deg, #6A0DAD 0%, #4B0082 100%);
+            --highlight-color: #FFAB91;
+            --highlight-bg: rgba(255, 171, 145, 0.15);
+        }
+
+        /* Page specific styles - Consistent with other lessons */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-lesson-teacher {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-content {
+            margin: 30px 0;
+        }
+
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        [data-theme="dark"] .ArabicH-exercise-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-exercise-content {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .ArabicH-rule-card {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%);
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-left: 6px solid var(--secondary-color);
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ArabicH-rule-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .ArabicH-rule-card::before {
+            content: "📘";
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-rule-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            padding-left: 30px;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 8px;
+            position: relative;
+        }
+
+        [data-theme="dark"] .ArabicH-rule-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-rule-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .ArabicH-example-text {
+            font-size: 1.3rem;
+            font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 2.0;
+            color: var(--dark-color);
+            margin: 15px 0;
+            padding: 12px 18px;
+            background-color: rgba(138, 43, 226, 0.08);
+            border-radius: 10px;
+            border-right: 3px solid var(--secondary-color);
+            text-align: right;
+            direction: rtl;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .ArabicH-example-text {
+            color: #F3E8FF;
+            background-color: rgba(147, 112, 219, 0.2);
+            border-right: 3px solid var(--accent-color);
+        }
+
+        .ArabicH-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .ArabicH-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-table th, .ArabicH-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-table th {
+            background-color: var(--definition-bg);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        [data-theme="dark"] .ArabicH-table th {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-table tr:nth-child(even) {
+            background-color: var(--table-even-bg);
+        }
+
+        .ArabicH-table tr:hover {
+            background-color: var(--table-hover-bg);
+        }
+
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .ArabicH-exercise-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-exercise-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .ArabicH-exercise-table td {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-definition-list {
+            padding-right: 20px;
+            margin: 15px 0;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-definition-list li {
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        /* Textarea styling */
+        .ArabicH-table-textarea {
+            width: 100%;
+            min-height: 40px;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--card-bg);
+            resize: vertical;
+            font-family: inherit;
+            font-size: 15px;
+            color: var(--text-color);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .ArabicH-table-textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(186, 85, 211, 0.2);
+        }
+
+        [data-theme="dark"] .ArabicH-table-textarea {
+            background-color: var(--definition-bg);
+            border-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        /* Knowledge Box - Consistent with other modules */
+        .ArabicH-knowledge-box {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 25px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-knowledge-box::before {
+            content: "💡";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        .ArabicH-knowledge-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        [data-theme="dark"] .ArabicH-knowledge-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-knowledge-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Application item styling */
+        .ArabicH-application-item {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--secondary-color);
+            direction: rtl;
+            text-align: right;
+        }
+
+        .ArabicH-blank-textarea {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 15px;
+            width: 250px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 10px;
+            direction: rtl;
+        }
+
+        .ArabicH-blank-textarea::placeholder {
+            color: var(--secondary-color);
+            opacity: 0.7;
+        }
+
+        [data-theme="dark"] .ArabicH-blank-textarea::placeholder {
+            color: var(--accent-color);
+            opacity: 0.6;
+        }
+
+        /* Flower decoration for headers */
+        .ArabicH-flower-decoration {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Instructions box */
+        .ArabicH-instructions-box {
+            background-color: rgba(255, 112, 67, 0.1);
+            border-radius: var(--border-radius);
+            padding: 1.2rem;
+            margin: 15px 0 25px 0;
+            border-right: 4px solid var(--highlight-color);
+            border-left: 4px solid var(--highlight-color);
+            position: relative;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .ArabicH-instructions-box::before {
+            content: "⚠️";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-instructions-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--highlight-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .ArabicH-instructions-content {
+            line-height: 1.6;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        /* Quran and Poetry verse styling */
+        .ArabicH-quran-verse {
+            background-color: rgba(243, 232, 255, 0.3);
+            border-right: 4px solid var(--accent-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+            font-size: 1.2rem;
+        }
+
+        [data-theme="dark"] .ArabicH-quran-verse {
+            background-color: rgba(186, 85, 211, 0.2);
+            color: #F3E8FF;
+        }
+
+        .ArabicH-poetry-verse {
+            background-color: rgba(243, 232, 255, 0.3);
+            border-right: 4px solid var(--secondary-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+        }
+
+        [data-theme="dark"] .ArabicH-poetry-verse {
+            background-color: rgba(147, 112, 219, 0.2);
+            color: #F3E8FF;
+        }
+
+        /* Author name styling */
+        .ArabicH-author-name {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-style: normal;
+            padding: 2px 8px;
+            background-color: rgba(138, 43, 226, 0.1);
+            border-radius: 4px;
+            margin-right: 5px;
+            display: inline-block;
+            font-family: 'Arial', 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            border-right: 2px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .ArabicH-author-name:hover {
+            background-color: rgba(138, 43, 226, 0.2);
+            transform: scale(1.05);
+        }
+
+        [data-theme="dark"] .ArabicH-author-name {
+            color: var(--accent-color);
+            background-color: rgba(147, 112, 219, 0.15);
+            border-right: 2px solid var(--secondary-color);
+        }
+
+        [data-theme="dark"] .ArabicH-author-name:hover {
+            background-color: rgba(147, 112, 219, 0.25);
+        }
+
+        /* تحسينات إضافية للوضوح في الوضع الداكن */
+        [data-theme="dark"] p,
+        [data-theme="dark"] li,
+        [data-theme="dark"] div:not(.ArabicH-example-text):not(.ArabicH-box-cell) {
+            color: var(--text-color) !important;
+        }
+
+        [data-theme="dark"] strong {
+            color: var(--accent-color);
+        }
+
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) {
+            color: var(--accent-color);
+        }
+
+        /* Responsive styles for lesson page */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title {
+                font-size: 2rem;
+            }
+            
+            .ArabicH-lesson-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-lesson-container {
+                padding: 1.5rem;
+            }
+            
+            .ArabicH-lesson-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .ArabicH-table {
+                font-size: 14px;
+            }
+            
+            .ArabicH-example-text {
+                font-size: 1.15rem;
+                padding: 10px 15px;
+                line-height: 1.8;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1.2rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.2rem;
+                padding-left: 25px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 12px;
+                top: 12px;
+                font-size: 1.1rem;
+            }
+            
+            .ArabicH-blank-textarea {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main {
+                padding: 1rem;
+            }
+            
+            .ArabicH-lesson-title {
+                font-size: 1.6rem;
+            }
+            
+            .ArabicH-exercise-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-example-text {
+                font-size: 1.05rem;
+                line-height: 1.7;
+                padding: 8px 12px;
+            }
+            
+            .ArabicH-rule-card {
+                padding: 1rem;
+            }
+            
+            .ArabicH-rule-title {
+                font-size: 1.1rem;
+                padding-left: 22px;
+            }
+            
+            .ArabicH-rule-card::before {
+                left: 10px;
+                top: 10px;
+                font-size: 1rem;
+            }
+            
+            .ArabicH-blank-textarea {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.languageLesson.module3Lesson2Title">الحال</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.languageLesson.module3Lesson2Subtitle">الدرس الثاني: الأشكال النحوية للحال - تعريف الحال وأشكاله وأنواعه وصاحب الحال</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher">
+                    <span class="ArabicH-flower-decoration">❦</span> القسم: ثالثة ثانوي آداب <span class="ArabicH-flower-decoration">❦</span>
+                </div>
+                <div class="ArabicH-lesson-class">
+                    <span class="ArabicH-flower-decoration">✿</span> الأستاذة: فوزيّة الشّطّي <span class="ArabicH-flower-decoration">✿</span>
+                </div>
+            </div>
+            
+            <!-- Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">مقدمة الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p><strong>الحال في اللغة العربية:</strong> الحال هو اسم نكرة منصوب يبين هيئة صاحبه وقت حدوث الفعل، ويُعرب دائماً منصوباً أو في محل نصب، ولا يكون إلا نكرة.</p>
+                    <p><strong>العلاقة بين الحال وصاحب الحال:</strong> يرتبط الحال بصاحبه (الفاعل أو المفعول به أو نائب الفاعل) ويكون وصفاً لحالته أثناء وقوع الفعل.</p>
+                    <p><strong>أهمية الدراسة:</strong> تساعد دراسة الحال على فهم التركيب النحوي للجملة العربية وتحليل النصوص الأدبية بدقة، خاصة الشعر العربي الذي يكثر فيه استخدام الحال للتعبير عن المشاعر والأحوال النفسية.</p>
+                </div>
+            </div>
+            
+            <!-- تعريف الحال وصاحب الحال -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">تعريف الحال وصاحب الحال</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تعريف الحال:</h4>
+                    <p>الحال: اسم نكرة منصوب (أو في محل نصب) يبين هيئة صاحبه وقت حدوث الفعل. يُعوض الحال باسم الاستفهام (كَيْفَ).</p>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تعريف صاحب الحال:</h4>
+                    <p>صاحب الحال: هو الاسم الذي يكون الحال وصفاً لحالته أثناء وقوع الفعل، وقد يكون فاعلاً أو مفعولاً به أو نائب فاعل أو اسماً منصوباً.</p>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="25%">المصطلح</th>
+                                    <th width="35%">التعريف والخصائص</th>
+                                    <th width="40%">أمثلة توضيحية</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>الحال</strong></td>
+                                    <td>اسم نكرة منصوب يبين هيئة صاحبه وقت حدوث الفعل، دائماً نكرة، يُعرب منصوباً أو في محل نصب.</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            'أَجْتَنِي اللَّذَّاتِ مَكْلُومَ الجَوَى'<br>
+                                            <small>ابن سهْل</small>
+                                        </div>
+                                        <p><strong>التحليل:</strong> الحال "مَكْلُومَ" منصوب بالفتحة، نكرة، بين هيئة صاحب الحال (الفاعل: ضمير المتكلم) وقت اجتناء اللذات.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>صاحب الحال</strong></td>
+                                    <td>الاسم الذي يكون الحال وصفاً لحالته، قد يكون فاعلاً أو مفعولاً به أو نائب فاعل أو اسماً منصوباً.</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            'سَـمِعْتُ الجَبَلَ الكَئِيبَ وَهْوَ أَخْرَسُ صَامِتٌ'
+                                        </div>
+                                        <p><strong>التحليل:</strong> صاحب الحال "الجَبَلَ الكَئِيبَ" (مفعول به)، والحال "أَخْرَسُ صَامِتٌ" يبين هيئته وقت السماع.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- أشكال الحال النحوية -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أشكال الحال النحوية</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="25%">الشكل النحوي للحال</th>
+                                    <th width="35%">الخصائص والإعراب</th>
+                                    <th width="40%">أمثلة توضيحية</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>الحال المفرد</strong></td>
+                                    <td>حال يكون كلمة واحدة (اسم أو صفة)، منصوب بالفتحة أو الياء (للمثنى) أو الكسرة (لجمع المؤنث السالم).</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            'وُجِدَتِ النَّافِذَتَانِ مَكْسُورَتَيْنِ'
+                                        </div>
+                                        <p><strong>التحليل:</strong> الحال "مَكْسُورَتَيْنِ": مفردة، منصوبة بالياء (لأنها مثنى)، عبرت عن حالة صاحب الحال (نائب الفاعل: النَّافِذَتَانِ).</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الحال المركب الإضافي</strong></td>
+                                    <td>حال يكون تركيباً إضافياً (مضاف ومضاف إليه)، منصوب بالفتحة.</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            'أَجْتَنِي اللَّذَّاتِ مَكْلُومَ الجَوَى'<br>
+                                            <small>ابن سهْل</small>
+                                        </div>
+                                        <p><strong>التحليل:</strong> الحال "مَكْلُومَ الجَوَى": مركب إضافي، منصوب بالفتحة، عبرت عن حالة صاحب الحال (الفاعل: ضمير المتكلم المفرد 'أنا').</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الحال المركب الحرفي (بواو الحال)</strong></td>
+                                    <td>حال يأتي بعد واو الحال مع جملة اسمية أو فعلية، في محل نصب.</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            'سَـمِعْتُ الجَبَلَ الكَئِيبَ وَهْوَ أَخْرَسُ صَامِتٌ'
+                                        </div>
+                                        <p><strong>التحليل:</strong> الحال "وَهُوَ أَخْرَسُ صَامِتٌ": مركب حرفي بواو الحال، في محل نصب، عبرت عن حالة صاحب الحال (المفعول به: الجَبَلَ الكَئِيبَ).</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الحال المركب الجر (شبه الجملة)</strong></td>
+                                    <td>حال يكون شبه جملة (جار ومجرور)، في محل نصب.</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            'قَمَرَ الأَقْمَارَ سَنَاهُ كَمَا أَوْدَى بِالغُصْنِ تَأَوُّدُهُ'<br>
+                                            <small>ابن الأبّار</small>
+                                        </div>
+                                        <p><strong>التحليل:</strong> الحال "كَمَا أَوْدَى بِالغُصْنِ تَأَوُّدُهُ": مركب جر، في محل نصب، هي حال النسبة التي تتعلق بنواة الإسناد.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الحال المفرد المبني (اسم الاستفهام كيف)</strong></td>
+                                    <td>حال يكون اسم استفهام (كيف)، مبني، في محل نصب.</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            كَيْفَ صَوَّرَتِ الشَّاعِرَةُ الرَّقِيقَةُ قَصَائِدُهَا طَبِيعَةَ الأَنْدَلُسِ؟
+                                        </div>
+                                        <p><strong>التحليل:</strong> الحال "كَيْفَ": مفردة (اسم استفهام مبني)، في محل نصب، هي حال النسبة التي تتعلق بنواة الإسناد.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- أنواع الحال من حيث الدلالة -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أنواع الحال من حيث الدلالة</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تصنيف الحال حسب المعنى والدلالة:</h4>
+                    <p>يمكن تقسيم الحال حسب دلالته إلى عدة أنواع: حال ذاتية (تصف صاحب الحال)، حال زمانية (تبين وقت الفعل)، حال مكانية (تبين مكان الفعل)، حال كيفية (تبين كيفية وقوع الفعل).</p>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="20%">نوع الحال</th>
+                                    <th width="30%">الشرح والتفصيل</th>
+                                    <th width="50%">أمثلة وتطبيقات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>حال ذاتية</strong></td>
+                                    <td>يصف حالة صاحب الحال الذاتية (مشاعره، صفاته، هيئته).</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            'إِنِّي ذَكَرْتُكِ بِالزَّهْرَاءِ مُشْتَاقًا'<br>
+                                            <small>ابن زيدون</small>
+                                        </div>
+                                        <p>الحال "مُشْتَاقًا" يصف حالة الشوق الذاتية للمتكلم.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>حال زمانية</strong></td>
+                                    <td>يبين زمان وقوع الفعل أو هيئة صاحب الحال في زمن معين.</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            'رَجَعَ الْمُسَافِرُ وَهُوَ مُتَعَبٌ'
+                                        </div>
+                                        <p>الحال "مُتَعَبٌ" يصف هيئة المسافر عند زمان الرجوع.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>حال كيفية</strong></td>
+                                    <td>يبين كيفية وقوع الفعل أو طريقة حدوثه.</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            'قَرَأَ الطَّالِبُ الدُّرْسَ مُتَأَنِّيًا'
+                                        </div>
+                                        <p>الحال "مُتَأَنِّيًا" يصف كيفية قراءة الطالب للدرس.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>حال مقارنة</strong></td>
+                                    <td>يأتي مقارناً صاحب الحال بشيء آخر لبيان هيئته.</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            'خَرَجَ الْوَلَدُ سَرِيعًا كَالرِّيحِ'
+                                        </div>
+                                        <p>الحال "سَرِيعًا كَالرِّيحِ" يقارن سرعة الولد بالريح.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>حال استفهامية</strong></td>
+                                    <td>يأتي على شكل اسم استفهام (كيف) للاستفسار عن الهيئة.</td>
+                                    <td>
+                                        <div class="ArabicH-example-text">
+                                            كَيْفَ جِئْتَ؟
+                                        </div>
+                                        <p>الحال "كَيْفَ" يستفهم عن هيئة المجيء.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- أمثلة أدبية على الحال -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أمثلة أدبية على الحال</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="40%">المثال الأدبي</th>
+                                    <th width="30%">الشكل النحوي للحال</th>
+                                    <th width="30%">التحليل وصاحب الحال</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="ArabicH-example-text">
+                                        'إِنِّي ذَكَرْتُكِ بِالزَّهْرَاءِ مُشْتَاقًا'<br>
+                                        <small>ابن زيدون</small>
+                                    </td>
+                                    <td><strong>حال مفرد</strong></td>
+                                    <td><strong>منصوب بالفتحة</strong><br>عبرت عن حالة صاحب الحال المعرفة (اسم الناسخ الحرفي: ضمير المتكلم المفرد 'أَنَا').</td>
+                                </tr>
+                                <tr>
+                                    <td class="ArabicH-example-text">
+                                        'سَـمِعْتُ الجَبَلَ الكَئِيبَ وَهْوَ أَخْرَسُ صَامِتٌ'
+                                    </td>
+                                    <td><strong>حال مركب حرفي بواو الحال</strong></td>
+                                    <td><strong>في محل نصب</strong><br>عبرت عن حالة صاحب الحال (المفعول به: الجَبَلَ الكَئِيبَ).</td>
+                                </tr>
+                                <tr>
+                                    <td class="ArabicH-example-text">
+                                        'وُجِدَتِ النَّافِذَتَانِ مَكْسُورَتَيْنِ'
+                                    </td>
+                                    <td><strong>حال مفرد (مثنى)</strong></td>
+                                    <td><strong>منصوب بالياء</strong><br>عبرت عن حالة صاحب الحال (نائب الفاعل: النَّافِذَتَانِ).</td>
+                                </tr>
+                                <tr>
+                                    <td class="ArabicH-example-text">
+                                        'قَمَرَ الأَقْمَارَ سَنَاهُ كَمَا أَوْدَى بِالغُصْنِ تَأَوُّدُهُ'<br>
+                                        <small>ابن الأبّار</small>
+                                    </td>
+                                    <td><strong>حال مركب جر</strong></td>
+                                    <td><strong>في محل نصب</strong><br>هي حال النسبة التي تتعلق بنواة الإسناد.</td>
+                                </tr>
+                                <tr>
+                                    <td class="ArabicH-example-text">
+                                        كَيْفَ صَوَّرَتِ الشَّاعِرَةُ الرَّقِيقَةُ قَصَائِدُهَا طَبِيعَةَ الأَنْدَلُسِ؟
+                                    </td>
+                                    <td><strong>حال مفرد (اسم استفهام)</strong></td>
+                                    <td><strong>في محل نصب</strong><br>هي حال النسبة التي تتعلق بنواة الإسناد.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- الفرق بين النعت والحال -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">الفرق بين النعت والحال</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">أوجه الاختلاف بين النعت والحال:</h4>
+                    <p>يختلف النعت عن الحال في عدة جوانب نحوية ودلالية، رغم أن كليهما من المنصوبات وكلاهما يصف الاسم الذي يتبعه.</p>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="20%">وجه المقارنة</th>
+                                    <th width="40%">النعت</th>
+                                    <th width="40%">الحال</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>التعريف</strong></td>
+                                    <td>يخصص المنعوت بصفة دائمة أو ملازمة له.</td>
+                                    <td>يبين هيئة صاحبه وقت حدوث الفعل (حالة مؤقتة).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الإعراب</strong></td>
+                                    <td>يطابق المنعوت في الإعراب (مرفوع، منصوب، مجرور).</td>
+                                    <td>منصوب دائماً أو في محل نصب.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>التعريف والتنكير</strong></td>
+                                    <td>يكون معرفة إذا كان المنعوت معرفة، ونكرة إذا كان المنعوت نكرة.</td>
+                                    <td>نكرة دائماً.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>المطابقة</strong></td>
+                                    <td>يطابق المنعوت في الجنس والعدد والتعريف والإعراب.</td>
+                                    <td>لا يطابق صاحب الحال إلا في التذكير والتأنيث أحياناً.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الدلالة</strong></td>
+                                    <td>صفة ثابتة أو دائمة للمنعوت.</td>
+                                    <td>حالة مؤقتة أو هيئة وقتية لصاحب الحال.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الأمثلة</strong></td>
+                                    <td class="ArabicH-example-text">'الرَّجُلُ الكَرِيمُ' (صفة دائمة)</td>
+                                    <td class="ArabicH-example-text">'جَاءَ الرَّجُلُ مُبْتَسِمًا' (حالة وقتية)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التطبيق الأول: استخراج الحال وتحليله -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التطبيق الأول: استخراج الحال وتحليله</h3>
+                
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تعليمات التطبيق:</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p><strong>استخرج الحال من الجمل التالية محدِّداً الشكل النحوي والإعراب وصاحب الحال:</strong></p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="50%">الجملة</th>
+                                    <th width="20%">الحال</th>
+                                    <th width="20%">الشكل النحوي وصاحب الحال</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td class="ArabicH-example-text">
+                                        إِنِّي ذَكَرْتُكِ بِالزَّهْرَاءِ مُشْتَاقًا
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الحال..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الشكل وصاحب الحال..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td class="ArabicH-example-text">
+                                        سَـمِعْتُ الجَبَلَ الكَئِيبَ وَهْوَ أَخْرَسُ صَامِتٌ
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الحال..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الشكل وصاحب الحال..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td class="ArabicH-example-text">
+                                        وُجِدَتِ النَّافِذَتَانِ مَكْسُورَتَيْنِ
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الحال..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الشكل وصاحب الحال..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td class="ArabicH-example-text">
+                                        قَمَرَ الأَقْمَارَ سَنَاهُ كَمَا أَوْدَى بِالغُصْنِ تَأَوُّدُهُ
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الحال..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الشكل وصاحب الحال..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>⑤</td>
+                                    <td class="ArabicH-example-text">
+                                        كَيْفَ صَوَّرَتِ الشَّاعِرَةُ الرَّقِيقَةُ قَصَائِدُهَا طَبِيعَةَ الأَنْدَلُسِ؟
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الحال..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الشكل وصاحب الحال..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>⑥</td>
+                                    <td class="ArabicH-example-text">
+                                        رَجَعَ الْوَافِدُونَ مُفْتَخِرِينَ بِإِنْجَازِهِمْ
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الحال..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب الشكل وصاحب الحال..." rows="2"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.languageLesson.showAnswer">إظهار إصلاح التطبيق الأول</button>
+                
+                <div id="answer1" class="ArabicH-answer">
+                    <h4>إصلاح التطبيق الأول:</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="50%">الجملة</th>
+                                    <th width="20%">الحال</th>
+                                    <th width="20%">الشكل النحوي وصاحب الحال</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td class="ArabicH-example-text">إِنِّي ذَكَرْتُكِ بِالزَّهْرَاءِ مُشْتَاقًا</td>
+                                    <td><strong>مُشْتَاقًا</strong></td>
+                                    <td><strong>حال مفردة، منصوبة بالفتحة</strong><br>صاحب الحال: اسم الناسخ الحرفي (ضمير المتكلم المفرد 'أَنَا').</td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td class="ArabicH-example-text">سَـمِعْتُ الجَبَلَ الكَئِيبَ وَهْوَ أَخْرَسُ صَامِتٌ</td>
+                                    <td><strong>وَهُوَ أَخْرَسُ صَامِتٌ</strong></td>
+                                    <td><strong>حال مركب حرفي بواو الحال، في محل نصب</strong><br>صاحب الحال: المفعول به (الجَبَلَ الكَئِيبَ).</td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td class="ArabicH-example-text">وُجِدَتِ النَّافِذَتَانِ مَكْسُورَتَيْنِ</td>
+                                    <td><strong>مَكْسُورَتَيْنِ</strong></td>
+                                    <td><strong>حال مفردة (مثنى)، منصوبة بالياء</strong><br>صاحب الحال: نائب الفاعل (النَّافِذَتَانِ).</td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td class="ArabicH-example-text">قَمَرَ الأَقْمَارَ سَنَاهُ كَمَا أَوْدَى بِالغُصْنِ تَأَوُّدُهُ</td>
+                                    <td><strong>كَمَا أَوْدَى بِالغُصْنِ تَأَوُّدُهُ</strong></td>
+                                    <td><strong>حال مركب جر، في محل نصب</strong><br>هي حال النسبة التي تتعلق بنواة الإسناد.</td>
+                                </tr>
+                                <tr>
+                                    <td>⑤</td>
+                                    <td class="ArabicH-example-text">كَيْفَ صَوَّرَتِ الشَّاعِرَةُ الرَّقِيقَةُ قَصَائِدُهَا طَبِيعَةَ الأَنْدَلُسِ؟</td>
+                                    <td><strong>كَيْفَ</strong></td>
+                                    <td><strong>حال مفردة (اسم استفهام مبني)، في محل نصب</strong><br>هي حال النسبة التي تتعلق بنواة الإسناد.</td>
+                                </tr>
+                                <tr>
+                                    <td>⑥</td>
+                                    <td class="ArabicH-example-text">رَجَعَ الْوَافِدُونَ مُفْتَخِرِينَ بِإِنْجَازِهِمْ</td>
+                                    <td><strong>مُفْتَخِرِينَ</strong></td>
+                                    <td><strong>حال مفردة (جمع مذكر سالم)، منصوبة بالياء</strong><br>صاحب الحال: الفاعل (الْوَافِدُونَ).</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التطبيق الثاني: التفريق بين النعت والحال -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التطبيق الثاني: التفريق بين النعت والحال</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <h4 style="color: var(--primary-color); margin: 20px 0; text-align: right;">☻ حدّد الكلمة المخطّطة في الجمل التالية (نعت أم حال) مع بيان السبب:</h4>
+                    
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="60%">الجملة</th>
+                                    <th width="30%">النوع والسبب</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td class="ArabicH-example-text">
+                                        إِنِّي ذَكَرْتُكِ بِالزَّهْرَاءِ <u>مُشْتَاقًا</u>
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع والسبب..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td class="ArabicH-example-text">
+                                        لاَ سَكَّنَ اللهُ قَلْبًا <u>عَقَّ ذِكْرَكُمُ</u>
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع والسبب..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td class="ArabicH-example-text">
+                                        سَبَبُ السُّقْمِ <u>الَّذِي بَرَّحَ بِـي</u>
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع والسبب..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td class="ArabicH-example-text">
+                                        صِحَّةٌ <u>كَالسُّقْمِ فِي تِلْكَ الـمُقَلْ</u>
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع والسبب..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>⑤</td>
+                                    <td class="ArabicH-example-text">
+                                        يَا عِلْقِيَ <u>الأَخْطَرَ الأَسْنَى الـحَبِيبَ إِلَى نَفْسِي</u>
+                                    </td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اكتب النوع والسبب..." rows="2"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="ArabicH-application-item" style="margin-top: 20px;">
+                        <h4 style="color: var(--primary-color);">سؤال إضافي:</h4>
+                        <p>ما الفرق الأساسي بين النعت والحال من حيث الدلالة والإعراب والخصائص النحوية؟ ولماذا يكون الحال نكرة دائماً بينما قد يكون النعت معرفة أو نكرة؟ اشرح مع الأمثلة.</p>
+                        <textarea class="ArabicH-table-textarea" placeholder="اكتب إجابتك هنا..." rows="4" style="width: 100%;"></textarea>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.languageLesson.showAnswer">إظهار إصلاح التطبيق الثاني</button>
+                
+                <div id="answer2" class="ArabicH-answer">
+                    <h4>إصلاح التطبيق الثاني:</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">الرقم</th>
+                                    <th width="60%">الجملة</th>
+                                    <th width="30%">النوع والسبب</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td class="ArabicH-example-text">إِنِّي ذَكَرْتُكِ بِالزَّهْرَاءِ <u>مُشْتَاقًا</u></td>
+                                    <td><strong>حال</strong><br>سبب: نكرة منصوبة تبين هيئة صاحب الحال (ضمير المتكلم) وقت الذكر.</td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td class="ArabicH-example-text">لاَ سَكَّنَ اللهُ قَلْبًا <u>عَقَّ ذِكْرَكُمُ</u></td>
+                                    <td><strong>نعت</strong><br>سبب: يخصص المنعوت "قلبًا" بصفة ملازمة (تذكره لكم)، وليس هيئة وقتية.</td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td class="ArabicH-example-text">سَبَبُ السُّقْمِ <u>الَّذِي بَرَّحَ بِـي</u></td>
+                                    <td><strong>نعت</strong><br>سبب: معرفة (اسم موصول) يخصص المنعوت "السقم" بصفة دائمة.</td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td class="ArabicH-example-text">صِحَّةٌ <u>كَالسُّقْمِ فِي تِلْكَ الـمُقَلْ</u></td>
+                                    <td><strong>نعت</strong><br>سبب: مركب جر يصف الصحة بصفة مقارنة بالسقم، وليس هيئة وقتية.</td>
+                                </tr>
+                                <tr>
+                                    <td>⑤</td>
+                                    <td class="ArabicH-example-text">يَا عِلْقِيَ <u>الأَخْطَرَ الأَسْنَى الـحَبِيبَ إِلَى نَفْسِي</u></td>
+                                    <td><strong>نعت</strong><br>سبب: صفات معطوفة تخصص المنعوت "علقي" بصفات دائمة.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="ArabicH-application-item" style="margin-top: 20px;">
+                        <h4 style="color: var(--primary-color);">إجابة السؤال الإضافي:</h4>
+                        <div class="ArabicH-example-text">
+                            <p><strong>الفرق الأساسي بين النعت والحال:</strong></p>
+                            <ol>
+                                <li><strong>من حيث الدلالة:</strong>
+                                    <ul>
+                                        <li><strong>النعت:</strong> صفة ثابتة أو دائمة للمنعوت. مثال: "الرجل الكريم" (الكرم صفة دائمة).</li>
+                                        <li><strong>الحال:</strong> هيئة وقتية أو حالة مؤقتة لصاحب الحال وقت حدوث الفعل. مثال: "جاء الرجل مبتسماً" (الابتسامة حالة وقتية).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>من حيث الإعراب:</strong>
+                                    <ul>
+                                        <li><strong>النعت:</strong> يطابق المنعوت في الإعراب (مرفوع، منصوب، مجرور). مثال: "رأيت الرجل الكريمَ" (منصوب مثل المنعوت).</li>
+                                        <li><strong>الحال:</strong> منصوب دائماً أو في محل نصب. مثال: "جاء الرجل مبتسماً" (منصوب بالفتحة).</li>
+                                    </ul>
+                                </li>
+                                <li><strong>من حيث الخصائص النحوية:</strong>
+                                    <ul>
+                                        <li><strong>النعت:</strong> يطابق المنعوت في الجنس والعدد والتعريف والإعراب. مثال: "الطالبة المجتهدة" (مؤنث، مفرد، معرفة، مرفوع).</li>
+                                        <li><strong>الحال:</strong> نكرة دائماً، ولا يطابق صاحب الحال إلا في التذكير والتأنيث أحياناً. مثال: "جاءت البنت ضاحكةً" (نكرة، مؤنث).</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                            <p><strong>سبب كون الحال نكرة دائماً:</strong></p>
+                            <ol>
+                                <li><strong>طبيعة الحال الدلالية:</strong> الحال يصف هيئة وقتية غير محددة، والهيئة الوقتية تكون نكرة لأنها غير معروفة سلفاً.</li>
+                                <li><strong>التمييز عن النعت:</strong> النعت قد يكون معرفة (إذا كان المنعوت معرفة) لأنه يصف صفة ملازمة معروفة، أما الحال فيصف حالة عابرة غير معروفة.</li>
+                                <li><strong>القاعدة النحوية:</strong> اتفق النحاة على أن الحال يكون نكرة دائماً تمييزاً له عن التمييز والمفعول المطلق وغيرهما من المنصوبات.</li>
+                            </ol>
+                            <p><strong>أمثلة توضيحية:</strong></p>
+                            <ul>
+                                <li><strong>حال نكرة:</strong> "خرجت مسرعاً" - مسرعاً: نكرة (حالة وقتية).</li>
+                                <li><strong>نعت معرفة:</strong> "التلميذ المجتهد" - المجتهد: معرفة (صفة دائمة).</li>
+                                <li><strong>نعت نكرة:</strong> "تلميذ مجتهد" - مجتهد: نكرة (صفة دائمة لكن المنعوت نكرة).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ملخص الدرس -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">ملخص الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <ul class="ArabicH-definition-list">
+                        <li><strong>تعريف الحال:</strong> اسم نكرة منصوب (أو في محل نصب) يبين هيئة صاحبه وقت حدوث الفعل. يُعوض الحال باسم الاستفهام (كَيْفَ).</li>
+                        <li><strong>تعريف صاحب الحال:</strong> هو الاسم الذي يكون الحال وصفاً لحالته أثناء وقوع الفعل، وقد يكون فاعلاً أو مفعولاً به أو نائب فاعل أو اسماً منصوباً.</li>
+                        <li><strong>أشكال الحال النحوية:</strong>
+                            <ul>
+                                <li><strong>الحال المفرد:</strong> كلمة واحدة (اسم أو صفة). مثال: 'مُشْتَاقًا'.</li>
+                                <li><strong>الحال المركب الإضافي:</strong> تركيب إضافي. مثال: 'مَكْلُومَ الجَوَى'.</li>
+                                <li><strong>الحال المركب الحرفي (بواو الحال):</strong> يأتي بعد واو الحال. مثال: 'وَهُوَ أَخْرَسُ صَامِتٌ'.</li>
+                                <li><strong>الحال المركب الجر (شبه الجملة):</strong> جار ومجرور. مثال: 'كَمَا أَوْدَى بِالغُصْنِ تَأَوُّدُهُ'.</li>
+                                <li><strong>الحال المفرد المبني (اسم الاستفهام كيف):</strong> اسم استفهام. مثال: 'كَيْفَ'.</li>
+                            </ul>
+                        </li>
+                        <li><strong>أنواع الحال من حيث الدلالة:</strong>
+                            <ul>
+                                <li>حال ذاتية (تصف حالة صاحب الحال الذاتية)</li>
+                                <li>حال زمانية (تبين زمان وقوع الفعل)</li>
+                                <li>حال كيفية (تبين كيفية وقوع الفعل)</li>
+                                <li>حال مقارنة (يقارن صاحب الحال بشيء آخر)</li>
+                                <li>حال استفهامية (على شكل اسم استفهام كيف)</li>
+                            </ul>
+                        </li>
+                        <li><strong>الفرق بين النعت والحال:</strong>
+                            <ul>
+                                <li><strong>النعت:</strong> صفة دائمة، يطابق المنعوت في الإعراب والجنس والعدد والتعريف.</li>
+                                <li><strong>الحال:</strong> هيئة وقتية، منصوب دائماً، نكرة دائماً، لا يطابق صاحب الحال إلا في التذكير والتأنيث أحياناً.</li>
+                            </ul>
+                        </li>
+                        <li><strong>أمثلة تطبيقية:</strong>
+                            <ul>
+                                <li>'إِنِّي ذَكَرْتُكِ بِالزَّهْرَاءِ مُشْتَاقًا' (حال مفرد)</li>
+                                <li>'سَـمِعْتُ الجَبَلَ الكَئِيبَ وَهْوَ أَخْرَسُ صَامِتٌ' (حال مركب بواو الحال)</li>
+                                <li>'وُجِدَتِ النَّافِذَتَانِ مَكْسُورَتَيْنِ' (حال مفرد مثنى)</li>
+                                <li>'قَمَرَ الأَقْمَارَ سَنَاهُ كَمَا أَوْدَى بِالغُصْنِ تَأَوُّدُهُ' (حال مركب جر)</li>
+                                <li>'كَيْفَ صَوَّرَتِ الشَّاعِرَةُ الرَّقِيقَةُ قَصَائِدُهَا طَبِيعَةَ الأَنْدَلُسِ؟' (حال اسم استفهام)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- نهاية الدرس -->
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                    <span class="ArabicH-flower-decoration">❦</span> 
+                    المعهد: قرطاج حنّبعل
+                    <span class="ArabicH-flower-decoration">✿</span>
+                </p>
+                <p style="color: var(--secondary-color); font-weight: bold; margin-top: 10px;">
+                    فيفري 2018
+                </p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_3SY_language_module3_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.previousLesson">الدرس السابق (النعت)</a>
+                <a href="#" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Arabic site translations
+        window.translations_ArabicHLanguageModule3Lesson2 = {
+            ar: {
+                // General translations
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Language Lesson specific translations
+                "ArabicH.languageLesson.module3Lesson2Title": "الحال",
+                "ArabicH.languageLesson.module3Lesson2Subtitle": "الدرس الثاني: الأشكال النحوية للحال - تعريف الحال وأشكاله وأنواعه وصاحب الحال",
+                "ArabicH.languageLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.languageLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.languageLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.languageLesson.previousLesson": "الدرس السابق (النعت)",
+                "ArabicH.languageLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                // General translations
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                // Language Lesson specific translations
+                "ArabicH.languageLesson.module3Lesson2Title": "The Circumstantial Accusative (Al-Hal)",
+                "ArabicH.languageLesson.module3Lesson2Subtitle": "Lesson 2: Grammatical Forms of Al-Hal - Definition, Forms, Types, and Owner of the State",
+                "ArabicH.languageLesson.showAnswer": "Show Answer",
+                "ArabicH.languageLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.languageLesson.backToHome": "Back to Homepage",
+                "ArabicH.languageLesson.previousLesson": "Previous Lesson (The Attribute)",
+                "ArabicH.languageLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                // General translations
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                // Windows bar translations
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                // Language Lesson specific translations
+                "ArabicH.languageLesson.module3Lesson2Title": "Le Circonstantiel (Al-Hal)",
+                "ArabicH.languageLesson.module3Lesson2Subtitle": "Leçon 2: Formes Grammaticales d'Al-Hal - Définition, Formes, Types et Propriétaire de l'État",
+                "ArabicH.languageLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.languageLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.languageLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.languageLesson.previousLesson": "Leçon Précédente (L'Attribut)",
+                "ArabicH.languageLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHLanguageModule3Lesson2;
+    </script>
+    
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Answer toggle functionality
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إظهار الإجابة';
+            } else {
+                answer.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء الإجابة';
+            }
+        }
+
+        // Windows bar active state management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Set answer button text after translation
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+            
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                // Check for saved theme or prefer-color-scheme
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.checked = true;
+                }
+                
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+            
+            // Add focus to first textarea when page loads
+            const firstTextarea = document.querySelector('.ArabicH-table-textarea');
+            if (firstTextarea) {
+                setTimeout(() => {
+                    firstTextarea.focus();
+                }, 500);
+            }
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration as backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // Manual install button handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) {
+                    manualInstallBtn.style.display = 'flex';
+                }
+            });
+            
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
