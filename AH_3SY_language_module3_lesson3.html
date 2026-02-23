@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التمييز - الدرس الثالث | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1976D2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="التمييز">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Unique Blue/Indigo Theme for التمييز Lesson */
+        :root {
+            --primary-color: #1976D2;
+            --secondary-color: #42A5F5;
+            --accent-color: #64B5F6;
+            --light-color: #E3F2FD;
+            --dark-color: #0D47A1;
+            --text-color: #0D47A1;
+            --heading-color: #1976D2;
+            --background-color: #E8F0FE;
+            --card-bg: #FFFFFF;
+            --definition-bg: #BBDEFB;
+            --border-color: #90CAF9;
+            --table-even-bg: #D4EDFF;
+            --table-hover-bg: #BBDEFB;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(25, 118, 210, 0.15);
+            --gradient-primary: linear-gradient(135deg, #1976D2 0%, #0D47A1 100%);
+            --gradient-secondary: linear-gradient(135deg, #42A5F5 0%, #1976D2 100%);
+            --gradient-accent: linear-gradient(135deg, #64B5F6 0%, #42A5F5 100%);
+            --gradient-light: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+            --highlight-color: #D32F2F;
+            --highlight-bg: rgba(211, 47, 47, 0.1);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #42A5F5;
+            --secondary-color: #64B5F6;
+            --accent-color: #90CAF9;
+            --light-color: #0D47A1;
+            --dark-color: #1976D2;
+            --text-color: #E3F2FD;
+            --heading-color: #FFFFFF;
+            --background-color: #0D47A1;
+            --card-bg: #1565C0;
+            --definition-bg: #1E88E5;
+            --border-color: #42A5F5;
+            --table-even-bg: #1E88E5;
+            --table-hover-bg: #1976D2;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #42A5F5 0%, #1976D2 100%);
+            --gradient-secondary: linear-gradient(135deg, #64B5F6 0%, #42A5F5 100%);
+            --gradient-accent: linear-gradient(135deg, #90CAF9 0%, #64B5F6 100%);
+            --gradient-light: linear-gradient(135deg, #0D47A1 0%, #1565C0 100%);
+            --highlight-color: #EF9A9A;
+            --highlight-bg: rgba(239, 154, 154, 0.15);
+        }
+
+        /* Page specific styles - Consistent with other lessons */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-lesson-teacher {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-content {
+            margin: 30px 0;
+        }
+
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        [data-theme="dark"] .ArabicH-exercise-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-exercise-content {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .ArabicH-rule-card {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%);
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-left: 6px solid var(--secondary-color);
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ArabicH-rule-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .ArabicH-rule-card::before {
+            content: "📘";
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-rule-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            padding-left: 30px;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 8px;
+            position: relative;
+        }
+
+        [data-theme="dark"] .ArabicH-rule-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-rule-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .ArabicH-example-text {
+            font-size: 1.3rem;
+            font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 2.0;
+            color: var(--dark-color);
+            margin: 15px 0;
+            padding: 12px 18px;
+            background-color: rgba(25, 118, 210, 0.08);
+            border-radius: 10px;
+            border-right: 3px solid var(--secondary-color);
+            text-align: right;
+            direction: rtl;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .ArabicH-example-text {
+            color: #E3F2FD;
+            background-color: rgba(66, 165, 245, 0.2);
+            border-right: 3px solid var(--accent-color);
+        }
+
+        .ArabicH-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .ArabicH-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-table th, .ArabicH-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-table th {
+            background-color: var(--definition-bg);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        [data-theme="dark"] .ArabicH-table th {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-table tr:nth-child(even) {
+            background-color: var(--table-even-bg);
+        }
+
+        .ArabicH-table tr:hover {
+            background-color: var(--table-hover-bg);
+        }
+
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .ArabicH-exercise-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-exercise-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .ArabicH-exercise-table td {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-definition-list {
+            padding-right: 20px;
+            margin: 15px 0;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-definition-list li {
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        /* Textarea styling */
+        .ArabicH-table-textarea {
+            width: 100%;
+            min-height: 40px;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--card-bg);
+            resize: vertical;
+            font-family: inherit;
+            font-size: 15px;
+            color: var(--text-color);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .ArabicH-table-textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(100, 181, 246, 0.2);
+        }
+
+        [data-theme="dark"] .ArabicH-table-textarea {
+            background-color: var(--definition-bg);
+            border-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        /* Knowledge Box - Consistent with other modules */
+        .ArabicH-knowledge-box {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 25px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-knowledge-box::before {
+            content: "💡";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        .ArabicH-knowledge-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        [data-theme="dark"] .ArabicH-knowledge-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-knowledge-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Application item styling */
+        .ArabicH-application-item {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--secondary-color);
+            direction: rtl;
+            text-align: right;
+        }
+
+        .ArabicH-blank-textarea {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 15px;
+            width: 250px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 10px;
+            direction: rtl;
+        }
+
+        .ArabicH-blank-textarea::placeholder {
+            color: var(--secondary-color);
+            opacity: 0.7;
+        }
+
+        [data-theme="dark"] .ArabicH-blank-textarea::placeholder {
+            color: var(--accent-color);
+            opacity: 0.6;
+        }
+
+        /* Flower decoration for headers */
+        .ArabicH-flower-decoration {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Instructions box */
+        .ArabicH-instructions-box {
+            background-color: var(--highlight-bg);
+            border-radius: var(--border-radius);
+            padding: 1.2rem;
+            margin: 15px 0 25px 0;
+            border-right: 4px solid var(--highlight-color);
+            border-left: 4px solid var(--highlight-color);
+            position: relative;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .ArabicH-instructions-box::before {
+            content: "⚠️";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-instructions-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--highlight-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .ArabicH-instructions-content {
+            line-height: 1.6;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        /* Quran and Poetry verse styling */
+        .ArabicH-quran-verse {
+            background-color: rgba(227, 242, 253, 0.3);
+            border-right: 4px solid var(--accent-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+            font-size: 1.2rem;
+        }
+
+        [data-theme="dark"] .ArabicH-quran-verse {
+            background-color: rgba(100, 181, 246, 0.2);
+            color: #E3F2FD;
+        }
+
+        .ArabicH-poetry-verse {
+            background-color: rgba(227, 242, 253, 0.3);
+            border-right: 4px solid var(--secondary-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+        }
+
+        [data-theme="dark"] .ArabicH-poetry-verse {
+            background-color: rgba(66, 165, 245, 0.2);
+            color: #E3F2FD;
+        }
+
+        /* Author name styling */
+        .ArabicH-author-name {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-style: normal;
+            padding: 2px 8px;
+            background-color: rgba(25, 118, 210, 0.1);
+            border-radius: 4px;
+            margin-right: 5px;
+            display: inline-block;
+            font-family: 'Arial', 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            border-right: 2px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .ArabicH-author-name:hover {
+            background-color: rgba(25, 118, 210, 0.2);
+            transform: scale(1.05);
+        }
+
+        [data-theme="dark"] .ArabicH-author-name {
+            color: var(--accent-color);
+            background-color: rgba(66, 165, 245, 0.15);
+            border-right: 2px solid var(--secondary-color);
+        }
+
+        [data-theme="dark"] .ArabicH-author-name:hover {
+            background-color: rgba(66, 165, 245, 0.25);
+        }
+
+        /* تحسينات إضافية للوضوح في الوضع الداكن */
+        [data-theme="dark"] p,
+        [data-theme="dark"] li,
+        [data-theme="dark"] div:not(.ArabicH-example-text):not(.ArabicH-box-cell) {
+            color: var(--text-color) !important;
+        }
+
+        [data-theme="dark"] strong {
+            color: var(--accent-color);
+        }
+
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) {
+            color: var(--accent-color);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title { font-size: 2rem; }
+            .ArabicH-lesson-subtitle { font-size: 1.1rem; }
+            .ArabicH-lesson-container { padding: 1.5rem; }
+            .ArabicH-lesson-header { flex-direction: column; gap: 15px; }
+            .ArabicH-nav-buttons { flex-direction: column; gap: 10px; }
+            .ArabicH-table { font-size: 14px; }
+            .ArabicH-example-text { font-size: 1.15rem; }
+            .ArabicH-rule-card { padding: 1.2rem; }
+            .ArabicH-rule-title { font-size: 1.2rem; }
+            .ArabicH-blank-textarea { width: 200px; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main { padding: 1rem; }
+            .ArabicH-lesson-title { font-size: 1.6rem; }
+            .ArabicH-example-text { font-size: 1.05rem; }
+            .ArabicH-rule-card { padding: 1rem; }
+            .ArabicH-rule-title { font-size: 1.1rem; }
+            .ArabicH-blank-textarea { width: 150px; }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.languageLesson.module3Lesson3Title">التمييز</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.languageLesson.module3Lesson3Subtitle">الدرس الثالث: التمييز - تعريفه، أنواعه، أحكامه وإعرابه</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher">
+                    <span class="ArabicH-flower-decoration">❦</span> القسم: ثالثة ثانوي آداب <span class="ArabicH-flower-decoration">❦</span>
+                </div>
+                <div class="ArabicH-lesson-class">
+                    <span class="ArabicH-flower-decoration">✿</span> الأستاذ: غير محدد <span class="ArabicH-flower-decoration">✿</span>
+                </div>
+            </div>
+            
+            <!-- Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">مقدمة الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p><strong>التمييز (ويسمى اسمُ الجنسِ المُفَسِّر) :</strong> هو اسم نكرة فضلة منصوب (أو في محل نصب) يذكر لرفع الإبهام عن اسم قبله (مفرد) أو عن جملة.</p>
+                    <p><strong>أهميته:</strong> يُزيل التمييز الغموض عن الذات أو عن النسبة، فيجعل المعنى محدَّداً واضحاً. وهو أشبه بـ "من" التفسيرية.</p>
+                    <p><strong>ملاحظة:</strong> التمييز لا يكون إلا اسماً نكرة، وغالباً ما يكون جامداً، ويأتي بعد أعداد، أو مقادير، أو ما يشبه ذلك.</p>
+                </div>
+            </div>
+            
+            <!-- تعريف التمييز وضوابطه -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">تعريف التمييز وضوابطه</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تعريف التمييز:</h4>
+                    <p>التمييز: اسم نكرة منصوب (أو في محل نصب) يفسر ما قبله من إبهام في مفرد أو جملة. وهو على قسمين: تمييز الذات (المفرد)، وتمييز النسبة (الجملة).</p>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الضوابط الأساسية:</h4>
+                    <ul class="ArabicH-definition-list">
+                        <li>• يأتي دائمًا نكرة منصوبًا أو في محلّ نصب.</li>
+                        <li>• يزيل الإبهام عن المميَّز (مفرد أو جملة).</li>
+                        <li>• يُقدر بمعنى (من) البيانية، نحو: مترٌ <u>من حرير</u>.</li>
+                        <li>• العامل فيه ما قبله من اسم أو فعل أو شبه جملة.</li>
+                    </ul>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="25%">التحليل / الشكل</th>
+                                    <th width="35%">الوصف</th>
+                                    <th width="40%">مثال</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>تمييز الذات (المفرد)</strong></td>
+                                    <td>يُفسر اسماً مبهمًا (كيل، وزن، مساحة، عدد).</td>
+                                    <td class="ArabicH-example-text">عندي رِطلٌ <u>عسلاً</u> – اشتريتُ عشرين <u>كتاباً</u>.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>تمييز النسبة (الجملة)</strong></td>
+                                    <td>يُفسر هيئة الجملة أو النسبة، ويكون منقولاً عن فاعل أو مفعول.</td>
+                                    <td class="ArabicH-example-text">حَسُنَ خالدٌ <u>خُلُقاً</u> – واشتعل الرأسُ <u>شيباً</u>.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- أنواع التمييز بالتفصيل -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أنواع التمييز</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="20%">النوع</th>
+                                    <th width="40%">الوصف</th>
+                                    <th width="40%">مثال</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>تمييز الذات (المفرد)</strong></td>
+                                    <td>يأتي بعد أسماء المقادير (كيل، وزن، مساحة) أو العدد (11–99) أو ما يشبه العدد.</td>
+                                    <td class="ArabicH-example-text">– قنطار <u>زيتوناً</u><br>– اثنا عشر <u>شهراً</u><br>– كذا <u>رجلاً</u></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>تمييز النسبة (الجملة)</strong></td>
+                                    <td>يكشف عن إبهام في الجملة، ويكون محوَّلاً عن:</td>
+                                    <td class="ArabicH-example-text">
+                                        <strong>أ- فاعل:</strong> اشتعل الرأسُ <u>شيباً</u> (الأصل: اشتعل شيبُ الرأس).<br>
+                                        <strong>ب- مفعول:</strong> فجَّرنا الأرضَ <u>عيوناً</u> (الأصل: فجَّرنا عيونَ الأرض).<br>
+                                        <strong>ج- مبتدأ:</strong> أنا أكثرُ منك <u>مالاً</u> (الأصل: مالي أكثر).
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- أحكام التمييز -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أحكام التمييز</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">أحكام عامة:</h4>
+                    <ul class="ArabicH-definition-list">
+                        <li>✓ التمييز نكرة دائمًا.</li>
+                        <li>✓ لا يتقدم على عامله (على المميَّز إن كان اسماً) بإجماع.</li>
+                        <li>✓ قد يتقدم تمييز النسبة على فعله إن لم يكن فعلاً جامداً، نحو: <u>نفساً</u> يطيب خالدٌ.</li>
+                        <li>✓ الأصل في التمييز الجمود، وقد يأتي مشتقاً في بعض السياقات، نحو: لله دره <u>فارساً</u>.</li>
+                        <li>✓ لا يتعدد التمييز إلا بالعطف، نحو: عندي عشرون <u>كتاباً وكراسةً</u>.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- شواهد من القرآن والشعر -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">شواهد قرآنية وشعرية</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-quran-verse">
+                        <p class="ArabicH-example-text">﴿وَاشْتَعَلَ الرَّأْسُ شَيْباً﴾ [مريم: 4]</p>
+                        <p><strong>شيباً:</strong> تمييز منصوب (تمييز النسبة محوَّل عن الفاعل).</p>
+                    </div>
+                    <div class="ArabicH-quran-verse">
+                        <p class="ArabicH-example-text">﴿وَفَجَّرْنَا الْأَرْضَ عُيُوناً﴾ [القمر: 12]</p>
+                        <p><strong>عيوناً:</strong> تمييز منصوب (تمييز النسبة محوَّل عن المفعول).</p>
+                    </div>
+                    <div class="ArabicH-poetry-verse">
+                        <p>قال أبو فراس الحمداني:</p>
+                        <p class="ArabicH-example-text">أَرَانِي فِي الَّذِي قَدْ كَانَ <u>حِرْصاً</u> *** أُعَذَّبُ بِالسُّطُورِ وَبِالكِتَابِ</p>
+                        <p><strong>حرصاً:</strong> تمييز منصوب (تمييز النسبة).</p>
+                    </div>
+                    <div class="ArabicH-poetry-verse">
+                        <p>قال الهمذاني:</p>
+                        <p class="ArabicH-example-text">وَرِمَ كِيسُنَا <u>فِضَّةً وَتِبْرًا</u></p>
+                        <p><strong>فضةً وتبراً:</strong> تمييز منصوب (تمييز الذات بعد كيل أو وزن).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- تمييز كم وكأين وكذا -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">تمييز (كم) و (كأين) و (كذا)</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="25%">الأداة</th>
+                                    <th width="35%">حكم تمييزها</th>
+                                    <th width="40%">مثال</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>كم الاستفهامية</strong></td>
+                                    <td>تمييزها منصوب مفرد.</td>
+                                    <td class="ArabicH-example-text">كم <u>كتاباً</u> قرأتَ؟</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>كم الخبرية</strong></td>
+                                    <td>تمييزها مجرور (بالإضافة أو بـ"من").</td>
+                                    <td class="ArabicH-example-text">كم <u>كتابٍ</u> اقتنيتُ / كم من <u>كتابٍ</u> اقتنيتُ.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>كأين</strong></td>
+                                    <td>تمييزها مجرور بـ"من".</td>
+                                    <td class="ArabicH-example-text">كأين من <u>نبيٍّ</u> قاتل معه ربيون كثير.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>كذا</strong></td>
+                                    <td>تمييزها منصوب.</td>
+                                    <td class="ArabicH-example-text">عندي كذا <u>درهماً</u>.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- الفرق بين التمييز والحال (مقارنة) -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">الفرق بين التمييز والحال</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-table">
+                            <thead>
+                                <tr>
+                                    <th width="50%">التمييز</th>
+                                    <th width="50%">الحال</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>الأصل فيه الجمود (جامد).</td>
+                                    <td>الأصل فيها الاشتقاق (مشتقة).</td>
+                                </tr>
+                                <tr>
+                                    <td>يفسر ما انبهم من ذات أو نسبة.</td>
+                                    <td>تبين هيئة صاحبها وقت وقوع الفعل.</td>
+                                </tr>
+                                <tr>
+                                    <td>يأتي على معنى (من) البيانية.</td>
+                                    <td>تأتي على معنى (في) أو (مع).</td>
+                                </tr>
+                                <tr>
+                                    <td>لا يتقدم على عامله (إن كان اسماً).</td>
+                                    <td>يجوز تقدمها على عاملها بشروط.</td>
+                                </tr>
+                                <tr>
+                                    <td>يحذف فلا يختل المعنى الأصلي غالباً.</td>
+                                    <td>قد لا يستغنى عنها (لزوم).</td>
+                                </tr>
+                                <tr>
+                                    <td>لا يكون جملة ولا شبه جملة.</td>
+                                    <td>تأتي جملة وشبه جملة.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="ArabicH-application-item">
+                        <p><strong>مثال للفرق:</strong> "جاء زيد <u>راكباً</u>" (حال: بيان الهيئة) – "عندي رطل <u>عسلاً</u>" (تمييز: بيان النوع).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- التطبيق الأول: استخراج التمييز ونوعه -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التطبيق الأول: استخراج التمييز وبيان نوعه</h3>
+                
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تعليمات:</h4>
+                    <div class="ArabicH-instructions-content">استخرج التمييز من الجمل الآتية، وبين نوعه (تمييز ذات / تمييز نسبة) وإعرابه.</div>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr>
+                                    <th width="10%">#</th>
+                                    <th width="50%">الجملة</th>
+                                    <th width="20%">التمييز</th>
+                                    <th width="20%">النوع والإعراب</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td class="ArabicH-example-text">اشتريتُ صاعاً <u>قَمْحاً</u>.</td>
+                                    <td><textarea class="ArabicH-table-textarea" rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td class="ArabicH-example-text">أكرمتُ اثني عشر <u>طالباً</u>.</td>
+                                    <td><textarea class="ArabicH-table-textarea" rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td class="ArabicH-example-text">زادني العلمَ <u>تواضعاً</u>.</td>
+                                    <td><textarea class="ArabicH-table-textarea" rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td class="ArabicH-example-text">لله دره <u>فارساً</u>.</td>
+                                    <td><textarea class="ArabicH-table-textarea" rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>⑤</td>
+                                    <td class="ArabicH-example-text">كم <u>كتاباً</u> في حقيبتك؟</td>
+                                    <td><textarea class="ArabicH-table-textarea" rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" rows="2"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')">إظهار إصلاح التطبيق الأول</button>
+                
+                <div id="answer1" class="ArabicH-answer">
+                    <h4>إصلاح التطبيق الأول:</h4>
+                    <table class="ArabicH-exercise-table">
+                        <tr><td>①</td><td>قَمْحاً</td><td>تمييز ذات (مفرد) منصوب بالفتحة.</td></tr>
+                        <tr><td>②</td><td>طالباً</td><td>تمييز ذات (عدد) منصوب بالفتحة.</td></tr>
+                        <tr><td>③</td><td>تواضعاً</td><td>تمييز نسبة (محول عن فاعل) منصوب بالفتحة.</td></tr>
+                        <tr><td>④</td><td>فارساً</td><td>تمييز نسبة (مشتق) منصوب بالفتحة.</td></tr>
+                        <tr><td>⑤</td><td>كتاباً</td><td>تمييز (كم استفهامية) منصوب بالفتحة.</td></tr>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- التطبيق الثاني: أكمل بتمييز مناسب -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التطبيق الثاني: أكمل الجمل بتمييز مناسب</h3>
+                
+                <div class="ArabicH-exercise-content">
+                    <table class="ArabicH-exercise-table">
+                        <thead>
+                            <tr>
+                                <th width="10%">#</th>
+                                <th width="60%">الجملة الناقصة</th>
+                                <th width="30%">الإكمال بتمييز</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>①</td><td class="ArabicH-example-text">في السماء قمران .................. (ضوء)</td><td><textarea class="ArabicH-table-textarea" rows="1"></textarea></td></tr>
+                            <tr><td>②</td><td class="ArabicH-example-text">عندي متر .................. (قطن)</td><td><textarea class="ArabicH-table-textarea" rows="1"></textarea></td></tr>
+                            <tr><td>③</td><td class="ArabicH-example-text">أخلص الرجل .................. (دين)</td><td><textarea class="ArabicH-table-textarea" rows="1"></textarea></td></tr>
+                            <tr><td>④</td><td class="ArabicH-example-text">كم .................. (مدينة) زرت؟</td><td><textarea class="ArabicH-table-textarea" rows="1"></textarea></td></tr>
+                            <tr><td>⑤</td><td class="ArabicH-example-text">ملأت الدلو .................. (ماء)</td><td><textarea class="ArabicH-table-textarea" rows="1"></textarea></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')">إظهار إصلاح التطبيق الثاني</button>
+                
+                <div id="answer2" class="ArabicH-answer">
+                    <h4>إصلاح التطبيق الثاني:</h4>
+                    <table class="ArabicH-exercise-table">
+                        <tr><td>①</td><td>ضوءاً</td></tr>
+                        <tr><td>②</td><td>قطناً</td></tr>
+                        <tr><td>③</td><td>ديناً</td></tr>
+                        <tr><td>④</td><td>مدينةً</td></tr>
+                        <tr><td>⑤</td><td>ماءً</td></tr>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- التطبيق الثالث: فرّق بين الحال والتمييز -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التطبيق الثالث: ميّز بين الحال والتمييز</h3>
+                
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تعليمات:</h4>
+                    <div class="ArabicH-instructions-content">حدد نوع الكلمة تحتها خط (حال / تمييز).</div>
+                </div>
+                
+                <div class="ArabicH-exercise-content">
+                    <table class="ArabicH-exercise-table">
+                        <thead>
+                            <tr>
+                                <th width="10%">#</th>
+                                <th width="70%">الجملة</th>
+                                <th width="20%">النوع</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>①</td><td class="ArabicH-example-text">عاد الجندي <u>منتصراً</u>.</td><td><textarea class="ArabicH-table-textarea" rows="1"></textarea></td></tr>
+                            <tr><td>②</td><td class="ArabicH-example-text">ازداد المعلم <u>كرماً</u>.</td><td><textarea class="ArabicH-table-textarea" rows="1"></textarea></td></tr>
+                            <tr><td>③</td><td class="ArabicH-example-text">هذا الحقلُ قيراطاً <u>قمحاً</u>.</td><td><textarea class="ArabicH-table-textarea" rows="1"></textarea></td></tr>
+                            <tr><td>④</td><td class="ArabicH-example-text">شاهدت الهلال <u>بدراً</u>.</td><td><textarea class="ArabicH-table-textarea" rows="1"></textarea></td></tr>
+                            <tr><td>⑤</td><td class="ArabicH-example-text">فجّرنا الأرض <u>عيوناً</u>.</td><td><textarea class="ArabicH-table-textarea" rows="1"></textarea></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')">إظهار الإجابة</button>
+                
+                <div id="answer3" class="ArabicH-answer">
+                    <h4>الإجابة:</h4>
+                    <table class="ArabicH-exercise-table">
+                        <tr><td>①</td><td>حال</td></tr>
+                        <tr><td>②</td><td>تمييز</td></tr>
+                        <tr><td>③</td><td>تمييز</td></tr>
+                        <tr><td>④</td><td>حال</td></tr>
+                        <tr><td>⑤</td><td>تمييز</td></tr>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- ملخص الدرس -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">ملخص الدرس:</h3>
+                <div class="ArabicH-knowledge-content">
+                    <ul class="ArabicH-definition-list">
+                        <li><strong>التمييز:</strong> اسم نكرة منصوب (أو في محل نصب) يفسر ما قبله من إبهام.</li>
+                        <li><strong>نوعاه:</strong> تمييز ذات (مفرد) وتمييز نسبة (جملة).</li>
+                        <li><strong>تمييز الذات:</strong> يرد بعد المقادير (كيل، وزن، مساحة) والأعداد (11–99) وشبه العدد.</li>
+                        <li><strong>تمييز النسبة:</strong> يرد محولاً عن فاعل أو مفعول أو مبتدأ، ويكشف عن إبهام الجملة.</li>
+                        <li><strong>أحكام:</strong> نكرة دائمًا، لا يتقدم على عامله (في تمييز الذات)، قد يتقدم تمييز النسبة، لا يتعدد إلا بالعطف.</li>
+                        <li><strong>تمييز كم:</strong> كم استفهامية تمييزها منصوب، كم خبرية تمييزها مجرور.</li>
+                        <li><strong>الفرق بينه وبين الحال:</strong> التمييز جامد، يفسر الذات أو النسبة، الحال مشتقة، تبين الهيئة.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- نهاية الدرس -->
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                    <span class="ArabicH-flower-decoration">❦</span> 
+        
+                    <span class="ArabicH-flower-decoration">✿</span>
+                </p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="#" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.previousLesson">الدرس السابق</a>
+                <a href="AH_3SY_language_module3_lesson4.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Translation object for هذا الدرس
+        window.translations_ArabicHLanguageModule3Lesson3 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.languageLesson.module3Lesson3Title": "التمييز",
+                "ArabicH.languageLesson.module3Lesson3Subtitle": "الدرس الثالث: التمييز - تعريفه، أنواعه، أحكامه وإعرابه",
+                "ArabicH.languageLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.languageLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.languageLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.languageLesson.previousLesson": "الدرس السابق",
+                "ArabicH.languageLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.languageLesson.module3Lesson3Title": "The Distinction (Al-Tamyiz)",
+                "ArabicH.languageLesson.module3Lesson3Subtitle": "Lesson 3: Al-Tamyiz - Definition, Types, Rules and Analysis",
+                "ArabicH.languageLesson.showAnswer": "Show Answer",
+                "ArabicH.languageLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.languageLesson.backToHome": "Back to Homepage",
+                "ArabicH.languageLesson.previousLesson": "Previous Lesson",
+                "ArabicH.languageLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.languageLesson.module3Lesson3Title": "Le spécificatif (Al-Tamyiz)",
+                "ArabicH.languageLesson.module3Lesson3Subtitle": "Leçon 3: Le spécificatif - Définition, formes, règles et analyse",
+                "ArabicH.languageLesson.showAnswer": "Afficher la réponse",
+                "ArabicH.languageLesson.backToLessons": "Retour aux leçons générales",
+                "ArabicH.languageLesson.backToHome": "Retour à l'accueil",
+                "ArabicH.languageLesson.previousLesson": "Leçon précédente",
+                "ArabicH.languageLesson.nextLesson": "Leçon suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+
+        window.currentTranslations = window.translations_ArabicHLanguageModule3Lesson3;
+    </script>
+    
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إظهار الإجابة';
+            } else {
+                answer.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء الإجابة';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) item.classList.add('active');
+                else item.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+            
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.checked = true;
+                }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+            
+            const firstTextarea = document.querySelector('.ArabicH-table-textarea');
+            if (firstTextarea) setTimeout(() => firstTextarea.focus(), 500);
+        });
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').catch(e => console.log('SW registration failed: ', e));
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) manualInstallBtn.style.display = 'flex';
+            });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
