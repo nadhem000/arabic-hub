@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشعر الحديث - تمهيد | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2E7D32">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="الشعر الحديث">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Green – Nature / Literature Theme (same as previous) */
+        :root {
+            --primary-color: #2E7D32;       /* deep green */
+            --secondary-color: #4CAF50;      /* medium green */
+            --accent-color: #81C784;          /* light green */
+            --light-color: #E8F5E9;            /* very light green */
+            --dark-color: #1B5E20;             /* dark green */
+            --text-color: #2c3e2f;              /* dark grey-green */
+            --heading-color: #1B5E20;
+            --background-color: #f1f8e9;        /* off-white with green tint */
+            --card-bg: #ffffff;
+            --definition-bg: #e0f2e0;           /* soft green for definitions */
+            --border-color: #a5d6a7;             /* pastel green border */
+            --table-even-bg: #f1f8e9;
+            --table-hover-bg: #c8e6c9;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(46, 125, 50, 0.12);
+            --gradient-primary: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+            --gradient-secondary: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            --gradient-accent: linear-gradient(135deg, #81C784 0%, #4CAF50 100%);
+            --gradient-light: linear-gradient(135deg, #E8F5E9 0%, #f1f8e9 100%);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #4CAF50;
+            --secondary-color: #66BB6A;
+            --accent-color: #81C784;
+            --light-color: #1B5E20;
+            --dark-color: #0d3d0d;
+            --text-color: #e8f5e9;
+            --heading-color: #ffffff;
+            --background-color: #1a2e1a;
+            --card-bg: #2a3f2a;
+            --definition-bg: #1f3a1f;
+            --border-color: #4CAF50;
+            --table-even-bg: #1f3a1f;
+            --table-hover-bg: #2a5e2a;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+            --gradient-primary: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            --gradient-secondary: linear-gradient(135deg, #66BB6A 0%, #4CAF50 100%);
+            --gradient-accent: linear-gradient(135deg, #81C784 0%, #66BB6A 100%);
+            --gradient-light: linear-gradient(135deg, #1B5E20 0%, #1a2e1a 100%);
+        }
+
+        /* Page specific styles (same as previous) */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-lesson-teacher {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .ArabicH-goals-section {
+            background: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-right: 4px solid var(--secondary-color);
+        }
+
+        .ArabicH-goals-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .ArabicH-goals-list {
+            list-style-type: none;
+            padding-right: 20px;
+        }
+
+        .ArabicH-goals-list li {
+            margin-bottom: 10px;
+            padding-right: 10px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .ArabicH-goals-list li:before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            right: -20px;
+        }
+
+        /* Note card */
+        .ArabicH-lesson-note {
+            background-color: #f1f8e9;
+            border-right: 4px solid var(--primary-color);
+            padding: 15px 20px;
+            border-radius: var(--border-radius);
+            margin: 20px 0 30px 0;
+            font-style: italic;
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+        [data-theme="dark"] .ArabicH-lesson-note {
+            background-color: rgba(46, 125, 50, 0.2);
+            color: #e0e0e0;
+        }
+
+        /* Definition / concept card */
+        .ArabicH-concept-card {
+            background: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-right: 4px solid var(--accent-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .ArabicH-concept-card h3 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+        .ArabicH-concept-card h4 {
+            color: var(--dark-color);
+            font-weight: 600;
+            margin-top: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .ArabicH-subtle-list {
+            list-style-type: none;
+            padding-right: 20px;
+        }
+        .ArabicH-subtle-list li {
+            margin-bottom: 10px;
+            padding-right: 10px;
+            position: relative;
+        }
+        .ArabicH-subtle-list li:before {
+            content: "◦";
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            right: -20px;
+        }
+
+        .ArabicH-terminology-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            font-size: 1rem;
+        }
+        .ArabicH-terminology-item {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 0.8rem;
+        }
+        .ArabicH-terminology-term {
+            font-weight: 700;
+            color: var(--dark-color);
+            min-width: 100px;
+            font-size: 1.1rem;
+        }
+        .ArabicH-terminology-def {
+            color: var(--text-color);
+        }
+
+        .ArabicH-response-textarea {
+            width: 100%;
+            min-height: 80px;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: white;
+            resize: vertical;
+            font-family: inherit;
+            font-size: 15px;
+            color: var(--text-color);
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        [data-theme="dark"] .ArabicH-response-textarea {
+            background-color: var(--card-bg);
+            border-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Poets list styling */
+        .ArabicH-poet-item {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .ArabicH-poet-name {
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+        .ArabicH-poet-details {
+            color: var(--text-color);
+        }
+
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title { font-size: 2rem; }
+            .ArabicH-lesson-subtitle { font-size: 1.1rem; }
+            .ArabicH-lesson-container { padding: 1.5rem; }
+            .ArabicH-lesson-header { flex-direction: column; gap: 15px; }
+            .ArabicH-nav-buttons { flex-direction: column; }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.poetryLesson.lessonTitle">التمهيد للمحور 3: الشعر الحديث</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.poetryLesson.lessonSubtitle">المحور 3: الشعر الحديث – تمهيد وتعريف</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher">الأستاذة: فوزيّة الشّطّي</div>
+                <div class="ArabicH-lesson-title" style="color: white; margin: 0; font-size: 1.6rem;">الشعر الحديث: التمهيد</div>
+                <div class="ArabicH-lesson-class">3 آداب – معهد قرطاج حنّبعل (2017-2018)</div>
+            </div>
+            
+            <!-- Note about the lesson (institution) -->
+            <div class="ArabicH-lesson-note">
+                <p>تم إعداد هذا الدرس للأستاذة فوزيّة الشّطّي – السنة الدراسية 2017-2018 – معهد قرطاج حنّبعل، تونس.</p>
+            </div>
+            
+            <!-- أهداف المحور (inferred from content) -->
+            <div class="ArabicH-goals-section">
+                <h2 class="ArabicH-goals-title" data-i18n="ArabicH.poetryLesson.goalsTitle">أهداف المحور</h2>
+                <ul class="ArabicH-goals-list">
+                    <li data-i18n="ArabicH.poetryLesson.goal1">التعرّف على مفهوم الشعر الحديث وخصائصه الفنية والدلالية.</li>
+                    <li data-i18n="ArabicH.poetryLesson.goal2">استيعاب أبرز أعلام الشعر الحديث وانتماءاتهم.</li>
+                    <li data-i18n="ArabicH.poetryLesson.goal3">تحليل القضايا الكبرى التي تناولها الشعر الحديث: المرأة، الذات، النضال السياسي.</li>
+                </ul>
+            </div>
+            
+            <!-- 1- ما الشعر العربي الحديث؟ -->
+            <div class="ArabicH-concept-card">
+                <h3 data-i18n="ArabicH.poetryLesson.section1Title">1- ما الشّعرُ العربيُّ الحديثُ؟</h3>
+                <ul class="ArabicH-subtle-list">
+                    <li><span data-i18n="ArabicH.poetryLesson.meaning1">لصفة 'الحديث' معنيان: تُحدّد الإطار الزماني الذي كُتب خلالَه هذا الشعر أولاً، وتؤكد ثانياً أن هذا الشعر مختلف من حيث خصائصه الفنية والدلالية عمّا سبق من إنتاج شعري.</span></li>
+                </ul>
+                <h4 data-i18n="ArabicH.poetryLesson.timelineTitle">السّلسلة الزمنية:</h4>
+                <ul class="ArabicH-subtle-list">
+                    <li>العصر الجاهلي</li>
+                    <li>العصر الراشدي</li>
+                    <li>العصر الأموي</li>
+                    <li>العصر العباسي</li>
+                    <li>عصر الانحطاط</li>
+                    <li>عصر النهضة</li>
+                    <li>العصر الحديث: يُحدّ عادة بالهجمة الاستعمارية الغربية على العالم العربي الإسلامي وبنشوب الحربين الكونيتين: 1914 و1945</li>
+                </ul>
+                <p data-i18n="ArabicH.poetryLesson.interaction">تفاعل الأدباء العرب مع عصرهم بما فيه من اضطراب سياسي عنيف وتحول اجتماعي سريع وصدام حضاري يخترق الحدود الجغرافية. وكان 'الشعر الحديث' إحدى ثمرات هذا التفاعل الذي جمع بين التأثر بالأدب الغربي والنهل من التراث العربي والعالمي (الأساطير، الخرافات..) والحرص على ابتكار تقنيات القول الشعري ومضامينه.</p>
+                
+                <!-- interactive note area -->
+                <label class="ArabicH-response-label" style="font-weight:600; margin-top:15px; display:block;" data-i18n="ArabicH.poetryLesson.note1">دوّن ملاحظاتك حول مفهوم الشعر الحديث:</label>
+                <textarea class="ArabicH-response-textarea" placeholder="..." data-i18n-placeholder="ArabicH.poetryLesson.note1Placeholder"></textarea>
+            </div>
+            
+            <!-- 2- أعلام المحور -->
+            <div class="ArabicH-concept-card">
+                <h3 data-i18n="ArabicH.poetryLesson.section2Title">2- أعلامُ المحور:</h3>
+                <div class="ArabicH-terminology-box">
+                    <div class="ArabicH-poet-item"><span class="ArabicH-poet-name">بدر شاكر السّيّاب</span> <span class="ArabicH-poet-details">، العراق: 1926-1964</span></div>
+                    <div class="ArabicH-poet-item"><span class="ArabicH-poet-name">نزار قبّاني</span> <span class="ArabicH-poet-details">، سوريا: 1923-1998</span></div>
+                    <div class="ArabicH-poet-item"><span class="ArabicH-poet-name">عبد الوهاب البيّاتي</span> <span class="ArabicH-poet-details">، العراق: 1926-1999</span></div>
+                    <div class="ArabicH-poet-item"><span class="ArabicH-poet-name">نازك الملائكة</span> <span class="ArabicH-poet-details">، العراق: 1923-2007</span></div>
+                    <div class="ArabicH-poet-item"><span class="ArabicH-poet-name">محمود درويش</span> <span class="ArabicH-poet-details">، فلسطين: 1941-2008</span></div>
+                    <div class="ArabicH-poet-item"><span class="ArabicH-poet-name">منصف الوهايبي</span> <span class="ArabicH-poet-details">، تونس: 1949-؟</span></div>
+                </div>
+                <label class="ArabicH-response-label" style="font-weight:600; margin-top:15px; display:block;" data-i18n="ArabicH.poetryLesson.note2">اختر أحد الأعلام وابحث في سيرته:</label>
+                <textarea class="ArabicH-response-textarea" placeholder="..." data-i18n-placeholder="ArabicH.poetryLesson.note2Placeholder"></textarea>
+            </div>
+            
+            <!-- 3- محاور الاهتمام -->
+            <div class="ArabicH-concept-card">
+                <h3 data-i18n="ArabicH.poetryLesson.section3Title">3- محاورُ الاهتمام:</h3>
+                
+                <h4 data-i18n="ArabicH.poetryLesson.womanTitle">● المرأةُ:</h4>
+                <p data-i18n="ArabicH.poetryLesson.womanText">تخلّى شعراءُ الحداثةِ عنِ الغزل القديم (التّغنّي بمحاسنِ الحبيبة، شكوى عذابِ الحبّ، طلبُ الوصال...). إذ صارت المرأةُ في شعرهم إنسانةً فاعلةً في الواقع وفي النّصّ الإبداعيّ، تُـحَبُّ بقدر ما تُـحِبُّ. بل أضحتْ رمزا شعريّا يُحيل إلى الوطنِ الفقيدِ أو القصيدةِ المنشودةِ أو الذّاتِ الموجوعة أو الطّفولةِ البعيدة أو الحلمِ المستحيل بالأمان... قدْ تتجلّى المرأةُ 'وطنا عاطفيّا' يعادلُ القصيدةَ الّتي هي 'الوطنُ المجازيُّ' الأرحبُ.</p>
+                
+                <h4 data-i18n="ArabicH.poetryLesson.selfTitle">● الذّاتُ:</h4>
+                <p data-i18n="ArabicH.poetryLesson.selfText">اِهتمّ الحداثيّونَ بتوصيفِ الذّاتِ الشّاعرةِ في حالاتها المتقلّبة (الحبُّ، الألمُ البدنيّ والمعنويّ، الإحباطُ، الغربةُ في الوطن أو عنه..). ونبشُوا ماضيَها الطّفوليَّ ليستمدّوا منه صورا شعريّة شتّى. وعبّروا عن مواقفِها مِن الحياةِ والموت والإنسان والوطن والله... لقد نشرُوا الذّاتَ فضْحا أو تبرئةً أو إدانةً أو تعاطُفا...</p>
+                
+                <h4 data-i18n="ArabicH.poetryLesson.politicsTitle">● النّضال السّياسيّ:</h4>
+                <p data-i18n="ArabicH.poetryLesson.politicsText">اِلتزم شعراءُ الحداثةِ بالهمومِ الوطنيّة والقوميّة والإنسانيّة (الاستعمارُ الغربيّ، القضيّةُ الفلسطينيّة، السّلطةُ المستبدّة، التّحرّرُ الوطنيّ، العنصريّةُ، سيادةُ الفقر والأمّيّة، العلاقةُ شرق-غرب...). اِنتمى بعضُهم إلى أحزاب سياسيّة معارضة، وتعرّضوا، بسبب ذلك، إلى الاعتقال والسّجن والتّعذيب أو اُضطُرّوا إلى الهجرةِ القسريّةِ هربا مِن بطش السّلطة المحلّيّة أو الاستعماريّة...</p>
+            </div>
+            
+            <!-- Extra reflective prompt -->
+            <div style="background: var(--gradient-light); border-radius: var(--border-radius); padding: 1.5rem; margin-top: 2rem; text-align: center;">
+                <p style="font-size: 1.2rem; color: var(--dark-color);" data-i18n="ArabicH.poetryLesson.reflection">✎ فكّر: كيف تجلّت هذه المحاور في قصائد الشعراء الذين درستهم؟</p>
+                <textarea class="ArabicH-response-textarea" placeholder="سجّل أفكارك..." style="background: white;" data-i18n-placeholder="ArabicH.poetryLesson.reflectionPlaceholder"></textarea>
+            </div>
+            
+            <!-- Navigation buttons -->
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.poetryLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.poetryLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="#" class="ArabicH-nav-btn" data-i18n="ArabicH.poetryLesson.previousLesson">الدرس السابق</a>
+                <a href="#" class="ArabicH-nav-btn" data-i18n="ArabicH.poetryLesson.nextLesson">الدرس التالي</a>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;" data-i18n="ArabicH.poetryLesson.footer">☺ درس تمهيدي في الشعر الحديث ☺</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Translations for Poetry Lesson (Modern Poetry)
+        window.translations_ArabicHLiteratureLesson2 = {
+            ar: {
+                // General translations (reused)
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // Poetry lesson specific
+                "ArabicH.poetryLesson.lessonTitle": "التمهيد للمحور 3: الشعر الحديث",
+                "ArabicH.poetryLesson.lessonSubtitle": "المحور 3: الشعر الحديث – تمهيد وتعريف",
+                "ArabicH.poetryLesson.goalsTitle": "أهداف المحور",
+                "ArabicH.poetryLesson.goal1": "التعرّف على مفهوم الشعر الحديث وخصائصه الفنية والدلالية.",
+                "ArabicH.poetryLesson.goal2": "استيعاب أبرز أعلام الشعر الحديث وانتماءاتهم.",
+                "ArabicH.poetryLesson.goal3": "تحليل القضايا الكبرى التي تناولها الشعر الحديث: المرأة، الذات، النضال السياسي.",
+                "ArabicH.poetryLesson.section1Title": "1- ما الشّعرُ العربيُّ الحديثُ؟",
+                "ArabicH.poetryLesson.meaning1": "لصفة 'الحديث' معنيان: تُحدّد الإطار الزماني الذي كُتب خلالَه هذا الشعر أولاً، وتؤكد ثانياً أن هذا الشعر مختلف من حيث خصائصه الفنية والدلالية عمّا سبق من إنتاج شعري.",
+                "ArabicH.poetryLesson.timelineTitle": "السّلسلة الزمنية:",
+                "ArabicH.poetryLesson.interaction": "تفاعل الأدباء العرب مع عصرهم بما فيه من اضطراب سياسي عنيف وتحول اجتماعي سريع وصدام حضاري يخترق الحدود الجغرافية. وكان 'الشعر الحديث' إحدى ثمرات هذا التفاعل الذي جمع بين التأثر بالأدب الغربي والنهل من التراث العربي والعالمي (الأساطير، الخرافات..) والحرص على ابتكار تقنيات القول الشعري ومضامينه.",
+                "ArabicH.poetryLesson.note1": "دوّن ملاحظاتك حول مفهوم الشعر الحديث:",
+                "ArabicH.poetryLesson.note1Placeholder": "...",
+                "ArabicH.poetryLesson.section2Title": "2- أعلامُ المحور:",
+                "ArabicH.poetryLesson.note2": "اختر أحد الأعلام وابحث في سيرته:",
+                "ArabicH.poetryLesson.note2Placeholder": "...",
+                "ArabicH.poetryLesson.section3Title": "3- محاورُ الاهتمام:",
+                "ArabicH.poetryLesson.womanTitle": "● المرأةُ:",
+                "ArabicH.poetryLesson.womanText": "تخلّى شعراءُ الحداثةِ عنِ الغزل القديم (التّغنّي بمحاسنِ الحبيبة، شكوى عذابِ الحبّ، طلبُ الوصال...). إذ صارت المرأةُ في شعرهم إنسانةً فاعلةً في الواقع وفي النّصّ الإبداعيّ، تُـحَبُّ بقدر ما تُـحِبُّ. بل أضحتْ رمزا شعريّا يُحيل إلى الوطنِ الفقيدِ أو القصيدةِ المنشودةِ أو الذّاتِ الموجوعة أو الطّفولةِ البعيدة أو الحلمِ المستحيل بالأمان... قدْ تتجلّى المرأةُ 'وطنا عاطفيّا' يعادلُ القصيدةَ الّتي هي 'الوطنُ المجازيُّ' الأرحبُ.",
+                "ArabicH.poetryLesson.selfTitle": "● الذّاتُ:",
+                "ArabicH.poetryLesson.selfText": "اِهتمّ الحداثيّونَ بتوصيفِ الذّاتِ الشّاعرةِ في حالاتها المتقلّبة (الحبُّ، الألمُ البدنيّ والمعنويّ، الإحباطُ، الغربةُ في الوطن أو عنه..). ونبشُوا ماضيَها الطّفوليَّ ليستمدّوا منه صورا شعريّة شتّى. وعبّروا عن مواقفِها مِن الحياةِ والموت والإنسان والوطن والله... لقد نشرُوا الذّاتَ فضْحا أو تبرئةً أو إدانةً أو تعاطُفا...",
+                "ArabicH.poetryLesson.politicsTitle": "● النّضال السّياسيّ:",
+                "ArabicH.poetryLesson.politicsText": "اِلتزم شعراءُ الحداثةِ بالهمومِ الوطنيّة والقوميّة والإنسانيّة (الاستعمارُ الغربيّ، القضيّةُ الفلسطينيّة، السّلطةُ المستبدّة، التّحرّرُ الوطنيّ، العنصريّةُ، سيادةُ الفقر والأمّيّة، العلاقةُ شرق-غرب...). اِنتمى بعضُهم إلى أحزاب سياسيّة معارضة، وتعرّضوا، بسبب ذلك، إلى الاعتقال والسّجن والتّعذيب أو اُضطُرّوا إلى الهجرةِ القسريّةِ هربا مِن بطش السّلطة المحلّيّة أو الاستعماريّة...",
+                "ArabicH.poetryLesson.reflection": "✎ فكّر: كيف تجلّت هذه المحاور في قصائد الشعراء الذين درستهم؟",
+                "ArabicH.poetryLesson.reflectionPlaceholder": "سجّل أفكارك...",
+                "ArabicH.poetryLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.poetryLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.poetryLesson.previousLesson": "الدرس السابق",
+                "ArabicH.poetryLesson.nextLesson": "الدرس التالي",
+                "ArabicH.poetryLesson.footer": "☺ درس تمهيدي في الشعر الحديث ☺",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                "ArabicH.poetryLesson.lessonTitle": "Introduction to Axis 3: Modern Poetry",
+                "ArabicH.poetryLesson.lessonSubtitle": "Axis 3: Modern Poetry – Introduction and Definition",
+                "ArabicH.poetryLesson.goalsTitle": "Axis Objectives",
+                "ArabicH.poetryLesson.goal1": "Understand the concept of modern poetry and its artistic and semantic characteristics.",
+                "ArabicH.poetryLesson.goal2": "Recognize the main figures of modern poetry and their backgrounds.",
+                "ArabicH.poetryLesson.goal3": "Analyze the major themes addressed in modern poetry: woman, the self, political struggle.",
+                "ArabicH.poetryLesson.section1Title": "1- What is Modern Arabic Poetry?",
+                "ArabicH.poetryLesson.meaning1": "The term 'modern' has two meanings: it defines the temporal framework in which this poetry was written, and it emphasizes that this poetry is different in its artistic and semantic characteristics from previous poetic production.",
+                "ArabicH.poetryLesson.timelineTitle": "Chronological sequence:",
+                "ArabicH.poetryLesson.interaction": "Arab writers interacted with their era, including violent political turmoil, rapid social change, and a civilizational clash crossing geographical boundaries. 'Modern poetry' was one of the fruits of this interaction, which combined influence from Western literature, drawing from Arab and global heritage (myths, legends...), and a desire to innovate poetic techniques and content.",
+                "ArabicH.poetryLesson.note1": "Take notes on the concept of modern poetry:",
+                "ArabicH.poetryLesson.note1Placeholder": "...",
+                "ArabicH.poetryLesson.section2Title": "2- Key Figures of the Axis:",
+                "ArabicH.poetryLesson.note2": "Choose one of the poets and research their biography:",
+                "ArabicH.poetryLesson.note2Placeholder": "...",
+                "ArabicH.poetryLesson.section3Title": "3- Themes of Interest:",
+                "ArabicH.poetryLesson.womanTitle": "● Woman:",
+                "ArabicH.poetryLesson.womanText": "Modernist poets abandoned traditional love poetry (singing of the beloved's beauty, complaining of love's torment, seeking union...). Woman in their poetry became an active human being in reality and in the creative text, loved as much as she loves. She even became a poetic symbol referring to the lost homeland, the desired poem, the wounded self, distant childhood, or the impossible dream of safety... Woman might manifest as an 'emotional homeland' equivalent to the poem, which is the broader 'metaphorical homeland'.",
+                "ArabicH.poetryLesson.selfTitle": "● The Self:",
+                "ArabicH.poetryLesson.selfText": "Modernists focused on describing the poetic self in its fluctuating states (love, physical and emotional pain, frustration, alienation in or from the homeland...). They excavated its childhood past to derive various poetic images. They expressed its positions on life, death, humanity, homeland, and God... They exposed the self, whether to condemn, absolve, or sympathize.",
+                "ArabicH.poetryLesson.politicsTitle": "● Political Struggle:",
+                "ArabicH.poetryLesson.politicsText": "Modernist poets were committed to national, pan-Arab, and human concerns (Western colonialism, the Palestinian cause, tyrannical authority, national liberation, racism, prevalence of poverty and illiteracy, East-West relations...). Some belonged to opposition political parties and, as a result, were subjected to arrest, imprisonment, torture, or were forced into exile to escape the oppression of local or colonial authority.",
+                "ArabicH.poetryLesson.reflection": "✎ Reflect: How are these themes manifested in the poems of the poets you have studied?",
+                "ArabicH.poetryLesson.reflectionPlaceholder": "Write your thoughts...",
+                "ArabicH.poetryLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.poetryLesson.backToHome": "Back to Homepage",
+                "ArabicH.poetryLesson.previousLesson": "Previous Lesson",
+                "ArabicH.poetryLesson.nextLesson": "Next Lesson",
+                "ArabicH.poetryLesson.footer": "☺ Introductory Lesson on Modern Poetry ☺",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                "ArabicH.poetryLesson.lessonTitle": "Introduction à l'Axe 3: La Poésie Moderne",
+                "ArabicH.poetryLesson.lessonSubtitle": "Axe 3: La Poésie Moderne – Introduction et Définition",
+                "ArabicH.poetryLesson.goalsTitle": "Objectifs de l'axe",
+                "ArabicH.poetryLesson.goal1": "Comprendre le concept de la poésie moderne et ses caractéristiques artistiques et sémantiques.",
+                "ArabicH.poetryLesson.goal2": "Reconnaître les principales figures de la poésie moderne et leurs origines.",
+                "ArabicH.poetryLesson.goal3": "Analyser les grandes thématiques abordées par la poésie moderne : la femme, le soi, la lutte politique.",
+                "ArabicH.poetryLesson.section1Title": "1- Qu'est-ce que la poésie arabe moderne ?",
+                "ArabicH.poetryLesson.meaning1": "Le terme 'moderne' a deux significations : il définit le cadre temporel dans lequel cette poésie a été écrite, et il souligne que cette poésie est différente dans ses caractéristiques artistiques et sémantiques de la production poétique antérieure.",
+                "ArabicH.poetryLesson.timelineTitle": "Séquence chronologique :",
+                "ArabicH.poetryLesson.interaction": "Les écrivains arabes ont interagi avec leur époque, marquée par des troubles politiques violents, des changements sociaux rapides et un choc des civilisations traversant les frontières géographiques. La 'poésie moderne' a été l'un des fruits de cette interaction, combinant l'influence de la littérature occidentale, le puisage dans le patrimoine arabe et mondial (mythes, légendes...), et le souci d'innover dans les techniques et le contenu poétiques.",
+                "ArabicH.poetryLesson.note1": "Prenez des notes sur le concept de poésie moderne :",
+                "ArabicH.poetryLesson.note1Placeholder": "...",
+                "ArabicH.poetryLesson.section2Title": "2- Principaux représentants de l'axe :",
+                "ArabicH.poetryLesson.note2": "Choisissez l'un des poètes et recherchez sa biographie :",
+                "ArabicH.poetryLesson.note2Placeholder": "...",
+                "ArabicH.poetryLesson.section3Title": "3- Thèmes d'intérêt :",
+                "ArabicH.poetryLesson.womanTitle": "● La femme :",
+                "ArabicH.poetryLesson.womanText": "Les poètes modernistes ont abandonné la poésie d'amour traditionnelle (chanter les beautés de l'aimée, se plaindre des tourments de l'amour, demander l'union...). La femme dans leur poésie est devenue un être humain actif dans la réalité et dans le texte créatif, aimée autant qu'elle aime. Elle est même devenue un symbole poétique renvoyant à la patrie perdue, au poème désiré, au soi blessé, à l'enfance lointaine, ou au rêve impossible de sécurité... La femme peut se manifester comme une 'patrie émotionnelle' équivalente au poème, qui est la 'patrie métaphorique' plus large.",
+                "ArabicH.poetryLesson.selfTitle": "● Le soi :",
+                "ArabicH.poetryLesson.selfText": "Les modernistes se sont attachés à décrire le soi poétique dans ses états fluctuants (amour, douleur physique et morale, frustration, aliénation dans ou hors de la patrie...). Ils ont fouillé son passé enfantin pour en tirer diverses images poétiques. Ils ont exprimé ses positions sur la vie, la mort, l'humanité, la patrie et Dieu... Ils ont exposé le soi, que ce soit pour le condamner, l'absoudre ou le plaindre.",
+                "ArabicH.poetryLesson.politicsTitle": "● La lutte politique :",
+                "ArabicH.poetryLesson.politicsText": "Les poètes modernistes se sont engagés dans les préoccupations nationales, panarabes et humaines (colonialisme occidental, cause palestinienne, autorité tyrannique, libération nationale, racisme, prévalence de la pauvreté et de l'analphabétisme, relations Est-Ouest...). Certains ont appartenu à des partis politiques d'opposition et, de ce fait, ont été soumis à l'arrestation, l'emprisonnement, la torture, ou ont été contraints à l'exil pour échapper à la répression de l'autorité locale ou coloniale.",
+                "ArabicH.poetryLesson.reflection": "✎ Réfléchissez : Comment ces thèmes se manifestent-ils dans les poèmes des poètes que vous avez étudiés ?",
+                "ArabicH.poetryLesson.reflectionPlaceholder": "Notez vos idées...",
+                "ArabicH.poetryLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.poetryLesson.backToHome": "Retour à l'Accueil",
+                "ArabicH.poetryLesson.previousLesson": "Leçon précédente",
+                "ArabicH.poetryLesson.nextLesson": "Leçon suivante",
+                "ArabicH.poetryLesson.footer": "☺ Leçon d'introduction à la poésie moderne ☺",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHLiteratureLesson2;
+    </script>
+    
+    <!-- Include external translation and PWA scripts -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Theme toggle & active window management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) item.classList.add('active');
+                else item.classList.remove('active');
+            });
+            
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.checked = true;
+                }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+        });
+
+        // Service worker backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').catch(e => console.log('SW reg failed:', e));
+            });
+        }
+        
+        // Manual install button
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            const btn = document.getElementById('manual-install-btn');
+            if (btn) btn.style.display = 'flex';
+        });
+        document.getElementById('manual-install-btn')?.addEventListener('click', async () => {
+            if (!deferredPrompt) return;
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') {
+                document.getElementById('manual-install-btn').style.display = 'none';
+                deferredPrompt = null;
+            }
+        });
+    </script>
+</body>
+</html>
