@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المفاهيم اللغوية - Arabic Hub Education</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1a936f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Arabic Hub Education">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Concepts page specific styles - matching Arabic Hub color palette */
+        .ArabicH-concepts-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .ArabicH-concepts-main {
+            flex: 1;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .ArabicH-concepts-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .ArabicH-concepts-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+        }
+        
+        .ArabicH-concepts-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Alphabet Navigation */
+        .ArabicH-alphabet-nav {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        .ArabicH-alphabet-nav-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .ArabicH-alphabet-nav-title::before {
+            content: "🔤";
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .ArabicH-alphabet-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        
+        .ArabicH-letter-btn {
+            background: var(--gradient-secondary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            min-width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .ArabicH-letter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(111, 179, 184, 0.3);
+        }
+        
+        .ArabicH-letter-btn.active {
+            background: var(--gradient-primary);
+            box-shadow: 0 4px 10px rgba(26, 147, 111, 0.3);
+        }
+        
+        /* Concepts Grid */
+        .ArabicH-concepts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .ArabicH-concept-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ArabicH-concept-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(26, 147, 111, 0.2);
+        }
+        
+        .ArabicH-concept-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+        
+        .ArabicH-concept-card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .ArabicH-concept-letter {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        
+        .ArabicH-concept-info {
+            flex: 1;
+        }
+        
+        .ArabicH-concept-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+        
+        .ArabicH-concept-language {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.25rem;
+        }
+        
+        .ArabicH-concept-content {
+            color: var(--text-color);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            flex: 1;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+        }
+        
+        .ArabicH-see-more-btn {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: auto;
+        }
+        
+        .ArabicH-see-more-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(26, 147, 111, 0.3);
+        }
+        
+        /* Concept Modal Styles */
+        .ArabicH-concept-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        
+        .ArabicH-concept-modal-content {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            position: relative;
+            animation: modalFadeIn 0.3s ease;
+        }
+        
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .ArabicH-concept-modal-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+        
+        .ArabicH-concept-modal-letter {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-right: 1.5rem;
+        }
+        
+        .ArabicH-concept-modal-info {
+            flex: 1;
+        }
+        
+        .ArabicH-concept-modal-name {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .ArabicH-concept-modal-language {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .ArabicH-concept-modal-content-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .ArabicH-concept-modal-section-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .ArabicH-concept-modal-section-title::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--border-color);
+            margin-left: 10px;
+        }
+        
+        .ArabicH-concept-modal-section-text {
+            color: var(--text-color);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        
+        .ArabicH-concept-modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+        
+        .ArabicH-concept-modal-close:hover {
+            background-color: var(--definition-bg);
+        }
+        
+        /* No Concepts Message */
+        .ArabicH-no-concepts {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-color);
+            grid-column: 1 / -1;
+        }
+        
+        .ArabicH-no-concepts-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .ArabicH-concepts-title {
+                font-size: 2rem;
+            }
+            
+            .ArabicH-concepts-subtitle {
+                font-size: 1rem;
+            }
+            
+            .ArabicH-concepts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .ArabicH-alphabet-list {
+                justify-content: flex-start;
+            }
+            
+            .ArabicH-letter-btn {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+                min-width: 35px;
+                height: 35px;
+            }
+            
+            .ArabicH-concept-modal-content {
+                padding: 1.5rem;
+                margin: 1rem auto;
+            }
+            
+            .ArabicH-concept-modal-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .ArabicH-concept-modal-letter {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* RTL/LTR Support */
+        [dir="rtl"] .ArabicH-alphabet-nav-title::before {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+        
+        [dir="rtl"] .ArabicH-concept-letter {
+            margin-right: 0;
+            margin-left: 1rem;
+        }
+        
+        [dir="rtl"] .ArabicH-concept-modal-letter {
+            margin-right: 0;
+            margin-left: 1.5rem;
+        }
+        
+        [dir="rtl"] .ArabicH-concept-modal-close {
+            right: auto;
+            left: 1rem;
+        }
+        
+        [dir="rtl"] .ArabicH-concept-modal-section-title::after {
+            margin-left: 0;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body class="ArabicH-concepts-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item active">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-concepts-main">
+        <div class="ArabicH-concepts-header">
+            <h1 class="ArabicH-concepts-title" data-i18n="ArabicH.concepts.title">المفاهيم اللغوية</h1>
+            <p class="ArabicH-concepts-subtitle" data-i18n="ArabicH.concepts.subtitle">استكشف المفاهيم الأساسية في علوم اللغة العربية</p>
+        </div>
+        
+        <!-- Alphabet Navigation -->
+        <section class="ArabicH-alphabet-nav">
+            <h2 class="ArabicH-alphabet-nav-title" data-i18n="ArabicH.concepts.alphabetNav">تصفح حسب الحرف الأول</h2>
+            <div class="ArabicH-alphabet-list" id="alphabetList">
+                <!-- Letters will be dynamically loaded here -->
+            </div>
+        </section>
+        
+        <!-- Concepts Grid -->
+        <div class="ArabicH-concepts-grid" id="conceptsGrid">
+            <!-- Concepts will be dynamically loaded here -->
+        </div>
+        
+        <!-- No Concepts Message -->
+        <div class="ArabicH-no-concepts" id="noConcepts" style="display: none;">
+            <div class="ArabicH-no-concepts-icon">📚</div>
+            <h3 data-i18n="ArabicH.concepts.noConcepts.title">لم يتم العثور على مفاهيم</h3>
+            <p data-i18n="ArabicH.concepts.noConcepts.message">اختر حرفاً مختلفاً أو عد لاحقاً</p>
+        </div>
+    </main>
+    
+    <!-- Concept Modal -->
+    <div class="ArabicH-concept-modal" id="conceptModal">
+        <div class="ArabicH-concept-modal-content">
+            <button class="ArabicH-concept-modal-close" id="modalClose">&times;</button>
+            <div class="ArabicH-concept-modal-header">
+                <div id="modalLetter" class="ArabicH-concept-modal-letter"></div>
+                <div class="ArabicH-concept-modal-info">
+                    <h2 id="modalName" class="ArabicH-concept-modal-name"></h2>
+                    <p id="modalLanguage" class="ArabicH-concept-modal-language"></p>
+                </div>
+            </div>
+            
+            <div class="ArabicH-concept-modal-content-section">
+                <h3 class="ArabicH-concept-modal-section-title" data-i18n="ArabicH.concepts.linguistically">لغوياً</h3>
+                <div id="modalLinguistically" class="ArabicH-concept-modal-section-text"></div>
+            </div>
+            
+            <div class="ArabicH-concept-modal-content-section">
+                <h3 class="ArabicH-concept-modal-section-title" data-i18n="ArabicH.concepts.terminologically">اصطلاحياً</h3>
+                <div id="modalTerminologically" class="ArabicH-concept-modal-section-text"></div>
+            </div>
+            
+            <div class="ArabicH-concept-modal-content-section">
+                <h3 class="ArabicH-concept-modal-section-title" data-i18n="ArabicH.concepts.conceptually">مفهومياً</h3>
+                <div id="modalConceptually" class="ArabicH-concept-modal-section-text"></div>
+            </div>
+            
+            <div class="ArabicH-concept-modal-content-section">
+                <h3 class="ArabicH-concept-modal-section-title" data-i18n="ArabicH.concepts.other">وجهات نظر أخرى</h3>
+                <div id="modalOther" class="ArabicH-concept-modal-section-text"></div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button (Fallback) -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <!-- Include data_concepts.js -->
+    <script src="scripts/data_concepts.js"></script>
+    
+    <script>
+        // Page-specific translations for concepts page
+        window.translations_ArabicHconcepts = {
+            ar: {
+                // General (reused from resources)
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.general.present": "موجود",
+                "ArabicH.general.absent": "غير متوفر",
+                
+                // Windows bar
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                // PWA
+                "ArabicH.pwa.install": "تثبيت التطبيق",
+                
+                // Concepts page
+                "ArabicH.concepts.title": "المفاهيم اللغوية",
+                "ArabicH.concepts.subtitle": "استكشف المفاهيم الأساسية في علوم اللغة العربية",
+                "ArabicH.concepts.alphabetNav": "تصفح حسب الحرف الأول",
+                "ArabicH.concepts.allLetters": "جميع الحروف",
+                "ArabicH.concepts.noConcepts.title": "لم يتم العثور على مفاهيم",
+                "ArabicH.concepts.noConcepts.message": "اختر حرفاً مختلفاً أو عد لاحقاً",
+                "ArabicH.concepts.seeMore": "عرض المزيد",
+                "ArabicH.concepts.linguistically": "لغوياً",
+                "ArabicH.concepts.terminologically": "اصطلاحياً",
+                "ArabicH.concepts.conceptually": "مفهومياً",
+                "ArabicH.concepts.other": "وجهات نظر أخرى"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arabic Learning Hub",
+                "ArabicH.general.logoAlt": "Arabic Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Ziad Mejri",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.general.present": "Present",
+                "ArabicH.general.absent": "Not available",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.pwa.install": "Install App",
+                "ArabicH.concepts.title": "Linguistic Concepts",
+                "ArabicH.concepts.subtitle": "Explore the fundamental concepts of Arabic language sciences",
+                "ArabicH.concepts.alphabetNav": "Browse by First Letter",
+                "ArabicH.concepts.allLetters": "All Letters",
+                "ArabicH.concepts.noConcepts.title": "No concepts found",
+                "ArabicH.concepts.noConcepts.message": "Select a different letter or check back later",
+                "ArabicH.concepts.seeMore": "See More",
+                "ArabicH.concepts.linguistically": "Linguistically",
+                "ArabicH.concepts.terminologically": "Terminologically",
+                "ArabicH.concepts.conceptually": "Conceptually",
+                "ArabicH.concepts.other": "Other Perspectives"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.general.present": "Présent",
+                "ArabicH.general.absent": "Non disponible",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.pwa.install": "Installer l'App",
+                "ArabicH.concepts.title": "Concepts Linguistiques",
+                "ArabicH.concepts.subtitle": "Explorez les concepts fondamentaux des sciences de la langue arabe",
+                "ArabicH.concepts.alphabetNav": "Parcourir par première lettre",
+                "ArabicH.concepts.allLetters": "Toutes les lettres",
+                "ArabicH.concepts.noConcepts.title": "Aucun concept trouvé",
+                "ArabicH.concepts.noConcepts.message": "Sélectionnez une autre lettre ou revenez plus tard",
+                "ArabicH.concepts.seeMore": "Voir plus",
+                "ArabicH.concepts.linguistically": "Linguistiquement",
+                "ArabicH.concepts.terminologically": "Terminologiquement",
+                "ArabicH.concepts.conceptually": "Conceptuellement",
+                "ArabicH.concepts.other": "Autres perspectives"
+            }
+        };
+        
+        // Set the current translations for the translation.js file to use
+        window.currentTranslations = window.translations_ArabicHconcepts;
+    </script>
+
+    <!-- Include the external translation file -->
+    <script src="scripts/translation.js"></script>
+
+    <!-- Include PWA Handler -->
+    <script src="scripts/pwa-handler.js"></script>
+
+    <script>
+        // Concepts page functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const alphabetList = document.getElementById('alphabetList');
+            const conceptsGrid = document.getElementById('conceptsGrid');
+            const noConcepts = document.getElementById('noConcepts');
+            
+            // Modal elements
+            const conceptModal = document.getElementById('conceptModal');
+            const modalClose = document.getElementById('modalClose');
+            const modalLetter = document.getElementById('modalLetter');
+            const modalName = document.getElementById('modalName');
+            const modalLanguage = document.getElementById('modalLanguage');
+            const modalLinguistically = document.getElementById('modalLinguistically');
+            const modalTerminologically = document.getElementById('modalTerminologically');
+            const modalConceptually = document.getElementById('modalConceptually');
+            const modalOther = document.getElementById('modalOther');
+            
+            // Get current language from translation system
+            let currentLanguage = localStorage.getItem('preferredLanguage') || 'ar';
+            let currentLetterFilter = 'all';
+            let isInitializing = true;
+            
+            // Function to get unique first letters from concepts
+            function getUniqueLetters() {
+                const letters = new Set();
+                
+                if (ArabicH_Concepts && ArabicH_Concepts.concepts) {
+                    ArabicH_Concepts.concepts.forEach(concept => {
+                        if (concept[currentLanguage]) {
+                            letters.add(concept[currentLanguage].first_letter);
+                        } else if (concept.ar) {
+                            // Fallback to Arabic
+                            letters.add(concept.ar.first_letter);
+                        }
+                    });
+                }
+                
+                return Array.from(letters).sort();
+            }
+            
+            // Function to render alphabet navigation
+            function renderAlphabetNav() {
+                alphabetList.innerHTML = '';
+                
+                // Add "All Letters" button
+                const allLettersBtn = document.createElement('button');
+                allLettersBtn.className = `ArabicH-letter-btn ${currentLetterFilter === 'all' ? 'active' : ''}`;
+                allLettersBtn.textContent = getTranslation('ArabicH.concepts.allLetters');
+                allLettersBtn.setAttribute('data-letter', 'all');
+                allLettersBtn.addEventListener('click', function() {
+                    setActiveLetterFilter('all');
+                });
+                alphabetList.appendChild(allLettersBtn);
+                
+                // Add individual letter buttons
+                const letters = getUniqueLetters();
+                letters.forEach(letter => {
+                    const letterBtn = document.createElement('button');
+                    letterBtn.className = `ArabicH-letter-btn ${currentLetterFilter === letter ? 'active' : ''}`;
+                    letterBtn.textContent = letter;
+                    letterBtn.setAttribute('data-letter', letter);
+                    letterBtn.addEventListener('click', function() {
+                        setActiveLetterFilter(letter);
+                    });
+                    alphabetList.appendChild(letterBtn);
+                });
+            }
+            
+            // Function to render concepts
+            function renderConcepts() {
+                try {
+                    conceptsGrid.innerHTML = '';
+                    noConcepts.style.display = 'none';
+                    
+                    let filteredConcepts = [];
+                    
+                    if (ArabicH_Concepts && ArabicH_Concepts.concepts) {
+                        if (currentLetterFilter === 'all') {
+                            filteredConcepts = ArabicH_Concepts.concepts;
+                        } else {
+                            filteredConcepts = ArabicH_Concepts.concepts.filter(concept => {
+                                const conceptData = getConceptData(concept, currentLanguage);
+                                return conceptData.first_letter === currentLetterFilter;
+                            });
+                        }
+                    }
+                    
+                    if (filteredConcepts.length === 0) {
+                        noConcepts.style.display = 'block';
+                        return;
+                    }
+                    
+                    filteredConcepts.forEach(concept => {
+                        const conceptData = getConceptData(concept, currentLanguage);
+                        
+                        const conceptCard = document.createElement('div');
+                        conceptCard.className = 'ArabicH-concept-card';
+                        
+                        conceptCard.innerHTML = `
+                            <div class="ArabicH-concept-card-header">
+                                <div class="ArabicH-concept-letter">${conceptData.first_letter}</div>
+                                <div class="ArabicH-concept-info">
+                                    <div class="ArabicH-concept-name">${conceptData.name}</div>
+                                    <div class="ArabicH-concept-language">${getLanguageName(currentLanguage)}</div>
+                                </div>
+                            </div>
+                            <div class="ArabicH-concept-content">${conceptData.linguistically}</div>
+                            <button class="ArabicH-see-more-btn" data-concept-id="${concept.id}">${getTranslation('ArabicH.concepts.seeMore')}</button>
+                        `;
+                        
+                        conceptsGrid.appendChild(conceptCard);
+                    });
+                    
+                    // Add event listeners to "See More" buttons
+                    const seeMoreButtons = document.querySelectorAll('.ArabicH-see-more-btn');
+                    seeMoreButtons.forEach(button => {
+                        button.addEventListener('click', function() {
+                            const conceptId = this.getAttribute('data-concept-id');
+                            openConceptModal(conceptId);
+                        });
+                    });
+                } catch (error) {
+                    console.error('Error rendering concepts:', error);
+                    noConcepts.style.display = 'block';
+                }
+            }
+            
+            // Helper function to get concept data for current language
+            function getConceptData(concept, lang) {
+                // Prefer current language, fallback to Arabic, then first available
+                const conceptLangData = concept[lang] || concept.ar || concept.en || concept.fr;
+                return {
+                    name: conceptLangData.name,
+                    first_letter: conceptLangData.first_letter,
+                    linguistically: conceptLangData.linguistically,
+                    terminologically: conceptLangData.terminologically,
+                    conceptually: conceptLangData.conceptually,
+                    other: conceptLangData.other
+                };
+            }
+            
+            // Helper function to get language name
+            function getLanguageName(langCode) {
+                const languageNames = {
+                    'en': 'English',
+                    'fr': 'Français',
+                    'ar': 'العربية'
+                };
+                return languageNames[langCode] || langCode;
+            }
+            
+            // Helper function to get translations
+            function getTranslation(key) {
+                return window.currentTranslations && window.currentTranslations[currentLanguage] && window.currentTranslations[currentLanguage][key] || key;
+            }
+            
+            // Function to set active letter filter and update display
+            function setActiveLetterFilter(letter) {
+                currentLetterFilter = letter;
+                renderAlphabetNav();
+                renderConcepts();
+            }
+            
+            // Function to open concept modal
+            function openConceptModal(conceptId) {
+                const concept = ArabicH_Concepts.concepts.find(c => c.id === conceptId);
+                if (!concept) return;
+                
+                const conceptData = getConceptData(concept, currentLanguage);
+                
+                // Populate modal with concept data
+                modalLetter.textContent = conceptData.first_letter;
+                modalName.textContent = conceptData.name;
+                modalLanguage.textContent = getLanguageName(currentLanguage);
+                
+                // Set content for each section, handling "N/A" values
+                modalLinguistically.innerHTML = conceptData.linguistically === "N/A" ? 
+                    `<em>${getTranslation('ArabicH.general.absent')}</em>` : 
+                    `<p>${conceptData.linguistically}</p>`;
+                
+                modalTerminologically.innerHTML = conceptData.terminologically === "N/A" ? 
+                    `<em>${getTranslation('ArabicH.general.absent')}</em>` : 
+                    `<p>${conceptData.terminologically}</p>`;
+                
+                modalConceptually.innerHTML = conceptData.conceptually === "N/A" ? 
+                    `<em>${getTranslation('ArabicH.general.absent')}</em>` : 
+                    `<p>${conceptData.conceptually}</p>`;
+                
+                modalOther.innerHTML = conceptData.other === "N/A" ? 
+                    `<em>${getTranslation('ArabicH.general.absent')}</em>` : 
+                    `<p>${conceptData.other}</p>`;
+                
+                // Show modal
+                conceptModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // Function to close concept modal
+            function closeConceptModal() {
+                conceptModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+            
+            // Add event listeners for modal
+            modalClose.addEventListener('click', closeConceptModal);
+            
+            // Close modal when clicking outside the content
+            conceptModal.addEventListener('click', function(event) {
+                if (event.target === conceptModal) {
+                    closeConceptModal();
+                }
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape' && conceptModal.style.display === 'block') {
+                    closeConceptModal();
+                }
+            });
+            
+            // Function to update page language and refresh content
+            function updatePageLanguage(lang) {
+                if (!isInitializing) {
+                    currentLanguage = lang;
+                    renderAlphabetNav();
+                    renderConcepts();
+                }
+            }
+            
+            // Override the applyLanguage function to handle dynamic content
+            const originalApplyLanguage = window.applyLanguage;
+            window.applyLanguage = function(lang) {
+                originalApplyLanguage(lang);
+                updatePageLanguage(lang);
+            };
+            
+            // Initialize
+            function initializePage() {
+                renderAlphabetNav();
+                renderConcepts();
+                isInitializing = false;
+            }
+            
+            initializePage();
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration (backup)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW registration failed: ', err));
+            });
+        }
+        
+        // Manual install button handler
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            document.getElementById('manual-install-btn').style.display = 'flex';
+        });
+        
+        document.getElementById('manual-install-btn')?.addEventListener('click', async () => {
+            if (!deferredPrompt) return;
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') {
+                document.getElementById('manual-install-btn').style.display = 'none';
+                deferredPrompt = null;
+            }
+        });
+    </script>
+</body>
+</html>

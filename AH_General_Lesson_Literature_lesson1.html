@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المسرحية - الدرس الأول | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2E7D32">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="المسرحية">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Green – Nature / Literature Theme */
+        :root {
+            --primary-color: #2E7D32;       /* deep green */
+            --secondary-color: #4CAF50;      /* medium green */
+            --accent-color: #81C784;          /* light green */
+            --light-color: #E8F5E9;            /* very light green */
+            --dark-color: #1B5E20;             /* dark green */
+            --text-color: #2c3e2f;              /* dark grey-green */
+            --heading-color: #1B5E20;
+            --background-color: #f1f8e9;        /* off-white with green tint */
+            --card-bg: #ffffff;
+            --definition-bg: #e0f2e0;           /* soft green for definitions */
+            --border-color: #a5d6a7;             /* pastel green border */
+            --table-even-bg: #f1f8e9;
+            --table-hover-bg: #c8e6c9;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(46, 125, 50, 0.12);
+            --gradient-primary: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+            --gradient-secondary: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            --gradient-accent: linear-gradient(135deg, #81C784 0%, #4CAF50 100%);
+            --gradient-light: linear-gradient(135deg, #E8F5E9 0%, #f1f8e9 100%);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #4CAF50;
+            --secondary-color: #66BB6A;
+            --accent-color: #81C784;
+            --light-color: #1B5E20;
+            --dark-color: #0d3d0d;
+            --text-color: #e8f5e9;
+            --heading-color: #ffffff;
+            --background-color: #1a2e1a;
+            --card-bg: #2a3f2a;
+            --definition-bg: #1f3a1f;
+            --border-color: #4CAF50;
+            --table-even-bg: #1f3a1f;
+            --table-hover-bg: #2a5e2a;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+            --gradient-primary: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            --gradient-secondary: linear-gradient(135deg, #66BB6A 0%, #4CAF50 100%);
+            --gradient-accent: linear-gradient(135deg, #81C784 0%, #66BB6A 100%);
+            --gradient-light: linear-gradient(135deg, #1B5E20 0%, #1a2e1a 100%);
+        }
+
+        /* Page specific styles (reusing classes from previous lessons) */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-lesson-teacher {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .ArabicH-goals-section {
+            background: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-right: 4px solid var(--secondary-color);
+        }
+
+        .ArabicH-goals-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .ArabicH-goals-list {
+            list-style-type: none;
+            padding-right: 20px;
+        }
+
+        .ArabicH-goals-list li {
+            margin-bottom: 10px;
+            padding-right: 10px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .ArabicH-goals-list li:before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            right: -20px;
+        }
+
+        /* Note card (like in rhetoric lesson) */
+        .ArabicH-lesson-note {
+            background-color: #f1f8e9;
+            border-right: 4px solid var(--primary-color);
+            padding: 15px 20px;
+            border-radius: var(--border-radius);
+            margin: 20px 0 30px 0;
+            font-style: italic;
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+        [data-theme="dark"] .ArabicH-lesson-note {
+            background-color: rgba(46, 125, 50, 0.2);
+            color: #e0e0e0;
+        }
+
+        /* Definition / concept card */
+        .ArabicH-concept-card {
+            background: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-right: 4px solid var(--accent-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .ArabicH-concept-card h3 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+        .ArabicH-concept-card h4 {
+            color: var(--dark-color);
+            font-weight: 600;
+            margin-top: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .ArabicH-subtle-list {
+            list-style-type: none;
+            padding-right: 20px;
+        }
+        .ArabicH-subtle-list li {
+            margin-bottom: 10px;
+            padding-right: 10px;
+            position: relative;
+        }
+        .ArabicH-subtle-list li:before {
+            content: "◦";
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            right: -20px;
+        }
+
+        .ArabicH-terminology-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            font-size: 1rem;
+        }
+        .ArabicH-terminology-item {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 0.8rem;
+        }
+        .ArabicH-terminology-term {
+            font-weight: 700;
+            color: var(--dark-color);
+            min-width: 100px;
+            font-size: 1.1rem;
+        }
+        .ArabicH-terminology-def {
+            color: var(--text-color);
+        }
+
+        /* table for general notes? not needed, but we keep responsive */
+        .ArabicH-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .ArabicH-response-textarea {
+            width: 100%;
+            min-height: 80px;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: white;
+            resize: vertical;
+            font-family: inherit;
+            font-size: 15px;
+            color: var(--text-color);
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        [data-theme="dark"] .ArabicH-response-textarea {
+            background-color: var(--card-bg);
+            border-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* responsive */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title { font-size: 2rem; }
+            .ArabicH-lesson-subtitle { font-size: 1.1rem; }
+            .ArabicH-lesson-container { padding: 1.5rem; }
+            .ArabicH-lesson-header { flex-direction: column; gap: 15px; }
+            .ArabicH-nav-buttons { flex-direction: column; }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon  -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.literatureLesson.lesson1Title">الدرس الأول: المسرحية</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.literatureLesson.lesson1Subtitle">المحور 4: المسرحية – من تقنيات الكتابة المسرحيّة</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher">الأستاذة: فوزيّة الشّطّي</div>
+                <div class="ArabicH-lesson-title" style="color: white; margin: 0; font-size: 1.6rem;">المسرحية: تقنيات الكتابة</div>
+                <div class="ArabicH-lesson-class">3 آداب 2 – معهد قرطاج حنّبعل (2017-2018)</div>
+            </div>
+            
+            <!-- Note about the lesson (institution) -->
+            <div class="ArabicH-lesson-note">
+                <p>تم إعداد هذا الدرس للأستاذة فوزيّة الشّطّي – السنة الدراسية 2017-2018 – معهد قرطاج حنّبعل، تونس.</p>
+            </div>
+            
+            <!-- الأهداف Section (as per program) -->
+            <div class="ArabicH-goals-section">
+                <h2 class="ArabicH-goals-title">أهداف المحور (حسب البرامج الرسميّة)</h2>
+                <ul class="ArabicH-goals-list">
+                    <li>تبيّن الخصائص الفنّيّة المميِّزة للكتابة المسرحيّة.</li>
+                    <li>استجلاءُ أهمّ القضايا السّياسيّة والاجتماعيّة والأخلاقيّة والإنسانيّة وإبداءُ الرّأي فيها.</li>
+                </ul>
+            </div>
+            
+            <!-- تمهيد with general notes about the two plays -->
+            <div class="ArabicH-concept-card" style="background: var(--light-color);">
+                <h3>تمهيدٌ للمحور: من تقنيات الكتابة المسرحيّة</h3>
+                <h4>ملاحظات عامّة:</h4>
+                <p>يُخيَّر المدرِّسُ بين مسرحيّتي <strong>"السّلطانُ الحائرُ" لتوفيق الحكيم</strong> و<strong>"مرادٌ الثّالثُ" للحبيب بولعراس</strong>. تلتقي المسرحيتان في المشغل السّياسي وإشكالية السّلطة المطلقة، لكنهما تختلفان في طرق الكتابة والمرجعيات التاريخية والمواقف النقدية.</p>
+                <ul class="ArabicH-subtle-list">
+                    <li><strong>"السّلطانُ الحائرُ" (توفيق الحكيم):</strong> يمكن اعتبارها ملهاة (كوميديا)، مصدرها الخيال المتسلح بالتاريخ الشعبي، وتعتمد السخرية السوداء سبيلاً للتحليل والنقد. أُلفت في الأصل كنص مسرحي ذهني (يُقرأ ولا يُمثَّل بالضرورة)، ثم مُثِّلت لاحقًا على خشبة المسرح.</li>
+                    <li><strong>"مرادٌ الثّالثُ" (الحبيب بولعراس):</strong> هي مأساة تاريخية مستمدة من التاريخ التونسي، تركّز على تحليل الجوانب النفسية للشخصيات. أُلفت من أجل التمثيل المسرحي مباشرة، والدليل على ذلك إهداء الكاتب للممثل علي بن عيّاد.</li>
+                </ul>
+            </div>
+            
+            <!-- Main content: تقنيات الكتابة المسرحية -->
+            <div style="margin: 2rem 0;">
+                <h2 style="color: var(--primary-color); font-size: 1.8rem; margin-bottom: 1rem; border-bottom: 2px solid var(--accent-color); padding-bottom: 0.5rem;">من تقنيات الكتابة المسرحيّة</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8;">النّصُّ المسرحيُّ هو كتابةٌ قصصيّة تتّخذُ نمطَ الحوارِ وسيلةً للسّرد. تتألّف أغلبُ النّصوصِ المسرحيّة من عنصرين رئيسيين:</p>
+            </div>
+            
+            <!-- 1- الإشارات الركحية -->
+            <div class="ArabicH-concept-card">
+                <h3>1- الإشاراتُ الرّكحيّةُ</h3>
+                <ul class="ArabicH-subtle-list">
+                    <li>هي مقاطع سرديّة وصفيّة تقدّم للقارئ تفاصيل لا يمكن نقلها عبر الحوار فقط.</li>
+                </ul>
+                <h4>وظائفها:</h4>
+                <ul class="ArabicH-subtle-list">
+                    <li>وصف الشّخصيّات (حركاتها، هيئاتها، ملامحها الخلقيّة، حالاتها النّفسيّة).</li>
+                    <li>تعريفنا بخصائص الفضاء المسرحي (المكان، الزمان، الأجواء المحيطة).</li>
+                </ul>
+                <p>تُـمثّل تقنيةً ثانويّة لكنها <strong>أساسية</strong> ولا غِنًى عنها، فهي تؤدي وظائف يعجز عنها كلام الشخصيات، وهي عنصر مساعد في إخراج النص.</p>
+                <!-- interactive note area -->
+                <label class="ArabicH-response-label" style="font-weight:600; margin-top:15px; display:block;">تدوين ملاحظات حول الإشارات الركحية:</label>
+                <textarea class="ArabicH-response-textarea" placeholder="أمثلة من المسرحيتين..."></textarea>
+            </div>
+            
+            <!-- 2- الحوار المسرحي -->
+            <div class="ArabicH-concept-card">
+                <h3>2- الحوارُ المسرحيُّ</h3>
+                <ul class="ArabicH-subtle-list">
+                    <li>هو الكلام الذي تتبادله الشخصيات الفاعلة مباشرة.</li>
+                </ul>
+                <h4>وظائفه:</h4>
+                <ul class="ArabicH-subtle-list">
+                    <li><strong>وظيفة سردية:</strong> التّقدّمُ بالأحداث (وهي وظيفة السرد الأساسية).</li>
+                    <li><strong>وظيفة كشفية:</strong> يكشف بواطن الشّخصيّات (مواقفها، مشاعرها، أفكارها)، وهي وظيفته الأصليّة.</li>
+                    <li><strong>وظيفة وصفية:</strong> قد يساهم في توصيف الموجودات من حوله.</li>
+                </ul>
+                
+                <h4>مصطلحات خاصّة:</h4>
+                <div class="ArabicH-terminology-box">
+                    <div class="ArabicH-terminology-item">
+                        <span class="ArabicH-terminology-term">الحوار الباطني:</span>
+                        <span class="ArabicH-terminology-def">أن تُكلِّمَ شخصيّةٌ ما نفسَها بصوتٍ مسموع أو مقروء.</span>
+                    </div>
+                    <div class="ArabicH-terminology-item">
+                        <span class="ArabicH-terminology-term">المُخاطَبَة:</span>
+                        <span class="ArabicH-terminology-def">كلام الشّخصيّة الّذي يُقالُ دفعةً واحدةً.</span>
+                    </div>
+                    <div class="ArabicH-terminology-item">
+                        <span class="ArabicH-terminology-term">الطِّرَادَة:</span>
+                        <span class="ArabicH-terminology-def">مُخاطبة طويلة جدًا.</span>
+                    </div>
+                </div>
+                
+                <p><strong>خلاصة:</strong> يمكن للحوار المسرحي أنْ يُؤدّيَ وحدَه وظائفَ السّردِ والوصفِ والحوارِ والحجاجِ جميعَها، لكن الإشارات الركحية تظل داعمًا أساسيًا لفهم النص وإخراجه.</p>
+                
+                <!-- interactive area for analyzing a dialogue -->
+                <label class="ArabicH-response-label" style="font-weight:600; margin-top:15px; display:block;">حاول تحليل مقطع حواري من إحدى المسرحيتين:</label>
+                <textarea class="ArabicH-response-textarea" placeholder="اكتب تحليلك هنا..."></textarea>
+            </div>
+            
+            <!-- Extra reflective prompt (optional) -->
+            <div style="background: var(--gradient-light); border-radius: var(--border-radius); padding: 1.5rem; margin-top: 2rem; text-align: center;">
+                <p style="font-size: 1.2rem; color: var(--dark-color);">✎ فكّر: كيف تجلت تقنيات الكتابة المسرحية في المشاهد التي قرأتها؟</p>
+                <textarea class="ArabicH-response-textarea" placeholder="سجّل أفكارك..." style="background: white;"></textarea>
+            </div>
+            
+            <!-- Navigation buttons -->
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="#" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.previousLesson">الدرس السابق</a>
+                <a href="#" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.nextLesson">الدرس التالي</a>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">☺ درس تمهيدي في تقنيات المسرح ☺</p>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Translations for Literature Lesson 1
+        window.translations_ArabicHLiteratureLesson1 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                
+                "ArabicH.literatureLesson.lesson1Title": "الدرس الأول: المسرحية",
+                "ArabicH.literatureLesson.lesson1Subtitle": "المحور 4: المسرحية – من تقنيات الكتابة المسرحيّة",
+                "ArabicH.literatureLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.literatureLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.literatureLesson.previousLesson": "الدرس السابق",
+                "ArabicH.literatureLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                
+                "ArabicH.literatureLesson.lesson1Title": "Lesson 1: Theatre",
+                "ArabicH.literatureLesson.lesson1Subtitle": "Axis 4: Theatre – Techniques of Theatrical Writing",
+                "ArabicH.literatureLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.literatureLesson.backToHome": "Back to Homepage",
+                "ArabicH.literatureLesson.previousLesson": "Previous Lesson",
+                "ArabicH.literatureLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                
+                "ArabicH.literatureLesson.lesson1Title": "Leçon 1: Le Théâtre",
+                "ArabicH.literatureLesson.lesson1Subtitle": "Axe 4: Le Théâtre – Techniques d'écriture théâtrale",
+                "ArabicH.literatureLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.literatureLesson.backToHome": "Retour à l'Accueil",
+                "ArabicH.literatureLesson.previousLesson": "Leçon précédente",
+                "ArabicH.literatureLesson.nextLesson": "Leçon suivante",
+                "ArabicH.pwa.install": "Installer l'app"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHLiteratureLesson1;
+    </script>
+    
+    <!-- Include external translation and PWA scripts -->
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        // Theme toggle & active window management
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) item.classList.add('active');
+                else item.classList.remove('active');
+            });
+            
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.checked = true;
+                }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+        });
+
+        // Service worker backup
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').catch(e => console.log('SW reg failed:', e));
+            });
+        }
+        
+        // Manual install button
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            const btn = document.getElementById('manual-install-btn');
+            if (btn) btn.style.display = 'flex';
+        });
+        document.getElementById('manual-install-btn')?.addEventListener('click', async () => {
+            if (!deferredPrompt) return;
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') {
+                document.getElementById('manual-install-btn').style.display = 'none';
+                deferredPrompt = null;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -172,6 +172,29 @@
         display: inline-block;
         margin-left: 0.5rem;
     }
+
+    /* Style for inner links in the intro card */
+    .ArabicH-inner-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+    .ArabicH-inner-link {
+        background: var(--definition-bg);
+        padding: 12px 15px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: 600;
+        transition: background 0.3s, transform 0.2s;
+        border: 1px solid transparent;
+    }
+    .ArabicH-inner-link:hover {
+        background: var(--accent-color);
+        transform: scale(1.02);
+        border-color: var(--primary-color);
+    }
     
     /* Responsive styles for lessons page */
     @media (max-width: 768px) {
@@ -292,6 +315,20 @@
                     <p class="ArabicH-lesson-description" data-i18n="ArabicH.generalLessons.lesson4Desc">تعلم كيفية فهم وتحليل الموضوعات الكتابية وتفكيكها إلى عناصرها الأساسية لكتابة منظمة وواضحة</p>
                 </a>
             </div>
+
+            <!-- NEW CARD: Introduction to Modules (مدخل إلى المحاور) with two links inside -->
+            <div class="ArabicH-lesson-item" style="text-align: right;">
+                <h2 class="ArabicH-lesson-title" data-i18n="ArabicH.generalLessons.introModulesTitle">مدخل إلى المحاور</h2>
+                <p class="ArabicH-lesson-description" data-i18n="ArabicH.generalLessons.introModulesDesc">دروس تمهيدية للمحورين: المسرحية والشعر الحديث</p>
+                <div class="ArabicH-inner-links">
+                    <a href="AH_General_Lesson_Literature_lesson1.html" class="ArabicH-inner-link">
+                        <span data-i18n="ArabicH.generalLessons.theatreLink">المسرحية: تقنيات الكتابة</span>
+                    </a>
+                    <a href="AH_General_Lesson_Literature_lesson2.html" class="ArabicH-inner-link">
+                        <span data-i18n="ArabicH.generalLessons.poetryLink">الشعر الحديث: تمهيد</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </main>
     
@@ -354,6 +391,13 @@
                 "ArabicH.generalLessons.lesson3Desc": "مراجعة شاملة لأهم مفاهيم علم العروض (بحور الشعر، التفعيلات، الزحافات، العلل، القافية وأحكامها)",
                 "ArabicH.generalLessons.lesson4": "إنتاج كتابي : فهم موضوع و تفكيكه",
                 "ArabicH.generalLessons.lesson4Desc": "تعلم كيفية فهم وتحليل الموضوعات الكتابية وتفكيكها إلى عناصرها الأساسية لكتابة منظمة وواضحة",
+                "ArabicH.generalLessons.lesson5": "الدرس الأول: المسرحية",
+                "ArabicH.generalLessons.lesson5Desc": "تقنيات الكتابة المسرحية: الإشارات الركحية، الحوار المسرحي، دراسة مقارنة بين مسرحيتي 'السلطان الحائر' و'مراد الثالث'",
+                // New keys for intro card
+                "ArabicH.generalLessons.introModulesTitle": "مدخل إلى المحاور",
+                "ArabicH.generalLessons.introModulesDesc": "دروس تمهيدية للمحورين: المسرحية والشعر الحديث",
+                "ArabicH.generalLessons.theatreLink": "المسرحية: تقنيات الكتابة",
+                "ArabicH.generalLessons.poetryLink": "الشعر الحديث: تمهيد",
                 "ArabicH.pwa.install": "تثبيت التطبيق"
             },
             en: {
@@ -386,6 +430,13 @@
                 "ArabicH.generalLessons.lesson3Desc": "Comprehensive review of the most important concepts in prosody (poetic meters, rhythmic patterns, variations, defects, rhyme and its rules)",
                 "ArabicH.generalLessons.lesson4": "Written Production: Understanding and Deconstructing a Topic",
                 "ArabicH.generalLessons.lesson4Desc": "Learn how to understand and analyze written topics and deconstruct them into their basic elements for organized and clear writing",
+                "ArabicH.generalLessons.lesson5": "Lesson 1: Theatre",
+                "ArabicH.generalLessons.lesson5Desc": "Techniques of theatrical writing: stage directions, dialogue, comparative study between 'The Sultan's Dilemma' and 'Murad III'",
+                // New keys for intro card
+                "ArabicH.generalLessons.introModulesTitle": "Introduction to Modules",
+                "ArabicH.generalLessons.introModulesDesc": "Introductory lessons for the two axes: Theatre and Modern Poetry",
+                "ArabicH.generalLessons.theatreLink": "Theatre: Writing Techniques",
+                "ArabicH.generalLessons.poetryLink": "Modern Poetry: Introduction",
                 "ArabicH.pwa.install": "Install App"
             },
             fr: {
@@ -418,6 +469,13 @@
                 "ArabicH.generalLessons.lesson3Desc": "Révision complète des concepts les plus importants en prosodie (mètres poétiques, patterns rythmiques, variations, défauts, rime et ses règles)",
                 "ArabicH.generalLessons.lesson4": "Production Écrite : Comprendre et Déconstruire un Sujet",
                 "ArabicH.generalLessons.lesson4Desc": "Apprenez à comprendre et analyser les sujets écrits et à les déconstruire en leurs éléments de base pour une écriture organisée et claire",
+                "ArabicH.generalLessons.lesson5": "Leçon 1 : Le Théâtre",
+                "ArabicH.generalLessons.lesson5Desc": "Techniques d'écriture théâtrale : didascalies, dialogue, étude comparative entre 'Le Sultan perplexe' et 'Murad III'",
+                // New keys for intro card
+                "ArabicH.generalLessons.introModulesTitle": "Introduction aux Axes",
+                "ArabicH.generalLessons.introModulesDesc": "Leçons d'introduction pour les deux axes : Théâtre et Poésie Moderne",
+                "ArabicH.generalLessons.theatreLink": "Théâtre : Techniques d'écriture",
+                "ArabicH.generalLessons.poetryLink": "Poésie Moderne : Introduction",
                 "ArabicH.pwa.install": "Installer l'application"
             }
         };

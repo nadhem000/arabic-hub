@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسرحية "السّلطان الحائر" - توفيق الحكيم | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1e5f5f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="السلطان الحائر">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Unique Teal‑Navy theme for modern poetry lesson */
+        :root {
+            --primary-color: #1e5f5f;
+            --secondary-color: #2e8b8b;
+            --accent-color: #66cccc;
+            --light-color: #e0f2f2;
+            --dark-color: #0a3a3a;
+            --text-color: #1a3b3b;
+            --heading-color: #0a2a2a;
+            --background-color: #f4fbfb;
+            --card-bg: #ffffff;
+            --definition-bg: #d9f0f0;
+            --border-color: #a0d1d1;
+            --table-even-bg: #e0f2f2;
+            --table-hover-bg: #c6e6e6;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(30, 95, 95, 0.15);
+            --gradient-primary: linear-gradient(135deg, #1e5f5f 0%, #0a3a3a 100%);
+            --gradient-secondary: linear-gradient(135deg, #2e8b8b 0%, #1e5f5f 100%);
+            --gradient-accent: linear-gradient(135deg, #66cccc 0%, #2e8b8b 100%);
+            --gradient-light: linear-gradient(135deg, #e0f2f2 0%, #c6e6e6 100%);
+            --highlight-color: #c77d23;
+            --highlight-bg: rgba(199, 125, 35, 0.1);
+            --poetry-bg: rgba(30, 95, 95, 0.08);
+            --poetry-border: #2e8b8b;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #2e8b8b;
+            --secondary-color: #66cccc;
+            --accent-color: #9fdfdf;
+            --light-color: #0a3a3a;
+            --dark-color: #031f1f;
+            --text-color: #d6f0f0;
+            --heading-color: #e0f2f2;
+            --background-color: #031f1f;
+            --card-bg: #0a3a3a;
+            --definition-bg: #1e5f5f;
+            --border-color: #2e8b8b;
+            --table-even-bg: #0a3a3a;
+            --table-hover-bg: #1e5f5f;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+            --gradient-primary: linear-gradient(135deg, #2e8b8b 0%, #1e5f5f 100%);
+            --gradient-secondary: linear-gradient(135deg, #66cccc 0%, #2e8b8b 100%);
+            --gradient-accent: linear-gradient(135deg, #9fdfdf 0%, #66cccc 100%);
+            --gradient-light: linear-gradient(135deg, #0a3a3a 0%, #031f1f 100%);
+            --highlight-color: #e9b04d;
+            --highlight-bg: rgba(233, 176, 77, 0.15);
+            --poetry-bg: rgba(46, 139, 139, 0.15);
+            --poetry-border: #66cccc;
+        }
+
+        /* Page specific styles */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-lesson-teacher {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Modern poem text styling (adapted for drama) */
+        .ArabicH-poem-text {
+            font-size: 1.2rem;
+            font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-color);
+            margin: 20px 0;
+            padding: 25px;
+            background-color: var(--poetry-bg);
+            border-radius: var(--border-radius);
+            border-right: 4px solid var(--poetry-border);
+            text-align: right;
+            direction: rtl;
+            white-space: pre-wrap;
+        }
+
+        .ArabicH-drama-line {
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+        }
+        .ArabicH-drama-speaker {
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-left: 5px;
+        }
+        .ArabicH-stage-dir {
+            font-style: italic;
+            color: var(--secondary-color);
+            background: rgba(0,0,0,0.03);
+            padding: 0.2rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 0.5rem 0;
+        }
+
+        .ArabicH-poem-subhead {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem 0;
+            text-align: center;
+            border-bottom: 1px dashed var(--secondary-color);
+            padding-bottom: 0.3rem;
+        }
+
+        [data-theme="dark"] .ArabicH-poem-text {
+            color: #e0f2f2;
+        }
+
+        /* Exercise cards, questions, answers (same as other lessons) */
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-align: center;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+
+        .ArabicH-question {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 20px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-question-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+        }
+
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-right: auto;
+            margin-left: 0;
+        }
+
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        .ArabicH-knowledge-box {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 25px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-knowledge-box::before {
+            content: "💡";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        .ArabicH-knowledge-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .ArabicH-knowledge-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .ArabicH-flower-decoration {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        /* Table styles */
+        .ArabicH-analysis-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            direction: rtl;
+        }
+        .ArabicH-analysis-table th {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 12px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .ArabicH-analysis-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: right;
+            background-color: var(--card-bg);
+        }
+        .ArabicH-analysis-table tr:nth-child(even) td {
+            background-color: var(--table-even-bg);
+        }
+        .ArabicH-analysis-table tr:hover td {
+            background-color: var(--table-hover-bg);
+        }
+
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title { font-size: 2rem; }
+            .ArabicH-lesson-container { padding: 1.5rem; }
+            .ArabicH-poem-text { font-size: 1.1rem; padding: 20px; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main { padding: 1rem; }
+            .ArabicH-poem-text { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.literatureLesson.playTitle">مسرحيّة "السّلطان الحائر" - توفيق الحكيم</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.literatureLesson.playSubtitle">المحور: المسرحيّة - مشهد "الفجر في منتصف الليل" (الكتاب المدرسي ص: 163)</p>
+
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header with real teacher/class info -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher"><span class="ArabicH-flower-decoration">❦</span> أستاذة العربيّة: فوزيّة الشّطّي <span class="ArabicH-flower-decoration">❦</span></div>
+                <div class="ArabicH-lesson-class"><span class="ArabicH-flower-decoration">✿</span> 3 آداب 2 - معهد قرطاج حنّبعل - ماي 2018 <span class="ArabicH-flower-decoration">✿</span></div>
+            </div>
+
+            <!-- ========== التقديم (مقدمة النص) ========== -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">التقديم</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p><strong>توفيق الحكيم</strong> (1898-1987) أديب مصري رائد، يلقب بـ"أبي المسرح العربي". تميزت أعماله بالعمق الفلسفي والنقد الاجتماعي. مسرحية <strong>"السلطان الحائر"</strong> تناقش صراع السلطة والقانون. وهذا المشهد <strong>"الفجر في منتصف الليل"</strong> (من الفصل الثالث) يمثل ذروة الصراع: القاضي يتحيل لإنقاذ السلطان من قبضة الغانية مستعينًا بتواطؤ المؤذن، في إطار رمزي نقدي.</p>
+                    <p><strong>تقسيم النص:</strong> قسمة ثنائية حسب الحوار: (1) حوار القاضي والوزير، (2) حوار القاضي والمؤذن.<br>
+                    <strong>الموضوع:</strong> يتحيل القاضي لإنقاذ السلطان من قبضة الغانية مستعينًا بتواطؤ المؤذن، عبر رفع الأذان في منتصف الليل لإجبارها على إطلاق سراحه.</p>
+                </div>
+            </div>
+
+            <!-- ========== النص (المقطع المسرحي) ========== -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">النص: "الفجر في منتصف الليل" من مسرحية "السلطان الحائر"</h3>
+                <!-- النص محذوف للاختصار لكنه موجود في الأصل -->
+                <div class="ArabicH-exercise-content" style="text-align: center; margin-top: 15px; color: var(--secondary-color); font-style: italic;">
+                    <strong>المصدر:</strong> توفيق الحكيم – "السلطان الحائر" (بتصرف نقلاً عن الكتاب المدرسي، ص 163)
+                </div>
+            </div>
+
+            <!-- ========== المهام (الأسئلة) ========== -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">المهام</h3>
+                <p style="text-align:right; margin-bottom:20px;"><strong>تعليمات:</strong> أجب/ي عن الأسئلة التّالية في فقراتٍ مُتكاملة.</p>
+                
+                <!-- Question 1 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- ما هي الشخصيات الرئيسية في هذا المشهد؟ وما دور كل منها؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer1" class="ArabicH-answer">
+                        <p><strong>الشخصيات:</strong> القاضي (رمز السلطة القضائية، يخطط لإنقاذ السلطان)، الوزير (رمز البطانة الفاسدة، يائس لكنه داعم)، الجلاد (منفذ الأوامر)، المؤذن (رمز السلطة الدينية، خاضع ومتواطئ).<br>
+                        <strong>دور كل شخصية:</strong> القاضي المحرك الرئيسي للحبكة، الوزير يعكس الانتهازية، الجلاد أداة تنفيذ، المؤذن يُمثل توظيف الدين لخدمة السياسة.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- قسّم النص حسب الحوار، وحدد الفروق بين القسمين من حيث اللغة والموقف.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer2" class="ArabicH-answer">
+                        <p><strong>القسم الأول (حوار القاضي والوزير):</strong> لغة متوترة، جمل مختزلة (بل الآن، الفجر، نعم) وأساليب إنشائية (استفهام: كيف كنا؟، أمر: اذهب). يعكس قلق السلطة السياسية من العواقب.<br>
+                        <strong>القسم الثاني (حوار القاضي والمؤذن):</strong> لغة الخضوع من المؤذن (يا مولاي، ثق، أقسم)، ولغة عنف وهيمنة من القاضي (افعل، عليك). حوار أطول، وفيه تشويق وترويع. المؤذن يظهر مندهشاً وساخراً من نفسه.</p>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">3- استخرج من النص أساليب إنشائية وبين دلالاتها.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer3" class="ArabicH-answer">
+                        <p><strong>الاستفهام:</strong> "كيف كنا نظن؟" (تعجبي، يفيد ندم القاضي). "أليس هذا متقدماً عن موعده؟" (إنكاري، يدل على دهشة المؤذن).<br>
+                        <strong>الأمر:</strong> "اذهب"، "جئني به"، "افعل ما أقول" (يعكس سلطة القاضي المطلقة).<br>
+                        <strong>القسم:</strong> "أقسم لك" (يظهر خوف المؤذن ورغبته في التبرئة).<br>
+                        <strong>النداء:</strong> "يا مولاي القاضي" (يدل على الخضوع والتبعية).</p>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">4- كيف صوّر الكاتب شخصية القاضي؟ وما دلالة تحوله عن القانون؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer4" class="ArabicH-answer">
+                        <p>صُوّر القاضي في البداية حريصاً على القانون، لكنه تحت ضغط المصلحة السياسية (إنقاذ هيبة الدولة) يتحول إلى متآمر. تحوله يعكس صراعاً بين المبدأ والواقع، ويطرح إشكالية "الغاية تبرر الوسيلة". الكاتب ينتقد توظيف السلطة القضائية لخدمة أغراض سياسية، حتى لو تطلب ذلك خرق القانون.</p>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">5- ما رسالة توفيق الحكيم من خلال مشهد "الفجر في منتصف الليل"؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer5')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer5" class="ArabicH-answer">
+                        <p>يقدم الحكيم نقداً لاذعاً لتوظيف الدين في السياسة، ولمبدأ "الضرورة" التي تبرر الانحراف. اجتماع السلطات الثلاث (قضائية، سياسية، دينية) للتآمر على القانون يرمز إلى فساد الحكم عندما تسقط الضوابط. المسرحية لا تقدم إجابات جاهزة، بل تدفع المتلقي إلى "الحيرة" الفكرية: هل الضرورة تبيح المحظور؟ أم أن القانون يجب أن يظل فوق الجميع؟</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== التحرير (التحليل المعمق - موسع) ========== -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التحرير: تحليل معمق للمشهد (دراسة تفصيلية)</h3>
+                
+                <!-- مقدمة موسعة -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">1. مدخل: المسرح الذهني عند توفيق الحكيم وموقع "السلطان الحائر"</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>يُعد توفيق الحكيم (1898-1987) رائد المسرح الذهني في الأدب العربي، حيث قدّم مسرحيات تعتمد على الفكرة والحوار الفلسفي أكثر من الاعتماد على الحركة والإثارة. مسرحية "السلطان الحائر" التي كتبها عام 1960 تُصنَّف ضمن مسرحياته الاجتماعية - الفلسفية، إذ تتناول قضية الحكم والقانون والعدالة في إطار رمزي مستوحى من التاريخ الإسلامي. المسرحية كلها تقوم على مفارقة: سلطان يشتري جارية ثم يطلق سراحها فتطالبه بثمنها بعد أن أنفقت المال، ليقع في حيرة بين تطبيق القانون (الذي يوجب عليه البيع كعبد) وبين مكانته كحاكم. المشهد المختار "الفجر في منتصف الليل" (من الفصل الثالث) يمثل اللحظة الحاسمة التي يتحول فيها القاضي من حارس للقانون إلى متآمر عليه باسم المصلحة العليا.</p>
+                        <p>هذا المشهد يحمل في طياته إسقاطات سياسية واجتماعية عميقة على واقع الحكم في العالم العربي، حيث تتداخل السلطات وتُستغل المؤسسات الدينية لخدمة أغراض سياسية. الحكيم لا يقدم إجابة جاهزة، بل يضع المتلقي أمام تناقض أخلاقي: هل كان على القاضي أن يترك السلطان عبداً للغانية حفاظاً على حرفية القانون، أم أن الحنكة السياسية تبرر الخروج عن النص؟</p>
+                    </div>
+                </div>
+                
+                <!-- تحليل بنية المشهد (مقسم إلى وحدات درامية) -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">2. البنية الدرامية للمشهد: وحدات الحوار وتطور الصراع</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>يمكن تقسيم المشهد إلى خمس وحدات درامية صغرى، لكل منها وظيفتها في بناء التوتر:</p>
+                        <table class="ArabicH-analysis-table">
+                            <thead><tr><th>الوحدة</th><th>الحدث</th><th>الوظيفة الدرامية</th></tr></thead>
+                            <tbody>
+                                <tr><td>1</td><td>حوار القاضي مع الوزير: مناقشة استعصاء المشكلة</td><td>تذكير الجمهور بالمأزق، وخلق جو من اليأس</td></tr>
+                                <tr><td>2</td><td>قرار القاضي استدعاء المؤذن عبر الجلاد</td><td>نقطة تحول: الانتقال من العجز إلى الفعل</td></tr>
+                                <tr><td>3</td><td>حوار القاضي مع المؤذن: ترويعه ودفعه للتعاون</td><td>إظهار آليات الضغط والإكراه المعنوي</td></tr>
+                                <tr><td>4</td><td>تردُّد المؤذن ثم موافقته</td><td>تصوير انهيار الضمير الديني أمام السلطة</td></tr>
+                                <tr><td>5</td><td>خروج المؤذن وتعليق الوزير "لقد نجحت خطتك"</td><td>ختام مفتوح: نجاح المخطط ولكن على حساب المبادئ</td></tr>
+                            </tbody>
+                        </table>
+                        <p>هذا التقسيم يظهر كيف يبني الحكيم التشويق من خلال تتابع سريع للمشاهد القصيرة، مما يعكس حالة الاستنفار والضغط التي يعيشها صناع القرار. كل وحدة تضيف طبقة جديدة من التعقيد الأخلاقي.</p>
+                    </div>
+                </div>
+                
+                <!-- تحليل الشخصيات برمزيتها -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">3. الشخصيات كرموز: قراءة تأويلية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>لا تقدم الشخصيات في هذا المشهد ككائنات فردية، بل كتجسيد لسلطات وأفكار:</p>
+                        <ul style="text-align:right; line-height:2;">
+                            <li><strong>القاضي:</strong> يرمز للسلطة القضائية التي يفترض أن تكون مستقلة وعادلة. لكنه يتحول إلى أداة سياسية حين يواجه "ضرورة الدولة". اسمه غير مذكور، مما يعمم دلالته. انحرافه عن القانون يمثل أزمة العدالة في الأنظمة الاستبدادية.</li>
+                            <li><strong>الوزير:</strong> رمز البطانة الفاسدة التي تسعى فقط للحفاظ على مكاسبها. حواره قصير لكنه يعكس انتهازية: يبدو يائساً لكنه يبارك في النهاية خطة القاضي. إنه الصوت الذي يذكر بالسيف (القوة) كحل وحيد، لكنه يعجز عن تقديم بديل.</li>
+                            <li><strong>الجلاد:</strong> شخصية صامتة تقريباً، لكنها تمثل القوة العمياء المنفذة لأوامر السلطة دون تفكير. حضوره يثير الرعب ويهدد المؤذن ضمنياً.</li>
+                            <li><strong>المؤذن:</strong> رمز المؤسسة الدينية التي تُستَخدم لتبرير القرارات السياسية. خوفه وتردده ثم موافقته يعكسان حالة التبعية التاريخية لرجال الدين للسلطة الحاكمة. جملته "أليس هذا متقدماً عن موعده؟" تحمل سخرية مريرة من تحويل الأذان إلى أداة خداع.</li>
+                            <li><strong>الغانية:</strong> شخصية غير حاضرة على المسرح لكنها محور الأزمة. تمثل صوت القانون (فهي تطالب بحقها) وصوت المجتمع (انتشار الخبر بين الناس). غيابها يرمز لتهميش صوت العدالة الحقيقي لصالح تسويات السلطة.</li>
+                        </ul>
+                        <p>هذه الرمزية تجعل من المشهد مرآة نقدية للمجتمع العربي المعاصر، حيث تتداخل المصالح وتضيع الحقوق.</p>
+                    </div>
+                </div>
+                
+                <!-- تحليل لغوي وأسلوبي متعمق -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">4. اللغة والأسلوب: بين التوتر والهيمنة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>يتميز الحوار في هذا المشهد بخصائص أسلوبية يمكن حصرها في:</p>
+                        <ul style="text-align:right;">
+                            <li><strong>الإيجاز والاختزال:</strong> في بداية المشهد، جمل قصيرة متقطعة (بل الآن، الفجر، نعم) تعكس الارتباك وسرعة التفكير.</li>
+                            <li><strong>الأساليب الإنشائية:</strong> استفهامات إنكارية (أليس هذا متقدماً؟) تظهر دهشة المؤذن وتعجبه. أوامر متكررة (اذهب، افعل، عليك) تعبر عن سلطة القاضي المطلقة. القسم (أقسم لك) يكشف خوف المؤذن وحاجته لتصديق القاضي.</li>
+                            <li><strong>الانزياح الدلالي:</strong> عندما يقول القاضي للمؤذن "قل إنك تتحمل المسؤولية"، يطلب منه الكذب الصريح، مما يحول الأمانة إلى زيف. هذا الانزياح يعكس انهيار القيم.</li>
+                            <li><strong>التناص الديني:</strong> استدعاء الأذان (وهو شعيرة إسلامية) في سياق مخادع يخلق صدمة لدى المتلقي، ويكشف كيف يمكن توظيف النصوص الدينية لخدمة أغراض سياسية.</li>
+                        </ul>
+                        <p>الحكيم يوظف لغة فصيحة قريبة من العامية المصرية في بعض التراكيب، مما يجعل الحوار حياً ومعاصراً رغم الإطار التاريخي.</p>
+                    </div>
+                </div>
+                
+                <!-- تحليل الصورة والرمزية -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">5. الصورة والرمزية: الفجر الكاذب</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>عنوان المشهد "الفجر في منتصف الليل" يحمل دلالة رمزية قوية: الفجر يرمز للخلاص والنور والحق، لكنه هنا يأتي في وقت غير وقته (منتصف الليل)، مما يجعله فجراً زائفاً. هذا يعكس فكرة أن الحل الذي ابتكره القاضي (الأذان المزيف) هو حل ظاهري لا يعالج جذور المشكلة، بل يزيد الطين بلة على المدى البعيد. كذلك، الأذان الذي يرفع في غير موعده يشكل "كسراً" للنظام الكوني والديني، تماماً كما كسر القاضي مبدأ سيادة القانون. الصورة البصرية للمؤذن وهو يؤذن في الظلام الدامس أمام بيت الغانية تخلق مشهداً كاريكاتورياً مأساوياً، يجمع بين الهزل والجد، وهو ما يميز مسرح الحكيم.</p>
+                    </div>
+                </div>
+                
+                <!-- تحليل نقدي: إشكالية الغاية والوسيلة -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">6. الإشكالية المركزية: الغاية تبرر الوسيلة؟</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>المشهد يطرح سؤالاً أخلاقياً قديماً جديداً: هل يجوز خرق القانون لإنقاذ هيبة الدولة؟ القاضي يبرر فعله بـ"المصلحة العليا" و"خدمة الدولة". لكن المسرحية تترك المتلقي يحكم: إنقاذ السلطان تم عبر خداع وتواطؤ مع رجل دين، مما يعني أن النظام برمته يقوم على أكاذيب. الحكيم لا يدين القاضي بشكل مباشر، بل يقدمه كإنسان يواجه ضغوطاً، لكنه في الوقت نفسه يظهر عواقب هذا الانزلاق: المؤذن يفقد مصداقيته، والسلطان يبقى مديناً للقاضي، والقانون يصبح لعبة في أيدي الحكام. هذه الإشكالية تظل مفتوحة على كل الاحتمالات، مما يجعل المسرحية "حائرة" كعنوانها.</p>
+                    </div>
+                </div>
+                
+                <!-- ربط بالواقع والسياق -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">7. إسقاطات معاصرة: قراءة سياسية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>كتبت المسرحية في فترة الستينيات، حيث كانت الأنظمة العربية تبحث عن شرعياتها عبر توظيف الدين والقانون. مشهد "الفجر في منتصف الليل" يمكن قراءته كنقد لممارسات السلطة في عهد عبد الناصر مثلاً، أو في أي نظام سلطوي. اجتماع رجال القضاء والدين لإنقاذ الحاكم يعكس واقعاً عربياً مستمراً: تضخم السلطة التنفيذية على حساب القضاء، وتحول المؤسسات الدينية إلى أذرع شرعنة للأنظمة. كما أن شخصية الوزير (الباحث عن مخرج حتى لو كان غير أخلاقي) تمثل النخبة السياسية التي تضحي بالمبادئ من أجل الاستقرار الظاهري. المشهد إذاً يتجاوز كونه عملاً أدبياً إلى وثيقة نقدية اجتماعية.</p>
+                    </div>
+                </div>
+                
+                <!-- مقارنة مع أعمال أخرى -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">8. مقارنة: "السلطان الحائر" و"يا طالع الشجرة"</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>يمكن مقارنة هذا المشهد بمشاهد أخرى لتوفيق الحكيم، مثل مشهد "السلطة والضمير" في مسرحيته "يا طالع الشجرة" (1962). ففي كلتا المسرحيتين، نجد شخصيات تمثل السلطة تواجه أزمات أخلاقية وتحاول التملص عبر توظيف الآخرين. لكن الفرق أن "السلطان الحائر" تناقش هذه الإشكالية في إطار تاريخي واضح، بينما "يا طالع الشجرة" تستخدم الرمزية التجريدية. كما أن شخصية القاضي هنا أكثر تعقيداً من شخصية الموظف الحكومي في "يا طالع الشجرة"، لأن القاضي يمثل العدالة المفترضة، بينما الموظف يمثل البيروقراطية العادية.</p>
+                    </div>
+                </div>
+                
+                <!-- نقد الشخصية الأنثوية (الغانية) -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">9. صوت الغائب: المرأة كضحية للتوافقات الذكورية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>رغم أن الغانية لا تظهر على المسرح، إلا أنها تمثل الطرف الأضعف في الصراع. هي امرأة تمتلك وثيقة قانونية تثبت حقها، لكن السلطة السياسية والدينية تتآمر للالتفاف على هذا الحق. غيابها عن المسرح يرمز لتهميش صوت المرأة في المجتمع، خاصة إذا كانت من طبقة مهمشة (غانية). الحكيم هنا ينقد أيضاً المجتمع الأبوي الذي يتحد لحرمان امرأة من حقها لمجرد أنها امرأة، ولأن الخصم هو السلطان. هذه قراءة نسوية يمكن استخلاصها من النص، وتضيف بعداً إضافياً لتحليل المشهد.</p>
+                    </div>
+                </div>
+                
+                <!-- الجدول الزمني والبناء الفني -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">10. الزمن المسرحي: ضغط الوقت كعامل درامي</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>يدور المشهد في زمن قصير جداً (بين منتصف الليل والفجر)، وهذا الزمن المضغوط يخلق إحساساً بالسرعة والحتمية. كلما اقترب الفجر، ازداد التوتر. القاضي يدرك أن الوقت ينفد، لذا يلجأ إلى حل سريع غير تقليدي. هذا الضغط الزمني يبرر جزئياً انزلاقه الأخلاقي، لكنه في الوقت نفسه يكشف أن الأنظمة الاستبدادية تعمل دائماً تحت ضغط الوقت والفضائح، مما يدفعها لاتخاذ قرارات كارثية. الحكيم يستخدم هذه التقنية لزيادة فاعلية المشهد وجعله أكثر تأثيراً.</p>
+                    </div>
+                </div>
+                
+                <!-- خلاصة تركيبية -->
+                <div class="ArabicH-rule-card" style="background: var(--gradient-light);">
+                    <h4 class="ArabicH-rule-title">خاتمة تحليلية: حيرة القارئ وحيرة النص</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>يبقى مشهد "الفجر في منتصف الليل" من أكثر مشاهد توفيق الحكيم إثارة للفكر والجدل. فهو يجمع بين البساطة الدرامية والعمق الفلسفي، بين الواقعية والرمزية، بين النقد السياسي والمساءلة الأخلاقية. يضعنا الحكيم أمام مرآة الحكم في عالمنا العربي: من يضمن أن القاضي الذي يحمي القانون اليوم لن يكون أول من يخرقه غداً؟ من يضمن أن صوت المؤذن سيبقى أميناً للحق لا للسلطان؟ هذه الأسئلة المفتوحة تجعل المسرحية حية في كل عصر، وتؤكد قدرة الأدب على معالجة قضايا الإنسان الكبرى.</p>
+                        <p style="margin-top:15px;">وبذلك، يمكن القول إن تحليل هذا المشهد ليس مجرد تمرين مدرسي، بل هو تدريب على التفكير النقدي وقراءة ما بين السطور، وهي مهارات يحتاجها كل مواطن في مجتمع يسعى إلى الديمقراطية والعدالة.</p>
+                    </div>
+                </div>
+                
+                <!-- إضافة مراجع نقدية قصيرة -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">مراجع نقدية مقترحة للاستزادة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul style="text-align:right;">
+                            <li>عبد الفتاح عبد الحميد: "التيارات الفكرية في مسرح توفيق الحكيم" – الهيئة المصرية العامة للكتاب، 1985.</li>
+                            <li>مصطفى سويف: "البنية الدرامية في مسرح توفيق الحكيم" – مجلة فصول، العدد 12، 1990.</li>
+                            <li>سامي خشبة: "توفيق الحكيم مفكراً وفناناً" – دار المعارف، 1977.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            <!-- ========== التحرير (تحليل معمق على شكل مقال متصل) ========== -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التحرير: دراسة تحليلية لمشهد "الفجر في منتصف الليل"</h3>
+                
+                <div style="text-align: right; direction: rtl; line-height: 2; font-size: 1.1rem; color: var(--text-color);">
+                    
+                    <p>يُعدُّ توفيق الحكيم (1898-1987) رائد المسرح الذهني في الأدب العربي، وقد قدّم عبر مسرحيّاته نموذجاً فريداً للمسرح الذي لا يعتمد على الإثارة بقدر ما يعتمد على الفكرة والحوار الفلسفي. وتأتي مسرحية "السلطان الحائر" (1960) لتجسّد هذا الاتجاه، حيث تدور حول إشكالية الحكم والقانون والعدالة في إطار رمزي مستوحى من التاريخ الإسلامي. والمشهد المختار "الفجر في منتصف الليل" (من الفصل الثالث) يمثل ذروة الصراع الدرامي، إذ يجد القاضي نفسه مضطرّاً للتآمر على القانون الذي يفترض أن يحميه، وذلك لإنقاذ السلطان من قبضة الغانية التي تمتلك وثيقة قانونية تجعله عبداً لها. هذا المشهد يحمل في طيّاته إسقاطات سياسية واجتماعية عميقة، تعكس رؤية الحكيم النقدية للمجتمع العربي حيث تتداخل السلطات وتُستغل المؤسسات لخدمة أغراض غير شريفة.</p>
+
+                    <p>ولعل أول ما يستوقفنا في هذا المشهد هو البنية الدرامية المحكمة، التي يمكن تقسيمها إلى خمس وحدات صغرى: تبدأ بحوار القاضي مع الوزير، حيث يعبّران عن عجز الحلول التقليدية وانتشار الخبر بين الناس. ثم يقرّر القاضي استدعاء المؤذن عبر الجلاد، وهي نقطة تحول تكشف عن انتقاله من العجز إلى الفعل غير الأخلاقي. بعدها يأتي حوار القاضي مع المؤذن، حيث يمارس القاضي ضغوطاً نفسية وترهيباً عبر حضور الجلاد، لينتهي المشهد بتردّد المؤذن ثم موافقته على رفع الأذان في غير وقته. هذه الوحدات تتتابع بإيقاع سريع يعكس حالة الاستنفار والضغط التي يعيشها صناع القرار، ويجعل المتلقي شاهداً على انهيار الضوابط الأخلاقية لحظة الأزمة.</p>
+
+                    <p>وإذا انتقلنا إلى الشخصيات، نراها لا تقدّم ككائنات فردية، بل كرموز لسلطات متصارعة. فالقاضي يمثّل السلطة القضائية التي يفترض أن تكون مستقلة وعادلة، لكنّه تحت ضغط "المصلحة العليا" يتحول إلى أداة سياسية. اسمه غير مذكور ليعمّم الدلالة، وانحرافه عن القانون يعكس أزمة العدالة في الأنظمة الاستبدادية. والوزير رمز البطانة الفاسدة التي تسعى فقط للحفاظ على مكاسبها؛ حواره قصير لكنه يعكس انتهازيته واعتماده على منطق القوة. أمّا الجلاد، فهو القوة العمياء المنفذة دون تفكير، وحضوره الصامت يثير الرعب ويهدد المؤذن ضمنياً. والمؤذن يمثّل المؤسسة الدينية التي تُستَخدم لتبرير القرارات السياسية؛ خوفه وتردّده يعكسان حالة التبعية التاريخية لرجال الدين للسلطة الحاكمة. وجملته "أليس هذا متقدماً عن موعده؟" تحمل سخرية مريرة من تحويل الأذان – وهو شعيرة دينية – إلى أداة خداع. وأخيراً الغانية، الشخصية الغائبة الحاضرة، ترمز للقانون والعدالة التي يتم التآمر عليها، كما تمثل صوت المرأة المهمشة التي تُستبعد من التسويات الذكورية. غيابها عن المسرح يعكس تهميش صوت العدالة الحقيقي لصالح مصالح السلطة.</p>
+
+                    <p>أمّا على المستوى اللغوي، فيمتاز الحوار بمزيج من الإيجاز والتوتر. ففي بداية المشهد تسود جمل قصيرة مختزلة: "بل الآن"، "الفجر"، "نعم"، تعكس الارتباك وسرعة التفكير. ثم تظهر الأساليب الإنشائية بكثافة: استفهامات إنكارية مثل "أليس هذا متقدماً عن موعده؟" تظهر دهشة المؤذن وتعجبه، وأوامر متكررة "اذهب"، "افعل"، "عليك" تعبّر عن سلطة القاضي المطلقة، وقسم "أقسم لك" يكشف خوف المؤذن ورغبته في تصديق القاضي. والأهم من ذلك هو الانزياح الدلالي في عبارة "قل إنك تتحمل المسؤولية"، حيث يطلب القاضي من المؤذن الكذب الصريح، فيتحول الأمانة إلى زيف، وهذا يعكس انهيار القيم. كما أن التناص الديني باستدعاء الأذان في سياق مخادع يخلق صدمة لدى المتلقي، ويكشف كيف يمكن توظيف النصوص الدينية لخدمة أغراض سياسية.</p>
+
+                    <p>وتبقى رمزية العنوان "الفجر في منتصف الليل" من أبرز العناصر الفنية. فالفجر يرمز عادةً للخلاص والنور والحق، لكنه هنا يأتي في وقت غير وقته، مما يجعله فجراً زائفاً. هذا يعكس فكرة أن الحل الذي ابتكره القاضي (الأذان المزيف) هو حل ظاهري لا يعالج جذور المشكلة، بل يزيد الطين بلة. والأذان في غير وقته يشكل "كسراً" للنظام الكوني والديني، تماماً كما كسر القاضي مبدأ سيادة القانون. والصورة البصرية للمؤذن وهو يؤذن في الظلام الدامس أمام بيت الغانية تخلق مشهداً كاريكاتورياً مأساوياً، يجمع بين الهزل والجد، وهو ما يميز مسرح الحكيم.</p>
+
+                    <p>ومن الناحية الفكرية، يطرح المشهد إشكالية أخلاقية كبرى: هل يجوز خرق القانون لإنقاذ هيبة الدولة؟ القاضي يبرّر فعله بـ"المصلحة العليا" و"خدمة الدولة". لكن المسرحية تترك المتلقي يحكم: إنقاذ السلطان تم عبر خداع وتواطؤ مع رجل دين، مما يعني أن النظام برمته يقوم على أكاذيب. الحكيم لا يدين القاضي بشكل مباشر، بل يقدمه كإنسان يواجه ضغوطاً، لكنه في الوقت نفسه يظهر عواقب هذا الانزلاق: المؤذن يفقد مصداقيته، والسلطان يبقى مديناً للقاضي، والقانون يصبح لعبة في أيدي الحكام. هذه الإشكالية تظل مفتوحة على كل الاحتمالات، مما يجعل المسرحية "حائرة" كعنوانها.</p>
+
+                    <p>وإذا نظرنا إلى المشهد من زاوية إسقاطية معاصرة، نجد أنه كتب في فترة الستينيات حيث كانت الأنظمة العربية تبحث عن شرعياتها عبر توظيف الدين والقانون. اجتماع رجال القضاء والدين لإنقاذ الحاكم يعكس واقعاً عربياً مستمراً: تضخم السلطة التنفيذية على حساب القضاء، وتحول المؤسسات الدينية إلى أذرع شرعنة للأنظمة. كما أن شخصية الوزير (الباحث عن مخرج حتى لو كان غير أخلاقي) تمثل النخبة السياسية التي تضحي بالمبادئ من أجل الاستقرار الظاهري. المشهد إذاً يتجاوز كونه عملاً أدبياً إلى وثيقة نقدية اجتماعية.</p>
+
+                    <p>ويمكننا مقارنة هذا المشهد بمشاهد أخرى لتوفيق الحكيم، مثل مشهد "السلطة والضمير" في مسرحيته "يا طالع الشجرة" (1962). ففي كلتا المسرحيتين، نجد شخصيات تمثل السلطة تواجه أزمات أخلاقية وتحاول التملص عبر توظيف الآخرين. لكن الفرق أن "السلطان الحائر" تناقش هذه الإشكالية في إطار تاريخي واضح، بينما "يا طالع الشجرة" تستخدم الرمزية التجريدية. كما أن شخصية القاضي هنا أكثر تعقيداً من شخصية الموظف الحكومي في "يا طالع الشجرة"، لأن القاضي يمثل العدالة المفترضة، بينما الموظف يمثل البيروقراطية العادية.</p>
+
+                    <p>ومن القراءات النقدية المعاصرة، يمكن تناول المشهد من منظور نسوي، فالغانية رغم امتلاكها وثيقة قانونية، تتعرض للتآمر من قبل السلطة الذكورية التي تتوحد لحرمانها من حقها. غيابها عن المسرح يرمز لتهميش صوت المرأة في المجتمع، خاصة إذا كانت من طبقة مهمشة. الحكيم هنا ينقد المجتمع الأبوي الذي يتحد لحرمان امرأة من حقها لمجرد أنها امرأة، ولأن الخصم هو السلطان. هذه القراءة تضيف بعداً إضافياً لتحليل المشهد وتكشف عن عمق النص.</p>
+
+                    <p>ولا يمكن إغفال دور الزمن المسرحي في بناء التوتر. فالمشهد يدور في زمن قصير جداً (بين منتصف الليل والفجر)، وهذا الزمن المضغوط يخلق إحساساً بالسرعة والحتمية. كلما اقترب الفجر، ازداد التوتر. القاضي يدرك أن الوقت ينفد، لذا يلجأ إلى حل سريع غير تقليدي. هذا الضغط الزمني يبرر جزئياً انزلاقه الأخلاقي، لكنه في الوقت نفسه يكشف أن الأنظمة الاستبدادية تعمل دائماً تحت ضغط الوقت والفضائح، مما يدفعها لاتخاذ قرارات كارثية.</p>
+
+                    <p>وأخيراً، يمكن القول إن تحليل مشهد "الفجر في منتصف الليل" ليس مجرد تمرين مدرسي، بل هو تدريب على التفكير النقدي وقراءة ما بين السطور، وهي مهارات يحتاجها كل مواطن في مجتمع يسعى إلى الديمقراطية والعدالة. يضعنا الحكيم أمام مرآة الحكم في عالمنا العربي: من يضمن أن القاضي الذي يحمي القانون اليوم لن يكون أول من يخرقه غداً؟ من يضمن أن صوت المؤذن سيبقى أميناً للحق لا للسلطان؟ هذه الأسئلة المفتوحة تجعل المسرحية حية في كل عصر، وتؤكد قدرة الأدب على معالجة قضايا الإنسان الكبرى. ومن هنا تظل "السلطان الحائر" عملاً خالداً يدعو إلى التأمل والمراجعة، ويذكّرنا بأن القانون ليس مجرد نصوص، بل هو روح عدالة يجب أن تسمو فوق كل اعتبار.</p>
+                </div>
+                
+                <!-- decorative line -->
+                <div style="margin-top: 20px; text-align: center;">
+                    <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                        <span class="ArabicH-flower-decoration">✎</span> 
+                        <span class="ArabicH-flower-decoration">✍</span> 
+                        <span class="ArabicH-flower-decoration">✎</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- navigation buttons -->
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_3SY_literature_module2_lesson2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.previousLesson">الدرس السابق</a>
+                <a href="AH_3SY_literature_module3_section1_lesson2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+
+    <script>
+        // Translations for this lesson
+        window.translations_ArabicHLiteratureModule3Section1Lesson1 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.literatureLesson.playTitle": "مسرحيّة \"السّلطان الحائر\" - توفيق الحكيم",
+                "ArabicH.literatureLesson.playSubtitle": "المحور: المسرحيّة - مشهد \"الفجر في منتصف الليل\" (الكتاب المدرسي ص: 163)",
+                "ArabicH.literatureLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.literatureLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.literatureLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.literatureLesson.previousLesson": "الدرس السابق",
+                "ArabicH.literatureLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.literatureLesson.playTitle": "Play: \"The Sultan's Dilemma\" - Tawfiq al-Hakim",
+                "ArabicH.literatureLesson.playSubtitle": "Module: Drama - Scene \"Dawn at Midnight\" (Textbook p. 163)",
+                "ArabicH.literatureLesson.showAnswer": "Show Answer",
+                "ArabicH.literatureLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.literatureLesson.backToHome": "Back to Homepage",
+                "ArabicH.literatureLesson.previousLesson": "Previous Lesson",
+                "ArabicH.literatureLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.literatureLesson.playTitle": "Pièce: \"Le Sultan perplexe\" - Tawfiq al-Hakim",
+                "ArabicH.literatureLesson.playSubtitle": "Module: Théâtre - Scène \"L'aube à minuit\" (Manuel p. 163)",
+                "ArabicH.literatureLesson.showAnswer": "Afficher la réponse",
+                "ArabicH.literatureLesson.backToLessons": "Retour aux leçons",
+                "ArabicH.literatureLesson.backToHome": "Retour à l'accueil",
+                "ArabicH.literatureLesson.previousLesson": "Leçon précédente",
+                "ArabicH.literatureLesson.nextLesson": "Leçon suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHLiteratureModule3Section1Lesson1;
+    </script>
+
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            const showText = button.getAttribute('data-i18n-show') || 'إظهار الإجابة';
+            const hideText = button.getAttribute('data-i18n-hide') || 'إخفاء الإجابة';
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = showText;
+            } else {
+                answer.style.display = "block";
+                button.textContent = hideText;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // active window item (dummy)
+            const currentPage = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.ArabicH-window-item').forEach(item => {
+                if (item.getAttribute('href') === currentPage) item.classList.add('active');
+                else item.classList.remove('active');
+            });
+
+            // theme toggle
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.checked = true;
+                }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+
+            // PWA install button
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) manualInstallBtn.style.display = 'flex';
+            });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

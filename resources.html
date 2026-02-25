@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic Hub Education - موارد</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1a936f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Arabic Hub Education">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Resources page specific styles - matching Arabic Hub color palette */
+        .ArabicH-resources-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(26, 147, 111, 0.05) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255, 193, 7, 0.05) 0%, transparent 20%);
+        }
+
+        .ArabicH-resources-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .ArabicH-resources-title {
+            font-size: 3.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--heading-color);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            display: inline-block;
+        }
+
+        .ArabicH-resources-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .ArabicH-resources-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            color: var(--text-color);
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .ArabicH-resources-cards {
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 3rem;
+            perspective: 1000px;
+        }
+
+        .ArabicH-resources-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            width: 380px;
+            height: 520px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
+
+        .ArabicH-resources-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: var(--gradient-primary);
+            z-index: 2;
+        }
+
+        .ArabicH-resources-card.secondary::before {
+            background: var(--gradient-secondary);
+        }
+
+        .ArabicH-resources-card:hover {
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+
+        .ArabicH-resources-card-image-container {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.5s ease;
+            cursor: pointer;
+        }
+
+        .ArabicH-resources-card:hover .ArabicH-resources-card-image-container {
+            transform: scale(1.05);
+        }
+
+        .ArabicH-resources-card-image-container::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        .ArabicH-resources-card.secondary .ArabicH-resources-card-image-container::before {
+            background: var(--gradient-secondary);
+        }
+
+        .ArabicH-resources-card-image {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .ArabicH-resources-card-image-container:hover .ArabicH-resources-card-image {
+            transform: scale(1.05);
+        }
+
+        .ArabicH-resources-card-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .ArabicH-resources-card-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .ArabicH-resources-card.secondary .ArabicH-resources-card-title::after {
+            background: var(--secondary-color);
+        }
+
+        .ArabicH-resources-card:hover .ArabicH-resources-card-title::after {
+            width: 100px;
+        }
+
+        .ArabicH-resources-card-description {
+            color: var(--text-color);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .ArabicH-resources-card-button {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(26, 147, 111, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .ArabicH-resources-card.secondary .ArabicH-resources-card-button {
+            background: var(--gradient-secondary);
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+        }
+
+        .ArabicH-resources-card-button:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(26, 147, 111, 0.4);
+        }
+
+        .ArabicH-resources-card.secondary .ArabicH-resources-card-button:hover:not(:disabled) {
+            box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
+        }
+
+        .ArabicH-resources-card-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background: #cccccc;
+            box-shadow: none;
+        }
+
+        .ArabicH-resources-card-button::after {
+            content: '←';
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .rtl .ArabicH-resources-card-button::after {
+            content: '→';
+        }
+
+        .ArabicH-resources-card-button:hover:not(:disabled)::after {
+            transform: translateX(-5px);
+        }
+
+        .rtl .ArabicH-resources-card-button:hover:not(:disabled)::after {
+            transform: translateX(5px);
+        }
+
+        /* Coming soon badge on card */
+        .ArabicH-coming-soon-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .rtl .ArabicH-coming-soon-badge {
+            right: auto;
+            left: 15px;
+        }
+
+        /* Image Modal Styles */
+        .ArabicH-image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .ArabicH-image-modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .ArabicH-modal-content {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            max-width: 90%;
+            max-height: 90%;
+            width: auto;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ArabicH-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .ArabicH-modal-title {
+            font-size: 1.5rem;
+            color: var(--heading-color);
+            margin: 0;
+        }
+
+        .ArabicH-modal-close {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .ArabicH-modal-close:hover {
+            color: var(--primary-color);
+        }
+
+        .ArabicH-modal-body {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            overflow: auto;
+        }
+
+        .ArabicH-modal-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: var(--background-color);
+            padding: 1rem;
+        }
+
+        .ArabicH-modal-image {
+            max-width: 100%;
+            max-height: 60vh;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            transform-origin: center center;
+        }
+
+        .ArabicH-modal-info {
+            color: var(--text-color);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .ArabicH-modal-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-modal-control-btn {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(26, 147, 111, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .ArabicH-modal-control-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(26, 147, 111, 0.4);
+        }
+
+        .ArabicH-modal-control-btn.secondary {
+            background: var(--gradient-secondary);
+            box-shadow: 0 3px 10px rgba(255, 193, 7, 0.3);
+        }
+
+        .ArabicH-modal-control-btn.secondary:hover {
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .ArabicH-resources-cards {
+                gap: 2rem;
+            }
+            .ArabicH-resources-card {
+                width: 340px;
+                height: 480px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ArabicH-resources-title {
+                font-size: 2.5rem;
+            }
+            .ArabicH-resources-subtitle {
+                font-size: 1.1rem;
+            }
+            .ArabicH-resources-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .ArabicH-resources-card {
+                width: 100%;
+                max-width: 400px;
+                height: 450px;
+            }
+            .ArabicH-resources-card-image-container {
+                width: 180px;
+                height: 180px;
+            }
+            .ArabicH-resources-card-image {
+                width: 160px;
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-resources-title {
+                font-size: 2rem;
+            }
+            .ArabicH-resources-card {
+                padding: 1.5rem;
+                height: 420px;
+            }
+            .ArabicH-resources-card-title {
+                font-size: 1.7rem;
+            }
+            .ArabicH-modal-controls {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-resources-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <!-- Column 1: Icon -->
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            
+            <!-- Column 2: Title -->
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            
+            <!-- Column 3: Options -->
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item active">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+    
+    <main class="ArabicH-resources-main">
+        <h1 class="ArabicH-resources-title" data-i18n="ArabicH.resources.title">الموارد التعليمية</h1>
+        <p class="ArabicH-resources-subtitle" data-i18n="ArabicH.resources.subtitle">استكشف مجموعة من المقالات والدراسات والمفاهيم العامة لتطوير معرفتك باللغة العربية</p>
+        
+        <div class="ArabicH-resources-cards">
+            <!-- Articles & Studies Card (Coming Soon) -->
+            <div class="ArabicH-resources-card" id="articlesCard">
+                <div class="ArabicH-coming-soon-badge" data-i18n="ArabicH.resources.comingSoon">قريباً</div>
+                <div class="ArabicH-resources-card-image-container" 
+                     data-image-src="assets2/images/articles.jpg" 
+                     data-title-key="ArabicH.resources.articles.imageTitle"
+                     data-description-key="ArabicH.resources.articles.imageDescription">
+                    <img src="assets2/images/articles.jpg" alt="The Treachery of Images" class="ArabicH-resources-card-image" data-i18n-alt="ArabicH.resources.articles.imageAlt">
+                </div>
+                <h2 class="ArabicH-resources-card-title" data-i18n="ArabicH.resources.articles.title">مقالات ودراسات</h2>
+                <p class="ArabicH-resources-card-description" data-i18n="ArabicH.resources.articles.description">مجموعة من المقالات المحكمة والدراسات اللغوية والأدبية المتخصصة في اللغة العربية</p>
+                <button class="ArabicH-resources-card-button" disabled data-i18n="ArabicH.resources.articles.button">قريباً</button>
+            </div>
+            
+            <!-- General Concepts Card (links to concepts.html) -->
+            <div class="ArabicH-resources-card secondary" id="conceptsCard">
+                <div class="ArabicH-resources-card-image-container" 
+                     data-image-src="assets2/images/concepts.jpg" 
+                     data-title-key="ArabicH.resources.concepts.imageTitle"
+                     data-description-key="ArabicH.resources.concepts.imageDescription">
+                    <img src="assets2/images/concepts.jpg" alt="Guernica" class="ArabicH-resources-card-image" data-i18n-alt="ArabicH.resources.concepts.imageAlt">
+                </div>
+                <h2 class="ArabicH-resources-card-title" data-i18n="ArabicH.resources.concepts.title">مفاهيم عامة</h2>
+                <p class="ArabicH-resources-card-description" data-i18n="ArabicH.resources.concepts.description">شروح مبسطة للمفاهيم الأساسية في النحو والصرف والبلاغة والأدب العربي</p>
+                <button class="ArabicH-resources-card-button" data-i18n="ArabicH.resources.concepts.button">استعرض المفاهيم</button>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Image Modal -->
+    <div class="ArabicH-image-modal" id="imageModal">
+        <div class="ArabicH-modal-content">
+            <div class="ArabicH-modal-header">
+                <h3 class="ArabicH-modal-title" id="modalTitle">عنوان الصورة</h3>
+                <button class="ArabicH-modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="ArabicH-modal-body">
+                <div class="ArabicH-modal-image-container">
+                    <img src="" alt="" class="ArabicH-modal-image" id="modalImage">
+                </div>
+                <div class="ArabicH-modal-info" id="modalDescription">
+                    وصف الصورة يظهر هنا.
+                </div>
+                <div class="ArabicH-modal-controls">
+                    <button class="ArabicH-modal-control-btn" id="zoomInBtn">
+                        <span>🔍</span> <span data-i18n="ArabicH.modal.zoomIn">تكبير</span>
+                    </button>
+                    <button class="ArabicH-modal-control-btn secondary" id="zoomOutBtn">
+                        <span>🔍</span> <span data-i18n="ArabicH.modal.zoomOut">تصغير</span>
+                    </button>
+                    <button class="ArabicH-modal-control-btn" id="resetZoomBtn">
+                        <span>🔄</span> <span data-i18n="ArabicH.modal.reset">إعادة تعيين</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">فريق تعليم العربي</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        // Resources page translations
+        window.translations_ArabicHresources = {
+            ar: {
+                // General (reused from index, but we add specific keys)
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.pwa.install": "تثبيت التطبيق",
+                
+                // Resources page
+                "ArabicH.resources.title": "الموارد التعليمية",
+                "ArabicH.resources.subtitle": "استكشف مجموعة من المقالات والدراسات والمفاهيم العامة لتطوير معرفتك باللغة العربية",
+                "ArabicH.resources.comingSoon": "قريباً",
+                
+                "ArabicH.resources.articles.title": "مقالات ودراسات",
+                "ArabicH.resources.articles.description": "مجموعة من المقالات المحكمة والدراسات اللغوية والأدبية المتخصصة في اللغة العربية",
+                "ArabicH.resources.articles.button": "قريباً",
+                "ArabicH.resources.articles.imageAlt": "مقالات ودراسات",
+                "ArabicH.resources.articles.imageTitle": "مقالات ودراسات لغوية",
+                "ArabicH.resources.articles.imageDescription": "مجموعة من الأبحاث والمقالات العلمية المتخصصة في علوم اللغة العربية وآدابها.",
+                
+                "ArabicH.resources.concepts.title": "مفاهيم عامة",
+                "ArabicH.resources.concepts.description": "شروح مبسطة للمفاهيم الأساسية في النحو والصرف والبلاغة والأدب العربي",
+                "ArabicH.resources.concepts.button": "استعرض المفاهيم",
+                "ArabicH.resources.concepts.imageAlt": "مفاهيم عامة",
+                "ArabicH.resources.concepts.imageTitle": "مفاهيم اللغة العربية",
+                "ArabicH.resources.concepts.imageDescription": "شروح وافية للمصطلحات والمفاهيم الأساسية لفهم اللغة العربية بعمق.",
+                
+                // Modal
+                "ArabicH.modal.zoomIn": "تكبير",
+                "ArabicH.modal.zoomOut": "تصغير",
+                "ArabicH.modal.reset": "إعادة تعيين"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arabic Learning Hub",
+                "ArabicH.general.logoAlt": "Arabic Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Ziad Mejri",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.pwa.install": "Install App",
+                
+                "ArabicH.resources.title": "Educational Resources",
+                "ArabicH.resources.subtitle": "Explore a collection of articles, studies, and general concepts to deepen your knowledge of Arabic",
+                "ArabicH.resources.comingSoon": "Coming Soon",
+                
+                "ArabicH.resources.articles.title": "Articles & Studies",
+                "ArabicH.resources.articles.description": "A collection of peer-reviewed articles and linguistic/literary studies specialized in Arabic",
+                "ArabicH.resources.articles.button": "Coming Soon",
+                "ArabicH.resources.articles.imageAlt": "Articles and Studies",
+                "ArabicH.resources.articles.imageTitle": "Articles & Linguistic Studies",
+                "ArabicH.resources.articles.imageDescription": "A collection of research papers and scholarly articles specialized in Arabic language sciences and literature.",
+                
+                "ArabicH.resources.concepts.title": "General Concepts",
+                "ArabicH.resources.concepts.description": "Simplified explanations of key concepts in grammar, morphology, rhetoric, and Arabic literature",
+                "ArabicH.resources.concepts.button": "Browse Concepts",
+                "ArabicH.resources.concepts.imageAlt": "General Concepts",
+                "ArabicH.resources.concepts.imageTitle": "Arabic Language Concepts",
+                "ArabicH.resources.concepts.imageDescription": "Comprehensive explanations of fundamental terms and concepts for a deep understanding of Arabic.",
+                
+                "ArabicH.modal.zoomIn": "Zoom In",
+                "ArabicH.modal.zoomOut": "Zoom Out",
+                "ArabicH.modal.reset": "Reset"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.pwa.install": "Installer l'App",
+                
+                "ArabicH.resources.title": "Ressources Éducatives",
+                "ArabicH.resources.subtitle": "Explorez une collection d'articles, d'études et de concepts généraux pour approfondir vos connaissances de l'arabe",
+                "ArabicH.resources.comingSoon": "Bientôt",
+                
+                "ArabicH.resources.articles.title": "Articles & Études",
+                "ArabicH.resources.articles.description": "Une collection d'articles évalués par des pairs et d'études linguistiques/littéraires spécialisées en arabe",
+                "ArabicH.resources.articles.button": "Bientôt",
+                "ArabicH.resources.articles.imageAlt": "Articles et Études",
+                "ArabicH.resources.articles.imageTitle": "Articles et Études Linguistiques",
+                "ArabicH.resources.articles.imageDescription": "Une collection de recherches et d'articles savants spécialisés dans les sciences de la langue arabe et sa littérature.",
+                
+                "ArabicH.resources.concepts.title": "Concepts Généraux",
+                "ArabicH.resources.concepts.description": "Explications simplifiées des concepts clés de grammaire, morphologie, rhétorique et littérature arabe",
+                "ArabicH.resources.concepts.button": "Parcourir les Concepts",
+                "ArabicH.resources.concepts.imageAlt": "Concepts Généraux",
+                "ArabicH.resources.concepts.imageTitle": "Concepts de Langue Arabe",
+                "ArabicH.resources.concepts.imageDescription": "Explications complètes des termes et concepts fondamentaux pour une compréhension approfondie de l'arabe.",
+                
+                "ArabicH.modal.zoomIn": "Zoom Avant",
+                "ArabicH.modal.zoomOut": "Zoom Arrière",
+                "ArabicH.modal.reset": "Réinitialiser"
+            }
+        };
+
+        window.currentTranslations = window.translations_ArabicHresources;
+    </script>
+    
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Card navigation
+            const conceptsCard = document.getElementById('conceptsCard');
+            const articlesCard = document.getElementById('articlesCard');
+            
+            // For concepts card: navigate to concepts.html (unless button is clicked)
+            if (conceptsCard) {
+                conceptsCard.addEventListener('click', function(e) {
+                    if (!e.target.classList.contains('ArabicH-resources-card-button') && !e.target.closest('.ArabicH-resources-card-image-container')) {
+                        window.location.href = 'concepts.html';
+                    }
+                });
+                
+                const conceptsButton = conceptsCard.querySelector('.ArabicH-resources-card-button');
+                if (conceptsButton) {
+                    conceptsButton.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        window.location.href = 'concepts.html';
+                    });
+                }
+            }
+            
+            // Articles card: disabled, but image modal still works
+            if (articlesCard) {
+                articlesCard.addEventListener('click', function(e) {
+                    if (e.target.closest('.ArabicH-resources-card-button')) {
+                        e.preventDefault();
+                    }
+                });
+            }
+            
+            // Image modal logic
+            const imageModal = document.getElementById('imageModal');
+            const modalClose = document.getElementById('modalClose');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
+            const zoomInBtn = document.getElementById('zoomInBtn');
+            const zoomOutBtn = document.getElementById('zoomOutBtn');
+            const resetZoomBtn = document.getElementById('resetZoomBtn');
+            
+            let currentScale = 1;
+            const scaleStep = 0.2;
+            const maxScale = 3;
+            const minScale = 0.5;
+            
+            function openImageModal(container) {
+                const imgSrc = container.getAttribute('data-image-src');
+                const titleKey = container.getAttribute('data-title-key');
+                const descKey = container.getAttribute('data-description-key');
+                const lang = document.getElementById('languageSelect').value;
+                const translations = window.currentTranslations[lang];
+                
+                modalImage.src = imgSrc;
+                modalImage.alt = translations[titleKey] || titleKey;
+                modalTitle.textContent = translations[titleKey] || titleKey;
+                modalDescription.textContent = translations[descKey] || descKey;
+                
+                currentScale = 1;
+                modalImage.style.transform = `scale(${currentScale})`;
+                
+                imageModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            function closeImageModal() {
+                imageModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            
+            function zoomIn() {
+                if (currentScale < maxScale) {
+                    currentScale += scaleStep;
+                    modalImage.style.transform = `scale(${currentScale})`;
+                }
+            }
+            
+            function zoomOut() {
+                if (currentScale > minScale) {
+                    currentScale -= scaleStep;
+                    modalImage.style.transform = `scale(${currentScale})`;
+                }
+            }
+            
+            function resetZoom() {
+                currentScale = 1;
+                modalImage.style.transform = `scale(${currentScale})`;
+            }
+            
+            // Attach click to all image containers
+            document.querySelectorAll('.ArabicH-resources-card-image-container').forEach(container => {
+                container.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    openImageModal(this);
+                });
+            });
+            
+            if (modalClose) modalClose.addEventListener('click', closeImageModal);
+            if (zoomInBtn) zoomInBtn.addEventListener('click', zoomIn);
+            if (zoomOutBtn) zoomOutBtn.addEventListener('click', zoomOut);
+            if (resetZoomBtn) resetZoomBtn.addEventListener('click', resetZoom);
+            
+            imageModal.addEventListener('click', function(e) {
+                if (e.target === imageModal) closeImageModal();
+            });
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && imageModal.classList.contains('active')) {
+                    closeImageModal();
+                }
+            });
+            
+            // Update active window item
+            const currentPage = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.ArabicH-window-item').forEach(item => {
+                if (item.getAttribute('href') === currentPage) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        });
+    </script>
+    
+    <script>
+        // Manual service worker registration (backup)
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW registration failed: ', err));
+            });
+        }
+        
+        // Manual install button handler
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            document.getElementById('manual-install-btn').style.display = 'flex';
+        });
+        
+        document.getElementById('manual-install-btn')?.addEventListener('click', async () => {
+            if (!deferredPrompt) return;
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            if (outcome === 'accepted') {
+                document.getElementById('manual-install-btn').style.display = 'none';
+                deferredPrompt = null;
+            }
+        });
+    </script>
+</body>
+</html>

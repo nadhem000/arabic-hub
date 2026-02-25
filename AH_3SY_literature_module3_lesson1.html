@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أدب: قصيدة "الباب تقرعه الرياح" - بدر شاكر السياب | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1e5f5f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="الباب تقرعه الرياح">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Unique Teal‑Navy theme for modern poetry lesson */
+        :root {
+            --primary-color: #1e5f5f;
+            --secondary-color: #2e8b8b;
+            --accent-color: #66cccc;
+            --light-color: #e0f2f2;
+            --dark-color: #0a3a3a;
+            --text-color: #1a3b3b;
+            --heading-color: #0a2a2a;
+            --background-color: #f4fbfb;
+            --card-bg: #ffffff;
+            --definition-bg: #d9f0f0;
+            --border-color: #a0d1d1;
+            --table-even-bg: #e0f2f2;
+            --table-hover-bg: #c6e6e6;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(30, 95, 95, 0.15);
+            --gradient-primary: linear-gradient(135deg, #1e5f5f 0%, #0a3a3a 100%);
+            --gradient-secondary: linear-gradient(135deg, #2e8b8b 0%, #1e5f5f 100%);
+            --gradient-accent: linear-gradient(135deg, #66cccc 0%, #2e8b8b 100%);
+            --gradient-light: linear-gradient(135deg, #e0f2f2 0%, #c6e6e6 100%);
+            --highlight-color: #c77d23;
+            --highlight-bg: rgba(199, 125, 35, 0.1);
+            --poetry-bg: rgba(30, 95, 95, 0.08);
+            --poetry-border: #2e8b8b;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #2e8b8b;
+            --secondary-color: #66cccc;
+            --accent-color: #9fdfdf;
+            --light-color: #0a3a3a;
+            --dark-color: #031f1f;
+            --text-color: #d6f0f0;
+            --heading-color: #e0f2f2;
+            --background-color: #031f1f;
+            --card-bg: #0a3a3a;
+            --definition-bg: #1e5f5f;
+            --border-color: #2e8b8b;
+            --table-even-bg: #0a3a3a;
+            --table-hover-bg: #1e5f5f;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+            --gradient-primary: linear-gradient(135deg, #2e8b8b 0%, #1e5f5f 100%);
+            --gradient-secondary: linear-gradient(135deg, #66cccc 0%, #2e8b8b 100%);
+            --gradient-accent: linear-gradient(135deg, #9fdfdf 0%, #66cccc 100%);
+            --gradient-light: linear-gradient(135deg, #0a3a3a 0%, #031f1f 100%);
+            --highlight-color: #e9b04d;
+            --highlight-bg: rgba(233, 176, 77, 0.15);
+            --poetry-bg: rgba(46, 139, 139, 0.15);
+            --poetry-border: #66cccc;
+        }
+
+        /* Page specific styles */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-lesson-teacher {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Modern poem text styling */
+        .ArabicH-poem-text {
+            font-size: 1.3rem;
+            font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 1.0;
+            color: var(--dark-color);
+            margin: 20px 0;
+            padding: 25px;
+            background-color: var(--poetry-bg);
+            border-radius: var(--border-radius);
+            border-right: 4px solid var(--poetry-border);
+            text-align: right;
+            direction: rtl;
+            white-space: pre-wrap;
+        }
+
+        .ArabicH-poem-line {
+            margin-bottom: 0.8rem;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .ArabicH-poem-subhead {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem 0;
+            text-align: center;
+            border-bottom: 1px dashed var(--secondary-color);
+            padding-bottom: 0.3rem;
+        }
+
+        [data-theme="dark"] .ArabicH-poem-text {
+            color: #e0f2f2;
+        }
+
+        /* Exercise cards, questions, answers (same as other lessons) */
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-align: center;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+
+        .ArabicH-question {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 20px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-question-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+        }
+
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-right: auto;
+            margin-left: 0;
+        }
+
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        .ArabicH-knowledge-box {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 25px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-knowledge-box::before {
+            content: "💡";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        .ArabicH-knowledge-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .ArabicH-knowledge-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .ArabicH-flower-decoration {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title { font-size: 2rem; }
+            .ArabicH-lesson-container { padding: 1.5rem; }
+            .ArabicH-poem-text { font-size: 1.15rem; padding: 20px; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main { padding: 1rem; }
+            .ArabicH-poem-text { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.literatureLesson.poemTitle">قصيدة "الباب تقرعه الرياح" - بدر شاكر السياب</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.literatureLesson.poemSubtitle">المحور 3: الشعر الحديث - تحليل قصيدة من الشعر الحر</p>
+
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header with real teacher/class info -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher"><span class="ArabicH-flower-decoration">❦</span> الأستاذة: فوزيّة الشّطّي <span class="ArabicH-flower-decoration">❦</span></div>
+                <div class="ArabicH-lesson-class"><span class="ArabicH-flower-decoration">✿</span> المستوى: 3 آداب 2، معهد قرطاج حنّبعل، 2017-2018 <span class="ArabicH-flower-decoration">✿</span></div>
+            </div>
+
+            <!-- Introduction / التقديم -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">التقديم</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p><strong>بدر شاكر السياب</strong> (1926-1964) شاعر عراقي رائد، يعد أحد مؤسسي الشعر الحر. تميزت قصائده ببعدها الإنساني والوجداني، وتناولت قضايا المنفى والحنين والموت. قصيدة <strong>"الباب تقرعه الرياح"</strong> تعبر عن معاناة الشاعر في الغربة (لندن) وافتقاده لوطنه (العراق) وأمه المتوفاة. تستخدم القصيدة رمزية الرياح والأبواب لتعكس صراعاً نفسياً حاداً بين الحنين والأمل واليأس.</p>
+                </div>
+            </div>
+
+            <!-- ========== النص ========== -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">النص: "الباب تقرعه الرياح"</h3>
+                <div class="ArabicH-poem-text">
+                    <div class="ArabicH-poem-line">الباب ما قرعته غير الريح في الليل العميق</div>
+                    <div class="ArabicH-poem-line">الباب ما قرعته كفك</div>
+                    <div class="ArabicH-poem-line">أين كفك و الطريق</div>
+                    <div class="ArabicH-poem-line">ناء بحار بيننا مدن صحارى من ظلام</div>
+                    <div class="ArabicH-poem-line">الريح تحمل لي صدى القبلات منها كالحريق</div>
+                    <div class="ArabicH-poem-line">من نخلة يعدو إلى أخرى و يزهو في الغمام</div>
+                    <div class="ArabicH-poem-line">الباب ما قرعته غير الريح</div>
+                    <div class="ArabicH-poem-line">آه لعل روحا في الرياح</div>
+                    <div class="ArabicH-poem-line">هامت تمر على المرافيء أو محطات القطار</div>
+                    <div class="ArabicH-poem-line">لتسائل الغرباء عني عن غريب أمس راح</div>
+                    <div class="ArabicH-poem-line">يمشي على قدمين و هو اليوم يزحف في انكسار</div>
+                    <div class="ArabicH-poem-line">هي روح أمي هزها الحب العميق</div>
+                    <div class="ArabicH-poem-line">حب الأمومة فهي تبكي</div>
+                    <div class="ArabicH-poem-line">آه يا ولدي البعيد عن الديار</div>
+                    <div class="ArabicH-poem-line">ويلاه كيف تعود وحدك لا دليل و لا رفيق</div>
+                    <div class="ArabicH-poem-line">أماه ليتك لم تغيبي خلف سور من حجار</div>
+                    <div class="ArabicH-poem-line">لا باب فيه لكي أدق و لا نوافذ في الجدار</div>
+                    <div class="ArabicH-poem-line">كيف انطلقت على طريق لا يعود السائرون</div>
+                    <div class="ArabicH-poem-line">من ظلمة صفراء فيه كأنها غسق البحار</div>
+                    <div class="ArabicH-poem-line">كيف انطلقت بلا وداع فالصغار يولولون</div>
+                    <div class="ArabicH-poem-line">يتراكضنون على الطريق و يفزعون فيرجعون</div>
+                    <div class="ArabicH-poem-line">و يسائلون الليل عنك و هم لعودك في انتظار</div>
+                    <div class="ArabicH-poem-line">الباب تقرعه الرياح لعل روحا منك زار</div>
+                    <div class="ArabicH-poem-line">هذا الغريب هو ابنك السهران يحرقه الحنين</div>
+                    <div class="ArabicH-poem-line">أماه ليتك ترجعين</div>
+                    <div class="ArabicH-poem-line">شبحا و كيف أخاف منه و ما امحت رغم السنين</div>
+                    <div class="ArabicH-poem-line">قسمات وجهك من خيالي</div>
+                    <div class="ArabicH-poem-line">أين أنت أتسمعين</div>
+                    <div class="ArabicH-poem-line">صرخات قلبي و هو يذبحه الحنين إلى العراق</div>
+                    <div class="ArabicH-poem-line">الباب تقرعه الرياح تهب من أبد الفراق</div>
+                    <div class="ArabicH-poem-line">من ليالي السهاد</div>
+                </div>
+                <div class="ArabicH-exercise-content" style="text-align: center; margin-top: 15px; color: var(--secondary-color); font-style: italic;">
+                    <strong>المصدر:</strong> ديوان بدر شاكر السياب – طبعة دار العودة، بيروت (بتصرف)
+                </div>
+            </div>
+
+            <!-- ========== المهام ========== -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">المهام</h3>
+                <p style="text-align:right; margin-bottom:20px;"><strong>تعليمات:</strong> أجب/ي عن الأسئلة التّالية في فقراتٍ مُتكاملة.</p>
+                
+                <!-- Question 1 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- هلِ اكتفَى المتكلِّمُ بِمخاطَبٍ واحد على مدَى النّصّ؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer1" class="ArabicH-answer">
+                        <p>لم يكتفِ المتكلّمُ الشّاعرُ بمخاطَبٍ واحد. لقد وجّه خطابه في أغلب القصيدة إلى أمّه المتوفية، استحضارًا لها واستقواءً بذكراها. كما خاطب نفسَه مجازيًا على لسان الأمّ الغائبة في مقطع من القصيدة، كأنما يُحييها في عالم النص لترد عليه.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- حسَبَ أيِّ معيارٍ يمكنُ تقسيمُ النّصّ؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer2" class="ArabicH-answer">
+                        <p>يمكن تقسيم النص تبعًا لتطور الحالة النفسية للشاعر:<br>
+                        - <strong>القسم الأوّل:</strong> الحنين إلى الأمّ الغائبة واستذكار ماضي الطفولة.<br>
+                        - <strong>القسم الثّاني:</strong> الأمل الواهم في إمكانية استعادتها أو الشعور بقربها.<br>
+                        - <strong>القسم الأخير:</strong> اليأس التام من عودة الفقيدة، نتيجة خيبة الأمل.<br>
+                        يتطور الإحساس سلبيًا من الحنين إلى الأمل فاليأس، في صورة صراع نفسي حاد.</p>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">3- ما الّذي يَستعيدُه المتكلِّمُ بتذكُّر أمِّه الفقيدة؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer3" class="ArabicH-answer">
+                        <p>بتذكّر الأم، يستعيد الشاعر ماضياً مديداً ومركّباً:<br>
+                        - <strong>الطفولة:</strong> مشاهد الحنان الدافئ (كالقبلات) والبراءة.<br>
+                        - <strong>الوطن (العراق):</strong> يستحضر ذكريات الهجرة القسرية والاغتراب عن الوطن بسبب الملاحقة السياسية، معبرًا عن حنين عميق له.<br>
+                        - <strong>الذات الجريحة:</strong> يستعيد الشاعر جراحه كإنسان مريض، وحيد، ومُلاحَق.<br>
+                        الأم هنا هي "قادح" الذاكرة الذي يفتح أبواب الماضي بكل تفاصيله.</p>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">4- اِستخرجْ منَ النّصّ بعضَ الأساليبِ الإنشائيّةِ مُحدِّدا دلالاتِها:</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer4" class="ArabicH-answer">
+                        <p><strong>«أيْنَ كفُّكِ وَالطَّرِيقُ نَاءٍ؟» (استفهام إنكاري):</strong> يعبر عن حنين الشاعر وحاجته الماسة لمساندة أمه في محنته (المرض والغربة).<br>
+                        <strong>«يَا وَلَدِي البَعِيدَ عَنِ الدِّيَارْ.» (نداء):</strong> رغم أن النداء موجه من الأم (على لسان الشاعر)، إلا أنه يكشف معاناة الشاعر من الوحدة والألم، ويخلق حواراً وهمياً مع الأم لاستشعار دفئها.<br>
+                        <strong>«لَيْتَكِ لَمْ تَغِيبِي خَلْفَ سُورٍ مِنْ حِجَارْ.» (تمنٍّ):</strong> يعبر عن رغبة مستحيلة (عودة الميت)، مما يبرز عمق التعلق بالأم والاشتياق اليائس لحنانها.</p>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">5- ما صورةُ الأمّ في هذا النّصِّ الشّعريّ الحديث؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer5')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer5" class="ArabicH-answer">
+                        <p>تجاوزت الأم في هذا النص كونها كائناً بشرياً عادياً لترتقي إلى مرتبة الرمز:<br>
+                        - <strong>رمز الطفولة:</strong> بما تحمله من براءة وحلم وأمل.<br>
+                        - <strong>رمز الوطن:</strong> فالوطن الملجأ يُستدعى عبر استحضار الأم، خاصة في سياق الاغتراب.<br>
+                        - <strong>رمز القصيدة:</strong> الأم هي الملهم الأول، والقصيدة المنشودة التي يسعى الشاعر لخلقها كمعادل موضوعي للأمان المفقود.<br>
+                        بفقدان أمه مبكرًا، يُعلن السياب افتقاده للطفولة والوطن معًا، ويجعل من القصيدة ملاذًا أخيرًا من غدر الزمن.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== التحرير ========== -->
+                        <!-- ========== التحرير ========== -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التحرير: تحليل معمق للقصيدة</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">مقدمة: السياق والتجربة الشعرية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>تُعد قصيدة "الباب تقرعه الرياح" للشاعر العراقي بدر شاكر السياب (1926-1964) واحدة من أبرز قصائد الشعر الحر التي جسّدت مأساة المنفى والحنين والموت. كتبها السياب أثناء إقامته في لندن حيث كان يعاني من مرض عضال (السل) ومن غربة قاسية عن وطنه العراق وعن أمه التي توفيت قبل سنوات. في هذه القصيدة، يتحول الصراع النفسي الحاد إلى مادة شعرية خصبة، تستند إلى تقنيات الحداثة الشعرية: توظيف الرمز، تعدد الأصوات، المزج بين الذاتي والموضوعي، والاعتماد على الإيقاع الداخلي أكثر من الوزن التقليدي.</p>
+                        <p>القصيدة ليست مجرد رثاء للأم، بل هي تأمل وجودي في الموت والزمن والذاكرة. فالرياح التي تقرع الباب ليست ظاهرة طبيعية فحسب، بل هي حاملة لأصوات الماضي، لروح الأم، لذكريات الطفولة، ولوجع المنفى. والباب ليس مجرد خشبة تُغلق وتُفتح، بل هو حدود بين الحاضر والغائب، بين الحلم والواقع، بين الحياة والموت.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">البناء الفني للقصيدة: وحدة عضوية وتنوع إيقاعي</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>تنتمي القصيدة إلى تيار الشعر الحر (شعر التفعيلة)، حيث يعتمد السياب على تفعيلة واحدة أساسية هي (متفاعلن) ولكن مع تحريرات وتكرارات تخلق إيقاعاً موسيقياً خاصاً. تتكون القصيدة من 32 سطراً (بيتاً) غير متساوية الطول، لكنها تتوزع في مقاطع شعورية متصاعدة. يلاحظ أن طول الأسطر يتناسب مع حدة الانفعال: ففي لحظات اليأس تصبح الأسطر قصيرة متقطعة (مثل "آه" و "ويلاه")، بينما في لحظات الاسترسال الذاتي تطول الأسطر لتعبر عن تدفق الذاكرة.</p>
+                        <p>تعتمد القصيدة على تقنية التكرار كوسيلة إيقاعية ونفسية: يتكرر مفتتح "الباب ما قرعته غير الريح" و "الباب تقرعه الرياح" كأنه لازمة موسيقية تعيد الشاعر إلى نقطة الصفر، إلى حقيقة أن كل ما يسمعه هو وهم الرياح. كما يتكرر نداء "أماه" و "آه" لتعميق الإحساس بالوجع.</p>
+                        <p>يمكن تقسيم القصيدة إلى ثلاثة مقاطع كبرى بناءً على تحول المخاطب والحالة النفسية:</p>
+                        <ul>
+                            <li><strong>المقطع الأول (الأسطر 1-12):</strong> حوار داخلي مع الذات، يبدأ بنفي أي قرع غير الرياح، ثم يتساءل عن "كف" الأم التي لا يمكن أن تصل عبر المسافات البعيدة. هنا تهيمن المفردات المكانية: "ناء بحار"، "مدن صحارى"، "المرافيء"، "محطات القطار".</li>
+                            <li><strong>المقطع الثاني (الأسطر 13-25):</strong> ينتقل الشاعر إلى مخاطبة الأم نفسها، مستحضراً إياها عبر الرياح. يبدأ بـ "هي روح أمي" ثم يناجيها ويستعيد تفاصيل رحيلها وتركها للصغار. هذا المقطع هو ذروة الحنين، وفيه تتجلى براعة السياب في المزج بين صوت الأم وصوت الشاعر.</li>
+                            <li><strong>المقطع الثالث (الأسطر 26-32):</strong> يعود الشاعر إلى التأمل الذاتي، لكن بعد أن تأكد من استحالة العودة. يخاطب أمه بصيغة الغائب تارة وبصيغة الحاضر تارة، وينتهي بتكرار "الباب تقرعه الرياح" مقرونة بـ "أبد الفراق" و "ليالي السهاد".</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الرموز الأساسية ودلالاتها</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>تزخر القصيدة برموز متعددة تتكامل لتشكل رؤية الشاعر للوجود:</p>
+                        <ul>
+                            <li><strong>الباب:</strong> رمز ثنائي الأبعاد. هو الحاجز بين الداخل (الأنا) والخارج (العالم)، بين الحاضر (الغربة) والماضي (الوطن والأم). قرع الرياح للباب يعني محاولة اختراق هذا الحاجز، لكن دون جدوى. الباب في النهاية "لا باب فيه لكي أدق و لا نوافذ في الجدار" أي أن الموتى لا يمكن الرجوع إليهم.</li>
+                            <li><strong>الرياح:</strong> ليست مجرد ظاهرة طبيعية، بل هي وسيط روحي. تحمل صدى القبلات، تحمل روح الأم التي "هزها الحب العميق"، وتهب "من أبد الفراق". الرياح هنا تشبه الرسول بين العالمين، لكنها رسالة مشوشة، تثير الأمل ثم تخيبه.</li>
+                            <li><strong>الأم:</strong> تتحول من شخص عادي إلى رمز متعدد. هي رمز الطفولة (القبلات، الحنان)، ورمز الوطن (العراق)، ورمز الحياة ذاتها التي رحلت. كما أنها رمز للقصيدة: فالشاعر يبحث عن أمه كما يبحث عن قصيدة تمنحه الأمان. وعندما يقول "أماه ليتك ترجعين شبحا" فإنه يتمنى حتى استحالة العودة على شكل طيف، مما يؤكد عمق الفقد.</li>
+                            <li><strong>الطريق:</strong> يظهر بصيغ متعددة: "طريق لا يعود السائرون"، "طريق من ظلمة صفراء". الطريق هو الحياة، ولكنه في القصيدة طريق باتجاه الموت أو النسيان. الأم سلكته "بلا وداع" وتركت الصغار "يتراكضنون على الطريق" في حيرة.</li>
+                            <li><strong>الظلام والليل:</strong> "الليل العميق"، "ظلمة صفراء"، "غسق البحار". الظلام يرمز للغربة النفسية والمرض والموت. كما يعكس حالة الشاعر النفسية المظلمة.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تطور المشاعر: من الحنين إلى اليأس</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>تسير القصيدة في مسار وجداني متصاعد ثم متدهور. يمكن تتبع هذا التطور من خلال ثلاثة أطوار:</p>
+                        <ul>
+                            <li><strong>طور الحنين والأمل الواهم (الأسطر 1-12):</strong> يبدأ الشاعر بنفي قرع غير الرياح، لكنه سرعان ما يتساءل "أين كفك؟" وكأنه يبحث عن أثر للأم. ثم تنتقل الرياح لتحمل "صدى القبلات"، وهنا يبدأ الأمل الخافت بأن الأم قد تكون قريبة روحياً. تتخلل المقطع أسئلة واستفهامات تدل على الترقب.</li>
+                            <li><strong>طور الاستحضار والمناجاة (الأسطر 13-25):</strong> يصل الشاعر إلى ذروة العاطفة عندما يقول "هي روح أمي". هنا يخلق حواراً مع الأم، ويسمع صراخها وبكاءها. هو لا يزال في حالة أمل، لكنه أمل مشوب بالشك: "لعل روحا في الرياح هامت". في هذا المقطع تتجلى قدرة السياب على تحويل الذكرى إلى مشهد حي: الأم تبحث عنه، تسأل الغرباء، تصرخ "ويلاه كيف تعود وحدك".</li>
+                            <li><strong>طور اليأس والتسليم (الأسطر 26-32):</strong> بعد استعراض بكاء الأم وصراخها، يعود الشاعر إلى واقعه المر. يدرك أن الأم "غابت خلف سور من حجار" لا يمكن اختراقه. يتحول الأمل إلى تمني استحالة: "ليتك ترجعين شبحا". ثم يتساءل "أين أنت أتسمعين؟" ليكتشف أن الصرخات لا تصل. وتنتهي القصيدة بتأكيد أن قرع الرياح ما هو إلا وهم قادم من "أبد الفراق".</li>
+                        </ul>
+                        <p>هذا التطور الوجداني يجعل القصيدة أشبه بقصة درامية مصغرة، تبدأ بأمل خفيف وتنتهي بانهيار تام.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الأساليب الإنشائية ودورها في بناء المعنى</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>وظف السياب الأساليب الإنشائية (الاستفهام، النداء، التمني) بشكل مكثف، ليس كزينة بلاغية بل كأدوات لتجسيد الصراع النفسي:</p>
+                        <ul>
+                            <li><strong>الاستفهام:</strong> تعددت صيغ الاستفهام، وأغلبها استفهام إنكاري أو تعجبي. مثل "أين كفك والطريق ناء؟" (إنكار لغياب الأم في وقت الشدة). و "كيف انطلقت على طريق لا يعود السائرون؟" (تعجب من رحيل الأم دون عودة). الاستفهام هنا يعبر عن حيرة الشاعر ورفضه للواقع.</li>
+                            <li><strong>النداء:</strong> "أماه"، "يا ولدي". النداء في القصيدة ينقسم إلى قسمين: نداء الشاعر لأمه (المباشر أو عبر الرياح)، ونداء الأم للشاعر (على لسان الشاعر). هذا التعدد في النداء يخلق حوارية داخلية ويعمق الإحساس بالوحدة، فالشاعر يخاطب من ليس موجوداً ويسمع صوت من ليس موجودة.</li>
+                            <li><strong>التمني:</strong> "أماه ليتك لم تغيبي"، "ليتك ترجعين". التمني هنا يدل على استحالة التحقق، وهو يعكس رغبة عميقة في استعادة الماضي. عندما يتمنى عودة أمه "شبحا" يصل إلى قمة اليأس، لأنه يرضى بأقل من المستحيل.</li>
+                            <li><strong>النفي:</strong> "ما قرعته غير الريح". النفي في بداية القصيدة وفي نهايتها يخلق إطاراً محكماً، يؤكد أن كل ما يحدث هو وهم. كما أن نفي وجود باب أو نوافذ في قبر الأم (خلف سور من حجار) يبرز فكرة الانغلاق الأبدي.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">اللغة والصور الشعرية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>تتميز لغة السياب في هذه القصيدة بالبساطة والعمق معاً. فهو يستخدم ألفاظاً يومية (باب، ريح، كف، طريق) لكنه يحملها دلالات رمزية ثقيلة. من أبرز الصور الشعرية:</p>
+                        <ul>
+                            <li><strong>الصورة السمعية:</strong> "الريح تحمل لي صدى القبلات منها كالحريق". هنا يتحول الصدى إلى نار، أي أن الذكرى ليست مريحة بل مؤلمة. كما أن "صرخات قلبي" و "يولولون" تخلق مشهداً صوتياً مأساوياً.</li>
+                            <li><strong>الصورة البصرية:</strong> "من نخلة يعدو إلى أخرى و يزهو في الغمام". هذه الصورة تستحضر نخيل العراق، الوطن البعيد، ولكنها تذوب في الغمام (السحب) أي في الضياع. كذلك صورة "ظلمة صفراء كأنها غسق البحار" توحي بلون الموت والمرض (ربما تذكر بمرض السل الذي كان يصفر الوجوه).</li>
+                            <li><strong>الصورة الحركية:</strong> "يمشي على قدمين و هو اليوم يزحف في انكسار". هذه مقابلة مؤلمة بين الماضي والحاضر، حيث كان الشاعر يمشي (قوياً) واليوم يزحف (مريضاً). حركة "تتراكضنون" للأطفال على الطريق توحي بالحيرة والبحث العبثي.</li>
+                            <li><strong>التشخيص (الأنسنة):</strong> الرياح تُقرع الباب وكأنها إنسان. الأم تُشخص في الرياح. الظلام يُوصف بـ "الأبد". هذا التشخيص يجعل العالم الطبيعي متواطئاً مع معاناة الشاعر.</li>
+                        </ul>
+                        <p>كما نجد تضاداً بارعاً بين المفردات: الناء / القريب، المشي / الزحف، الباب / السور، النوافذ / الجدار. هذا التضاد يعكس التناقض الداخلي بين الأمل واليأس.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المحسنات البديعية: بين التكرار والطباق</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>لم يلجأ السياب إلى المحسنات البديعية بشكل متكلف، بل وظفها ضمن النسيج الشعري:</p>
+                        <ul>
+                            <li><strong>التكرار:</strong> كما ذكرنا، تكرار "الباب تقرعه الرياح" و "أماه" و "آه" يخلق نغمة موسيقية حزينة ويرسخ الفكرة المركزية.</li>
+                            <li><strong>الطباق:</strong> "يمشي على قدمين / يزحف"، "النهار / الليل" (ضمني)، "الحياة / الموت" (ضمني). الطباق يبرز التناقض بين الماضي والحاضر.</li>
+                            <li><strong>المقابلة:</strong> "من نخلة يعدو إلى أخرى" يوحي بالامتداد، مقابل "سور من حجار" الذي يوحي بالانغلاق.</li>
+                            <li><strong>الجناس:</strong> ليس بارزاً، لكن هناك جناساً غير تام مثل "الرياح" و "الرواح" (غير موجودة) لكن يمكن ملاحظة تقارب صوتي بين "الرياح" و "الروح" مما يعزز الربط بينهما.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الخاتمة: القصيدة كمعادل موضوعي للمعاناة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>تمثل قصيدة "الباب تقرعه الرياح" نموذجاً رفيعاً للشعر الحر في مرحلة نضجه. استطاع السياب أن يحول معاناته الشخصية (المرض، الغربة، فقدان الأم) إلى مادة فنية عالمية، بفضل توظيفه المكثف للرموز والأساليب الحوارية وتعدد الأصوات. القصيدة ليست مجرد شكوى، بل هي بناء فني محكم يتكون من مقاطع متوازنة، تبدأ بأمل خافت وتنتهي بيأس مطلق، لكنها تترك القارئ متأملاً في هشاشة الوجود الإنساني.</p>
+                        <p>يمكن النظر إلى القصيدة على أنها "معادل موضوعي" (بالمعنى Eliotian) لحالة الحنين والمنفى. فالرياح والباب والأم ليست مجرد أشياء، بل هي مرايا تعكس الصراع الداخلي للشاعر. وقد نجح السياب في تجسيد هذا الصراع بلغة شفافة وصادقة، مما جعل القصيدة تتردد في وجدان القراء حتى اليوم، كواحدة من أعمق قصائد الرثاء والمنفى في الشعر العربي الحديث.</p>
+                        <p>تبقى القصيدة شهادة على أن المعاناة الإنسانية، حين تصاغ بفن رفيع، تتحول إلى جسر يصل بين الشاعر وقارئه عبر الزمان والمكان. فالرياح التي قرعت باب السياب في لندن، ما زالت تقرع أبواب كل من هزهم الحنين إلى وطن أو أم أو طفولة ضائعة.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card" style="background: var(--gradient-light);">
+                    <h4 class="ArabicH-rule-title">خلاصة تحليلية: أبرز ما تميزت به القصيدة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul>
+                            <li><strong>الوحدة العضوية:</strong> ترابط الأجزاء عبر التكرار واللازمة.</li>
+                            <li><strong>تعدد الأصوات:</strong> صوت الشاعر، صوت الأم، صوت الرياح.</li>
+                            <li><strong>الرمزية:</strong> تحويل العناصر الطبيعية إلى رموز نفسية ووجودية.</li>
+                            <li><strong>الصدق العاطفي:</strong> دون وقوع في العاطفية المبتذلة.</li>
+                            <li><strong>اللغة الموحية:</strong> بسيطة لكنها عميقة، تناسب شعر الحداثة.</li>
+                            <li><strong>الإيقاع الداخلي:</strong> المعتمد على التكرار والتوزيع الطولي للأسطر.</li>
+                        </ul>
+                        <p>بهذا تكون القصيدة قد أسهمت في تطوير قصيدة الرثاء العربية، وفتحت آفاقاً جديدة للتعبير عن الذات في إطار كوني.</p>
+                    </div>
+                </div>
+                
+                <!-- decorative line -->
+                <div style="margin-top: 20px; text-align: center;">
+                    <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                        <span class="ArabicH-flower-decoration">✎</span> 
+                        <span class="ArabicH-flower-decoration">✍</span> 
+                        <span class="ArabicH-flower-decoration">✎</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- navigation buttons (dummy links) -->
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_2SY_literature_module2_lesson2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.previousLesson">الدرس السابق</a>
+                <a href="AH_3SY_literature_module3_lesson2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+
+    <script>
+        // Translations for this lesson
+        window.translations_ArabicHLiteratureModule3Lesson1 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.literatureLesson.poemTitle": "قصيدة \"الباب تقرعه الرياح\" - بدر شاكر السياب",
+                "ArabicH.literatureLesson.poemSubtitle": "المحور 3: الشعر الحديث - تحليل قصيدة من الشعر الحر",
+                "ArabicH.literatureLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.literatureLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.literatureLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.literatureLesson.previousLesson": "الدرس السابق",
+                "ArabicH.literatureLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.literatureLesson.poemTitle": "Poem: \"The Wind Knocks on the Door\" - Badr Shakir al-Sayyab",
+                "ArabicH.literatureLesson.poemSubtitle": "Module 3: Modern Poetry - Analysis of a Free Verse Poem",
+                "ArabicH.literatureLesson.showAnswer": "Show Answer",
+                "ArabicH.literatureLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.literatureLesson.backToHome": "Back to Homepage",
+                "ArabicH.literatureLesson.previousLesson": "Previous Lesson",
+                "ArabicH.literatureLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.literatureLesson.poemTitle": "Poème: \"Le vent frappe à la porte\" - Badr Shakir al-Sayyab",
+                "ArabicH.literatureLesson.poemSubtitle": "Module 3: Poésie moderne - Analyse d'un poème en vers libres",
+                "ArabicH.literatureLesson.showAnswer": "Afficher la réponse",
+                "ArabicH.literatureLesson.backToLessons": "Retour aux leçons",
+                "ArabicH.literatureLesson.backToHome": "Retour à l'accueil",
+                "ArabicH.literatureLesson.previousLesson": "Leçon précédente",
+                "ArabicH.literatureLesson.nextLesson": "Leçon suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHLiteratureModule3Lesson1;
+    </script>
+
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            const showText = button.getAttribute('data-i18n-show') || 'إظهار الإجابة';
+            const hideText = button.getAttribute('data-i18n-hide') || 'إخفاء الإجابة';
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = showText;
+            } else {
+                answer.style.display = "block";
+                button.textContent = hideText;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // active window item (dummy)
+            const currentPage = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.ArabicH-window-item').forEach(item => {
+                if (item.getAttribute('href') === currentPage) item.classList.add('active');
+                else item.classList.remove('active');
+            });
+
+            // theme toggle
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.checked = true;
+                }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+
+            // PWA install button
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) manualInstallBtn.style.display = 'flex';
+            });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
