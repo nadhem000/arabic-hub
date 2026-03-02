@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسرحية "مراد الثالث" - الحبيب بولعراس | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#5f3b8c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="مراد الثالث">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Unique Purple‑Gold theme for modern tragedy lesson */
+        :root {
+            --primary-color: #5f3b8c;
+            --secondary-color: #8a5cb0;
+            --accent-color: #c9a86c;
+            --light-color: #f2e9ff;
+            --dark-color: #2c1a42;
+            --text-color: #2d1e3a;
+            --heading-color: #3b2355;
+            --background-color: #faf7ff;
+            --card-bg: #ffffff;
+            --definition-bg: #ede5ff;
+            --border-color: #b79fda;
+            --table-even-bg: #f0e8ff;
+            --table-hover-bg: #e0d1ff;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(95, 59, 140, 0.2);
+            --gradient-primary: linear-gradient(135deg, #5f3b8c 0%, #3b2355 100%);
+            --gradient-secondary: linear-gradient(135deg, #8a5cb0 0%, #5f3b8c 100%);
+            --gradient-accent: linear-gradient(135deg, #c9a86c 0%, #a57c4a 100%);
+            --gradient-light: linear-gradient(135deg, #f2e9ff 0%, #e0d1ff 100%);
+            --highlight-color: #b58a4b;
+            --highlight-bg: rgba(181, 138, 75, 0.1);
+            --poetry-bg: rgba(95, 59, 140, 0.08);
+            --poetry-border: #8a5cb0;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #8a5cb0;
+            --secondary-color: #c9a86c;
+            --accent-color: #e6d5b8;
+            --light-color: #2c1a42;
+            --dark-color: #130b1d;
+            --text-color: #ece3ff;
+            --heading-color: #f2e9ff;
+            --background-color: #1a1028;
+            --card-bg: #2c1a42;
+            --definition-bg: #3b2355;
+            --border-color: #8a5cb0;
+            --table-even-bg: #2c1a42;
+            --table-hover-bg: #3b2355;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+            --gradient-primary: linear-gradient(135deg, #8a5cb0 0%, #5f3b8c 100%);
+            --gradient-secondary: linear-gradient(135deg, #c9a86c 0%, #8a5cb0 100%);
+            --gradient-accent: linear-gradient(135deg, #e6d5b8 0%, #c9a86c 100%);
+            --gradient-light: linear-gradient(135deg, #2c1a42 0%, #1a1028 100%);
+            --highlight-color: #e6c28a;
+            --highlight-bg: rgba(230, 194, 138, 0.15);
+            --poetry-bg: rgba(138, 92, 176, 0.15);
+            --poetry-border: #c9a86c;
+        }
+
+        /* Page specific styles (inherits from main) */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-lesson-teacher {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Modern poem/drama text styling */
+        .ArabicH-poem-text {
+            font-size: 1.2rem;
+            font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-color);
+            margin: 20px 0;
+            padding: 25px;
+            background-color: var(--poetry-bg);
+            border-radius: var(--border-radius);
+            border-right: 4px solid var(--poetry-border);
+            text-align: right;
+            direction: rtl;
+            white-space: pre-wrap;
+        }
+
+        .ArabicH-drama-line {
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+        }
+        .ArabicH-drama-speaker {
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-left: 5px;
+        }
+        .ArabicH-stage-dir {
+            font-style: italic;
+            color: var(--secondary-color);
+            background: rgba(0,0,0,0.03);
+            padding: 0.2rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 0.5rem 0;
+        }
+
+        .ArabicH-poem-subhead {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem 0;
+            text-align: center;
+            border-bottom: 1px dashed var(--secondary-color);
+            padding-bottom: 0.3rem;
+        }
+
+        [data-theme="dark"] .ArabicH-poem-text {
+            color: #e0f2f2;
+        }
+
+        /* Exercise cards, questions, answers */
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-align: center;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+
+        .ArabicH-question {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 20px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-question-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+        }
+
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-right: auto;
+            margin-left: 0;
+        }
+
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        .ArabicH-knowledge-box {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 25px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-knowledge-box::before {
+            content: "💡";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        .ArabicH-knowledge-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .ArabicH-knowledge-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        .ArabicH-flower-decoration {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        /* Table styles */
+        .ArabicH-analysis-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            direction: rtl;
+        }
+        .ArabicH-analysis-table th {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 12px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .ArabicH-analysis-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: right;
+            background-color: var(--card-bg);
+        }
+        .ArabicH-analysis-table tr:nth-child(even) td {
+            background-color: var(--table-even-bg);
+        }
+        .ArabicH-analysis-table tr:hover td {
+            background-color: var(--table-hover-bg);
+        }
+        
+        /* Planning section style */
+        .ArabicH-planning-box {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 25px 0;
+            border-right: 4px solid var(--accent-color);
+        }
+        .ArabicH-planning-title {
+            color: var(--accent-color);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .ArabicH-planning-item {
+            margin-bottom: 1rem;
+            padding-right: 1.5rem;
+            border-right: 2px solid var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title { font-size: 2rem; }
+            .ArabicH-lesson-container { padding: 1.5rem; }
+            .ArabicH-poem-text { font-size: 1.1rem; padding: 20px; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main { padding: 1rem; }
+            .ArabicH-poem-text { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.literatureLesson.playTitle2">مسرحيّة "مراد الثالث" - الحبيب بولعراس</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.literatureLesson.playSubtitle2">المحور: المسرحيّة - مشهد "لن أستسلم للأقدار" (الكتاب المدرسي ص: 192)</p>
+
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header with real teacher/class info -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher"><span class="ArabicH-flower-decoration">❦</span> أستاذة العربيّة: غير محدّد <span class="ArabicH-flower-decoration">❦</span></div>
+                <div class="ArabicH-lesson-class"><span class="ArabicH-flower-decoration">✿</span> 3 آداب - مؤسّسة: غير محدّد <span class="ArabicH-flower-decoration">✿</span></div>
+            </div>
+
+            <!-- ========== التقديم (مقدمة النص) ========== -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">التقديم</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p><strong>الحبيب بولعراس</strong> كاتب مسرحي تونسي معاصر، تميزت أعماله بالعمق التاريخي والنفسي. مسرحية <strong>"مراد الثالث"</strong> تتناول سيرة أحد البايات العثمانيين بتونس، مسلطة الضوء على صراعاته الداخلية والخارجية. وهذا المشهد <strong>"لن أستسلم للأقدار"</strong> (من الموقفين الخامس والسادس) يمثل ذروة الصراع النفسي: مراد يستيقظ من كابوس مفزع، يسترجع طفولته الدامية، ويبرر قسوته، ثم ينتهي إلى إعلان التمرد على الأقدار.</p>
+                    <p><strong>تقسيم النص:</strong> قسمة ثلاثية: (1) الفزع من الحلم ومحاولة التهدئة، (2) استرجاع الماضي وتبرير القتل، (3) إعلان التمرد ورفض الاستسلام.<br>
+                    <strong>الموضوع:</strong> يعرض صراع مراد الداخلي مع الذنب والخوف والموت، وينتهي بتحدّي الأقدار والإصرار على مواصلة ما يراه طريق الحق.</p>
+                </div>
+            </div>
+
+            <!-- ========== النص (المقطع المسرحي) ========== -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">النص: "لن أستسلم للأقدار" من مسرحية "مراد الثالث"</h3>
+                <div class="ArabicH-poem-text">
+                    <div class="ArabicH-drama-line"><span class="ArabicH-drama-speaker">حمودة :</span> سيدي .. سيدي ... ماذا جرى؟</div>
+                    <div class="ArabicH-drama-line"><span class="ArabicH-drama-speaker">سعد :</span> ما بك سيدي ؟ لا بأس ؟</div>
+                    <div class="ArabicH-drama-line"><span class="ArabicH-drama-speaker">الحرّاس :</span> سيدنا .. سيدنا .. (علي يومئ مثلهم سائلا. يقف مراد فينظر حواليه فلا يرى شبحا)</div>
+                    <div class="ArabicH-drama-line"><span class="ArabicH-drama-speaker">مراد :</span> آه .. أنت؟ .. وأنت؟ .. آه .. ماذا جرى؟</div>
+                    <div class="ArabicH-drama-line"><span class="ArabicH-drama-speaker">حمودة :</span> سمعت صيحة فزع ففزعت.</div>
+                    <div class="ArabicH-drama-line"><span class="ArabicH-drama-speaker">مراد :</span> آه.هي العاصفة .. لقد غفوت لحظة</div>
+                    <div class="ArabicH-drama-line"><span class="ArabicH-drama-speaker">حمّودة :</span> العاصفة. أي عاصفة؟ .. لم تكن هناك عاصفة ولا رِيح.</div>
+                    <div class="ArabicH-drama-line"><span class="ArabicH-drama-speaker">مراد :</span> حينئذ كان حلما .. حلما مزعجا .. إنّه كان مزعجا .. إنّه كان مزعجا يا حمودة</div>
+                    <div class="ArabicH-drama-line"><span class="ArabicH-drama-speaker">حمودة :</span> سيدي عد إلى فراشك وسنبقى معك .. إن الفجر لم يطلع بعد .. استرح. استرح.</div>
+                    <div class="ArabicH-drama-line"><span class="ArabicH-drama-speaker">مراد:</span> أستريح. أنا .. وهل لي أن أستريح. وأنّى لي أن أستريح .. هكذا كُتب لي أن أعيش صغيرا ويافعا وكهلا .. سجينا وأميرا .. لا راحة ولا اطمئنان، مضطهدًا من الأحياء والأموات.</div>
+                    <div class="ArabicH-drama-line"><span class="ArabicH-drama-speaker">حمّودة :</span> الأموات؟. أي أموات .. تعال استرح سيدي وانْسَ أتعابك.</div>
+                    <div class="ArabicH-drama-line"><span class="ArabicH-drama-speaker">مراد :</span> وهل التعب يا حمودة إلاّ من نصيبي .. عشتُ يتيما .. عشت مشرَّدا .. تلقَفتني يدُ القدر رضيعا كانت ميادينُ القتال مسقط رأسي. تعلّمتُ أحبو بين أرجل جند أبي .. شهدت واقعة الكاف وأنا صبي، ورأيت فيها أشلاء أنصار والدي تتطاير فوق براميل البارود المتفجر، أشلاءَ فرج طرحان، وابن موسى خز ندار، ورأيتُ الدم يسيل غزيرا من مصطفى صبنيول وقد ذَبَح نفسه حتى لا يقع بين أيدي الأعداء .. لقد كانوا أوفياء لوالدي في نصرتهم له .. رأيتهم بعيني ولن أنساهم أليس الشقاء من نصيبي حتى قبل أن يقيدني عمي في سجنه يا حمودة؟</div>
+                    <div class="ArabicH-drama-line"><span class="ArabicH-drama-speaker">حمودة :</span> تعال استرح سيدي لقد أزعجك الحلم</div>
+                    <div class="ArabicH-drama-line"><span class="ArabicH-drama-speaker">مراد :</span> دعني .. دعوني وحدي (يشير إليهم جميعا بالخروج فيخرجون ويبقى حمّودة) لا .. حمودة دعني وحدي. إنّي لست متعبا (يخرج حمودة وهو يلتفت إلى مراد .. يتجه مراد إلى أريكته ويتلمس ستائرها وهو يقول) إلى أين ذهبوا؟ إلى أين؟ إنّه حلم. حلم كأنّه حياةٌ .. رأيتُهم وسمعتهم يضحكونِ ويُنشدون .. يَهزؤون بي. (يجول في القاعة) من أرسلهم إليّ؟ من؟ .. أ هو الشيطان عبث بعقلي أم أنّ الحسّ ضاع منّي؟ ليتهم كانوا أحياء لرأوا حدّ السيف يقطع الإفك والرّياء.لقد أراد القوم أن أقتَل أصحابَ رمضان باي ولا أطيل تعذيبهم فقتلتَهم. إنّهم يرفلون أشباحا في ثوب الطهارة الأبيض والطهر عنهم بعيد ... من أرسلهم إلي ؟ ولماذا تجمعوا حولي ؟ ألِيُعلموني أنّ سأموت يوما؟ إنّي أعلم علم اليقين أنّ الأعداء يحيطون بي وأنّ كلّ من حولي يكرهني .. ولكنّي لست نادما على ما فعلت .. لقد أردت أن أكون أمير الحقّ والعدل .. إن العدل في تعقب المجرمين والأشرارِ وكانوا كلّهمٍ أشرارا.لمْ أجازِ أحدا بغير ذنْبِه .. لم أحرض أحدا على الإذناب .. كنت أنا ضحيتهم قبل أن أفديَ بهم ثأرَ الحقّ .. أليس القدَر هو الذي اختارني سيفا للانتقام للحقّ المداس والحرمات المنتهكة؟</div>
+                    <div class="ArabicH-drama-line">ألم يستغثِ المُفتي محمّد فتاته برسول اللّه لِينتقمَ له من الذين قتلوا ابنَه؟. وهل كان الثأر على غيرِ يدي أنا؟ ألم يرَ كلّ الناس في ذلك آيةَ القدر المحتوم ؟ما للناس يُنكِرِون علي اليومَ ما فرحوا به أمسِ .. إنّهم كانوا يتوقعون مني القصاص من فئة دون فئة، ومن وحش الناس لا من الوجهاء .. نعم ... هذا الذي ساءهم منّي .. فتألّبوا عليّ جميعا الأحياء منهم والأموات .. الأحياءُ في اليقظة يتربصون بي الشرّ .. أقرأ مصيري في عيونهم في جبنهم وخنوعهم، كلما أمسكتُ بمَقْبَضِ سيفي ارتعدتْ لهم الفرائصُ ذُعرا .. أمّا الأمواتُ فإنَّهم يدِعونني للالتحاق بهم كأنّ لهم في الاستئناسِ إلى رغبةً. إنّي أطالعِ اليومِ، على صحائف وجوهِهم جميعا أنّ الأجل قريب (يدخل حمودة ولا يراه مراد) كأنَ الصراع الذي خضتُه ضد الباطلِ قد أشرف على النهاية، وكأنّ الحقّ الذي سخرني له القدَرُ واخْتَطّ سيفي له في الرقاب طريقًا أصبح في غنى عن سيفي إنِ السماء قبضت عنّي رحمتَها. وهاهو الأجل يقترب (يقترب حمودة بخطى وئيدة ويمضي مراد وكأنّه يتحدّث عنه) يقترب .. يقترب .. يقترب مني ولا يرهب سيفي.</div>
+                    <div class="ArabicH-drama-line"><span class="ArabicH-drama-speaker">حمودة :</span> سيدي .. سيدي ... سيدي ... بالله عليك ...</div>
+                    <div class="ArabicH-drama-line"><span class="ArabicH-drama-speaker">مراد :</span> (مَزمجرا شاهرا سيفَه) لا .. لن أستسلم للأقدار ... لن أستسلم لها وقد بعتها نفسي حين أخرجتني من المحبس .. لن أترك لأنصار الخداع والخيانة والمكر والغدر، سبيلا في الحياة .. لن أستسلم وأترك لهم سلطانا علي وعلى البلاد .. سوف يُدرِكُهم سيفي قبل أن يُدركوني .. سوف أقذف بهم إلى الجحيم قبل أن تمتد يدهم إلي .. وليقولوا إني فقدت صوابي .. إن لي مع الحياة حسابا وسأمضي في طريقي إلى النهاية .. الحساب .. الحساب .. الحساب.</div>
+                </div>
+                <div class="ArabicH-exercise-content" style="text-align: center; margin-top: 15px; color: var(--secondary-color); font-style: italic;">
+                    <strong>المصدر:</strong> الحبيب بولعراس – "مراد الثالث" (ص 104-107)، بتصرف.
+                </div>
+            </div>
+
+            <!-- ========== المهام (الأسئلة) ========== -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">المهام</h3>
+                <p style="text-align:right; margin-bottom:20px;"><strong>تعليمات:</strong> أجب/ي عن الأسئلة التّالية في فقراتٍ مُتكاملة.</p>
+                
+                <!-- Question 1 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- تدرّج النص من عرض الحلم وتصوير أثره، إلى إعلان التمرد والتحدي. بيّن ذلك.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer1" class="ArabicH-answer">
+                        <p>يبدأ المشهد بصيحة فزع واستيقاظ مراد من كابوس مربك، حيث يرتبك ويسأل عن أشباح رآها. ثم ينتقل إلى استرجاع طفولته الدامية (معارك الكاف، أشلاء الأنصار) ومعاناته الطويلة، ليعيد تبرير قسوته. في المقطع الأخير، يتحول من الخوف والقلق إلى موقف هجومي حاد يعلن فيه: «لا لن أستسلم للأقدار»، فيتمرد على الخوف ويقرر مواجهة مصيره بسيفه. هذا التدرج ينقل الشخصية من الانكسار النفسي إلى ذروة التحدي.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- استأثرت الشخصية المحورية بفعل التلفّظ. بيّن ذلك.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer2" class="ArabicH-answer">
+                        <p>يحتكر مراد أغلب الحوار في شكل مونولوج طويل متصل، بينما يقتصر كلام حمودة والحراس على جمل قصيرة متقطعة (مثل: "سيدي.. ماذا جرى؟"، "لا بأس؟"، "استرح"). هذا التوزيع اللغوي يكشف أن الفعل الدرامي يقوم أساساً على البوح الداخلي لمراد وتحليله لنفسه وماضيه، مما يعمق البعد النفسي ويركز الضوء على صراعه الوجودي.</p>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">3- ارصد الأفعال في مخاطبة مراد الأخيرة، وحدّد دورها في تطوّر الفعل الدرامي.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer3" class="ArabicH-answer">
+                        <p>تتكرر أفعال مثل: «لن أستسلم»، «لن أترك»، «سوف يُدركهم سيفي»، «سوف أقذف بهم»، «سأمضي في طريقي». هذه الأفعال المضارعة (التي تدل على الاستقرار) والنافية (لن) تضفي حركة وتصعيداً، وتنقل المسرحية من حالة الانكسار والخوف إلى ذروة الصراع والتمرّد. كما أن استخدام «سوف» للتوكيد يعزز إصراره على المواجهة، مما يدفع الفعل الدرامي نحو نهاية مأساوية محتملة.</p>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">4- صنّف حضور الشخصيات في النص حسب وظيفة كلٍّ منها في صنع الحدث الدرامي.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer4" class="ArabicH-answer">
+                        <p><strong>- مراد:</strong> شخصية محورية، مركز الحدث والصراع النفسي والسياسي.<br>
+                        <strong>- حمودة والحراس:</strong> شخصيات مساعدة، وظيفتها حماية الأمير ومساندته، وكشف اضطراب المحيطين به من خلال تعليقاتهم القصيرة.<br>
+                        <strong>- الأموات والضحايا والأشباح:</strong> شخصيات متخيَّلة/غائبة، تجسّد الماضي والذنب والقدر، وتشكّل الضغط النفسي الذي يطارد مراد، وهي المحرك الخفي لصراعه الداخلي.</p>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">5- بيّن دلالات استبداد الخيالات والأشباح بمراد.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer5')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer5" class="ArabicH-answer">
+                        <p>استبداد الأشباح به يدلّ على شعوره العميق بالذنب تجاه قتلاه، وخوفه من العقاب، وإحساسه بالوحدة والحصار من الأحياء والأموات معاً. هذا الاستبداد يبرز هشاشته النفسية رغم سلطته السياسية، ويكشف أن الماضي لا يغيب، بل يعود ليطارده في لحظات ضعفه. الأشباح تمثل صوت الضمير الذي يكتمه مراد في يقظته لكنه ينفجر في كوابيسه.</p>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">6- تتبّع سيرة المتلفّظ المحوري من خلال ضروب السرد (الاسترجاعي – الآني – الاستشرافي).</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer6')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer6" class="ArabicH-answer">
+                        <p><strong>- استرجاعي:</strong> يعود إلى طفولته اليتيمة (عشت يتيماً، مشرداً)، معارك الكاف (رأيت أشلاء أنصار والدي)، وإعدام خصومه (لقد أراد القوم أن أقتل أصحاب رمضان باي).<br>
+                        <strong>- آني:</strong> يصف حالته الآن في القصر: الكابوس، الفزع، حضور الحراس، حديثه مع حمودة، وإحساسه بأن الجميع يكرهونه (أقرأ مصيري في عيونهم).<br>
+                        <strong>- استشرافي:</strong> يتنبأ بقرب أجله (الأجل قريب)، وبأن سيفه سيدرك أعداءه (سوف يُدركهم سيفي)، ويرى أن صراعه مع الباطل شارف النهاية (كأن الصراع أشرف على النهاية).</p>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">7- بيّن وجوه الضعف والقوّة في شخصية مراد في حالتي الانكسار والتمرد، وحدّد ما به كانت شخصية تراجيدية.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer7')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer7" class="ArabicH-answer">
+                        <p><strong>- وجوه الضعف:</strong> شعور بالحصار (مضطهداً من الأحياء والأموات)، خوف من الأعداء، هواجس الأشباح، شك في نفسه (أهو الشيطان عبث بعقلي)، إحساس بالوحدة والموت القريب.<br>
+                        <strong>- وجوه القوّة:</strong> شجاعة (شاهراً سيفه)، اعتداد بالنفس (أمير الحق والعدل)، إيمان قوي برسالته في القصاص، رفض للاستسلام رغم اليقين بالخطر.<br>
+                        هو بطل تراجيدي لأنه نبيل المقصد في نظره (الدفاع عن الحق)، لكنه يرتكب "الخطأ المأسوي" حين يبالغ في العنف ولا يفرق بين المذنب والبريء، وهو واعٍ بسقوطه القادم (الأجل يقترب) ومع ذلك يمضي إلى مصيره بإرادة وعناد.</p>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">8- ما علاقة مراد بالقدر؟ وكيف تطوّرت من بداية النص إلى نهايته؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer8')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer8" class="ArabicH-answer">
+                        <p>في البداية يقدّم نفسه أداةً في يد القدر: «تلقفتني يد القدر رضيعا»، ويرى أن القدر اختاره «سيفاً للانتقام للحق» (أليس القدر هو الذي اختارني؟). ثم يتغيّر موقفه في النهاية فيتمرّد قائلاً: «لا... لن أستسلم للأقدار»، فيحاول أن يفرض إرادة الإنسان على ما يراه قدراً محتّماً. هذا التحوّل من الخضوع للقدر إلى التحدي يعكس صراعه الوجودي وإرادته في كتابة مصيره بنفسه.</p>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">9- بيّن الأبعاد السياسية والإنسانية في هذا المقطع الدرامي.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer9')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer9" class="ArabicH-answer">
+                        <p><strong>سياسياً:</strong> النص يلمّح إلى صراع على الحكم، ومحاسبة الوجهاء وأصحاب النفوذ لا الضعفاء فقط (يتوقعون مني القصاص من فئة دون فئة)، ورفض «أنصار الخداع والخيانة والمكر». كما يعكس استبداد الحاكم وانعزاله.<br>
+                        <strong>إنسانياً:</strong> يكشف عن معاناة حاكمٍ وحيد مثقل بالمسؤولية والدماء، ممزّق بين العدل والانتقام، يطارده ضميره وأشباح ضحاياه، فيظهر الإنسان الضعيف خلف صورة الأمير القوي. الحلم والأشباح تمنح النص بعداً إنسانياً عميقاً.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== التحرير: التخطير للمقال التحليلي (Planning) ========== -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التخطير: تصميم المقال التحليلي (التحرير)</h3>
+                <div class="ArabicH-planning-box">
+                    <div class="ArabicH-planning-title">🔸 خطة المقال: صراع مراد مع الأقدار – قراءة في المشهد</div>
+                    
+                    <div class="ArabicH-planning-item">
+                        <strong>◈ المقدمة:</strong> التعريف بالمسرحية والكاتب، تحديد موقع المشهد، عرض الإشكالية (كيف يجسّد النص صراع مراد مع الذنب والقدر والموت؟ وما الذي يضفيه ذلك من طابع تراجيدي؟).
+                    </div>
+                    
+                    <div class="ArabicH-planning-item">
+                        <strong>◈ الجسد: المستوى النفسي – البنية الدرامية – اللغة والرمز – البعد التراجيدي</strong><br>
+                        - <strong>أ. البناء الدرامي وتطور الصراع:</strong> (تقسيم المشهد إلى وحدات: الفزع – الاسترجاع – التمرد). الانتقال من الانكسار إلى التحدي.<br>
+                        - <strong>ب. الشخصيات ودلالاتها:</strong> مراد كشخصية محورية، حمودة كمرآة للخوف الجماعي، الأشباح كتجسيد للذنب والماضي.<br>
+                        - <strong>ج. اللغة والأساليب:</strong> المونولوج الداخلي، الأفعال المضارعة والنافية، الاستفهام الإنكاري، التكرار (يقترب، الحساب).<br>
+                        - <strong>د. علاقة مراد بالقدر:</strong> من الأداة المنفذة إلى المتمرّد الرافض. الصور الرمزية: السيف، الأشباح، الفجر، العاصفة.<br>
+                        - <strong>هـ. الطابع التراجيدي:</strong> الخطأ المأسوي، الصراع الداخلي، الوعي بالمصير والإصرار على المواجهة.
+                    </div>
+                    
+                    <div class="ArabicH-planning-item">
+                        <strong>◈ الخاتمة:</strong> تركيب النتائج: مراد بطل تراجيدي بامتياز، يجمع بين القسوة والهشاشة، والمشهد يطرح أسئلة وجودية عن العدل والذنب والإرادة الحرة. المشهد مرآة للسلطة المطلقة ووحدة صاحبها.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== التحرير: دراسة تحليلية موسعة (حوالي 100 سطر) ========== -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">التحرير: دراسة تحليلية لمشهد "لن أستسلم للأقدار"</h3>
+                
+                <div style="text-align: right; direction: rtl; line-height: 2; font-size: 1.1rem; color: var(--text-color);">
+                    
+                    <p>يُعدّ الحبيب بولعراس من أبرز الكتّاب المسرحيين التونسيين المعاصرين، وقد قدّم في مسرحيته "مراد الثالث" (التي تتناول سيرة أحد بايات تونس في العهد العثماني) نموذجاً للمسرح التاريخي النفسي، حيث يمتزج الواقع بالخيال، والتاريخ بالأسطورة، ليخلق عملاً درامياً عميقاً. والمشهد المختار "لن أستسلم للأقدار" (الموقفان الخامس والسادس) يمثل ذروة الصراع النفسي للبطل مراد، الذي يستيقظ من كابوس مفزع ليواجه أشباح ماضيه، ويسترجع طفولته الدامية، ثم يعلن تمرده على الأقدار التي يشعر أنها تحاصره. هذا المشهد يحمل في طياته أبعاداً نفسية وإنسانية وسياسية، تجعله مادة خصبة للتحليل.</p>
+
+                    <p>يبدأ المشهد بصيحة فزع تدوي في القصر، فيهرع الحاشية (حمودة، سعد، الحراس) ليطمئنوا على الأمير. مراد يبدو مشوشاً، يسأل عن أشباح رآها ثم يختلط عليه الأمر: «آه .. أنت؟ .. وأنت؟». حمودة يحاول تهدئته معتقداً أن عاصفة أيقظته، لكن مراد يدرك أنه كان حلماً «مزعجاً». هذا الافتتاح يخلق جواً من الغموض والتوتر، ويدفعنا للتساؤل: ما طبيعة هذا الكابوس؟ ولماذا يخاف مراد، صاحب السلطان، إلى هذا الحد؟ الجواب يتكشف تدريجياً عبر مونولوجه الطويل.</p>
+
+                    <p>في القسم الثاني، ينتقل مراد من وصف الحلم إلى استرجاع ماضيه الأليم. يصف نفسه بأنه عاش «يتيماً مشرداً»، وأن يد القدر تلقفته رضيعاً في ميادين القتال. يسترجع مشاهد دامية من طفولته: أشلاء أنصار والده تتطاير فوق براميل البارود، دماء مصطفى صبنيول الذي ذبح نفسه. هذا الاسترجاع ليس مجرد سرد، بل هو محاولة لتبرير قسوته الحالية: هو لم يختر هذا الطريق، بل فُرض عليه. حتى سجنه على يد عمه يؤكد له أن «الشقاء» كان نصيبه منذ البداية. هنا يظهر مراد كضحية للظروف والقدر، مما يثير بعض التعاطف معه رغم فظاعة أفعاله.</p>
+
+                    <p>لكن سرعان ما يتحول الخطاب من التبرير إلى الهجوم. يسأل مراد: «من أرسلهم إليّ؟»، في إشارة إلى الأشباح التي رأها في المنام. يتهم الشيطان بأنه عبث بعقله، ثم يعود ليشك في نفسه. هذه التقلبات تعكس حالة نفسية مضطربة. فجأة، يقفز إلى دفاع عن أفعاله: «لست نادماً على ما فعلت». يبرر قتل أصحاب رمضان باي بأنهم كانوا جميعاً أشراراً، وأنه لم يعاقب أحداً بغير ذنب. هنا يصل إلى ذروة التبرير حين يعلن أن القدر هو من اختاره «سيفاً للانتقام للحق المداس». يستشهد بحادثة المفتي محمد الذي استغاث برسول الله لينتقم لابنه، وكأنه يرى نفسه أداة إلهية لتنفيذ العدالة. هذا المزج بين القدرية والتبرير الذاتي يعقد شخصيته ويزيدها غنى.</p>
+
+                    <p>لكن المفارقة تكمن في أن هذا الإيمان بالقدر لا يدوم. فبعد أن يتأمل في نظرته إلى الأحياء (الذين يتربصون به) والأموات (الذين يدعونه للالتحاق بهم)، يصل إلى قناعة بأن «الأجل قريب». هنا يبدأ التحول الجذري. يدخل حمودة دون أن يراه مراد، ونسمع مراد يتحدث عن الصراع الذي أوشك على النهاية، وعن الحق الذي استغنى عن سيفه. ثم تتردد كلمة «يقترب» ثلاث مرات: «يقترب .. يقترب .. يقترب مني ولا يرهب سيفي». هذا التكرار يخلق إيقاعاً مأساوياً، وكأن الموت يخطو خطواته الثابتة نحو البطل.</p>
+
+                    <p>وفي اللحظة الأخيرة، حين يحاول حمودة مناداته، ينفجر مراد في خطاب التمرد: «لا .. لن أستسلم للأقدار». يرفض الاستسلام، ويقسم ألا يترك السلطة لـ«أنصار الخداع والخيانة». يتوعد بسيفه أن يدركهم قبل أن يدركوه. هذا الانفجار يأتي متناقضاً مع كل ما سبق: فهو بعد أن اعترف بقرب أجله، وبأن الحق استغنى عنه، وبأن الأعداء يحيطون به، يختار المواجهة المستحيلة. هذا التناقض هو جوهر التراجيديا: البطل يدرك سقوطه المحتوم لكنه يمضي نحوه بشجاعة وعناد.</p>
+
+                    <p>من الناحية اللغوية، يعتمد المشهد على مونولوج طويل متصل (حوالي 80% من النص) يهيمن عليه ضمير المتكلم، مما يعمق البعد الذاتي. الأساليب الإنشائية متنوعة: استفهامات إنكارية (أليس القدر؟ ألم يرَ الناس؟)، استفهامات حائرة (من أرسلهم؟ أهو الشيطان؟)، تكرار (مزعجا، يقترب، الحساب)، وأفعال مضارعة تدل على الاستمرار والتصميم (سأمضي، سوف يدركهم). اللغة قوية، جزلة، قريبة من الشعر في إيقاعها، مما يرفع من حدة التوتر الدرامي.</p>
+
+                    <p>الشخصيات في هذا المشهد تحمل دلالات رمزية. مراد يمثل السلطة المطلقة التي تخشى فقدان قبضتها، لكنه في الوقت نفسه إنسان يعاني ويرتجف. حمودة والحراس يمثلون الخضوع والولاء، لكن تعليقاتهم القصيرة تكشف عن خوفهم من الأمير ومن المصير. الأشباح هي الأكثر تعقيداً: إنها تجسيد للذنب، للماضي الذي لا يموت، للعدالة الغائبة التي تعود لتطالب بحقها. استبدادها بمراد يظهر أن السلطان لا يحمي من عذاب الضمير.</p>
+
+                    <p>أما علاقة مراد بالقدر، فهي محور المشهد. يبدأ مؤمناً بأنه أداة في يد القدر (تلقفتني يد القدر، اختارني القدر). لكنه في النهاية يعلن التمرد: «لن أستسلم للأقدار». هذا التحول جذري: من الخضوع إلى التحدي، من الجبرية إلى الإرادة. لكن السؤال: هل تمرده حقيقي أم مجرد صرخة يائسة قبل السقوط؟ النص يترك الباب مفتوحاً. ففي النهاية، يكرر «الحساب .. الحساب .. الحساب»، وكأنه يعلم أن الحساب آتٍ لا محالة، لكنه يريد أن يكون هو من يحدد زمانه.</p>
+
+                    <p>من الناحية السياسية، يقدم المشهد نقداً لاذعاً للسلطة المستبدة. مراد يعترف بأن «كل من حولي يكرهني»، وأن الأحياء يتربصون به. هذا العزل والكراهية هما نتيجة طبيعية للقمع والقتل. كما أن تبريره لقتل «الوجهاء» (وليس فقط الوحش من الناس) يشير إلى صراع النخب داخل الدولة. أما البعد الإنساني، فيتمثل في معاناة الإنسان تحت وطأة ذنبه، وفي حيرته الوجودية بين الجبر والاختيار.</p>
+
+                    <p>والبطل التراجيدي، كما نعرفه من أرسطو، هو شخصية نبيلة ترتكب خطأ مأساوياً يؤدي إلى سقوطها، لكنها تظل محتفظة بكرامتها وقدرتها على إثارة الشفقة والخوف. مراد ينطبق عليه هذا الوصف: إنه نبيل في نظره (أمير الحق والعدل)، وخطؤه المأساوي هو غلوّه في العنف وعدم تمييزه بين المذنب والبريء (قتلهم جميعاً). هو واعٍ بمصيره (الأجل قريب)، لكنه يمضي في طريقه بإصرار. هذا المزيج من القوة والضعف، من الغرور والهشاشة، يجعله شخصية تراجيدية خالدة.</p>
+
+                    <p>ويمكننا مقارنة هذا المشهد بمشاهد مماثلة في المسرح العالمي، مثل مشهد هاملت وهو يتأمل جمجمة يوريك، أو مشهد ماكبث وهو تطارده أشباح من قتلهم. لكن مراد يختلف عنهما في شرقيته وفي علاقته الخاصة بالقدر. فبينما يتساءل هاملت «أأكون أو لا أكون»، يصرخ مراد «لن أستسلم». الفرق بين التساؤل الفلسفي والتحدي الوجودي يعكس خصوصية الثقافة العربية التي تمجد الصمود حتى في وجه المستحيل.</p>
+
+                    <p>أخيراً، يمكن القول إن تحليل مشهد «لن أستسلم للأقدار» يكشف عن عبقرية الحبيب بولعراس في رسم شخصية مأساوية معقدة، تجمع بين الطموح والضعف، بين الإيمان بالقدر والرغبة في كسره. المشهد يدعونا إلى التأمل في طبيعة السلطة، وفي ثمن الدماء، وفي علاقة الإنسان بضميره وماضيه. إنه مشهد يترك في النفس أثراً عميقاً، ويذكرنا بأن أعظم المعارك هي تلك التي يخوضها الإنسان مع نفسه، في ظلمة الليل، حيث لا حارس يحميه ولا سيف ينصره.</p>
+
+                    <p>بهذا، يظل مشهد «لن أستسلم للأقدار» نموذجاً رفيعاً للمسرح الذهني النفسي العربي، وقمة من قمم الكتابة المسرحية التونسية. إنه نص يفرض نفسه على القارئ والمشاهد، ويدفعه إلى مشاركة البطل حيرته وخوفه وتمرده، ويذكّره بأن الإنسان، مهما علا شأنه، يبقى رهينة أحلامه وأشباحه.</p>
+                    
+                </div>
+                <!-- decorative line -->
+                <div style="margin-top: 20px; text-align: center;">
+                    <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                        <span class="ArabicH-flower-decoration">✎</span> 
+                        <span class="ArabicH-flower-decoration">✍</span> 
+                        <span class="ArabicH-flower-decoration">✎</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- navigation buttons -->
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_3SY_literature_module3_section1_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.previousLesson">الدرس السابق</a>
+                <a href="AH_3SY_literature_module3_section2_lesson2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+
+    <script>
+        // Translations for this lesson
+        window.translations_ArabicHLiteratureModule3Section2Lesson1 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.literatureLesson.playTitle2": "مسرحيّة \"مراد الثالث\" - الحبيب بولعراس",
+                "ArabicH.literatureLesson.playSubtitle2": "المحور: المسرحيّة - مشهد \"لن أستسلم للأقدار\" (الكتاب المدرسي ص: 192)",
+                "ArabicH.literatureLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.literatureLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.literatureLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.literatureLesson.previousLesson": "الدرس السابق",
+                "ArabicH.literatureLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.literatureLesson.playTitle2": "Play: \"Murat III\" - Habib Boularès",
+                "ArabicH.literatureLesson.playSubtitle2": "Module: Drama - Scene \"I will not surrender to fate\" (Textbook p. 192)",
+                "ArabicH.literatureLesson.showAnswer": "Show Answer",
+                "ArabicH.literatureLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.literatureLesson.backToHome": "Back to Homepage",
+                "ArabicH.literatureLesson.previousLesson": "Previous Lesson",
+                "ArabicH.literatureLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.literatureLesson.playTitle2": "Pièce: \"Murat III\" - Habib Boularès",
+                "ArabicH.literatureLesson.playSubtitle2": "Module: Théâtre - Scène \"Je ne me rendrai pas au destin\" (Manuel p. 192)",
+                "ArabicH.literatureLesson.showAnswer": "Afficher la réponse",
+                "ArabicH.literatureLesson.backToLessons": "Retour aux leçons",
+                "ArabicH.literatureLesson.backToHome": "Retour à l'accueil",
+                "ArabicH.literatureLesson.previousLesson": "Leçon précédente",
+                "ArabicH.literatureLesson.nextLesson": "Leçon suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHLiteratureModule3Section2Lesson1;
+    </script>
+
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            const showText = button.getAttribute('data-i18n-show') || 'إظهار الإجابة';
+            const hideText = button.getAttribute('data-i18n-hide') || 'إخفاء الإجابة';
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = showText;
+            } else {
+                answer.style.display = "block";
+                button.textContent = hideText;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // active window item (dummy)
+            const currentPage = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.ArabicH-window-item').forEach(item => {
+                if (item.getAttribute('href') === currentPage) item.classList.add('active');
+                else item.classList.remove('active');
+            });
+
+            // theme toggle
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.checked = true;
+                }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+
+            // PWA install button
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) manualInstallBtn.style.display = 'flex';
+            });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
