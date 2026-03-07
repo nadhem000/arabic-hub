@@ -469,6 +469,41 @@
 .ArabicH-language-lesson-link.disabled:hover {
     background: #cccccc;
 }
+
+/* Acknowledgment section */
+.ArabicH-acknowledgment {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.3rem;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    direction: inherit;
+}
+
+.ArabicH-acknowledgment .ack-icon {
+    font-size: 1.2rem;
+    margin-inline-end: 0.5rem;
+}
+
+.ArabicH-acknowledgment a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px dotted var(--primary-color);
+}
+
+.ArabicH-acknowledgment a:hover {
+    color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+}
 </style>
 </head>
 <body class="ArabicH-homepage">
@@ -526,6 +561,15 @@
         <span data-i18n="ArabicH.windows.resources">موارد</span>
     </a>
 </nav>
+
+<!-- Acknowledgment Section -->
+<div class="ArabicH-acknowledgment">
+    <span class="ack-icon">🙏</span>
+    <span data-i18n="ArabicH.index.acknowledgment.part1"></span>
+    <span data-i18n="ArabicH.index.acknowledgment.part2"></span>
+    <a href="https://arabyyati1s.blogspot.com/" target="_blank" rel="noopener" data-i18n="ArabicH.index.acknowledgment.blogName"></a>
+    <span data-i18n="ArabicH.index.acknowledgment.part3"></span>
+</div>
     
     <main class="ArabicH-homepage-main">
         <h1 class="ArabicH-homepage-title" data-i18n="ArabicH.index.title">مركز تعليم العربية</h1>
@@ -1895,6 +1939,12 @@
                 "ArabicH.index.comingSoon": "قريباً",
                 "ArabicH.index.viewLesson": "عرض الدرس",
                 
+                // Acknowledgment translations
+                "ArabicH.index.acknowledgment.part1": "تم الاستعانة بالعديد من المراجع في إعداد بعض الدروس. ستجد عادة في أعلى الصفحة المصدر الرئيسي للدرس، مع تعديل وتغيير كبير ليتوافق مع الموقع.",
+                "ArabicH.index.acknowledgment.part2": "أود أن أتقدم بالشكر هنا إلى",
+                "ArabicH.index.acknowledgment.blogName": "مدونة 'عربيتي'",
+                "ArabicH.index.acknowledgment.part3": "وصاحبتها الأستاذة فوزيّة الشّطّي، التي ساهمت مشاركاتها في إنجاز العديد من الدروس بنجاح.",
+                
                 // Year titles
                 "ArabicH.index.year1": "السنة الأولى ثانوي",
                 "ArabicH.index.year2": "السنة الثانية ثانوي",
@@ -2210,6 +2260,12 @@
                 "ArabicH.index.comingSoon": "Coming Soon",
                 "ArabicH.index.viewLesson": "View Lesson",
                 
+                // Acknowledgment translations
+                "ArabicH.index.acknowledgment.part1": "Many references were used in preparing some lessons. You will usually find at the top of the page the main source for the lesson, with significant modification and change to align with the site.",
+                "ArabicH.index.acknowledgment.part2": "I would like to extend my thanks here to the",
+                "ArabicH.index.acknowledgment.blogName": "'Arabiyati' blog",
+                "ArabicH.index.acknowledgment.part3": "and its author, Ms. Faouzia Chatti (فوزيّة الشّطّي), whose posts contributed to the successful completion of many lessons.",
+                
                 // Year titles
                 "ArabicH.index.year1": "First Year Secondary",
                 "ArabicH.index.year2": "Second Year Secondary",
@@ -2518,6 +2574,12 @@
                 "ArabicH.index.modalTestsTitle": "Tests d'Évaluation",
                 "ArabicH.index.comingSoon": "Bientôt disponible",
                 "ArabicH.index.viewLesson": "Voir la Leçon",
+                
+                // Acknowledgment translations
+                "ArabicH.index.acknowledgment.part1": "De nombreuses références ont été utilisées pour préparer certaines leçons. Vous trouverez généralement en haut de la page la source principale de la leçon, avec des modifications importantes pour s'aligner sur le site.",
+                "ArabicH.index.acknowledgment.part2": "Je tiens à remercier ici le",
+                "ArabicH.index.acknowledgment.blogName": "blog 'Arabiyati'",
+                "ArabicH.index.acknowledgment.part3": "et son auteure, Mme Faouzia Chatti (فوزيّة الشّطّي), dont les articles ont contribué à la réussite de nombreuses leçons.",
                 
                 // Year titles
                 "ArabicH.index.year1": "Première Année Secondaire",
