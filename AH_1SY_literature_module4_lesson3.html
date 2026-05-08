@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أدب: أقصوصة "الكراسي المقلوبة" لرضوان الكوني - الدرس الثالث | مركز تعليم العربية</title>
+
+    <meta name="theme-color" content="#4A6583">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="الكراسي المقلوبة">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <style>
+        :root {
+            --primary-color: #4A6583;
+            --secondary-color: #6B87A5;
+            --accent-color: #93ACC4;
+            --light-color: #F0F4F8;
+            --dark-color: #243447;
+            --text-color: #3D4A56;
+            --heading-color: #1C2834;
+            --background-color: #F7F9FB;
+            --card-bg: #ffffff;
+            --definition-bg: #E8EDF3;
+            --border-color: #D0DAE5;
+            --table-even-bg: #F0F4F8;
+            --table-hover-bg: #E8EDF3;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(74, 101, 131, 0.10);
+            --gradient-primary: linear-gradient(135deg, #4A6583 0%, #2E4053 100%);
+            --gradient-secondary: linear-gradient(135deg, #6B87A5 0%, #4A6583 100%);
+            --gradient-accent: linear-gradient(135deg, #93ACC4 0%, #6B87A5 100%);
+            --gradient-light: linear-gradient(135deg, #F0F4F8 0%, #E8EDF3 100%);
+            --highlight-color: #C0843D;
+            --highlight-bg: rgba(192, 132, 61, 0.08);
+            --story-bg: rgba(74, 101, 131, 0.06);
+            --story-border: #6B87A5;
+        }
+        [data-theme="dark"] {
+            --primary-color: #6B87A5;
+            --secondary-color: #93ACC4;
+            --accent-color: #B0C5D8;
+            --light-color: #243447;
+            --dark-color: #1C2834;
+            --text-color: #E8EDF3;
+            --heading-color: #F0F4F8;
+            --background-color: #1C2834;
+            --card-bg: #243447;
+            --definition-bg: #2E4053;
+            --border-color: #4A6583;
+            --table-even-bg: #243447;
+            --table-hover-bg: #2E4053;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+            --gradient-primary: linear-gradient(135deg, #6B87A5 0%, #4A6583 100%);
+            --gradient-secondary: linear-gradient(135deg, #93ACC4 0%, #6B87A5 100%);
+            --gradient-accent: linear-gradient(135deg, #B0C5D8 0%, #93ACC4 100%);
+            --gradient-light: linear-gradient(135deg, #243447 0%, #1C2834 100%);
+            --highlight-color: #D4A85C;
+            --highlight-bg: rgba(212, 168, 92, 0.15);
+            --story-bg: rgba(107, 135, 165, 0.12);
+            --story-border: #93ACC4;
+        }
+
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .ArabicH-lesson-teacher,
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+        .ArabicH-lesson-content {
+            margin: 30px 0;
+        }
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-align: center;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+        [data-theme="dark"] .ArabicH-exercise-title {
+            color: var(--accent-color);
+        }
+        .ArabicH-exercise-content {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        .ArabicH-rule-card {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%);
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-left: 6px solid var(--secondary-color);
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .ArabicH-rule-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        .ArabicH-rule-card::before {
+            content: "📘";
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        .ArabicH-rule-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            padding-left: 30px;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 8px;
+            position: relative;
+        }
+        [data-theme="dark"] .ArabicH-rule-title {
+            color: var(--accent-color);
+        }
+        .ArabicH-rule-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        .ArabicH-story-text {
+            font-size: 1.25rem;
+            font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 2.0;
+            color: var(--dark-color);
+            margin: 20px 0;
+            padding: 25px;
+            background-color: var(--story-bg);
+            border-radius: var(--border-radius);
+            border-right: 4px solid var(--story-border);
+            text-align: right;
+            direction: rtl;
+        }
+        .ArabicH-story-quote {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-right: 3px solid var(--accent-color);
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        }
+        [data-theme="dark"] .ArabicH-story-text {
+            color: #F0F4F8;
+            background-color: var(--story-bg);
+            border-right: 4px solid var(--story-border);
+        }
+        [data-theme="dark"] .ArabicH-story-quote {
+            background-color: rgba(36, 52, 71, 0.7);
+            color: #E8EDF3;
+        }
+        .ArabicH-vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            direction: rtl;
+        }
+        .ArabicH-vocab-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        .ArabicH-vocab-table td {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: right;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+        .ArabicH-vocab-table tr:nth-child(even) td {
+            background-color: var(--table-even-bg);
+        }
+        .ArabicH-vocab-table tr:hover td {
+            background-color: var(--table-hover-bg);
+        }
+        .ArabicH-question {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 20px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+        .ArabicH-question-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+        }
+        [data-theme="dark"] .ArabicH-question-title {
+            color: var(--accent-color);
+        }
+        .ArabicH-question-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+            margin-bottom: 15px;
+        }
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-right: auto;
+            margin-left: 0;
+        }
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--accent-color);
+        }
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+        }
+        .ArabicH-highlighted-quote {
+            background-color: var(--highlight-bg);
+            border-right: 4px solid var(--highlight-color);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: center;
+            direction: rtl;
+            font-weight: 500;
+            font-size: 1.3rem;
+        }
+        [data-theme="dark"] .ArabicH-highlighted-quote {
+            background-color: rgba(212, 168, 92, 0.15);
+            color: #F0F4F8;
+        }
+        .ArabicH-image-container {
+            text-align: center;
+            margin: 25px 0;
+        }
+        .ArabicH-image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            border: 3px solid var(--border-color);
+        }
+        .ArabicH-flower-decoration {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        .ArabicH-knowledge-box {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 25px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+        .ArabicH-knowledge-box::before {
+            content: "💡";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+        .ArabicH-knowledge-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+        [data-theme="dark"] .ArabicH-knowledge-title {
+            color: var(--accent-color);
+        }
+        .ArabicH-knowledge-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+        }
+        .ArabicH-analysis-section {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+        .ArabicH-analysis-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 8px;
+        }
+        [data-theme="dark"] .ArabicH-analysis-title {
+            color: var(--accent-color);
+        }
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title {
+                font-size: 2rem;
+            }
+            .ArabicH-lesson-subtitle {
+                font-size: 1.1rem;
+            }
+            .ArabicH-lesson-container {
+                padding: 1.5rem;
+            }
+            .ArabicH-lesson-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .ArabicH-rule-card {
+                padding: 1.2rem;
+            }
+            .ArabicH-rule-title {
+                font-size: 1.2rem;
+                padding-left: 25px;
+            }
+            .ArabicH-rule-card::before {
+                left: 12px;
+                top: 12px;
+                font-size: 1.1rem;
+            }
+            .ArabicH-story-text {
+                font-size: 1.15rem;
+                padding: 20px;
+                line-height: 1.9;
+            }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main {
+                padding: 1rem;
+            }
+            .ArabicH-lesson-title {
+                font-size: 1.6rem;
+            }
+            .ArabicH-exercise-card {
+                padding: 1rem;
+            }
+            .ArabicH-story-text {
+                font-size: 1.05rem;
+                line-height: 1.8;
+                padding: 15px;
+            }
+            .ArabicH-rule-card {
+                padding: 1rem;
+            }
+            .ArabicH-rule-title {
+                font-size: 1.1rem;
+                padding-left: 22px;
+            }
+            .ArabicH-rule-card::before {
+                left: 10px;
+                top: 10px;
+                font-size: 1rem;
+            }
+        }
+        [data-theme="dark"] p,
+        [data-theme="dark"] li,
+        [data-theme="dark"] div:not(.ArabicH-story-text) {
+            color: var(--text-color) !important;
+        }
+        [data-theme="dark"] strong {
+            color: var(--accent-color);
+        }
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container"><a href="index.html"><img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt"></a></div>
+            <div class="ArabicH-general-title-container"><h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1></div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label"><span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span><div class="ArabicH-theme-toggle-switch"><input type="checkbox" id="themeToggle"><span class="ArabicH-theme-toggle-slider"></span></div></label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect"><option value="ar">العربية</option><option value="en">English</option><option value="fr">Français</option></select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">🏠</span><span data-i18n="ArabicH.windows.home">الرئيسية</span></a>
+        <a href="authors.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">👨‍🎓</span><span data-i18n="ArabicH.windows.authors">ادباء</span></a>
+        <a href="quotes.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📖</span><span data-i18n="ArabicH.windows.quotes">شواهد</span></a>
+        <a href="resources.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📚</span><span data-i18n="ArabicH.windows.resources">موارد</span></a>
+    </nav>
+
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.literatureLesson.storyTitle">أقصوصة "الكراسي المقلوبة" لرضوان الكوني</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.literatureLesson.storySubtitle">الدرس الثالث: تحليل أقصوصة "الكراسي المقلوبة" من مجموعة "الكراسي المقلوبة" – 1973</p>
+
+        <div class="ArabicH-lesson-container">
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher"><span class="ArabicH-flower-decoration">❦</span> الاستاذ: غير معروف <span class="ArabicH-flower-decoration">❦</span></div>
+                <div class="ArabicH-lesson-class"><span class="ArabicH-flower-decoration">✿</span> المعهد: غير معروف <span class="ArabicH-flower-decoration">✿</span></div>
+            </div>
+
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">التقديم</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p>تُعدّ أقصوصة "الكراسي المقلوبة" للكاتب التونسي رضوان الكوني نصاً قصصياً رمزياً مكثفاً، ينتمي إلى الأدب الواقعي الناقد، ويوظف تقنيات السرد الحديثة لتفكيك آليات التنافس على السلطة في المجتمع. تصوّر الأقصوصة مشهدين بارزين: الأول في الشارع والبطحاء حيث قلبت الرياح الكراسي، والثاني في المدرج حيث يتنافس الصبية على الكراسي عبر التملق لصبي ثري. ومن خلال هذه اللوحات، يبني الكوني نصاً يتجاوز حدود الحكاية إلى التأمل في طبيعة الصراع الاجتماعي والسياسي.</p>
+                    <p>يجمع النص بين براعة الأسلوب الرمزي وعمق الرؤية النقدية، محولاً لعبة الأطفال البريئة إلى مرآة ساخرة تعكس عبثية التنافس على السلطة، وانعدام العدالة، وهيمنة منطق التملق على حساب الكفاءة والجدارة.</p>
+                </div>
+            </div>
+
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">📖 معلومات عن الكاتب</h3>
+                <div class="ArabicH-knowledge-content">
+                    <ul>
+                        <li><strong>الاسم:</strong> رضوان الكوني</li>
+                        <li><strong>الجنسية:</strong> تونسي</li>
+                        <li><strong>الميلاد:</strong> 13 مايو 1945 – الرقبة (تطاوين)</li>
+                        <li><strong>التعليم:</strong> التعليم الابتدائي والثانوي في تونس العاصمة، شهادة ختم الدروس الترشيحية سنة 1966، إجازة في اللغة والآداب العربية سنة 1969، شهادة الكفاءة في البحث من جامعة باريس سنة 1975.</li>
+                        <li><strong>المسار المهني:</strong> أستاذ في المعاهد الثانوية، مدير معهد ثانوي، متفقد للتعليم الثانوي ابتداءً من سنة 1985.</li>
+                        <li><strong>النشاط الثقافي:</strong> عضو نادي القصة منذ 1976، عضو اتحاد الكتاب منذ 1980.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">📚 مؤلفات الكاتب</h3>
+                <div class="ArabicH-knowledge-content">
+                    <ul>
+                        <li><strong>الكراسي المقلوبة</strong> (قصص) – الشركة التونسية للتوزيع، تونس، 1973</li>
+                        <li><strong>النفق</strong> (قصص) – منشورات مجلة قصص، تونس، 1983</li>
+                        <li><strong>الكتابة القصصية في تونس</strong> – منشورات قصص تونس، 1994</li>
+                        <li><strong>رأس الدرب</strong> (رواية) – سعيدان للنشر، 1994</li>
+                        <li><strong>صهيل الرمان</strong> (رواية) – الشركة التونسية للنشر، 1998</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">📚 معلومات عن النص</h3>
+                <div class="ArabicH-knowledge-content">
+                    <ul>
+                        <li><strong>العنوان:</strong> الكراسي المقلوبة</li>
+                        <li><strong>الكاتب:</strong> رضوان الكوني</li>
+                        <li><strong>الناشر:</strong> الشركة التونسية للتوزيع، تونس، 1973</li>
+                        <li><strong>النوع الأدبي:</strong> أقصوصة (قصة قصيرة) تنتمي إلى الأدب الواقعي الرمزي الناقد.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ArabicH-image-container">
+                <img src="assets2/year1/litterature/image3.png" alt="صورة توضيحية لأقصوصة الكراسي المقلوبة" onerror="this.style.display='none'">
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">ملخص الأقصوصة</h3>
+                <div class="ArabicH-story-text">
+                    <p>تدور أحداث الأقصوصة حول السارد الذي يخرج من بيته منهكاً مكدوداً، فيجوب الشوارع والبطحاء حيث عصفت الرياح بالكراسي وقلبتها رأساً على عقب. يلجأ إلى مقهى فيجلس على كرسي مقلوب بعد أن كانت جميع الكراسي مقلوبة ما عدا كرسياً خلف المشرب. ثم ينتقل إلى المدرج حيث يشاهد مشهداً عجيباً: مجموعة من الصبية يتنافسون على الكراسي عبر التملق لصبي يبدو عليه الثراء، جالس على كرسي مرتفع. يحاول كل صبي أن يتقرب من "الصبي العالي" بعبارات المدح والثناء طمعاً في الفوز بكرسي. تنتهي اللعبة بأن يتقدم الجميع وينطقوا بنفس العبارة في آن واحد ("يا أعظم ملك في الدنيا، أرجو أن تجيزني بما تحلم به")، فلا يفوز أحد، في مشهد يكشف عبثية التنافس على السلطة حين يتحول الجميع إلى نسخ مكررة من التملق.</p>
+                    <p style="text-align: center; margin-top: 20px; color: var(--secondary-color);"><strong>المصدر:</strong> رضوان الكوني، "الكراسي المقلوبة"، الشركة التونسية للتوزيع، تونس، 1973</p>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">شرح المفردات</h3>
+                <div class="ArabicH-table-container">
+                    <table class="ArabicH-vocab-table">
+                        <thead><tr><th width="30%">المفردة</th><th width="70%">الشرح</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>أجرجر</strong></td><td>أسحب بتعب ومشقة، أمشي بثقل وإعياء</td></tr>
+                            <tr><td><strong>مكدوداً</strong></td><td>متعباً مرهقاً، من الكدّ وهو التعب الشديد</td></tr>
+                            <tr><td><strong>البطحاء</strong></td><td>الأرض المنبسطة الواسعة، المكان المكشوف</td></tr>
+                            <tr><td><strong>المشرب</strong></td><td>مكان تقديم المشروبات في المقهى، المنضدة الرئيسية</td></tr>
+                            <tr><td><strong>المدرج</strong></td><td>مكان متسع بصفوف متدرجة، مثل مدرجات المسارح والملاعب</td></tr>
+                            <tr><td><strong>الكراسي المقلوبة</strong></td><td>الكراسي المنكوسة رأساً على عقب، ترمز لانقلاب الأحوال واضطراب النظام</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أسئلة الفهم – أفهم</h3>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- تشكّلت أحداث الأقصوصة في لوحتين كبيرتين. ما هي حدود كلّ لوحة؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer1" class="ArabicH-answer">
+                        <p><strong>اللوحة الأولى:</strong> تبدأ من وصف السارد لحالته النفسية والجسدية في الشارع والبطحاء، حيث الريح والعاصفة، وصولاً إلى دخوله المقهى وجلوسه على الكرسي المقلوب الوحيد خلف المشرب. حدودها المكانية: الشارع → البطحاء → المقهى.</p>
+                        <p><strong>اللوحة الثانية:</strong> مشهد الأطفال في المدرج وهم يتنافسون على الكراسي ويتسابقون في التملق للصبي صاحب الملابس الفاخرة الجالس على كرسي مرتفع، وصولاً إلى النهاية حيث ينطق الجميع بنفس العبارة فلا يفوز أحد. حدودها المكانية: المدرج بصفوفه.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- ما هي أوجه الائتلاف وأوجه الاختلاف بين عناصر اللوحة الأولى وعناصر اللوحة الثانية؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer2" class="ArabicH-answer">
+                        <p><strong>أوجه الائتلاف:</strong></p>
+                        <ul>
+                            <li>حضور الكراسي كرمز مركزي في كلا اللوحتين.</li>
+                            <li>وجود حركة جماعية مضطربة: الريح في الأولى، الصبية في الثانية.</li>
+                            <li>سيطرة جو نفسي مشحون بالتوتر والانقلاب.</li>
+                            <li>حضور السارد كمراقب ومتأمل للمشهدين.</li>
+                        </ul>
+                        <p><strong>أوجه الاختلاف:</strong></p>
+                        <ul>
+                            <li>اللوحة الأولى يغلب عليها وصف الطبيعة والفضاء الخارجي (الريح، العاصفة، البطحاء)، بينما الثانية يغلب عليها الحوار والتنافس الاجتماعي الرمزي.</li>
+                            <li>الأولى صامتة تعتمد الوصف، والثانية صاخبة تعتمد الحوار.</li>
+                            <li>الأولى تعكس انقلاباً قسرياً بفعل الطبيعة، والثانية تعكس انقلاباً إرادياً بفعل البشر.</li>
+                            <li>الأولى فردية (السارد وحده)، والثانية جماعية (الصبية والمتفرجون).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">3- ما موضوع الحوار ومن أطرافه؟ وما النسق الذي اختاره له السارد؟ (سريع – حاد – بطيء – متصاعد – منحدر)</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer3" class="ArabicH-answer">
+                        <p><strong>أطراف الحوار:</strong> الصبي الجالس على الكرسي المرتفع (الصبي العالي/الحاكم) من جهة، وصبيان المدرج والمتفرجون من جهة أخرى.</p>
+                        <p><strong>موضوع الحوار:</strong> التملق والتودد للحصول على امتيازات مادية ومعنوية (التقدم بالكرسي والحصول على الجائزة). وهو حوار يكشف آليات الوصول إلى السلطة عبر التذلل لا عبر الكفاءة.</p>
+                        <p><strong>النسق:</strong> <strong>متصاعد</strong> – يبدأ الحوار بلطف ومجاملة ("أجيزك بما تحلم به")، ثم يتحول تدريجياً إلى صراع جماعي محتدم وتنافس حاد، حتى يبلغ ذروته حين ينطق الجميع بنفس العبارة في وقت واحد، فينحدر النسق فجأة إلى العبث والفراغ.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">4- تشكّلت الفضاءات في الأقصوصة وفق ثنائيتين بارزتين هما: الداخل والخارج من جهة والضيق والسعة من جهة ثانية. ما دور السارد في تشكّلهما؟ وما أثرهما في نفسه؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer4" class="ArabicH-answer">
+                        <p><strong>ثنائية الداخل والخارج:</strong></p>
+                        <ul>
+                            <li><strong>الخارج:</strong> الشارع والبطحاء – فضاء مكشوف تعصف به الرياح، يرمز للانكشاف والاضطراب والتهديد.</li>
+                            <li><strong>الداخل:</strong> المقهى والمدرج – فضاءات مغلقة نسبياً، ترمز للانغلاق الاجتماعي والصراع الخفي.</li>
+                        </ul>
+                        <p><strong>ثنائية الضيق والسعة:</strong></p>
+                        <ul>
+                            <li><strong>السعة:</strong> البطحاء والمدرج – فضاءات واسعة لكنها لا تمنح حرية حقيقية.</li>
+                            <li><strong>الضيق:</strong> المقهى والكرسي – فضاءات ضيقة خانقة تعكس انحصار الذات.</li>
+                        </ul>
+                        <p><strong>دور السارد:</strong> يصف بدقة متناهية انتقاله بين هذه الفضاءات، مما يعكس ضيقه النفسي وتعبه الوجودي. التنقل بين الفضاءات ليس مجرد حركة جغرافية بل هو تجسيد لرحلة نفسية من الإرهاق إلى التأمل، ومن العزلة إلى مراقبة الجماعة.</p>
+                        <p><strong>أثرها في نفسه:</strong> تعمق الإحساس بالاغتراب والإنهاك، وتبرز التناقض بين الانغلاق الداخلي والانفتاح الخارجي، مما يضاعف من حدة التوتر النفسي.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">5- ماذا نقل السارد من أعمال الشخصيات وأقوالها؟ هل كان في الموقع الذي يسمح له بنقل ما تمّ نقله؟ علّل جوابك ثم استخلص نوع هذا السارد.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer5')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer5" class="ArabicH-answer">
+                        <p><strong>ما نقله السارد:</strong> نقل أقوال الأطفال وأفعالهم بدقة بالغة، بما في ذلك حواراتهم الكاملة، حركاتهم (التقدم، التراجع، التملق)، وانفعالاتهم. كما نقل تفاصيل المكان (المقهى، المدرج) والزمان (لحظة العاصفة، لحظة التنافس).</p>
+                        <p><strong>موقعه من الأحداث:</strong> يبدو السارد مراقباً خارجياً يقف على مسافة من الأحداث، لكنه في الوقت نفسه يملك معرفة داخلية عميقة بما يجري في نفوس الشخصيات وما يدور من حوارات. هذا الموقع المزدوج (خارجي/داخلي) يمنحه قدرة فريدة على الوصف والتحليل.</p>
+                        <p><strong>نوع السارد:</strong> <strong>سارد عليم</strong> (التبئير الصفر) – فهو يعرف كل شيء: الأفعال، الأقوال، الأفكار، والمشاعر. يتجاوز معرفته ما تعرفه الشخصيات عن نفسها، وينتقل بحرية بين الفضاءات المختلفة. هذا النوع من السرد يمنح النص موضوعية ظاهرية وعمقاً تحليلياً.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">6- ما هي عوامل انقلاب الكراسي وما الفرق بين هذه العوامل؟ ابحث في الدلالات الرمزية لهذه العوامل.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer6')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer6" class="ArabicH-answer">
+                        <p><strong>العامل الأول – الطبيعي (الخارجي القهري):</strong> الريح والعاصفة التي قلبت الكراسي في البطحاء. هذا العامل قسري لا إرادي، خارج عن سيطرة الإنسان، يمثل قوى الطبيعة والقدر التي تقلب الأحوال دون تدخل بشري.</p>
+                        <p><strong>العامل الثاني – الاجتماعي (الداخلي البشري):</strong> التنافس على السلطة والمكانة والجاه بين الصبية في المدرج. هذا العامل إرادي ناتج عن الطمع والطموح والصراع الاجتماعي.</p>
+                        <p><strong>الفرق بين العاملين:</strong> الأول خارجي قهري لا دخل للإنسان فيه، والثاني داخلي بشري ناتج عن إرادة الإنسان ونوازعه. الأول يعكس هشاشة النظام أمام الطبيعة، والثاني يعكس فساد النظام من داخله.</p>
+                        <p><strong>الدلالات الرمزية:</strong></p>
+                        <ul>
+                            <li>الكراسي ترمز للسلطة والمناصب والجاه.</li>
+                            <li>انقلابها الطبيعي يرمز لزلزلة السلطة بفعل قوى خارجة عن السيطرة (ثورات، كوارث).</li>
+                            <li>انقلابها الاجتماعي يرمز لفساد آليات تداول السلطة، حيث يصعد غير الأكفاء عبر التملق.</li>
+                            <li>الكرسي المقلوب يرمز لانعدام الاستقرار وضياع المعايير.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">7- ما رأيك في خاتمة الأقصوصة؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer7')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer7" class="ArabicH-answer">
+                        <p>الخاتمة بارعة ومفارقة ساخرة بامتياز: حين يتقدم الجميع وينطقون بنفس العبارة في وقت واحد، لا يفوز أحد. هذه النهاية تكشف عبثية التنافس على السلطة حين يتحول الجميع إلى نسخ مكررة من التملق، فتفقد المنافسة معناها وينهار النظام القائم على المحسوبية. الخاتمة تحمل دلالة عميقة: الصراع على الكراسي في مجتمع يفتقر إلى معايير عادلة ينتهي إلى الفراغ واللاجدوى. كما أنها تترك القارئ في حالة تأمل ساخر: الجميع يرددون نفس الكلمات، فلا يتميز أحد، وهذا هو جوهر النقد الاجتماعي في الأقصوصة.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">💬 أسئلة نقاشية – أناقش</h3>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">لو اعتبرنا السارد رمزاً لفئة المثقفين الواعين، فبمَ تفسّر اكتفاءه بالفُرجة على حركة الناس في كلّ من المقهى والبطحاء؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer8')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer8" class="ArabicH-answer">
+                        <p>اكتفاء السارد بالمشاهدة يعكس موقف المثقف الذي يعي الواقع ويفهم تناقضاته بعمق، لكنه يقف عاجزاً أو خائفاً أو محبطاً من التدخل. قد يكون هذا الموقف ناتجاً عن:</p>
+                        <ul>
+                            <li>الإحساس بالعجز أمام قوى أكبر (الطبيعة، السلطة، التقاليد).</li>
+                            <li>الخوف من الانخراط في صراع قد يفقده موقعه المحايد.</li>
+                            <li>الاقتناع بأن دور المثقف هو الرصد والتحليل لا الفعل المباشر.</li>
+                            <li>الإحباط من جدوى أي تدخل في واقع لا يتغير.</li>
+                        </ul>
+                        <p>هذا الموقف يحمل نقداً ضمنياً لدور المثقف السلبي الذي يكتفي بالتأمل دون أن يتحول إلى فاعل في تغيير الواقع.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">من المثقفين من يتعالى على المجتمع وينقطع إلى العلم والثقافة، ومنهم من يرى رسالة المثقف في الانخراط في المجتمع والقيام بدور الريادة في تغييره وإصلاحه. فأي الموقفين أسلم في نظرك؟ علّل جوابك.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer9')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer9" class="ArabicH-answer">
+                        <p><strong>الموقف الأسلم:</strong> الانخراط في المجتمع والقيام بدور الريادة في التغيير والإصلاح هو الأسلم والأكثر فاعلية. فالمثقف الذي ينعزل عن مجتمعه يفقد صلته بالواقع، وتتحول معرفته إلى ترف فكري غير منتج. أما المثقف المنخرط فيستطيع:</p>
+                        <ul>
+                            <li>توجيه المجتمع نحو القيم العادلة.</li>
+                            <li>تفكيك الخطابات المضللة وكشف الفساد.</li>
+                            <li>تحويل المعرفة إلى أداة للتغيير الإيجابي.</li>
+                            <li>بناء جسور بين الفكر والواقع المعيش.</li>
+                        </ul>
+                        <p>لكن الانخراط لا يعني فقدان الاستقلال الفكري؛ فالمثقف الحقيقي هو من يحتفظ بمسافة نقدية تمكنه من التحليل الموضوعي حتى وهو في قلب المجتمع.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">لماذا يتنافس الناس على الكراسي؟ ومتى يكون هذا التنافس شريفاً؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer10')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer10" class="ArabicH-answer">
+                        <p><strong>أسباب التنافس على الكراسي:</strong> يتنافس الناس على الكراسي لأنها ترمز إلى السلطة، الجاه، النفوذ، والمكانة الاجتماعية. الكرسي يمنح صاحبه امتيازات مادية ومعنوية، ويضعه في موقع يمكنه من التحكم في غيره.</p>
+                        <p><strong>متى يكون التنافس شريفاً؟</strong> يكون التنافس شريفاً حين يرتبط بـ:</p>
+                        <ul>
+                            <li><strong>الكفاءة والجدارة:</strong> أن يصل الشخص إلى الكرسي لأنه الأقدر على تحمل المسؤولية.</li>
+                            <li><strong>العدالة وتكافؤ الفرص:</strong> أن تتاح للجميع فرصة المنافسة دون محسوبية.</li>
+                            <li><strong>خدمة الصالح العام:</strong> أن يكون هدف الوصول إلى الكرسي هو الإصلاح وخدمة المجتمع لا تحقيق المكاسب الشخصية.</li>
+                            <li><strong>النزاهة:</strong> أن تتم المنافسة بوسائل شريفة دون تملق أو غش أو استغلال للنفوذ.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">📝 تدريبات</h3>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- حوّل المقاطع التي وردت في شكل خطاب مباشر إلى خطاب غير مباشر وغيِّر ما يجب تغييره.</h4>
+                    <div class="ArabicH-question-content">
+                        <p><strong>المثال:</strong> قال الصبي العالي: "أجيزك بما تحلم به."<br>→ قال الصبي العالي إنه سيجيزه بما يحلم به.</p>
+                    </div>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer11')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer11" class="ArabicH-answer">
+                        <p><strong>تحويلات إضافية:</strong></p>
+                        <ul>
+                            <li>قال الصبي: "يا أعظم ملك في الدنيا."<br>→ نادى الصبي الصبيَّ العالي معتبراً إياه أعظم ملك في الدنيا.</li>
+                            <li>قال الصبي العالي: "ماذا تريد؟"<br>→ سأل الصبي العالي الصبيَّ ماذا يريد.</li>
+                            <li>قال الصبي: "أرجو أن تجيزني."<br>→ قال الصبي إنه يرجو أن يجيزه.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- لو طلبت إدارة المدرسة أن يمثّل تلاميذ كل فصل تلميذ في مجلس من المجالس. ما الطريقة التي تراها لاختيار هذا المسؤول؟ وكيف يكون التداول على المسؤولية؟ حرّر في ذلك خمسة أسطر.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer12')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer12" class="ArabicH-answer">
+                        <p>الطريقة الأنسب لاختيار ممثل الفصل هي الانتخاب الديمقراطي المباشر بين التلاميذ، حيث يرشح كل تلميذ نفسه أو يرشحه زملاؤه، ثم تُجرى انتخابات سرية نزيهة تحت إشراف المعلم. أما التداول على المسؤولية فيكون دورياً كل فصل دراسي، بحيث لا يحق للممثل أن يشغل المنصب لفترتين متتاليتين. هذا يضمن مشاركة أوسع للتلاميذ في تحمل المسؤولية، وينمي روح القيادة لدى الجميع، ويمنع احتكار التمثيل من قبل فئة قليلة. كما يعزز هذا النظام قيم الديمقراطية والشفافية والعدالة في الوسط المدرسي.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">📚 أنشطة لغوية ومعجمية</h3>
+
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">بمناسبة هذا البحث</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>اذكر - بالاستعانة بما درست في مادتي التاريخ والتربية المدنية - أنظمة الحكم في العالم وكيفية التداول على السلطة في بعض البلدان.</p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer13')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer13" class="ArabicH-answer">
+                            <p><strong>أنظمة الحكم في العالم:</strong></p>
+                            <ul>
+                                <li><strong>النظام الديمقراطي:</strong> يتداول فيه المواطنون على السلطة عبر انتخابات حرة ونزيهة (مثل: تونس، فرنسا، الولايات المتحدة).</li>
+                                <li><strong>النظام الملكي الدستوري:</strong> يحكم فيه الملك وفق دستور، وتُدار الحكومة عبر انتخابات (مثل: المملكة المتحدة، إسبانيا، المغرب).</li>
+                                <li><strong>النظام الملكي المطلق:</strong> تتركز السلطة بيد الملك وحده دون تداول انتخابي.</li>
+                                <li><strong>النظام الرئاسي:</strong> ينتخب فيه الرئيس مباشرة من الشعب ويجمع بين رئاسة الدولة والحكومة.</li>
+                                <li><strong>النظام البرلماني:</strong> تنتخب فيه الحكومة من الأغلبية البرلمانية.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المعنى المصاحب</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>ما هي المعاني المصاحبة لكلمتي "كرسي" و"السيد"؟</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer14')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer14" class="ArabicH-answer">
+                            <p><strong>كرسي:</strong> يصاحبه معاني: السلطة، الحكم، المنصب، المكانة، الجاه، الاستقرار، السيطرة، الهيمنة. وفي السياق السلبي: الاحتكار، الإقصاء، الفساد.</p>
+                            <p><strong>السيد:</strong> يصاحبه معاني: السيادة، الهيمنة، الرياسة، الاحترام، التبجيل، الطاعة، الامتثال. وفي السياق السلبي: الاستبداد، التسلط، الخضوع.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المعجم</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>اشرح: أجرجر – مكدوداً</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer15')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer15" class="ArabicH-answer">
+                            <table class="ArabicH-vocab-table">
+                                <thead><tr><th width="30%">الكلمة</th><th width="70%">المعنى</th></tr></thead>
+                                <tbody>
+                                    <tr><td><strong>أجرجر</strong></td><td>أسحب بتعب ومشقة، من الجرّ وهو السحب بثقل. يُقال: جرجر رجليه إذا مشى متثاقلاً من التعب.</td></tr>
+                                    <tr><td><strong>مكدوداً</strong></td><td>متعباً مرهقاً منهك القوى، من الكدّ وهو العمل الشاق المتواصل الذي ينهك الجسد.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تعبير</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>تعاون مع بعض رفاقك على تشخيص لعبة الكراسي بعد حفظ الحوار وإعداد الفضاء اللازم.</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer16')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer16" class="ArabicH-answer">
+                            <p>يمكن إعداد مشهد تمثيلي يحاكي لعبة الكراسي في الأقصوصة: يُخصص كرسي مرتفع للصبي العالي، وتُوزع بقية الكراسي في المدرج. يتحرك الصبية باتجاه الكرسي العالي وهم يرددون عبارات التملق الواردة في النص، حتى يصل الجميع إلى نفس العبارة في وقت واحد. يمكن إضافة لمسات مسرحية كالإضاءة والموسيقى لتعزيز الجو الرمزي للمشهد.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">🌟 ومضة لغوية</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تصريف الأفعال المعتلة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>"وبَقُوا ينتظرون الجائزة"</p>
+                        <ul>
+                            <li><strong>بَقُوا:</strong> فعل ماض مسند إلى ضمير الغائبين.</li>
+                            <li><strong>بَقِيَ:</strong> فعل ماض مسند إلى ضمير الغائب، وزنه (فَعِلَ).</li>
+                            <li>في المضارع: هم يَبْقَوْنَ – هو يَبْقَى على وزن يَفْعَلُ.</li>
+                        </ul>
+                        <p><strong>أوزان الأفعال:</strong></p>
+                        <ul>
+                            <li><strong>سَعَى</strong> وزنه (فَعَلَ) – يَسْعَى وزنه (يَفْعَلُ) – هم سَعَوْا – هم يَسْعَوْنَ.</li>
+                            <li><strong>رَمَى</strong> وزنه (فَعَلَ) – يَرْمِي وزنه (يَفْعِلُ) – هم رَمَوْا – هم يَرْمُونَ.</li>
+                            <li><strong>دَنَا</strong> وزنه (فَعَلَ) – يَدْنُو وزنه (يَفْعُلُ) – هم دَنَوْا – هم يَدْنُونَ.</li>
+                        </ul>
+                        <p><strong>تطبيق: أسند الأفعال التالية إلى ضمير الغائبين في الماضي ثم في المضارع:</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer17')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer17" class="ArabicH-answer">
+                            <table class="ArabicH-vocab-table">
+                                <thead><tr><th>الفعل</th><th>الماضي (هم)</th><th>المضارع (هم)</th></tr></thead>
+                                <tbody>
+                                    <tr><td><strong>رَضِيَ</strong></td><td>رَضُوا</td><td>يَرْضَوْنَ</td></tr>
+                                    <tr><td><strong>مَشَى</strong></td><td>مَشَوْا</td><td>يَمْشُونَ</td></tr>
+                                    <tr><td><strong>رَعَى</strong></td><td>رَعَوْا</td><td>يَرْعَوْنَ</td></tr>
+                                    <tr><td><strong>سَمَا</strong></td><td>سَمَوْا</td><td>يَسْمُونَ</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">🌟 ومضة بلاغية</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الفصل والوصل</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>النص:</strong> "في أعلى السُّلَّم مساحةٌ رخاميّةٌ جميلةٌ فُرِشَ وسطها ببساط ثمين"</p>
+                        <p>لم يصل الكاتب المركّب الإسنادي الفعلي المعطوف على "رخامية جميلة" بالواو. الفصل هنا واجب لأن الجملة الثانية (فُرِشَ وسطها ببساط ثمين) هي نعت للجملة الأولى (مساحة رخامية جميلة)، والجملة إذا وقعت نعتاً لمنكّر لا تُعطف بالواو بل تُفصل.</p>
+                        <p><strong>القاعدة:</strong> الفصل يكون واجباً بين الجملتين إذا كانت الثانية نعتاً للأولى، أو بدلاً منها، أو توكيداً لها، أو إذا اتحدتا في الخبرية والإنشائية.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">📖 ورقة لغوية – الاستثناء</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">حاشا – عدا – خلا</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>النص:</strong> "كانت جميعُ الكراسيّ مقلوبةً ما عدا كرسيًّا خلفَ المشربِ"</p>
+                        <ul>
+                            <li>المركّب المسطّر مركّب بالاستثناء، وظيفته اسم كان.</li>
+                            <li><strong>المستثنى منه:</strong> جميع الكراسي.</li>
+                            <li><strong>أداة الاستثناء:</strong> ما عدا.</li>
+                            <li><strong>المستثنى:</strong> كرسياً خلف المشرب.</li>
+                        </ul>
+                        <p><strong>القاعدة:</strong> عدا وخلا وحاشا أدوات استثناء تستعمل في الاستثناء التام (الذي يذكر فيه المستثنى منه). يكون المستثنى بعدها منصوباً. إذا سُبقت بـ"ما" المصدرية تعين النصب، وإذا لم تسبقها "ما" جاز نصب المستثنى وجره.</p>
+                        <p><strong>تطبيق:</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer18')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer18" class="ArabicH-answer">
+                            <p><strong>1- استثنِ المهملين من التلاميذ الناجحين مستعملاً إحدى الأدوات: عدا، خلا، حاشا.</strong></p>
+                            <ul>
+                                <li>نجح جميع التلاميذ عدا المهملينَ (أو: عدا المهملينِ – يجوز النصب والجر).</li>
+                                <li>نجح جميع التلاميذ خلا المهملينَ (أو: خلا المهملينِ).</li>
+                                <li>نجح جميع التلاميذ حاشا المهملينَ (أو: حاشا المهملينِ).</li>
+                            </ul>
+                            <p><strong>2- "زرت جميع المناطق ببلادنا وبقيت لي المناطق الصحراوية" – عبّر عن المعنى السابق مستعملاً الاستثناء بـ (ما عدا).</strong></p>
+                            <p>زرت جميع المناطق ببلادنا ما عدا المناطقَ الصحراوية.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">📖 ورقة منهجية – التبئير أو البؤرة</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">أنواع التبئير</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>تُعد المعلومات والأحداث التي تحتويها رواية أو أقصوصة نتيجة لاختيارات عديدة استقرت في ذهن المؤلف. ومن بين هذه الاختيارات زاوية النظر التي ينظم من خلالها عملية القص. وزوايا النظر متعددة:</p>
+                        <ol>
+                            <li><strong>التبئير الداخلي:</strong> يقوم فيه السارد بعملية القص وقد حل بداخل الشخصية التي يتحدث عنها، فيكشف أفكارها الشخصية ومشاعرها. هذه الزاوية تجعل الشخصية قريبة جداً من القارئ إلى درجة التماهي معها أحياناً.</li>
+                            <li><strong>التبئير الخارجي:</strong> يقوم فيه السارد بعملية القص وهو خارج الشخصيات، لا يقدم الكثير من المعلومات عن أعمالها أو الحوارات التي تدور بينها، وتبقى أفكارها ومشاعرها مجهولة لا يعرفها القارئ إلا من خلال أقوالها أو أقوال بعضها عن بعض.</li>
+                            <li><strong>التبئير الصفر (درجة الصفر من التبئير):</strong> يتمثل في سرد كل شيء حتى لكأن السارد عليم بكل ما يجري في القصة، يعرف ما يحدث في مختلف الأوقات والأماكن، ويعلم ما يدور بخلد الشخصيات من مشاعر وأفكار ومشاريع، بل إن ما يعرفه قد يتجاوز ما تعرفه الشخصيات عن أنفسها مجتمعة.</li>
+                        </ol>
+                        <p><strong>في أقصوصة "الكراسي المقلوبة":</strong> اعتمد السارد على <strong>التبئير الصفر</strong>، فهو يعرف كل شيء: يصف حالته النفسية، وينقل حوارات الصبية بدقة، ويكشف عن دلالات المشاهد. هذا النوع من التبئير يمنح النص موضوعية ظاهرية وعمقاً تحليلياً، ويتيح للقارئ رؤية بانورامية شاملة للمشهدين: الخارجي (البطحاء والمقهى) والداخلي (المدرج والمنافسة).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ✨ القسم الأوّل: البرنامج السردي -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">✨ القسم الأوّل: البرنامج السردي والبناء الزمني</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">بناء الأقصوصة – لوحتان سرديتان</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ol>
+                            <li><strong>اللوحة الأولى:</strong> السارد في الشارع والبطحاء، الريح تقلب الكراسي، الدخول إلى المقهى، الجلوس على الكرسي المقلوب.</li>
+                            <li><strong>اللوحة الثانية:</strong> الانتقال إلى المدرج، مشاهدة الصبية وهم يتنافسون على الكراسي، لعبة التملق، النهاية المفارقة.</li>
+                        </ol>
+                        <p><strong>تقنية التضاد:</strong> توظيف ثنائيات متقابلة (الداخل/الخارج، الضيق/السعة، الصمت/الضجيج، الفرد/الجماعة) لتعميق البعد الرمزي للنص.</p>
+                    </div>
+                </div>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تنظيم الأحداث والزمن</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul>
+                            <li><strong>الحدث الأساسي:</strong> انقلاب الكراسي – بشقيه الطبيعي (الريح) والاجتماعي (التنافس).</li>
+                            <li><strong>الحدث الكمالي:</strong> وصف الطبيعة، المقهى، وجوه الناس، تفاصيل المكان.</li>
+                            <li><strong>الزمن:</strong> زمن متصل ينتقل من لحظة الخروج إلى لحظة المشاهدة، مع بطء في الإيقاع (الوصف) وتسارع في موضع الحوار.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 👤 القسم الثاني: بناء الشخصية -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">👤 القسم الثاني: بناء الشخصية والرؤية السردية</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الشخصيات ومقومات الهوية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>رئيسية:</strong></p>
+                        <ul>
+                            <li><strong>السارد:</strong> مثقف واعٍ، منهك ومكدود، مراقب متأمل، يرمز لفئة المثقفين الذين يكتفون بالرصد دون الفعل.</li>
+                            <li><strong>الصبي العالي:</strong> رمز للسلطة، جالس على كرسي مرتفع، يملك قرار منح الامتيازات أو حرمانها.</li>
+                        </ul>
+                        <p><strong>ثانوية:</strong></p>
+                        <ul>
+                            <li><strong>صبيان المدرج:</strong> رمز للجماهير المتنافسة على السلطة عبر التملق لا الكفاءة.</li>
+                            <li><strong>المتفرجون:</strong> الجمهور السلبي الذي يكتفي بالمشاهدة.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الأحوال النفسية والأعمال المؤثرة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>السارد:</strong> إنهاك جسدي، قلق وجودي، شعور بالاغتراب، تأمل ناقد. <strong>الصبية:</strong> طمع، تملق، تنافس، خضوع. <strong>الصبي العالي:</strong> سيطرة، تعالٍ، تحكم.</p>
+                        <p><strong>الأعمال المؤثرة:</strong> انقلاب الكراسي، دخول السارد المقهى، بدء لعبة التنافس، النهاية الجماعية.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🖼 القسم الثالث: الوصف والرمز -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">🖼 القسم الثالث: الوصف والرمز – تكثيف الدلالة</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الرموز والصور المركزة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul>
+                            <li><strong>الكراسي المقلوبة:</strong> الرمز المركزي – تدل على انقلاب الأحوال، واضطراب النظام، وفساد آليات تداول السلطة.</li>
+                            <li><strong>الريح والعاصفة:</strong> ترمز للقوى الخارجة عن السيطرة التي تقلب الأنظمة (ثورات، كوارث، تحولات قهرية).</li>
+                            <li><strong>الكرسي المرتفع:</strong> رمز للسلطة العليا التي يتبارى الجميع في التملق لها.</li>
+                            <li><strong>المدرج:</strong> رمز للمجتمع الطبقي حيث تتوزع المواقع حسب القرب من السلطة.</li>
+                            <li><strong>لعبة التملق:</strong> مرآة ساخرة لآليات الوصول إلى المناصب في مجتمع يفتقر إلى معايير الجدارة.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">اللغة والأسلوب</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul>
+                            <li><strong>ثنائية الوصف والحوار:</strong> الوصف بالفصحى الأدبية المتأنية، والحوار بالعامية التونسية المكثفة.</li>
+                            <li><strong>طبقات المعجم:</strong> معجم حسي (الريح، العاصفة، التعب) ومعجم فكري (الكرسي، السلطة، التنافس)، يترجم ازدواجية النص بين الواقعي والرمزي.</li>
+                            <li><strong>المفارقة الساخرة:</strong> توظيف النهاية الجماعية (نطق الجميع بنفس العبارة) لتجسيد عبثية الصراع.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 💡 القسم الرابع: القضايا المضمونية -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">💡 القسم الرابع: القضايا المضمونية</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">السلطة والتنافس – المثقف والمجتمع – العدالة والفساد – الفرد والجماعة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul>
+                            <li><strong>السلطة والتنافس:</strong> الكراسي ترمز للسلطة، والتنافس عليها يتم عبر التملق لا الجدارة، مما يعكس أزمة سياسية واجتماعية.</li>
+                            <li><strong>المثقف والمجتمع:</strong> السارد يمثل المثقف الواعي الذي يرصد الواقع لكنه لا يتدخل، مما يطرح سؤال دور المثقف في التغيير.</li>
+                            <li><strong>العدالة والفساد:</strong> غياب معايير عادلة في توزيع "الكراسي"، وهيمنة منطق المحسوبية والتملق.</li>
+                            <li><strong>الفرد والجماعة:</strong> الفرد (السارد) في مواجهة الجماعة (الصبية)، وعزلة الفرد الواعي وسط الجماعة المنخرطة في الصراع.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📖 القسم الخامس: السارد -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">📖 القسم الخامس: السارد والخطاب</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">نوع السارد وسمات الخطاب</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>نوع السارد:</strong> سارد عليم (تبئير صفر) – يصف الأحداث ويكشف الأعماق النفسية، وينتقل بحرية بين الفضاءات المختلفة. يمنح النص موضوعية ظاهرية وعمقاً تحليلياً.</p>
+                        <p><strong>سمات الخطاب:</strong> مزج بين الفصحى الأدبية والعامية التونسية، حوارات قصيرة مشحونة، وصف حسي دقيق، نهاية مفارقة ساخرة.</p>
+                        <p><strong>حركة عين السارد:</strong> من الخارج (الشارع والبطحاء) إلى الداخل (المقهى والمدرج)، ومن الفردي (حالة السارد النفسية) إلى الجماعي (مشهد الصبية)، في حركة دائرية تعكس التحول من التأمل الذاتي إلى الرصد الاجتماعي.</p>
+                        <p><strong>الهم الأساسي:</strong> إبراز عبثية التنافس على السلطة، وفضح آليات التملق والفساد، وطرح سؤال دور المثقف في المجتمع.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📚 التعرف إلى المحاور الأساسية -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">📚 التعرف إلى المحاور الأساسية في الأثر</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الحقول المعجمية والموضوعات</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>الحقول المعجمية:</strong> حقل السلطة (الكرسي، الكراسي، السيد، الجائزة)، حقل الطبيعة (الريح، العاصفة، البطحاء)، حقل الجسد والتعب (أجرجر، مكدوداً، منهك)، حقل الاجتماع (الصبية، المتفرجون، المدرج)، حقل الانفعال (الطمع، الخوف، التملق، السخرية).</p>
+                        <p><strong>الموضوعات المطروقة:</strong> السلطة والتنافس، المثقف والمجتمع، العدالة والفساد، الفرد والجماعة، الطبيعة والإنسان.</p>
+                    </div>
+                </div>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">العناوين المقترحة</h4>
+                    <div class="ArabicH-exercise-content"><p>"انقلاب الكراسي"، "لعبة السلطة"، "المدرج والكرسي"، "ريح التغيير وعبث التنافس"، "الكراسي المقلوبة: مرآة المجتمع".</p></div>
+                </div>
+            </div>
+
+            <!-- 🧩 الخطاطة البصرية -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">🧩 الخطاطة البصرية</h3>
+                <div class="ArabicH-image-container">
+                    <img src="assets2/year1/litterature/image3.png" alt="صورة توضيحية لأقصوصة الكراسي المقلوبة" onerror="this.style.display='none'">
+                </div>
+                <div class="ArabicH-exercise-content">
+                    <p>في المركز دائرة تمثّل تفاعل الجوانب الفنية والمضمونية في الأقصوصة، تتفرّع منها مربعات فارغة مخصصة لتدوين الأفكار، وتحيط بها رموز تعبّر عن عناصر الفن (الكتاب، القهوة، الأقنعة، الكراسي المقلوبة) وعن القضايا المضمونية (السلطة، المال، الجماعة، الصراع)، وتتصل جميعها بأسهم متقابلة تبرز اندماج الشكل الفني بالمعنى الاجتماعي في النص.</p>
+                </div>
+            </div>
+
+            <!-- 🧩 الهيكل العام للمقال -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">🧩 الهيكل العام للمقال</h3>
+                <div class="ArabicH-exercise-content">
+                    <table class="ArabicH-vocab-table">
+                        <thead><tr><th>القسم</th><th>المحتوى المقترح</th><th>الهدف</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>المقدمة</strong></td><td>تقديم الأقصوصة وسياقها، التعريف بالكاتب، إبراز أهمية الجانب الفني والمضموني، طرح الإشكالية.</td><td>تمهيد للقارئ.</td></tr>
+                            <tr><td><strong>الجانب الفني</strong></td><td>تحليل البناء السردي، الرؤية السردية، الحوار، الوصف، الرمز، اللغة والأسلوب.</td><td>إبراز براعة الكاتب.</td></tr>
+                            <tr><td><strong>الجانب المضموني</strong></td><td>السلطة والتنافس، المثقف والمجتمع، العدالة والفساد، الفرد والجماعة.</td><td>الكشف عن الدلالات.</td></tr>
+                            <tr><td><strong>الخاتمة</strong></td><td>العلاقة بين الشكل والمضمون، القيمة الفنية والإنسانية للأثر، تأمل نقدي شامل.</td><td>تركيب النتائج.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 🎨 الجانب الفني -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">🎨 الجانب الفني (الأساليب ومقومات القص)</h3>
+                <div class="ArabicH-rule-card"><h4 class="ArabicH-rule-title">السرد – الوصف – الحوار – الرمز – اللغة</h4><div class="ArabicH-exercise-content"><ul><li><strong>السرد:</strong> اعتماد السارد العليم والمزج بين الوصف الخارجي والتحليل النفسي.</li><li><strong>الوصف:</strong> وصف الطبيعة (العاصفة، الريح) ووصف المكان (المقهى، البطحاء، المدرج) بدقة حسية.</li><li><strong>الحوار:</strong> حوار مباشر بين الأطفال، متصاعد يكشف التنافس والسلطة.</li><li><strong>الرمزية:</strong> الكراسي رمز للسلطة، الانقلاب رمز لعدم الاستقرار، التملق رمز للفساد.</li><li><strong>مقومات القص:</strong> وحدة الحدث، التكثيف، المفارقة، الخاتمة الساخرة.</li><li><strong>اللغة:</strong> مزيج من الفصحى والعامية يمنح واقعية وحيوية.</li></ul></div></div>
+            </div>
+
+            <!-- 💡 الجانب المضموني -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">💡 الجانب المضموني (القضايا والدلالات)</h3>
+                <div class="ArabicH-rule-card"><h4 class="ArabicH-rule-title">السلطة والتنافس – المثقف والمجتمع – العدالة والفساد – الفرد والجماعة</h4><div class="ArabicH-exercise-content"><ul><li><strong>السلطة والتنافس:</strong> الكراسي رمز للسلطة، والتنافس عليها يتم عبر التملق لا الجدارة.</li><li><strong>المثقف والمجتمع:</strong> السارد يمثل المثقف الواعي الذي يرصد لكنه لا يتدخل.</li><li><strong>العدالة والفساد:</strong> غياب معايير عادلة في توزيع "الكراسي".</li><li><strong>الفرد والجماعة:</strong> عزلة الفرد الواعي وسط الجماعة المنخرطة في الصراع.</li></ul></div></div>
+            </div>
+
+            <!-- 🧠 التركيب النهائي -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">🧠 التركيب النهائي</h3>
+                <div class="ArabicH-exercise-content">
+                    <p>تفاعل الشكل والمضمون يجعل الأقصوصة لوحة فنية متكاملة: البناء الثنائي المتضاد يخدم فكرة الانقلاب والاضطراب، الصوت السردي العليم يمنح مصداقية تحليلية، الرموز (الكراسي، الريح، المدرج) تختزل الصراع الاجتماعي والسياسي، واللغة المزدوجة تعمق الإحساس بالواقع. "الكراسي المقلوبة" ليست مجرد حكاية عن كراسي قلبتها الريح، بل مرثاة ساخرة لمجتمع يتبارى أفراده على السلطة بالتملق لا بالكفاءة، وينتهي بهم الصراع إلى العبث والفراغ.</p>
+                </div>
+            </div>
+
+            <!-- 🖋️ المقال النقدي -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">🖋️ المقال النقدي حول أقصوصة "الكراسي المقلوبة"</h3>
+                <div class="ArabicH-story-text" style="font-size:1.15rem; line-height:2.2;">
+                    <p><strong>المقدمة</strong><br>تُعدّ الأقصوصة من أبرز الأجناس السردية القصيرة التي تلتقط لحظة أو موقفاً مكثفاً لتكشف من خلاله عن أبعاد إنسانية واجتماعية عميقة. وفي هذا السياق تأتي أقصوصة "الكراسي المقلوبة" للكاتب التونسي رضوان الكوني (مواليد 1945) لتقدّم مشهداً رمزياً يعرّي واقع التنافس على السلطة ويكشف عن عبثية الصراع الاجتماعي، جامعاً بين أسلوب فني متقن وقضايا مضمونية لافتة. تطرح الأقصوصة سؤالاً مركزياً: كيف استطاع الكاتب أن يجعل من لعبة الأطفال البريئة مرآة ساخرة لفساد آليات الوصول إلى السلطة في المجتمع؟</p>
+                    <p><strong>🎨 الجانب الفني: الأساليب ومقومات القص</strong><br>- <strong>البناء السردي:</strong> اعتمد الكاتب على لوحتين متقابلتين (البطحاء والمقهى من جهة، والمدرج من جهة أخرى) مما خلق تضاداً فنياً يعمق الدلالة.<br>- <strong>السارد:</strong> سارد عليم (تبئير صفر) يصف الأحداث بدقة ويكشف عن أبعادها النفسية والاجتماعية.<br>- <strong>الوصف:</strong> برز في تصوير العاصفة والبطحاء والمقهى، حيث شكل الوصف خلفية طبيعية تعكس اضطراب الواقع الاجتماعي.<br>- <strong>الحوار:</strong> جاء مباشراً ومتدرجاً، متصاعداً من المجاملة إلى الصراع، مما أبرز دينامية التنافس بين الأطفال.<br>- <strong>الرمزية:</strong> الكراسي رمز للسلطة، والانقلاب رمز لعدم الاستقرار، والتملق رمز للفساد الاجتماعي.<br>- <strong>مقومات القص:</strong> وحدة الحدث، التكثيف، المفارقة، والخاتمة الساخرة التي تكشف عبثية التنافس حين ينطق الجميع بنفس العبارة فلا يفوز أحد.</p>
+                    <p><strong>💡 الجانب المضموني: القضايا والدلالات</strong><br>- <strong>السلطة والتنافس:</strong> النص يعكس واقع التنافس على المناصب والسلطة، حيث يسعى الجميع إلى التقدم عبر التملق لا عبر الكفاءة.<br>- <strong>المثقف والمجتمع:</strong> السارد يمثل المثقف الواعي الذي يكتفي بالمشاهدة، مما يطرح سؤال دور المثقف في الإصلاح.<br>- <strong>العدالة والفساد:</strong> يفضح النص سلوكيات الغش والانتهازية واستغلال النفوذ، ويكشف عن غياب قيم العدالة والجدارة.<br>- <strong>الفرد والجماعة:</strong> الأطفال يمثلون المجتمع، والكرسي يمثل السلطة، مما يجعل اللعبة انعكاساً ساخراً لواقع سياسي واجتماعي مأزوم.</p>
+                    <p><strong>التركيب والخاتمة</strong><br>تكشف أقصوصة "الكراسي المقلوبة" عن تلاحم الجانب الفني والمضموني في نص قصير مكثف، حيث يوظف الكاتب أساليب السرد والوصف والحوار والرمز ليعكس قضايا اجتماعية وأخلاقية عميقة. إنها نص ساخر وناقد يفضح عبثية التنافس على السلطة ويثير وعي القارئ بضرورة إعادة النظر في قيم المجتمع. وهكذا يثبت النص أن الأقصوصة، رغم قصرها، قادرة على حمل رؤية نقدية شاملة ومؤثرة.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;"><span class="ArabicH-flower-decoration">✎</span> <span class="ArabicH-flower-decoration">✍</span> <span class="ArabicH-flower-decoration">✎</span></p>
+            </div>
+
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_1SY_literature_module4_lesson2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.previousLesson">الدرس السابق</a>
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column"><h4 data-i18n="ArabicH.general.developerTitle">المطور</h4><p data-i18n="ArabicH.general.developer">زياد الماجري</p></div>
+            <div class="ArabicH-general-footer-column"><h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4><p data-i18n="ArabicH.general.version">v1.0.0</p></div>
+            <div class="ArabicH-general-footer-column"><h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4><div class="ArabicH-general-footer-links"><a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a><a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a></div></div>
+        </div>
+    </footer>
+
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;"><span class="ArabicH-pwa-install-icon">📱</span><span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span></button>
+
+    <script>
+        window.translations_ArabicHLiteratureModule4Lesson3 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.literatureLesson.storyTitle": "أقصوصة \"الكراسي المقلوبة\" لرضوان الكوني",
+                "ArabicH.literatureLesson.storySubtitle": "الدرس الثالث: تحليل أقصوصة \"الكراسي المقلوبة\" من مجموعة \"الكراسي المقلوبة\" – 1973",
+                "ArabicH.literatureLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.literatureLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.literatureLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.literatureLesson.previousLesson": "الدرس السابق",
+                "ArabicH.literatureLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.literatureLesson.storyTitle": "Short Story: \"The Upside-Down Chairs\" by Ridwan Al-Koni",
+                "ArabicH.literatureLesson.storySubtitle": "Lesson 3: Analysis of \"The Upside-Down Chairs\" from the collection \"The Upside-Down Chairs\" – 1973",
+                "ArabicH.literatureLesson.showAnswer": "Show Answer",
+                "ArabicH.literatureLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.literatureLesson.backToHome": "Back to Homepage",
+                "ArabicH.literatureLesson.previousLesson": "Previous Lesson",
+                "ArabicH.literatureLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.literatureLesson.storyTitle": "Nouvelle: \"Les Chaises Renversées\" de Ridwan Al-Koni",
+                "ArabicH.literatureLesson.storySubtitle": "Leçon 3: Analyse de \"Les Chaises Renversées\" du recueil \"Les Chaises Renversées\" – 1973",
+                "ArabicH.literatureLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.literatureLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.literatureLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.literatureLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.literatureLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHLiteratureModule4Lesson3;
+    </script>
+
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            const showText = button.getAttribute('data-i18n-show') || 'إظهار الإجابة';
+            const hideText = button.getAttribute('data-i18n-hide') || 'إخفاء الإجابة';
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = showText;
+            } else {
+                answer.style.display = "block";
+                button.textContent = hideText;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) { item.classList.add('active'); } else { item.classList.remove('active'); }
+            });
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => { button.setAttribute('data-i18n-value', button.textContent); });
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); themeToggle.checked = true; }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+                    else { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() { navigator.serviceWorker.register('/sw.js').then(r => console.log('SW registered')).catch(e => console.log('SW failed')); });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; if (manualInstallBtn) manualInstallBtn.style.display = 'flex'; });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') { manualInstallBtn.style.display = 'none'; deferredPrompt = null; }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

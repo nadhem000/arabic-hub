@@ -209,5 +209,110 @@ const ArabicH_Authors = {
             "birthYear": "1933",
             "deathYear": "2016"
         }
+    },
+    "ridwan_al_koni": {
+        "ar": {
+            "name": "رضوان الكوني",
+            "image": "assets2/images/authors/ridwan_al_koni.jpg",
+            "alt": "رضوان الكوني",
+            "content": "رضوان الكوني (ولد 13 مايو 1945) كاتب تونسي من الرقبة (تطاوين). تلقى تعليمه في تونس العاصمة ثم حصل على إجازة في اللغة والآداب العربية سنة 1969، وشهادة الكفاءة في البحث من جامعة باريس سنة 1975. عمل أستاذاً ومدير معهد ثانوي ومتفقداً للتعليم الثانوي. عضو نادي القصة منذ 1976 واتحاد الكتاب التونسيين منذ 1980. يكتب المقالة النقدية والقصة القصيرة والدراسات الأدبية. من مؤلفاته: 'الكراسي المقلوبة' (قصص)، 'النفق' (قصص)، 'الكتابة القصصية في تونس'، رواية 'رأس الدرب'، ورواية 'صهيل الرمان'.",
+            "century": "20th-21st",
+            "school": "القصة القصيرة والرواية والنقد",
+            "themes": ["القصة القصيرة", "الرواية", "النقد الأدبي", "الأدب التونسي"],
+            "birthYear": "1945",
+            "deathYear": "?"
+        },
+        "en": {
+            "name": "Ridwan al-Koni",
+            "image": "assets2/images/authors/ridwan_al_koni.jpg",
+            "alt": "Ridwan al-Koni",
+            "content": "Ridwan al-Koni (born May 13, 1945) is a Tunisian writer from Al-Raqba (Tataouine). He studied in Tunis and obtained a degree in Arabic language and literature in 1969, and a research proficiency certificate from the University of Paris in 1975. He worked as a teacher, secondary school principal, and inspector of secondary education. A member of the Story Club since 1976 and the Tunisian Writers Union since 1980, he writes critical essays, short stories, and literary studies. His works include: 'The Overturned Chairs' (short stories), 'The Tunnel' (short stories), 'Fictional Writing in Tunisia', the novel 'Ras al-Darb', and the novel 'The Neighing of the Pomegranate'.",
+            "century": "20th-21st",
+            "school": "Short Story, Novel & Criticism",
+            "themes": ["short story", "novel", "literary criticism", "Tunisian literature"],
+            "birthYear": "1945",
+            "deathYear": "?"
+        },
+        "fr": {
+            "name": "Ridwan al-Koni",
+            "image": "assets2/images/authors/ridwan_al_koni.jpg",
+            "alt": "Ridwan al-Koni",
+            "content": "Ridwan al-Koni (né le 13 mai 1945) est un écrivain tunisien originaire d'Al-Raqba (Tataouine). Il a fait ses études à Tunis et a obtenu une licence en langue et littérature arabes en 1969, puis un certificat d'aptitude à la recherche de l'Université de Paris en 1975. Il a été enseignant, directeur d'établissement secondaire et inspecteur de l'enseignement secondaire. Membre du Club du récit depuis 1976 et de l'Union des écrivains tunisiens depuis 1980, il écrit des articles critiques, des nouvelles et des études littéraires. Parmi ses ouvrages : 'Les Chaises renversées' (nouvelles), 'Le Tunnel' (nouvelles), 'L'Écriture fictionnelle en Tunisie', le roman 'Ras al-Darb' et le roman 'Le Hennissement du grenadier'.",
+            "century": "20th-21st",
+            "school": "Nouvelle, Roman & Critique",
+            "themes": ["nouvelle", "roman", "critique littéraire", "littérature tunisienne"],
+            "birthYear": "1945",
+            "deathYear": "?"
+        }
+    },
+    "emily_nasrallah": {
+        "ar": {
+            "name": "إيميلي نصر الله",
+            "image": "assets2/images/authors/emily_nasrallah.jpg",
+            "alt": "إيميلي نصر الله",
+            "content": "إيميلي نصر الله (1931-2018) كاتبة لبنانية وُلدت في الكفير (حاصبيا). درست في الكلية الوطنية بالشويفات والجامعة الأميركية في بيروت حيث حصلت على بكالوريوس في الآداب والتربية. عملت في التدريس والصحافة وكتبت في مجلة 'الصياد'. من أبرز أعمالها: 'طيور أيلول'، 'شجرة الدفلى'، 'الرَهينة'، 'تلك الذكريات'، 'الإقلاع عكس الزمن'، 'جزيرة الوهم'، و'شادي الصغير'.",
+            "century": "20th-21st",
+            "school": "الرواية والقصة القصيرة",
+            "themes": ["الرواية", "القصة القصيرة", "الأدب اللبناني", "أدب المرأة"],
+            "birthYear": "1931",
+            "deathYear": "2018"
+        },
+        "en": {
+            "name": "Emily Nasrallah",
+            "image": "assets2/images/authors/emily_nasrallah.jpg",
+            "alt": "Emily Nasrallah",
+            "content": "Emily Nasrallah (1931-2018) was a Lebanese writer born in Al-Kfeir (Hasbaya). She studied at the National College in Choueifat and the American University of Beirut, earning a BA in Arts and Education. She worked in teaching and journalism, contributing to 'Al-Sayyad' magazine. Her notable works include: 'Birds of September', 'The Oleander Tree', 'The Hostage', 'Those Memories', 'Takeoff Against Time', 'Island of Illusion', and 'Little Shadi'.",
+            "century": "20th-21st",
+            "school": "Novel & Short Story",
+            "themes": ["novel", "short story", "Lebanese literature", "women's literature"],
+            "birthYear": "1931",
+            "deathYear": "2018"
+        },
+        "fr": {
+            "name": "Emily Nasrallah",
+            "image": "assets2/images/authors/emily_nasrallah.jpg",
+            "alt": "Emily Nasrallah",
+            "content": "Emily Nasrallah (1931-2018) était une écrivaine libanaise née à Al-Kfeir (Hasbaya). Elle a étudié au Collège national de Choueifat et à l'Université américaine de Beyrouth, où elle a obtenu une licence en lettres et en éducation. Elle a travaillé dans l'enseignement et le journalisme, écrivant pour le magazine 'Al-Sayyad'. Ses œuvres notables incluent : 'Les Oiseaux de septembre', 'Le Laurier-rose', 'L'Otage', 'Ces souvenirs', 'Décollage à contretemps', 'L'Île de l'illusion', et 'Le petit Chadi'.",
+            "century": "20th-21st",
+            "school": "Roman & Nouvelle",
+            "themes": ["roman", "nouvelle", "littérature libanaise", "littérature féminine"],
+            "birthYear": "1931",
+            "deathYear": "2018"
+        }
+    },
+    "yusuf_idris": {
+        "ar": {
+            "name": "يوسف إدريس",
+            "image": "assets2/images/authors/yusuf_idris.jpg",
+            "alt": "يوسف إدريس",
+            "content": "يوسف إدريس (1927-1991) طبيب وكاتب مصري، وُلد في قرية البيّوم بمحافظة الشرقية. درس الطب وعمل طبيباً قبل أن يتفرغ للكتابة. برع في الأقصوصة والرواية والمسرحية والمقالة. من أشهر مجموعاته القصصية: 'أرخص ليالي' (1954)، 'جمهورية فرحات' (1956)، 'حادثة شرف' (1958)، 'آخر الدنيا' (1961) و'العسكري وقصص أخرى' (1962). ومن رواياته: 'الحرام' (1959)، 'العيب' (1962)، و'البيضاء' (1966). توفي في 1 أغسطس 1991.",
+            "century": "20th",
+            "school": "الأقصوصة والرواية والمسرح",
+            "themes": ["الأقصوصة", "الرواية", "المسرحية", "المقالة", "الأدب المصري"],
+            "birthYear": "1927",
+            "deathYear": "1991"
+        },
+        "en": {
+            "name": "Yusuf Idris",
+            "image": "assets2/images/authors/yusuf_idris.jpg",
+            "alt": "Yusuf Idris",
+            "content": "Yusuf Idris (1927-1991) was an Egyptian physician and writer, born in the village of Al-Bayyum, Sharqia Governorate. He studied medicine and worked as a doctor before devoting himself to writing. He excelled in the short story, novel, drama, and essay. Among his famous short story collections are: 'The Cheapest Nights' (1954), 'Farhat's Republic' (1956), 'An Incident of Honor' (1958), 'The End of the World' (1961), and 'The Soldier and Other Stories' (1962). His novels include: 'The Forbidden' (1959), 'The Flaw' (1962), and 'The White Woman' (1966). He died on August 1, 1991.",
+            "century": "20th",
+            "school": "Short Story, Novel & Drama",
+            "themes": ["short story", "novel", "drama", "essay", "Egyptian literature"],
+            "birthYear": "1927",
+            "deathYear": "1991"
+        },
+        "fr": {
+            "name": "Yusuf Idris",
+            "image": "assets2/images/authors/yusuf_idris.jpg",
+            "alt": "Yusuf Idris",
+            "content": "Yusuf Idris (1927-1991) était un médecin et écrivain égyptien, né dans le village d'Al-Bayyum, gouvernorat de Sharqia. Il a étudié la médecine et exercé comme médecin avant de se consacrer à l'écriture. Il a excellé dans la nouvelle, le roman, le théâtre et l'essai. Parmi ses recueils de nouvelles célèbres figurent : 'Les Nuits les moins chères' (1954), 'La République de Farhat' (1956), 'Un incident d'honneur' (1958), 'La Fin du monde' (1961) et 'Le Soldat et autres histoires' (1962). Ses romans comprennent : 'L'Interdit' (1959), 'La Honte' (1962) et 'La Femme blanche' (1966). Il est décédé le 1er août 1991.",
+            "century": "20th",
+            "school": "Nouvelle, Roman & Théâtre",
+            "themes": ["nouvelle", "roman", "théâtre", "essai", "littérature égyptienne"],
+            "birthYear": "1927",
+            "deathYear": "1991"
+        }
     }
 };

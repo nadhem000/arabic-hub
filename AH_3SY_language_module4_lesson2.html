@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإحالة - الدرس الثامن | مركز تعليم العربية</title>
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#0D47A1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="الإحالة">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+
+    <style>
+        /* Unique Deep Blue/Ocean palette for الإحالة Lesson */
+        :root {
+            --primary-color: #0D47A1;
+            --secondary-color: #1565C0;
+            --accent-color: #42A5F5;
+            --light-color: #E3F2FD;
+            --dark-color: #0A2473;
+            --text-color: #0D47A1;
+            --heading-color: #0D47A1;
+            --background-color: #E3F2FD;
+            --card-bg: #FFFFFF;
+            --definition-bg: #BBDEFB;
+            --border-color: #90CAF9;
+            --table-even-bg: #E3F2FD;
+            --table-hover-bg: #BBDEFB;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(13, 71, 161, 0.15);
+            --gradient-primary: linear-gradient(135deg, #0D47A1 0%, #0A2473 100%);
+            --gradient-secondary: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+            --gradient-accent: linear-gradient(135deg, #42A5F5 0%, #1565C0 100%);
+            --gradient-light: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+            --highlight-color: #D32F2F;
+            --highlight-bg: rgba(211, 47, 47, 0.08);
+        }
+
+        [data-theme="dark"] {
+            --primary-color: #42A5F5;
+            --secondary-color: #64B5F6;
+            --accent-color: #90CAF9;
+            --light-color: #0D47A1;
+            --dark-color: #0A2473;
+            --text-color: #E3F2FD;
+            --heading-color: #FFFFFF;
+            --background-color: #0A2473;
+            --card-bg: #0D47A1;
+            --definition-bg: #1565C0;
+            --border-color: #42A5F5;
+            --table-even-bg: #1565C0;
+            --table-hover-bg: #1976D2;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #42A5F5 0%, #1565C0 100%);
+            --gradient-secondary: linear-gradient(135deg, #64B5F6 0%, #42A5F5 100%);
+            --gradient-accent: linear-gradient(135deg, #90CAF9 0%, #64B5F6 100%);
+            --gradient-light: linear-gradient(135deg, #0D47A1 0%, #0A2473 100%);
+            --highlight-color: #EF9A9A;
+            --highlight-bg: rgba(239, 154, 154, 0.15);
+        }
+
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-lesson-teacher {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-content {
+            margin: 30px 0;
+        }
+
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        [data-theme="dark"] .ArabicH-exercise-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-exercise-content {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .ArabicH-rule-card {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%);
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-left: 6px solid var(--secondary-color);
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ArabicH-rule-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .ArabicH-rule-card::before {
+            content: "📘";
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-rule-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            padding-left: 30px;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 8px;
+            position: relative;
+        }
+
+        [data-theme="dark"] .ArabicH-rule-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-rule-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .ArabicH-example-text {
+            font-size: 1.3rem;
+            font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 2.0;
+            color: var(--dark-color);
+            margin: 15px 0;
+            padding: 12px 18px;
+            background-color: rgba(13, 71, 161, 0.08);
+            border-radius: 10px;
+            border-right: 3px solid var(--secondary-color);
+            text-align: right;
+            direction: rtl;
+            font-weight: 500;
+        }
+
+        [data-theme="dark"] .ArabicH-example-text {
+            color: #E3F2FD;
+            background-color: rgba(66, 165, 245, 0.2);
+            border-right: 3px solid var(--accent-color);
+        }
+
+        .ArabicH-table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .ArabicH-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-table th,
+        .ArabicH-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-table th {
+            background-color: var(--definition-bg);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        [data-theme="dark"] .ArabicH-table th {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-table tr:nth-child(even) {
+            background-color: var(--table-even-bg);
+        }
+
+        .ArabicH-table tr:hover {
+            background-color: var(--table-hover-bg);
+        }
+
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .ArabicH-exercise-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-exercise-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .ArabicH-exercise-table td {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .ArabicH-definition-list {
+            padding-right: 20px;
+            margin: 15px 0;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-definition-list li {
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .ArabicH-table-textarea {
+            width: 100%;
+            min-height: 40px;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background-color: var(--card-bg);
+            resize: vertical;
+            font-family: inherit;
+            font-size: 15px;
+            color: var(--text-color);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .ArabicH-table-textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(66, 165, 245, 0.2);
+        }
+
+        [data-theme="dark"] .ArabicH-table-textarea {
+            background-color: var(--definition-bg);
+            border-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .ArabicH-knowledge-box {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 25px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-knowledge-box::before {
+            content: "💡";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        .ArabicH-knowledge-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        [data-theme="dark"] .ArabicH-knowledge-title {
+            color: var(--accent-color);
+        }
+
+        .ArabicH-knowledge-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .ArabicH-instructions-box {
+            background-color: var(--highlight-bg);
+            border-radius: var(--border-radius);
+            padding: 1.2rem;
+            margin: 15px 0 25px 0;
+            border-right: 4px solid var(--highlight-color);
+            border-left: 4px solid var(--highlight-color);
+            position: relative;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .ArabicH-instructions-box::before {
+            content: "⚠️";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-instructions-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--highlight-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        .ArabicH-instructions-content {
+            line-height: 1.6;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        .ArabicH-poetry-verse {
+            background-color: rgba(227, 242, 253, 0.3);
+            border-right: 4px solid var(--secondary-color);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin: 15px 0;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+        }
+
+        [data-theme="dark"] .ArabicH-poetry-verse {
+            background-color: rgba(66, 165, 245, 0.2);
+            color: #E3F2FD;
+        }
+
+        .ArabicH-flower-decoration {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .ArabicH-application-item {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--secondary-color);
+            direction: rtl;
+            text-align: right;
+        }
+
+        [data-theme="dark"] p,
+        [data-theme="dark"] li,
+        [data-theme="dark"] div:not(.ArabicH-example-text):not(.ArabicH-box-cell) {
+            color: var(--text-color) !important;
+        }
+
+        [data-theme="dark"] strong {
+            color: var(--accent-color);
+        }
+
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title {
+                font-size: 2rem;
+            }
+            .ArabicH-lesson-subtitle {
+                font-size: 1.1rem;
+            }
+            .ArabicH-lesson-container {
+                padding: 1.5rem;
+            }
+            .ArabicH-lesson-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .ArabicH-table {
+                font-size: 14px;
+            }
+            .ArabicH-example-text {
+                font-size: 1.15rem;
+            }
+            .ArabicH-rule-card {
+                padding: 1.2rem;
+            }
+            .ArabicH-rule-title {
+                font-size: 1.2rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main {
+                padding: 1rem;
+            }
+            .ArabicH-lesson-title {
+                font-size: 1.6rem;
+            }
+            .ArabicH-example-text {
+                font-size: 1.05rem;
+            }
+            .ArabicH-rule-card {
+                padding: 1rem;
+            }
+            .ArabicH-rule-title {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Windows Bar -->
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">🏠</span>
+            <span data-i18n="ArabicH.windows.home">الرئيسية</span>
+        </a>
+        <a href="authors.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">👨‍🎓</span>
+            <span data-i18n="ArabicH.windows.authors">ادباء</span>
+        </a>
+        <a href="quotes.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📖</span>
+            <span data-i18n="ArabicH.windows.quotes">شواهد</span>
+        </a>
+        <a href="resources.html" class="ArabicH-window-item">
+            <span class="ArabicH-window-icon">📚</span>
+            <span data-i18n="ArabicH.windows.resources">موارد</span>
+        </a>
+    </nav>
+
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.languageLesson.module3Lesson8Title">الإحالة</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.languageLesson.module3Lesson8Subtitle">الدرس الثامن: الإحالة – الموصول، الإشارة، الضمير، النعت</p>
+
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher">
+                    <span class="ArabicH-flower-decoration">❦</span> القسم: ثالثة ثانوي آداب <span class="ArabicH-flower-decoration">❦</span>
+                </div>
+                <div class="ArabicH-lesson-class">
+                    <span class="ArabicH-flower-decoration">✿</span> الأستاذ: غير محدد <span class="ArabicH-flower-decoration">✿</span>
+                </div>
+            </div>
+
+            <!-- مقدمة -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">مقدمة الدرس: الإحالة – ركيزة الترابط النصي</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p><strong>الإحالة:</strong> إحدى أهمّ وسائل الربط في اللغة العربية، وفيها يُعاد ذكر المشار إليه بلفظ <strong>يحيل عليه</strong> (ضمير، اسم إشارة، اسم موصول، أو نعت) فتُحبك الجمل وتُنسج في نسيج واحد متماسك. الإحالة تجعل القارئ يعود ذهنيّاً إلى عنصر سابق في النص (يُسمّى <strong>المُحال إليه</strong> أو <strong>المرجع</strong>) وهذا الربط الذهني هو جوهر <strong>الاتساق النصي</strong>.</p>
+                    <p><strong>تنقسم الإحالة إلى أربعة أنواع رئيسة:</strong></p>
+                    <p><strong>1. الإحالة بالضمائر</strong> (هو، هي، هما، هم، هنّ، الهاء، الكاف...).</p>
+                    <p><strong>2. الإحالة بأسماء الإشارة</strong> (هذا، هذه، هذان، هؤلاء، ذلك، تلك، أولئك...).</p>
+                    <p><strong>3. الإحالة بالأسماء الموصولة</strong> (الذي، التي، اللذان، اللتان، الذين، اللاتي، مَنْ، ما...).</p>
+                    <p><strong>4. الإحالة بالنعت</strong> (الصفة التي تربط الموصوف بسياقه وتُحيل إليه).</p>
+                    <p><strong>ملاحظة منهجية:</strong> يُخصَّص هذا الدرس كاملاً للإحالة بفروعها الأربعة، استكمالاً لدرس "الترابط بين الجمل" الذي تناول وسائل الربط الأخرى (العطف، التكرار، الحذف، التضام الدلالي، الفصل والوصل).</p>
+                </div>
+            </div>
+
+            <!-- ========== القسم: الإحالة – الموصول، الإشارة، الضمير، النعت ========== -->
+            <div class="ArabicH-rule-card" style="margin-bottom: 30px;">
+                <h4 class="ArabicH-rule-title">الإحالة: تعريفها وأهميتها في بناء النص</h4>
+                <p style="text-align: right; direction: rtl;">الإحالة هي علاقة معنوية بين <strong>عنصر مُحِيل</strong> (الضمير، اسم الإشارة، الاسم الموصول، النعت) و<strong>مرجع</strong> (المُحال إليه) يُفهم من السياق. وبدون وضوح المرجع يختلّ الربط ويصبح النص غامضاً. الإحالة تجعل النصّ <strong>وحدة متماسكة</strong> لا مجرّد جمل متجاورة.</p>
+            </div>
+
+            <!-- ========== أولاً: الإحالة بالضمائر ========== -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أولاً: الإحالة بالضمائر</h3>
+
+                <!-- 1. الضمير ودوره في الربط -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">1. الضمير ودوره في الربط</h4>
+                    <p style="text-align: right; direction: rtl;"><strong>القاعدة:</strong> الضمير (متصل أو منفصل) يعود على <strong>متقدم</strong> يُسمّى المرجع (المُحال إليه)، فيربط الجملة التي ورد فيها الضمير بالجملة التي ورد فيها المرجع. يجب أن يكون المرجع <strong>واضحاً</strong> لا يحتمل أكثر من مشار إليه، وإلا اختلّ الاتساق.</p>
+                    <p style="text-align: right; direction: rtl;"><strong>مثال تحليلي:</strong> <span class="ArabicH-example-text" style="display: inline; padding: 4px 10px;">جاء محمدٌ، وهو يحمل كتاباً.</span> الضمير <strong>"هو"</strong> يعود على <strong>"محمد"</strong> (المرجع)، ويربط بين جملة المجيء وجملة حمل الكتاب. بدون الضمير لقلنا: "جاء محمدٌ. يحمل محمدٌ كتاباً" وهو تكرار مخلّ.</p>
+                    <p style="text-align: right; direction: rtl;"><strong>أنواع الضمائر المُحيلة:</strong></p>
+                    <ul class="ArabicH-definition-list">
+                        <li><strong>ضمائر الرفع المنفصلة:</strong> (هو، هي، هما، هم، هنّ، أنا، نحن، أنتَ، أنتِ...).</li>
+                        <li><strong>ضمائر النصب والجر المتصلة:</strong> (الهاء، الكاف، الياء، نا...).</li>
+                        <li><strong>ضمائر مستترة:</strong> تُقدَّر من السياق (مثال: "محمدٌ حضرَ" – الفاعل المستتر "هو" يُحيل إلى محمد).</li>
+                    </ul>
+                </div>
+
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تمرين (1): استخرج الضمير وحدّد مرجعه</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p>في كل جملة مما يأتي، استخرج الضمير المُحيل وحدّد المرجع (المُحال إليه) الذي يعود عليه:</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr><th width="5%">#</th><th width="40%">الجملة</th><th width="25%">الضمير</th><th width="30%">المرجع (المُحال إليه)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td class="ArabicH-example-text">الطالبةُ ذكيّة، هي التي أجابت.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="الضمير..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المرجع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td class="ArabicH-example-text">قرأتُ القصةَ، وفهمتُها.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="الضمير..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المرجع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td class="ArabicH-example-text">الشاعران أبدعا، وهما يستحقّان التكريم.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="الضمير..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المرجع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td class="ArabicH-example-text">النيلُ نهرٌ عظيم، شربتُ من مائه.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="الضمير..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المرجع..." rows="1"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')">إظهار إصلاح التمرين (1)</button>
+
+                <div id="answer1" class="ArabicH-answer">
+                    <h4>إصلاح التمرين (1):</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr><th>#</th><th>الجملة</th><th>الضمير</th><th>المرجع</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>①</td><td>الطالبةُ ذكيّة، هي التي أجابت.</td><td><strong>هي</strong> (ضمير منفصل)</td><td><strong>الطالبةُ</strong></td></tr>
+                                <tr><td>②</td><td>قرأتُ القصةَ، وفهمتُها.</td><td><strong>ها</strong> (في "فهمتها" – ضمير متصل)</td><td><strong>القصةَ</strong></td></tr>
+                                <tr><td>③</td><td>الشاعران أبدعا، وهما يستحقّان التكريم.</td><td><strong>هما</strong> (ضمير منفصل) + <strong>الألف</strong> في "أبدعا" (ضمير مستتر/متصل)</td><td><strong>الشاعران</strong></td></tr>
+                                <tr><td>④</td><td>النيلُ نهرٌ عظيم، شربتُ من مائه.</td><td><strong>الهاء</strong> (في "مائه" – ضمير متصل)</td><td><strong>النيلُ</strong></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="text-align: right; direction: rtl; margin-top: 10px;"><strong>تحليل معمّق:</strong> في المثال ③، هناك ضميران يُحيلان إلى "الشاعران": الألف في "أبدعا" (فاعل) والضمير المنفصل "هما". وهذا يُسمّى <strong>تعدّد الإحالة إلى مرجع واحد</strong>، وهو من أدوات تماسك النص.</p>
+                </div>
+
+                <!-- 2. شروط صحة الإحالة بالضمير -->
+                <div class="ArabicH-rule-card" style="margin-top: 25px;">
+                    <h4 class="ArabicH-rule-title">2. شروط صحة الإحالة بالضمير</h4>
+                    <p style="text-align: right; direction: rtl;"><strong>القاعدة:</strong> لصحة الإحالة بالضمير شرطان أساسيان:</p>
+                    <ul class="ArabicH-definition-list">
+                        <li><strong>أ. وضوح المرجع:</strong> ألا يحتمل الضمير أكثر من مرجع، وإلا حدث <strong>الغموض الإحالي</strong> الذي يُخلّ بالربط. مثال الغموض: <span class="ArabicH-example-text" style="display: inline; padding: 4px 10px;">قابل المديرُ الموظفَ في مكتبه.</span> – مرجع الهاء غير معيّن: أمكتب المدير أم مكتب الموظف؟</li>
+                        <li><strong>ب. التطابق في النوع والعدد:</strong> يجب أن يتطابق الضمير مع مرجعه تذكيراً وتأنيثاً، إفراداً وتثنيةً وجمعاً. مثال: <span class="ArabicH-example-text" style="display: inline; padding: 4px 10px;">النساءُ هنّ عماد البيوت.</span> – "هنّ" تطابق "النساء" في الجمع والتأنيث.</li>
+                    </ul>
+                </div>
+
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تمرين (2): إصلاح الغموض الإحالي</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p>أعد صياغة الجملة التالية لتكون الإحالة واضحة لا تحتمل أكثر من مرجع:</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr><th width="5%">#</th><th width="45%">الجملة الغامضة</th><th width="50%">الصياغة المُصلَحة (المقترحة)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td class="ArabicH-example-text">سلّم أخي على صديقه وهو مسرور.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="أعد الصياغة بوضوح..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td class="ArabicH-example-text">قابل المديرُ الموظفَ في مكتبه.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="أعد الصياغة بوضوح..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td class="ArabicH-example-text">اشترى أبي هدية لأخي، وكانت جميلة جداً.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="أعد الصياغة بوضوح..." rows="2"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')">إظهار إصلاح التمرين (2)</button>
+
+                <div id="answer2" class="ArabicH-answer">
+                    <h4>إصلاح التمرين (2):</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr><th>#</th><th>الجملة الغامضة</th><th>الصياغة المُصلَحة</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td>سلّم أخي على صديقه وهو مسرور.</td>
+                                    <td><strong>سلّم أخي وهو مسرور على صديقه.</strong> (الضمير "هو" صار واضح العود على "أخي")<br>أو: <strong>سلّم أخي على صديقه المسرور.</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td>قابل المديرُ الموظفَ في مكتبه.</td>
+                                    <td><strong>قابل المديرُ الموظفَ في مكتب المدير.</strong> (أو: في مكتب الموظف، حسب المقصود) – الأفضل تعيين المرجع بالاسم الظاهر.</td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td>اشترى أبي هدية لأخي، وكانت جميلة جداً.</td>
+                                    <td><strong>اشترى أبي هديةً جميلةً جداً لأخي.</strong> (إدماج الصفة يزيل الغموض)<br>أو: <strong>اشترى أبي هدية لأخي، وكانت الهدية جميلة جداً.</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="text-align: right; direction: rtl; margin-top: 10px;"><strong>خلاصة:</strong> عند توفّر أكثر من مرجع محتمَل للضمير، يجب إمّا تقريب الضمير من مرجعه، أو إعادة ذكر المرجع باسمه الظاهر، أو تعديل بنية الجملة لتكون الإحالة واضحة.</p>
+                </div>
+            </div>
+
+            <!-- ========== ثانياً: الإحالة بأسماء الإشارة ========== -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">ثانياً: الإحالة بأسماء الإشارة</h3>
+
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">القاعدة: اسم الإشارة كأداة إحالة</h4>
+                    <p style="text-align: right; direction: rtl;">أسماء الإشارة (هذا، هذه، هذان، هاتان، هؤلاء، ذلك، تلك، أولئك، هنا، هناك...) تُحيل إلى <strong>مشار إليه</strong> حاضر في الذهن أو في النص (سابقاً أو لاحقاً). وهي تربط بين الجمل برابط <strong>إشاري</strong> يجعل الذهن يلتفت إلى المشار إليه، وقد تحمل دلالات بلاغية إضافية (التعظيم، التحقير، التقريب، البعد...).</p>
+                    <p style="text-align: right; direction: rtl;"><strong>مثال تحليلي:</strong> <span class="ArabicH-example-text" style="display: inline; padding: 4px 10px;">الصدقُ، ذلك السلاح الأخلاقي.</span> – اسم الإشارة <strong>"ذلك"</strong> أحال إلى <strong>"الصدق"</strong> (المشار إليه) وربط الجملة الثانية به، مع إفادة <strong>البُعد المعنوي</strong> للتعظيم. الجملة تعني: الصدق هو السلاح الأخلاقي، لكن باسم الإشارة صار الربط أوثق وأبلغ.</p>
+                </div>
+
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تمرين (3): عيّن اسم الإشارة والمشار إليه</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p>في كل جملة مما يأتي، استخرج اسم الإشارة وحدّد المشار إليه (المرجع):</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr><th width="5%">#</th><th width="40%">الجملة</th><th width="25%">اسم الإشارة</th><th width="30%">المشار إليه (المرجع)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td class="ArabicH-example-text">الوفاءُ خلق كريم، وهذا ما نبحث عنه.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اسم الإشارة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المشار إليه..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td class="ArabicH-example-text">تأمل النجوم، تلك اللآلئ المنثورة.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اسم الإشارة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المشار إليه..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td class="ArabicH-example-text">العلمُ نور، وهذه حقيقة لا تُنكر.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اسم الإشارة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المشار إليه..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td class="ArabicH-example-text">أولئك الذين صبروا نالوا المجد.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="اسم الإشارة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المشار إليه..." rows="1"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')">إظهار إصلاح التمرين (3)</button>
+
+                <div id="answer3" class="ArabicH-answer">
+                    <h4>إصلاح التمرين (3):</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr><th>#</th><th>الجملة</th><th>اسم الإشارة</th><th>المشار إليه</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>①</td><td>الوفاءُ خلق كريم، وهذا ما نبحث عنه.</td><td><strong>هذا</strong></td><td><strong>الوفاءُ</strong> (أو: كون الوفاء خلقاً كريماً – إشارة إلى المعنى الكامن)</td></tr>
+                                <tr><td>②</td><td>تأمل النجوم، تلك اللآلئ المنثورة.</td><td><strong>تلك</strong></td><td><strong>النجوم</strong></td></tr>
+                                <tr><td>③</td><td>العلمُ نور، وهذه حقيقة لا تُنكر.</td><td><strong>هذه</strong></td><td><strong>حقيقة</strong> (المشار إليه متأخّر – بدل) أو إشارة إلى مقولة "العلم نور"</td></tr>
+                                <tr><td>④</td><td>أولئك الذين صبروا نالوا المجد.</td><td><strong>أولئك</strong></td><td><strong>الذين صبروا</strong> (المشار إليه متأخّر – اسم موصول بعد اسم الإشارة)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="text-align: right; direction: rtl; margin-top: 10px;"><strong>تحليل إضافي:</strong> في المثال ③، اسم الإشارة "هذه" يُحيل إلى كلمة "حقيقة" المتأخرة (بدل)، وهذا نوع من الإحالة <strong>القَبْلية</strong> (يحيل إلى لاحق). وفي المثال ④، "أولئك" يُحيل إلى "الذين صبروا" اللاحق. الإحالة قد تكون <strong>قبلية</strong> (المُحيل يسبق المرجع) أو <strong>بعدية</strong> (المُحيل يتلو المرجع)، والغالب في الضمائر أن تكون بعدية.</p>
+                </div>
+
+                <!-- تمرين إضافي على الإحالة بأسماء الإشارة -->
+                <div class="ArabicH-application-item" style="margin-top: 20px;">
+                    <h4 style="color: var(--primary-color);">تطبيق إضافي: أكمل باسم إشارة مناسب</h4>
+                    <p>املأ الفراغ باسم الإشارة المناسب، واذكر دلالته:</p>
+                    <table class="ArabicH-exercise-table">
+                        <thead>
+                            <tr><th width="5%">#</th><th width="45%">الجملة الناقصة</th><th width="25%">اسم الإشارة</th><th width="25%">الدلالة</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>①</td>
+                                <td class="ArabicH-example-text">التسامحُ ........ القيمة الإنسانية العظيمة.</td>
+                                <td><textarea class="ArabicH-table-textarea" placeholder="اسم الإشارة..." rows="1"></textarea></td>
+                                <td><textarea class="ArabicH-table-textarea" placeholder="الدلالة..." rows="1"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>②</td>
+                                <td class="ArabicH-example-text">........ الطالبان الفائزان في المسابقة.</td>
+                                <td><textarea class="ArabicH-table-textarea" placeholder="اسم الإشارة..." rows="1"></textarea></td>
+                                <td><textarea class="ArabicH-table-textarea" placeholder="الدلالة..." rows="1"></textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3b')">إظهار إصلاح التطبيق الإضافي</button>
+
+                <div id="answer3b" class="ArabicH-answer">
+                    <h4>إصلاح التطبيق الإضافي:</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <tr><td>①</td><td>التسامح <strong>تلك</strong> القيمة الإنسانية العظيمة.</td><td><strong>تلك:</strong> إشارة إلى التسامح مع دلالة البعد للتعظيم</td></tr>
+                            <tr><td>②</td><td><strong>هذان</strong> الطالبان الفائزان في المسابقة.</td><td><strong>هذان:</strong> إشارة إلى الطالبين للمثنى المذكر مع دلالة القرب</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== ثالثاً: الإحالة بالأسماء الموصولة ========== -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">ثالثاً: الإحالة بالأسماء الموصولة</h3>
+
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">القاعدة: الاسم الموصول كأداة إحالة</h4>
+                    <p style="text-align: right; direction: rtl;">الأسماء الموصولة (الذي، التي، اللذان، اللتان، الذين، اللاتي، اللائي، مَنْ، ما...) تصل ما بعدها (<strong>صلة الموصول</strong>) بما قبلها (<strong>المرجع</strong>)، فتُحيل إلى موصوف وتَصِفه بجملة الصلة، وهذا يربط بين الموصوف والخبر عنه برباط <strong>وصفي إحالي</strong> محكم.</p>
+                    <p style="text-align: right; direction: rtl;"><strong>مثال تحليلي:</strong> <span class="ArabicH-example-text" style="display: inline; padding: 4px 10px;">يحترم الناسُ الذي يصدق.</span> – الاسم الموصول <strong>"الذي"</strong> أحال إلى شخص يُتصف بالصدق (المرجع مفهوم من السياق العام: "الشخص" أو "الإنسان")، وصلته "يصدق" أوضحت هذا المرجع وربطته بالاحترام. الجملة أصلها: يحترم الناسُ الشخصَ الذي يصدق، فحُذف الموصوف وأقيم الموصول مقامه.</p>
+                    <p style="text-align: right; direction: rtl;"><strong>ملاحظة:</strong> الاسم الموصول قد يكون <strong>خاصّاً</strong> (الذي، التي...) فيحيل إلى مرجع معيّن، أو <strong>عامّاً</strong> (مَنْ للعاقل، ما لغير العاقل) فيحيل إلى مرجع عام يُفهم من السياق.</p>
+                </div>
+
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تمرين (4): استخرج الاسم الموصول واذكر صلته ومرجعه</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p>في كل جملة، استخرج الاسم الموصول، وحدّد صلته، واذكر المرجع الذي يُحيل إليه:</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr><th width="5%">#</th><th width="35%">الجملة</th><th width="20%">الاسم الموصول</th><th width="20%">صلته</th><th width="20%">المرجع</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td class="ArabicH-example-text">هذه هي القصيدة التي نالت الجائزة.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="الموصول..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="الصلة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المرجع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td class="ArabicH-example-text">ساعدْ من يستحق المساعدة.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="الموصول..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="الصلة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المرجع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td class="ArabicH-example-text">اللذان اجتهدا نالا التفوق.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="الموصول..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="الصلة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المرجع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td class="ArabicH-example-text">اقرأ ما ينفعك من الكتب.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="الموصول..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="الصلة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المرجع..." rows="1"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')">إظهار إصلاح التمرين (4)</button>
+
+                <div id="answer4" class="ArabicH-answer">
+                    <h4>إصلاح التمرين (4):</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr><th>#</th><th>الجملة</th><th>الاسم الموصول</th><th>صلته</th><th>المرجع</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>①</td><td>هذه هي القصيدة التي نالت الجائزة.</td><td><strong>التي</strong></td><td><strong>نالت الجائزة</strong></td><td><strong>القصيدة</strong></td></tr>
+                                <tr><td>②</td><td>ساعدْ من يستحق المساعدة.</td><td><strong>مَنْ</strong> (موصول عام للعاقل)</td><td><strong>يستحق المساعدة</strong></td><td><strong>الشخص / الإنسان</strong> (مرجع عام مفهوم)</td></tr>
+                                <tr><td>③</td><td>اللذان اجتهدا نالا التفوق.</td><td><strong>اللذان</strong></td><td><strong>اجتهدا</strong></td><td><strong>الطالبان / الشخصان</strong> (مرجع مفهوم من السياق)</td></tr>
+                                <tr><td>④</td><td>اقرأ ما ينفعك من الكتب.</td><td><strong>ما</strong> (موصول عام لغير العاقل)</td><td><strong>ينفعك</strong></td><td><strong>الكتاب / المحتوى النافع</strong> (مرجع عام)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="text-align: right; direction: rtl; margin-top: 10px;"><strong>تحليل معمّق:</strong> الأسماء الموصولة العامة (مَنْ، ما) تُحيل إلى مرجع <strong>مُضمَر في الذهن</strong> لا في النصّ، وهذا يُسمّى <strong>الإحالة المقامية</strong> (أو الإحالة إلى خارج النص). أما الأسماء الموصولة الخاصة (الذي، التي...) فتُحيل غالباً إلى مرجع <strong>نصّي</strong> مذكور قبلها أو بعدها.</p>
+                </div>
+            </div>
+
+            <!-- ========== رابعاً: الإحالة بالنعت ========== -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">رابعاً: الإحالة بالنعت</h3>
+
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">القاعدة: النعت أداة إحالة وصفية</h4>
+                    <p style="text-align: right; direction: rtl;">النعت (الصفة) لا يُذكر اعتباطاً، بل <strong>يُحيل إلى موصوفه</strong> برابطة وصفية تجعل الذهن يعود إلى الموصوف فيقوى الترابط. وكثيراً ما يأتي النعت <strong>مكمّلاً لفكرة سابقة</strong> أو <strong>ممهّداً للاحقة</strong>، فيُشعِر بوحدة النص وتماسكه. النعت يختلف عن بقية وسائل الإحالة في كونه <strong>تابعاً</strong> يُذكَر مع متبوعه في الجملة نفسها غالباً، لكنه يُحيل إلى خصائص الموصوف التي قد تكون مذكورة سابقاً أو ستُذكر لاحقاً.</p>
+                    <p style="text-align: right; direction: rtl;"><strong>مثال تحليلي:</strong> <span class="ArabicH-example-text" style="display: inline; padding: 4px 10px;">زرتُ الحديقةَ <u>الغناءَ</u>، فسرّني منظرها.</span> – صفة <strong>"الغناء"</strong> تُحيل إلى الحديقة وتصفها، وهذه الصفة هي التي مهّدت لنتيجة "فسرّني منظرها". فالربط هنا مزدوج: نحوي (بين النعت ومنعوته) ودلالي (بين وصف الحديقة والسرور بمنظرها).</p>
+                </div>
+
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تمرين (5): بيّن كيف أسهم النعت في ربط الجمل</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p>في كل مثال، استخرج النعت وبيّن كيف أسهم في ربط الجملة الثانية بالأولى:</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr><th width="5%">#</th><th width="35%">المثال</th><th width="20%">النعت</th><th width="40%">كيفية إسهامه في الربط</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td class="ArabicH-example-text">قرأتُ كتاباً <u>مفيداً</u>، فزادني علماً.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="النعت..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="كيف أسهم في الربط..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td class="ArabicH-example-text">يسكن في بيتٍ <u>متواضعٍ</u>، لكنّه هادئ.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="النعت..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="كيف أسهم في الربط..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td class="ArabicH-example-text">استمعتُ إلى محاضرةٍ <u>شيّقةٍ</u>، فلم أشعر بالوقت.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="النعت..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="كيف أسهم في الربط..." rows="2"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td class="ArabicH-example-text">لبس ثوباً <u>أنيقاً</u>، فجذب الأنظار.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="النعت..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="كيف أسهم في الربط..." rows="2"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer5')">إظهار إصلاح التمرين (5)</button>
+
+                <div id="answer5" class="ArabicH-answer">
+                    <h4>إصلاح التمرين (5):</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr><th>#</th><th>المثال</th><th>النعت</th><th>كيفية الإسهام في الربط</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td>قرأتُ كتاباً مفيداً، فزادني علماً.</td>
+                                    <td><strong>مفيداً</strong></td>
+                                    <td>صفة "مفيداً" مهّدت لنتيجة "زادني علماً" – فالمنفعة هي سبب زيادة العلم، والربط سببي وصفي.</td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td>يسكن في بيتٍ متواضعٍ، لكنّه هادئ.</td>
+                                    <td><strong>متواضعٍ</strong></td>
+                                    <td>صفة "متواضع" (بمعنى البساطة) تتعارض مع توقّع الهدوء، فجاء الاستدراك بـ"لكنّه هادئ" لربط الصفة بالنتيجة غير المتوقعة.</td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td>استمعتُ إلى محاضرةٍ شيّقةٍ، فلم أشعر بالوقت.</td>
+                                    <td><strong>شيّقةٍ</strong></td>
+                                    <td>صفة "شيّقة" هي العلّة المباشرة لنتيجة "لم أشعر بالوقت" – فالانسجام الزمني ناتج عن التشويق، والربط علّي.</td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td>لبس ثوباً أنيقاً، فجذب الأنظار.</td>
+                                    <td><strong>أنيقاً</strong></td>
+                                    <td>صفة "أنيقاً" هي سبب "جذب الأنظار" – فالأناقة تُحيل إلى جمال المظهر الذي يسترعي الانتباه، والربط سببي مباشر.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="text-align: right; direction: rtl; margin-top: 10px;"><strong>تحليل معمّق:</strong> النعت هنا ليس مجرد وصف للموصوف، بل هو <strong>رابط دلالي</strong> بين الجملتين: الجملة الأولى تقدّم الصفة، والجملة الثانية تقدّم النتيجة أو التعقيب المترتّب عليها. وهذا يُسمّى <strong>الإحالة الوصفية</strong> حيث يُحيل النعت إلى خاصية في الموصوف تُفسّر ما بعدها.</p>
+                </div>
+            </div>
+
+            <!-- ========== تمرين مقارن شامل للإحالة ========== -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">تمرين مقارن شامل للإحالة</h3>
+
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تعليمات:</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p>في الجمل التالية، حدد <strong>نوع الإحالة</strong> المستعملة (ضمير، إشارة، موصول، نعت) واذكر <strong>مرجع</strong> كل منها:</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr><th width="5%">#</th><th width="35%">الجملة</th><th width="25%">نوع الإحالة</th><th width="35%">المرجع (المُحال إليه)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td class="ArabicH-example-text">النيلُ نهرٌ عظيم، وهو شريان مصر.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="نوع الإحالة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المرجع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td class="ArabicH-example-text">التسامحُ، تلك القيمة الإنسانية.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="نوع الإحالة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المرجع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td class="ArabicH-example-text">أكرِمِ الضيوفَ القادمينَ، وقدّم لهم طعاماً.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="نوع الإحالة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المرجع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td class="ArabicH-example-text">جاء الرجلُ الذي وعدني.</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="نوع الإحالة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المرجع..." rows="1"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer6')">إظهار إصلاح التمرين المقارن</button>
+
+                <div id="answer6" class="ArabicH-answer">
+                    <h4>إصلاح التمرين المقارن:</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr><th>#</th><th>الجملة</th><th>نوع الإحالة</th><th>المرجع</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td>النيلُ نهرٌ عظيم، وهو شريان مصر.</td>
+                                    <td><strong>إحالة بالضمير</strong> (هو)</td>
+                                    <td><strong>النيلُ</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td>التسامحُ، تلك القيمة الإنسانية.</td>
+                                    <td><strong>إحالة باسم الإشارة</strong> (تلك)</td>
+                                    <td><strong>التسامحُ</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td>أكرِمِ الضيوفَ القادمينَ، وقدّم لهم طعاماً.</td>
+                                    <td><strong>إحالة بالنعت</strong> (القادمين) + <strong>إحالة بالضمير</strong> (لهم)</td>
+                                    <td><strong>الضيوفَ</strong> (لكل منهما)</td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td>جاء الرجلُ الذي وعدني.</td>
+                                    <td><strong>إحالة بالاسم الموصول</strong> (الذي)</td>
+                                    <td><strong>الرجلُ</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="text-align: right; direction: rtl; margin-top: 10px;"><strong>ملاحظة:</strong> في المثال ③، اجتمع نوعان من الإحالة (النعت والضمير) يُحيلان إلى مرجع واحد هو "الضيوف". وهذا دليل على <strong>تكاثف وسائل الإحالة</strong> في النص الواحد لتعزيز تماسكه.</p>
+                </div>
+            </div>
+
+            <!-- ========== تمرين ختامي للقسم الثاني ========== -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">تمرين ختامي: استخراج وسائل الإحالة من نصّ</h3>
+
+                <div class="ArabicH-instructions-box">
+                    <h4 class="ArabicH-instructions-title">تعليمات:</h4>
+                    <div class="ArabicH-instructions-content">
+                        <p>في الفقرة التالية، استخرج <strong>أربع وسائل إحالة مختلفة</strong> واذكر <strong>نوع كل منها</strong> و<strong>مرجعها</strong>:</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-exercise-content">
+                    <div class="ArabicH-poetry-verse">
+                        <p class="ArabicH-example-text" style="font-size: 1.35rem;">
+                            القراءةُ غذاء العقل، وهي التي تبني الأمم. هذا السلاحُ الفعال لا يَعْدِله شيء. بدأتُ كتاباً تاريخياً، فأدهشني محتواه العميق. أولئك الكتّاب العظماء هم الذين يتركون بصمة.
+                        </p>
+                    </div>
+
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr><th width="5%">#</th><th width="30%">وسيلة الإحالة (العنصر المُحيل)</th><th width="25%">نوع الإحالة</th><th width="40%">المرجع (المُحال إليه)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="العنصر المُحيل..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="نوع الإحالة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المرجع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="العنصر المُحيل..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="نوع الإحالة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المرجع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="العنصر المُحيل..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="نوع الإحالة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المرجع..." rows="1"></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="العنصر المُحيل..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="نوع الإحالة..." rows="1"></textarea></td>
+                                    <td><textarea class="ArabicH-table-textarea" placeholder="المرجع..." rows="1"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answerFinal')">إظهار إصلاح التمرين الختامي</button>
+
+                <div id="answerFinal" class="ArabicH-answer">
+                    <h4>إصلاح التمرين الختامي:</h4>
+                    <div class="ArabicH-table-container">
+                        <table class="ArabicH-exercise-table">
+                            <thead>
+                                <tr><th>#</th><th>العنصر المُحيل</th><th>نوع الإحالة</th><th>المرجع</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>①</td>
+                                    <td><strong>وهي</strong> (الضمير "هي")</td>
+                                    <td><strong>إحالة بالضمير</strong></td>
+                                    <td><strong>القراءةُ</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>②</td>
+                                    <td><strong>التي</strong></td>
+                                    <td><strong>إحالة بالاسم الموصول</strong></td>
+                                    <td><strong>القراءةُ</strong> (المقدرة: "القراءة هي التي تبني الأمم")</td>
+                                </tr>
+                                <tr>
+                                    <td>③</td>
+                                    <td><strong>هذا</strong></td>
+                                    <td><strong>إحالة باسم الإشارة</strong></td>
+                                    <td><strong>القراءةُ</strong> (إشارة إلى مفهوم القراءة كسلاح)</td>
+                                </tr>
+                                <tr>
+                                    <td>④</td>
+                                    <td><strong>الهاء</strong> في "محتواه"</td>
+                                    <td><strong>إحالة بالضمير</strong></td>
+                                    <td><strong>كتاباً</strong> (الكتاب التاريخي)</td>
+                                </tr>
+                                <tr>
+                                    <td>⑤</td>
+                                    <td><strong>أولئك</strong></td>
+                                    <td><strong>إحالة باسم الإشارة</strong></td>
+                                    <td><strong>الكتّاب العظماء</strong> (المشار إليه لاحق)</td>
+                                </tr>
+                                <tr>
+                                    <td>⑥</td>
+                                    <td><strong>الذين</strong></td>
+                                    <td><strong>إحالة بالاسم الموصول</strong></td>
+                                    <td><strong>أولئك</strong> (أي: أولئك الكتّاب العظماء)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p style="text-align: right; direction: rtl; margin-top: 10px;"><strong>تحليل ختامي معمّق:</strong> هذه الفقرة القصيرة حوت <strong>ستّ وسائل إحالة</strong> متنوّعة (ضميران، اسمان موصولان، اسما إشارة) وهذا يوضّح كيف تُشكّل الإحالة <strong>العمود الفقري للترابط النصي</strong>. لاحظ أيضاً ظاهرة <strong>تعدّد المُحيلات لمرجع واحد</strong>: فالقراءة أُحيل إليها بالضمير "هي" وبالموصول "التي" وبالإشارة "هذا" – وهذا الثراء الإحالي يجعل النصّ محكم السبك. كما تلاحظ <strong>الإحالة المتسلسلة</strong>: "أولئك" ← "الكتّاب العظماء" ← "الذين يتركون بصمة"، فكل عنصر يُحيل إلى الآخر في سلسلة محكمة.</p>
+                </div>
+            </div>
+
+            <!-- ملخص الدرس -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">ملخص الدرس: الإحالة بأنواعها الأربعة</h3>
+                <div class="ArabicH-knowledge-content">
+                    <ul class="ArabicH-definition-list">
+                        <li><strong>1. الإحالة بالضمائر:</strong> يعود الضمير على مرجع سابق (غالباً) فيربط الجمل. شرطها: وضوح المرجع والتطابق في النوع والعدد. مثال: (جاء محمدٌ، وهو يحمل كتاباً).</li>
+                        <li><strong>2. الإحالة بأسماء الإشارة:</strong> اسم الإشارة يُحيل إلى مشار إليه حاضر في الذهن أو النص، وقد يحمل دلالات بلاغية. مثال: (الصدقُ، ذلك السلاح الأخلاقي).</li>
+                        <li><strong>3. الإحالة بالأسماء الموصولة:</strong> الاسم الموصول يصل ما بعده بما قبله عن طريق الصلة، فيربط الموصوف بالخبر. مثال: (يحترم الناسُ الذي يصدق).</li>
+                        <li><strong>4. الإحالة بالنعت:</strong> النعت يُحيل إلى صفة في الموصوف تُفسّر ما بعدها أو تُمهّد له، فيربط الجمل برابط وصفي. مثال: (قرأتُ كتاباً مفيداً، فزادني علماً).</li>
+                        <li><strong>الإحالة القبلية والبعدية:</strong> الإحالة قد تكون <strong>بعدية</strong> (المُحيل بعد المرجع – وهو الغالب) أو <strong>قبلية</strong> (المُحيل قبل المرجع).</li>
+                        <li><strong>تكاثف الإحالة:</strong> في النصوص المحكمة، تتعدّد وسائل الإحالة وتتداخل لتُحيل إلى مرجع واحد أو مراجع متعددة، مما يصنع <strong>نسيجاً نصياً متماسكاً</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- نهاية الدرس -->
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                    <span class="ArabicH-flower-decoration">❦</span>
+                    تم الدرس الثامن: الإحالة – الموصول، الإشارة، الضمير، النعت
+                    <span class="ArabicH-flower-decoration">✿</span>
+                </p>
+                <p style="color: var(--secondary-color); font-weight: bold; margin-top: 10px;">
+                    نتمنى لكم التوفيق والنجاح
+                </p>
+            </div>
+
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_3SY_language_module3_lesson7.html" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.previousLesson">الدرس السابق</a>
+                <a href="#" class="ArabicH-nav-btn" data-i18n="ArabicH.languageLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Manual Install Button -->
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+
+    <script>
+        window.translations_ArabicHLanguageModule3Lesson8 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.languageLesson.module3Lesson8Title": "الإحالة",
+                "ArabicH.languageLesson.module3Lesson8Subtitle": "الدرس الثامن: الإحالة – الموصول، الإشارة، الضمير، النعت",
+                "ArabicH.languageLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.languageLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.languageLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.languageLesson.previousLesson": "الدرس السابق",
+                "ArabicH.languageLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.languageLesson.module3Lesson8Title": "Reference (Al-Iḥālah)",
+                "ArabicH.languageLesson.module3Lesson8Subtitle": "Lesson 8: Reference – Relative Pronouns, Demonstratives, Pronouns, and Adjectives",
+                "ArabicH.languageLesson.showAnswer": "Show Answer",
+                "ArabicH.languageLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.languageLesson.backToHome": "Back to Homepage",
+                "ArabicH.languageLesson.previousLesson": "Previous Lesson",
+                "ArabicH.languageLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.languageLesson.module3Lesson8Title": "La référence (Al-Iḥālah)",
+                "ArabicH.languageLesson.module3Lesson8Subtitle": "Leçon 8: La référence – Pronoms relatifs, démonstratifs, personnels et adjectifs",
+                "ArabicH.languageLesson.showAnswer": "Afficher la réponse",
+                "ArabicH.languageLesson.backToLessons": "Retour aux leçons générales",
+                "ArabicH.languageLesson.backToHome": "Retour à l'accueil",
+                "ArabicH.languageLesson.previousLesson": "Leçon précédente",
+                "ArabicH.languageLesson.nextLesson": "Leçon suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+
+        window.currentTranslations = window.translations_ArabicHLanguageModule3Lesson8;
+    </script>
+
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إظهار الإجابة';
+            } else {
+                answer.style.display = "block";
+                button.textContent = button.getAttribute('data-i18n-value') || 'إخفاء الإجابة';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) item.classList.add('active');
+                else item.classList.remove('active');
+            });
+
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => {
+                button.setAttribute('data-i18n-value', button.textContent);
+            });
+
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.checked = true;
+                }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) {
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+
+            const firstTextarea = document.querySelector('.ArabicH-table-textarea');
+            if (firstTextarea) setTimeout(() => firstTextarea.focus(), 500);
+        });
+
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').catch(e => console.log('SW registration failed: ', e));
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (manualInstallBtn) manualInstallBtn.style.display = 'flex';
+            });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') {
+                        manualInstallBtn.style.display = 'none';
+                        deferredPrompt = null;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

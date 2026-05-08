@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أدب: قصة "المكنة" ليوسف إدريس - الدرس الأول | مركز تعليم العربية</title>
+    
+    <meta name="theme-color" content="#4f6d4a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="قصة المكنة">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    <link rel="manifest" href="manifest.json">
+    
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        :root {
+            --primary-color: #4f6d4a;
+            --secondary-color: #698e5f;
+            --accent-color: #8daf81;
+            --light-color: #f0f5ed;
+            --dark-color: #2b3625;
+            --text-color: #3d4d36;
+            --heading-color: #1d2518;
+            --background-color: #f9fbf7;
+            --card-bg: #ffffff;
+            --definition-bg: #ecf2e8;
+            --border-color: #c5d5bb;
+            --table-even-bg: #f0f5ed;
+            --table-hover-bg: #ecf2e8;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(79, 109, 74, 0.1);
+            --gradient-primary: linear-gradient(135deg, #4f6d4a 0%, #33482e 100%);
+            --gradient-secondary: linear-gradient(135deg, #698e5f 0%, #4f6d4a 100%);
+            --gradient-accent: linear-gradient(135deg, #8daf81 0%, #698e5f 100%);
+            --gradient-light: linear-gradient(135deg, #f0f5ed 0%, #ecf2e8 100%);
+            --highlight-color: #c77d23;
+            --highlight-bg: rgba(199, 125, 35, 0.08);
+            --story-bg: rgba(79, 109, 74, 0.06);
+            --story-border: #698e5f;
+        }
+        [data-theme="dark"] {
+            --primary-color: #698e5f;
+            --secondary-color: #8daf81;
+            --accent-color: #b0caa1;
+            --light-color: #2b3625;
+            --dark-color: #1d2518;
+            --text-color: #e6f0de;
+            --heading-color: #f0f5ed;
+            --background-color: #1d2518;
+            --card-bg: #2b3625;
+            --definition-bg: #33482e;
+            --border-color: #4f6d4a;
+            --table-even-bg: #2b3625;
+            --table-hover-bg: #33482e;
+            --box-shadow: 0 6px 16px rgba(0,0,0,0.45);
+            --gradient-primary: linear-gradient(135deg, #698e5f 0%, #4f6d4a 100%);
+            --gradient-secondary: linear-gradient(135deg, #8daf81 0%, #698e5f 100%);
+            --gradient-accent: linear-gradient(135deg, #b0caa1 0%, #8daf81 100%);
+            --gradient-light: linear-gradient(135deg, #2b3625 0%, #1d2518 100%);
+            --highlight-color: #e9b04d;
+            --highlight-bg: rgba(233,176,77,0.15);
+            --story-bg: rgba(105,142,95,0.12);
+            --story-border: #8daf81;
+        }
+
+        .ArabicH-lesson-page { min-height: 100vh; background: var(--background-color); display: flex; flex-direction: column; }
+        .ArabicH-lesson-main { flex: 1; display: flex; flex-direction: column; padding: 2rem; max-width: 1200px; margin: 0 auto; width: 100%; }
+        .ArabicH-lesson-title { font-size: 2.5rem; margin-bottom: 1rem; color: var(--heading-color); text-align: center; font-weight: 700; }
+        .ArabicH-lesson-subtitle { font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-color); text-align: center; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+        .ArabicH-lesson-container { background: var(--card-bg); border-radius: var(--border-radius); box-shadow: var(--box-shadow); padding: 2.5rem; margin-bottom: 2rem; border-top: 6px solid var(--primary-color); }
+        .ArabicH-lesson-header { background: var(--gradient-primary); color: white; padding: 1.5rem; border-radius: var(--border-radius); margin-bottom: 2rem; text-align: center; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .ArabicH-lesson-teacher, .ArabicH-lesson-class { font-size: 1.1rem; font-weight: 600; background: rgba(255,255,255,0.15); padding: 8px 15px; border-radius: 20px; backdrop-filter: blur(5px); }
+        .ArabicH-lesson-content { margin: 30px 0; }
+        .ArabicH-exercise-card { background: var(--card-bg); border-radius: var(--border-radius); box-shadow: var(--box-shadow); margin: 25px 0; padding: 1.5rem; border: 1px solid var(--border-color); }
+        .ArabicH-exercise-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--secondary-color); font-weight: 600; text-align: center; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px; }
+        [data-theme="dark"] .ArabicH-exercise-title { color: var(--accent-color); }
+        .ArabicH-exercise-content { line-height: 1.8; margin-bottom: 20px; color: var(--text-color); }
+        .ArabicH-rule-card { background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%); border-radius: var(--border-radius); margin: 20px 0; padding: 1.5rem; border-left: 6px solid var(--secondary-color); position: relative; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .ArabicH-rule-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+        .ArabicH-rule-card::before { content: "📘"; position: absolute; left: 15px; top: 15px; font-size: 1.2rem; opacity: 0.8; }
+        .ArabicH-rule-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700; padding-left: 30px; border-bottom: 2px dashed var(--secondary-color); padding-bottom: 8px; position: relative; }
+        [data-theme="dark"] .ArabicH-rule-title { color: var(--accent-color); }
+        .ArabicH-rule-title::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 60px; height: 2px; background-color: var(--primary-color); }
+        .ArabicH-story-text { font-size: 1.25rem; font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif; line-height: 2.0; color: var(--dark-color); margin: 20px 0; padding: 25px; background-color: var(--story-bg); border-radius: var(--border-radius); border-right: 4px solid var(--story-border); text-align: right; direction: rtl; }
+        .ArabicH-story-quote { background-color: rgba(255,255,255,0.7); border-right: 3px solid var(--accent-color); padding: 15px 20px; margin: 15px 0; border-radius: 10px; font-style: italic; color: var(--dark-color); text-align: right; direction: rtl; box-shadow: 0 3px 8px rgba(0,0,0,0.08); }
+        [data-theme="dark"] .ArabicH-story-text { color: #f0f5ed; background-color: var(--story-bg); border-right: 4px solid var(--story-border); }
+        [data-theme="dark"] .ArabicH-story-quote { background-color: rgba(46,56,38,0.7); color: #f0f5ed; }
+        .ArabicH-vocab-table { width: 100%; border-collapse: collapse; margin: 20px 0; direction: rtl; }
+        .ArabicH-vocab-table th { background-color: var(--primary-color); color: white; padding: 12px; font-weight: 600; text-align: center; border: 1px solid var(--border-color); }
+        .ArabicH-vocab-table td { padding: 10px; border: 1px solid var(--border-color); text-align: right; background-color: var(--card-bg); color: var(--text-color); }
+        .ArabicH-vocab-table tr:nth-child(even) td { background-color: var(--table-even-bg); }
+        .ArabicH-vocab-table tr:hover td { background-color: var(--table-hover-bg); }
+        .ArabicH-question { background-color: var(--definition-bg); border-radius: var(--border-radius); padding: 1.5rem; margin: 20px 0; border-right: 4px solid var(--primary-color); position: relative; }
+        .ArabicH-question-title { font-size: 1.2rem; margin-bottom: 10px; color: var(--primary-color); font-weight: 700; text-align: right; }
+        [data-theme="dark"] .ArabicH-question-title { color: var(--accent-color); }
+        .ArabicH-question-content { line-height: 1.8; color: var(--text-color); text-align: right; margin-bottom: 15px; }
+        .ArabicH-show-answer-btn { background-color: var(--primary-color); color: white; border: none; padding: 10px 20px; border-radius: var(--border-radius); cursor: pointer; font-size: 16px; margin-top: 10px; transition: background-color 0.3s; display: block; width: 100%; max-width: 200px; margin-right: auto; margin-left: 0; }
+        .ArabicH-show-answer-btn:hover { background-color: var(--accent-color); }
+        .ArabicH-answer { display: none; margin-top: 20px; padding: 20px; border-radius: var(--border-radius); border-right: 3px solid var(--accent-color); background-color: var(--definition-bg); line-height: 1.8; color: var(--text-color); text-align: right; }
+        .ArabicH-highlighted-quote { background-color: var(--highlight-bg); border-right: 4px solid var(--highlight-color); padding: 20px; border-radius: var(--border-radius); margin: 20px 0; font-style: italic; color: var(--dark-color); text-align: center; direction: rtl; font-weight: 500; font-size: 1.3rem; }
+        [data-theme="dark"] .ArabicH-highlighted-quote { background-color: rgba(233,176,77,0.15); color: #f0f5ed; }
+        .ArabicH-image-container { text-align: center; margin: 25px 0; }
+        .ArabicH-image-container img { max-width: 100%; height: auto; border-radius: var(--border-radius); box-shadow: var(--box-shadow); border: 3px solid var(--border-color); }
+        .ArabicH-flower-decoration { display: inline-block; margin: 0 10px; color: var(--primary-color); font-size: 1.2rem; }
+        .ArabicH-knowledge-box { background-color: var(--definition-bg); border-radius: var(--border-radius); padding: 1.5rem; margin: 25px 0; border-right: 4px solid var(--primary-color); position: relative; }
+        .ArabicH-knowledge-box::before { content: "💡"; position: absolute; right: 15px; top: 15px; font-size: 1.5rem; opacity: 0.7; }
+        .ArabicH-knowledge-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700; text-align: right; padding-right: 40px; }
+        [data-theme="dark"] .ArabicH-knowledge-title { color: var(--accent-color); }
+        .ArabicH-knowledge-content { line-height: 1.8; color: var(--text-color); text-align: right; }
+        .ArabicH-analysis-section { background: var(--card-bg); border-radius: var(--border-radius); margin: 25px 0; padding: 1.5rem; border: 1px solid var(--border-color); }
+        .ArabicH-analysis-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700; text-align: right; border-bottom: 2px solid var(--secondary-color); padding-bottom: 8px; }
+        [data-theme="dark"] .ArabicH-analysis-title { color: var(--accent-color); }
+        .ArabicH-nav-buttons { display: flex; justify-content: space-between; margin-top: 30px; }
+        .ArabicH-nav-btn { background-color: var(--primary-color); color: white; border: none; padding: 10px 20px; border-radius: var(--border-radius); cursor: pointer; font-size: 16px; text-decoration: none; transition: background-color 0.3s; display: inline-block; text-align: center; }
+        .ArabicH-nav-btn:hover { background-color: var(--accent-color); }
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title { font-size: 2rem; } .ArabicH-lesson-subtitle { font-size: 1.1rem; }
+            .ArabicH-lesson-container { padding: 1.5rem; } .ArabicH-lesson-header { flex-direction: column; gap: 15px; }
+            .ArabicH-nav-buttons { flex-direction: column; gap: 10px; } .ArabicH-rule-card { padding: 1.2rem; }
+            .ArabicH-rule-title { font-size: 1.2rem; padding-left: 25px; } .ArabicH-rule-card::before { left: 12px; top: 12px; font-size: 1.1rem; }
+            .ArabicH-story-text { font-size: 1.15rem; padding: 20px; line-height: 1.9; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main { padding: 1rem; } .ArabicH-lesson-title { font-size: 1.6rem; }
+            .ArabicH-exercise-card { padding: 1rem; } .ArabicH-story-text { font-size: 1.05rem; line-height: 1.8; padding: 15px; }
+            .ArabicH-rule-card { padding: 1rem; } .ArabicH-rule-title { font-size: 1.1rem; padding-left: 22px; }
+            .ArabicH-rule-card::before { left: 10px; top: 10px; font-size: 1rem; }
+        }
+        [data-theme="dark"] p, [data-theme="dark"] li, [data-theme="dark"] div:not(.ArabicH-story-text) { color: var(--text-color) !important; }
+        [data-theme="dark"] strong { color: var(--accent-color); }
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) { color: var(--accent-color); }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container"><a href="index.html"><img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt"></a></div>
+            <div class="ArabicH-general-title-container"><h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1></div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label"><span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span><div class="ArabicH-theme-toggle-switch"><input type="checkbox" id="themeToggle"><span class="ArabicH-theme-toggle-slider"></span></div></label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect"><option value="ar">العربية</option><option value="en">English</option><option value="fr">Français</option></select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">🏠</span><span data-i18n="ArabicH.windows.home">الرئيسية</span></a>
+        <a href="authors.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">👨‍🎓</span><span data-i18n="ArabicH.windows.authors">ادباء</span></a>
+        <a href="quotes.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📖</span><span data-i18n="ArabicH.windows.quotes">شواهد</span></a>
+        <a href="resources.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📚</span><span data-i18n="ArabicH.windows.resources">موارد</span></a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.literatureLesson.storyTitle">قصة "المكنة" ليوسف إدريس</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.literatureLesson.storySubtitle">الدرس الأول: تحليل أقصوصة "المكنة" من مجموعة "مختارات قصصية"</p>
+        
+        <div class="ArabicH-lesson-container">
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher"><span class="ArabicH-flower-decoration">❦</span> الاستاذ: غير معروف <span class="ArabicH-flower-decoration">❦</span></div>
+                <div class="ArabicH-lesson-class"><span class="ArabicH-flower-decoration">✿</span> المعهد: غير معروف <span class="ArabicH-flower-decoration">✿</span></div>
+            </div>
+
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">التقديم</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p>تُمثّل أقصوصة "المكنة" للكاتب المصري يوسف إدريس نموذجاً بارزاً في الأدب الواقعي، حيث يجسّد من خلالها صراع الإنسان مع الآلة، ويكشف عن تحوّلات المجتمع الريفي أمام التحديث الصناعي. تنتمي الأقصوصة إلى مجموعة "مختارات قصصية" الصادرة سنة 1988، وتدور أحداثها حول عامل مكنة الطحين "الأسطى محمد" وعلاقته المعقدة بالمكنة، وصدامه مع صاحبها "الحاج طه".</p>
+                    <p>يجمع النص بين عمق التجربة الإنسانية ودقّة التصوير الفني، مما يجعله لوحة سردية تتجاوز حدود الحكاية إلى التأمل في مصير الإنسان العامل وعلاقته بالتقنية والسلطة.</p>
+                </div>
+            </div>
+            
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">📖 معلومات عن الكاتب</h3>
+                <div class="ArabicH-knowledge-content">
+                    <ul>
+                        <li><strong>الاسم:</strong> يوسف إدريس</li>
+                        <li><strong>الميلاد:</strong> 1927، قرية البيّوم بمحافظة الشرقية، مصر</li>
+                        <li><strong>المهنة:</strong> طبيب ثم كاتب (أقصوصة، رواية، مسرحية، مقالة)</li>
+                        <li><strong>الوفاة:</strong> 1 أوت 1991</li>
+                        <li><strong>أعمال بارزة:</strong> <em>أرخص ليالي</em> (1954)، <em>جمهورية فرحات</em> (1956)، <em>حادثة شرف</em> (1958)، <em>آخر الدنيا</em> (1961)، <em>العسكري وقصص أخرى</em> (1962)، روايات: <em>الحرام</em> (1959)، <em>العيب</em> (1962)، <em>البيضاء</em> (1966).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">📚 معلومات عن الكتاب</h3>
+                <div class="ArabicH-knowledge-content">
+                    <ul>
+                        <li><strong>العنوان:</strong> مختارات قصصية</li>
+                        <li><strong>الناشر:</strong> دار الجنوب للنشر – تونس</li>
+                        <li><strong>سنة النشر:</strong> 1988</li>
+                        <li><strong>المحتوى:</strong> يضم قصصاً مختارة من أعمال يوسف إدريس، منها قصة "المحور الرابع" التي وردت في الصفحات 141–148.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ArabicH-image-container">
+                <img src="assets2/year1/litterature/image1.png" alt="صورة توضيحية لقصة المكنة" onerror="this.style.display='none'">
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">ملخص القصة</h3>
+                <div class="ArabicH-story-text">
+                    <p>تدور أحداث القصة حول "الأسطى محمد"، العامل الماهر الوحيد القادر على تشغيل مكنة طحين عتيقة في إحدى القرى. ارتبط محمد بالمكنة روحياً، فكانت بالنسبة إليه أكثر من مجرد آلة، إنها كيانه وملاذه بعد أن فقد زوجته وهجره ابنه. يتميز محمد بخبرة تقنية عالية، ويعرف أسرار المكنة التي لا يعرفها غيره، مما جعل أهل القرية يعتمدون عليه كلياً.</p>
+                    <p>يظهر "الحاج طه" مالك المكنة، وهو تاجر نفعي لا يفهم في التقنية شيئاً، لكنه يريد استغلال المكنة لتحقيق أقصى ربح. تنشأ بينه وبين محمد صراعات متكررة، تنتهي بطرد محمد من عمله بعد أن أهانه طه. يحاول الحاج طه بعد ذلك تشغيل المكنة بعمال آخرين، لكنهم يفشلون جميعاً. وأخيراً، يأتي "أسطى جديد" من المدينة، شاب أنيق وواثق، يتمكن من تشغيل المكنة بسهولة. تنهار معنويات محمد وهو يرى المكنة تعمل بدون أن يكون هو مشغّلها، وتنتهي القصة بمشهد مأساوي يجسّد انكساره.</p>
+                    <p style="text-align: center; margin-top: 20px; color: var(--secondary-color);"><strong>المصدر:</strong> يوسف إدريس، مختارات قصصية، دار الجنوب للنشر - تونس 1988، ص 141-148</p>
+                </div>
+            </div>
+            
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">شرح المفردات</h3>
+                <div class="ArabicH-table-container">
+                    <table class="ArabicH-vocab-table">
+                        <thead><tr><th width="30%">المفردة</th><th width="70%">الشرح</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>الأسطى</strong></td><td>المعلم أو الصانع الماهر في حرفته، لفظ عامي من أصل تركي</td></tr>
+                            <tr><td><strong>المكنة</strong></td><td>الآلة، وتقصد هنا آلة طحن الحبوب التي تعمل بالمحرك</td></tr>
+                            <tr><td><strong>البستم</strong></td><td>المكبس، جزء من المحرك يتحرك داخل الأسطوانة</td></tr>
+                            <tr><td><strong>الحدافة</strong></td><td>عجلة ثقيلة تثبت على عمود المحرك لتنظيم دورانه</td></tr>
+                            <tr><td><strong>الوابور</strong></td><td>محرك يعمل بالبخار أو بالوقود</td></tr>
+                            <tr><td><strong>الطارة</strong></td><td>قرص ينقل الحركة من المحرك إلى المكنة بواسطة سير</td></tr>
+                            <tr><td><strong>الترعة</strong></td><td>قناة مائية صغيرة تتفرع من النهر للري</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أسئلة الفهم</h3>
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- يمكن تقسيم النص إلى مقاطع كبرى. ضع عنواناً لكل مقطع.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer1" class="ArabicH-answer">
+                        <p><strong>المقطع الأول:</strong> تقديم المكنة كرمز غامض ومقدّس في القرية.</p>
+                        <p><strong>المقطع الثاني:</strong> تصوير علاقة الأسطى محمد بالمكنة (ولع، مهارة، معاناة).</p>
+                        <p><strong>المقطع الثالث:</strong> الصراع مع الحاج طه الذي يطرده من العمل.</p>
+                        <p><strong>المقطع الرابع:</strong> النهاية المأساوية حين ينجح الأسطى الجديد في تشغيلها وانهيار محمد.</p>
+                    </div>
+                </div>
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- حلل البرنامج السردي للأسطى محمد (التحفيز، الكفاءة، الإنجاز، الجزاء).</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer2" class="ArabicH-answer">
+                        <p><strong>التحفيز القصصي:</strong> ولعه بالمكنة لأنها كل دنياه، وهي تعويض عن فقد الزوجة والابن العاق.</p>
+                        <p><strong>الكفاءة:</strong> خبرة تقنية عالية، يعرف أسرارها ويكتشف أعطالها بالسمع والنظر، يسيطر على تفاصيلها.</p>
+                        <p><strong>الإنجاز:</strong> تشغيلها رغم صعوبتها، توفير الطحين للناس، احتكار المعرفة التقنية.</p>
+                        <p><strong>الجزاء:</strong> الطرد من عمله، خسارة مكانته، انهيار رمزي أمام نجاح الأسطى الجديد القادم من المدينة.</p>
+                    </div>
+                </div>
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">3- قارن بين البرنامج السردي للحاج طه والبرنامج السردي للأسطى محمد.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer3" class="ArabicH-answer">
+                        <p><strong>الحاج طه:</strong></p>
+                        <ul><li><strong>التحفيز:</strong> دافع اقتصادي، استغلال المكنة للربح.</li><li><strong>الكفاءة:</strong> ضعيفة، يعتمد على غيره.</li><li><strong>الإنجاز:</strong> محاولة فرض سلطته، ثم نجاحه أخيراً عبر الأسطى الجديد.</li><li><strong>الجزاء:</strong> فقدان ثقة الناس، ثم استعادة السيطرة على المكنة بفضل المدينة.</li></ul>
+                        <p><strong>العلاقة بين البرنامجين:</strong> علاقة صراع بين التقنية/الخبرة (محمد) والسلطة/المال (طه). ينتصر المال في النهاية عبر الاستعانة بالمدينة.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أطالع</h3>
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- كيف تجسّدت العلاقة بين الإنسان والآلة في شخصية الأسطى محمد؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer4" class="ArabicH-answer">
+                        <p>تجسّدت العلاقة بين الإنسان والآلة في شخصية الأسطى محمد كعلاقة وجودية: المكنة لم تكن مجرد أداة عمل، بل أصبحت هويته وكيانه. لقد حلّت محل الأسرة، وصارت مصدر قوته ومكانته الاجتماعية. هذا يعكس <strong>الاغتراب الإنساني</strong> أمام التقنية.</p>
+                    </div>
+                </div>
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- يمثل الأسطى الجديد القادم من المدينة رمزاً للتحديث. كيف عالج النص هذه القضية؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer5')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer5" class="ArabicH-answer">
+                        <p>عالج النص قضية التحديث عبر شخصية الأسطى الجديد: شاب من المدينة، مظهره نظيف، واثق، يتعامل مع المكنة ببرود تقني. نجاحه يمثل انتصار الحداثة على الخبرة التقليدية، لكن النص يطرح سؤالاً: هل هذا الانتصار إيجابي؟ فمحمد ينهار، والقيم الإنسانية تتراجع أمام منطق التقنية.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">بمناسبة النص</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الحقول المعجمية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>استخرج من النص مفردات تنتمي إلى الحقول المعجمية التالية:</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer6')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer6" class="ArabicH-answer">
+                            <p><strong>حقل الآلة والتقنية:</strong> المكنة، البستم، الوابور، الحدافة، الطارة، الزيت، المدخنة.</p>
+                            <p><strong>حقل الإنسان والجسد:</strong> وجه، ذراع، شارب، لحيته، العرق، الغيظ، الابتسامة.</p>
+                            <p><strong>حقل الطبيعة والريف:</strong> الشجرة، الخليج، الترعة، الأرض، الحطب، الأقفاص.</p>
+                            <p><strong>حقل الاجتماع:</strong> أهل القرية، الحج طه، الأسطوات، النساء، الزبائن.</p>
+                            <p><strong>حقل الانفعال النفسي:</strong> الغضب، الكبرياء، القلق، السخرية، الحزن، الفرح.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">اللغة والأسلوب</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>السؤال:</strong> ما خصائص اللغة التي استخدمها يوسف إدريس في هذه الأقصوصة؟</p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer7')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer7" class="ArabicH-answer">
+                            <p>تتميز لغة الأقصوصة <strong>بمزيج فريد من الفصحى والعامية المصرية</strong>، مما يحقق: <strong>الواقعية</strong>، <strong>الدقة التقنية</strong>، <strong>الحسية</strong> (وصف الروائح والأصوات)، و<strong>الانفعالية</strong> (لغة تعكس الغضب والحزن والسخرية).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ✨ القسم الأوّل: البرنامج السردي -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">✨ القسم الأوّل: البرنامج السردي</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">بناء الأقصوصة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ol><li>تقديم المكنة كرمز غامض ومقدّس في القرية.</li><li>تصوير علاقة الأسطى محمد بها (ولع، مهارة، معاناة).</li><li>الصراع مع الحاج طه الذي يطرده.</li><li>النهاية المأساوية حين ينجح الأسطى الجديد في تشغيلها.</li></ol>
+                    </div>
+                </div>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">البرنامج السردي للأسطى محمد</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul><li><strong>التحفيز القصصي:</strong> ولعه بالمكنة لأنها كل دنياه، تعويض عن فقد الزوجة وابن عاق.</li><li><strong>الكفاءة:</strong> خبرة تقنية عالية، يعرف أسرارها، يسيطر على تفاصيلها.</li><li><strong>الإنجاز:</strong> تشغيلها رغم صعوبتها، توفير الطحين للناس.</li><li><strong>الجزاء:</strong> الطرد من عمله، خسارة مكانته، انهيار رمزي أمام نجاح الأسطى الجديد.</li></ul>
+                    </div>
+                </div>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">البرنامج السردي للحاج طه</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul><li><strong>التحفيز:</strong> دافع اقتصادي، استغلال المكنة للربح.</li><li><strong>الكفاءة:</strong> ضعيفة، يعتمد على غيره.</li><li><strong>الإنجاز:</strong> محاولة فرض سلطته، لكنه يفشل مراراً.</li><li><strong>الجزاء:</strong> فقدان ثقة الناس، ثم نجاحه أخيراً عبر الأسطى القادم من المدينة.</li></ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 👤 القسم الثاني: بناء الشخصية -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">👤 القسم الثاني: بناء الشخصية</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">أصناف الشخصيات ومقومات الهوية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>رئيسية:</strong> الأسطى محمد (فني، معزول، متشبث بالمكنة)، الحاج طه (تاجر، نفعي، سلطوي).</p>
+                        <p><strong>ثانوية:</strong> الأسطى القادم من المدينة (رمز المدينة والتحديث)، أهل القرية (جمهور متفرج، متعاطف مع محمد).</p>
+                    </div>
+                </div>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الخصائص المادية والمعنوية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul><li><strong>محمد:</strong> جسد متعب، وجه محروق، شخصية عنيدة.</li><li><strong>طه:</strong> متسلط، متوتر، نفعي.</li><li><strong>الأسطى الجديد:</strong> شاب، مظهر نظيف، ثقة.</li></ul>
+                    </div>
+                </div>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الأحوال النفسية والأعمال المؤثرة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>محمد:</strong> ولع، عناد، كبرياء، قلق داخلي. <strong>طه:</strong> خوف، غضب، إصرار. <strong>أهل القرية:</strong> إعجاب، تعاطف، سخرية من طه.</p>
+                        <p><strong>الأعمال المؤثرة:</strong> طرد محمد، فشل الأسطوات، نجاح الأسطى الجديد.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🖼 القسم الثالث: الوصف -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">🖼 القسم الثالث: الوصف</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المواضيع الوصفية واللغة والتنظيم</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>المواضيع الوصفية:</strong> المكنة، جسد محمد، الشاي، وجوه الناس.</p>
+                        <p><strong>الصفات المسندة:</strong> تقنية (البستم، الحدافة)، عامية (اللعن، الحقد)، حسية (رائحة الفاز).</p>
+                        <p><strong>لغة الوصف:</strong> مزيج بين لغة تقنية دقيقة ولغة عامية شعبية.</p>
+                        <p><strong>تنظيم الوصف:</strong> يبدأ بالآلة، ينتقل إلى محمد، ثم إلى المشهد الجماعي. دوره يرسّخ العلاقة الرمزية بين الإنسان والآلة.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 💡 القسم الرابع: القضايا المضمونية -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">💡 القسم الرابع: القضايا المضمونية</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المال والأخلاق – الريف والمدينة – التواصل الاجتماعي</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul><li><strong>المال والأخلاق:</strong> طه يرمز للمال، محمد يرمز للأخلاق المهنية.</li><li><strong>الريف والمدينة:</strong> الأسطى الجديد من المدينة يكسر احتكار محمد.</li><li><strong>التواصل الاجتماعي:</strong> فشل التواصل بين محمد وطه، نجاح التواصل بين محمد والناس.</li></ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📖 القسم الخامس: السارد -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">📖 القسم الخامس: السارد</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">نوع السارد وسمات الخطاب</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>نوع السارد:</strong> سارد خارجي عليم، يصف بدقة ويكشف الداخل النفسي للشخصيات.</p>
+                        <p><strong>سمات الخطاب:</strong> لغة عامية، أقوال مباشرة، تعليقات شعبية.</p>
+                        <p><strong>حركة عين السارد:</strong> من المكنة إلى محمد، ثم إلى الصراع مع طه، وصولاً إلى الطرد.</p>
+                        <p><strong>الهم الأساسي:</strong> إبراز مأساة الإنسان أمام السلطة والآلة.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📚 التعرف إلى المحاور الأساسية في الأثر -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">📚 التعرف إلى المحاور الأساسية في الأثر</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الحقول المعجمية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul><li><strong>حقل الآلة والتقنية:</strong> المكنة، البستم، الوابور، الحدافة، الطارة، الزيت، المدخنة.</li><li><strong>حقل الإنسان والجسد:</strong> وجه، ذراع، شارب، لحيته، العرق، الغيظ، الابتسامة.</li><li><strong>حقل الطبيعة والريف:</strong> الشجرة، الخليج، الترعة، الأرض، الحطب، الأقفاص.</li><li><strong>حقل الاجتماع:</strong> أهل القرية، الحج طه، الأسطوات، النساء، الزبائن.</li><li><strong>حقل الانفعال النفسي:</strong> الغضب، الكبرياء، القلق، السخرية، الحزن، الفرح.</li></ul>
+                        <p><strong>الحقول المتواترة:</strong> يظهر حقل الآلة بشكل متكرر، يليه حقل الانفعال النفسي، ثم حقل الاجتماع.</p>
+                    </div>
+                </div>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الموضوعات المطروقة وتصنيفها</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul><li>علاقة الإنسان بالآلة</li><li>الصراع بين الخبرة والسلطة</li><li>عزلة الفرد أمام الجماعة</li><li>الريف في مواجهة المدينة</li></ul>
+                        <p><strong>تصنيف الموضوعات:</strong> تقنية/مهنية، اجتماعية/اقتصادية، نفسية/وجودية.</p>
+                    </div>
+                </div>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">العناوين المقترحة</h4>
+                    <div class="ArabicH-exercise-content"><p>"الآلة والإنسان"، "السلطة والمهارة"، "الريف والمدينة"، "الفرد والجماعة".</p></div>
+                </div>
+            </div>
+
+            <!-- ✍️ تلخيص الأثر -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">✍️ تلخيص الأثر</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">قصة الشخصية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul><li><strong>الأسطى محمد:</strong> رجل وحيد، فقد زوجته وابنه، وجد في المكنة ملاذه وكيانه. يتحول من رمز القوة إلى رمز الهزيمة حين ينجح الأسطى الجديد.</li><li><strong>الحاج طه:</strong> تاجر نفعي، يسعى للربح، يفتقر للخبرة، ينجح أخيراً بفضل المدينة.</li><li><strong>أهل القرية:</strong> متعاطفون مع محمد، ساخرون من طه، جمهور يراقب الصراع.</li></ul>
+                    </div>
+                </div>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">أزمنة القص وتنظيم الأحداث</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>أزمنة القص:</strong> السرد يتدرج من الماضي إلى الحاضر، ثم إلى لحظة التحول (الطرد ونجاح الأسطى الجديد).</p>
+                        <p><strong>تنظيم الأحداث:</strong> تقديم المكنة، علاقة محمد بها، الصراع مع طه، فشل الأسطوات، نجاح الجديد، سقوط محمد.</p>
+                        <p><strong>الأساسي والكمالي:</strong> الأساسي هو الصراع بين محمد وطه، والكمالي وصف الشاي، الترعة، الأقفاص.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🧩 الخطاطة البصرية -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">🧩 الخطاطة البصرية</h3>
+				<div class="ArabicH-image-container">
+    <img src="assets2/year1/litterature/image1.png" alt="صورة توضيحية لقصة المكنة" onerror="this.style.display='none'">
+</div>
+                <div class="ArabicH-exercise-content">
+                    <p>في المركز دائرة بعنوان "الموضوعات في الأقصوصة"، ومنها تتفرّع أربعة محاور: <strong>الآلة والإنسان</strong>، <strong>السلطة والمهارة</strong>، <strong>الفرد والجماعة</strong>، <strong>الريف والمدينة</strong>. ترتبط بأسهم توضح التداخل بين التقنية والإنسان، وبين السلطة والجماعة.</p>
+                </div>
+            </div>
+
+            <!-- 🧩 الهيكل العام للمقال -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">🧩 الهيكل العام للمقال</h3>
+                <div class="ArabicH-exercise-content">
+                    <table class="ArabicH-vocab-table">
+                        <thead><tr><th>القسم</th><th>المحتوى المقترح</th><th>الهدف</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>المقدمة</strong></td><td>تقديم الأقصوصة وسياقها، التعريف بالكاتب، إبراز أهمية الجانب الفني والمضموني.</td><td>تمهيد للقارئ.</td></tr>
+                            <tr><td><strong>الجانب الفني</strong></td><td>تحليل السرد، الوصف، الحوار، الزمن، المكان، الشخصيات، اللغة.</td><td>إبراز براعة الكاتب.</td></tr>
+                            <tr><td><strong>الجانب المضموني</strong></td><td>علاقة الإنسان بالآلة، المال والأخلاق، الريف والمدينة، الفرد والجماعة.</td><td>الكشف عن الدلالات.</td></tr>
+                            <tr><td><strong>الخاتمة</strong></td><td>العلاقة بين الشكل والمضمون، القيمة الفنية والإنسانية للأثر.</td><td>تأمل نقدي شامل.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 🎨 الجانب الفني -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">🎨 الجانب الفني (الأساليب ومقومات القص)</h3>
+                <div class="ArabicH-rule-card"><h4 class="ArabicH-rule-title">السرد والوصف والحوار</h4><div class="ArabicH-exercise-content"><ul><li><strong>السرد:</strong> سارد خارجي عليم، يصف بدقة ويكشف الداخل النفسي.</li><li><strong>الوصف:</strong> تقني وحسي، يجمع بين لغة الآلة ولغة الريف.</li><li><strong>الحوار:</strong> واقعي، قصير، يعكس التوتر والعلاقات الاجتماعية.</li><li><strong>الزمن والمكان:</strong> زمن دائري مرتبط بدوران المكنة، مكان مغلق يرمز للعزلة.</li><li><strong>اللغة:</strong> عامية ممزوجة بالفصحى، توحي بالواقعية.</li></ul></div></div>
+            </div>
+
+            <!-- 💡 الجانب المضموني -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">💡 الجانب المضموني (القضايا)</h3>
+                <div class="ArabicH-rule-card"><h4 class="ArabicH-rule-title">الإنسان والآلة – المال والأخلاق – الريف والمدينة – الفرد والجماعة</h4><div class="ArabicH-exercise-content"><ul><li><strong>الإنسان والآلة:</strong> المكنة رمز للتقنية التي تسيطر على الإنسان.</li><li><strong>المال والأخلاق:</strong> الحاج طه يجسّد الجشع، والأسطى محمد يمثل الإخلاص المهني.</li><li><strong>الريف والمدينة:</strong> الأسطى الجديد من المدينة يرمز إلى التحديث.</li><li><strong>الفرد والجماعة:</strong> محمد يعيش عزلة روحية رغم وجوده وسط الناس.</li></ul></div></div>
+            </div>
+
+            <!-- 🧠 التركيب النهائي -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">🧠 التركيب النهائي</h3>
+                <div class="ArabicH-exercise-content">
+                    <p>تفاعل الشكل والمضمون يجعل الأقصوصة لوحة فنية متكاملة: الأسلوب الواقعي يخدم الفكرة الاجتماعية، اللغة الشعبية تعمّق الإحساس بالمكان، والصراع الفني يعكس أزمة الإنسان أمام التحوّل الصناعي والاجتماعي.</p>
+                </div>
+            </div>
+
+            <!-- 🖋️ المقال النقدي -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">🖋️ المقال النقدي حول الأقصوصة "المكنة"</h3>
+                <div class="ArabicH-story-text" style="font-size:1.15rem; line-height:2.2;">
+                    <p><strong>المقدّمة</strong><br>تُعدّ الأقصوصة «المكنة» نموذجاً بارزاً في الأدب الواقعي المصري، حيث يجسّد يوسف إدريس من خلالها صراع الإنسان مع الآلة، ويكشف عن تحوّلات المجتمع الريفي أمام التحديث الصناعي. يجمع النص بين عمق التجربة الإنسانية ودقّة التصوير الفني، مما يجعلها لوحة سردية تتجاوز حدود الحكاية إلى التأمل في مصير الإنسان العامل.</p>
+                    <p><strong>🎨 الجانب الفني: الأساليب ومقومات القص</strong><br>- <strong>السرد:</strong> سارد خارجي عليم يصف بموضوعية ويكشف أعماق الشخصيات.<br>- <strong>الوصف:</strong> تقني دقيق ممزوج بلغة حسية عامية.<br>- <strong>الحوار:</strong> قصير مشحون بالتوتر.<br>- <strong>الزمن والمكان:</strong> دائري ومغلق يرمز للعزلة.<br>- <strong>اللغة:</strong> مزيج من الفصحى والعامية.</p>
+                    <p><strong>💡 الجانب المضموني: القضايا والدلالات</strong><br>- <strong>الإنسان والآلة:</strong> المكنة كائن حيّ يشارك محمد حياته.<br>- <strong>المال والأخلاق:</strong> طه جشع، محمد إخلاص.<br>- <strong>الريف والمدينة:</strong> الأسطى الجديد رمز للتحديث.<br>- <strong>الفرد والجماعة:</strong> عزلة محمد وضعف التضامن.</p>
+                    <p><strong>التركيب والخاتمة</strong><br>يجمع يوسف إدريس بين الشكل والمضمون في توازن دقيق؛ فواقعية السرد تخدم الفكرة الاجتماعية، والصراع الفني يعكس أزمة الإنسان. إن الأقصوصة «المكنة» ليست مجرد حكاية عن عامل وآلة، بل تأمل في مصير الإنسان حين يفقد سلطته على أدواته، وفي انهيار القيم أمام منطق الربح والحداثة.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;"><span class="ArabicH-flower-decoration">✎</span> <span class="ArabicH-flower-decoration">✍</span> <span class="ArabicH-flower-decoration">✎</span></p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_1SY_literature_module3_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.previousLesson">الدرس السابق</a>
+                <a href="AH_1SY_literature_module4_lesson2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column"><h4 data-i18n="ArabicH.general.developerTitle">المطور</h4><p data-i18n="ArabicH.general.developer">زياد الماجري</p></div>
+            <div class="ArabicH-general-footer-column"><h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4><p data-i18n="ArabicH.general.version">v1.0.0</p></div>
+            <div class="ArabicH-general-footer-column"><h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4><div class="ArabicH-general-footer-links"><a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a><a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a></div></div>
+        </div>
+    </footer>
+    
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;"><span class="ArabicH-pwa-install-icon">📱</span><span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span></button>
+    
+    <script>
+        window.translations_ArabicHLiteratureModule4Lesson1 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية","ArabicH.general.logoAlt": "شعار مركز تعليم العربية","ArabicH.general.developerTitle": "المطور","ArabicH.general.developer": "زياد الماجري","ArabicH.general.versionTitle": "الإصدار","ArabicH.general.version": "v1.0.0","ArabicH.general.linksTitle": "الروابط","ArabicH.general.termsOfUse": "شروط الاستخدام","ArabicH.general.privacyPolicy": "سياسة الخصوصية","ArabicH.general.themeToggle": "الوضع الداكن","ArabicH.windows.home": "الرئيسية","ArabicH.windows.authors": "ادباء","ArabicH.windows.quotes": "شواهد","ArabicH.windows.resources": "موارد","ArabicH.literatureLesson.storyTitle": "قصة \"المكنة\" ليوسف إدريس","ArabicH.literatureLesson.storySubtitle": "الدرس الأول: تحليل أقصوصة \"المكنة\" من مجموعة \"مختارات قصصية\"","ArabicH.literatureLesson.showAnswer": "إظهار الإجابة","ArabicH.literatureLesson.backToLessons": "العودة إلى الدروس العامة","ArabicH.literatureLesson.backToHome": "العودة إلى الصفحة الرئيسية","ArabicH.literatureLesson.previousLesson": "الدرس السابق","ArabicH.literatureLesson.nextLesson": "الدرس التالي","ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub","ArabicH.general.logoAlt": "Arab Learning Hub Logo","ArabicH.general.developerTitle": "Developer","ArabicH.general.developer": "Mejri Ziad","ArabicH.general.versionTitle": "Version","ArabicH.general.version": "v1.0.0","ArabicH.general.linksTitle": "Links","ArabicH.general.termsOfUse": "Terms of Use","ArabicH.general.privacyPolicy": "Privacy Policy","ArabicH.general.themeToggle": "Dark mode","ArabicH.windows.home": "Home","ArabicH.windows.authors": "Authors","ArabicH.windows.quotes": "Quotes","ArabicH.windows.resources": "Resources","ArabicH.literatureLesson.storyTitle": "Story: \"The Machine\" by Youssef Idris","ArabicH.literatureLesson.storySubtitle": "Lesson 1: Analysis of the Short Story \"The Machine\"","ArabicH.literatureLesson.showAnswer": "Show Answer","ArabicH.literatureLesson.backToLessons": "Back to General Lessons","ArabicH.literatureLesson.backToHome": "Back to Homepage","ArabicH.literatureLesson.previousLesson": "Previous Lesson","ArabicH.literatureLesson.nextLesson": "Next Lesson","ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe","ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe","ArabicH.general.developerTitle": "Développeur","ArabicH.general.developer": "Mejri Ziad","ArabicH.general.versionTitle": "Version","ArabicH.general.version": "v1.0.0","ArabicH.general.linksTitle": "Liens","ArabicH.general.termsOfUse": "Conditions d'utilisation","ArabicH.general.privacyPolicy": "Politique de confidentialité","ArabicH.general.themeToggle": "Mode sombre","ArabicH.windows.home": "Accueil","ArabicH.windows.authors": "Auteurs","ArabicH.windows.quotes": "Citations","ArabicH.windows.resources": "Ressources","ArabicH.literatureLesson.storyTitle": "Récit: \"La Machine\" de Youssef Idris","ArabicH.literatureLesson.storySubtitle": "Leçon 1: Analyse de la nouvelle \"La Machine\"","ArabicH.literatureLesson.showAnswer": "Afficher la Réponse","ArabicH.literatureLesson.backToLessons": "Retour aux Leçons Générales","ArabicH.literatureLesson.backToHome": "Retour à la Page d'Accueil","ArabicH.literatureLesson.previousLesson": "Leçon Précédente","ArabicH.literatureLesson.nextLesson": "Leçon Suivante","ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHLiteratureModule4Lesson1;
+    </script>
+    
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            const showText = button.getAttribute('data-i18n-show') || 'إظهار الإجابة';
+            const hideText = button.getAttribute('data-i18n-hide') || 'إخفاء الإجابة';
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = showText;
+            } else {
+                answer.style.display = "block";
+                button.textContent = hideText;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) { item.classList.add('active'); } else { item.classList.remove('active'); }
+            });
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => { button.setAttribute('data-i18n-value', button.textContent); });
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); themeToggle.checked = true; }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+                    else { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+                });
+            }
+        });
+    </script>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() { navigator.serviceWorker.register('/sw.js').then(r => console.log('SW registered')).catch(e => console.log('SW failed')); });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; if (manualInstallBtn) manualInstallBtn.style.display = 'flex'; });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') { manualInstallBtn.style.display = 'none'; deferredPrompt = null; }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

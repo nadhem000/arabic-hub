@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أدب: أقصوصة "الأرض المستحيلة" لإيميلي نصر الله - الدرس الثاني | مركز تعليم العربية</title>
+
+    <meta name="theme-color" content="#7D4F4F">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="الأرض المستحيلة">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <style>
+        :root {
+            --primary-color: #7D4F4F;
+            --secondary-color: #9B6E6E;
+            --accent-color: #C49D9D;
+            --light-color: #F5F0F0;
+            --dark-color: #3D2525;
+            --text-color: #4A3535;
+            --heading-color: #2D1E1E;
+            --background-color: #FAF7F7;
+            --card-bg: #ffffff;
+            --definition-bg: #F0EAEA;
+            --border-color: #D4C5C5;
+            --table-even-bg: #F5F0F0;
+            --table-hover-bg: #F0EAEA;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(125, 79, 79, 0.10);
+            --gradient-primary: linear-gradient(135deg, #7D4F4F 0%, #3D2525 100%);
+            --gradient-secondary: linear-gradient(135deg, #9B6E6E 0%, #7D4F4F 100%);
+            --gradient-accent: linear-gradient(135deg, #C49D9D 0%, #9B6E6E 100%);
+            --gradient-light: linear-gradient(135deg, #F5F0F0 0%, #F0EAEA 100%);
+            --highlight-color: #B8860B;
+            --highlight-bg: rgba(184, 134, 11, 0.08);
+            --story-bg: rgba(125, 79, 79, 0.06);
+            --story-border: #9B6E6E;
+        }
+        [data-theme="dark"] {
+            --primary-color: #9B6E6E;
+            --secondary-color: #C49D9D;
+            --accent-color: #D4BEBE;
+            --light-color: #3D2525;
+            --dark-color: #2D1E1E;
+            --text-color: #F0E8E8;
+            --heading-color: #F5F0F0;
+            --background-color: #2D1E1E;
+            --card-bg: #3D2525;
+            --definition-bg: #4A3030;
+            --border-color: #7D4F4F;
+            --table-even-bg: #3D2525;
+            --table-hover-bg: #4A3030;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+            --gradient-primary: linear-gradient(135deg, #9B6E6E 0%, #7D4F4F 100%);
+            --gradient-secondary: linear-gradient(135deg, #C49D9D 0%, #9B6E6E 100%);
+            --gradient-accent: linear-gradient(135deg, #D4BEBE 0%, #C49D9D 100%);
+            --gradient-light: linear-gradient(135deg, #3D2525 0%, #2D1E1E 100%);
+            --highlight-color: #D4A843;
+            --highlight-bg: rgba(212, 168, 67, 0.15);
+            --story-bg: rgba(155, 110, 110, 0.12);
+            --story-border: #C49D9D;
+        }
+
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .ArabicH-lesson-teacher,
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+        .ArabicH-lesson-content {
+            margin: 30px 0;
+        }
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-align: center;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+        [data-theme="dark"] .ArabicH-exercise-title {
+            color: var(--accent-color);
+        }
+        .ArabicH-exercise-content {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        .ArabicH-rule-card {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%);
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-left: 6px solid var(--secondary-color);
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .ArabicH-rule-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        .ArabicH-rule-card::before {
+            content: "📘";
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        .ArabicH-rule-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            padding-left: 30px;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 8px;
+            position: relative;
+        }
+        [data-theme="dark"] .ArabicH-rule-title {
+            color: var(--accent-color);
+        }
+        .ArabicH-rule-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        .ArabicH-story-text {
+            font-size: 1.25rem;
+            font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 2.0;
+            color: var(--dark-color);
+            margin: 20px 0;
+            padding: 25px;
+            background-color: var(--story-bg);
+            border-radius: var(--border-radius);
+            border-right: 4px solid var(--story-border);
+            text-align: right;
+            direction: rtl;
+        }
+        .ArabicH-story-quote {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-right: 3px solid var(--accent-color);
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        }
+        [data-theme="dark"] .ArabicH-story-text {
+            color: #f0f5ed;
+            background-color: var(--story-bg);
+            border-right: 4px solid var(--story-border);
+        }
+        [data-theme="dark"] .ArabicH-story-quote {
+            background-color: rgba(62, 38, 38, 0.7);
+            color: #F0E8E8;
+        }
+        .ArabicH-vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            direction: rtl;
+        }
+        .ArabicH-vocab-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+        .ArabicH-vocab-table td {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: right;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+        .ArabicH-vocab-table tr:nth-child(even) td {
+            background-color: var(--table-even-bg);
+        }
+        .ArabicH-vocab-table tr:hover td {
+            background-color: var(--table-hover-bg);
+        }
+        .ArabicH-question {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 20px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+        .ArabicH-question-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+        }
+        [data-theme="dark"] .ArabicH-question-title {
+            color: var(--accent-color);
+        }
+        .ArabicH-question-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+            margin-bottom: 15px;
+        }
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-right: auto;
+            margin-left: 0;
+        }
+        .ArabicH-show-answer-btn:hover {
+            background-color: var(--accent-color);
+        }
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+        }
+        .ArabicH-highlighted-quote {
+            background-color: var(--highlight-bg);
+            border-right: 4px solid var(--highlight-color);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: center;
+            direction: rtl;
+            font-weight: 500;
+            font-size: 1.3rem;
+        }
+        [data-theme="dark"] .ArabicH-highlighted-quote {
+            background-color: rgba(212, 168, 67, 0.15);
+            color: #F0E8E8;
+        }
+        .ArabicH-image-container {
+            text-align: center;
+            margin: 25px 0;
+        }
+        .ArabicH-image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            border: 3px solid var(--border-color);
+        }
+        .ArabicH-flower-decoration {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        .ArabicH-knowledge-box {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 25px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+        .ArabicH-knowledge-box::before {
+            content: "💡";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+        .ArabicH-knowledge-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+        [data-theme="dark"] .ArabicH-knowledge-title {
+            color: var(--accent-color);
+        }
+        .ArabicH-knowledge-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+        }
+        .ArabicH-analysis-section {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+        .ArabicH-analysis-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 8px;
+        }
+        [data-theme="dark"] .ArabicH-analysis-title {
+            color: var(--accent-color);
+        }
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+        .ArabicH-nav-btn:hover {
+            background-color: var(--accent-color);
+        }
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title {
+                font-size: 2rem;
+            }
+            .ArabicH-lesson-subtitle {
+                font-size: 1.1rem;
+            }
+            .ArabicH-lesson-container {
+                padding: 1.5rem;
+            }
+            .ArabicH-lesson-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .ArabicH-nav-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .ArabicH-rule-card {
+                padding: 1.2rem;
+            }
+            .ArabicH-rule-title {
+                font-size: 1.2rem;
+                padding-left: 25px;
+            }
+            .ArabicH-rule-card::before {
+                left: 12px;
+                top: 12px;
+                font-size: 1.1rem;
+            }
+            .ArabicH-story-text {
+                font-size: 1.15rem;
+                padding: 20px;
+                line-height: 1.9;
+            }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main {
+                padding: 1rem;
+            }
+            .ArabicH-lesson-title {
+                font-size: 1.6rem;
+            }
+            .ArabicH-exercise-card {
+                padding: 1rem;
+            }
+            .ArabicH-story-text {
+                font-size: 1.05rem;
+                line-height: 1.8;
+                padding: 15px;
+            }
+            .ArabicH-rule-card {
+                padding: 1rem;
+            }
+            .ArabicH-rule-title {
+                font-size: 1.1rem;
+                padding-left: 22px;
+            }
+            .ArabicH-rule-card::before {
+                left: 10px;
+                top: 10px;
+                font-size: 1rem;
+            }
+        }
+        [data-theme="dark"] p,
+        [data-theme="dark"] li,
+        [data-theme="dark"] div:not(.ArabicH-story-text) {
+            color: var(--text-color) !important;
+        }
+        [data-theme="dark"] strong {
+            color: var(--accent-color);
+        }
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container"><a href="index.html"><img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt"></a></div>
+            <div class="ArabicH-general-title-container"><h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1></div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label"><span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span><div class="ArabicH-theme-toggle-switch"><input type="checkbox" id="themeToggle"><span class="ArabicH-theme-toggle-slider"></span></div></label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect"><option value="ar">العربية</option><option value="en">English</option><option value="fr">Français</option></select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">🏠</span><span data-i18n="ArabicH.windows.home">الرئيسية</span></a>
+        <a href="authors.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">👨‍🎓</span><span data-i18n="ArabicH.windows.authors">ادباء</span></a>
+        <a href="quotes.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📖</span><span data-i18n="ArabicH.windows.quotes">شواهد</span></a>
+        <a href="resources.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📚</span><span data-i18n="ArabicH.windows.resources">موارد</span></a>
+    </nav>
+
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.literatureLesson.storyTitle">أقصوصة "الأرض المستحيلة" لإيميلي نصر الله</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.literatureLesson.storySubtitle">الدرس الثاني: تحليل أقصوصة "الأرض المستحيلة" منشورة في مجلة العربي – جوان 2000</p>
+
+        <div class="ArabicH-lesson-container">
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher"><span class="ArabicH-flower-decoration">❦</span> الاستاذ: غير معروف <span class="ArabicH-flower-decoration">❦</span></div>
+                <div class="ArabicH-lesson-class"><span class="ArabicH-flower-decoration">✿</span> المعهد: غير معروف <span class="ArabicH-flower-decoration">✿</span></div>
+            </div>
+
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">التقديم</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p>تُعدّ أقصوصة "الأرض المستحيلة" للكاتبة اللبنانية إيميلي نصر الله نصاً قصصياً حديثاً يتمتع بطاقة إيحائية مكثفة، يمزج بين تقنيات السرد المعاصرة وهموم الواقع اللبناني والإنساني. تدور الأقصوصة حول لقاء ساردة مع حبيبها القديم "نادر" في بيت عزاء بعد فراق دام ثلاثين عاماً، لتستعيد عبر تقنية الاسترجاع ذكريات الطفولة والحب في قرية "الجورة"، وتتأمل في مصير علاقة اصطدمت بحواجز الطبقة والتقاليد والطموح الفردي والاحتلال.</p>
+                    <p>يجمع النص بين عمق التجربة الوجدانية ودقة التصوير الفني، محولاً قصة حب متعثرة إلى تأمل وجودي في معنى الاستحالة: استحالة الحب في مجتمع طبقي، واستحالة التوفيق بين الأنوثة والطموح، واستحالة العيش بسلام فوق أرض محتلة.</p>
+                </div>
+            </div>
+
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">📖 معلومات عن الكاتبة</h3>
+                <div class="ArabicH-knowledge-content">
+                    <ul>
+                        <li><strong>الاسم:</strong> إيميلي نصر الله</li>
+                        <li><strong>الميلاد:</strong> 1931، بلدة الكفير (حاصبيا)، لبنان</li>
+                        <li><strong>الدراسة:</strong> مدرسة الكفير، الكلية الوطنية بالشويفات، الجامعة الأميركية في بيروت (بكالوريوس في الآداب والتربية)</li>
+                        <li><strong>المهنة:</strong> أديبة وصحافية، عملت في التدريس وكتبت في مجلة "الصياد"</li>
+                        <li><strong>الوفاة:</strong> 2018</li>
+                        <li><strong>أعمال بارزة:</strong> <em>طيور أيلول</em>، <em>شجرة الدفلى</em>، <em>الرَهينة</em>، <em>تلك الذكريات</em>، <em>الإقلاع عكس الزمن</em>، <em>جزيرة الوهم</em>، <em>شادي الصغير</em>.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">📚 معلومات عن النص</h3>
+                <div class="ArabicH-knowledge-content">
+                    <ul>
+                        <li><strong>العنوان:</strong> الأرض المستحيلة</li>
+                        <li><strong>الكاتبة:</strong> إيميلي نصر الله</li>
+                        <li><strong>الناشر:</strong> مجلة العربي – جوان 2000، العدد 499، الصفحات 112-114</li>
+                        <li><strong>النوع الأدبي:</strong> أقصوصة (قصة قصيرة) تنتمي إلى الأدب الواقعي والشاعري معاً.</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">ملخص الأقصوصة</h3>
+                <div class="ArabicH-story-text">
+                    <p>في مشهد تعزية بوفاة شقيق نادر الأكبر، تلتقي الساردة بعد ثلاثين عاماً من الفراق بحبيبها القديم "نادر". يسترجع اللقاء شريط ذكريات طفولة جمعتهما في "الجورة"، حيث كان فارسها الجريء على حصان القصب، وحيث راقبتهما عين أمه من الشرفة. تحول الإعجاب إلى حب شبابي عميق، لكن طموح الساردة ورفضها للخضوع لتقاليد القرية والفوارق الطبقية جعلها ترفض توسلات نادر عندما جاءها في المعهد الداخلي معلناً حبه ومتوسلاً إليها بالبقاء. فضلت الانتصار لذاتها وكبريائها على الحب، وأكملت طريقها في "صومعة الوحدة والعمل"، بينما تزوج نادر من "بنت العائلة" التي اختارتها أمه.</p>
+                    <p>الآن، بعد ثلاثين عاماً، يلتقيان في لقاء وداع أخير تحت وطأة الموت والاحتلال الإسرائيلي للجنوب اللبناني ("الحزام الأمني"). تدرك الساردة أن الحب وحده لم يكن كافياً، وأن الأرض التي كانت ستجمع بينهما باتت "أرضاً مستحيلة" بكل ما تحمله الكلمة من معنى: استحالة عاطفية واجتماعية ووطنية. تنتهي الأقصوصة بصورة مؤثرة للمركبة التي تحمل الساردة بعيداً بينما تودعها يد نادر "وكأنما تستجدي فرصة لم تعد متاحة".</p>
+                    <p style="text-align: center; margin-top: 20px; color: var(--secondary-color);"><strong>المصدر:</strong> إيميلي نصر الله، "الأرض المستحيلة"، مجلة العربي، العدد 499، جوان 2000، ص 112-114</p>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">شرح المفردات</h3>
+                <div class="ArabicH-table-container">
+                    <table class="ArabicH-vocab-table">
+                        <thead><tr><th width="30%">المفردة</th><th width="70%">الشرح</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>الأرستقراطيّة</strong></td><td>صفة للنبل والرقي في الهيئة والسلوك، نسبة إلى الطبقة العليا في المجتمع</td></tr>
+                            <tr><td><strong>ممتطيًا</strong></td><td>راكبًا، معتليًا ظهر الدابة</td></tr>
+                            <tr><td><strong>تستجدي</strong></td><td>تطلب بتذلل وتضرع، تتوسل</td></tr>
+                            <tr><td><strong>الجورة</strong></td><td>اسم القرية التي نشأت فيها الساردة ونادر، وتصبح رمزاً للطفولة والأصل</td></tr>
+                            <tr><td><strong>الحزام الأمني</strong></td><td>منطقة عازلة أقامها الاحتلال الإسرائيلي في جنوب لبنان، ترمز للخناق والاحتلال</td></tr>
+                            <tr><td><strong>صومعة الوحدة والعمل</strong></td><td>استعارة عن حياة الساردة المنعزلة المكرسة للبحث والعمل بعيداً عن قريتها</td></tr>
+                            <tr><td><strong>ذرويك</strong></td><td>قممك أو مرتفعاتك، وتشير هنا إلى عالم نادر وعالمه المحلي</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أسئلة الفهم</h3>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- رتّب الأحداث على خطّ الزّمن كالتالي: قبل ثلاثين سنة – على مدى ثلاثين سنة – الحاضر. اذكر الأحداث الّتي أسقطتها السّاردة.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer1" class="ArabicH-answer">
+                        <p><strong>قبل ثلاثين سنة (الطفولة والصبا):</strong> لقاء الساردة بنادر في "الجورة"، طفولتهما معًا (حصان القصب، التزمير)، لحظة إردافها خلفه على الحصان، حوارهما عن شعره الطويل وضفائرها، مراقبة أم نادر له من الشرفة.</p>
+                        <p><strong>على مدى ثلاثين سنة (الشباب والغياب):</strong> خروج الساردة من "الجورة" للدراسة محمولة على طموحها. زيارة نادر لها في المعهد الداخلي وإعلان حبه وتوسله، ورفضها له. زواج نادر من "بنت العائلة" التي اختارتها أمه. حياة الساردة في "صومعة الوحدة والعمل".</p>
+                        <p><strong>الحاضر (في النص):</strong> وفاة شقيق نادر الأكبر، حضور الساردة لتقديم واجب العزاء، لقاء نادر بها عند باب بيت العزاء، الحوار الذي دار بينهما.</p>
+                        <p><strong>الأحداث التي أسقطتها الساردة:</strong> لم تذكر الساردة تفاصيل حياتهما طوال ثلاثين عامًا، مثل تطور عملها، تفاصيل حياة نادر الزوجية والعائلية، الأحداث اليومية التي شكلت شخصيتيهما، وكيف تعامل كل منهما مع الغياب.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- قامت الأقصوصة على تقنية الاسترجاع – حدّد مواطنه واذكر الأحداث الّتي استرجعتها السّاردة ووظيفة هذا الاسترجاع؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer2" class="ArabicH-answer">
+                        <p><strong>مواطن الاسترجاع:</strong></p>
+                        <ul>
+                            <li>لقاء الطفولة حين أردفها نادر خلفه على حصان القصب.</li>
+                            <li>حوارهما عن شعره الطويل وضفائرها القصيرة.</li>
+                            <li>صورة نادر وهو على حصانه الحقيقي يطوف حول بيتها.</li>
+                            <li>مشهد مجيئه إلى المعهد الداخلي وتوسله لها بالبقاء، ورفضها القاطع له.</li>
+                        </ul>
+                        <p><strong>وظيفة الاسترجاع:</strong> الكشف عن جذور العلاقة العميقة بينهما وتفسير طبيعة مشاعر الساردة المتناقضة. كما يبرر موقفها الحالي منه، ويُظهر أن قرارها بالابتعاد لم يكن سهلاً أو عبثيًا، بل كان نتيجة صراع بين الحب والطموح والكرامة. الاسترجاع يمنح القارئ فهماً أعمق لدوافع الشخصيات.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">3- ما نوع العلاقة الّتي تربط بين (نادر) والسّاردة ماضيًا وحاضرًا؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer3" class="ArabicH-answer">
+                        <p><strong>في الماضي:</strong> كانت علاقة حب وصداقة متينة منذ الطفولة، نما فيها إعجاب متبادل. كان نادر فارس أحلامها الجريء، لكن العلاقة اصطدمت بحاجز الطبقة الاجتماعية وطموح الساردة الشخصي الذي لا يحد.</p>
+                        <p><strong>في الحاضر:</strong> علاقة لقاء عابر بعد فراق طويل يخيم عليه الحزن والغربة. تحولت الألفة إلى فجوة واسعة، حيث تقف الساردة منه موقفًا متحفظًا، رغم أنها لا تزال ترى فيه هيبته القديمة. هي علاقة لقاء بعد فوات الأوان (الأرض المستحيلة).</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">4- نقلت السّاردة حوارًا دار بينها وبين نادر أيّام الشباب. بيّن مضمون هذا الحوار وادرس من خلاله العلاقة بين المتحاورين.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer4" class="ArabicH-answer">
+                        <p><strong>مضمون الحوار (المعهد الداخلي):</strong></p>
+                        <ul>
+                            <li><strong>نادر:</strong> يعلن حبه واستعداده لاتباعها إلى أي مكان ("سأتبعُك إلى أقصى المَعْمُورة .. أحبُك")، ويتوسل إليها.</li>
+                            <li><strong>الساردة:</strong> ترفض بشدة ("وألى زمان، وخطواتي بعدت كثيرًا عن ذرويك"). تطلب منه العودة والبحث عن فتاة أخرى تليق به، وتذكره بوالدته ("أُمك، أتذكر حين كانت تناديك من فوق الشُرفة؟"). ثم تعاتبه على توسله وتطلب منه الحفاظ على كبريائه ("أحببتك فارسًا، انهض ولا تتوسل لأحد").</li>
+                        </ul>
+                        <p><strong>العلاقة بين المتحاورين:</strong> تظهر علاقة متوترة بين قطبين: فارس يحب بصدق لكنه ضعيف أمام والدته وتقاليد العائلة، وفتاة قوية وطموحة، تضع كرامتها واستقلالها فوق الحب. رغم قسوة الساردة، يشفق عليه قلبها، مما يدل على استمرار الحب تحت رماد الغضب والتحدي.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">5- ينازع السّاردة شعوران نحو (نادر): شعورها نحوه بعد زواجه وشعورها نحوه في المقاطع المسترجعة. بيّن طبيعة هذين الشعورين ودورهما في تحديد ملامح شخصيّة السّاردة.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer5')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer5" class="ArabicH-answer">
+                        <p><strong>الشعور نحوه بعد زواجه (في الحاضر/عبر السنين):</strong> شعور بالحسم والحزم الممزوج بالحزن والغصة. لم تندم على قرارها، بل أكملت طريقها ("لحقت بطموحي"). لكنها تشعر بمرارة الغياب والوحدة وتأمل المسار الذي فرق بينهما. هي تشعر بأنها انتصرت لذاتها ولكن على حساب الحب.</p>
+                        <p><strong>الشعور نحوه في المقاطع المسترجعة:</strong> مزيج من الحب الطاغي، الفخر، الإعجاب بوسامته وجرأته، والحنان على ضعفه الطفولي. كان فارسها الذي يثير غيرة الرفيقات، ويثير في قلبها فرحًا عارمًا.</p>
+                        <p><strong>دورهما في تحديد ملامح شخصية الساردة:</strong> هذان الشعوران يرسمان شخصية امرأة شديدة التعقيد والغنى: فهي من جهة عاطفية وحالمة ورومانسية، تعيش ذكريات الحب بكامل تفاصيلها. ومن جهة أخرى، هي عقلانية ومتمردة وصلبة، ترفض أن تكون ضحية للعادات والتقاليد أو أن تتنازل عن ذاتها وطموحها من أجل الحب. هذا التناقض الإنساني يجعلها شخصية مأساوية بامتياز.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">6- لماذا وسمت الكاتبة أقصوصتها بالأرض المستحيلة في نظرك؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer6')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer6" class="ArabicH-answer">
+                        <p>ترمز "الأرض المستحيلة" إلى المساحة المشتركة التي كان يمكن أن تجمع بين نادر والساردة (الحب، الزواج، العيش معًا) والتي استحال الوصول إليها. هذا الاستحالة ناتج عن عدة عوامل:</p>
+                        <ul>
+                            <li>الفوارق الطبقية بين عائلتيهما.</li>
+                            <li>تدخل أم نادر وتحكمها باختيار "بنت عائلة".</li>
+                            <li>طموح الساردة الجارف الذي لا يتوقف عند حدود "الجورة" والتقاليد.</li>
+                            <li>إصرار الساردة على الحفاظ على صورة الفارس الشامخ الذي لا يتوسل.</li>
+                        </ul>
+                        <p>بالتالي، هي الأرض التي وقفا على حدودها لكنهما لم يدخلاها أبدًا، أرض الحب المكتمل التي بقيت حلمًا مؤجلًا حتى أصبح مستحيلاً. كما ترمز إلى الوطن (الجنوب) الذي أصبح بدوره أرضًا مستحيلة بفعل الاحتلال، وهو معطى حاضر بقوة في النص.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">7- الاحتلال الإسرائيلي لجنوب لبنان – الموت والتعزية – البحث العلمي – الحبّ. هل ترى علاقة بين هذه المعطيات في النّص؟ وضّح ذلك.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer7')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer7" class="ArabicH-answer">
+                        <p>نعم، هناك علاقة جدلية عميقة بين هذه المعطيات:</p>
+                        <ul>
+                            <li><strong>الاحتلال الإسرائيلي:</strong> ليس مجرد خلفية، بل هو إطار حياتي خانق ("الحزام الأمني"، "طوق الاختناق"). إنه يجسد فكرة "الموت" المعنوي والمادي للمكان ويعمق فكرة الاستحالة والفقد على المستوى الوطني.</li>
+                            <li><strong>الموت والتعزية:</strong> هو الإطار المباشر للقاء. الموت هنا ليس فقط نهاية أخ نادر، بل هو استعارة لموت العلاقة نفسها، وموت الأحلام القديمة. عبارة "لم يعد يجمعنا بهم سوى الموت" هي المفتاح: الحب كان يجمعهم قديمًا والآن الموت وحده القادر على لم الشمل.</li>
+                            <li><strong>البحث العلمي / العمل:</strong> يمثل هروب الساردة وخلاصها، صومعتها التي بنتها بعيدًا عن عالم نادر. إنه النقيض الموضوعي للحب العاطفي القديم.</li>
+                            <li><strong>الحب:</strong> هو الجوهر المفقود، والقوة الدافعة للذكريات، والسبب في هذا اللقاء الحزين. الحب هو ما جعل اللقاء ممكنًا وهو ما يجعل الفراق أليمًا.</li>
+                        </ul>
+                        <p>العلاقة بينها جميعًا هي علاقة جدل بين الحياة والموت، الحب والفقد، الأسر والتحرر، سواء على المستوى الفردي أو الوطني. الحب ضحية للعائلة والتقاليد كما أن الوطن ضحية للاحتلال.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">8- تأمّل الصّورة الواردة آخر النّص وبيّن صلتها بموضوع الأقصوصة.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer8')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer8" class="ArabicH-answer">
+                        <p>الصورة الأخيرة قوية وموحية: "المركبة في انتظاري، وأنا أغادر العتبة، مركبة مجنحة... حملتني، ويده تودع. وأتأملها لحظة، وهي تضعف يدي، ولا تود أن تنفصل، وكأنما تستجدي فرصة لم تعد متاحة."</p>
+                        <p><strong>صلتها بالموضوع:</strong> الصورة تجسد لحظة الوداع الأخير، أي تأكيد نهائي لاستحالة اللقاء. "المركبة المجنحة" ترمز إلى حياتها الجديدة، طموحها، غربتها، ومسارها الذي لا يتقاطع مع مساره. بينما يده "تستجدي فرصة لم تعد متاحة" تختزل مأساة العلاقة كلها: الحب موجود لكن الزمن والفعل والاختيارات جعلت من المستحيل تحقيقه. إنها صورة للمغادرة النهائية من "الأرض المستحيلة".</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">💬 أسئلة نقاشية</h3>
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">هل توافق على زواج شاب وفتاة لا ينتميان إلى مستوى اجتماعي واحد؟ هل ترى الحبّ شرطًا كافيًا لبناء أسرة سعيدة؟ ما هي شروط الاستقلال عن العائلة في نظرك؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer9')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer9" class="ArabicH-answer">
+                        <p><strong>هل توافق على زواج شاب وفتاة لا ينتميان إلى مستوى اجتماعي واحد؟</strong> الانتماء لطبقة واحدة يسهل التفاهم، لكنه ليس ضمانًا للنجاح. الأهم هو التكافؤ الفكري والثقافي والقدرة على بناء عالم خاص بعيدًا عن ضغوط العائلة.</p>
+                        <p><strong>هل ترى الحبّ شرطًا كافيًا لبناء أسرة سعيدة؟</strong> الحب أساس ضروري، لكنه ليس كافيًا. يحتاج الزواج إلى الاحترام، التفاهم، الشعور بالمسؤولية، والقدرة على مواجهة تحديات الحياة معًا.</p>
+                        <p><strong>ما هي شروط الاستقلال عن العائلة في نظرك؟</strong> تبدأ بالاستقلال الفكري والنفسي ثم المادي. قدرة الشخص على اتخاذ قراراته بنفسه وتحمل عواقبها، مع الحفاظ على صلة الود والاحترام للعائلة دون الخضوع لضغوطها غير المنطقية.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">📝 تمارين إنشائية</h3>
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- تخيّل حوارًا من عشر مخاطبات بين الأمّ وابنها (نادر) تحاول فيه إقناعه بعدم الارتباط بالسّاردة بينما يحاول هو إقناعها بوجاهة اختياره.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer10')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer10" class="ArabicH-answer">
+                        <p><strong>نموذج الحوار:</strong></p>
+                        <p>الأم: "بعد عقلك يا نادر. هيدي البنت مش من مستوانا. شو بدك فيها؟"<br>
+                            نادر: "مستوانا؟ هي المعلمة، المثقفة. شو فيها؟"<br>
+                        الأم: "بنت الجورة الفلانية هي اللي بتليق، بنت عيلة وأصل."<br>
+                        نادر: "ما يهمني الأصل، يهمني هي. بحبها وهي غير عن كل البنات."<br>
+                        الأم: "الحب وحده ما بطعمي خبز. بتنسى مين إحنا؟"<br>
+                        نادر: "ما رح أنسى، بس طموحها أكبر من الجورة. وأنا بدي كون معها."<br>
+                        الأم: "بتجنن؟ بدها تدرس وتشتغل وتبعد. وإنت شو بتساوي لحالك؟"<br>
+                        نادر: "بروح معها. ما دامت هي معي، الدنيا كلها متلي."<br>
+                        الأم: "عقلي براسك. إذا كملت بهالطريق، أنا بريئة منك."<br>
+                        نادر: "لا تقولي هيك يا ماما. أنا بحبك وبحبها. ليش بتخليني أختار؟"</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- لخّص الأقصوصة في عشرة أسطر.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer11')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer11" class="ArabicH-answer">
+                        <p>في مشهد تعزية بوفاة أخ نادر، تلتقي الساردة بعد ثلاثين عامًا من الفراق بحبيبها القديم. يسترجع اللقاء شريط ذكريات طفولة جمعتهما في "الجورة"، حيث كان فارسها الجريء على حصان القصب. تحول الإعجاب إلى حب شبابي عميق، لكن طموح الساردة ورفضها للخضوع لتقاليد القرية وتدخل أم نادر جعلها تهرب منه وتتركه. ورغم توسله، فضلت الانتصار لذاتها. الآن، بعد زواجه من أخرى وبنائها هي "صومعة" عملها، يلتقيان في لقاء وداع أخير، حيث يدركان أن الحب وحده لم يكن كافيًا، وأن الأرض التي كانت ستجمع بينهما باتت "أرضًا مستحيلة".</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">3- أكمل في عشرة أسطر الأحداث الّتي جرت خلال ثلاثين سنة ولم تذكرها السّاردة في الأقصوصة.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer12')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer12" class="ArabicH-answer">
+                        <p>خلال ثلاثين عاماً، أكملت الساردة دراستها العليا وتخصصت في مجال البحث العلمي، متنقلة بين جامعات وعواصم. نادر من جهته، تزوج وأنجب أطفالاً، وأدار أملاك العائلة في الجورة تحت وطأة الاحتلال المتصاعد. كل منهما سمع أخبار الآخر عبر الأصدقاء المشتركين دون أن يتجرأ على التواصل. الساردة زارت قريتها مرات قليلة لكنها تجنبت لقاءه. نادر سأل عنها سراً كلما سنحت الفرصة. كلاهما بنى حياة موازية، لكن ظل كل منهما يحتفظ بصورة الآخر في زاوية من الذاكرة، إلى أن جمعهما الموت في بيت العزاء.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">📚 أنشطة لغوية ومعجمية</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الحقل المعجمي للحبّ</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>استخرج الكلمات التي تنتمي إلى مجال "الحبّ":</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer13')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer13" class="ArabicH-answer">
+                            <p>أحبك – أحببتك – الحب – قلبي ينفتح فرحًا وفخرًا – يختارها الفارس – الفارس الجريء – شامخًا – توسل – الدمع – أحب شعري قصيراً – الفرسان – الغيرة.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الحقل الدلالي</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>بيّن المعاني التي يفيدها فعل "أطلّ" (كما في: أطلّ نادر راجلاً):</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer14')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer14" class="ArabicH-answer">
+                            <p>فعل "أطلّ" يفيد معاني: أشرف، ظهر، أقبل، بان وارتفع. في سياق النص يعني ظهر نادر أو أقبل ماشياً على قدميه بهيئة فارسية.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المعجم</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>ابحث عن معاني الكلمات الآتية في أحد المعاجم:</strong> الأرستقراطيّة – ممتطيا – تستجدي.</p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer15')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer15" class="ArabicH-answer">
+                            <table class="ArabicH-vocab-table">
+                                <thead><tr><th width="30%">الكلمة</th><th width="70%">المعنى</th></tr></thead>
+                                <tbody>
+                                    <tr><td><strong>الأرستقراطيّة</strong></td><td>نسبة إلى الطبقة العليا في المجتمع؛ صفة للنبل والرقي في الهيئة والسلوك</td></tr>
+                                    <tr><td><strong>ممتطيًا</strong></td><td>راكبًا، معتليًا ظهر الدابة</td></tr>
+                                    <tr><td><strong>تستجدي</strong></td><td>تطلب بتذلل وتضرع، تتوسل</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">🌟 ومضة لغوية</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المصدر الميمي</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>"وكنت أقرأ من خلال عينيه بعض <strong>مسار</strong> حياته".</p>
+                        <ul>
+                            <li><strong>مسار:</strong> مصدر ميمي مشتق من الجذر (س – ي – ر) على وزن "مَفْعَل".</li>
+                            <li>يشتق المصدر الميمي على وزن "مفعَل" إذا اتّصل بفعل ثلاثيّ مجرّد (صحيح أو معتلّ).</li>
+                            <li>يشتق على وزن "مفعِل" إذا اتّصل بفعل ثلاثيّ مجرّد معتلّ الفاء واوي (وقف – موقف).</li>
+                            <li>يشتق المصدر الميمي من المزيد على وزن اسم المفعول.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">📖 ورقة منهجية – السوابق واللواحق</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">السابقة واللاحقة في النص</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul>
+                            <li><strong>السابقة (الاستباق):</strong> عمليّة سرديّة تتمثّل في إيراد حدث آتٍ أو الإشارة إليه مسبقًا (سبق الأحداث). في النص: قول الساردة في البداية: "كنتُ أقدرُ أنْ نادرًا سيكونُ هناك" استباقًا لتأكيد حضوره.</li>
+                            <li><strong>اللاحقة (الاسترجاع):</strong> عمليّة سرديّة تتمثّل في إيراد حدث سابق للنقطة التي بلغها السرد (الاستذكار/الارتداد). وهي الأبرز في النص، ذاتية بالدرجة الأولى لأنها تسترجع ماضي الشخصية الرئيسية لتفسير حاضرها وملامحها النفسية.</li>
+                            <li><strong>وظيفتها:</strong> إعطاء معلومات عن ماضي الشخصيّة أو سدّ ثغرة في النصّ. منها ما هو <strong>ذاتي</strong> (يتصل بالشخصية) أو <strong>موضوعي</strong> (يبشّر به السارد للتشويق).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ✨ القسم الأوّل: البرنامج السردي -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">✨ القسم الأوّل: البرنامج السردي والبناء الزمني</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">بناء الأقصوصة – كسر خطية الزمن</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ol>
+                            <li>الانطلاق من "الحاضر" (بيت العزاء) حيث يجتمع الشمل بفعل الموت.</li>
+                            <li>استرجاع الطفولة في "الجورة" (حصان القصب، التزمير، الشرفة).</li>
+                            <li>استرجاع الشباب (المعهد الداخلي، إعلان الحب، الرفض).</li>
+                            <li>العودة إلى الحاضر (اللقاء، الحوار، الوداع).</li>
+                            <li>صورة الخاتمة (المركبة المجنحة واليد المودعة).</li>
+                        </ol>
+                        <p><strong>تقنية الحذف والخلاصة:</strong> إسقاط ثلاثين عامًا من حياة الشخصيتين، والاكتفاء بخلاصات ("صومعة الوحدة والعمل"، "بنت عائلة")، مما يمنح الأحداث المختارة قوة إيحائية مكثفة.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 👤 القسم الثاني: بناء الشخصية -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">👤 القسم الثاني: بناء الشخصية والرؤية السردية</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الشخصيات ومقومات الهوية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>رئيسية:</strong> الساردة (الراوية الذاتية، امرأة متمردة طموحة، ممزقة بين الحب والكرامة)، نادر (فارس الطفولة، شاب وسيم أرستقراطي، ضعيف أمام أمه وتقاليد العائلة).</p>
+                        <p><strong>ثانوية:</strong> أم نادر (صوت السلطة العائلية، عينها من الشرفة تراقب وتمنع)، "بنت العائلة" (الزوجة البديلة، رمز التقاليد)، شقيق نادر المتوفى (سبب اللقاء، رمز الموت الجامع).</p>
+                        <p><strong>الراوي الذاتي/المشارك:</strong> اعتماد صوت الأنثى نفسها، مما يمنح النص مصداقية نفسية وجرأة في كشف التناقضات الداخلية (الحب / الكبرياء، الحزم / الشفقة).</p>
+                    </div>
+                </div>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الأحوال النفسية والأعمال المؤثرة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>الساردة:</strong> فرح طفولي، حب جارف، كبرياء، حسم، حزن، غصة، وحدة وجودية. <strong>نادر:</strong> براءة، حب صادق، ضعف، توسل، حنين، غربة. <strong>الأم:</strong> سيطرة، مراقبة، إصرار طبقي.</p>
+                        <p><strong>الأعمال المؤثرة:</strong> رفض الساردة لنادر، زواجه من بنت العائلة، اللقاء في العزاء، الوداع الأخير.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🖼 القسم الثالث: الوصف والرمز -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">🖼 القسم الثالث: الوصف والرمز – تكثيف الدلالة</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الرموز والصور المركزة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul>
+                            <li><strong>رمز الحصان:</strong> يتحول من حصان قصب في الطفولة (براءة، خيال) إلى حصان أصيل في الشباب (جاه، طبقة، وسامة)، ليعود ويغيب في الحاضر، موازيًا لصعود العلاقة وأفولها.</li>
+                            <li><strong>رمز الشرفة والأم:</strong> تختزل سلطة العائلة والتقاليد الرقابية التي تطوّق المصير الفردي.</li>
+                            <li><strong>صورة الحزام الأمني ("حبل المشنقة"):</strong> الربط الجمالي بين اختناق العلاقة العاطفية واختناق الوطن جنوبًا.</li>
+                            <li><strong>صورة الخاتمة (المركبة واليد):</strong> صورة شعرية مكثفة تجسد الوداع الأبدي، والفرصة المستحيلة، واختيار الساردة للاغتراب.</li>
+                            <li><strong>"صومعة الوحدة والعمل":</strong> استعارة عن حياة البحث والعزلة التي اختارتها الساردة.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">اللغة والأسلوب</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul>
+                            <li><strong>ثنائية الفصحى والعامية:</strong> السرد والوصف بالفصحى الأدبية الرفيعة (حسّ شعري، مجازات)، والحوار بالعامية، مما يمنح النص واقعية وحيوية.</li>
+                            <li><strong>طبقات المعجم:</strong> معجم حسيّ (الحب، الفخر، الخوف) ومعجم فكري (الطموح، الوحدة، العمل)، يترجم ازدواجية شخصية الساردة.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 💡 القسم الرابع: القضايا المضمونية -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">💡 القسم الرابع: القضايا المضمونية</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الحب المستحيل – الأنوثة والحرية – الوطن – الزمن والفقد</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul>
+                            <li><strong>الحب المستحيل والصراع الطبقي:</strong> العائلة كسلطة ضاغطة تجسّدها "الماما"، الساردة كتمرد أنثوي يرفض أن يكون مجرد زوجة مختارة.</li>
+                            <li><strong>سؤال الأنوثة والحرية:</strong> ثنائية الحب والعمل، ثمن التحرر (الوحدة والاغتراب الداخلي).</li>
+                            <li><strong>الوطن كأرض مستحيلة:</strong> الاحتلال الإسرائيلي ليس خلفية بل وجه آخر لاستحالة الحياة. "الحزام الأمني" موازٍ لطوق التقاليد.</li>
+                            <li><strong>جدلية الزمن والفقد:</strong> الزمن يهرب "كالزئبق"، الذاكرة ملاذ وعدو، الأقصوصة مرثاة لحياة لم تُعش.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📖 القسم الخامس: السارد -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">📖 القسم الخامس: السارد والخطاب</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">نوع السارد وسمات الخطاب</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>نوع السارد:</strong> سارد ذاتي مشارك (الساردة نفسها)، مما يمنح النص مصداقية وجرأة في كشف التناقضات الداخلية.</p>
+                        <p><strong>سمات الخطاب:</strong> مزج بين الفصحى الأدبية والعامية، حوارات قصيرة مشحونة، وصف حسي شاعري، استرجاعات وجدانية.</p>
+                        <p><strong>حركة عين السارد:</strong> من الحاضر (بيت العزاء) إلى الماضي (الطفولة، الشباب) ثم العودة إلى الحاضر فالوداع. عين تتحرك بحرية بين الأزمنة.</p>
+                        <p><strong>الهم الأساسي:</strong> إبراز مأساة الحب المستحيل وتضاعف الفقد (فقد الحبيب وفقد الوطن).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📚 التعرف إلى المحاور الأساسية -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">📚 التعرف إلى المحاور الأساسية في الأثر</h3>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الحقول المعجمية والموضوعات</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>الحقول المعجمية:</strong> حقل الحب (أحبك، الفارس، الفرح)، حقل الطفولة (حصان القصب، الجورة، التزمير)، حقل الحرب والوطن (الحزام الأمني، الاحتلال، طوق الاختناق)، حقل العمل والعلم (المعهد، صومعة الوحدة والعمل، البحث)، حقل الموت والفقد (العزاء، الموت، الدمع، الوداع).</p>
+                        <p><strong>الموضوعات المطروقة:</strong> الحب والطبقة، الأنوثة والطموح، الفرد والعائلة، الريف والمدينة، الوطن والاحتلال، الزمن والفقد.</p>
+                    </div>
+                </div>
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">العناوين المقترحة</h4>
+                    <div class="ArabicH-exercise-content"><p>"الحب المستحيل"، "فرسان الطفولة وأرض الرماد"، "المركبة المجنحة والوداع الأخير"، "ثلاثون عاماً من الغياب".</p></div>
+                </div>
+            </div>
+
+            <!-- 🧩 الخطاطة البصرية -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">🧩 الخطاطة البصرية</h3>
+                <div class="ArabicH-image-container">
+                    <img src="assets2/year1/litterature/image2.png" alt="صورة توضيحية لأقصوصة الأرض المستحيلة" onerror="this.style.display='none'">
+                </div>
+                <div class="ArabicH-exercise-content">
+                    <p>دائرة مركزية بعنوان "الموضوعات في الأقصوصة" تتفرّع منها أربعة محاور رئيسة: <strong>الحبّ والوطن</strong>، <strong>الحرية والأنوثة</strong>، <strong>الفرد والعائلة</strong>، <strong>الزمن والفقد</strong>، ترتبط فيما بينها بأسهم توضّح التداخل بين الجوانب الفنية والمضمونية.</p>
+                </div>
+            </div>
+
+            <!-- 🧩 الهيكل العام للمقال -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">🧩 الهيكل العام للمقال</h3>
+                <div class="ArabicH-exercise-content">
+                    <table class="ArabicH-vocab-table">
+                        <thead><tr><th>القسم</th><th>المحتوى المقترح</th><th>الهدف</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>المقدمة</strong></td><td>تقديم الأقصوصة وسياقها، التعريف بالكاتبة، إبراز أهمية الجانب الفني والمضموني، طرح الإشكالية.</td><td>تمهيد للقارئ.</td></tr>
+                            <tr><td><strong>الجانب الفني</strong></td><td>تحليل البناء الزمني، الرؤية السردية، الحوار، الصورة والرمز، اللغة والأسلوب.</td><td>إبراز براعة الكاتبة.</td></tr>
+                            <tr><td><strong>الجانب المضموني</strong></td><td>الحب المستحيل والطبقة، الأنوثة والحرية، الوطن كأرض مستحيلة، الزمن والفقد.</td><td>الكشف عن الدلالات.</td></tr>
+                            <tr><td><strong>الخاتمة</strong></td><td>العلاقة بين الشكل والمضمون، القيمة الفنية والإنسانية للأثر، تأمل نقدي شامل.</td><td>تركيب النتائج.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 🎨 الجانب الفني -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">🎨 الجانب الفني (الأساليب ومقومات القص)</h3>
+                <div class="ArabicH-rule-card"><h4 class="ArabicH-rule-title">البناء الزمني – السرد والوصف – الحوار – الرمز – اللغة</h4><div class="ArabicH-exercise-content"><ul><li><strong>البناء الزمني:</strong> كسر خطية الزمن، استرجاع واستباق، حذف ثلاثين سنة.</li><li><strong>السرد:</strong> سارد ذاتي مشارك، يمزج بين الموضوعية والوجدانية.</li><li><strong>الوصف:</strong> حسي شاعري، رمزي مكثف.</li><li><strong>الحوار:</strong> واقعي قصير، يعكس التوتر والصراع الطبقي والنفسي.</li><li><strong>اللغة:</strong> مزيج من الفصحى والعامية.</li></ul></div></div>
+            </div>
+
+            <!-- 💡 الجانب المضموني -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">💡 الجانب المضموني (القضايا والدلالات)</h3>
+                <div class="ArabicH-rule-card"><h4 class="ArabicH-rule-title">الحب والطبقة – الأنوثة والحرية – الوطن والاحتلال – الزمن والفقد</h4><div class="ArabicH-exercise-content"><ul><li><strong>الحب والطبقة:</strong> اصطدام الحب بحواجز العائلة والتقاليد.</li><li><strong>الأنوثة والحرية:</strong> الساردة نموذج للمرأة التي تختار تحقيق ذاتها خارج إطار الزواج التقليدي.</li><li><strong>الوطن والاحتلال:</strong> الاحتلال وجه آخر لاستحالة الحياة الطبيعية في الجنوب.</li><li><strong>الزمن والفقد:</strong> الزمن كلاعب رئيس يحول العشاق إلى غرباء.</li></ul></div></div>
+            </div>
+
+            <!-- 🧠 التركيب النهائي -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">🧠 التركيب النهائي</h3>
+                <div class="ArabicH-exercise-content">
+                    <p>تفاعل الشكل والمضمون يجعل الأقصوصة لوحة فنية متكاملة: البناء الزمني المتشظي يخدم فكرة الاستحالة، الصوت السردي الذاتي يمنح مصداقية نفسية، الرموز (الحصان، الشرفة، المركبة) تختزل الصراع الطبقي والوجودي، واللغة المزدوجة تعمق الإحساس بالواقع. "الأرض المستحيلة" ليست مجرد حكاية حب ضائع، بل مرثاة لوطن ممزق وإنسان يبحث عن ذاته بين أنقاض الحلم والذاكرة.</p>
+                </div>
+            </div>
+
+            <!-- 🖋️ المقال النقدي -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">🖋️ المقال النقدي حول أقصوصة "الأرض المستحيلة"</h3>
+                <div class="ArabicH-story-text" style="font-size:1.15rem; line-height:2.2;">
+                    <p><strong>مقدمة</strong><br>تُعدُّ أقصوصة "الأرض المستحيلة" للكاتبة اللبنانية إيميلي نصر الله (1931-2018) واحدةً من النصوص القصصية الحديثة التي تمتلك طاقة إيحائية مكثفة، إذ تنهض على معمار فني محكم تتضافر فيه تقنيات السرد المعاصرة لتقديم رؤية عميقة لقضايا إنسانية ووطنية شائكة. ففي هذا النص، لا تقف التقنيات الفنية عند حدود الزخرفة الشكلية، بل تتحول إلى أدوات تحليلية تُنتج المعنى وتعمّقه. يطرح المقال سؤالاً مركزياً: كيف استطاعت الكاتبة أن تجعل من اللعب بالزمن، ومن الصورة الحسية، والحوار الدرامي، والرؤية السردية الذاتية، تجسيداً جمالياً لأطروحة "الاستحالة" التي تتجلى على مستويات عدة: الحب، والحرية الفردية، والانتماء الوطني؟</p>
+                    <p><strong>🎨 الجانب الفني: الأساليب ومقومات القص</strong><br>- <strong>البناء الزمني:</strong> كسر خطية الزمن عبر الاسترجاع والاستباق والحذف.<br>- <strong>السرد:</strong> سارد ذاتي مشارك يمنح مصداقية نفسية.<br>- <strong>الوصف والرمز:</strong> الحصان، الشرفة، المركبة، الحزام الأمني.<br>- <strong>الحوار:</strong> مشحون بالتوتر والصراع الطبقي.<br>- <strong>اللغة:</strong> مزيج من الفصحى والعامية يمنح واقعية وحيوية.</p>
+                    <p><strong>💡 الجانب المضموني: القضايا والدلالات</strong><br>- <strong>الحب المستحيل والصراع الطبقي:</strong> اصطدام الحب بسلطة العائلة والتقاليد.<br>- <strong>الأنوثة والحرية:</strong> الساردة نموذج للمرأة المتمردة التي تختار ذاتها.<br>- <strong>الوطن كأرض مستحيلة:</strong> الاحتلال الإسرائيلي وجه آخر للاستحالة.<br>- <strong>الزمن والفقد:</strong> الزمن يحول العشاق إلى غرباء والذاكرة ملاذ وعدو.</p>
+                    <p><strong>التركيب والخاتمة</strong><br>في "الأرض المستحيلة"، تكتب إيميلي نصر الله نصاً يُجسّد مقولة النقد الحديث بأن الشكل هو المضمون وقد بلغ غايته. فالبناء الزمني المتشظي، والصوت السردي الذاتي الشاعري، والرموز الموغلة في الحسية، والحوار الذي يتحول إلى مبارزة وجودية، كل هذه التقنيات لم تأتِ لتزيّن الحكاية، بل لإنتاج معناها. الأقصوصة، في نهاية المطاف، ليست مجرد حكاية عن لقاء في عزاء؛ إنها سيرة للفقد المركب، ومرثاة منثورة لوطن يسكنه الموت، ولأرض لا يمكن بلوغها لأنها، بكل بساطة، لم تعد موجودة إلا في ذاكرة ضحاياها.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;"><span class="ArabicH-flower-decoration">✎</span> <span class="ArabicH-flower-decoration">✍</span> <span class="ArabicH-flower-decoration">✎</span></p>
+            </div>
+
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_1SY_literature_module4_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.previousLesson">الدرس السابق</a>
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column"><h4 data-i18n="ArabicH.general.developerTitle">المطور</h4><p data-i18n="ArabicH.general.developer">زياد الماجري</p></div>
+            <div class="ArabicH-general-footer-column"><h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4><p data-i18n="ArabicH.general.version">v1.0.0</p></div>
+            <div class="ArabicH-general-footer-column"><h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4><div class="ArabicH-general-footer-links"><a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a><a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a></div></div>
+        </div>
+    </footer>
+
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;"><span class="ArabicH-pwa-install-icon">📱</span><span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span></button>
+
+    <script>
+        window.translations_ArabicHLiteratureModule4Lesson2 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.literatureLesson.storyTitle": "أقصوصة \"الأرض المستحيلة\" لإيميلي نصر الله",
+                "ArabicH.literatureLesson.storySubtitle": "الدرس الثاني: تحليل أقصوصة \"الأرض المستحيلة\" منشورة في مجلة العربي – جوان 2000",
+                "ArabicH.literatureLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.literatureLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.literatureLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.literatureLesson.previousLesson": "الدرس السابق",
+                "ArabicH.literatureLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.literatureLesson.storyTitle": "Short Story: \"The Impossible Land\" by Emily Nasrallah",
+                "ArabicH.literatureLesson.storySubtitle": "Lesson 2: Analysis of \"The Impossible Land\" published in Al-Arabi Magazine – June 2000",
+                "ArabicH.literatureLesson.showAnswer": "Show Answer",
+                "ArabicH.literatureLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.literatureLesson.backToHome": "Back to Homepage",
+                "ArabicH.literatureLesson.previousLesson": "Previous Lesson",
+                "ArabicH.literatureLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.literatureLesson.storyTitle": "Nouvelle: \"La Terre Impossible\" d'Emily Nasrallah",
+                "ArabicH.literatureLesson.storySubtitle": "Leçon 2: Analyse de \"La Terre Impossible\" publiée dans Al-Arabi – Juin 2000",
+                "ArabicH.literatureLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.literatureLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.literatureLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.literatureLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.literatureLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHLiteratureModule4Lesson2;
+    </script>
+
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            const showText = button.getAttribute('data-i18n-show') || 'إظهار الإجابة';
+            const hideText = button.getAttribute('data-i18n-hide') || 'إخفاء الإجابة';
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = showText;
+            } else {
+                answer.style.display = "block";
+                button.textContent = hideText;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) { item.classList.add('active'); } else { item.classList.remove('active'); }
+            });
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => { button.setAttribute('data-i18n-value', button.textContent); });
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); themeToggle.checked = true; }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+                    else { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+                });
+            }
+        });
+    </script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() { navigator.serviceWorker.register('/sw.js').then(r => console.log('SW registered')).catch(e => console.log('SW failed')); });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; if (manualInstallBtn) manualInstallBtn.style.display = 'flex'; });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') { manualInstallBtn.style.display = 'none'; deferredPrompt = null; }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
