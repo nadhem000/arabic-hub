@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل شفوي: أسباب السعادة ودواعي الاكتئاب - الدرس الثاني | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2a7f7f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="أسباب السعادة ودواعي الاكتئاب">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* ====== Teal Communication Theme (same as lesson 1) ====== */
+        :root {
+            --primary-color: #2a7f7f;
+            --secondary-color: #3d9d9d;
+            --accent-color: #6fc2c2;
+            --light-color: #e8f5f5;
+            --dark-color: #1a4d4d;
+            --text-color: #21393a;
+            --heading-color: #10292a;
+            --background-color: #f5fbfb;
+            --card-bg: #ffffff;
+            --definition-bg: #e0f2f2;
+            --border-color: #b3dcdc;
+            --table-even-bg: #e8f5f5;
+            --table-hover-bg: #d4eeee;
+            --border-radius: 16px;
+            --box-shadow: 0 8px 24px rgba(42, 127, 127, 0.12);
+            --gradient-primary: linear-gradient(135deg, #2a7f7f 0%, #1a4d4d 100%);
+            --gradient-secondary: linear-gradient(135deg, #3d9d9d 0%, #2a7f7f 100%);
+            --gradient-accent: linear-gradient(135deg, #6fc2c2 0%, #3d9d9d 100%);
+            --gradient-light: linear-gradient(135deg, #e8f5f5 0%, #e0f2f2 100%);
+            --highlight-color: #e8a41c;
+            --highlight-bg: rgba(232, 164, 28, 0.1);
+            --bubble-1-bg: #e0f2f2;
+            --bubble-2-bg: #fff4e0;
+            --bubble-3-bg: #e8f0fb;
+            --bubble-4-bg: #fce8ec;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #3d9d9d;
+            --secondary-color: #6fc2c2;
+            --accent-color: #9ddcdc;
+            --light-color: #1a4d4d;
+            --dark-color: #10292a;
+            --text-color: #e0f2f2;
+            --heading-color: #f5fbfb;
+            --background-color: #10292a;
+            --card-bg: #1a4d4d;
+            --definition-bg: #2a7f7f;
+            --border-color: #3d9d9d;
+            --table-even-bg: #1a4d4d;
+            --table-hover-bg: #2a7f7f;
+            --box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #3d9d9d 0%, #2a7f7f 100%);
+            --gradient-secondary: linear-gradient(135deg, #6fc2c2 0%, #3d9d9d 100%);
+            --gradient-accent: linear-gradient(135deg, #9ddcdc 0%, #6fc2c2 100%);
+            --gradient-light: linear-gradient(135deg, #1a4d4d 0%, #10292a 100%);
+            --highlight-color: #f0b93a;
+            --highlight-bg: rgba(240, 185, 58, 0.15);
+            --bubble-1-bg: rgba(61, 157, 157, 0.25);
+            --bubble-2-bg: rgba(232, 164, 28, 0.18);
+            --bubble-3-bg: rgba(100, 149, 237, 0.18);
+            --bubble-4-bg: rgba(220, 120, 150, 0.18);
+        }
+
+        /* ====== Page Layout ====== */
+        .ArabicH-lesson-page { min-height: 100vh; background: var(--background-color); display: flex; flex-direction: column; }
+        .ArabicH-lesson-main { flex: 1; display: flex; flex-direction: column; padding: 2rem; max-width: 1100px; margin: 0 auto; width: 100%; }
+        
+        .ArabicH-lesson-title {
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .ArabicH-lesson-subtitle {
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.85;
+        }
+
+        /* ====== Hero Intro Card ====== */
+        .ArabicH-comm-hero {
+            background: var(--gradient-primary);
+            color: #fff;
+            border-radius: 24px;
+            padding: 2rem 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .ArabicH-comm-hero::after {
+            content: "💭";
+            position: absolute;
+            left: 20px;
+            bottom: -10px;
+            font-size: 8rem;
+            opacity: 0.12;
+            line-height: 1;
+        }
+        .ArabicH-comm-hero h2 {
+            color: #fff;
+            font-size: 1.4rem;
+            margin: 0 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .ArabicH-comm-hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+        .ArabicH-comm-chip {
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.35);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.92rem;
+            backdrop-filter: blur(6px);
+        }
+
+        /* ====== Objectives Grid ====== */
+        .ArabicH-objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 14px;
+            margin-top: 1rem;
+        }
+        .ArabicH-objective-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-right: 5px solid var(--primary-color);
+            border-radius: 12px;
+            padding: 1rem 1.1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            box-shadow: 0 3px 10px rgba(42,127,127,0.06);
+        }
+        .ArabicH-objective-card .num {
+            flex-shrink: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--gradient-accent);
+            color: #fff;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+        .ArabicH-objective-card p {
+            margin: 0;
+            color: var(--text-color);
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        /* ====== Section Titles ====== */
+        .ArabicH-comm-section { margin: 2.2rem 0; }
+        .ArabicH-comm-section-title {
+            font-size: 1.35rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        [data-theme="dark"] .ArabicH-comm-section-title { color: var(--accent-color); }
+        .ArabicH-comm-section-title .icon {
+            font-size: 1.4rem;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--gradient-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-color);
+        }
+
+        /* ====== Reading Text Card ====== */
+        .ArabicH-reading-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            border-top: 5px solid var(--secondary-color);
+            position: relative;
+        }
+        .ArabicH-reading-card .source {
+            display: inline-block;
+            background: var(--definition-bg);
+            color: var(--primary-color);
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .ArabicH-reading-text {
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+            font-size: 1.22rem;
+            line-height: 2.1;
+            color: var(--dark-color);
+            text-align: justify;
+        }
+        [data-theme="dark"] .ArabicH-reading-text { color: #e0f2f2; }
+        .ArabicH-reading-text .dialog-line {
+            display: block;
+            margin: 0.4rem 0;
+            padding-right: 1.2rem;
+            border-right: 3px solid var(--accent-color);
+            font-style: italic;
+        }
+
+        /* ====== Proposed Questions ====== */
+        .ArabicH-questions-list { display: flex; flex-direction: column; gap: 14px; }
+        .ArabicH-proposed-q {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 1.1rem 1.3rem;
+            border: 1px solid var(--border-color);
+            border-right: 6px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: 0 3px 10px rgba(42,127,127,0.05);
+            transition: transform 0.25s ease;
+        }
+        .ArabicH-proposed-q:hover { transform: translateX(-4px); }
+        .ArabicH-proposed-q .q-badge {
+            width: 38px; height: 38px;
+            border-radius: 10px;
+            background: var(--gradient-secondary);
+            color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1rem; flex-shrink: 0;
+        }
+        .ArabicH-proposed-q p { margin: 0; color: var(--text-color); font-size: 1rem; line-height: 1.65; }
+
+        /* ====== Group Dialogue ====== */
+        .ArabicH-dialogue {
+            background: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.6rem;
+            border: 1px solid var(--border-color);
+        }
+        .ArabicH-bubble {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 1.2rem;
+            align-items: flex-start;
+        }
+        .ArabicH-bubble:last-child { margin-bottom: 0; }
+        .ArabicH-bubble.alt { flex-direction: row-reverse; }
+        .ArabicH-avatar {
+            flex-shrink: 0;
+            width: 46px; height: 46px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem;
+            border: 2px solid var(--card-bg);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+        .ArabicH-bubble-content {
+            background: var(--card-bg);
+            border-radius: 16px 4px 16px 16px;
+            padding: 0.9rem 1.1rem;
+            border: 1px solid var(--border-color);
+            max-width: 88%;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .ArabicH-bubble.alt .ArabicH-bubble-content {
+            border-radius: 4px 16px 16px 16px;
+        }
+        .ArabicH-bubble-name {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 4px;
+            display: block;
+        }
+        [data-theme="dark"] .ArabicH-bubble-name { color: var(--accent-color); }
+        .ArabicH-bubble-content p { margin: 0; color: var(--text-color); font-size: 0.98rem; line-height: 1.7; }
+        .ArabicH-bubble.b1 .ArabicH-bubble-content { background: var(--bubble-1-bg); }
+        .ArabicH-bubble.b2 .ArabicH-bubble-content { background: var(--bubble-2-bg); }
+        .ArabicH-bubble.b3 .ArabicH-bubble-content { background: var(--bubble-3-bg); }
+        .ArabicH-bubble.b4 .ArabicH-bubble-content { background: var(--bubble-4-bg); }
+
+        /* ====== Exchange of Opinions ====== */
+        .ArabicH-opinions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .ArabicH-opinion-card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            padding: 1.2rem 1.3rem;
+            box-shadow: 0 3px 10px rgba(42,127,127,0.06);
+            position: relative;
+            padding-top: 2.2rem;
+        }
+        .ArabicH-opinion-card::before {
+            content: "“";
+            position: absolute;
+            top: 4px;
+            right: 14px;
+            font-size: 3rem;
+            color: var(--accent-color);
+            font-family: Georgia, serif;
+            line-height: 1;
+            opacity: 0.55;
+        }
+        .ArabicH-opinion-card .opinion-author {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 6px;
+            display: block;
+        }
+        [data-theme="dark"] .ArabicH-opinion-card .opinion-author { color: var(--accent-color); }
+        .ArabicH-opinion-card p { margin: 0; color: var(--text-color); font-size: 0.96rem; line-height: 1.7; }
+
+        /* ====== Conclusions ====== */
+        .ArabicH-conclusions {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .ArabicH-conclusion-item {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 1.1rem 1.3rem;
+            border: 1px solid var(--border-color);
+            border-right: 6px solid var(--primary-color);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            box-shadow: 0 3px 10px rgba(42,127,127,0.06);
+        }
+        .ArabicH-conclusion-item .check {
+            flex-shrink: 0;
+            width: 28px; height: 28px;
+            border-radius: 50%;
+            background: var(--gradient-accent);
+            color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.95rem;
+        }
+        .ArabicH-conclusion-item p { margin: 0; color: var(--text-color); font-size: 0.98rem; line-height: 1.7; }
+
+        /* ====== Final Summary ====== */
+        .ArabicH-final-summary {
+            background: var(--gradient-secondary);
+            color: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .ArabicH-final-summary::before {
+            content: "🌱";
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 2rem;
+            opacity: 0.35;
+        }
+        .ArabicH-final-summary h3 {
+            color: #fff;
+            margin: 0 0 1rem 0;
+            font-size: 1.3rem;
+        }
+        .ArabicH-final-summary p {
+            color: #fff;
+            line-height: 1.9;
+            font-size: 1.02rem;
+            margin: 0 0 0.8rem 0;
+        }
+        .ArabicH-final-summary ul {
+            color: #fff;
+            line-height: 1.9;
+            font-size: 1rem;
+            margin: 0.5rem 0 0 0;
+            padding-right: 1.4rem;
+        }
+
+        /* ====== Flower ====== */
+        .ArabicH-flower-decoration { display: inline-block; margin: 0 10px; color: var(--primary-color); font-size: 1.2rem; }
+
+        /* ====== Nav Buttons ====== */
+        .ArabicH-nav-buttons { display: flex; justify-content: space-between; margin-top: 30px; flex-wrap: wrap; gap: 10px; }
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 11px 22px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 15px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.2s;
+            display: inline-block;
+            text-align: center;
+        }
+        .ArabicH-nav-btn:hover { background-color: var(--accent-color); transform: translateY(-2px); }
+
+        /* ====== Responsive ====== */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title { font-size: 1.9rem; }
+            .ArabicH-lesson-main { padding: 1.2rem; }
+            .ArabicH-comm-hero { padding: 1.5rem; }
+            .ArabicH-comm-hero h2 { font-size: 1.15rem; }
+            .ArabicH-objectives-grid { grid-template-columns: 1fr; }
+            .ArabicH-opinions-grid { grid-template-columns: 1fr; }
+            .ArabicH-bubble-content { max-width: 85%; font-size: 0.95rem; }
+            .ArabicH-avatar { width: 40px; height: 40px; font-size: 1.2rem; }
+            .ArabicH-nav-buttons { flex-direction: column; }
+            .ArabicH-reading-card { padding: 1.3rem; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-lesson-title { font-size: 1.5rem; }
+            .ArabicH-lesson-subtitle { font-size: 1rem; }
+            .ArabicH-proposed-q { padding: 0.9rem; }
+            .ArabicH-bubble-content { max-width: 82%; }
+            .ArabicH-bubble-content p { font-size: 0.9rem; }
+        }
+        [data-theme="dark"] p, [data-theme="dark"] li, [data-theme="dark"] div:not(.ArabicH-reading-text) { color: var(--text-color) !important; }
+        [data-theme="dark"] strong { color: var(--accent-color); }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">🏠</span><span data-i18n="ArabicH.windows.home">الرئيسية</span></a>
+        <a href="authors.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">👨‍🎓</span><span data-i18n="ArabicH.windows.authors">ادباء</span></a>
+        <a href="quotes.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📖</span><span data-i18n="ArabicH.windows.quotes">شواهد</span></a>
+        <a href="resources.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📚</span><span data-i18n="ArabicH.windows.resources">موارد</span></a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.commLesson.lessonTitle">أسباب السّعادة ودواعي الاكتئاب</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.commLesson.lessonSubtitle">تواصل شفوي – المحور الأول: مظاهر من الحياة المعاصرة</p>
+
+        <!-- ====== Hero: Capacities & Situation ====== -->
+        <div class="ArabicH-comm-hero">
+            <h2><span>🎯</span> القدرات المستهدفة</h2>
+            <div class="ArabicH-objectives-grid" style="margin-top:0.4rem;">
+                <div class="ArabicH-objective-card"><span class="num">1</span><p>أخذ الكلمة لطرح فكرة أو توسيع مجال الاستكشاف.</p></div>
+                <div class="ArabicH-objective-card"><span class="num">2</span><p>استثمار التّجارب الشّخصيّة وتجارب الآخرين.</p></div>
+                <div class="ArabicH-objective-card"><span class="num">3</span><p>التّعبير بلغة سليمة في صيغها وتراكيبها وطرائق نطقها.</p></div>
+                <div class="ArabicH-objective-card"><span class="num">4</span><p>احترام آداب الحوار.</p></div>
+            </div>
+            <div class="ArabicH-comm-hero-meta">
+                <span class="ArabicH-comm-chip">🗣️ حوار متعدّد الأطراف</span>
+                <span class="ArabicH-comm-chip">📌 الموضوع: أسباب السّعادة ودواعي الاكتئاب</span>
+                <span class="ArabicH-comm-chip">📖 سند الانطلاق: نصّ لنجيب محفوظ</span>
+            </div>
+        </div>
+
+        <!-- ====== Reading Text ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">📖</span> نصّ الانطلاق</h2>
+            <div class="ArabicH-reading-card">
+                <span class="source">✍️ نجيب محفوظ</span>
+                <div class="ArabicH-reading-text">
+                    <p>تطوّع لأن يكون امتداداً لأبيه بمحض اختياره وحبّه. ماج الوسط الطّلاّبيّ بالزّلازل وهو قابع في ركن هادئ يراقب ويبتسم. لم يهمّه إطلاقاً حتّى أن يعرف فيم يختلفون أو لم يثورون. وقال له أبوه «اهتمّ بنفسك تسلم ولا شأن لك بالآخرين». وعكف على ذاته ينمّيها ويصقلها بالعلم والرّياضة والثّقافة والفنّ. ودرس الطّبّ بكلّ جدارة، وحصل على الدّكتوراه من إنجلترا ثمّ شغل وظيفة في وزارة الصّحّة. تزوّج من كريمة الباشا وكيل وزارة الصّحّة وكانت مستوفية لشروط الجمال واللّياقة والتّعليم المناسب فضلاً عن الأخلاق الطّيّبة. وواصل حياة هادئة سعيدة ما بين البيت والعمل والنّادي وكأنّما قد حُقِنَ بطُعْمٍ واقٍ من هيجان العصر وتقلّباته وعواصفه. وأنجب ولدين ممتازين وناجحين. أجل تعذّر عليه أن يصبّهما في قالبه كما فعل أبوه معه، ولكنّهما أرضياه تماماً في أحلامه الكبرى، فتخرّجا طبيبين، وتزوّجا من فتاتين لا تقلان في المستوى والأهليّة عن أمّهما. وأُحيل على المعاش في ميعاده القانونيّ ليستقبل حياة جديدة مليئة بالعواطف والمسرّات. إنّه الرّجل السّعيد حقّاً، ولكن ماذا حدث بعد ذلك؟... لماذا يفقد كلّ جميل مذاقه الحلو؟ لماذا تتراكم أنّاتُ الشّكوى ولا موضوع واحداً للشّكوى؟...</p>
+                    <p>الأدهى من ذلك أنّه مضى يرفض العُمُدَ التي قامت عليها سعادته، النّادي... الصّداقات... الزّوجة... الطّعام... الرّياضة، وقبل أن يُسلّم بالهزيمة ويستسلم لليأس ذهب شبه مُرغَم إلى الطّبيب النّفسيّ. كان صديقاً حميماً وزميلاً قديماً. وأدركه أوّل ما أدركه بالعقاقير. وأحدثت العقاقيرُ أثراً فرجع إلى الشّفاء وأفاق من إغماءته الطّويلة.</p>
+                    <p>غير أنّه لم يقنع بذلك وراح يتساءل:</p>
+                    <span class="dialog-line">• ولماذا يصيبني الاكتئاب في بحبوحة السّعادة الشّاملة؟...</span>
+                    <p>فضحك صديقه قائلاً:</p>
+                    <span class="dialog-line">• ربّما بسبب من السّعادة نفسها.</span>
+                    <p>فتبادلا نظرةً كالإشارة الغنيّة بنفسها فقال الرّجل:</p>
+                    <span class="dialog-line">• إنّك تسخر من نوعيّة السّعادة الّتي قُسمت لي.</span>
+                    <p>فابتسم الطّبيب وقال متهرّباً:</p>
+                    <span class="dialog-line">• ابناك مختلفان عنك فيما أرى؟</span>
+                    <p>فقال بعفويّة:</p>
+                    <span class="dialog-line">• من سوء الحظّ.</span>
+                    <p>ولكنّه استدرك ضاحكاً:</p>
+                    <span class="dialog-line">• أعني من حسن الحظّ.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Proposed Questions ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">❓</span> مداخل إلى المسألة</h2>
+            <div class="ArabicH-questions-list">
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">1</span>
+                    <p>بين سعادة الفرد وسعادة الجماعة: هل يمكن أن يكون الإنسان سعيداً في مجتمع تعيس؟</p>
+                </div>
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">2</span>
+                    <p>السّعادة والمال: هل المال شرط للسعادة، أم أنّه قد يكون سبباً في الشقاء؟</p>
+                </div>
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">3</span>
+                    <p>السّعادة والوئام العائليّ: ما وزن الأسرة المتماسكة في تحقيق السعادة الفردية؟</p>
+                </div>
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">4</span>
+                    <p>السّعادة والنّجاح المهنيّ: هل النجاح في العمل كافٍ وحده لتحقيق السعادة؟</p>
+                </div>
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">5</span>
+                    <p>السّعادة والمنزلة الاجتماعيّة: هل احترام الناس وتقديرهم يُسهم في السعادة؟</p>
+                </div>
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">6</span>
+                    <p>هل السّعادة دائمة أم ظرفيّة؟ ولماذا يصاب من بلغ قمّة السعادة بالاكتئاب كما في النصّ؟</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Group Dialogue ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">💬</span> حوار جماعي</h2>
+            <div class="ArabicH-dialogue">
+                <div class="ArabicH-bubble b1">
+                    <div class="ArabicH-avatar" style="background:#d4eeee;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">سلمى (منشّطة)</span>
+                        <p>نصّ نجيب محفوظ يقف بنا أمام مفارقة غريبة: رجل بلغ من السعادة كلّ أسبابها الظاهرة، ومع ذلك أصابه الاكتئاب. فما تفسيركم لهذه المفارقة؟</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b2 alt">
+                    <div class="ArabicH-avatar" style="background:#ffe9c7;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">يوسف</span>
+                        <p>أراه <strong>اكتئاب المعنى</strong> لا اكتئاب الحرمان. الرجل حصل على كلّ شيء مادي، لكنّه لم يجد ما يمنح حياته معنى أكبر من ذاته. السعادة الظاهرة قد تغطّي فراغاً داخلياً.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b3">
+                    <div class="ArabicH-avatar" style="background:#dbe7fb;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">مريم</span>
+                        <p>وأنا ألمح إلى ما قاله الطبيب النفسي: «ربّما بسبب من السعادة نفسها». أي أنّه <strong>اعتاد النعمة</strong> حتى فقد قدرتها على إسعاده. فالسعادة المطلقة قد تتحوّل إلى سجن إذا فقد الإنسان حسّ التطلّع.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b4 alt">
+                    <div class="ArabicH-avatar" style="background:#fbdbe3;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">أمين</span>
+                        <p>نعم، أضيف سبباً ثالثاً: <strong>الانفصال عن الآخرين</strong>. لقد ربّاه أبوه على «اهتمّ بنفسك تسلم ولا شأن لك بالآخرين»، فبنى سعادة فردية معزولة. والسعادة الفردية المعزولة هشّة أمام تقلّبات الحياة.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b1">
+                    <div class="ArabicH-avatar" style="background:#d4eeee;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">سلمى</span>
+                        <p>ملاحظة مهمّة. إذن هل السعادة الحقيقية هي التي تُبنى مع الجماعة لا ضدّها؟</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b2 alt">
+                    <div class="ArabicH-avatar" style="background:#ffe9c7;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">يوسف</span>
+                        <p>بالتأكيد. <strong>السعادة الفردية الحقيقية تحتاج إلى سعادة جماعية تسندها</strong>. الحياة الاجتماعية، والصداقات، والعطاء، والمشاركة في هموم الآخرين، كلها مصابيح تنير الداخل الإنساني.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b3">
+                    <div class="ArabicH-avatar" style="background:#dbe7fb;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">مريم</span>
+                        <p>وهنا يظهر الفرق بين <strong>السعادة الظرفية</strong> (لحظات فرح عابرة) و<strong>السعادة العميقة</strong> (حالة رضا وسلام داخلي نابعة من المعنى والقيم). النصّ يصوّر إنساناً بلغ السعادة الظرفية كلها، لكنّه افتقد السعادة العميقة.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b4 alt">
+                    <div class="ArabicH-avatar" style="background:#fbdbe3;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">أمين</span>
+                        <p>ومفارقة النهاية رائعة: حين قال «من سوء الحظّ» ثم استدرك «أعني من حسن الحظّ» لأنّ ابنيه مختلفان عنه. إنّه يُقرّ ضمناً بأنّ سعادته كانت خطأً في التصور، وأنّ الاختلاف عن الأب هو حسن الحظّ الحقيقي.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Exchange of Opinions ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">🔄</span> تبادل آراء</h2>
+            <div class="ArabicH-opinions-grid">
+                <div class="ArabicH-opinion-card">
+                    <span class="opinion-author">يوسف — الرأي الأول</span>
+                    <p>«السعادة ليست في المزيد من الأشياء، بل في المعنى الذي نمنحه لحياتنا. من فقد المعنى، فقد السعادة ولو ملك الدنيا.»</p>
+                </div>
+                <div class="ArabicH-opinion-card">
+                    <span class="opinion-author">مريم — الرأي الثاني</span>
+                    <p>«السعادة ظرفية بطبيعتها، لكنّ الطمأنينة دائمة. من يطلب السعادة الدائمة يطلب المستحيل، ومن يطلب الطمأنينة يجدها في الإيمان والقناعة والتوازن.»</p>
+                </div>
+                <div class="ArabicH-opinion-card">
+                    <span class="opinion-author">أمين — الرأي الثالث</span>
+                    <p>«لا سعادة فردية حقيقية في مجتمع مأزوم. السعادة الفردية بلا سعادة جماعية تشبه قصراً في صحراء: جميل لكنه موحش ومعرّض للانهيار.»</p>
+                </div>
+                <div class="ArabicH-opinion-card">
+                    <span class="opinion-author">سلمى — الرأي الرابع</span>
+                    <p>«السعادة حالة مركّبة: تحتاج المال والصحة والأسرة والصداقة والنجاح، لكنها تحتاج فوق ذلك إلى <strong>بوصلة داخلية</strong> تُعطي لهذه المكوّنات معنى. بلا البوصلة تصبح كلّ المكوّنات عبئاً.»</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Conclusions ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">✅</span> استنتاجات</h2>
+            <div class="ArabicH-conclusions">
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>السعادة ليست نتيجة تراكم الأسباب الظاهرة</strong> (المال، الأسرة، الوظيفة، الشهرة)، بل هي تجربة داخلية نابعة من المعنى والقيم والتوازن.</p>
+                </div>
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>اكتئاب من بلغ السعادة الشاملة</strong> يكشف عن فراغ روحي لم تُشبعه المكاسب المادية، وعن حاجة الإنسان إلى معنى يتجاوز ذاته.</p>
+                </div>
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>السعادة الفردية المعزولة هشّة،</strong> فالسعادة الحقيقية تنمو في فضاء العلاقات الإنسانية والعطاء والمشاركة في هموم الآخرين.</p>
+                </div>
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>الفرق بين السعادة الظرفية والطمأنينة العميقة</strong> ضروري لفهم تجربة النصّ: الأولى لحظات عابرة، والثانية حالة رضا مستقرة.</p>
+                </div>
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>الحوار والتعبير عن المشاعر</strong> (كما فعل الرجل مع الطبيب النفسي) خطوة أساسية في مواجهة الاكتئاب، فلا صحة نفسية بلا كلام يُقال.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Final Summary ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">🎓</span> خلاصة: نحو فهم أعمق للسعادة</h2>
+            <div class="ArabicH-final-summary">
+                <h3>ما الذي يُميّز فهماً ناضجاً للسعادة؟</h3>
+                <p>يقتضي الفهم الناضج للسعادة إعادة النظر في تصوراتنا عنها، والانتقال من السعادة كغاية مادية إلى السعادة كتجربة روحية وإنسانية متكاملة:</p>
+                <ul>
+                    <li><strong>السعادة ليست محطة وصول، بل أسلوب حياة:</strong> لا تُبلغ مرة واحدة ثم تُحفظ، بل تُبنى يومياً باختيارات صغيرة.</li>
+                    <li><strong>المال شرط مساعد لا شرط كافٍ:</strong> يُخفّف القلق، لكنّه لا يصنع المعنى ولا يملأ الفراغ الروحي.</li>
+                    <li><strong>العلاقات الإنسانية مصدر أساسي للسعادة:</strong> الأسرة والصداقة والمشاركة الاجتماعية تمنح الوجود دفئاً ومعنى.</li>
+                    <li><strong>الصحة النفسية جزء من الصحة العامة:</strong> فالاكتئاب ليس ضعفاً بل مرضاً يُعالج، وطلب المساعدة قرار شجاع.</li>
+                    <li><strong>السعادة الفردية والسعادة الجماعية متلازمتان:</strong> لا يكون المجتمع سعيداً بفرد واحد، ولا يكون الفرد سعيداً في مجتمع منكسر.</li>
+                    <li><strong>القناعة والرضا مفتاح الطمأنينة:</strong> من يقارن نفسه بغيره يبقى في شقاء دائم، ومن ينظر إلى ما عنده يجد سعادة لا تنتهي.</li>
+                    <li><strong>الإيمان والأمل يمنحان السعادة عمقاً:</strong> فالرؤية الروحية للحياة تُعطي الإنسان صبراً على الشدائد وطمأنينة في التقلّبات.</li>
+                </ul>
+                <p style="margin-top:1rem;">إنّ السعادة الحقيقية ليست في <em>الوصول</em> بل في <em>المسير</em>: مسير يُعطي فيه الإنسان معنى لحياته عبر القيم والعطاء والعلاقات، ويثبت فيه على الأمل مهما تقلّبت الظروف.</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                <span class="ArabicH-flower-decoration">✎</span> 
+                <span class="ArabicH-flower-decoration">✍</span> 
+                <span class="ArabicH-flower-decoration">✎</span>
+            </p>
+        </div>
+
+        <div class="ArabicH-nav-buttons">
+            <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.commLesson.backToLessons">العودة إلى الدروس العامة</a>
+            <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.commLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+            <a href="AH_1SY_communication_module1_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.commLesson.previousLesson">الدرس السابق</a>
+            <a href="AH_1SY_communication_module1_lesson3.html" class="ArabicH-nav-btn" data-i18n="ArabicH.commLesson.nextLesson">الدرس التالي</a>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        window.translations_ArabicHCommunicationModule1Lesson2 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.commLesson.lessonTitle": "أسباب السّعادة ودواعي الاكتئاب",
+                "ArabicH.commLesson.lessonSubtitle": "تواصل شفوي – المحور الأول: مظاهر من الحياة المعاصرة",
+                "ArabicH.commLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.commLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.commLesson.previousLesson": "الدرس السابق",
+                "ArabicH.commLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.commLesson.lessonTitle": "Causes of Happiness and Reasons for Depression",
+                "ArabicH.commLesson.lessonSubtitle": "Oral Communication – Unit 1: Aspects of Contemporary Life",
+                "ArabicH.commLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.commLesson.backToHome": "Back to Homepage",
+                "ArabicH.commLesson.previousLesson": "Previous Lesson",
+                "ArabicH.commLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.commLesson.lessonTitle": "Causes du bonheur et raisons de la dépression",
+                "ArabicH.commLesson.lessonSubtitle": "Communication orale – Unité 1: Aspects de la vie contemporaine",
+                "ArabicH.commLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.commLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.commLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.commLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHCommunicationModule1Lesson2;
+    </script>
+    
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) { item.classList.add('active'); } else { item.classList.remove('active'); }
+            });
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); themeToggle.checked = true; }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+                    else { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+                });
+            }
+        });
+    </script>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() { navigator.serviceWorker.register('/sw.js').then(r => console.log('SW registered')).catch(e => console.log('SW failed')); });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; if (manualInstallBtn) manualInstallBtn.style.display = 'flex'; });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') { manualInstallBtn.style.display = 'none'; deferredPrompt = null; }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

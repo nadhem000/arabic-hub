@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أدب: قصيدة "إلى طغاة العالم" لأبي القاسم الشابي - الدرس الثالث | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#8a5a2b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="إلى طغاة العالم">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        :root {
+            --primary-color: #8a5a2b;
+            --secondary-color: #b17a44;
+            --accent-color: #d4a373;
+            --light-color: #fdf6ed;
+            --dark-color: #4a2e14;
+            --text-color: #3d2b18;
+            --heading-color: #2a1c0e;
+            --background-color: #fdfaf4;
+            --card-bg: #ffffff;
+            --definition-bg: #f8ede0;
+            --border-color: #e0c9a6;
+            --table-even-bg: #fdf6ed;
+            --table-hover-bg: #f8ede0;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(138, 90, 43, 0.12);
+            --gradient-primary: linear-gradient(135deg, #8a5a2b 0%, #4a2e14 100%);
+            --gradient-secondary: linear-gradient(135deg, #b17a44 0%, #8a5a2b 100%);
+            --gradient-accent: linear-gradient(135deg, #d4a373 0%, #b17a44 100%);
+            --gradient-light: linear-gradient(135deg, #fdf6ed 0%, #f8ede0 100%);
+            --highlight-color: #3a7ca5;
+            --highlight-bg: rgba(58, 124, 165, 0.1);
+            --poetry-bg: rgba(138, 90, 43, 0.08);
+            --poetry-border: #b17a44;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #b17a44;
+            --secondary-color: #d4a373;
+            --accent-color: #e8c9a8;
+            --light-color: #4a2e14;
+            --dark-color: #2a1c0e;
+            --text-color: #f8ede0;
+            --heading-color: #fdf6ed;
+            --background-color: #2a1c0e;
+            --card-bg: #4a2e14;
+            --definition-bg: #8a5a2b;
+            --border-color: #8a5a2b;
+            --table-even-bg: #4a2e14;
+            --table-hover-bg: #8a5a2b;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #b17a44 0%, #8a5a2b 100%);
+            --gradient-secondary: linear-gradient(135deg, #d4a373 0%, #b17a44 100%);
+            --gradient-accent: linear-gradient(135deg, #e8c9a8 0%, #d4a373 100%);
+            --gradient-light: linear-gradient(135deg, #4a2e14 0%, #2a1c0e 100%);
+            --highlight-color: #5ba3d0;
+            --highlight-bg: rgba(91, 163, 208, 0.15);
+            --poetry-bg: rgba(177, 122, 68, 0.15);
+            --poetry-border: #d4a373;
+        }
+
+        .ArabicH-lesson-page { min-height: 100vh; background: var(--background-color); display: flex; flex-direction: column; }
+        .ArabicH-lesson-main { flex: 1; display: flex; flex-direction: column; padding: 2rem; max-width: 1200px; margin: 0 auto; width: 100%; }
+        .ArabicH-lesson-title { font-size: 2.5rem; margin-bottom: 1rem; color: var(--heading-color); text-align: center; font-weight: 700; }
+        .ArabicH-lesson-subtitle { font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-color); text-align: center; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+        .ArabicH-lesson-container { background: var(--card-bg); border-radius: var(--border-radius); box-shadow: var(--box-shadow); padding: 2.5rem; margin-bottom: 2rem; border-top: 6px solid var(--primary-color); }
+        .ArabicH-lesson-header { background: var(--gradient-primary); color: white; padding: 1.5rem; border-radius: var(--border-radius); margin-bottom: 2rem; text-align: center; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .ArabicH-lesson-teacher, .ArabicH-lesson-class { font-size: 1.1rem; font-weight: 600; background: rgba(255,255,255,0.15); padding: 8px 15px; border-radius: 20px; backdrop-filter: blur(5px); }
+        .ArabicH-lesson-content { margin: 30px 0; }
+        .ArabicH-exercise-card { background: var(--card-bg); border-radius: var(--border-radius); box-shadow: var(--box-shadow); margin: 25px 0; padding: 1.5rem; border: 1px solid var(--border-color); }
+        .ArabicH-exercise-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--secondary-color); font-weight: 600; text-align: center; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px; }
+        [data-theme="dark"] .ArabicH-exercise-title { color: var(--accent-color); }
+        .ArabicH-exercise-content { line-height: 1.8; margin-bottom: 20px; color: var(--text-color); }
+        .ArabicH-rule-card { background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%); border-radius: var(--border-radius); margin: 20px 0; padding: 1.5rem; border-left: 6px solid var(--secondary-color); position: relative; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .ArabicH-rule-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+        .ArabicH-rule-card::before { content: "📘"; position: absolute; left: 15px; top: 15px; font-size: 1.2rem; opacity: 0.8; }
+        .ArabicH-rule-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700; padding-left: 30px; border-bottom: 2px dashed var(--secondary-color); padding-bottom: 8px; position: relative; }
+        [data-theme="dark"] .ArabicH-rule-title { color: var(--accent-color); }
+        .ArabicH-rule-title::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 60px; height: 2px; background-color: var(--primary-color); }
+
+        .ArabicH-poem-text { font-size: 1.4rem; font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif; line-height: 2.2; color: var(--dark-color); margin: 20px 0; padding: 20px; background-color: var(--poetry-bg); border-radius: var(--border-radius); border-right: 4px solid var(--poetry-border); text-align: center; direction: rtl; }
+        .ArabicH-poem-line { margin-bottom: 1.5rem; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; position: relative; padding: 0 10px; }
+        .ArabicH-sadr { font-weight: 600; color: var(--primary-color); margin-left: 0.5rem; position: relative; text-align: left; }
+        .ArabicH-ajz { font-weight: 500; color: var(--dark-color); margin-right: 0.5rem; position: relative; text-align: right; }
+        .ArabicH-separator { color: var(--accent-color); font-weight: bold; margin: 0 10px; opacity: 0.7; font-size: 1.2rem; }
+        .ArabicH-poem-separator { height: 1.5rem; width: 60%; margin: 1.5rem auto; border-bottom: 2px dashed var(--border-color); opacity: 0.5; }
+        [data-theme="dark"] .ArabicH-poem-text { color: #fdf6ed; background-color: var(--poetry-bg); border-right: 4px solid var(--poetry-border); }
+        [data-theme="dark"] .ArabicH-sadr { color: var(--accent-color); }
+        [data-theme="dark"] .ArabicH-ajz { color: #fdf6ed; }
+        [data-theme="dark"] .ArabicH-separator { color: var(--secondary-color); }
+        @media (max-width: 768px) {
+            .ArabicH-poem-text { font-size: 1.2rem; padding: 15px; line-height: 2.0; }
+            .ArabicH-poem-line { flex-wrap: wrap; justify-content: flex-end; }
+            .ArabicH-sadr, .ArabicH-ajz { width: 100%; text-align: right; margin: 0.2rem 0; }
+            .ArabicH-separator { display: none; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-poem-text { font-size: 1.1rem; line-height: 1.9; padding: 12px; }
+            .ArabicH-poem-line { margin-bottom: 1rem; }
+        }
+
+        .ArabicH-vocab-table { width: 100%; border-collapse: collapse; margin: 20px 0; direction: rtl; }
+        .ArabicH-vocab-table th { background-color: var(--primary-color); color: white; padding: 12px; font-weight: 600; text-align: center; border: 1px solid var(--border-color); }
+        .ArabicH-vocab-table td { padding: 10px; border: 1px solid var(--border-color); text-align: right; background-color: var(--card-bg); color: var(--text-color); }
+        .ArabicH-vocab-table tr:nth-child(even) td { background-color: var(--table-even-bg); }
+        .ArabicH-vocab-table tr:hover td { background-color: var(--table-hover-bg); }
+
+        .ArabicH-question { background-color: var(--definition-bg); border-radius: var(--border-radius); padding: 1.5rem; margin: 20px 0; border-right: 4px solid var(--primary-color); position: relative; }
+        .ArabicH-question-title { font-size: 1.2rem; margin-bottom: 10px; color: var(--primary-color); font-weight: 700; text-align: right; }
+        [data-theme="dark"] .ArabicH-question-title { color: var(--accent-color); }
+        .ArabicH-question-content { line-height: 1.8; color: var(--text-color); text-align: right; margin-bottom: 15px; }
+        .ArabicH-show-answer-btn { background-color: var(--primary-color); color: white; border: none; padding: 10px 20px; border-radius: var(--border-radius); cursor: pointer; font-size: 16px; margin-top: 10px; transition: background-color 0.3s; display: block; width: 100%; max-width: 200px; margin-right: auto; margin-left: 0; }
+        .ArabicH-show-answer-btn:hover { background-color: var(--accent-color); }
+        .ArabicH-answer { display: none; margin-top: 20px; padding: 20px; border-radius: var(--border-radius); border-right: 3px solid var(--accent-color); background-color: var(--definition-bg); line-height: 1.8; color: var(--text-color); text-align: right; }
+
+        .ArabicH-prosody-table { width: 100%; border-collapse: collapse; margin: 20px 0; direction: rtl; }
+        .ArabicH-prosody-table th { background-color: var(--primary-color); color: white; padding: 12px; font-weight: 600; text-align: center; border: 1px solid var(--border-color); }
+        .ArabicH-prosody-table td { padding: 10px; border: 1px solid var(--border-color); text-align: center; background-color: var(--card-bg); color: var(--text-color); }
+
+        .ArabicH-analysis-section { background: var(--card-bg); border-radius: var(--border-radius); margin: 25px 0; padding: 1.5rem; border: 1px solid var(--border-color); }
+        .ArabicH-analysis-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700; text-align: right; border-bottom: 2px solid var(--secondary-color); padding-bottom: 8px; }
+        [data-theme="dark"] .ArabicH-analysis-title { color: var(--accent-color); }
+        .ArabicH-analysis-content { line-height: 1.8; color: var(--text-color); text-align: right; }
+
+        .ArabicH-flower-decoration { display: inline-block; margin: 0 10px; color: var(--primary-color); font-size: 1.2rem; }
+        .ArabicH-knowledge-box { background-color: var(--definition-bg); border-radius: var(--border-radius); padding: 1.5rem; margin: 25px 0; border-right: 4px solid var(--primary-color); position: relative; }
+        .ArabicH-knowledge-box::before { content: "💡"; position: absolute; right: 15px; top: 15px; font-size: 1.5rem; opacity: 0.7; }
+        .ArabicH-knowledge-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700; text-align: right; padding-right: 40px; }
+        [data-theme="dark"] .ArabicH-knowledge-title { color: var(--accent-color); }
+        .ArabicH-knowledge-content { line-height: 1.8; color: var(--text-color); text-align: right; }
+
+        .ArabicH-nav-buttons { display: flex; justify-content: space-between; margin-top: 30px; }
+        .ArabicH-nav-btn { background-color: var(--primary-color); color: white; border: none; padding: 10px 20px; border-radius: var(--border-radius); cursor: pointer; font-size: 16px; text-decoration: none; transition: background-color 0.3s; display: inline-block; text-align: center; }
+        .ArabicH-nav-btn:hover { background-color: var(--accent-color); }
+
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title { font-size: 2rem; }
+            .ArabicH-lesson-subtitle { font-size: 1.1rem; }
+            .ArabicH-lesson-container { padding: 1.5rem; }
+            .ArabicH-lesson-header { flex-direction: column; gap: 15px; text-align: center; }
+            .ArabicH-nav-buttons { flex-direction: column; gap: 10px; }
+            .ArabicH-rule-card { padding: 1.2rem; }
+            .ArabicH-rule-title { font-size: 1.2rem; padding-left: 25px; }
+            .ArabicH-rule-card::before { left: 12px; top: 12px; font-size: 1.1rem; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main { padding: 1rem; }
+            .ArabicH-lesson-title { font-size: 1.6rem; }
+            .ArabicH-exercise-card { padding: 1rem; }
+            .ArabicH-rule-card { padding: 1rem; }
+            .ArabicH-rule-title { font-size: 1.1rem; padding-left: 22px; }
+            .ArabicH-rule-card::before { left: 10px; top: 10px; font-size: 1rem; }
+        }
+        [data-theme="dark"] p, [data-theme="dark"] li, [data-theme="dark"] div:not(.ArabicH-poem-text) { color: var(--text-color) !important; }
+        [data-theme="dark"] strong { color: var(--accent-color); }
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) { color: var(--accent-color); }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">🏠</span><span data-i18n="ArabicH.windows.home">الرئيسية</span></a>
+        <a href="authors.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">👨‍🎓</span><span data-i18n="ArabicH.windows.authors">ادباء</span></a>
+        <a href="quotes.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📖</span><span data-i18n="ArabicH.windows.quotes">شواهد</span></a>
+        <a href="resources.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📚</span><span data-i18n="ArabicH.windows.resources">موارد</span></a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.literatureLesson.poemTitle">قصيدة "إلى طغاة العالم" لأبي القاسم الشابي</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.literatureLesson.poemSubtitle">الدرس الثالث: تحليل قصيدة من الشعر الوطني – فضح المستعمر وتبشير الشعب بالثورة</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher"><span class="ArabicH-flower-decoration">❦</span> الاستاذ: غير معروف <span class="ArabicH-flower-decoration">❦</span></div>
+                <div class="ArabicH-lesson-class"><span class="ArabicH-flower-decoration">✿</span> المعهد: غير معروف <span class="ArabicH-flower-decoration">✿</span></div>
+            </div>
+            
+            <!-- Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">تمهيد</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p>قال أبو القاسم الشابي هذه القصيدة في شهر أفريل من سنة 1934، وفي هذه السنة عاشت البلاد التونسية أحداثاً هامّة تمثّلت في بروز جيل من الوطنيين يختلف عن سابقه في الرؤية، ويدعو إلى اتّباع طرق جديدة في العمل السياسي. وقد خلت القصيدة من الذكر الصريح لهذه الأحداث، لأنّ دَيْدَنَ الشاعر الأصيل أن يغوص في أعماق التجربة الإنسانية ليستخلص أصولها العامة، لا أن يقف عند حدود ظواهرها العارضة.</p>
+                    <p><em>ملاحظة: التعليق على الصورة – لوحة «الحرب» لغرومار 1925.</em></p>
+                </div>
+            </div>
+            
+            <!-- Poem Text -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">نص القصيدة</h3>
+                <div class="ArabicH-poem-text">
+                    <!-- Line 1 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">أَلَا أَيُّهَا الظَّالِمُ الْمُسْتَبِدُّ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">حَبِيبُ الظَّلَامِ، عَدُوُّ الْحَيَاهْ</span>
+                    </div>
+                    <!-- Line 2 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">سَخِرْتَ بِأَنَّاتِ شَعْبٍ ضَعِيفٍ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَكَفُّكَ مَخْضُوبَةٌ مِنْ دِمَاهْ</span>
+                    </div>
+                    <!-- Line 3 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَسِرْتَ تُشَوِّهُ سِحْرَ الْوُجُودِ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَتَبْذُرُ شَوْكَ الْأَسَى فِي رُبَاهْ</span>
+                    </div>
+                    <div class="ArabicH-poem-separator"></div>
+                    <!-- Line 4 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">رُوَيْدَكَ لَا يَخْدَعَنْكَ الرَّبِيعُ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَصَحْوُ الْفَضَاءِ، وَضَوْءُ الصَّبَاحْ</span>
+                    </div>
+                    <!-- Line 5 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">فَفِي الْأُفُقِ الرَّحْبِ هَوْلُ الظَّلَامِ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَقَصْفُ الرُّعُودِ، وَعَصْفُ الرِّيَاحْ</span>
+                    </div>
+                    <!-- Line 6 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">حَذَارِ! فَتَحْتَ الرَّمَادِ اللَّهِيبُ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَمَنْ يَبْذُرِ الشَّوْكَ يَجْنِ الْجِرَاحْ</span>
+                    </div>
+                    <div class="ArabicH-poem-separator"></div>
+                    <!-- Line 7 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">تَأَمَّلْ هُنَالِكَ... أَنَّى حَصَدْتَ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">رُؤُوسَ الْوَرَى، وَزُهُورَ الْأَمَلْ</span>
+                    </div>
+                    <!-- Line 8 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَرَوَّيْتَ بِالدَّمِ قَلْبَ التُّرَابِ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَأَشْرَبْتَهُ الدَّمْعَ حَتَّى ثَمِلْ</span>
+                    </div>
+                    <!-- Line 9 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">سَيَجْرُفُكَ السَّيْلُ، سَيْلُ الدِّمَاءِ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَيَأْكُلُكَ الْعَاصِفُ الْمُشْتَعِلْ</span>
+                    </div>
+                </div>
+                <div class="ArabicH-exercise-content" style="text-align: center; margin-top: 15px; color: var(--secondary-color); font-style: italic;">
+                    <strong>البحر:</strong> المتقارب | <strong>المصدر:</strong> أبو القاسم الشابي، الأعمال الكاملة، الدار التونسية للنشر 1984، الجزء الأول، ص 260-261
+                </div>
+            </div>
+            
+            <!-- Author Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">تقديم الشاعر</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p><strong>أبو القاسم الشابي</strong> (1909-1934م)، شاعر تونسي من مواليد منطقة توزر بالجريد التونسي. بدأ كتابة الشعر في سن مبكرة، واشتهر بديوانه "أغاني الحياة"، وله آثار أخرى مثل كتاب "الخيال الشعري عند العرب" و"مذكرات الشابي". يُعدّ من أبرز رواد الشعر العربي الحديث ودعاة التجديد فيه، وقد حرّر الشعر من مفهوم الغرضية التقليدية وضمّنه مضامين وطنية وإنسانية جديدة. توفي شاباً في السادسة والعشرين، لكن شعره بقي خالداً في وجدان التونسيين والعرب.</p>
+                </div>
+            </div>
+            
+            <!-- Vocabulary -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">شرح المفردات</h3>
+                <div class="ArabicH-table-container">
+                    <table class="ArabicH-vocab-table">
+                        <thead>
+                            <tr>
+                                <th width="30%">المفردة</th>
+                                <th width="70%">الشرح</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>مَخْضُوبَة</strong></td><td>ملوّنة بالأحمر، وعادة ما يكون الاختضاب بالحنّاء</td></tr>
+                            <tr><td><strong>الوَرَى</strong></td><td>النّاس، الخلق</td></tr>
+                            <tr><td><strong>ثَمِل</strong></td><td>ارتوى حتى سكر (من الشراب)</td></tr>
+                            <tr><td><strong>رُوَيْدَكَ</strong></td><td>اسم فعل بمعنى تمهّلْ وتأنَّ</td></tr>
+                            <tr><td><strong>حَذَارِ</strong></td><td>اسم فعل بمعنى احذَرْ</td></tr>
+                            <tr><td><strong>عَصْف</strong></td><td>شدة الريح وسرعة جريها</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Comprehension Questions -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أفهم</h3>
+                
+                <!-- Q1 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- قسّم القصيدة إلى مقاطع وعلّل تقسيمك.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer1" class="ArabicH-answer">
+                        <p><strong>التقسيم الأمثل: تقسيم ثلاثي وفق معيار الزمن (الماضي – الحاضر – المستقبل):</strong></p>
+                        <ul>
+                            <li><strong>المقطع الأول (الأبيات 1-3): "الماضي – جرائم المستعمر".</strong> يكشف فيه الشاعر عن وجه المستعمر الحقيقي وصفاته وأفعاله المدمرة.</li>
+                            <li><strong>المقطع الثاني (الأبيات 4-6): "الحاضر – التربص والتحذير".</strong> يحذّر فيه الشاعر المستعمر من الانخداع بالهدوء الظاهر، ويُنبّهه إلى الثورة الكامنة.</li>
+                            <li><strong>المقطع الثالث (الأبيات 7-9): "المستقبل – الحساب والانتقام".</strong> يعلن فيه الشاعر مصير المستعمر: السيل الجارف والعاصف المشتعل.</li>
+                        </ul>
+                        <p><strong>التعليل:</strong> هذا التقسيم يُظهر تطوّر خطاب الشاعر من الفضيحة إلى التحذير إلى التهديد، ويُبرز حتمية الثورة والانتقام. وهو يتناسب مع طبيعة القصيدة التصاعدية.</p>
+                        <p><strong>ويمكن أيضاً التقسيم وفق معيار الصور:</strong> صورة المستعمر (1-3، 7-8)، وصورة الشعب (4-6، 9). لكن التقسيم الزمني أكثر وضوحاً وانسجاماً مع تطور الفكر في القصيدة.</p>
+                    </div>
+                </div>
+                
+                <!-- Q2 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- يشنّع الشاعر في المقطع الأول الظالم المستبدّ، ما الأسباب التي دعته إلى هذا الموقف؟ وما الأساليب التي وظّفها في ذلك؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer2" class="ArabicH-answer">
+                        <p><strong>الأسباب التي دعت الشاعر إلى هذا الموقف:</strong></p>
+                        <ul>
+                            <li><strong>جرائم المستعمر:</strong> فهو يسخر من أنّات الشعب الضعيف، ويداه مخضوبتان بدمائه.</li>
+                            <li><strong>تشويهه لجمال الوجود:</strong> فيُفسد سحر الكون وينشر فيه الأحزان والهموم.</li>
+                            <li><strong>استعباده للشعوب:</strong> فيحرمها من الحرية والكرامة الإنسانية.</li>
+                            <li><strong>انحرافه الأخلاقي:</strong> فهو "حبيب الظلام، عدوّ الحياة"، أي أنه ينحاز إلى الظلم والموت لا إلى النور والحياة.</li>
+                        </ul>
+                        <p><strong>الأساليب التي وظّفها:</strong></p>
+                        <ul>
+                            <li><strong>النداء:</strong> "ألا أيها الظالم المستبد" – لتوجيه الخطاب المباشر إلى المستعمر.</li>
+                            <li><strong>الطباق:</strong> "حبيب الظلام، عدوّ الحياة" – للمقابلة بين الظلام والحياة، وتأكيد انحرافه الكامل.</li>
+                            <li><strong>الأفعال المسندة إليه:</strong> سخرت، تشوه، تبذر، رويت – لتعداد جرائمه.</li>
+                            <li><strong>الصور الحسية:</strong> "كفّك مخضوبة من دماه" – صورة بصرية مؤثرة لجرائمه.</li>
+                            <li><strong>الاستعارة:</strong> "تبذر شوك الأسى في رباه" – تصوير نشر الأحزان بالزرع. </li>
+                            <li><strong>التصريع:</strong> في البيت الأول (الحياه/رباه/دماه) – لإحداث وقع موسيقي.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Q3 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">3- ما هي الرموز التي استعملها الشاعر للتعبير عمّا توعّد به كل ظالم مستبدّ؟ وما دلالة كل رمز؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer3" class="ArabicH-answer">
+                        <table class="ArabicH-vocab-table">
+                            <thead>
+                                <tr>
+                                    <th>الرمز</th>
+                                    <th>الموضع</th>
+                                    <th>الدلالة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>الربيع وصحو الفضاء وضوء الصباح</strong></td>
+                                    <td>البيت 4</td>
+                                    <td>الهدوء الظاهر والاستكانة التي قد تخدع المستعمر</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>هول الظلام وقصف الرعود وعصف الرياح</strong></td>
+                                    <td>البيت 5</td>
+                                    <td>قوة الشعب الثورية القادمة والعواصف الداهمة</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>اللهيب تحت الرماد</strong></td>
+                                    <td>البيت 6</td>
+                                    <td>الثورة الكامنة تحت الهدوء، والأمل المحفوظ تحت الصبر</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الشوك والجراح</strong></td>
+                                    <td>البيت 6</td>
+                                    <td>عاقبة الظلم: من يزرع الشرّ يحصد الأذى</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>السيل وسيل الدماء</strong></td>
+                                    <td>البيت 9</td>
+                                    <td>الثورة الجارفة التي لا تُوقف</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>العاصف المشتعل</strong></td>
+                                    <td>البيت 9</td>
+                                    <td>الغضب الشعبي الذي يحرق المستعمر</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>وهذه الرموز مستمدّة كلها من الطبيعة، وهي رمزية وحسية في آن واحد، مما يجعل التهديد أكثر إقناعاً وحضوراً في الوجدان.</p>
+                    </div>
+                </div>
+                
+                <!-- Q4 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">4- كيف عبّر الشاعر في المقطع الثالث عن وحشيّة المستعمر؟ وما هو المصير الذي توعّده به؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer4" class="ArabicH-answer">
+                        <p><strong>التعبير عن وحشية المستعمر:</strong></p>
+                        <ul>
+                            <li><strong>حصد رؤوس الورى:</strong> صورة مُروّعة للقتل الجماعي، وكأنه يحصد الناس كما يحصد الزرع.</li>
+                            <li><strong>حصد زهور الأمل:</strong> أي قتل الأمل في القلوب مع قتل الأجساد، فوحشيته مزدوجة: مادية ومعنوية.</li>
+                            <li><strong>روّى بالدم قلب التراب:</strong> صورة مؤثرة تُظهر كثرة الدماء المسفوكة، حتى صار التراب يشرب من الدم.</li>
+                            <li><strong>أشربته الدمع حتى ثمل:</strong> تجسيد لمعاناة الشعب، حتى صار التراب نفسه "ثملاً" من الدموع.</li>
+                        </ul>
+                        <p><strong>المصير الذي توعده به:</strong></p>
+                        <ul>
+                            <li><strong>"سيجرفك السيل، سيل الدماء":</strong> مصير حتمي؛ فالثورة آتية، وهي كالسيل الجارف الذي لا يُوقف.</li>
+                            <li><strong>"ويأكلك العاصف المشتعل":</strong> الغضب الشعبي سيحرق المستعمر كما تحرق النار.</li>
+                        </ul>
+                        <p>وهكذا يُقيم الشاعر توازناً فنياً بين عرض الجريمة (حصد، روّى، أشرب) وعرض العقوبة (سيجرفك، يأكلك)، فيُصبح المصير نتيجةً منطقيةً للجريمة، لا انتقاماً عشوائياً.</p>
+                    </div>
+                </div>
+                
+                <!-- Q5 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">5- يبدو الشاعر واثقاً بنفسه في خطابه متحمّساً لما يراه حقاً. استخرج الأساليب الدالّة على ذلك واستخلص منها بعض ملامح الشاعر الملتزم.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer5')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer5" class="ArabicH-answer">
+                        <p><strong>الأساليب الدالة على الثقة والحماسة:</strong></p>
+                        <ul>
+                            <li><strong>النداء المباشر:</strong> "ألا أيها الظالم المستبد" – خطاب مباشر بلا تردد أو مواربة.</li>
+                            <li><strong>أساليب التحذير والتنبيه:</strong> "رويدك"، "حذار"، "تأمّل" – لغة حازمة تنم عن ثقة في الحق.</li>
+                            <li><strong>سين الاستقبال:</strong> "سيجرفك السيل"، "ويأكلُك العاصف" – تأكيد حتمية المصير.</li>
+                            <li><strong>التوكيد:</strong> "إنّ" في عبارات متعددة، والطباق بين الهدوء والعاصفة.</li>
+                            <li><strong>الأفعال المسندة للمستعمر بصيغة المخاطب:</strong> "سخرت"، "سرت"، "حصدت"، "روّيت"، "أشربت" – محاكمته أمام ضميره.</li>
+                            <li><strong>التراكيب الشرطية:</strong> "ومن يبذر الشوك يجنِ الجراح" – إقرار قانون عادل.</li>
+                            <li><strong>التصريع والإيقاع المتقاربي:</strong> الذي يُولّد حماسةً جماعية.</li>
+                        </ul>
+                        <p><strong>ملامح الشاعر الملتزم المستخلصة:</strong></p>
+                        <ul>
+                            <li><strong>الجرأة في مواجهة السلطة:</strong> لا يخاف من مخاطبة الطغاة بكلمات صريحة.</li>
+                            <li><strong>الانحياز المطلق للشعب:</strong> فالشعب هو محور خطابه وهمّه.</li>
+                            <li><strong>الإيمان بحتمية الثورة:</strong> يرى أن الظلم لا يدوم، وأن الانتصار للشعب قادم.</li>
+                            <li><strong>الوظيفة التحريضية للشعر:</strong> فالقصيدة ليست ترفاً فنياً، بل سلاح لتحفيز الشعب على النضال.</li>
+                            <li><strong>البعد الإنساني:</strong> خطابه موجّه إلى كل طغاة العالم لا إلى مستعمر تونس فقط.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Q6 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">6- استخلص من النص المعاني الوطنية والإنسانية.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer6')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer6" class="ArabicH-answer">
+                        <p><strong>المعاني الوطنية:</strong></p>
+                        <ul>
+                            <li><strong>فضح المستعمر:</strong> كشف جرائمه ضد الشعب التونسي (القتل، الاستعباد، النهب).</li>
+                            <li><strong>تبشير الشعب بالثورة:</strong> الإعلان بأن النصر قادم وأن الاستعمار زائل.</li>
+                            <li><strong>الدعوة إلى النضال:</strong> تحريض الشعب على الثورة والتحرر.</li>
+                            <li><strong>الثقة في الشعب:</strong> فالشعب هو البطل الحقيقي في القصيدة، وهو من سيُسقط المستعمر.</li>
+                        </ul>
+                        <p><strong>المعاني الإنسانية:</strong></p>
+                        <ul>
+                            <li><strong>الدفاع عن حقوق الإنسان:</strong> فالقصيدة تنطلق من قيمة الإنسان وكرامته.</li>
+                            <li><strong>رفض الظلم أينما كان:</strong> خطاب موجّه "إلى طغاة العالم" لا إلى مستعمر بعينه.</li>
+                            <li><strong>الإيمان بالعدالة الكونية:</strong> "من يبذر الشوك يجنِ الجراح" – قانون أخلاقي عام.</li>
+                            <li><strong>الانتصار للحياة على الموت:</strong> فالمستعمر "عدوّ الحياة"، والشعب هو صاحب الحياة.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Discussion -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أناقش</h3>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">■ هل يمكن لمثل هذه القصيدة أن تؤثّر في الظالم وأن تردّه عن ظلمه؟ علّل جوابك.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer7')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer7" class="ArabicH-answer">
+                        <p>يمكن النظر إلى السؤال من زاويتين:</p>
+                        <p><strong>الزاوية الأولى: نعم، يمكن أن تؤثر</strong>، لأن الكلمة قادرة على اختراق الوعي حتى عند الظالم. فالقصيدة تُعري جرائمه أمام ضميره، وتُذكّره بأن التاريخ لا يرحم، وأن الشعوب لا تنسى. وقد أثبت التاريخ أن بعض الطغاة تراجعوا عن قرارات بسبب كلمات صادقة، أو تأثروا بضغط الرأي العام الذي تُشكّله الكلمات.</p>
+                        <p><strong>الزاوية الثانية: في الغالب لا تؤثر مباشرة</strong>، لأن الظالم لا يُغيّر سلوكه بكلمة، بل بالقوة المضادة. فالمستعمر لا يردّه شعر عن ظلمه، ما دام يملك القوة العسكرية. لذلك فالقصيدة لا تُخاطب الظالم في المقام الأول، بل تُخاطب الشعب نفسه: تُحرّضه وتوحّد صفوفه وتُعلي معنوياته.</p>
+                        <p><strong>موقفي:</strong> إن تأثير القصيدة الحقيقي ليس في إقناع الظالم، بل في إيقاظ الشعب. فهي وسيلة من وسائل النضال الثقافي الذي يُكمل النضال السياسي والعسكري. وأثرها تراكمي طويل المدى: تُشكّل الوعي الجماعي، وتُحضّر النفوس للثورة، وتخلّد الذاكرة الوطنية.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">■ بعد قراءتك هذه القصيدة وقصيدة "يا ابن أمي" من تراه المسؤول عن تخلّف التونسي في الثلث الأول من القرن العشرين: ضعف الشعب؟ أم بطش المستعمر؟ أم غير ذلك؟ علّل جوابك.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer8')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer8" class="ArabicH-answer">
+                        <p>المسؤولية في نظري <strong>مزدوجة ومتشابكة</strong>، لا ترجع إلى عامل واحد:</p>
+                        <ul>
+                            <li><strong>بطش المستعمر:</strong> لا شك أن المستعمر هو السبب الخارجي المباشر؛ فهو الذي احتل البلاد، ونهب الثروات، وأجهض حركات الإصلاح، وسجن الوطنيين. وقد فضحت قصيدة "إلى طغاة العالم" هذه الجرائم.</li>
+                            <li><strong>ضعف الشعب:</strong> لا يمكن تحميل المسؤولية للمستعمر وحده. فالشعب كان يعيش في حالة استكانة وتشرذم وانخداع بالهدوء الظاهر، كما صوّرته قصيدة "يا ابن أمي" ("فما لك ترضى بذل القيود").</li>
+                            <li><strong>عوامل أخرى:</strong> الجهل والأمية التي فرضها المستعمر، وضعف التعليم، وتخاذل النخب، وتشتت الحركة الوطنية في بداياتها.</li>
+                        </ul>
+                        <p><strong>موقفي:</strong> المسؤولية مشتركة، لكن بنسب متفاوتة. فالمستعمر هو المحتل المعتدي، وهو المسؤول الأول عن الوضع المأساوي. لكن الشعب يتحمل مسؤولية استكنانه وتخلّفه عن النهوض. ولعل هذا ما يفسّر لماذا كانت قصائد الشابي تحمل بُعدين متكاملين: فضح المستعمر (كما في هذه القصيدة)، واستنهاض الشعب (كما في "يا ابن أمي"). فلا تحرر بلا وعي، ولا وعي بلا نضال.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">■ قامت القصيدة على صراع بين "أنا" و"أنت": بين شاعر يتزعّم شعبه ومستعمر يقود جيشه، بين من سلاحه الكلمة ومن سلاحه من نار، فإلى من تؤول الغلبة في نظرك؟ لماذا؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer9')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer9" class="ArabicH-answer">
+                        <p>الغلبة في نظري <strong>للكلمة</strong>، لأسباب عدة:</p>
+                        <ul>
+                            <li><strong>الكلمة تصنع الوعي:</strong> والنار لا تصنع إلا الرماد. فالكلمة تُحرّك الشعوب، وتُوحّد الصفوف، وتُخلّد الذاكرة.</li>
+                            <li><strong>الكلمة تبقى والنار تفنى:</strong> فالمستعمر يزول بزوال قوته، لكن قصيدة الشابي ما زالت تُرَدّد إلى اليوم.</li>
+                            <li><strong>الكلمة أقوى من الجيش:</strong> فالجيش يحتل الأرض، لكن الكلمة تحرّر الإنسان. والتحرر الحقيقي يبدأ من الداخل قبل الخارج.</li>
+                            <li><strong>الكلمة تُخلّد صاحبها:</strong> فالشابي مات شاباً، لكن اسمه حيّ في كل بيت تونسي، بينما أسماء المستعمرين نُسِيت.</li>
+                        </ul>
+                        <p>لكن، من باب الإنصاف، أرى أن <strong>الكلمة وحدها لا تكفي</strong>؛ فهي تُحرّك الوعي، لكنها تحتاج إلى فعل سياسي ونضال جماعي. فالكلمة تفتح الطريق، والجيش الشعبي يسلكه. لذا فالغلبة النهائية ليست للكلمة بمعزل عن الفعل، ولا للسلاح بمعزل عن الوعي، بل للتفاعل بينهما: <strong>وعيٌ بالكلمة، ونضالٌ بالفعل، وذاكرةٌ حيّةٌ تُخلّد التجربة</strong>.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Writing -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أحرر</h3>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- حرّر رسالة توجّهها إلى مسؤول سياسي في بلد يحتلّ جيشه بلداً آخر، تبصّره فيها بأنّ ما يفعله منافٍ لحقوق الشعوب وللإنسانية عامة.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer10')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer10" class="ArabicH-answer">
+                        <p><strong>نموذج الرسالة:</strong></p>
+                        <p>سيادة الرئيس،</p>
+                        <p>أكتب إليك اليوم لا بلسان العداء، بل بلسان الإنسانية التي تجمعنا جميعاً. لقد بلغني أن جيشكم يحتلّ أرض شعب أعزل، ويسلب أهله حقهم في تقرير مصيرهم، ويقيم فوق أرضهم سجوناً وقواعد عسكرية، وكأنه يعيش في زمن الاستعمار الذي ظننّا أن البشرية تجاوزته.</p>
+                        <p>إنّ ما تفعله بلادكم منافٍ لكل المواثيق الدولية لحقوق الإنسان، ومخالفٌ لمبدأ حق الشعوب في تقرير المصير، وهو مبدأ أقرّته الأمم المتحدة. كما أنه يخالف الفطرة الإنسانية التي ترفض احتلال أرض الغير واستعباد شعبه.</p>
+                        <p>إنّ التاريخ يشهد بأن الاحتلال إلى زوال، وأن الشعوب لا تُهزم، وأن العدالة وإن تأخرت لا تموت. فارجع بجيشك إلى حدودك، واعترف بحق الشعب المحتل في الحرية والاستقلال، فذلك خير لك من أن تدخل التاريخ من بوابة الطغاة الذين لا يرحمهم الزمن.</p>
+                        <p>وتفضلوا بقبول فائق الاحترام،<br>صوت من أصوات الإنسانية الحرة.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- ائتِ بحجج إضافية تسند بها ما قاله الشابي لكي يكون كلامه أكثر تأثيراً في المستعمر. استفد في هذا ممّا درست في مادة التاريخ.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer11')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer11" class="ArabicH-answer">
+                        <p><strong>حجج تاريخية تدعم كلام الشابي:</strong></p>
+                        <ul>
+                            <li><strong>حجة تجربة التاريخ:</strong> كل الاستعمارات انتهت: الفرنسي في الجزائر وتونس والمغرب، والبريطاني في الهند ومصر، والبرتغالي في أنغولا وموزمبيق، والإيطالي في ليبيا. فالمستعمر يزول والشعب يبقى.</li>
+                            <li><strong>حجة التكلفة الاقتصادية:</strong> فالاحتلال يستنزف خزينة المستعمر: نفقات الجيش، وإدارة الأراضي، ومواجهة المقاومة. وقد أثبت التاريخ أن الاستعمار كان عبئاً اقتصادياً كبيراً على دوله، حتى قال بعض المؤرخين إنه "خسارة أكثر مما هو مكسب".</li>
+                            <li><strong>حجة العزلة الدولية:</strong> فالمجتمع الدولي، منذ تأسيس الأمم المتحدة، يرفض الاحتلال ويدعو إلى إنهاء الاستعمار. فالمستعمر اليوم يعيش في عزلة ديبلوماسية.</li>
+                            <li><strong>حجة الثورة الجزائرية:</strong> أثبتت الجزائر أن الشعب المسلح بإرادته يستطيع أن يهزم أعتى الاستعمارات، بعد كفاح طويل وثمن باهظ، فاستقلت في 1962 بعد 132 سنة من الاحتلال الفرنسي.</li>
+                            <li><strong>حجة الثورة التونسية:</strong> استقلت تونس في 1956 بعد نضال وطني طويل، رغم أن الشابي لم يعش ليشهد الاستقلال، فإن قصائده كانت من بواكير الوعي الذي أفضى إليه.</li>
+                            <li><strong>حجة المبدأ الأخلاقي:</strong> فالاحتلال يخالف مبدأ المساواة بين الشعوب الذي أقرّته المواثيق الدولية.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">3- هل تجد في لوحة "قويا" أو "غرومار" ما يجسّم كلام الشاعر في هذه القصيدة؟ وضّح جوابك.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer12')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer12" class="ArabicH-answer">
+                        <p><strong>نعم، أجد تجسيداً واضحاً لكلام الشاعر في كلتا اللوحتين:</strong></p>
+                        <ul>
+                            <li><strong>لوحة "قويا":</strong> تُظهر جسداً فتياً يرفع ذراعه بقوة نحو السماء، في وضعية المنتصر أو المتحدّي. وتُجسّد هذه الصورة ما يبشّر به الشابي من انتصار الشعب على المستعمر ("سيجرفك السيل، سيل الدماء / ويأكلك العاصف المشتعل"). فالقوة التي تُشعّ من الجسد في اللوحة هي نفسها القوة التي يُنبئ بها الشابي في القصيدة.</li>
+                            <li><strong>لوحة "غرومار" (الحرب):</strong> تُظهر مشاهد الدمار والقتل والدماء، وهي تصوير بصري لما فضحه الشابي في المقطع الأول: "كفّك مخضوبة من دماه"، "روّيت بالدم قلب التراب". فاللوحة تُجسّد وحشية المستعمر كما وصفها الشاعر.</li>
+                        </ul>
+                        <p>وهكذا تتكامل اللوحتان مع النص: الأولى تُبشّر بالثورة القادمة، والثانية تُعري جرائم الماضي. فيتحقق بذلك التكامل بين الكلمة والصورة، ويُصبح الخطاب الفني أكثر تأثيراً في المتلقي.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Context -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">بمناسبة هذا النص</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">البحث</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>كوّن ملفاً يحوي معلومات عن أدباء ومفكّرين عرب وأجانب ناصروا قضايا الحق والعدل وأثّروا في بعض حوادث التاريخ.</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer13')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer13" class="ArabicH-answer">
+                            <p>من أبرز الأدباء والمفكرين الذين ناصروا قضايا الحق والعدل:</p>
+                            <ul>
+                                <li><strong>عربياً:</strong>
+                                    <ul>
+                                        <li>أبو القاسم الشابي (تونس): شاعر الحرية والكرامة.</li>
+                                        <li>محمود درويش (فلسطين): صوت المقاومة في الشعر.</li>
+                                        <li>غسان كنفاني (فلسطين): روائي المقاومة.</li>
+                                        <li>مالك بن نبي (الجزائر): مفكر الإصلاح والنهضة.</li>
+                                        <li>طه حسين (مصر): رائد التنوير والإصلاح.</li>
+                                        <li>جبران خليل جبران (لبنان): صوت التحرر الروحي.</li>
+                                        <li>مفدي زكريا (الجزائر): شاعر الثورة الجزائرية.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>أجنبياً:</strong>
+                                    <ul>
+                                        <li>فيكتور هوغو (فرنسا): نادى بإلغاء عقوبة الإعدام ودافع عن الفقراء (البؤساء).</li>
+                                        <li>إميل زولا (فرنسا): دافع عن الضابط دريفوس في قضية عادلة (J'accuse).</li>
+                                        <li>جون جاك روسو (سويسرا/فرنسا): صاحب "الميثاق الاجتماعي".</li>
+                                        <li>فولتير (فرنسا): دافع عن حرية التعبير والعدالة.</li>
+                                        <li>نيلسون مانديلا (جنوب إفريقيا): رمز النضال ضد الفصل العنصري.</li>
+                                        <li>المهاتما غاندي (الهند): رمز المقاومة السلمية.</li>
+                                        <li>مارتن لوثر كينغ (أمريكا): نصير الحقوق المدنية.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p>وقد أثّر هؤلاء في أحداث تاريخية كبرى: من إلغاء العقوبات الظالمة، إلى الاستقلال، إلى نبذ العنصرية، إلى تدعيم الحرية والديمقراطية. وهذا يُثبت أن الكلمة قادرة على تغيير العالم حين تُوظَّف في خدمة الحق.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الحقل المعجمي</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>ابحث في النص عن الكلمات التي تنتمي إلى مجال "العنف".</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer14')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer14" class="ArabicH-answer">
+                            <p>من النص نجد الكلمات الآتية تنتمي إلى حقل العنف:</p>
+                            <ul>
+                                <li><strong>الظالم</strong></li>
+                                <li><strong>المستبد</strong></li>
+                                <li><strong>مخضوبة (من الدماء)</strong></li>
+                                <li><strong>سخرت (بأنّات شعب)</strong></li>
+                                <li><strong>تشوّه</strong></li>
+                                <li><strong>تبذر (شوك الأسى)</strong></li>
+                                <li><strong>هول الظلام</strong></li>
+                                <li><strong>قصف الرعود</strong></li>
+                                <li><strong>عصف الرياح</strong></li>
+                                <li><strong>اللهيب</strong></li>
+                                <li><strong>حصدت (رؤوس الورى)</strong></li>
+                                <li><strong>روّيت بالدم</strong></li>
+                                <li><strong>أشربته الدمع حتى ثمل</strong></li>
+                                <li><strong>السيل (سيل الدماء)</strong></li>
+                                <li><strong>العاصف المشتعل</strong></li>
+                                <li><strong>الجراح</strong></li>
+                            </ul>
+                            <p>وهذه المفردات تُشكّل شبكة دلالية متماسكة تُصوّر العنف في مستوييه: عنف المستعمر (سخرت، تشوه، حصدت، روّيت)، وعنف الثورة المضادة (السيل، العاصف، اللهيب).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المعجم</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>اشرح العبارات التي استهلّ بها الشاعر أقسام خطابه الموجّه إلى الظالم: "ألا" "رويدك" "حذار" "تأمّل" وبيّن صلة معانيها بمعنى المضارع في آخر بيت من الخطاب.</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer15')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer15" class="ArabicH-answer">
+                            <table class="ArabicH-vocab-table">
+                                <thead>
+                                    <tr>
+                                        <th>العبارة</th>
+                                        <th>المعنى</th>
+                                        <th>وظيفتها</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>ألا</strong></td>
+                                        <td>حرف استفتاح وتنبيه</td>
+                                        <td>تُنبّه المستمع وتجذب انتباهه قبل بدء الخطاب</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>رويدك</strong></td>
+                                        <td>اسم فعل بمعنى تمهّلْ وتأنَّ</td>
+                                        <td>تأمر الظالم بالتريّث وعدم الاستمرار في الغرور</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>حذار</strong></td>
+                                        <td>اسم فعل بمعنى احذَرْ</td>
+                                        <td>تُنذر الظالم بالخطر القادم</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>تأمّل</strong></td>
+                                        <td>فعل أمر بمعنى انظر بعين الاعتبار</td>
+                                        <td>تدعو الظالم إلى مراجعة أفعاله وعواقبها</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p><strong>صلتها بالمضارع في آخر بيت من الخطاب ("سيجرفك السيل... ويأكلك العاصف"):</strong></p>
+                            <p>العبارات الأربع ("ألا، رويدك، حذار، تأمّل") كلها تمهيدات للتحذير القادم، أي أنها تُعدّ ذهن المستمع لاستقبال الرسالة النهائية: "سيجرفك السيل...". فالتنبيه والتحذير والتأمل كلها تؤدي إلى نتيجة واحدة هي الإعلان عن المصير المحتوم. والسين في "سيجرفك" و"يأكلك" تُفيد الاستقبال، أي أن ما تُنبّه إليه العبارات الأربع ليس تهديداً فارغاً، بل حقيقة آتية لا محالة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Know Section -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أعرف</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ومضة عروضية: البحر المتقارب</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>هذه القصيدة على <strong>البحر المتقارب</strong> (فعولن فعولن فعولن فعولن)، وهو بحر ذو إيقاع يناسب الشعر الحماسي.</p>
+                        <p><strong>السؤال:</strong> هل تعرف قصائد وطنية حماسية من المتقارب؟</p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer16')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer16" class="ArabicH-answer">
+                            <p>نعم، من القصائد الوطنية الحماسية التي نُظمت على بحر المتقارب:</p>
+                            <ul>
+                                <li><strong>"إذا الشعب يوماً أراد الحياة"</strong> للشابي نفسه – وقد وردت أبياتها الأولى في النشيد الوطني التونسي.</li>
+                                <li><strong>قصائد عديدة للشاعر الجزائري مفدي زكريا</strong> في الثورة الجزائرية.</li>
+                                <li><strong>"بلاد العرب أوطاني"</strong> – نشيد وحدوي، نُظم على إيقاع قريب من المتقارب.</li>
+                                <li><strong>قصائد أحمد شوقي الوطنية</strong> كقصيدته في "مصر" و"دمشق".</li>
+                            </ul>
+                            <p>وسبب اختيار المتقارب للشعر الحماسي أنه بحر سريع الإيقاع، سهل التقطيع، يتناسب مع الهتاف الجماعي والترديد في المناسبات الوطنية.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ومضة لغوية: أسماء الأفعال</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>أمثلة من النص:</strong></p>
+                        <ul>
+                            <li><strong>رويدك</strong> = اسم فعل بمعنى تمهّلْ.</li>
+                            <li><strong>حذار</strong> = اسم فعل بمعنى احذَرْ.</li>
+                        </ul>
+                        <p><strong>من أسماء الأفعال:</strong></p>
+                        <ul>
+                            <li><strong>شتّان</strong> = بمعنى بَعُدَ وعَظُمَ الفَرْقُ.</li>
+                            <li><strong>هيهات</strong> = بمعنى بَعُدَ.</li>
+                            <li><strong>صه</strong> = بمعنى اسكُتْ.</li>
+                            <li><strong>مه</strong> = بمعنى اكفُفْ.</li>
+                            <li><strong>عليك</strong> = بمعنى الزمْ.</li>
+                            <li><strong>دونك</strong> = بمعنى خُذْ.</li>
+                        </ul>
+                        <p><strong>القاعدة:</strong> اسم الفعل كلمة تدل على معنى الفعل، وتعطي حكمه، دون أن تقبل علاماته (لا تتصرف). وتنقسم إلى: أسماء أفعال ماضية (شتّان، هيهات)، وأسماء أفعال أمرية (رويد، حذار، صه، مه)، وأسماء أفعال مضارعة (وه، أف).</p>
+                        <p><strong>مناسبتها للمقام:</strong> تناسب أسماء الأفعال الأمرية مقام التحذير والإنذار، إذ تُعطي الخطاب قوة وحسماً وإيجازاً، فلا تحتاج إلى صيغة فعلية طويلة. فكلمة "حذار" أقوى وأوقع في النفس من "احذر"، لأنها تختزل التحذير في صوت واحد حاد.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ومضة بلاغية: الطباق والمقابلة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>1- "حبيب الظلام، عدوّ الحياة":</strong></p>
+                        <p>اللفظان "حبيب" و"عدوّ" متقابلان معنى، وهذا يُسمّى <strong>طباقاً</strong>. وهو طباق إيجاب (لأنه بين كلمتين متضادتين لا نفي في أحدهما).</p>
+                        <p><strong>2- "ضوء الصباح ≠ ظلام الليل":</strong></p>
+                        <p>كل لفظ في العبارة الأولى متقابل معنى مع لفظ في العبارة الثانية (ضوء/ظلام، الصباح/الليل)، وهذا يُسمّى <strong>مقابلة</strong>.</p>
+                        <p><strong>الفرق بين الطباق والمقابلة:</strong></p>
+                        <ul>
+                            <li><strong>الطباق:</strong> تقابل بين كلمتين فقط (حبيب/عدوّ).</li>
+                            <li><strong>المقابلة:</strong> تقابل بين عبارتين أو تراكيب كاملة، بحيث يُقابل كل لفظ في العبارة الأولى نظيره في الثانية.</li>
+                        </ul>
+                        <p><strong>وظيفتهما في النص:</strong> تُبرزان الصراع بين قطبين: المستعمر (الظلام، الموت) والشعب (النور، الحياة). وتُضفيان على النص توتراً دلالياً وإيقاعياً، وتجعلان الفكرة أوضح وأقوى في النفس.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Analysis Section -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">قسم التحليل: مباني ومضامين</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">التقديم والتأطير</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>قصيدة "إلى طغاة العالم" قصيدة وطنية ذات طابع إنساني، منتخبة من ديوان "أغاني الحياة" للشاعر التونسي المعاصر أبي القاسم الشابي. تندرج في <strong>المحور الثالث: الشعر الوطني</strong>. نُظمت في أفريل 1934، في سياق بروز جيل جديد من الوطنيين التونسيين يدعو إلى أساليب جديدة في العمل السياسي.</p>
+                        <p><strong>الموضوع:</strong> يفضح الشاعر المستعمر ويكشف جرائمه، متوعّداً إياه بثورة قريبة للشعب، على نحو يُبرز حتمية انتصار الشعوب على الطغاة.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الوحدات (المعيار: الزمن)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul>
+                            <li><strong>الماضي (الأبيات 1-3):</strong> جرائم المستعمر – فضيحة أفعاله.</li>
+                            <li><strong>الحاضر (الأبيات 4-6):</strong> التربّص والتحذير – لا تنخدع بالهدوء الظاهر.</li>
+                            <li><strong>المستقبل (الأبيات 7-9):</strong> الحساب والانتقام – المصير الحتمي.</li>
+                        </ul>
+                        <p>وقد اخترنا معيار الزمن لأنه يُظهر التصاعد الدرامي في القصيدة: من الفضيحة إلى التحذير إلى التهديد، ومن الماضي إلى الحاضر إلى المستقبل.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تحليل المقاطع</h4>
+                    <div class="ArabicH-exercise-content">
+                        <h5 style="color: var(--primary-color); margin: 15px 0 10px 0;">المقطع الأول: الماضي – فضيحة المستعمر (الأبيات 1-3)</h5>
+                        <p><strong>مقوماته:</strong></p>
+                        <ul>
+                            <li><strong>النداء المباشر:</strong> "ألا أيها الظالم المستبد" – مُحاكمة صريحة.</li>
+                            <li><strong>الطباق:</strong> "حبيب الظلام، عدوّ الحياة" – تحديد هوية المستعمر.</li>
+                            <li><strong>الأفعال المسندة إليه:</strong> سخرت، سرت، تشوّه، تبذر – تعداد الجرائم.</li>
+                            <li><strong>الصور الحسية:</strong> "كفّك مخضوبة من دماه" – صورة بصرية مُروّعة.</li>
+                            <li><strong>الاستعارة:</strong> "تبذر شوك الأسى في رباه" – تصوير نشر الأحزان بالزراعة.</li>
+                        </ul>
+                        <p><strong>الدلالات:</strong> يُقيم الشابي في هذا المقطع محاكمة صريحة للمستعمر، فيكشف عن وجهه الحقيقي: ظالم مستبد، يُحب الظلام ويعادي الحياة، ويسخر من آلام الشعب، ويداه مخضوبتان بدمائه. وكل هذه الصفات تُعرّي خطابه الاستعماري الذي كان يدّعي "التحضير" و"المدنية"، فتكشفه على حقيقته: مجرد قاتل يمتلئ قلبه سواداً.</p>
+                        
+                        <h5 style="color: var(--primary-color); margin: 20px 0 10px 0;">المقطع الثاني: الحاضر – التحذير والتربّص (الأبيات 4-6)</h5>
+                        <p><strong>مقوماته:</strong></p>
+                        <ul>
+                            <li><strong>اسم الفعل:</strong> "رويدك" – طلب التمهّل والتروي.</li>
+                            <li><strong>اسم الفعل:</strong> "حذار" – إنذار مُوجز قوي.</li>
+                            <li><strong>المعجم الطبيعي المتناقض:</strong> الربيع وصحو الفضاء وضوء الصباح (هدوء ظاهر) / هول الظلام وقصف الرعود وعصف الرياح (قوة قادمة).</li>
+                            <li><strong>الاستعارة:</strong> "فتحت الرماد اللهيب" – الثورة الكامنة تحت السكون.</li>
+                            <li><strong>الحكمة:</strong> "ومن يبذر الشوك يجنِ الجراح" – قانون عادل.</li>
+                        </ul>
+                        <p><strong>الدلالات:</strong> يحذّر الشابي المستعمر من الانخداع بالهدوء الظاهر، ويُذكّره بأن تحت هذا الهدوء ثورة كامنة، كما يُخفي الرمادُ اللهيبَ. فالشعب الذي يبدو مستكيناً هو في الحقيقة شعبٌ يُجمّع قواه وينتظر اللحظة المناسبة. وهكذا تتحوّل الطبيعة إلى رمز سياسي: الربيع والصباح = الاستسلام والخداع، والعاصفة واللهيب = الثورة القادمة. والحكمة الختامية تُغلق المقطع بقانون أخلاقي عام: من زرع الشرّ حصد الأذى.</p>
+                        
+                        <h5 style="color: var(--primary-color); margin: 20px 0 10px 0;">المقطع الثالث: المستقبل – الحساب والانتقام (الأبيات 7-9)</h5>
+                        <p><strong>مقوماته:</strong></p>
+                        <ul>
+                            <li><strong>الاستفهام التقريري:</strong> "أنّى حصدت رؤوس الورى وزهور الأمل" – تذكير بالجرائم.</li>
+                            <li><strong>الاستعارات:</strong> "روّيت بالدم قلب التراب"، "أشربته الدمع حتى ثمل" – تصوير معاناة الشعب.</li>
+                            <li><strong>سين الاستقبال:</strong> "سيجرفك السيل"، "ويأكلك العاصف" – تأكيد حتمية المصير.</li>
+                            <li><strong>التكرار:</strong> "السيل، سيل الدماء" – لتعميق الصورة وإبراز شدّة الجرف.</li>
+                            <li><strong>الطباق الخفي:</strong> بين الحياة (في المقطع السابق) والموت (في المقطع الحالي).</li>
+                        </ul>
+                        <p><strong>الدلالات:</strong> يبلغ الشابي في هذا المقطع ذروة التهديد، فيُعلن مصير المستعمر: سيلٌ من الدماء سيجرفه، وعاصفٌ مشتعل سيأكله. وهما صورتان مستمدّتان من الطبيعة، تُحيلان إلى الثورة الشعبية العارمة التي لا تُوقف. لكن اللافت هو أن الشابي يبني تهديده على منطق العدالة لا على منطق الانتقام: فقد زرع المستعمر الدم، فيحصد السيل، وأشرب التراب الدمع، فيأكل العاصف. فالعقوبة نتيجة طبيعية للجريمة، لا افتعالاً ولا تشفياً.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المبنى (الشكل)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ol>
+                            <li><strong>البناء العروضي:</strong> البحر المتقارب (فعولن فعولن فعولن فعولن)، بحر حماسي سريع الإيقاع، يُناسب التحذير والتهديد.</li>
+                            <li><strong>اللغة:</strong> فصيحة جزلة، فيها معجم طبيعي (الربيع، الظلام، الرعود، الرياح، السيل، العاصف) ومعجم عنفي (الظالم، المستبد، مخضوبة، تشوّه، حصدت، روّيت).</li>
+                            <li><strong>الصور الشعرية:</strong> حسية ورمزية، مستمدّة من الطبيعة ومُحمّلة بدلالات سياسية.</li>
+                            <li><strong>الأساليب:</strong> مزج بين الخبر والإنشاء (نداء، أمر، تحذير، استفهام).</li>
+                            <li><strong>البناء الفني:</strong> مقدمة (الفضيحة) – عرض (التحذير) – خاتمة (التهديد).</li>
+                            <li><strong>الطباق والمقابلة:</strong> لتأكيد الصراع بين المستعمر والشعب، بين الظلام والنور، بين الموت والحياة.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المضمون (المعنى)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ol>
+                            <li><strong>فضح المستعمر:</strong> كشف جرائمه ضد الشعب والإنسانية.</li>
+                            <li><strong>التحذير من الخداع:</strong> لا تنخدع بالهدوء الظاهر، فالثورة كامنة.</li>
+                            <li><strong>حتمية الثورة:</strong> لا يمكن للظلم أن يدوم، فالسيل الجارف قادم.</li>
+                            <li><strong>العدالة التاريخية:</strong> من زرع الشرّ حصد الأذى.</li>
+                            <li><strong>البعد الوطني:</strong> الانحياز المطلق للشعب التونسي ضد المستعمر الفرنسي.</li>
+                            <li><strong>البعد الإنساني:</strong> الخطاب موجّه "إلى طغاة العالم" كلهم، لا إلى مستعمر بعينه.</li>
+                            <li><strong>ربط الطبيعة بالسياسة:</strong> استخدام الرموز الطبيعية لتعبير سياسي عميق.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الخاتمة التحليلية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>تُجسّد قصيدة "إلى طغاة العالم" نموذجاً راقياً للشعر الوطني ذي البعد الإنساني. فالشابي لم يكتف بفضح المستعمر الفرنسي في تونس، بل رفع خطابه إلى مستوى الإنسانية، موجّهاً إياه إلى كل طاغية في التاريخ. وقد جمع النص بين:</p>
+                        <ul>
+                            <li><strong>الفضيحة:</strong> كشف جرائم المستعمر بلغة صريحة حادة.</li>
+                            <li><strong>التحذير:</strong> إنذار المستعمر بحتمية الثورة.</li>
+                            <li><strong>التبشير:</strong> الإعلان بأن النصر للشعب، وأن الظلم إلى زوال.</li>
+                            <li><strong>الرمزية:</strong> استخدام الطبيعة لتصوير الصراع السياسي.</li>
+                            <li><strong>العدالة:</strong> تأكيد أن العقوبة نتيجة طبيعية للجريمة.</li>
+                        </ul>
+                        <p>وهكذا تبقى القصيدة نصاً مفتوحاً على كل زمان ومكان، لأنها لم تتكلّم عن حادثة بعينها، بل عن الصراع الأزلي بين الطغاة والشعوب. وهذا ما يمنحها قيمتها الفنية والإنسانية الخالدة.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Writing Section -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">قسم التحرير: تحليل معمق لقصيدة "إلى طغاة العالم"</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تحليل قصيدة أبي القاسم الشابي</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>تُعدّ قصيدة "إلى طغاة العالم" واحدة من أشدّ قصائد الشابي لهجاً في مواجهة المستعمر، وأكثرها قدرة على تجاوز الحدث التونسي إلى قضية إنسانية شاملة. فالشابي كتبها في أفريل 1934، في سياق سياسي تونسي حافل ببروز جيل جديد من الوطنيين، لكنه لم يذكر هذه الأحداث بالاسم، لأنه أراد أن يغوص في جوهر التجربة الإنسانية، لا في ظواهرها العارضة. وهكذا صارت القصيدة خطاباً مفتوحاً إلى كل طاغية في التاريخ.</p>
+                        
+                        <p>يبدأ الشابي قصيدته بنداء حادّ صريح: "ألا أيها الظالم المستبد / حبيب الظلام، عدوّ الحياة". فالنداء مباشر لا مواربة فيه، ويُحدّد هوية المستعمر بدقة: ظالم مستبد، يحب الظلام ويعادي الحياة. والطباق بين "حبيب الظلام" و"عدوّ الحياة" يُبرز انحرافه الكامل، فليس بينه وبين النور والحياة نسب. ثم يتوالى تعداد جرائمه: "سخرت بأنّات شعب ضعيف / وكفّك مخضوبة من دماه"، و"سرت تشوّه سحر الوجود / وتبذر شوك الأسى في رباه". فالجرائم متعددة: السخرية من آلام الشعب، وسفك الدماء، وتشويه الجمال، ونشر الأحزان. وكلها تُكشف بلغة صريحة، لأن الشابي لا يريد أن يُجمّل صورة المستعمر، بل أن يفضحها على حقيقتها.</p>
+                        
+                        <p>ثم ينتقل الشابي إلى الحاضر، فيُحذّر المستعمر من الانخداع بالهدوء الظاهر: "رويدك لا يخدعنك الربيع / وصحو الفضاء وضوء الصباح". فالربيع والصباح هنا ليسا رمزين للجمال، بل رمزين للاستكانة والخداع. وتحت هذا الهدوء، "في الأفق الرحب هول الظلام / وقصف الرعود وعصف الرياح". ثم يأتي الإنذار المباشر: "حذار! فتحت الرماد اللهيب / ومن يبذر الشوك يجنِ الجراح". فالرماد يخفي اللهيب، كما يخفي الهدوء الثورة. والحكمة الختامية تُغلق المقطع بقانون أخلاقي عام: من زرع الشرّ حصد الأذى.</p>
+                        
+                        <p>وفي المقطع الثالث، يعلن الشابي مصير المستعمر: "تأمّل هنالك... أنّى حصدت / رؤوس الورى وزهور الأمل". فالفعل "حصدت" يُشير إلى القتل الجماعي، و"زهور الأمل" تُشير إلى قتل الطموحات. ثم: "وروّيت بالدم قلب التراب / وأشربته الدمع حتى ثمل". فالصورتان تُجسّدان حجم المعاناة. ثم تأتي الخاتمة المزلزلة: "سيجرفك السيل، سيل الدماء / ويأكلك العاصف المشتعل". وهما صورتان مستمدّتان من الطبيعة، تُعلنان أن الثورة آتية لا محالة، وأنها كالسيل الجارف والعاصف المحرق.</p>
+                        
+                        <p>ومن الناحية الفنية، تقوم القصيدة على <strong>البحر المتقارب</strong> بإيقاعه الحماسي المتدفق. ويُلاحظ أن الشابي يوظّف:</p>
+                        <ul>
+                            <li><strong>الطباق والمقابلة:</strong> (حبيب/عدوّ، الظلام/الحياة، الربيع/العاصف) لتأكيد الصراع بين قطبين.</li>
+                            <li><strong>أسماء الأفعال:</strong> (رويدك، حذار) لإعطاء الخطاب قوة وإيجازاً وحسماً.</li>
+                            <li><strong>الاستعارات الطبيعية:</strong> (السيل، العاصف، الرماد، اللهيب) لتحويل الصراع السياسي إلى صراع كوني.</li>
+                            <li><strong>الحكمة:</strong> (من يبذر الشوك يجنِ الجراح) لتحويل التهديد إلى قانون أخلاقي عام.</li>
+                            <li><strong>سين الاستقبال:</strong> (سيجرفك، يأكلك) لتأكيد حتمية المصير.</li>
+                        </ul>
+                        
+                        <p>وهكذا تبقى قصيدة "إلى طغاة العالم" نموذجاً راقياً للشعر الوطني ذي البعد الإنساني، تجمع بين الفضيحة والتحذير والتبشير، وبين الرمزية والوضوح، وبين الانحياز للشعب والانتصار للحق. إنها قصيدة تُذكّرنا بأن الشعر الحق هو الذي يُواجه الطغيان بكلمة صادقة، ويُبشّر الشعوب بحتمية انتصارها.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                    <span class="ArabicH-flower-decoration">✎</span> 
+                    <span class="ArabicH-flower-decoration">✍</span> 
+                    <span class="ArabicH-flower-decoration">✎</span>
+                </p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_1SY_literature_module3_lesson2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.previousLesson">الدرس السابق</a>
+                <a href="AH_1SY_literature_module4_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        window.translations_ArabicHLiteratureModule3Lesson3 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.literatureLesson.poemTitle": "قصيدة \"إلى طغاة العالم\" لأبي القاسم الشابي",
+                "ArabicH.literatureLesson.poemSubtitle": "الدرس الثالث: تحليل قصيدة من الشعر الوطني – فضح المستعمر وتبشير الشعب بالثورة",
+                "ArabicH.literatureLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.literatureLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.literatureLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.literatureLesson.previousLesson": "الدرس السابق",
+                "ArabicH.literatureLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.literatureLesson.poemTitle": "Poem: \"To the Tyrants of the World\" by Abou El Kacem Chebbi",
+                "ArabicH.literatureLesson.poemSubtitle": "Lesson 3: Analysis of National Poetry – Exposing the Colonizer and Announcing the People's Revolution",
+                "ArabicH.literatureLesson.showAnswer": "Show Answer",
+                "ArabicH.literatureLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.literatureLesson.backToHome": "Back to Homepage",
+                "ArabicH.literatureLesson.previousLesson": "Previous Lesson",
+                "ArabicH.literatureLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.literatureLesson.poemTitle": "Poème: \"Aux tyrans du monde\" d'Abou El Kacem Chebbi",
+                "ArabicH.literatureLesson.poemSubtitle": "Leçon 3: Analyse de la poésie nationale – Dénoncer le colonisateur et annoncer la révolution du peuple",
+                "ArabicH.literatureLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.literatureLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.literatureLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.literatureLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.literatureLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHLiteratureModule3Lesson3;
+    </script>
+    
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            const showText = button.getAttribute('data-i18n-show') || 'إظهار الإجابة';
+            const hideText = button.getAttribute('data-i18n-hide') || 'إخفاء الإجابة';
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = showText;
+            } else {
+                answer.style.display = "block";
+                button.textContent = hideText;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) { item.classList.add('active'); } else { item.classList.remove('active'); }
+            });
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => { button.setAttribute('data-i18n-value', button.textContent); });
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); themeToggle.checked = true; }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+                    else { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+                });
+            }
+        });
+    </script>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() { navigator.serviceWorker.register('/sw.js').then(r => console.log('SW registered')).catch(e => console.log('SW failed')); });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; if (manualInstallBtn) manualInstallBtn.style.display = 'flex'; });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') { manualInstallBtn.style.display = 'none'; deferredPrompt = null; }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

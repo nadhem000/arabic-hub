@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أدب: قصيدة "خشية ورجاء" لجميل بن معمر - الدرس الثاني | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#6a4c93">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="قصيدة خشية ورجاء">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Unique Purple-Mauve Theme for Literature Lesson */
+        :root {
+            --primary-color: #6a4c93;
+            --secondary-color: #8a6db8;
+            --accent-color: #a792d9;
+            --light-color: #f5f0ff;
+            --dark-color: #4a3c6a;
+            --text-color: #2c2541;
+            --heading-color: #1a1529;
+            --background-color: #f9f7ff;
+            --card-bg: #ffffff;
+            --definition-bg: #ece6ff;
+            --border-color: #d0c4e8;
+            --table-even-bg: #f5f0ff;
+            --table-hover-bg: #ece6ff;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(106, 76, 147, 0.12);
+            --gradient-primary: linear-gradient(135deg, #6a4c93 0%, #4a3c6a 100%);
+            --gradient-secondary: linear-gradient(135deg, #8a6db8 0%, #6a4c93 100%);
+            --gradient-accent: linear-gradient(135deg, #a792d9 0%, #8a6db8 100%);
+            --gradient-light: linear-gradient(135deg, #f5f0ff 0%, #ece6ff 100%);
+            --highlight-color: #c77d23;
+            --highlight-bg: rgba(199, 125, 35, 0.1);
+            --poetry-bg: rgba(106, 76, 147, 0.08);
+            --poetry-border: #8a6db8;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #8a6db8;
+            --secondary-color: #a792d9;
+            --accent-color: #c5b3e6;
+            --light-color: #4a3c6a;
+            --dark-color: #352a4e;
+            --text-color: #e8e2ff;
+            --heading-color: #f5f0ff;
+            --background-color: #352a4e;
+            --card-bg: #4a3c6a;
+            --definition-bg: #6a4c93;
+            --border-color: #8a6db8;
+            --table-even-bg: #4a3c6a;
+            --table-hover-bg: #6a4c93;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #8a6db8 0%, #6a4c93 100%);
+            --gradient-secondary: linear-gradient(135deg, #a792d9 0%, #8a6db8 100%);
+            --gradient-accent: linear-gradient(135deg, #c5b3e6 0%, #a792d9 100%);
+            --gradient-light: linear-gradient(135deg, #4a3c6a 0%, #352a4e 100%);
+            --highlight-color: #e9b04d;
+            --highlight-bg: rgba(233, 176, 77, 0.15);
+            --poetry-bg: rgba(138, 109, 184, 0.15);
+            --poetry-border: #a792d9;
+        }
+
+        .ArabicH-lesson-page { min-height: 100vh; background: var(--background-color); display: flex; flex-direction: column; }
+        .ArabicH-lesson-main { flex: 1; display: flex; flex-direction: column; padding: 2rem; max-width: 1200px; margin: 0 auto; width: 100%; }
+        .ArabicH-lesson-title { font-size: 2.5rem; margin-bottom: 1rem; color: var(--heading-color); text-align: center; font-weight: 700; }
+        .ArabicH-lesson-subtitle { font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-color); text-align: center; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+        .ArabicH-lesson-container { background: var(--card-bg); border-radius: var(--border-radius); box-shadow: var(--box-shadow); padding: 2.5rem; margin-bottom: 2rem; border-top: 6px solid var(--primary-color); }
+        .ArabicH-lesson-header { background: var(--gradient-primary); color: white; padding: 1.5rem; border-radius: var(--border-radius); margin-bottom: 2rem; text-align: center; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .ArabicH-lesson-teacher, .ArabicH-lesson-class { font-size: 1.1rem; font-weight: 600; background: rgba(255,255,255,0.15); padding: 8px 15px; border-radius: 20px; backdrop-filter: blur(5px); }
+        .ArabicH-lesson-content { margin: 30px 0; }
+        .ArabicH-exercise-card { background: var(--card-bg); border-radius: var(--border-radius); box-shadow: var(--box-shadow); margin: 25px 0; padding: 1.5rem; border: 1px solid var(--border-color); }
+        .ArabicH-exercise-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--secondary-color); font-weight: 600; text-align: center; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px; }
+        [data-theme="dark"] .ArabicH-exercise-title { color: var(--accent-color); }
+        .ArabicH-exercise-content { line-height: 1.8; margin-bottom: 20px; color: var(--text-color); }
+        .ArabicH-rule-card { background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%); border-radius: var(--border-radius); margin: 20px 0; padding: 1.5rem; border-left: 6px solid var(--secondary-color); position: relative; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .ArabicH-rule-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+        .ArabicH-rule-card::before { content: "📘"; position: absolute; left: 15px; top: 15px; font-size: 1.2rem; opacity: 0.8; }
+        .ArabicH-rule-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700; padding-left: 30px; border-bottom: 2px dashed var(--secondary-color); padding-bottom: 8px; position: relative; }
+        [data-theme="dark"] .ArabicH-rule-title { color: var(--accent-color); }
+        .ArabicH-rule-title::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 60px; height: 2px; background-color: var(--primary-color); }
+
+        /* Poem text styling */
+        .ArabicH-poem-text { font-size: 1.4rem; font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif; line-height: 2.2; color: var(--dark-color); margin: 20px 0; padding: 20px; background-color: var(--poetry-bg); border-radius: var(--border-radius); border-right: 4px solid var(--poetry-border); text-align: center; direction: rtl; }
+        .ArabicH-poem-line { margin-bottom: 1.5rem; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; position: relative; padding: 0 10px; }
+        .ArabicH-sadr { font-weight: 600; color: var(--primary-color); margin-left: 0.5rem; position: relative; text-align: left; }
+        .ArabicH-ajz { font-weight: 500; color: var(--dark-color); margin-right: 0.5rem; position: relative; text-align: right; }
+        .ArabicH-separator { color: var(--accent-color); font-weight: bold; margin: 0 10px; opacity: 0.7; font-size: 1.2rem; }
+        .ArabicH-poem-separator { height: 1.5rem; width: 60%; margin: 1.5rem auto; border-bottom: 2px dashed var(--border-color); opacity: 0.5; }
+        [data-theme="dark"] .ArabicH-poem-text { color: #f5f0ff; background-color: var(--poetry-bg); border-right: 4px solid var(--poetry-border); }
+        [data-theme="dark"] .ArabicH-sadr { color: var(--accent-color); }
+        [data-theme="dark"] .ArabicH-ajz { color: #f5f0ff; }
+        [data-theme="dark"] .ArabicH-separator { color: var(--secondary-color); }
+        @media (max-width: 768px) {
+            .ArabicH-poem-text { font-size: 1.2rem; padding: 15px; line-height: 2.0; }
+            .ArabicH-poem-line { flex-wrap: wrap; justify-content: flex-end; }
+            .ArabicH-sadr, .ArabicH-ajz { width: 100%; text-align: right; margin: 0.2rem 0; }
+            .ArabicH-separator { display: none; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-poem-text { font-size: 1.1rem; line-height: 1.9; padding: 12px; }
+            .ArabicH-poem-line { margin-bottom: 1rem; }
+        }
+
+        .ArabicH-vocab-table { width: 100%; border-collapse: collapse; margin: 20px 0; direction: rtl; }
+        .ArabicH-vocab-table th { background-color: var(--primary-color); color: white; padding: 12px; font-weight: 600; text-align: center; border: 1px solid var(--border-color); }
+        .ArabicH-vocab-table td { padding: 10px; border: 1px solid var(--border-color); text-align: right; background-color: var(--card-bg); color: var(--text-color); }
+        .ArabicH-vocab-table tr:nth-child(even) td { background-color: var(--table-even-bg); }
+        .ArabicH-vocab-table tr:hover td { background-color: var(--table-hover-bg); }
+
+        .ArabicH-question { background-color: var(--definition-bg); border-radius: var(--border-radius); padding: 1.5rem; margin: 20px 0; border-right: 4px solid var(--primary-color); position: relative; }
+        .ArabicH-question-title { font-size: 1.2rem; margin-bottom: 10px; color: var(--primary-color); font-weight: 700; text-align: right; }
+        [data-theme="dark"] .ArabicH-question-title { color: var(--accent-color); }
+        .ArabicH-question-content { line-height: 1.8; color: var(--text-color); text-align: right; margin-bottom: 15px; }
+        .ArabicH-show-answer-btn { background-color: var(--primary-color); color: white; border: none; padding: 10px 20px; border-radius: var(--border-radius); cursor: pointer; font-size: 16px; margin-top: 10px; transition: background-color 0.3s; display: block; width: 100%; max-width: 200px; margin-right: auto; margin-left: 0; }
+        .ArabicH-show-answer-btn:hover { background-color: var(--accent-color); }
+        .ArabicH-answer { display: none; margin-top: 20px; padding: 20px; border-radius: var(--border-radius); border-right: 3px solid var(--accent-color); background-color: var(--definition-bg); line-height: 1.8; color: var(--text-color); text-align: right; }
+
+        .ArabicH-prosody-table { width: 100%; border-collapse: collapse; margin: 20px 0; direction: rtl; }
+        .ArabicH-prosody-table th { background-color: var(--primary-color); color: white; padding: 12px; font-weight: 600; text-align: center; border: 1px solid var(--border-color); }
+        .ArabicH-prosody-table td { padding: 10px; border: 1px solid var(--border-color); text-align: center; background-color: var(--card-bg); color: var(--text-color); }
+
+        .ArabicH-analysis-section { background: var(--card-bg); border-radius: var(--border-radius); margin: 25px 0; padding: 1.5rem; border: 1px solid var(--border-color); }
+        .ArabicH-analysis-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700; text-align: right; border-bottom: 2px solid var(--secondary-color); padding-bottom: 8px; }
+        [data-theme="dark"] .ArabicH-analysis-title { color: var(--accent-color); }
+        .ArabicH-analysis-content { line-height: 1.8; color: var(--text-color); text-align: right; }
+
+        .ArabicH-flower-decoration { display: inline-block; margin: 0 10px; color: var(--primary-color); font-size: 1.2rem; }
+        .ArabicH-knowledge-box { background-color: var(--definition-bg); border-radius: var(--border-radius); padding: 1.5rem; margin: 25px 0; border-right: 4px solid var(--primary-color); position: relative; }
+        .ArabicH-knowledge-box::before { content: "💡"; position: absolute; right: 15px; top: 15px; font-size: 1.5rem; opacity: 0.7; }
+        .ArabicH-knowledge-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700; text-align: right; padding-right: 40px; }
+        [data-theme="dark"] .ArabicH-knowledge-title { color: var(--accent-color); }
+        .ArabicH-knowledge-content { line-height: 1.8; color: var(--text-color); text-align: right; }
+
+        .ArabicH-nav-buttons { display: flex; justify-content: space-between; margin-top: 30px; }
+        .ArabicH-nav-btn { background-color: var(--primary-color); color: white; border: none; padding: 10px 20px; border-radius: var(--border-radius); cursor: pointer; font-size: 16px; text-decoration: none; transition: background-color 0.3s; display: inline-block; text-align: center; }
+        .ArabicH-nav-btn:hover { background-color: var(--accent-color); }
+
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title { font-size: 2rem; }
+            .ArabicH-lesson-subtitle { font-size: 1.1rem; }
+            .ArabicH-lesson-container { padding: 1.5rem; }
+            .ArabicH-lesson-header { flex-direction: column; gap: 15px; text-align: center; }
+            .ArabicH-nav-buttons { flex-direction: column; gap: 10px; }
+            .ArabicH-rule-card { padding: 1.2rem; }
+            .ArabicH-rule-title { font-size: 1.2rem; padding-left: 25px; }
+            .ArabicH-rule-card::before { left: 12px; top: 12px; font-size: 1.1rem; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main { padding: 1rem; }
+            .ArabicH-lesson-title { font-size: 1.6rem; }
+            .ArabicH-exercise-card { padding: 1rem; }
+            .ArabicH-rule-card { padding: 1rem; }
+            .ArabicH-rule-title { font-size: 1.1rem; padding-left: 22px; }
+            .ArabicH-rule-card::before { left: 10px; top: 10px; font-size: 1rem; }
+        }
+        [data-theme="dark"] p, [data-theme="dark"] li, [data-theme="dark"] div:not(.ArabicH-poem-text) { color: var(--text-color) !important; }
+        [data-theme="dark"] strong { color: var(--accent-color); }
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) { color: var(--accent-color); }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">🏠</span><span data-i18n="ArabicH.windows.home">الرئيسية</span></a>
+        <a href="authors.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">👨‍🎓</span><span data-i18n="ArabicH.windows.authors">ادباء</span></a>
+        <a href="quotes.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📖</span><span data-i18n="ArabicH.windows.quotes">شواهد</span></a>
+        <a href="resources.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📚</span><span data-i18n="ArabicH.windows.resources">موارد</span></a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.literatureLesson.poemTitle">قصيدة "خشية ورجاء" لجميل بن معمر</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.literatureLesson.poemSubtitle">الدرس الثاني: تحليل قصيدة الغزل العذري – حفظ السر واتقاء العيون</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher"><span class="ArabicH-flower-decoration">❦</span> الاستاذ: غير معروف <span class="ArabicH-flower-decoration">❦</span></div>
+                <div class="ArabicH-lesson-class"><span class="ArabicH-flower-decoration">✿</span> المعهد: غير معروف <span class="ArabicH-flower-decoration">✿</span></div>
+            </div>
+            
+            <!-- Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">التقديم</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p>يشترط ابن حزم على المحبين أن يحفظ كلّ محبّ عهد محبوبه ويرعى غيبه ويطوي شره وينشر خيره ويغطي على عيوبه ويحسن أفعاله، ومنها كتمان السر وإظهار الصبر والتمويه على غير ذي الحس اللطيف.</p>
+                    <p>تقف هذه القصيدة لجميل بن معمر عند لحظة وداع حاسمة، حيث توصي بثينة حبيبها بحفظ السر واتقاء العيون والتمويه على الرقباء، فيردّ الشاعر متعهداً بتنفيذ وصيتها، كاشفاً عن صراع دقيق بين خشية الفضيحة ورجاء الحفاظ على الحب. القصيدة نموذج للغزل العذري الذي يجمع بين صدق العاطفة ووعي اجتماعي مرهف.</p>
+                </div>
+            </div>
+            
+            <!-- Poem Text -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">نص القصيدة</h3>
+                <div class="ArabicH-poem-text">
+                    <!-- Line 1 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَآخِرُ عَهْدٍ لي بِها يَوْمَ وَدَّعَتْ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَلاحَ لَها خَدٌّ مَليحٌ وَمَحْجَرُ</span>
+                    </div>
+                    <!-- Line 2 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">عَشِيَّةَ قالَتْ: لا تَضيعَنَّ سِرَّنا</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">إِذا غِبْتَ عَنّا وارْعَهُ حينَ تُدْبِرُ</span>
+                    </div>
+                    <!-- Line 3 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَطَرْفَكَ إِمّا جِئْتَنا فَاحْفَظَنَّهُ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">فَذَيْعُ الهَوى بادٍ لِمَنْ يَتَبَصَّرُ</span>
+                    </div>
+                    <!-- Line 4 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَأَعْرِضْ إِذا لاقَيْتَ عَيْناً تَخافُها</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَظاهِرْ بِبُغْضٍ إِنَّ ذَلِكَ أَسْتَرُ</span>
+                    </div>
+                    <!-- Line 5 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">فَإِنَّكَ إِنْ عَرَّضْتَ فيـنا بِمَقْـوَلَةٍ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">يَزِدْ في الَّذي قَدْ قُلْتَ واشٍ مُكَثِّرُ</span>
+                    </div>
+                    <!-- Line 6 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَيُنْشَرُ سِرّاً في الصَّديقِ وَغَيْرِهِ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">يَعِزُّ عَلَيْنا نَشْرُهُ حِينَ يُنْشَرُ</span>
+                    </div>
+                    <div class="ArabicH-poem-separator"></div>
+                    <!-- Line 7 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَما زِلْتَ في إِعْمالِ طَرْفِكَ نَحْوَنـا</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">إِذا جِئْتَ حَتّى كادَ حُبُّكَ يُظْهَرُ</span>
+                    </div>
+                    <!-- Line 8 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">لِأَهْلي حَتّى لامَني كُلُّ ناصِـحٍ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَإِنّي لَأَعْصي نَهْيَهُمْ حِينَ أُزْجَرُ</span>
+                    </div>
+                    <!-- Line 9 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَما قُلْتُ هَذا فَاعْلَمَنْ تَجَنُّبـاً</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">لِصَرْمٍ وَلا هَذا بِنا عَنْكَ يُقْصِرُ</span>
+                    </div>
+                    <!-- Line 10 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَلَكِنَّني أَهْلي فِداؤُكَ أَتَّقـي</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">عَلَيْكَ عُيونَ الكاشِحينَ وَأَحْذَرُ</span>
+                    </div>
+                    <div class="ArabicH-poem-separator"></div>
+                    <!-- Line 11 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">فَقُلْتُ لَها: يا بَثْنُ أَوْصَيْتُ حافِظاً</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَكُلُّ امْرِئٍ لَمْ يَرْعَهُ اللَّهُ مُعْوِرُ</span>
+                    </div>
+                    <!-- Line 12 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">سَأَمْنَحُ طَرْفي حينَ أَلْقاكِ غَيْرَكُمْ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">لِكَيْما يَرَوْا أَنَّ الهَوى حَيْثُ أَنْظُرُ</span>
+                    </div>
+                    <!-- Line 13 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَأَكْني بِأَسْماءِ سِواكِ وَأَتَّقـي</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">زِيارَتَكُمْ وَالْحُبُّ لا يَتَغَيَّرُ</span>
+                    </div>
+                    <!-- Line 14 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">فَكَمْ قَدْ رَأَيْنا واجِداً بِحَبيبِـهِ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">إِذا خافَ يُبْدي بُغْضَهُ حينَ يَظْهَرُ</span>
+                    </div>
+                </div>
+                <div class="ArabicH-exercise-content" style="text-align: center; margin-top: 15px; color: var(--secondary-color); font-style: italic;">
+                    <strong>المصدر:</strong> جميل بن معمر، الديوان، دار صادر – بيروت 1966، ص 62-63
+                </div>
+            </div>
+            
+            <!-- Author Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">تقديم الكاتب</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p><strong>جميل بن معمر العذري</strong> (ت. 82 هـ/701 م)، شاعر من شعراء العصر الأموي، اشتهر بحبه العذري لبثينة بنت حيان حتى صار لقبه "جميل بثينة". ينتمي إلى قبيلة بني عذرة المشهورة بالحب العذري الصافي. تميز شعره بالعاطفة الصادقة، واللغة السهلة العميقة، والصور الوجدانية المؤثرة. يعتبر من رواد المدرسة العذرية في الغزل التي تركز على الحب الروحي النقي والوفاء المطلق.</p>
+                </div>
+            </div>
+            
+            <!-- Vocabulary Explanation -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">شرح المفردات</h3>
+                <div class="ArabicH-table-container">
+                    <table class="ArabicH-vocab-table">
+                        <thead>
+                            <tr>
+                                <th width="10%">رقم</th>
+                                <th width="30%">المفردة / العبارة</th>
+                                <th width="60%">الشرح</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>ما يحيط بالعين (المَحْجَر)</strong></td>
+                                <td>المحجر: العظم المحيط بالعين، أو ما حول العين من الوجه</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong>إذا ما جئتنا</strong></td>
+                                <td>إذا ما أتينا / إذا جئت إلينا</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><strong>انكشافه (ذَيْعُ الهوى)</strong></td>
+                                <td>ذيوع الهوى: انتشاره وانكشافه واشتهاره</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><strong>لمحت إلى (عَرَّضْتَ)</strong></td>
+                                <td>التعريض: التلميح إلى الشيء دون التصريح به</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><strong>قبح السيرة (الصَّرْم)</strong></td>
+                                <td>الصرم: القطع والهجر، وهو قبح في العشرة والسيرة</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><strong>أن أسمّي غيرك وأعني (الكناية)</strong></td>
+                                <td>الكناية: أن تذكر شيئاً وتريد غيره، وهو التمويه على الرقباء</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><strong>الذي اشتد به الحب (واجِداً)</strong></td>
+                                <td>الواجد: المشتاق الشديد الحب، الذي اشتد وجده وحبه</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Comprehension Questions -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أسئلة الفهم</h3>
+                
+                <!-- Question 1 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- يمكن تقسيم القصيدة إلى مقطعين. بيّن حدودهما وعلّل ذلك.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer1" class="ArabicH-answer">
+                        <p><strong>المقطع الأول (الأبيات 1-10):</strong> خطاب بثينة ووصيتها – من "وآخر عهد لي بها..." إلى "...عيون الكاشحين وأحذر".</p>
+                        <p><strong>المقطع الثاني (الأبيات 11-14):</strong> ردّ الشاعر وتعهده – من "فقلت لها: يا بثن أوصيت حافظاً..." إلى آخر القصيدة.</p>
+                        <p><strong>التعليل:</strong> يقوم التقسيم على تغيّر المتكلّم؛ فالمقطع الأول كلام بثينة الموجّه إلى جميل (وصية ونصح)، والمقطع الثاني كلام جميل الموجّه إلى بثينة (قبول وتعهد)، ويبدأ المقطع الثاني بفعل القول "فقلت لها" الذي يعلن هذا الانتقال.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- استخرج أفعال كل واحد من القسمين وبيّن الصيغ المتواترة التي وردت فيها هذه الأفعال. ماذا تستنتج؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer2" class="ArabicH-answer">
+                        <p><strong>أفعال المقطع الأول (خطاب بثينة):</strong></p>
+                        <p>قال، غبت، تدبر (مضارع)، جئتنا، احفظن (أمر)، أعرض (أمر)، لاقيت، تخافها (مضارع)، ظاهر (أمر)، عرّضت، يزد (مضارع)، ينشر (مضارع)، يعز (مضارع)، زلت، جئت، كاد، يُظهر (مضارع)، لامني، أعصي (مضارع)، أزجر (مضارع)، قلت، أتقي (مضارع)، أحذر (مضارع).</p>
+                        <p><strong>أفعال المقطع الثاني (خطاب الشاعر):</strong></p>
+                        <p>فقلت، أوصيت، يرعه (مضارع)، سأمنح (مضارع)، ألقاك (مضارع)، يروا (مضارع)، أنظر (مضارع)، أكني (مضارع)، أتقي (مضارع)، خاف، يبدي (مضارع)، يظهر (مضارع)، رأينا.</p>
+                        <p><strong>الصيغ المتواترة:</strong> يغلب على المقطع الأول الماضي والأمر (لأنه حكاية وصية وأوامر ونهي)، بينما يغلب على المقطع الثاني المضارع (لأنه تعهد والتزام بمستقبل).</p>
+                        <p><strong>الاستنتاج:</strong> اختيار الصيغ يخدم مضمون كل مقطع؛ فالأمر والنهي في الأول يبرزان سلطة الوصية وحرص الحبيبة، والمضارع في الثاني يبرز استمرار الوفاء وتجدد التعهد عند الشاعر.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 3 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">3- إلامَ تُرجع خوف الحبيبة حسب ما جاء في النص؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer3" class="ArabicH-answer">
+                        <p>تُرجع الحبيبة خوفها إلى:</p>
+                        <ol>
+                            <li><strong>الواشي المكثّر</strong> الذي يزيد في الكلام وينشره بين الصديق وغيره.</li>
+                            <li><strong>العيون الكاشحة</strong> (الحاسدة) التي تراقب وتترصد.</li>
+                            <li><strong>ذيوع الهوى</strong> وانكشاف السر الذي يفضحها أمام أهلها.</li>
+                            <li><strong>لوم الناصحين</strong> من أهلها وعشيرتها إذا ظهر الحب.</li>
+                        </ol>
+                        <p>فخوفها خوف اجتماعي بالأساس، مصدره رقابة المجتمع البدوي على العلاقات العاطفية، وحرصها على سمعتها وسمعة أهلها.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 4 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">4- استنتج من النص أخلاق البيئة البدوية في الحجاز في القرن الأول للهجرة.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer4" class="ArabicH-answer">
+                        <p>يكشف النص عن جملة من أخلاق البيئة البدوية في الحجاز، منها:</p>
+                        <ul>
+                            <li><strong>كتمان السر</strong> واعتباره فضيلة أساسية في العلاقات.</li>
+                            <li><strong>التحرز من العيون والرقباء</strong> والحذر من الحاسدين.</li>
+                            <li><strong>الحرص على السمعة والشرف</strong> والخوف من اللوم الاجتماعي.</li>
+                            <li><strong>احترام الناصحين</strong> رغم عصيانهم أحياناً بدافع الحب.</li>
+                            <li><strong>الوفاء بالعهد</strong> والالتزام بالوصية.</li>
+                            <li><strong>الصبر على الحب</strong> وتحمّل مرارة الحرمان.</li>
+                            <li><strong>التعفف</strong> والبعد عن التصريح الفاضح بالعاطفة.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Question 5 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">5- كشف تَصَافِينا بثينة (وصيتها) عن رفض المجتمع البدوي الحبّ لسبب أخلاقي. فهل ترى تعارضاً حقيقياً بين الحب والأخلاق؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer5')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer5" class="ArabicH-answer">
+                        <p>لا أرى تعارضاً حقيقياً بين الحب والأخلاق، بل بين <strong>الإفصاح عن الحب</strong> و<strong>تقاليد المجتمع</strong>. فالحب في ذاته عاطفة نبيلة، والأخلاق تدعو إلى العفة والكتمان والوفاء، وهي قيم يجسدها الحب العذري. لكن المجتمع البدوي كان يرى في التصريح بالحب عيباً يمس الشرف، فصار يرفض العلاقة العلنية لا العاطفة نفسها. فالتعارض إذن بين <strong>الإعلان</strong> و<strong>التحفظ الاجتماعي</strong>، لا بين جوهر الحب وجوهر الأخلاق.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 6 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">6- نشر الشاعر أمر حبه في القصيدة رغم أن الحبيبة أوصته بحفظ السر. لم فعل ذلك في رأيك؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer6')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer6" class="ArabicH-answer">
+                        <p>يمكن أن يعود نشر الشاعر لحبه إلى أسباب منها:</p>
+                        <ul>
+                            <li><strong>غلبة العاطفة:</strong> فالحب اشتد به حتى كاد يظهر رغم كتمانه.</li>
+                            <li><strong>الوظيفة الفنية:</strong> فالشعر وسيلة للتعبير والتخفيف عن النفس، والقصيدة نفسها شكل من الإفصاح.</li>
+                            <li><strong>التوثيق والخلود:</strong> أراد أن يخلّد تجربته العاطفية في الشعر.</li>
+                            <li><strong>التناقض الإنساني:</strong> بين ما يوصي به العقل من كتمان وما يفرضه القلب من بوح.</li>
+                            <li><strong>تأكيد الوفاء:</strong> فقصيدته نفسها دليل على صدق حبه الذي لا يتغير.</li>
+                        </ul>
+                        <p>فالنشر هنا لا ينقض الوصية نقضاً كاملاً، بل هو تعبير عن عجز المحب عن كتم مشاعره، مع بقاء التزامه بالحذر في السلوك.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 7 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">7- يرضى المحبّ العذري بتحمل مرارة البعد ووطأة الحرمان. فهل يعود رضاه إلى قوة فيه أم إلى ضعف؟ حرّر في ذلك فقرة من خمسة أسطر.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer7')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer7" class="ArabicH-answer">
+                        <p>رضا المحب العذري بمرارة البعد يعود إلى <strong>قوة روحية</strong> لا إلى ضعف. فهو يتحمل الحرمان عن وعي وإرادة، لأنه يرى في الصبر على الحب فضيلة ووفاءً، وفي الكتمان حفظاً لكرامة المحبوبة وشرفها. هذا الرضا ليس استسلاماً عاجزاً، بل انتصار للإرادة على الغريزة، وتعبير عن حب يسمو على المصلحة واللذة. فالمحب العذري قوي بحبه، صابر باختياره، راضٍ بقدره، وما يبدو ضعفاً هو في حقيقته قوة كامنة في الروح والعقيدة.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 8 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">8- بما أن جميلاً يؤمن أن حبه لبثينة قضاء وقدر، وأن روحيهما قد تعلّقا ببعضهما قبل الخلق، فقيم الخوف من الواشي والاحتياط من المجتمع؟ حرّر في ذلك فقرة من ستة أسطر.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer8')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer8" class="ArabicH-answer">
+                        <p>لا تناقض بين إيمان جميل بالقدر وخوفه من الواشي والاحتياط من المجتمع، فالقدر لا ينفي الأخذ بالأسباب. فإيمانه بأن حبه قضاء إلهي يمنحه الثبات والرضا، لكنه في الوقت نفسه يدرك أن حماية المحبوبة وسمعتها واجب أخلاقي، فيتقي العيون الكاشحة ويحذر الواشين. فالخوف هنا ليس خوفاً على الحب من الزوال، بل خوف على المحبوبة من الفضيحة والأذى. وهو خوف نابع من صدق الحب وحرصه، لا من ضعف اليقين. وهكذا يجمع الشاعر بين التسليم للقدر والاحتياط البشري في آن واحد، في توازن دقيق بين الإيمان والعقل، وبين الحب والمسؤولية.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Context -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">بمناسبة هذا النص</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">القراءة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>السؤال:</strong> هل تستطيع أن تقرأ البيت الثاني مستقلاً عن البيت الأول وأن تقرأ البيت الثامن مستقلاً عن البيت السابع؟ علّل جوابك.</p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer9')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer9" class="ArabicH-answer">
+                            <p><strong>لا، لا يمكن قراءة البيت الثاني مستقلاً عن الأول:</strong> لأن "عَشِيَّةَ" بدل من "يَوْمَ وَدَّعَتْ" في البيت الأول، فهي تفصيل لزمن الوداع الذي بدأه البيت الأول، ولا يُفهم هذا الزمن إلا بالرجوع إليه.</p>
+                            <p><strong>ولا يمكن قراءة البيت الثامن مستقلاً عن السابع:</strong> لأن قوله "لأهلي" في البيت الثامن متعلق بقوله "إعمال طرفك نحونا" في السابع، فالمعنى: "ما زلت تعمل طرفك نحونا... حتى لامني أهلي..."، فهو نتيجة لما قبله ومتصل به اتصال السبب بالنتيجة.</p>
+                            <p>فالبيتان الثاني والثامن امتداد لسابقيهما، لا يستقلان عنهما في المعنى.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الحقل الدلالي</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>ابحث عن الحقل الدلالي لكلمة "الهوى".</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer10')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer10" class="ArabicH-answer">
+                            <p>كلمة "الهوى" تحمل دلالات متعددة، منها:</p>
+                            <ol>
+                                <li><strong>الحب والميل:</strong> "الهوى" بمعنى العشق والمحبة (وهو المقصود في النص: "فذيع الهوى بادٍ").</li>
+                                <li><strong>الشغف والتعلق:</strong> شدة التعلق بالشيء.</li>
+                                <li><strong>الرغبة الجامحة:</strong> الميل النفسي غير المنضبط.</li>
+                                <li><strong>الصبوة:</strong> الميل إلى اللهو والغزل.</li>
+                                <li><strong>الانحراف عن الحق:</strong> في الاستعمال الديني: "هوى" بمعنى خالف الحق واتبع هواه.</li>
+                            </ol>
+                            <p>وفي النص، "الهوى" يعني الحب العذري العميق الذي يخشى من ذيوعه وانتشاره.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الحقل المعجمي</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>استخرج من النص الكلمات التي تنتمي إلى حقل "النظر".</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer11')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer11" class="ArabicH-answer">
+                            <p>من النص نجد عدة كلمات تنتمي إلى حقل النظر، منها:</p>
+                            <ul>
+                                <li><strong>مَحْجَر</strong> (ما يحيط بالعين)</li>
+                                <li><strong>طَرْف</strong> (طرفك – طرفي)</li>
+                                <li><strong>عينا</strong> (عيناً تخافها)</li>
+                                <li><strong>يتبصّر</strong> (لمن يتبصر)</li>
+                                <li><strong>تُعمِل طرفك</strong> (إعمال طرفك)</li>
+                                <li><strong>عيون</strong> (عيون الكاشحين)</li>
+                                <li><strong>أنظر</strong> (حيث أنظر)</li>
+                                <li><strong>أعرض</strong> (أعرض إذا لاقيت)</li>
+                            </ul>
+                            <p>هذه الكلمات تشكل حقلاً معجمياً متماسكاً حول العين والنظر والرؤية، وهو مناسب لموضوع القصيدة القائم على المراقبة والتخفي.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المعجم</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>حدّد جذور كل كلمة مما يلي ثم ابحث عن معناها في أحد المعاجم:</strong> يتبصر – أزجر – يبدي.</p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer12')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer12" class="ArabicH-answer">
+                            <table class="ArabicH-vocab-table">
+                                <thead>
+                                    <tr>
+                                        <th width="20%">الكلمة</th>
+                                        <th width="20%">الجذر</th>
+                                        <th width="60%">المعنى</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>يتبصر</strong></td>
+                                        <td>ب ص ر</td>
+                                        <td>يتأمل ويتعرف وينظر بعين الاعتبار، من "البصيرة" أي الفطنة والوعي</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>أزجر</strong></td>
+                                        <td>ز ج ر</td>
+                                        <td>أنهى وأردع وأمنع، من "الزجر" أي المنع والنهي بغلظة</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>يبدي</strong></td>
+                                        <td>ب د و</td>
+                                        <td>يُظهر ويُعلن ويُكشف، من "البدو" أي الظهور والبروز</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Know Section -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أعرف</h3>
+                
+                <!-- Prosodic Glimpse -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ومضة عروضية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>البحر الطويل:</strong> (فعولن مفاعيلن فعولن مفاعلن) × 2</p>
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-prosody-table">
+                                <thead>
+                                    <tr>
+                                        <th width="30%">الشطر</th>
+                                        <th width="70%">التقطيع</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>وَلَاحِ لَهَا خَدٌّ</strong></td>
+                                        <td>فَعُولٌ | مفاعيلن</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>مَلِيحٌ | ومَحْجَرُ</strong></td>
+                                        <td>فعولن | مفاعلن</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>وَآخِرُ رُعْهَدٍ لِي بِهَا يَوْمَ وَدَعَتْ</strong></td>
+                                        <td>فَعُولٌ | مفاعيلن | فعولن | مفاعلن</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="margin-top: 10px;"><strong>ملاحظة:</strong> البحر الطويل هو البحر الذي تنظم عليه القصيدة، وهو من أكثر البحور استعمالاً في الشعر العربي القديم، ويتناسب مع جدية الموضوع وعمق المشاعر.</p>
+                    </div>
+                </div>
+                
+                <!-- Linguistic Glimpse -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ومضة لغوية: نونا التوكيد</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>أمثلة من النص:</strong> لا تَضِيعَنَّ – احْفَظَنَّهُ – اعْلَمَنْ – لا تُذِيعَنْ – احْفَظَنْ.</p>
+                        <p><strong>النون:</strong> حرف للتوكيد، وقد تكون خفيفة أو ثقيلة:</p>
+                        <ul>
+                            <li><strong>الخفيفة:</strong> كقولك: لا تذيعن، احفظن.</li>
+                            <li><strong>الثقيلة:</strong> كقولك: لا تذيعنَّ، احفظنَّ.</li>
+                        </ul>
+                        <p><strong>القاعدة:</strong> تدخل نونا التوكيد الخفيفة والثقيلة على:</p>
+                        <ul>
+                            <li><strong>الأمر</strong> (مثل: احفظنَّ).</li>
+                            <li><strong>المضارع الدال على الاستقبال</strong> (مثل: لا تذيعنَّ).</li>
+                        </ul>
+                        <p>ولا تدخلان على الفعل الماضي مطلقاً.</p>
+                        <p><strong>وظيفتهما:</strong> توكيد المعنى وتقويته، وإبراز أهمية الفعل في سياقه.</p>
+                    </div>
+                </div>
+                
+                <!-- Rhetorical Glimpse -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ومضة بلاغية: الأمر والنهي</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>أمثلة من النص:</strong></p>
+                        <ul>
+                            <li>"وَظاهِرْ بِبُغْضٍ إِنَّ ذَلِكَ أَسْتَرُ" (أمر)</li>
+                            <li>"إِذا غِبْتَ عَنّا وارْعَهُ حينَ تُدْبِرُ" (أمر)</li>
+                            <li>"وَأَعْرِضْ إِذا لاقَيْتَ عَيْناً تَخافُها" (أمر)</li>
+                            <li>"عَشِيَّةَ قالَتْ: لا تَضيعَنَّ سِرَّنا" (نهي)</li>
+                        </ul>
+                        <p><strong>التحليل:</strong> اشتمل البيتان على أمر ونهي، وهما من الأساليب الإنشائية الطلبية.</p>
+                        <ul>
+                            <li><strong>الأمر:</strong> طلب القيام بشيء (مثل: ظاهر، أعرض، احفظ).</li>
+                            <li><strong>النهي:</strong> طلب الكفّ عن فعل شيء (مثل: لا تضيعنّ، لا تذيعن).</li>
+                        </ul>
+                        <p><strong>الغرض البلاغي:</strong> إبراز شدة حرص الحبيبة على حفظ السر، وتأكيد وصيتها، وإضفاء طابع الإلزام والتحذير على كلامها.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Analysis Section -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">قسم التحليل: مباني ومضامين</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">التقديم</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>قصيدة غزلية أجريت على بحر الطويل، مقتطفة من ديوان جميل بن معمر، الشاعر الأموي البدوي المعروف بحبه لبثينة. تعالج القصيدة موضوع <strong>حفظ السر واتقاء العيون</strong>، وتنتمي إلى المحور الأول "شعر الغزل". وهي تختلف عن قصيدة "أفي الناس أمثالي؟" في أنها لا تقف عند إعلان الحب الأزلي، بل تنتقل إلى الجانب العملي من العلاقة: كيف يحمي المحب حبه من أعين الرقباء وألسنة الواشين. فالنص حوار بين حبيبة توصي وحبيب يتعهد، يجمع بين الخشية والرجاء، بين الحذر الاجتماعي والوفاء العاطفي.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">التأطير والموضوع</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul>
+                            <li><strong>الموضوع:</strong> وصية بثينة لجميل بحفظ السر واتقاء العيون، وتعهد جميل بتنفيذ الوصية والحفاظ على الحب.</li>
+                            <li><strong>الموضوع الفرعي:</strong> التوفيق بين الحب والحرص الاجتماعي، والصراع بين ما يقتضيه القلب وما تفرضه التقاليد.</li>
+                            <li><strong>الموضوع الفرعي:</strong> تصوير أخلاق البيئة البدوية في الحجاز (الكتمان، الحذر، الوفاء، حفظ السمعة).</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الوحدات (المعيار: أنماط الخطاب)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul>
+                            <li><strong>الحوار (خطاب بثينة):</strong> الأبيات 1-10 – وصية ونصح وتحذير.</li>
+                            <li><strong>الحوار (خطاب جميل):</strong> الأبيات 11-14 – قبول وتعهد والتزام.</li>
+                        </ul>
+                        <p>فالنص يقوم على حوار ثنائي بين الحبيبة والحبيب، يغلب عليه الأسلوب الإنشائي الطلبي (أمر ونهي).</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تحليل المقاطع</h4>
+                    <div class="ArabicH-exercise-content">
+                        <h5 style="color: var(--primary-color); margin: 15px 0 10px 0;">المقطع الأول: خطاب بثينة – الوصية والحذر (الأبيات 1-10)</h5>
+                        
+                        <p><strong>مقوماته:</strong></p>
+                        <ul>
+                            <li><strong>بداية حكائية:</strong> "وآخر عهد لي بها يوم ودعت" – تأسيس لمشهد الوداع.</li>
+                            <li><strong>أفعال الأمر والنهي:</strong> احفظنَّ، أعرض، ظاهر (أمر) / لا تضيعنَّ (نهي).</li>
+                            <li><strong>التوكيد:</strong> نون التوكيد في "لا تضيعنَّ" و"احفظنَّه" و"اعلمن".</li>
+                            <li><strong>الأسلوب الإنشائي الطلبي:</strong> يغلب على المقطع، ويعكس سلطة الوصية وحرص الحبيبة.</li>
+                            <li><strong>الشرط:</strong> "إن غبت عنا"، "إذا جئتنا"، "إن عرّضت" – لربط الوصية بكل الأحوال.</li>
+                        </ul>
+                        
+                        <p><strong>الخصائص البلاغية واللغوية:</strong></p>
+                        <ul>
+                            <li><strong>الاستعارة:</strong> "لا تضيعنّ سرّنا" – شبه السر بالشيء المادي الذي يمكن أن يضيع.</li>
+                            <li><strong>الكناية:</strong> "ظاهر ببغض" – كناية عن التمويه والتصنع.</li>
+                            <li><strong>التعريض:</strong> "إن عرّضت فينا بمقولة" – التلميح دون التصريح.</li>
+                            <li><strong>المعجم:</strong> حقل النظر (طرف، عين، محجر، يتبصر)، وحقل الخفاء والانتشار (سر، ذيع، ينشر، استر).</li>
+                            <li><strong>التمثيل:</strong> الاستشهاد بمشهد الوداع لإضفاء الصدق على الوصية.</li>
+                            <li><strong>الضمائر:</strong> "نا" في "سرّنا" و"عنا" و"فيـنا" – تدل على الاتحاد بين الحبيبين في مواجهة العالم.</li>
+                        </ul>
+                        
+                        <p><strong>الدلالات:</strong></p>
+                        <p>يصور هذا المقطع الحبيبة في لحظة وعي اجتماعي مرهف: فهي تحب جميلاً لكنها تدرك أن هذا الحب مهدد بالانكشاف. وصيتها ليست رفضاً للحب، بل حماية له. تتوزع وصاياها بين حفظ السر (<em>لا تضيعنّ سرّنا</em>)، وضبط النظر (<em>فاحفظنّه</em>)، والتمويه في السلوك (<em>ظاهر ببغض</em>)، وتجنب التعريض (<em>إن عرّضت... يزد واشٍ مكثّر</em>). هكذا تكشف الحبيبة عن خوفها من <strong>الواشي</strong> و<strong>العيون الكاشحة</strong> و<strong>اللوم الاجتماعي</strong>، فتصبح الوصية بمثابة عقد أخلاقي بين الحبيبين.</p>
+                        
+                        <h5 style="color: var(--primary-color); margin: 20px 0 10px 0;">المقطع الثاني: خطاب جميل – التعهد والالتزام (الأبيات 11-14)</h5>
+                        
+                        <p><strong>مقوماته:</strong></p>
+                        <ul>
+                            <li><strong>البداية الحوارية:</strong> "فقلت لها: يا بثن..." – إعلان انتقال الكلام إلى الشاعر.</li>
+                            <li><strong>أفعال التعهد:</strong> سأمنح، أكني، أتقي، أنظر (مضارع دال على المستقبل والالتزام).</li>
+                            <li><strong>التوكيد:</strong> "أوصيت حافظاً" – توكيد القبول بالوصية.</li>
+                            <li><strong>التعليل:</strong> "لكيما يروا..." – تعليل الفعل بغايته.</li>
+                            <li><strong>الأسلوب الخبري:</strong> يغلب على المقطع، ويعكس الثقة والثبات.</li>
+                        </ul>
+                        
+                        <p><strong>الخصائص البلاغية واللغوية:</strong></p>
+                        <ul>
+                            <li><strong>النداء:</strong> "يا بثنُ" – ترخيم بثينة، يعكس الحميمية والقرب.</li>
+                            <li><strong>التشبيه:</strong> "كل امرئ لم يرعه الله معور" – تشبيه من لا يحفظ العهد بمن فقد حاميه.</li>
+                            <li><strong>الكناية:</strong> "أكني بأسماء سواك" – التلميح دون التصريح.</li>
+                            <li><strong>الطباق:</strong> "أبدي بغضه" / "حيث أنظر" – بين الظاهر والباطن.</li>
+                            <li><strong>الاستشهاد:</strong> "فكم قد رأينا واجداً بحبيبه..." – استشهاد بالتجربة الإنسانية لتأكيد صواب الموقف.</li>
+                            <li><strong>المعجم:</strong> حقل الحفظ والرعاية (أوصيت، حافظ، يرعه، أتقي، أحذر)، وحقل التمويه (أكني، أبدي، يروا).</li>
+                        </ul>
+                        
+                        <p><strong>الدلالات:</strong></p>
+                        <p>يعلن جميل قبوله وصية بثينة، لكنه يضيف إليها بعداً جديداً: فهو لا يكتفي بالحذر، بل يعتبر الحب محفوظاً برعاية الله (<em>وكل امرئ لم يرعه الله معور</em>). تعهده يتضمن ثلاثة التزامات: <strong>ضبط النظر</strong> (<em>سأمنح طرفي... غيركم</em>)، و<strong>الكناية في الاسم</strong> (<em>أكني بأسماء سواك</em>)، و<strong>اتقاء الزيارة</strong> (<em>أتقي زيارتكم</em>). وفي الوقت نفسه يؤكد أن الحب لا يتغير (<em>والحب لا يتغير</em>). فالتمويه عنده ليس كذباً، بل حفظ للسر وصيانة للحب من ألسنة الواشين. وهكذا يجمع بين <strong>الخشية</strong> (الخوف من الفضيحة) و<strong>الرجاء</strong> (الثقة في الحفاظ على الحب)، وهو ما يفسر عنوان القصيدة.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المبنى (الشكل)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ol>
+                            <li><strong>البناء العروضي:</strong> البحر الطويل، وتفعيلاته (فعولن مفاعيلن فعولن مفاعلن)، وهو بحر يتناسب مع الجدية والحوار الممتد.</li>
+                            <li><strong>اللغة:</strong> سهلة واضحة، معجمها قريب من الحياة البدوية (طرف، محجر، واشٍ، كاشح).</li>
+                            <li><strong>الصور الشعرية:</strong> حسية ووجدانية (لاح خد مليح، ذيع الهوى، عيون الكاشحين).</li>
+                            <li><strong>الأساليب:</strong> مزج بين الخبر والإنشاء، وبين الأمر والنهي والخبر.</li>
+                            <li><strong>البناء الفني:</strong> مقدمة (الوداع) – عرض (وصية بثينة) – خاتمة (تعهد جميل).</li>
+                            <li><strong>الحوار:</strong> حوار ثنائي يدير القصيدة من أولها إلى آخرها، ويعكس العلاقة بين الحبيبين.</li>
+                            <li><strong>التكرار:</strong> تكرار "لا" الناهية، وتكرار نون التوكيد، لإبراز شدة الحرص.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المضمون (المعنى)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ol>
+                            <li><strong>حفظ السر:</strong> وصية الحبيبة بحفظ السر وعدم إذاعته.</li>
+                            <li><strong>اتقاء العيون:</strong> الحذر من الرقباء والحاسدين.</li>
+                            <li><strong>التمويه:</strong> إظهار البغض كوسيلة لحماية الحب.</li>
+                            <li><strong>الوفاء:</strong> تعهد الشاعر بالالتزام بالوصية وعدم تغيير الحب.</li>
+                            <li><strong>الخشية والرجاء:</strong> الخوف من الفضيحة والأمل في الحفاظ على الحب.</li>
+                            <li><strong>الصراع بين الحب والتقاليد:</strong> محاولة التوفيق بينهما بالكتمان والحذر.</li>
+                            <li><strong>أخلاق البيئة البدوية:</strong> الكتمان، الحذر، حفظ السمعة، الوفاء بالعهد.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الخاتمة التحليلية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>تقوم قصيدة "خشية ورجاء" على حوار ثنائي بين بثينة وجميل، ينتقل من الوصية إلى التعهد، ومن الخشية إلى الطمأنينة. وقد أحسن جميل بن معمر في تصوير الصراع بين الحب والتقاليد، وفي التعبير عن أخلاق البيئة البدوية بلغة صادقة وصور موحية. فالنص لا يكتفي بالبوح العاطفي، بل يقدم درساً في الحفاظ على الحب بالحكمة والكتمان. وهو بذلك يضيف إلى الغزل العذري بعداً عملياً وأخلاقياً، يجعل منه تجربة إنسانية متكاملة، تجمع بين صدق القلب ووعي العقل، وبين الخشية والرجاء.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Writing Section -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">قسم التحرير: تحليل معمق لقصيدة "خشية ورجاء"</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تحليل قصيدة جميل بن معمر</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>تقدم قصيدة "خشية ورجاء" لجميل بن معمر وجهاً آخر من الغزل العذري، غير ذلك الوجه الذي رأيناه في "أفي الناس أمثالي؟". فإذا كانت الأولى قد وقفت عند إعلان الحب الأزلي والتسليم للقدر، فإن هذه القصيدة تنتقل إلى الجانب العملي من العلاقة: كيف يحمي المحب حبه من أعين الرقباء وألسنة الواشين. وهي بذلك تجعل من الحب تجربة أخلاقية واجتماعية، لا مجرد عاطفة فردية.</p>
+                        
+                        <p>تبدأ القصيدة بمشهد الوداع: "وآخر عهد لي بها يوم ودعت / ولاح لها خد مليح ومحجر". فالوداع هنا ليس نهاية الحب، بل بداية عهد جديد، عهد الوصية والحفظ. ثم تأتي وصية بثينة في سلسلة من الأوامر والنواهي: "لا تضيعنّ سرّنا"، "احفظنّه"، "أعرض"، "ظاهر ببغض". هذا التراكم الطلبي يكشف عن شدة خوفها وحرصها، ويجعل من كلامها عقداً أخلاقياً يلزم الحبيبين معاً.</p>
+                        
+                        <p>وفي المقطع الثاني يرد جميل بتعهد صريح: "فقلت لها: يا بثن أوصيت حافظاً / وكل امرئ لم يرعه الله معور". فهو يقبل الوصية، ويضيف إليها بعداً إيمانياً: الحفظ الحقيقي هو حفظ الله. ثم يحدد التزاماته العملية: منح طرفه لغيرها، والكناية بأسماء سواها، واتقاء زيارتها. لكنه يؤكد في الوقت نفسه أن "الحب لا يتغير"، فكل هذا التمويه ليس نفاقاً، بل حماية للحب من الفضيحة.</p>
+                        
+                        <p>ومن الناحية الفنية، تقوم القصيدة على الحوار الثنائي الذي يمنحها حيوية ودرامية. ويخدم البحر الطويل هذا الحوار، إذ يتسع للوصية وللرد. كما يبرز أسلوب الأمر والنهي في المقطع الأول، والخبر والتعهد في المقطع الثاني، مما يعكس توزيع الأدوار بين الحبيبة والحبيب. وتتضافر الصور الحسية (لاح خد، ذيع الهوى) مع الصور الرمزية (العيون الكاشحة، الواشي المكثّر) لخلق جو من الحذر والترقب.</p>
+                        
+                        <p>وأخيراً، فإن عنوان القصيدة "خشية ورجاء" يختصر مضمونها: خشية من الفضيحة واللوم، ورجاء في الحفاظ على الحب. وهما شعوران يتجاذبان الشاعر في كل بيت، فيكشفان عن عمق التجربة العذرية التي لا تكتفي بالعاطفة، بل تحاول أن تصوغ لها نظاماً أخلاقياً يحميها من المجتمع. وهكذا تبقى قصيدة "خشية ورجاء" نموذجاً راقياً للغزل العذري الذي يجمع بين صدق القلب وحكمة العقل.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                    <span class="ArabicH-flower-decoration">✎</span> 
+                    <span class="ArabicH-flower-decoration">✍</span> 
+                    <span class="ArabicH-flower-decoration">✎</span>
+                </p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_1SY_literature_module1_section1_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.previousLesson">الدرس السابق</a>
+                <a href="AH_1SY_literature_module1_section1_lesson3.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        window.translations_ArabicHLiteratureModule1Section1Lesson2 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.literatureLesson.poemTitle": "قصيدة \"خشية ورجاء\" لجميل بن معمر",
+                "ArabicH.literatureLesson.poemSubtitle": "الدرس الثاني: تحليل قصيدة الغزل العذري – حفظ السر واتقاء العيون",
+                "ArabicH.literatureLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.literatureLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.literatureLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.literatureLesson.previousLesson": "الدرس السابق",
+                "ArabicH.literatureLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.literatureLesson.poemTitle": "Poem: \"Fear and Hope\" by Jamil bin Ma'mar",
+                "ArabicH.literatureLesson.poemSubtitle": "Lesson 2: Analysis of Chaste Love Poetry – Keeping the Secret and Avoiding Eyes",
+                "ArabicH.literatureLesson.showAnswer": "Show Answer",
+                "ArabicH.literatureLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.literatureLesson.backToHome": "Back to Homepage",
+                "ArabicH.literatureLesson.previousLesson": "Previous Lesson",
+                "ArabicH.literatureLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.literatureLesson.poemTitle": "Poème: \"Crainte et Espoir\" par Jamil bin Ma'mar",
+                "ArabicH.literatureLesson.poemSubtitle": "Leçon 2: Analyse de la poésie amoureuse chaste – Garder le secret et éviter les regards",
+                "ArabicH.literatureLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.literatureLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.literatureLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.literatureLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.literatureLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHLiteratureModule1Section1Lesson2;
+    </script>
+    
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            const showText = button.getAttribute('data-i18n-show') || 'إظهار الإجابة';
+            const hideText = button.getAttribute('data-i18n-hide') || 'إخفاء الإجابة';
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = showText;
+            } else {
+                answer.style.display = "block";
+                button.textContent = hideText;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) { item.classList.add('active'); } else { item.classList.remove('active'); }
+            });
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => { button.setAttribute('data-i18n-value', button.textContent); });
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); themeToggle.checked = true; }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+                    else { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+                });
+            }
+        });
+    </script>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() { navigator.serviceWorker.register('/sw.js').then(r => console.log('SW registered')).catch(e => console.log('SW failed')); });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; if (manualInstallBtn) manualInstallBtn.style.display = 'flex'; });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') { manualInstallBtn.style.display = 'none'; deferredPrompt = null; }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

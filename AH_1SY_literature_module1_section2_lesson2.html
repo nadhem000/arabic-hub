@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أدب: قصيدة "يا من لقلب متيم كلف" لعمر بن أبي ربيعة - الدرس الثاني | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#6a4c93">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="قصيدة يا من لقلب متيم">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        :root {
+            --primary-color: #6a4c93;
+            --secondary-color: #8a6db8;
+            --accent-color: #a792d9;
+            --light-color: #f5f0ff;
+            --dark-color: #4a3c6a;
+            --text-color: #2c2541;
+            --heading-color: #1a1529;
+            --background-color: #f9f7ff;
+            --card-bg: #ffffff;
+            --definition-bg: #ece6ff;
+            --border-color: #d0c4e8;
+            --table-even-bg: #f5f0ff;
+            --table-hover-bg: #ece6ff;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(106, 76, 147, 0.12);
+            --gradient-primary: linear-gradient(135deg, #6a4c93 0%, #4a3c6a 100%);
+            --gradient-secondary: linear-gradient(135deg, #8a6db8 0%, #6a4c93 100%);
+            --gradient-accent: linear-gradient(135deg, #a792d9 0%, #8a6db8 100%);
+            --gradient-light: linear-gradient(135deg, #f5f0ff 0%, #ece6ff 100%);
+            --highlight-color: #c77d23;
+            --highlight-bg: rgba(199, 125, 35, 0.1);
+            --poetry-bg: rgba(106, 76, 147, 0.08);
+            --poetry-border: #8a6db8;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #8a6db8;
+            --secondary-color: #a792d9;
+            --accent-color: #c5b3e6;
+            --light-color: #4a3c6a;
+            --dark-color: #352a4e;
+            --text-color: #e8e2ff;
+            --heading-color: #f5f0ff;
+            --background-color: #352a4e;
+            --card-bg: #4a3c6a;
+            --definition-bg: #6a4c93;
+            --border-color: #8a6db8;
+            --table-even-bg: #4a3c6a;
+            --table-hover-bg: #6a4c93;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #8a6db8 0%, #6a4c93 100%);
+            --gradient-secondary: linear-gradient(135deg, #a792d9 0%, #8a6db8 100%);
+            --gradient-accent: linear-gradient(135deg, #c5b3e6 0%, #a792d9 100%);
+            --gradient-light: linear-gradient(135deg, #4a3c6a 0%, #352a4e 100%);
+            --highlight-color: #e9b04d;
+            --highlight-bg: rgba(233, 176, 77, 0.15);
+            --poetry-bg: rgba(138, 109, 184, 0.15);
+            --poetry-border: #a792d9;
+        }
+
+        .ArabicH-lesson-page { min-height: 100vh; background: var(--background-color); display: flex; flex-direction: column; }
+        .ArabicH-lesson-main { flex: 1; display: flex; flex-direction: column; padding: 2rem; max-width: 1200px; margin: 0 auto; width: 100%; }
+        .ArabicH-lesson-title { font-size: 2.5rem; margin-bottom: 1rem; color: var(--heading-color); text-align: center; font-weight: 700; }
+        .ArabicH-lesson-subtitle { font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-color); text-align: center; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+        .ArabicH-lesson-container { background: var(--card-bg); border-radius: var(--border-radius); box-shadow: var(--box-shadow); padding: 2.5rem; margin-bottom: 2rem; border-top: 6px solid var(--primary-color); }
+        .ArabicH-lesson-header { background: var(--gradient-primary); color: white; padding: 1.5rem; border-radius: var(--border-radius); margin-bottom: 2rem; text-align: center; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .ArabicH-lesson-teacher, .ArabicH-lesson-class { font-size: 1.1rem; font-weight: 600; background: rgba(255,255,255,0.15); padding: 8px 15px; border-radius: 20px; backdrop-filter: blur(5px); }
+        .ArabicH-lesson-content { margin: 30px 0; }
+        .ArabicH-exercise-card { background: var(--card-bg); border-radius: var(--border-radius); box-shadow: var(--box-shadow); margin: 25px 0; padding: 1.5rem; border: 1px solid var(--border-color); }
+        .ArabicH-exercise-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--secondary-color); font-weight: 600; text-align: center; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px; }
+        [data-theme="dark"] .ArabicH-exercise-title { color: var(--accent-color); }
+        .ArabicH-exercise-content { line-height: 1.8; margin-bottom: 20px; color: var(--text-color); }
+        .ArabicH-rule-card { background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%); border-radius: var(--border-radius); margin: 20px 0; padding: 1.5rem; border-left: 6px solid var(--secondary-color); position: relative; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .ArabicH-rule-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+        .ArabicH-rule-card::before { content: "📘"; position: absolute; left: 15px; top: 15px; font-size: 1.2rem; opacity: 0.8; }
+        .ArabicH-rule-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700; padding-left: 30px; border-bottom: 2px dashed var(--secondary-color); padding-bottom: 8px; position: relative; }
+        [data-theme="dark"] .ArabicH-rule-title { color: var(--accent-color); }
+        .ArabicH-rule-title::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 60px; height: 2px; background-color: var(--primary-color); }
+
+        .ArabicH-poem-text { font-size: 1.4rem; font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif; line-height: 2.2; color: var(--dark-color); margin: 20px 0; padding: 20px; background-color: var(--poetry-bg); border-radius: var(--border-radius); border-right: 4px solid var(--poetry-border); text-align: center; direction: rtl; }
+        .ArabicH-poem-line { margin-bottom: 1.5rem; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; position: relative; padding: 0 10px; }
+        .ArabicH-sadr { font-weight: 600; color: var(--primary-color); margin-left: 0.5rem; position: relative; text-align: left; }
+        .ArabicH-ajz { font-weight: 500; color: var(--dark-color); margin-right: 0.5rem; position: relative; text-align: right; }
+        .ArabicH-separator { color: var(--accent-color); font-weight: bold; margin: 0 10px; opacity: 0.7; font-size: 1.2rem; }
+        .ArabicH-poem-separator { height: 1.5rem; width: 60%; margin: 1.5rem auto; border-bottom: 2px dashed var(--border-color); opacity: 0.5; }
+        [data-theme="dark"] .ArabicH-poem-text { color: #f5f0ff; background-color: var(--poetry-bg); border-right: 4px solid var(--poetry-border); }
+        [data-theme="dark"] .ArabicH-sadr { color: var(--accent-color); }
+        [data-theme="dark"] .ArabicH-ajz { color: #f5f0ff; }
+        [data-theme="dark"] .ArabicH-separator { color: var(--secondary-color); }
+        @media (max-width: 768px) {
+            .ArabicH-poem-text { font-size: 1.2rem; padding: 15px; line-height: 2.0; }
+            .ArabicH-poem-line { flex-wrap: wrap; justify-content: flex-end; }
+            .ArabicH-sadr, .ArabicH-ajz { width: 100%; text-align: right; margin: 0.2rem 0; }
+            .ArabicH-separator { display: none; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-poem-text { font-size: 1.1rem; line-height: 1.9; padding: 12px; }
+            .ArabicH-poem-line { margin-bottom: 1rem; }
+        }
+
+        .ArabicH-vocab-table { width: 100%; border-collapse: collapse; margin: 20px 0; direction: rtl; }
+        .ArabicH-vocab-table th { background-color: var(--primary-color); color: white; padding: 12px; font-weight: 600; text-align: center; border: 1px solid var(--border-color); }
+        .ArabicH-vocab-table td { padding: 10px; border: 1px solid var(--border-color); text-align: right; background-color: var(--card-bg); color: var(--text-color); }
+        .ArabicH-vocab-table tr:nth-child(even) td { background-color: var(--table-even-bg); }
+        .ArabicH-vocab-table tr:hover td { background-color: var(--table-hover-bg); }
+
+        .ArabicH-question { background-color: var(--definition-bg); border-radius: var(--border-radius); padding: 1.5rem; margin: 20px 0; border-right: 4px solid var(--primary-color); position: relative; }
+        .ArabicH-question-title { font-size: 1.2rem; margin-bottom: 10px; color: var(--primary-color); font-weight: 700; text-align: right; }
+        [data-theme="dark"] .ArabicH-question-title { color: var(--accent-color); }
+        .ArabicH-question-content { line-height: 1.8; color: var(--text-color); text-align: right; margin-bottom: 15px; }
+        .ArabicH-show-answer-btn { background-color: var(--primary-color); color: white; border: none; padding: 10px 20px; border-radius: var(--border-radius); cursor: pointer; font-size: 16px; margin-top: 10px; transition: background-color 0.3s; display: block; width: 100%; max-width: 200px; margin-right: auto; margin-left: 0; }
+        .ArabicH-show-answer-btn:hover { background-color: var(--accent-color); }
+        .ArabicH-answer { display: none; margin-top: 20px; padding: 20px; border-radius: var(--border-radius); border-right: 3px solid var(--accent-color); background-color: var(--definition-bg); line-height: 1.8; color: var(--text-color); text-align: right; }
+
+        .ArabicH-prosody-table { width: 100%; border-collapse: collapse; margin: 20px 0; direction: rtl; }
+        .ArabicH-prosody-table th { background-color: var(--primary-color); color: white; padding: 12px; font-weight: 600; text-align: center; border: 1px solid var(--border-color); }
+        .ArabicH-prosody-table td { padding: 10px; border: 1px solid var(--border-color); text-align: center; background-color: var(--card-bg); color: var(--text-color); }
+
+        .ArabicH-analysis-section { background: var(--card-bg); border-radius: var(--border-radius); margin: 25px 0; padding: 1.5rem; border: 1px solid var(--border-color); }
+        .ArabicH-analysis-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700; text-align: right; border-bottom: 2px solid var(--secondary-color); padding-bottom: 8px; }
+        [data-theme="dark"] .ArabicH-analysis-title { color: var(--accent-color); }
+        .ArabicH-analysis-content { line-height: 1.8; color: var(--text-color); text-align: right; }
+
+        .ArabicH-flower-decoration { display: inline-block; margin: 0 10px; color: var(--primary-color); font-size: 1.2rem; }
+        .ArabicH-knowledge-box { background-color: var(--definition-bg); border-radius: var(--border-radius); padding: 1.5rem; margin: 25px 0; border-right: 4px solid var(--primary-color); position: relative; }
+        .ArabicH-knowledge-box::before { content: "💡"; position: absolute; right: 15px; top: 15px; font-size: 1.5rem; opacity: 0.7; }
+        .ArabicH-knowledge-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700; text-align: right; padding-right: 40px; }
+        [data-theme="dark"] .ArabicH-knowledge-title { color: var(--accent-color); }
+        .ArabicH-knowledge-content { line-height: 1.8; color: var(--text-color); text-align: right; }
+
+        .ArabicH-nav-buttons { display: flex; justify-content: space-between; margin-top: 30px; }
+        .ArabicH-nav-btn { background-color: var(--primary-color); color: white; border: none; padding: 10px 20px; border-radius: var(--border-radius); cursor: pointer; font-size: 16px; text-decoration: none; transition: background-color 0.3s; display: inline-block; text-align: center; }
+        .ArabicH-nav-btn:hover { background-color: var(--accent-color); }
+
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title { font-size: 2rem; }
+            .ArabicH-lesson-subtitle { font-size: 1.1rem; }
+            .ArabicH-lesson-container { padding: 1.5rem; }
+            .ArabicH-lesson-header { flex-direction: column; gap: 15px; text-align: center; }
+            .ArabicH-nav-buttons { flex-direction: column; gap: 10px; }
+            .ArabicH-rule-card { padding: 1.2rem; }
+            .ArabicH-rule-title { font-size: 1.2rem; padding-left: 25px; }
+            .ArabicH-rule-card::before { left: 12px; top: 12px; font-size: 1.1rem; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main { padding: 1rem; }
+            .ArabicH-lesson-title { font-size: 1.6rem; }
+            .ArabicH-exercise-card { padding: 1rem; }
+            .ArabicH-rule-card { padding: 1rem; }
+            .ArabicH-rule-title { font-size: 1.1rem; padding-left: 22px; }
+            .ArabicH-rule-card::before { left: 10px; top: 10px; font-size: 1rem; }
+        }
+        [data-theme="dark"] p, [data-theme="dark"] li, [data-theme="dark"] div:not(.ArabicH-poem-text) { color: var(--text-color) !important; }
+        [data-theme="dark"] strong { color: var(--accent-color); }
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) { color: var(--accent-color); }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">🏠</span><span data-i18n="ArabicH.windows.home">الرئيسية</span></a>
+        <a href="authors.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">👨‍🎓</span><span data-i18n="ArabicH.windows.authors">ادباء</span></a>
+        <a href="quotes.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📖</span><span data-i18n="ArabicH.windows.quotes">شواهد</span></a>
+        <a href="resources.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📚</span><span data-i18n="ArabicH.windows.resources">موارد</span></a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.literatureLesson.poemTitle">قصيدة "يا من لقلب متيم كلف" لعمر بن أبي ربيعة</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.literatureLesson.poemSubtitle">الدرس الثاني: تحليل قصيدة الغزل الحضري – الطواف وجمال النساء</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher"><span class="ArabicH-flower-decoration">❦</span> الاستاذ: غير معروف <span class="ArabicH-flower-decoration">❦</span></div>
+                <div class="ArabicH-lesson-class"><span class="ArabicH-flower-decoration">✿</span> المعهد: غير معروف <span class="ArabicH-flower-decoration">✿</span></div>
+            </div>
+            
+            <!-- Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">التمهيد</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p>قالَ مَوْلَى عُمَرَ: كُنْتُ مَعَ عُمَرَ، وَقَدْ أَسَنَّ وَضَعُفَ، فَخَرَجَ يَوْماً يَمْشِي مُتَوَكِّئاً عَلَى يَدَيَّ حَتَّى مَرَّ بِعَجُوزٍ جَالِسَةٍ، فَقَالَ لِي: هَذِهِ فُلَانَةُ... فَعَدَلَ إِلَيْهَا، وَسَلَّمَ عَلَيْهَا، وَجَلَسَ عِنْدَهَا، وَجَعَلَ يُحَادِثُهَا، ثُمَّ قَالَ: هَذِهِ الَّتِي أَقُولُ فِيهَا:</p>
+                    <p><em>"أَبْصَرْتُهَا لَيْلَةً وَنِسْوَتَهَا *** يَمْشِينَ بَيْنَ المَقَامِ وَالحَجَرِ"</em></p>
+                    <p>... فَاطَّلَعَتْ رَأْسَهَا إِلَى البَيْتِ وَقَالَتْ: يَا بَنَاتِي، هَذَا هُوَ أَبُو الخَطَّابِ عُمَرُ بْنُ أَبِي رَبِيعَةَ عِنْدِي، فَإِنْ كُنْتُنَّ تَشْتَهينَ أَنْ تَرَيْنَهُ فَتَعَالَيْنَ. فَجِئْنَ إِلَى مَضْرَبٍ قَدْ حُجِزَ بِهِ عِنْدَ بَابِهَا فَجَعَلْنَ يَثْقُبْنَهُ وَيَضَعْنَ أَعْيُنَهُنَّ عَلَيْهِ. فَاسْتَسْقَاهَا عُمَرُ، فَأُتِيَ بِإِنَاءٍ فِيهِ مَاءٌ فَشَرِبَ مِنْهُ، ثُمَّ مَلَأَ فَمَهُ فَمَجَّهُ عَلَيْهِنَّ وَفِي وُجُوهِهِنَّ مِنْ وَرَاءِ الحَاجِزِ. فَصَاحَ الجَوَارِي وَتَهَارَبْنَ وَجَعَلْنَ يَضْحَكْنَ، فَقَالَتْ لَهُ العَجُوزُ: وَيْلَكَ، لَا تَدَعْ مُجُونَكَ وَسَفَهَكَ مَعَ هَذِهِ السِّنِّ. فَقَالَ: لَا تَلُومِينِي، فَمَا مَلَكْتُ نَفْسِي لَمَّا سَمِعْتُ مِنْ حَرَكَاتِهِنَّ أَنْ فَعَلْتُ مَا رَأَيْتِ.</p>
+                    <p><em>عن أبي الفرج الأصفهاني، الأغاني، مؤسسة عز الدين، مصر، الجزء الأول، ص 68-69</em></p>
+                </div>
+            </div>
+            
+            <!-- Poem Text -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">نص القصيدة</h3>
+                <div class="ArabicH-poem-text">
+                    <!-- Line 1 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">يا مَن لِقَلبٍ مُتَيَّمٍ كَلِفٍ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">يَهذي بِخَودٍ مَريضَةِ النَظَرِ</span>
+                    </div>
+                    <!-- Line 2 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">تَمشي الهُوَينا إِذا مَشَت فُضُلاً</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَهيَ كَمِثلِ العُسلوجِ في الشَجَرِ</span>
+                    </div>
+                    <!-- Line 3 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">ما زالَ طَرفي يَحارُ إِذ نَظَرَت</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">حَتّى رَأَيتُ النُقصانَ في بَصَري</span>
+                    </div>
+                    <div class="ArabicH-poem-separator"></div>
+                    <!-- Line 4 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">أَبصَرتُها لَيلَةً وَنِسوَتِها</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">يَمشينَ بَينَ المَقامِ وَالحَجَرِ</span>
+                    </div>
+                    <!-- Line 5 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">بيضاً حِساناً خَرائِداً قُطُفاً</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">يَمشينَ هَوناً كَمِشيَةِ البَقَرِ</span>
+                    </div>
+                    <!-- Line 6 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">قَد فُزنَ بِالحُسنِ وَالجَمالِ مَعاً</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَفُزنَ رِسلاً بِالدَلِّ وَالخَفَرِ</span>
+                    </div>
+                    <div class="ArabicH-poem-separator"></div>
+                    <!-- Line 7 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">يُنصِتنَ يَوماً لَها إِذا نَطَقَت</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">كَيما يُفَضِّلنَها عَلى البَشَرِ</span>
+                    </div>
+                    <!-- Line 8 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">قالَت لِتِربٍ لَها تُحَدِّثُها</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">لَتُفسِدَنَّ الطَوافَ في عُمَرِ</span>
+                    </div>
+                    <!-- Line 9 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">قومي تَصَدَّي لَهُ لِيُبصِرَنا</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">ثُمَّ اِغمُزيهِ يا أُختُ في خَفَرِ</span>
+                    </div>
+                    <!-- Line 10 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">قالَت لَها قَد غَمَزتُهُ فَأَبى</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">ثُمَّ اِسبَطَرَّت تَسعى عَلى أَثَري</span>
+                    </div>
+                </div>
+                <div class="ArabicH-exercise-content" style="text-align: center; margin-top: 15px; color: var(--secondary-color); font-style: italic;">
+                    <strong>المصدر:</strong> عمر بن أبي ربيعة، الديوان، طبعة دار الجيل – بيروت 1992، ص 270-271
+                </div>
+            </div>
+            
+            <!-- Author Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">تقديم الشاعر</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p><strong>عمر بن أبي ربيعة</strong> (ت. 93 هـ/712 م)، شاعر عربي من العصر الأموي، وُلد في مكة المكرمة سنة 644م تقريباً، لعائلة قرشية ثرية من بني مخزوم. يُعد من أبرز شعراء الغزل الحضري، وتميز شعره بالتصوير الحي والمفارقة والحوار، وبالجرأة في التعبير عن الحب والعاطفة.</p>
+                    <p><strong>أبرز ملامح شخصيته وشعره:</strong></p>
+                    <ul>
+                        <li>كان وسيماً وثرياً، مما جعله محبوباً في الأوساط النسائية.</li>
+                        <li>ركّز شعره على وصف النساء، والمواقف الطريفة، والمشاهد الاجتماعية في مكة والمدينة.</li>
+                        <li>أدخل عنصر الدراما والحوار في القصيدة، وجعل المرأة فاعلة لا مجرد موضوع للغزل.</li>
+                        <li>يُنسب إليه تأسيس نمط جديد في الغزل يُعرف بـ"الغزل الحضري"، يختلف عن الغزل البدوي في الرقة والجرأة.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Vocabulary Explanation -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">شرح المفردات</h3>
+                <div class="ArabicH-table-container">
+                    <table class="ArabicH-vocab-table">
+                        <thead>
+                            <tr>
+                                <th width="10%">رقم</th>
+                                <th width="35%">المفردة / العبارة</th>
+                                <th width="55%">الشرح</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>خَوْد</strong></td>
+                                <td>المرأة الشابة الناعمة الحسنة القوام</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong>العُسلوج</strong></td>
+                                <td>الغصن اللين الناعم الذي يخرج من الشجر</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><strong>المقام والحجر</strong></td>
+                                <td>مقام إبراهيم والحجر الأسود، وكلاهما في المسجد الحرام بمكة</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><strong>حِسان</strong></td>
+                                <td>جمع حسناء، أي جميلات</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><strong>قُطُف (بِطَان)</strong></td>
+                                <td>القَطِف: الضخمة الممتلئة، والمراد: ناعمات ممتلئات</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><strong>رِسْلاً (جميعاً)</strong></td>
+                                <td>الرِّسل: الجماعة، أي جميعهن</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><strong>اسبطرّت (أسرعت)</strong></td>
+                                <td>اسبطرّ: امتدّ وأسرع في مشيه</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Comprehension Questions -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أفهم</h3>
+                
+                <!-- Question 1 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- قسّم القصيدة إلى مقاطع وبيّن المعيار الذي اعتمدته في ذلك.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer1" class="ArabicH-answer">
+                        <p><strong>المعيار المعتمد:</strong> تغيّر زاوية السرد وتغيّر وظيفة الخطاب الشعري (من الذات إلى الجماعة إلى الحوار).</p>
+                        <ul>
+                            <li><strong>المقطع الأول (الأبيات 1-3):</strong> "العاشق المتيم" – يصور الشاعر حالته الداخلية وانبهاره بجمال الحبيبة وأثرها على بصره.</li>
+                            <li><strong>المقطع الثاني (الأبيات 4-7):</strong> "وصف النساء" – ينتقل إلى المشهد الخارجي فيصف جماعة النساء بين المقام والحجر ووصفهن الجمالي الجماعي.</li>
+                            <li><strong>المقطع الثالث (الأبيات 8-10):</strong> "الحوار وخطة الإغواء" – يتحول النص إلى حوار بين الحبيبة وصاحبتها يكشف عن تآمرهن اللطيف عليه.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- استخرج من الأبيات الأولى في القصيدة صفات الحبيبة وبيّن أثرها في نفس الشاعر.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer2" class="ArabicH-answer">
+                        <p><strong>صفات الحبيبة في الأبيات الأولى:</strong></p>
+                        <ul>
+                            <li><strong>مريضة النظر:</strong> أي فاترة العينين، وهي صفة جمالية في تصور العرب.</li>
+                            <li><strong>تمشي الهوينا:</strong> أي تمشي بتؤدة ورفق ودلال.</li>
+                            <li><strong>لينة كالعسلوج:</strong> شبهها بالغصن اللين في نعومتها وتثنيها.</li>
+                        </ul>
+                        <p><strong>أثرها في نفس الشاعر:</strong></p>
+                        <ul>
+                            <li>أوقعته في الهذيان والتيه العاطفي.</li>
+                            <li>أربكت بصره وجعلته حائراً كلما نظر إليها.</li>
+                            <li>أضعفت بصره حتى ظن أنه فقد شيئاً من حدة نظره.</li>
+                            <li>جعلته متيماً كلفاً، أي شديد التعلق والولع.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Question 3 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">3- يجمع الشاعر في القصيدة بين وصف الحبيبة ووصف صاحباتها، قارن بين الوصفين واذكر مقصد الشاعر منهما.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer3" class="ArabicH-answer">
+                        <table class="ArabicH-vocab-table">
+                            <thead>
+                                <tr>
+                                    <th>وجه المقارنة</th>
+                                    <th>الحبيبة</th>
+                                    <th>صاحباتها</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>الوصف الجمالي</strong></td>
+                                    <td>مريضة النظر، تمشي الهوينا، لينة كالعسلوج – وصف فردي مكثف</td>
+                                    <td>بيض حسان خرائد قطف – وصف جماعي متعدد الصفات</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الحركة</strong></td>
+                                    <td>تمشي بتؤدة ودلال، وتسعى خلفه في نهاية القصيدة</td>
+                                    <td>يمشين هوناً كمشية البقر – صورة ساخرة</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الدور</strong></td>
+                                    <td>محور الانبهار والعاطفة</td>
+                                    <td>خلفية جماعية تبرز تفرد الحبيبة</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>السلوك</strong></td>
+                                    <td>تأمر وتخطط وتنصت لها الأخريات</td>
+                                    <td>تطيع وتنفذ وتتواطأ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>مقصد الشاعر من الجمع بين الوصفين:</strong> إبراز تفرد الحبيبة وسط جماعة النساء، وتأكيد سلطتها الجمالية والاجتماعية عليهن، مع خلق مشهد درامي يجمع بين الرقة والسخرية، في مفارقة فنية بين جمال الحبيبة ووصف صاحباتها بمشية البقر.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 4 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">4- عاش الشاعر في نهاية القصيدة موقفاً طريفاً، تبيّنه واستخلص منه نوع العلاقة القائمة بين النساء من جهة وبينهن وبين عمر من جهة ثانية.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer4" class="ArabicH-answer">
+                        <p><strong>الموقف الطريف:</strong> في نهاية القصيدة تخطط الحبيبة مع صاحبتها لإغواء عمر ومفاجأته، فتأمرها أن تتعرض له ليراهن ثم تغمزه في خفر. فتذهب الصاحبة وتنفذ الخطة، لكن عمر يتمنع ويرفض الإغراء، فتعود الصاحبة مسرعة خلفه في مشهد كوميدي لطيف.</p>
+                        <p><strong>العلاقة بين النساء:</strong> تعاون وتواطؤ ومرح، فيه جرأة على التخطيط والمبادرة، ووعي جماعي بجاذبيتهن وتأثيرهن.</p>
+                        <p><strong>العلاقة بينهن وبين عمر:</strong> علاقة لعب ومطاردة، تظهر فيها المرأة فاعلة ومخططة ومسيطرة، بينما يظهر عمر في موقف المتمنع المطلوب، مما يقلب الأدوار التقليدية في الغزل.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 5 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">5- استخلص من النص معايير الجمال في نظر الشاعر وقارنها بمعاييرك.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer5')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer5" class="ArabicH-answer">
+                        <p><strong>معايير الجمال في نظر الشاعر:</strong></p>
+                        <ul>
+                            <li><strong>فتور العين:</strong> "مريضة النظر" صفة جمالية أساسية.</li>
+                            <li><strong>تؤدة المشية ودلالها:</strong> "تمشي الهوينا"، "مشية البقر" في تؤدتها.</li>
+                            <li><strong>النعومة واللين:</strong> التشبيه بالعسلوج في الشجر.</li>
+                            <li><strong>البياض والحسن:</strong> "بيضاً حساناً".</li>
+                            <li><strong>الحياء والدلال:</strong> "الدل والخفر" مزيج من التغنج والحياء.</li>
+                            <li><strong>الحضور والتأثير الاجتماعي:</strong> المرأة التي تنصت لها الأخريات وتخطط وتفعل.</li>
+                        </ul>
+                        <p><strong>مقارنة بمعاييري:</strong> أرى أن الجمال الحقيقي أوسع من هذه المعايير الحسية؛ فهو جمال متكامل يجمع بين حسن المظهر، ورجاحة العقل، وصدق المشاعر، وقوة الشخصية، والقدرة على الإلهام. فالجمال الذي يراه الشاعر جمال ظاهري جسدي، بينما أميل إلى الجمال الروحي والإنساني الذي يبقى بعد ذبول الملامح.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Discussion -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أناقش</h3>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">■ ينقل الشاعر ما دار بين الحبيبة وصاحباتها. فهل تعتقد أنه حوار وقع فعلاً أم تخيله الشاعر؟ ادعم جوابك بحجج من النص.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer6')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer6" class="ArabicH-answer">
+                        <p>أرجّح أن الحوار <strong>متخيَّل ومصوغ فنياً</strong> أكثر من كونه نقلاً حرفياً لواقع حدث. والحجج على ذلك:</p>
+                        <ul>
+                            <li><strong>الطابع الدرامي:</strong> الحوار مبني بترتيب مسرحي محكم (أمر، تنفيذ، نتيجة)، وكأن الشاعر يكتب مشهداً لا ينقل حديثاً.</li>
+                            <li><strong>الألفاظ المسرحية:</strong> "قومي تصدي له"، "اغمزيه يا أخت" ألفاظ فيها تعليم وتوجيه، أشبه بإخراج فني.</li>
+                            <li><strong>خاتمة مدروسة:</strong> "قد غمزته فأبى... اسبطرّت تسعى على أثري" خاتمة مكتملة الأركان، تنتهي بلقطة كوميدية، وهي ميزة بناء فني لا نقل عفوي.</li>
+                            <li><strong>توظيف الضمائر:</strong> "قالت لتربٍ لها تحدثها... قالت لها..." – تتابع سردي منظم يكشف عن يد مؤلف.</li>
+                        </ul>
+                        <p>فالحوار إذن وسيلة فنية استخدمها الشاعر لتكثيف المشهد وإضافة عنصر التشويق والطرافة، وليس تسجيلاً أميناً لحديث سمعه.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">■ وقعت أحداث هذه القصة في مقام ديني يقتضي الخشوع، فهل تعتقد أن ذلك يسيء إلى القصيدة؟ أيّد جوابك بحجج.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer7')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer7" class="ArabicH-answer">
+                        <p>لا أعتقد أن المكان المقدس يسيء إلى القصيدة، بل هو <strong>توظيف فني مقصود</strong>، وحججي:</p>
+                        <ul>
+                            <li><strong>المفارقة الفنية:</strong> القداسة والرغبة الدنيوية عنصران متضادان يصنعان توتراً فنياً يثري النص، وهو أسلوب معروف في الغزل الحضري.</li>
+                            <li><strong>الواقعية الاجتماعية:</strong> الطواف كان موسم لقاء اجتماعي حقيقي في مكة، فالشاعر يعكس عصراً ومكاناً بأمانة.</li>
+                            <li><strong>الطرافة لا الإساءة:</strong> المشهد ساخر مرح، لا يتضمن استهزاءً بالشعائر، بل يستخدم الخلفية لإبراز انفعال الإنسان.</li>
+                            <li><strong>الرؤية النقدية:</strong> ربما قصد الشاعر بذلك فضح انشغال القلب البشري حتى في أقدس المواضع، وهو تأمل في الطبيعة البشرية.</li>
+                        </ul>
+                        <p>ومع ذلك، يبقى للقارئ المتدين حق التحفظ على الجرأة في المكان المقدس، فهو خلاف في الذوق أكثر من كونه إساءة صريحة.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Writing -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أحرر</h3>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- تميّزت علاقة الحبّ في هذه القصّة بالمعابثة. اسرد قصّة تتضمن معابثة طريفة بين الأصدقاء.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer8')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer8" class="ArabicH-answer">
+                        <p>اجتمع ثلاثة أصدقاء حول طاولة في مقهى، وكان أحدهم يتباهى بأنه يستطيع معرفة مزاج أي إنسان من ملامح وجهه في ثوانٍ. قرر الآخران اختبار "الموهبة" بترتيب مفاجأة مع النادل.</p>
+                        <p>جاء النادل متجهم الوجه، فأعلن "الخبير" بثقة: "هذا الرجل تشاجر مع زوجته هذا الصباح!" لكن النادل ضحك وقال: "لا، أنا فقط لم أجد مفتاح دراجتي ووقفت أبحث عنه ساعة!"</p>
+                        <p>ثم دخل رجل مسنّ بخطوات بطيئة، فسارع "الخبير": "هذا حزين لأنه ودّع ابنه في المطار!" فالتفت الرجل إليه وقال: "أنا فقط أمشي ببطء لأن حذائي الجديد يضيق قدمي!"</p>
+                        <p>انفجر الصديقان بالضحك، وقال أحدهما: "موهبتك هذه تصلح لإضحاك الناس، لا لقراءة وجوههم!" فردّ "الخبير" وهو يضحك: "على الأقل أنا أعرف نفسي الآن... أني لستُ خبيراً!" فكانت معابثة خفيفة زادت الألفة، وتركت ذكرى لا تنسى بين الأصدقاء.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- يتصف عمر في هذه القصيدة بقدر من الإعجاب بالذات. هل تجد هذه الصفة في المحبين من أبناء جيلك؟ حرر في ذلك فقرة من خمسة أسطر.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer9')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer9" class="ArabicH-answer">
+                        <p>يتجلى إعجاب عمر بن أبي ربيعة بذاته في تصويره لنفسه محور اهتمام النساء وخطة إغوائهن، وكأنه الجائزة التي تُطلب. وهذه الصفة لا تزال حاضرة في بعض شباب جيلنا، حيث يميل البعض إلى المبالغة في إظهار جاذبيته وثقتـه المفرطة بنفسه، خاصة عبر وسائل التواصل الاجتماعي وما تتيحه من عرض للذات. يظهر ذلك في الحديث عن العلاقات العاطفية كأنها إنجازات وانتصارات، وفي التفاخر بعدد المعجبين. لكن هذا الإعجاب بالذات قد يكون في بعض الأحيان قناعاً يخفي هشاشة داخلية أو حاجة إلى التقدير، لا ثقة حقيقية. وهكذا يبقى إعجاب المحب بذاته ظاهرة إنسانية قديمة متجددة، تتغير وسائلها ولا يتغير جوهرها.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Context -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">بمناسبة هذا النص</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">القراءة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>السؤال:</strong> اقرأ البيت الأول ثم البيت الرابع. هل تعتمد فيهما نفس التنغيم؟ لماذا؟</p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer10')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer10" class="ArabicH-answer">
+                            <p><strong>لا، لا يعتمد البيتان نفس التنغيم:</strong></p>
+                            <ul>
+                                <li><strong>البيت الأول:</strong> "يا من لقلب متيم كلف / يهذي بخود مريضة النظر" – تنغيمه <strong>داخلي تأملي حزين</strong>، يبدأ بنداء استغاثة عاطفي، ويعبر عن انفعال ذاتي.</li>
+                                <li><strong>البيت الرابع:</strong> "أبصرتها ليلة ونسوتها / يمشين بين المقام والحجر" – تنغيمه <strong>خارجي سردي وصفي</strong>، يصور مشهداً حركياً في مكان محدد.</li>
+                            </ul>
+                            <p><strong>السبب:</strong> اختلاف وظيفة البيتين؛ فالأول يعبر عن الذات والانفعال، والرابع يرسم مشهداً خارجياً، والتنغيم يخدم المعنى والوظيفة الشعرية.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الحقل المعجمي</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>استخرج من القصيدة الكلمات التي تنتمي إلى حقل "الجمال".</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer11')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer11" class="ArabicH-answer">
+                            <p>من النص نجد الكلمات الآتية تنتمي إلى حقل الجمال:</p>
+                            <ul>
+                                <li><strong>مريضة النظر</strong> (فتور العين)</li>
+                                <li><strong>خود</strong> (المرأة الحسناء الناعمة)</li>
+                                <li><strong>العسلوج</strong> (الغصن اللين – صورة جمالية)</li>
+                                <li><strong>بيض</strong> (صفاء اللون)</li>
+                                <li><strong>حسان</strong> (جميلات)</li>
+                                <li><strong>خرائد</strong> (النساء البكر الجميلات)</li>
+                                <li><strong>قطف</strong> (ممتلئات ناعمات)</li>
+                                <li><strong>الحسن</strong> و<strong>الجمال</strong> (صفتان مباشرتان)</li>
+                                <li><strong>الدل</strong> (التغنج والجاذبية)</li>
+                                <li><strong>الخفر</strong> (الحياء الرقيق)</li>
+                            </ul>
+                            <p>وهذه الكلمات ترسم صورة جمالية متعددة الأبعاد، تجمع بين المظهر الحسي والسلوك والتأثير.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المعجم</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>حدّد جذور الكلمات التالية ثم ابحث عن معانيها في أحد المعاجم:</strong> الهوينا – الدلّ – خفر.</p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer12')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer12" class="ArabicH-answer">
+                            <table class="ArabicH-vocab-table">
+                                <thead>
+                                    <tr>
+                                        <th width="20%">الكلمة</th>
+                                        <th width="20%">الجذر</th>
+                                        <th width="60%">المعنى</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>الهوينا</strong></td>
+                                        <td>ه و ن</td>
+                                        <td>الرفق والتؤدة والسهولة في السير، يقال: مشى هويناً أي مشى برفق وتؤدة</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>الدلّ</strong></td>
+                                        <td>د ل ل</td>
+                                        <td>التغنج والتمايل والتلطف في المعاملة، وهو جاذبية مصحوبة بدلال</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>الخفر</strong></td>
+                                        <td>خ ف ر</td>
+                                        <td>شدة الحياء والرزانة والتستر، ويقال: امرأة خفرة أي حيية</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Know Section -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أعرف</h3>
+                
+                <!-- Prosodic Glimpse -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ومضة عروضية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>البحر المنسرح:</strong> وزنه النظري: مستفعلن – مفعولات – مستفعلن</p>
+                        <div class="ArabicH-table-container">
+                            <table class="ArabicH-prosody-table">
+                                <thead>
+                                    <tr>
+                                        <th width="30%">الشطر</th>
+                                        <th width="70%">التقطيع</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>يا من لقلب متيم كلف</strong></td>
+                                        <td>مستفعلن | مفعولات | مستفعلن</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>يهذي بخود مريضة النظر</strong></td>
+                                        <td>مستفعلن | مفعولات | مستفعلن</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="margin-top: 10px;"><strong>ملاحظة:</strong> البحر المنسرح من البحور الخفيفة السريعة، يتناسب مع الغزل والسرد والحركة، وهو مناسب لمثل هذا المشهد الغزلي الطريف.</p>
+                    </div>
+                </div>
+                
+                <!-- Linguistic Glimpse -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ومضة لغوية: معاني حرف الجر "في"</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>أمثلة من النص:</strong></p>
+                        <ul>
+                            <li><strong>"وهي كمثل العسلوج في الشجر"</strong>: أفاد حرف الجر "في" معنى <strong>الظرفية</strong> (المكانية).</li>
+                            <li><strong>"لنفسدن الطواف في عمر"</strong>: أفاد حرف الجر "في" معنى <strong>السببية</strong>، أي الطواف بسبب عمر.</li>
+                        </ul>
+                        <p><strong>معنى "في" في قول الشاعر: "اغمزيه يا أخت في خفر":</strong> أفادت هنا معنى <strong>الملابسة والمصاحبة</strong>، أي اغمزيه مصحوباً بخفر وحياء، فالغمز يحدث ملابساً للخفر.</p>
+                        <p><strong>ومن معاني "في" عموماً:</strong> الظرفية المكانية، الظرفية الزمانية، السببية، الملابسة، الاستعلاء، المصاحبة.</p>
+                    </div>
+                </div>
+                
+                <!-- Rhetorical Glimpse -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ومضة بلاغية: أسلوب الاستغاثة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>مثال من النص:</strong> "يا من لقلب متيم كلف".</p>
+                        <p><strong>التحليل:</strong> وردت العبارة في تركيب <strong>استغاثة</strong> أفاد التوسل والاستعطاف. والاستغاثة أسلوب إنشائي طلبي، يبدأ بـ"يا" وينتهي بلام مفتوحة للاستغاثة، أو بعبارة "يا من لـ..."، وهو هنا موجّه إلى مطلق من يسمع ليُشفق عليه.</p>
+                        <p><strong>وظيفتها:</strong></p>
+                        <ul>
+                            <li><strong>وظيفة تعبيرية:</strong> تعبير الشاعر عن شدة وجده وحيرته.</li>
+                            <li><strong>وظيفة تأثيرية:</strong> التأثير في المخاطب واستعطافه ليشارك الشاعر همّه.</li>
+                        </ul>
+                        <p>وهي بذلك تجمع بين البوح الذاتي والتواصل مع المتلقي في آن واحد.</p>
+                    </div>
+                </div>
+                
+                <!-- Fai'da -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">فائدة: مرجع الصورة الشعرية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>يلجأ الشاعر إلى الطبيعة ليستقي منها صوره، فيشبه قدّ المرأة بغصن البان، وجيدها بجيد الريم، وعينها بعين المهاة. وهذا التقليد الفني متوارث في الشعر العربي، وقد استخدمه عمر بن أبي ربيعة في تشبيه الحبيبة بالعسلوج (الغصن اللين) في الشجر، وفي تشبيه مشية النساء بمشية البقر في تؤدتها.</p>
+                        <p>ووظيفة هذه الصور: تقريب الجمال المعنوي إلى الحس، وإضفاء الحيوية والحركة على الوصف، وربط الإنسان بالطبيعة التي يعيش فيها.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Analysis Section -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">قسم التحليل: مباني ومضامين</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">التقديم والتأطير</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>القصيدة من شعر <strong>الغزل الحضري</strong> لعمر بن أبي ربيعة، وتتناول مشهداً غزلياً وقع أثناء الطواف حول الكعبة. يصوّر الشاعر فيه جمال النساء وتآمرهن اللطيف لإغوائه، بأسلوب حواري طريف ومفارقة بين قدسية المكان وجرأة العاطفة. وتجمع القصيدة بين الرقة والطرافة والتصوير الفني للحب الحضري.</p>
+                        <p><strong>الموضوع:</strong> تصوير مشهد غزلي طريف يجمع بين جمال النساء وتآمرهن اللطيف لإغواء الشاعر أثناء الطواف، في مفارقة بين قدسية المكان وجرأة العاطفة.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الوحدات (المعيار: زاوية السرد)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul>
+                            <li><strong>الذات:</strong> الأبيات 1-3 – تصوير حالة العاشق المتيم وأثر الحبيبة عليه.</li>
+                            <li><strong>الجماعة:</strong> الأبيات 4-7 – وصف جماعي للنساء في المسجد الحرام.</li>
+                            <li><strong>الحوار:</strong> الأبيات 8-10 – خطة الإغواء ومشهد المطاردة الطريف.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تحليل المقاطع</h4>
+                    <div class="ArabicH-exercise-content">
+                        <h5 style="color: var(--primary-color); margin: 15px 0 10px 0;">المقطع الأول: العاشق المتيم (الأبيات 1-3)</h5>
+                        
+                        <p><strong>مقوماته:</strong></p>
+                        <ul>
+                            <li><strong>أسلوب الاستغاثة:</strong> "يا من لقلب متيم كلف" – توسل واستعطاف.</li>
+                            <li><strong>معجم العاطفة:</strong> متيم، كلف، يهذي، يحار، بصري.</li>
+                            <li><strong>التشبيه:</strong> "كمثل العسلوج في الشجر" – تشبيه الحبيبة بالغصن اللين.</li>
+                            <li><strong>المبالغة:</strong> "حتى رأيت النقصان في بصري" – مبالغة في أثر الحب على البصر.</li>
+                        </ul>
+                        
+                        <p><strong>الدلالات:</strong> يكشف هذا المقطع عن <strong>سلطان الحب على الذات</strong>. فالشاعر لا يملك نفسه أمام جمال الحبيبة، ويبالغ في تصوير تأثيره عليها حتى يرى نقصاناً في بصره. وبهذا الاستهلال العاطفي يضعنا في جو الغزل الحضري الجريء، حيث العاشق لا يخفي ضعفه بل يعلنه.</p>
+                        
+                        <h5 style="color: var(--primary-color); margin: 20px 0 10px 0;">المقطع الثاني: وصف النساء في المشهد المقدس (الأبيات 4-7)</h5>
+                        
+                        <p><strong>مقوماته:</strong></p>
+                        <ul>
+                            <li><strong>المكان المقدس:</strong> "بين المقام والحجر" – خلفية دينية تخلق مفارقة.</li>
+                            <li><strong>الوصف الجماعي:</strong> "بيضاً حساناً خرائداً قطفاً" – تعدد صفات الجمال.</li>
+                            <li><strong>التشبيه:</strong> "يمشين هوناً كمشية البقر" – تشبيه ساخر في ظاهره.</li>
+                            <li><strong>المقابلة:</strong> "فزن بالحسن والجمال معاً / وفزن رسلاً بالدل والخفر" – بين الجمال الخارجي والداخلي.</li>
+                        </ul>
+                        
+                        <p><strong>الدلالات:</strong> ينتقل الشاعر من الذات إلى المشهد الخارجي، فيصف جماعة النساء اللاتي يملن بين المقام والحجر. والوصف هنا يجمع بين الإعجاب بالجمال والمفارقة في التشبيه بمشية البقر. ثم يبرز تفرد الحبيبة بأنهن ينصتن لها إذا نطقت، وكأنهن يعترفن بتفوقها. وهذا يخلق مشهداً درامياً متكاملاً من الجمال والتواطؤ الخفي.</p>
+                        
+                        <h5 style="color: var(--primary-color); margin: 20px 0 10px 0;">المقطع الثالث: خطة الإغواء والمطاردة (الأبيات 8-10)</h5>
+                        
+                        <p><strong>مقوماته:</strong></p>
+                        <ul>
+                            <li><strong>الحوار:</strong> "قالت لترب لها تحدثها... قالت لها..." – حوار درامي بين صاحبتين.</li>
+                            <li><strong>الطلب والتنفيذ:</strong> "قومي تصدي له"، "اغمزيه يا أخت" – أوامر متتالية.</li>
+                            <li><strong>الخاتمة الكوميدية:</strong> "ثم اسبطرّت تسعى على أثري" – مشهد مطاردة طريف.</li>
+                            <li><strong>المفارقة:</strong> بين تخطيط النساء ورفض عمر، وبين الحياء ("في خفر") والجرأة في الغمز.</li>
+                        </ul>
+                        
+                        <p><strong>الدلالات:</strong> يشكل هذا المقطع ذروة القصيدة، حيث يتحول المشهد إلى دراما اجتماعية كوميدية. فالنساء يخططن ويأمرن وينفذن، وعمر يتمنع ويتبع. وهكذا تُقلب الأدوار التقليدية في الغزل: المرأة فاعلة ومخطط، والرجل مطلوب متمنع. ويُظهر المقطع جرأة المرأة الحضرية وذكاءها ووعيها بجاذبيتها، مع حفاظها على الحياء والخفر.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المبنى (الشكل)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ol>
+                            <li><strong>البناء العروضي:</strong> البحر المنسرح (مستفعلن مفعولات مستفعلن)، وهو بحر سريع يتناسب مع السرد والحركة.</li>
+                            <li><strong>اللغة:</strong> جزلة واضحة، فيها مفردات من حقل الجمال (خود، بيض، حسان، الدل، الخفر).</li>
+                            <li><strong>الصور الشعرية:</strong> حسية طبيعية (العسلوج، مشية البقر) ومفارقات ساخرة.</li>
+                            <li><strong>الأساليب:</strong> مزج بين الخبر والإنشاء (نداء، أمر، استفهام).</li>
+                            <li><strong>البناء الفني:</strong> مقدمة (الذات) – عرض (وصف الجماعة) – خاتمة (الحوار والمطاردة).</li>
+                            <li><strong>الحوار:</strong> أداة درامية تكثف المشهد وتضفي الحيوية والطرافة.</li>
+                            <li><strong>الإيقاع:</strong> يتغير بين التأمل الداخلي والسرد الحركي.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المضمون (المعنى)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ol>
+                            <li><strong>الغزل الحضري الجريء:</strong> وصف الجمال الحسي للمرأة بجرأة وجرعة من السخرية.</li>
+                            <li><strong>سلطان الحب:</strong> أثر الحبيبة على نفس الشاعر وبصره.</li>
+                            <li><strong>المفارقة بين المكان المقدس والرغبة:</strong> خلق توتر فني.</li>
+                            <li><strong>فاعلية المرأة:</strong> المرأة تخطط وتنفذ وتسيطر، لا مجرد موضوع سلبي.</li>
+                            <li><strong>الإعجاب بالذات:</strong> الشاعر يصور نفسه محور اهتمام النساء.</li>
+                            <li><strong>الطرافة والمرح:</strong> المشهد ساخر خفيف، يعكس الحياة الاجتماعية في مكة.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الخاتمة التحليلية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>تجمع قصيدة "يا من لقلب متيم كلف" بين ثلاثة مستويات: الذات العاشقة، والمشهد الجماعي للنساء، والحوار الدرامي. وقد وظف عمر بن أبي ربيعة هذه المستويات لرسم مشهد غزلي طريف في مكان مقدس، فخلق مفارقة فنية بين القداسة والرغبة. والقصيدة بذلك تعكس ملامح الغزل الحضري في العصر الأموي: الجرأة، والطرافة، وفاعلية المرأة، والوعي الاجتماعي، والإعجاب بالذات. وهي بذلك نموذج فني راقٍ يجمع بين متعة الحكاية وجمال التصوير وعمق الدلالة.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Writing Section -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">قسم التحرير: تحليل معمق لقصيدة "يا من لقلب متيم كلف"</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تحليل قصيدة عمر بن أبي ربيعة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>تعد قصيدة "يا من لقلب متيم كلف" من أبرز نماذج الغزل الحضري في العصر الأموي، وفيها تتجلى عبقرية عمر بن أبي ربيعة في تحويل الموقف العابر إلى مشهد درامي متكامل، يجمع بين الشكوى العاطفية والوصف الجمالي والحوار الساخر. فالقصيدة ليست مجرد تعبير عن الحب، بل هي حكاية مصغرة تدور بين الذات والجماعة والحوار.</p>
+                        
+                        <p>يبدأ الشاعر بمطلع استغاثي: "يا من لقلب متيم كلف / يهذي بخود مريضة النظر"، فيعلن منذ البداية استسلامه لسلطان الحب. ووصف الحبيبة بـ"مريضة النظر" هو وصف جمالي في التصور العربي، يدل على فتور العين ودلالها. ثم يضيف صورة أخرى: "تمشي الهوينا إذا مشت فضلاً / وهي كمثل العسلوج في الشجر"، فيشبهها بالغصن اللين في نعومتها وتثنيها. ويبلغ الأثر ذروته في قوله: "ما زال طرفي يحار إذ نظرت / حتى رأيت النقصان في بصري"، في مبالغة شعرية تكشف عن شدة افتتانه بها.</p>
+                        
+                        <p>ثم ينتقل إلى المشهد الخارجي في البيت الرابع: "أبصرتها ليلة ونسوتها / يمشين بين المقام والحجر". وهنا يضعنا أمام مفارقة فنية كبرى: المشهد في المسجد الحرام بين المقام والحجر، في أقدس بقاع الأرض، ومع ذلك تنشغل العيون بالجمال البشري. ويستمر الوصف الجماعي: "بيضاً حساناً خرائداً قطفاً / يمشين هوناً كمشية البقر"، فيجمع بين الإعجاب بالجمال والسخرية في التشبيه بمشية البقر. ثم يوازن بين الجمال الخارجي والداخلي: "قد فزن بالحسن والجمال معاً / وفزن رسلاً بالدل والخفر".</p>
+                        
+                        <p>وفي البيت السابع يتضح تفرد الحبيبة: "ينصتن يوماً لها إذا نطقت / كيما يفضلنها على البشر"، فهي محور الجماعة، وسيدة المشهد. ثم تبدأ الدراما الحقيقية في الأبيات الأخيرة، حيث تتحول الحبيبة من موضوع للوصف إلى فاعل ومخطط: "قالت لترب لها تحدثها / لتفسدن الطواف في عمر". فتأمر صاحبتها: "قومي تصدي له ليبصرنا / ثم اغمزيه يا أخت في خفر". والخاتمة تأتي كوميدية: "قالت لها قد غمزته فأبى / ثم اسبطرت تسعى على أثري".</p>
+                        
+                        <p>والمتأمل في القصيدة يلاحظ أن المرأة فيها ليست موضوعاً سلبياً، بل فاعلة ذكية، تخطط وتنفذ وتسيطر. وهذا تحول كبير في صورة المرأة في الشعر العربي، يعكس مجتمعاً حضرياً في الحجاز، فيه تداخل بين الدين والدنيا، وبين القداسة والرغبة. كما يعكس إعجاب الشاعر بذاته، حيث يصور نفسه محور اهتمام النساء وخطة إغوائهن.</p>
+                        
+                        <p>ومن الناحية الفنية، تقوم القصيدة على البحر المنسرح (مستفعلن مفعولات مستفعلن)، وهو بحر سريع يتناسب مع السرد والحركة والحوار. ويتوزع البناء على ثلاثة مقاطع تنتقل من الذات إلى الجماعة إلى الحوار، مما يمنح القصيدة تنوعاً في الإيقاع والوظيفة. ويتضافر الوصف الحسي مع السخرية والمفارقة لخلق مشهد درامي متكامل.</p>
+                        
+                        <p>وهكذا تبقى قصيدة "يا من لقلب متيم كلف" نموذجاً راقياً للغزل الحضري، تجمع بين رقة العاطفة وجرأة التعبير، وبين الإعجاب بالجمال والوعي الاجتماعي، وبين القداسة والرغبة. إنها قصيدة تحول الحب إلى حكاية، والحكاية إلى فن خالد.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                    <span class="ArabicH-flower-decoration">✎</span> 
+                    <span class="ArabicH-flower-decoration">✍</span> 
+                    <span class="ArabicH-flower-decoration">✎</span>
+                </p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_1SY_literature_module1_section2_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.previousLesson">الدرس السابق</a>
+                <a href="AH_1SY_literature_module1_section2_lesson3.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        window.translations_ArabicHLiteratureModule1Section2Lesson2 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.literatureLesson.poemTitle": "قصيدة \"يا من لقلب متيم كلف\" لعمر بن أبي ربيعة",
+                "ArabicH.literatureLesson.poemSubtitle": "الدرس الثاني: تحليل قصيدة الغزل الحضري – الطواف وجمال النساء",
+                "ArabicH.literatureLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.literatureLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.literatureLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.literatureLesson.previousLesson": "الدرس السابق",
+                "ArabicH.literatureLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.literatureLesson.poemTitle": "Poem: \"O You of a Love-Stricken Heart\" by Umar ibn Abi Rabi'a",
+                "ArabicH.literatureLesson.poemSubtitle": "Lesson 2: Analysis of Urban Love Poetry – Tawaf and the Beauty of Women",
+                "ArabicH.literatureLesson.showAnswer": "Show Answer",
+                "ArabicH.literatureLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.literatureLesson.backToHome": "Back to Homepage",
+                "ArabicH.literatureLesson.previousLesson": "Previous Lesson",
+                "ArabicH.literatureLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.literatureLesson.poemTitle": "Poème: \"Ô toi au cœur épris\" par Umar ibn Abi Rabi'a",
+                "ArabicH.literatureLesson.poemSubtitle": "Leçon 2: Analyse de la poésie amoureuse urbaine – Le Tawaf et la beauté des femmes",
+                "ArabicH.literatureLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.literatureLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.literatureLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.literatureLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.literatureLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHLiteratureModule1Section2Lesson2;
+    </script>
+    
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            const showText = button.getAttribute('data-i18n-show') || 'إظهار الإجابة';
+            const hideText = button.getAttribute('data-i18n-hide') || 'إخفاء الإجابة';
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = showText;
+            } else {
+                answer.style.display = "block";
+                button.textContent = hideText;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) { item.classList.add('active'); } else { item.classList.remove('active'); }
+            });
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => { button.setAttribute('data-i18n-value', button.textContent); });
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); themeToggle.checked = true; }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+                    else { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+                });
+            }
+        });
+    </script>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() { navigator.serviceWorker.register('/sw.js').then(r => console.log('SW registered')).catch(e => console.log('SW failed')); });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; if (manualInstallBtn) manualInstallBtn.style.display = 'flex'; });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') { manualInstallBtn.style.display = 'none'; deferredPrompt = null; }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

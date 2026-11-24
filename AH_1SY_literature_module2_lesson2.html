@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أدب: نص "دمنة يحرش الثور على الأسد" - الدرس الثاني | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#4a6fa5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="دمنة يحرش الثور على الأسد">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Unique Deep Blue-Indigo Theme for Literature Lesson */
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #6b8cbc;
+            --accent-color: #8faadc;
+            --light-color: #f0f5ff;
+            --dark-color: #2d3e5c;
+            --text-color: #2c3e50;
+            --heading-color: #1a2530;
+            --background-color: #f8faff;
+            --card-bg: #ffffff;
+            --definition-bg: #e8efff;
+            --border-color: #c0d0e8;
+            --table-even-bg: #f0f5ff;
+            --table-hover-bg: #e8efff;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(74, 111, 165, 0.12);
+            --gradient-primary: linear-gradient(135deg, #4a6fa5 0%, #2d3e5c 100%);
+            --gradient-secondary: linear-gradient(135deg, #6b8cbc 0%, #4a6fa5 100%);
+            --gradient-accent: linear-gradient(135deg, #8faadc 0%, #6b8cbc 100%);
+            --gradient-light: linear-gradient(135deg, #f0f5ff 0%, #e8efff 100%);
+            --highlight-color: #d4a017;
+            --highlight-bg: rgba(212, 160, 23, 0.1);
+            --story-bg: rgba(74, 111, 165, 0.08);
+            --story-border: #6b8cbc;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #6b8cbc;
+            --secondary-color: #8faadc;
+            --accent-color: #b5c9f0;
+            --light-color: #2d3e5c;
+            --dark-color: #1a2530;
+            --text-color: #e8efff;
+            --heading-color: #f0f5ff;
+            --background-color: #1a2530;
+            --card-bg: #2d3e5c;
+            --definition-bg: #4a6fa5;
+            --border-color: #6b8cbc;
+            --table-even-bg: #2d3e5c;
+            --table-hover-bg: #4a6fa5;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #6b8cbc 0%, #4a6fa5 100%);
+            --gradient-secondary: linear-gradient(135deg, #8faadc 0%, #6b8cbc 100%);
+            --gradient-accent: linear-gradient(135deg, #b5c9f0 0%, #8faadc 100%);
+            --gradient-light: linear-gradient(135deg, #2d3e5c 0%, #1a2530 100%);
+            --highlight-color: #f0c420;
+            --highlight-bg: rgba(240, 196, 32, 0.15);
+            --story-bg: rgba(107, 140, 188, 0.15);
+            --story-border: #8faadc;
+        }
+
+        /* Page specific styles */
+        .ArabicH-lesson-page {
+            min-height: 100vh;
+            background: var(--background-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ArabicH-lesson-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .ArabicH-lesson-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .ArabicH-lesson-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .ArabicH-lesson-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .ArabicH-lesson-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .ArabicH-lesson-teacher,
+        .ArabicH-lesson-class {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 15px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .ArabicH-lesson-content { margin: 30px 0; }
+
+        .ArabicH-exercise-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin: 25px 0;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-exercise-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-align: center;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+
+        [data-theme="dark"] .ArabicH-exercise-title { color: var(--accent-color); }
+
+        .ArabicH-exercise-content {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .ArabicH-rule-card {
+            background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%);
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            padding: 1.5rem;
+            border-left: 6px solid var(--secondary-color);
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .ArabicH-rule-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .ArabicH-rule-card::before {
+            content: "📘";
+            position: absolute;
+            left: 15px;
+            top: 15px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .ArabicH-rule-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            padding-left: 30px;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 8px;
+            position: relative;
+        }
+
+        [data-theme="dark"] .ArabicH-rule-title { color: var(--accent-color); }
+
+        .ArabicH-rule-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        /* Story text styling */
+        .ArabicH-story-text {
+            font-size: 1.25rem;
+            font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif;
+            line-height: 2.0;
+            color: var(--dark-color);
+            margin: 20px 0;
+            padding: 25px;
+            background-color: var(--story-bg);
+            border-radius: var(--border-radius);
+            border-right: 4px solid var(--story-border);
+            text-align: right;
+            direction: rtl;
+        }
+
+        .ArabicH-story-quote {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-right: 3px solid var(--accent-color);
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: right;
+            direction: rtl;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        [data-theme="dark"] .ArabicH-story-text {
+            color: #f0f5ff;
+            background-color: var(--story-bg);
+            border-right: 4px solid var(--story-border);
+        }
+
+        [data-theme="dark"] .ArabicH-story-quote {
+            background-color: rgba(45, 62, 92, 0.7);
+            color: #f0f5ff;
+        }
+
+        /* Vocabulary table styling */
+        .ArabicH-vocab-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            direction: rtl;
+        }
+
+        .ArabicH-vocab-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .ArabicH-vocab-table td {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            text-align: right;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+
+        .ArabicH-vocab-table tr:nth-child(even) td { background-color: var(--table-even-bg); }
+        .ArabicH-vocab-table tr:hover td { background-color: var(--table-hover-bg); }
+
+        /* Question styling */
+        .ArabicH-question {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 20px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-question-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+        }
+
+        [data-theme="dark"] .ArabicH-question-title { color: var(--accent-color); }
+
+        .ArabicH-question-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+            margin-bottom: 15px;
+        }
+
+        .ArabicH-show-answer-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin-right: auto;
+            margin-left: 0;
+        }
+
+        .ArabicH-show-answer-btn:hover { background-color: var(--accent-color); }
+
+        .ArabicH-answer {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-right: 3px solid var(--accent-color);
+            background-color: var(--definition-bg);
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        /* Special quote styling */
+        .ArabicH-highlighted-quote {
+            background-color: var(--highlight-bg);
+            border-right: 4px solid var(--highlight-color);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            font-style: italic;
+            color: var(--dark-color);
+            text-align: center;
+            direction: rtl;
+            font-weight: 500;
+            font-size: 1.3rem;
+        }
+
+        [data-theme="dark"] .ArabicH-highlighted-quote {
+            background-color: rgba(240, 196, 32, 0.15);
+            color: #f0f5ff;
+        }
+
+        .ArabicH-flower-decoration {
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .ArabicH-knowledge-box {
+            background-color: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin: 25px 0;
+            border-right: 4px solid var(--primary-color);
+            position: relative;
+        }
+
+        .ArabicH-knowledge-box::before {
+            content: "💡";
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 1.5rem;
+            opacity: 0.7;
+        }
+
+        .ArabicH-knowledge-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        [data-theme="dark"] .ArabicH-knowledge-title { color: var(--accent-color); }
+
+        .ArabicH-knowledge-content {
+            line-height: 1.8;
+            color: var(--text-color);
+            text-align: right;
+        }
+
+        .ArabicH-nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .ArabicH-nav-btn:hover { background-color: var(--accent-color); }
+
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title { font-size: 2rem; }
+            .ArabicH-lesson-subtitle { font-size: 1.1rem; }
+            .ArabicH-lesson-container { padding: 1.5rem; }
+            .ArabicH-lesson-header { flex-direction: column; gap: 15px; text-align: center; }
+            .ArabicH-nav-buttons { flex-direction: column; gap: 10px; }
+            .ArabicH-rule-card { padding: 1.2rem; }
+            .ArabicH-rule-title { font-size: 1.2rem; padding-left: 25px; }
+            .ArabicH-rule-card::before { left: 12px; top: 12px; font-size: 1.1rem; }
+            .ArabicH-story-text { font-size: 1.15rem; padding: 20px; line-height: 1.9; }
+        }
+
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main { padding: 1rem; }
+            .ArabicH-lesson-title { font-size: 1.6rem; }
+            .ArabicH-exercise-card { padding: 1rem; }
+            .ArabicH-story-text { font-size: 1.05rem; line-height: 1.8; padding: 15px; }
+            .ArabicH-rule-card { padding: 1rem; }
+            .ArabicH-rule-title { font-size: 1.1rem; padding-left: 22px; }
+            .ArabicH-rule-card::before { left: 10px; top: 10px; font-size: 1rem; }
+        }
+
+        [data-theme="dark"] p,
+        [data-theme="dark"] li,
+        [data-theme="dark"] div:not(.ArabicH-story-text) { color: var(--text-color) !important; }
+        [data-theme="dark"] strong { color: var(--accent-color); }
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) { color: var(--accent-color); }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">🏠</span><span data-i18n="ArabicH.windows.home">الرئيسية</span></a>
+        <a href="authors.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">👨‍🎓</span><span data-i18n="ArabicH.windows.authors">ادباء</span></a>
+        <a href="quotes.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📖</span><span data-i18n="ArabicH.windows.quotes">شواهد</span></a>
+        <a href="resources.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📚</span><span data-i18n="ArabicH.windows.resources">موارد</span></a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.literatureLesson.storyTitle">نص: دمنة يحرش الثور على الأسد (2)</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.literatureLesson.storySubtitle">الدرس الثاني: تحليل نص من كتاب "كليلة ودمنة" لعبد الله بن المقفع</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher"><span class="ArabicH-flower-decoration">❦</span> الاستاذ: غير معروف <span class="ArabicH-flower-decoration">❦</span></div>
+                <div class="ArabicH-lesson-class"><span class="ArabicH-flower-decoration">✿</span> المعهد: غير معروف <span class="ArabicH-flower-decoration">✿</span></div>
+            </div>
+            
+            <!-- Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">التمهيد</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p>لمّا فرغ دمنة من تحريش الأسد على الثور، وعرف أن ما كان يلتمسه قد وقع في نفس الأسد، وأن الأسد سيتحذّر من الثور ويتأهّب له، أراد أن يذهب إلى الثور ليُغريه بالأسد، وأحبّ أن يكون إتيانه إليه من قِبَلِ الأسد مخافة أن يبلغه ذلك فيتأذّى به... فأذن له الأسد في ذلك.</p>
+                </div>
+            </div>
+            
+            <!-- Story Text -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">النص: دمنة يحرش الثور على الأسد</h3>
+                <div class="ArabicH-story-text">
+                    <p>انْطَلَقَ دِمْنَةُ فَدَخَلَ عَلَى شَتْرَبَةَ كَالْكَئِيبِ الْحَزِينِ، فَلَمَّا رَآهُ الثَّوْرُ رَحَّبَ بِهِ وَقَالَ: "مَا كَانَ سَبَبُ انْقِطَاعِكَ عَنِّي فَإِنِّي لَمْ أَرَكَ مُنْذُ أَيَّامٍ؟"</p>
+                    
+                    <div class="ArabicH-story-quote">
+                        قَالَ دِمْنَةُ: «حَدَّثَنِي الْخَبِيرُ الصَّدُوقُ الَّذِي لاَ مِرْيَةَ فِي قَوْلِهِ أَنَّ الأَسَدَ قَالَ لِبَعْضِ أَصْحَابِهِ وَجُلَسَائِهِ: قَدْ أَعْجَبَنِي سِمَنُ الثَّوْرِ وَلَيْسَ لِي إِلَى حَيَاتِهِ حَاجَةٌ، فَأَنَا آكِلُهُ وَمُطْعِمٌ أَصْحَابِي مِنْ لَحْمِهِ. فَلَمَّا بَلَغَنِي هَذَا الْقَوْلُ وَعَرَفْتُ غَدْرَهُ وَسُوءَ عَهْدِهِ أَقْبَلْتُ إِلَيْكَ لِأَقْضِيَ حَقَّكَ وَتَحْتَالَ أَنْتَ لِأَمْرِكَ.»
+                    </div>
+                    
+                    <p>فَلَمَّا سَمِعَ شَتْرَبَةُ كَلاَمَ دِمْنَةَ وَتَذَكَّرَ مَا كَانَ دِمْنَةُ جَعَلَ لَهُ مِنَ الْعَهْدِ وَالْمِيثَاقِ، وَفَكَّرَ فِي أَمْرِ الأَسَدِ ظَنَّ أَنَّ دِمْنَةَ قَدْ صَدَقَهُ وَنَصَحَ لَهُ...</p>
+                    
+                    <div class="ArabicH-story-quote">
+                        وَقَالَ: «لاَ أَظُنُّ الأَسَدَ إِلاَّ قَدْ حُمِلَ عَلَيَّ بِالْكَذِبِ وَشُبِّهَ عَلَيْهِ أَمْرِي، فَإِنْ كَانَ الأَسَدُ قَدْ بَلَغَهُ عَنِّي كَذِبٌ فَصَدَّقَهُ عَلَيَّ وَسَمِعَهُ فِيَّ فَمَا جَرَى عَلَى غَيْرِي يَجْرِي عَلَيَّ، وَإِنْ كَانَ لَمْ يَبْلُغْهُ شَيْءٌ وَأَرَادَ السُّوءَ بِي مِنْ غَيْرِ عِلَّةٍ فَإِنَّ ذَلِكَ لَمِنْ أَعْجَبِ الأُمُورِ. وَإِنْ كَانَ الأَسَدُ قَدِ اعْتَقَدَ عَلَيَّ ذَنْبًا فَلَسْتُ أَعْلَمُهُ إِلاَّ أَنِّي خَالَفْتُهُ فِي بَعْضِ رَأْيِهِ... نَصِيحَةً لَهُ، فَلَعَلَّهُ يَكُونُ قَدْ أَنْزَلَ أَمْرِي عَلَى الْجُرْأَةِ عَلَيْهِ وَالْمُخَالَفَةِ لَهُ.»
+                    </div>
+                    
+                    <div class="ArabicH-story-quote">
+                        قَالَ دِمْنَةُ: «إِنَّ إِرَادَةَ الأَسَدِ بِكَ لَيْسَتْ مِنْ تَحْرِيشِ الأَشْرَارِ... وَلاَ غَيْرِ ذَلِكَ. وَلَكِنَّهَا الْغَدْرُ وَالْفُجُورُ مِنْهُ، فَإِنَّهُ فَاجِرٌ خَوَّانٌ غَدَّارٌ، لِطَعَامِهِ حَلاَوَةٌ وَآخِرُهُ سُمٌّ مُمِيتٌ.»<br><br>
+                        قَالَ شَتْرَبَةُ: «أَرَانِي قَدِ اسْتَلْذَذْتُ الْحَلاَوَةَ إِذْ ذُقْتُهَا، وَقَدِ انْتَهَيْتُ إِلَى آخِرِهَا الَّذِي هُوَ الْمَوْتُ»...<br><br>
+                        قَالَ دِمْنَةُ: «دَعْ عَنْكَ هَذَا الْكَلاَمَ وَاحْتَلْ لِنَفْسِكَ.»<br><br>
+                        قَالَ شَتْرَبَةُ: «بِأَيِّ شَيْءٍ أَحْتَالُ لِنَفْسِي، إِذَا أَرَادَ الأَسَدُ أَكْلِي مَعَ مَا عَرَّفْتَنِي مِنْ رَأْيِ الأَسَدِ وَسُوءِ أَخْلاَقِهِ؟ وَأَعْلَمُ أَنَّهُ لَوْ لَمْ يُرِدْ بِي إِلاَّ خَيْرًا ثُمَّ أَرَادَ أَصْحَابُهُ بِمَكْرِهِمْ وَفُجُورِهِمْ هَلاَكِي لَقَدَرُوا عَلَى ذَلِكَ.»<br><br>
+                        قَالَ دِمْنَةُ: «فَمَاذَا تُرِيدُ أَنْ تَصْنَعَ الآنَ؟»<br><br>
+                        قَالَ شَتْرَبَةُ: «مَا أَرَى إِلاَّ الاِجْتِهَادَ وَالْمُجَاهَدَةَ بِالْقِتَالِ.»<br><br>
+                        قَالَ دِمْنَةُ: «لاَ يَنْبَغِي لِأَحَدٍ أَنْ يُخَاطِرَ بِنَفْسِهِ وَهُوَ يَسْتَطِيعُ غَيْرَ ذَلِكَ، وَلَكِنَّ ذَا الرَّأْيِ جَاعِلٌ الْقِتَالَ آخِرَ الْحِيَلِ»...<br><br>
+                        قَالَ شَتْرَبَةُ: «فَمَا أَنَا بِمُقَاتِلِ الأَسَدِ... حَتَّى يَبْدُوَ لِي مِنْهُ مَا أَتَخَوَّفُ فَأُغَالِبَهُ.»
+                    </div>
+                    
+                    <p>فَكَرِهَ دِمْنَةُ قَوْلَهُ، وَعَلِمَ أَنَّ الأَسَدَ إِنْ لَمْ يَرَ مِنَ الثَّوْرِ الْعَلاَمَاتِ الَّتِي كَانَ ذَكَرَهَا لَهُ اتَّهَمَهُ وَأَسَاءَ بِهِ الظَّنَّ، فَقَالَ لِشَتْرَبَةَ: «اذْهَبْ إِلَى الأَسَدِ فَتَعْرِفْ حِينَ يَنْظُرُ إِلَيْكَ مَا يُرِيدُ مِنْكَ.»<br>
+                    قَالَ شَتْرَبَةُ: «وَكَيْفَ أَعْرِفُ ذَلِكَ؟»<br>
+                    قَالَ دِمْنَةُ: «سَتَرَى الأَسَدَ حِينَ تَدْخُلُ عَلَيْهِ مُقْعِيًا عَلَى ذَنَبِهِ، رَافِعًا صَدْرَهُ إِلَيْكَ، مَادًّا بَصَرَهُ نَحْوَكَ، قَدْ صَرَّ أُذُنَيْهِ وَفَغَرَ فَاهُ وَاسْتَوَى لِلْوَثْبَةِ.»<br>
+                    قَالَ: «إِنْ رَأَيْتُ هَذِهِ الْعَلاَمَاتِ مِنَ الأَسَدِ عَرَفْتُ صِدْقَكَ فِي قَوْلِكَ»...</p>
+                    
+                    <p>وَجَاءَ شَتْرَبَةُ فَدَخَلَ عَلَى الأَسَدِ فَرَآهُ مُقْعِيًا كَمَا وَصَفَهُ لَهُ دِمْنَةُ فَقَالَ: «مَا صَاحِبُ السُّلْطَانِ إِلاَّ كَصَاحِبِ الْحَيَّةِ الَّتِي فِي صَدْرِهِ لاَ يَدْرِي مَتَى تَهِيجُ عَلَيْهِ.» ثُمَّ إِنَّ الأَسَدَ نَظَرَ إِلَى الثَّوْرِ فَرَأَى الدَّلاَلاَتِ الَّتِي ذَكَرَهَا لَهُ دِمْنَةُ فَلَمْ يَشُكَّ أَنَّهُ جَاءَ لِقِتَالِهِ، فَوَاثَبَهُ وَنَشَأَتْ بَيْنَهُمَا الْحَرْبُ وَاشْتَدَّ قِتَالُ الأَسَدِ وَالثَّوْرِ وَطَالَ وَسَالَتْ بَيْنَهُمَا الدِّمَاءُ... وَهَلَكَ الثَّوْرُ.</p>
+                </div>
+                <div class="ArabicH-exercise-content" style="text-align: center; margin-top: 15px; color: var(--secondary-color); font-style: italic;">
+                    <strong>المصدر:</strong> عبد الله بن المقفّع، كتاب كليلة ودمنة، طبعة مؤسّسات عبد الكريم بن عبد الله - تونس 1976، صص 118-133
+                </div>
+            </div>
+            
+            <!-- Vocabulary -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">شرح المفردات</h3>
+                <div class="ArabicH-table-container">
+                    <table class="ArabicH-vocab-table">
+                        <thead>
+                            <tr>
+                                <th width="30%">المفردة</th>
+                                <th width="70%">الشرح</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>لا مِرْيَة</strong></td><td>لا شكّ ولا ريب</td></tr>
+                            <tr><td><strong>مُقْعِيًا</strong></td><td>جالساً على مؤخّرته مستوفزاً</td></tr>
+                            <tr><td><strong>صَرَّ أُذُنَيْهِ</strong></td><td>ضمّ أذنيه إلى رأسه وجمعهما، وهي علامة تهيّؤ وتركيز</td></tr>
+                            <tr><td><strong>فَغَرَ فَاهُ</strong></td><td>فتح فمه واسعاً</td></tr>
+                            <tr><td><strong>اسْتَوَى لِلْوَثْبَةِ</strong></td><td>استعدّ للانقضاض والهجوم</td></tr>
+                            <tr><td><strong>الدَّلاَلاَت</strong></td><td>العلامات والإشارات الدالّة</td></tr>
+                            <tr><td><strong>وَاثَبَهُ</strong></td><td>هجم عليه مسرعاً بغير تردّد</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Comprehension Questions -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أفهم</h3>
+                
+                <!-- Q1 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- قسّم النصّ وفق معيار سرد الأحداث وسرد الأقوال.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer1" class="ArabicH-answer">
+                        <p><strong>معيار التقسيم:</strong> التمييز بين ما هو حركة وفعل (سرد الأحداث) وما هو كلام وحوار (سرد الأقوال).</p>
+                        <p><strong>سرد الأحداث:</strong> دخول دمنة على شتربة في هيئة الحزين، ترحيب الثور به وسؤاله عن سبب الغياب، انتقال دمنة بالخبر المُفتعل، تأمّل الثور في نوايا الأسد، ثم وصف دمنة لعلامات الأسد، دخول الثور على الأسد ورؤيته مقعياً، ثم اندلاع القتال وهلاك الثور.</p>
+                        <p><strong>سرد الأقوال:</strong> حوارات دمنة مع الثور، وتأملات شتربة في نوايا الأسد، وما تخلله من استفسار واستشارة حول الحيلة والقتال، وأخيراً قول شتربة الشهير عن صاحب السلطان وصاحب الحية.</p>
+                        <p><strong>ملاحظة:</strong> النص يبني التوتر عبر تداخل السردين؛ فالأقوال هي التي تدفع الأحداث إلى الأمام، والأحداث تخدم الأقوال وتُظهر أثرها.</p>
+                    </div>
+                </div>
+                
+                <!-- Q2 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- حرص الرّاوي على أن تسير الأحداث في الوجهة المحدّدة لها وفق مشروع دمنة. بيّن ذلك واذكر سببه.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer2" class="ArabicH-answer">
+                        <p><strong>بيان ذلك:</strong> يوجّه الراوي الأحداث بدقّة نحو غاية دمنة؛ فهو يجعل كل خطوة من خطوات دمنة تُثمر نتيجتها المرجوّة: إيهام الثور بخبر الأسد، ثم تعميق شكّه عبر تأكيد الغدر، ثم وصف علامات جسدية دقيقة تُطابق ما سيراه الثور فعلاً، وأخيراً إشعال القتال بين الأسد والثور. ولا يترك الراوي أي مفاجأة تُخرج الحدث عن خط دمنة، بل يجعل كل تفصيل خادماً للنتيجة النهائية: هلاك الثور.</p>
+                        <p><strong>السبب:</strong> هذا الحرص يخدم غرضاً فنياً ودلالياً؛ فهو يبرز قوة الحيلة ونجاعتها في تغيير المصير، ويؤكد فكرة أن الشرّ حين يُدبَّر بعقل بارع يصبح قادراً على قلب الموازين، كما يعمّق الوعظ الضمني للحكاية: أن الوشاية الناعمة أخطر من السيف.</p>
+                    </div>
+                </div>
+                
+                <!-- Q3 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">3- ما هي الوظيفة التي يضطلع بها الحوار بين دمنة والثّور في النصّ؟ علّل جوابك.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer3" class="ArabicH-answer">
+                        <p><strong>الوظيفة الأساسية:</strong> الحوار أداة <strong>تحريض وتضليل</strong> في الآن ذاته، وأداة <strong>كشف نفسي</strong> يبيّن من خلالها الراوي ضعف الثور وهشاشة ثقته.</p>
+                        <p><strong>التعليل:</strong></p>
+                        <ul>
+                            <li>عبر الحوار يُلبس دمنة خبره الكاذب ثوب النصيحة الأمينة، فيُوهم الثور بأن مصدره "الخبير الصدوق".</li>
+                            <li>الحوار يُظهر تدرّج الإقناع: من الاستغراب إلى الشك، إلى التسليم والاستشارة، ثم إلى قرار المواجهة.</li>
+                            <li>الحوار يؤكد مأساة العلاقة بين الحاكم والرعية؛ فالثور يطرح سؤالاً مفتاحياً: "بأي شيء أحتال لنفسي؟" فيُظهر عجزه أمام سلطة أعلى منه.</li>
+                            <li>الحوار يهيّئ نفسياً ودرامياً للقتال، إذ تتكثف عبره علامات الأسد التي زرعها دمنة في ذهن الثور، فتصبح الرؤية البصرية للثور مطابقة للصورة التي رسمها له المُحرّض.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Q4 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">4- قارن خطّة دمنة في تحريش الثّور في هذا النصّ بخطّته في تحريش الأسد في النصّ السّابق.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer4" class="ArabicH-answer">
+                        <table class="ArabicH-vocab-table">
+                            <thead>
+                                <tr>
+                                    <th>وجه المقارنة</th>
+                                    <th>تحريش الأسد (النص السابق)</th>
+                                    <th>تحريش الثور (هذا النص)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>الهدف</strong></td>
+                                    <td>الحاكم (الأسد)</td>
+                                    <td>الضحية (الثور)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الوسيلة</strong></td>
+                                    <td>اتهام مباشر بالطمع في الملك، وتغذية الغيرة السلطانية</td>
+                                    <td>إيهام بخطر وشيك، ووصف علامات جسدية للعدوان</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>الآلية النفسية</strong></td>
+                                    <td>إثارة الشك في نيّة المخلص</td>
+                                    <td>إثارة الخوف من الفتك والموت</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>النتيجة</strong></td>
+                                    <td>اتخاذ الأسد موقف الحذر والاستعداد</td>
+                                    <td>اتخاذ الثور قرار المواجهة والقتال</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>الخلاصة:</strong> الخطة في الحالتين واحدة في جوهرها (المكر والوساطة الخفية)، مختلفة في أدواتها (الغيرة في الأولى، الخوف في الثانية). وقد نجح دمنة في الحالتين لأنّه استثمر في كل مرة نقطة ضعف مختلفة: في الأسد كبرياء السلطة، وفي الثور خوف الفناء. وهو في كل الأحوال المحرّك الخفي الذي يحرّك الطرفين إلى صراع لا يريده أحدهما.</p>
+                    </div>
+                </div>
+                
+                <!-- Q5 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">5- هل يمكن أن تعزو هلاك الثّور إلى عيب فيه؟ علّل موقفك وأيّده بحجج من النصّ.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer5')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer5" class="ArabicH-answer">
+                        <p><strong>موقفي:</strong> نعم، يمكن أن يُعزى هلاكه جزئياً إلى عيوب فيه، مع الإقرار بأنّ السبب المباشر يبقى مكر دمنة وغدر الأسد.</p>
+                        <p><strong>الحجج من النص:</strong></p>
+                        <ul>
+                            <li><strong>الثقة الزائدة:</strong> قبل الثور خبر دمنة دون تثبّت، رغم أنه "كان جعل له من العهد والميثاق" ما يوجب الحذر لا التسليم.</li>
+                            <li><strong>سرعة التصديق:</strong> ما إن سمع الخبر حتى "ظنّ أنّ دمنة قد صدقه ونصح له"، ولم يطلب دليلاً حسياً مباشراً من الأسد نفسه.</li>
+                            <li><strong>الاستسلام للخوف:</strong> قال: "أراني قد استلذذت الحلاوة إذ ذقتها وقد انتهيت إلى آخرها الذي هو الموت"، فانطفأت عزيمته قبل المعركة.</li>
+                            <li><strong>العجز عن الحيلة:</strong> أقرّ بلسانه: "بأي شيء أحتال لنفسي؟" فكشف عن افتقاره إلى التدبير.</li>
+                        </ul>
+                        <p>لكن مع ذلك، لا نُحمّل الثور المسؤولية كاملة؛ فالمؤامرة دُبّرت بذكاء، والحاكم نفسه كان طرفاً فيها، والمجتمع (البلاط) لم يوفّر للثور من ينصحه بصدق.</p>
+                    </div>
+                </div>
+                
+                <!-- Q6 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">6- استخلص من سلوك دمنة ما ينبغي أن يحتاط به الإنسان من النّمّام.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer6')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer6" class="ArabicH-answer">
+                        <p>يُعلّمنا سلوك دمنة جملة من قواعد الحيطة، منها:</p>
+                        <ul>
+                            <li><strong>الحذر من التودّد المفاجئ:</strong> فدمنة دخل على الثور "كالئيب الحزين" ليُخفي نواياه خلف قناع الشفقة.</li>
+                            <li><strong>التثبت من مصدر الخبر:</strong> فالنمام يُخفي مصدره غالباً بكلمات مثل "الخبير الصدوق" ليمنح نفسه مصداقية زائفة.</li>
+                            <li><strong>عدم الاستسلام للظنون:</strong> فالشك بلا دليل يفتح الباب للتلاعب.</li>
+                            <li><strong>مقارنة الأقوال بالأفعال:</strong> فالأسد لم يقل شيئاً للثور مباشرة، فكان الأولى بالثور أن يتحقق بنفسه.</li>
+                            <li><strong>مراجعة النوايا في ضوء السوابق:</strong> فدمنة كان قد أظهر سابقاً أنه من أهل المكر، فالثقة به كانت مجازفة.</li>
+                        </ul>
+                        <p>الخلاصة: أن النمّام لا يُكشف بالكلام بل بالآثار، وأن الحكمة تقتضي التمهل قبل الحكم على الآخرين بناءً على وسيط.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Discussion -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أناقش</h3>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">■ شخصيّات هذا النصّ حيوانيّة ولكنّها تتصرّف كالبشر تماماً. لماذا لم يجعلها المؤلّف شخصيّات آدميّة؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer7')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer7" class="ArabicH-answer">
+                        <p>يمكن تفسير اختيار الشخصيات الحيوانية بأسباب عدة، منها:</p>
+                        <ul>
+                            <li><strong>النقد غير المباشر:</strong> الشخصيات الحيوانية تمنح المؤلف مساحة آمنة لانتقاد السلطة والحاشية والفساد السياسي، دون التعرض لسلطة الحكام مباشرة.</li>
+                            <li><strong>الطابع الرمزي:</strong> الحيوانات تحمل دلالات ثابتة في المخيلة الشعبية (الأسد = الملك، الثور = الرعية الطيبة، الثعلب = المكر)، فيسهل على القارئ فهم الرموز دون شرح.</li>
+                            <li><strong>العبرة العامة:</strong> الحكاية الحيوانية تصلح لكل زمان ومكان، ولا تُقيَّد بزمن أو مجتمع معيّن.</li>
+                            <li><strong>المتعة الفنية:</strong> الحيوانات تضفي على النص طرافة وخيالاً يُحبّبان المتلقي في القراءة.</li>
+                            <li><strong>تجنب الحساسيات الأخلاقية:</strong> الكلام على ألسنة الحيوانات يخفف حدة الاتهام عندما يكون موجهاً لأخلاق البشر.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">■ ما هي الشّروط التي تراها ضروريّة في الحوار حتّى يتحقّق الوئام بين البشر؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer8')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer8" class="ArabicH-answer">
+                        <p>في نظري، يقوم الحوار المثمر على جملة شروط:</p>
+                        <ol>
+                            <li><strong>الاحترام المتبادل:</strong> أن يجد كل طرف في interlocutor الآخر نِدّاً يستحق الإصغاء.</li>
+                            <li><strong>الإنصات الفعّال:</strong> فهم ما يقوله الآخر قبل الرد عليه، لتجنب سوء الفهم.</li>
+                            <li><strong>الصدق والوضوح:</strong> أن يقول كل طرف ما يعنيه دون مراوغة أو تمويه.</li>
+                            <li><strong>النية الطيبة:</strong> أن يكون الهدف التفاهم لا الانتصار والغلبة.</li>
+                            <li><strong>المرونة والتسامح:</strong> تقبّل الاختلاف والقدرة على تغيير الموقف.</li>
+                            <li><strong>الفصل بين الشخص والفكرة:</strong> نقد الرأي دون تجريح بصاحبه.</li>
+                        </ol>
+                        <p>هذه الشروط تحوّل الحوار من صراع إلى تفاهم، وتُرسّخ ثقافة التعايش، وتقلل من مساحة النميمة والتحريض التي تفتك بالعلاقات.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Writing -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أحرّر</h3>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- تخيّل أنّ الثّور لم يقتنع بكلام دمنة، فكيف يردّ عليه؟ حرّر في ذلك خمسة أسطر.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer9')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer9" class="ArabicH-answer">
+                        <p>لو لم يقتنع الثور بكلام دمنة، لردّ عليه ردّاً حصيفاً قائلاً: "مهلاً يا دمنة، خبرك هذا غير محكم البنيان؛ فقد جئتني بالقول من وراء ستار، ولم تأتني ببرهان. الأسد لم يُبدِ لي في مجلسه ما يُنذر، وإن كان في صدره شيء ففعله أصدق من قولك. وما كنت لأقطع عهداً قديماً بوشاية طارئة. دع الأيام تكشف ما تخفيه، وإن كنت صادقاً فستظهر الحقيقة بلا وساطة، وإن كنت كاذباً فسيقتلك مكرك الذي دبّرته."</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- ابن حواراً من عشر مخاطبات بين الأسد والثّور لحظة التقائهما واختمه بالكشف عن نميمة دمنة.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer10')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer10" class="ArabicH-answer">
+                        <p><strong>نموذج الحوار:</strong></p>
+                        <p>شتربة: "مولاي، أرى في جلستك ما لم أعهده من قبل، فهل حدث ما يوجب التوجّس؟"</p>
+                        <p>الأسد: "بل أنا الذي يسألك: ما الذي جاء بك إليّ وأنت على غير عادتك من الطمأنينة؟"</p>
+                        <p>شتربة: "جئت خادماً أميناً، كما كنت دائماً، فما الذي غيّر ظنك بي؟"</p>
+                        <p>الأسد: "بلغني أنك تُضمر لي غير ما تُظهر، وأنك تطمع في مجلسي."</p>
+                        <p>شتربة: "ومن ذا الذي حمل إليك هذا البلاغ؟"</p>
+                        <p>الأسد: "أخبرني به من لا أتهم قوله في مجلسي."</p>
+                        <p>شتربة: "لا أقبل البلاغ مجهولاً يا مولاي، فاكشف لي المصدر أُجبك بيقين."</p>
+                        <p>الأسد: "دمنة هو الذي حمل إليّ هذا الخبر، وزعم أنه من خبيره الصدوق."</p>
+                        <p>شتربة: "دمنة؟ لقد كان عندي منذ أيام، وحمل إليّ خبراً عنك بمثله، فسبحان من جعل النمام يوقع بين الحبيبين!"</p>
+                        <p>الأسد: "ويحك! فكيف غفلت أنا وأنت عن مكر هذا الماكر؟"</p>
+                        <p>شتربة: "هكذا يفتن النمام بين الناس، فالحذر الحذر يا مولاي، والتحقق قبل الحكم."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Context -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">بمناسبة هذا النّصّ</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">القراءة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>السؤال:</strong> قال دمنة: "سترى الأسد حين تدخل عليه مقعياً ... واستوى للوثبة" — اقرأ مقول القول السابق كاملاً مستعيناً بتعابير غير لغوية.</p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer11')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer11" class="ArabicH-answer">
+                            <p>مقولة دمنة هذه تحمل إيحاءات حركية وبصرية كثيرة، يمكن أداؤها بتعابير غير لغوية، منها:</p>
+                            <ul>
+                                <li><strong>وضعية الجسد:</strong> يُمثّل المُلقي جلسة الأسد "المُقْعِي" بجلوس على مؤخّرته واستناد إلى ذراعيه، في إشارة إلى التهيّؤ والتربّص.</li>
+                                <li><strong>النظرات:</strong> توجيه العينين بحدّة وثبات نحو المتلقي، "مادًّا بصره نحوك".</li>
+                                <li><strong>حركة الأذنين:</strong> محاكاة "صرّ الأذنين" بضمهما إلى الرأس، وهي علامة تركيز وتوتّر.</li>
+                                <li><strong>فتح الفم:</strong> فتح الفم قليلاً عند "فغر فاه" للدلالة على التهيّؤ للانقضاض.</li>
+                                <li><strong>شدّ العضلات:</strong> الوقوف المتوتّر الذي يحاكي "استوى للوثبة" أي الاستعداد للانقضاض.</li>
+                            </ul>
+                            <p>هذه التعابير الجسدية تنقل صورة الأسد المتخيّلة في ذهن الثور، وتُظهر كيف تحوّلت كلمات دمنة إلى مشهد حي يزرع الخوف ويحرّك القرار.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الحقل المعجمي</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>ابحث عن الكلمات التي تنتمي إلى مجال "الأخلاق".</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer12')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer12" class="ArabicH-answer">
+                            <p>من النص نجد كلمات كثيرة تنتمي إلى مجال الأخلاق، منها:</p>
+                            <ul>
+                                <li><strong>الصدق</strong> (الصدوق)</li>
+                                <li><strong>النصيحة</strong> (نصح له)</li>
+                                <li><strong>العهد والميثاق</strong></li>
+                                <li><strong>الغدر</strong></li>
+                                <li><strong>الخيانة</strong> (خوان)</li>
+                                <li><strong>الفجور</strong> (فاجر)</li>
+                                <li><strong>المكر</strong></li>
+                                <li><strong>الحيلة</strong> (يحتال)</li>
+                                <li><strong>الثقة</strong></li>
+                                <li><strong>الوفاء</strong> (الوفاء بالعهد)</li>
+                            </ul>
+                            <p>وهذه الكلمات تدور بين قيم إيجابية (الصدق، النصيحة، الوفاء) وقيم سلبية (الغدر، الخيانة، الفجور، المكر)، وهو ما يعكس الصراع الأخلاقي الذي يقوم عليه النص.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">البحث</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>ابحث عن أهمّ الأحداث في باب الأسد والثور من كتاب كليلة ودمنة، وتبيّن مقصد المؤلّف من هذا الباب.</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer13')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer13" class="ArabicH-answer">
+                            <p><strong>أهم أحداث الباب:</strong></p>
+                            <ol>
+                                <li>لقاء الأسد بالثور شتربة، وإعجابه بحكمته وقوته، فينشأ بينهما ودّ وثيق.</li>
+                                <li>غيرة دمنة من قرب الثور من الملك، وبداية تدبير مؤامرته.</li>
+                                <li>المرحلة الأولى من المؤامرة: تحريش الأسد على الثور، وتصويره له طامعاً في الملك.</li>
+                                <li>المرحلة الثانية: تحريش الثور على الأسد، وإيهامه بأن الأسد ينوي قتله.</li>
+                                <li>اللقاء الدامي بين الأسد والثور، ومقتل الثور.</li>
+                                <li>انكشاف مكر دمنة لاحقاً، وعقابه على ما دبّر.</li>
+                            </ol>
+                            <p><strong>مقصد المؤلف:</strong> يهدف ابن المقفع من هذا الباب إلى:</p>
+                            <ul>
+                                <li><strong>التحذير من الوشاية والنميمة</strong> في بلاط السلطان، وبيان خطورتها في تفكيك العلاقات.</li>
+                                <li><strong>نقد الحاشية الفاسدة</strong> التي تسعى إلى السلطة عبر المكر لا الكفاءة.</li>
+                                <li><strong>الدعوة إلى التثبت</strong> وعدم الانقياد للأخبار دون تحقّق.</li>
+                                <li><strong>بيان هشاشة الثقة</strong> في العلاقات السياسية حين يغيب العقل والحكمة.</li>
+                                <li><strong>تقديم درس أخلاقي عام:</strong> أن الشرّ لا ينتصر في النهاية، وأن المكر ينكشف، لكن بعد فوات الأوان.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Know Section -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أعرف</h3>
+                
+                <!-- Linguistic Glimpse -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ومضة لغوية: المركّب شبه الإسنادي</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>1- "فأنا آكلُهُ ومُطْعِمٌ أصحابي من لحمه":</strong></p>
+                        <p>هذا مركّب شبه إسنادي، اقتضى فيه اسم الفاعل "مُطعِم" مفعولين: "أصحابي" و"من لحمه" (المفعول الثاني جار ومجرور متعلق بالمفعول الثاني المحذوف).</p>
+                        <p><strong>2- "فما أنا بمُقاتِلِ الأسد":</strong></p>
+                        <p><strong>التحليل النحوي:</strong></p>
+                        <ul>
+                            <li><strong>الفاء:</strong> حرف عطف.</li>
+                            <li><strong>ما:</strong> حرف نفي (حجازي) يعمل عمل "ليس".</li>
+                            <li><strong>أنا:</strong> ضمير منفصل مبني في محل رفع اسم "ما".</li>
+                            <li><strong>الباء:</strong> حرف جر زائد لتأكيد النفي.</li>
+                            <li><strong>مقاتلِ:</strong> خبر "ما" منصوب محلاً، مجرور لفظاً بالباء، وهو مضاف.</li>
+                            <li><strong>الأسد:</strong> مضاف إليه مجرور.</li>
+                        </ul>
+                        <p>ويُلاحظ أن "مقاتِل" اسم فاعل يعمل عمل الفعل، ولو وُجد مفعول به لنصبه، لكنه هنا اكتفى بمضاف إليه.</p>
+                    </div>
+                </div>
+                
+                <!-- Rhetorical Glimpse -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ومضة بلاغية: أسلوب الحصر</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>المثال:</strong> "ما صاحبُ السلطان إلاّ كصاحب الحيّة".</p>
+                        <p><strong>التحليل:</strong> حصر شتربة صورة "صاحب السلطان" في صورة "صاحب الحية"، أي قصرها عليها قصراً لا يقبل المشاركة. والتركيب الحصري هنا مبني على النفي ("ما") والاستثناء ("إلا")، فأفاد التوكيد والقصر معاً.</p>
+                        <p><strong>القاعدة:</strong> يُستعمل تركيب الحصر بـ"ما... إلا" لتأكيد الخبر وقصره على المخبر عنه، مثل قول شتربة أيضاً: "ما أرى إلا الاجتهاد".</p>
+                        <p><strong>وظيفته البلاغية:</strong> تقرير المعنى في ذهن المتلقي، وإزالة كل احتمال آخر، وإضفاء طابع الحكمة والمبالغة في التصوير (فالسلطان خطير كالحية التي لا يُأمن مكرها).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Analysis Section -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">قسم التحليل: مباني ومضامين</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">التقديم والتأطير</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>نص "دمنة يحرش الثور على الأسد" هو الحلقة الثانية من الحكاية المثلية التي بدأت في النص السابق. فبعد أن نجح دمنة في زرع الشك في نفس الأسد، ينتقل إلى المرحلة المكمّلة من مشروعه: تحريض الثور على الأسد، ليُتمّ بذلك دائرة المؤامرة ويُشعل الصراع بين الطرفين.</p>
+                        <p>النص ينتمي إلى <strong>المحور الثاني: الحكاية المثلية</strong>، ويواصل فيه ابن المقفع بناء درسه السياسي والأخلاقي حول خطر النميمة والوشاية في بلاط السلطان.</p>
+                        <p><strong>الموضوع:</strong> تحريض دمنة للثور شتربة على الأسد عبر الخداع والوشاية، مما يؤدي إلى صراع ينتهي بهلاك الثور.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الوحدات (المعيار: سرد الأحداث / سرد الأقوال)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul>
+                            <li><strong>سرد الأحداث:</strong> يظهر في لحظات الحركة والتحول: دخول دمنة على الثور، انتقاله بالخبر المُفتعل، دخول الثور على الأسد، رؤيته العلامات، اندلاع القتال، وهلاك الثور.</li>
+                            <li><strong>سرد الأقوال:</strong> يتمثل في حوارات دمنة مع الثور، وتأملات شتربة في نوايا الأسد، وتبادل الرأي حول الحيلة والقتال، وقول شتربة الأخير عن صاحب السلطان.</li>
+                        </ul>
+                        <p>ويتداخل السردان: فالأقوال تدفع الأحداث، والأحداث تخدم الأقوال، ويُخرج التداخل نصاً درامياً متكاملاً.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تحليل المقاطع</h4>
+                    <div class="ArabicH-exercise-content">
+                        <h5 style="color: var(--primary-color); margin: 15px 0 10px 0;">المقطع الأول: دمنة يزرع الخبر المُفتعل في نفس الثور</h5>
+                        <p><strong>مقوماته:</strong></p>
+                        <ul>
+                            <li><strong>التمويه:</strong> دخول دمنة "كالئيب الحزين" لخلق انطباع الصدق والشفقة.</li>
+                            <li><strong>الاستشهاد بمصدر مجهول:</strong> "الخبير الصدوق الذي لا مرية في قوله" – تقنية نمّامية كلاسيكية.</li>
+                            <li><strong>الإغراء بالخبر:</strong> تصوير الأسد طامعاً في سمن الثور، ومن ثمّ "غدره وسوء عهده".</li>
+                        </ul>
+                        <p><strong>الدلالات:</strong> يُظهر هذا المقطع كيف يتخفّى الشرّ في ثوب النصيحة، وأن كلمة واحدة موضوعة في موضعها قادرة على قلب الثقة إلى شك.</p>
+                        
+                        <h5 style="color: var(--primary-color); margin: 20px 0 10px 0;">المقطع الثاني: تأمّل الثور وتردّده</h5>
+                        <p><strong>مقوماته:</strong></p>
+                        <ul>
+                            <li><strong>المونولوج الداخلي:</strong> يفكر الثور في احتمالات عدة: كذب نُقل للأسد، أو سوء نية من الأسد بلا علة، أو مخالفة سابقة في الرأي.</li>
+                            <li><strong>النزعة التبريرية:</strong> يحاول الثور أن يجد تفسيراً معقولاً لموقف الأسد، فيكشف عن طيبته وحسن ظنه.</li>
+                        </ul>
+                        <p><strong>الدلالات:</strong> يكشف المقطع عن شخصية الثور: عقلانية محدودة، ورغبة في الحفاظ على الودّ، وخوف من المواجهة. وهو ما يستغله دمنة بعد ذلك للضغط عليه.</p>
+                        
+                        <h5 style="color: var(--primary-color); margin: 20px 0 10px 0;">المقطع الثالث: دمنة يُحكم الخناق على الثور</h5>
+                        <p><strong>مقوماته:</strong></p>
+                        <ul>
+                            <li><strong>تكرار تأكيد الغدر:</strong> "فإنه فاجر خوان غدار"، "لطعامه حلاوة وآخره سم مميت".</li>
+                            <li><strong>الضغط النفسي:</strong> "دع عنك هذا الكلام واحتل لنفسك" – يحرمه من فرصة التريث.</li>
+                            <li><strong>إغلاق الأبواب:</strong> "لا ينبغي لأحد أن يخاطر بنفسه وهو يستطيع غير ذلك" – ليُضعف خيار القتال المباشر.</li>
+                        </ul>
+                        <p><strong>الدلالات:</strong> يُظهر المقطع براعة دمنة في التنقل بين خيارين: تحريض على القتال، ثم تحذير منه، حتى يُوقع الثور في فخ "العلامات" التي سيراها في الأسد حتماً.</p>
+                        
+                        <h5 style="color: var(--primary-color); margin: 20px 0 10px 0;">المقطع الرابع: الوصف الخادع والقتال الدامي</h5>
+                        <p><strong>مقوماته:</strong></p>
+                        <ul>
+                            <li><strong>الوصف التقني:</strong> علامات جسدية دقيقة (مُقعياً، رافعاً صدره، مادًّا بصره، صارًّا أذنيه، فاغراً فاه، مستوياً للوثبة) – صورة متكاملة تُغري بالتصديق.</li>
+                            <li><strong>المفارقة:</strong> الثور يصدّق دمنة على العلامات، والعلامات تحدث فعلاً (لأن الأسد كان قد استعد للقتال بسبب تحريش دمنة الأول)، فيقع الثور في فخ منطقي محكم.</li>
+                            <li><strong>الخاتمة المأساوية:</strong> "وسالت بينهما الدماء... وهلك الثور".</li>
+                        </ul>
+                        <p><strong>الدلالات:</strong> بلغت الحيلة ذروتها حين جعلت النبوءة الكاذبة تتحقق بأسبابها المصطنعة؛ فأصبح الخداع ذاتي التحقق، وصار الضحية شريكاً في صناعة هلاكه دون وعي منه.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المبنى (الشكل)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ol>
+                            <li><strong>الحوار:</strong> هو العمود الفقري للنص، به يُبنى الإقناع ويكشف التلاعب.</li>
+                            <li><strong>الوصف:</strong> يخدم الحبكة عبر العلامات الجسدية للأسد.</li>
+                            <li><strong>اللغة:</strong> جزلة واضحة، معجمها أخلاقي (الغدر، الفجور، الخيانة) ونفسي (الظن، الخوف، الحيرة).</li>
+                            <li><strong>الأساليب:</strong> مزج بين الخبر والإنشاء (استفهام، أمر، نفي حصري).</li>
+                            <li><strong>التكرار:</strong> تكرار تأكيد غدر الأسد لترسيخ الإقناع.</li>
+                            <li><strong>البناء الفني:</strong> تمهيد – إقناع – تحريض – قتال – هلاك.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المضمون (المعنى)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ol>
+                            <li><strong>خطر النميمة:</strong> كلمة واحدة كافية لهدم علاقة قديمة.</li>
+                            <li><strong>المكر السياسي:</strong> الحاشية الفاسدة تستخدم الكلام سلاحاً.</li>
+                            <li><strong>ضعف الثقة:</strong> الثقة بلا تثبت تكون وبالاً على صاحبها.</li>
+                            <li><strong>الخوف كمحرّك للقرار:</strong> الثور قاد نفسه إلى القتال خوفاً من الموت، فوقع فيه.</li>
+                            <li><strong>الحكمة والاحتياط:</strong> العاقل يجعل القتال آخر الحيل، ويتحقق قبل التصديق.</li>
+                            <li><strong>هشاشة موقع الرعية:</strong> الثور يرمز للضعيف الذي يقع ضحية صراع السلطة والحاشية.</li>
+                            <li><strong>انتصار الحيلة المؤقت:</strong> دمنة ينتصر في الحاضر، لكن الباب ينتهي بكشف مكره وعقابه (عدالة مؤجلة).</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الخاتمة التحليلية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>يُكمل نص "دمنة يحرش الثور على الأسد" بناء الحكاية المثلية الكبرى في كليلة ودمنة، فيُظهر كيف يستطيع الماكر أن يوقع بين أعظم قوتين في الغابة. وقد جمع النص بين براعة الحوار، ودقة الوصف، والتدرّج الدرامي، ليُقدّم درساً بليغاً في السياسة والأخلاق: أن النميمة أخطر من السيف، وأن الثقة بلا تثبت هلاك، وأن الحيلة قد تنتصر حين تُصادف طيبةً ساذجة أو سلطةً غافلة. لكن النص يُطمئن المتلقي في العمق: أن المكر مهما طال انكشف، وأن العبرة لا تُستخلص إلا بعد فوات الأوان، فمن وعاها قبل الفوات فقد أخذ حظه من الحكمة.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Writing Section -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">قسم التحرير: تحويل التحليل إلى مقال (مقدمة - جوهر - خاتمة)</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">مقال تحليلي: الحيلة تُكمل دائرتها – قراءة في نص "دمنة يحرش الثور على الأسد"</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>مقدمة:</strong></p>
+                        <p>إذا كان النص السابق قد كشف عن الوجه الأول من مؤامرة دمنة (تحريش الحاكم على الرعية)، فإن هذا النص يكشف عن وجهها الثاني (تحريش الرعية على الحاكم)، ليُكمل بذلك دائرة الحيلة ويُغلقها على الضحية المغلوبة. وبذلك ينتقل النص من الخداع الفردي إلى المأساة الجماعية، ومن الوشاية إلى القتل.</p>
+                        
+                        <p><strong>الجوهر:</strong></p>
+                        <p>يبدأ النص بمشهد تمثيلي بارع: دمنة يدخل على الثور "كالئيب الحزين"، فيُلبس المكر ثوب الشفقة، ويُخفي النية الخبيثة تحت قناع النصيحة. ثم ينتقل إلى زرع الخبر المُفتعل في نفس شتربة، مستنداً إلى مصدر مجهول يحمل صفة "الخبير الصدوق" ليمنح كلامه مصداقية كاذبة. فيتلقى الثور الخبر بقلق، ويبدأ في تأمّل نوايا الأسد، محاولاً العثور على تفسير عقلاني يخفف وقع الصدمة.</p>
+                        
+                        <p>ثم يُشدد دمنة الخناق على الثور بخطاب تحريضي لا يترك له فرصة التريث: يُؤكد غدر الأسد، ويُشبّه لحمه بالحلاوة وسُمّه بالسمّ المميت، ويُغلق أمامه باب القتال المباشر بحجة "الحكمة" حتى يدفعه إلى الطريق الذي يريده. ثم يمنحه دمنة "علامات" جسدية دقيقة سيراها في الأسد حين يلقاه، والعلامات ستحدث فعلاً لأن الأسد كان قد استعد للقتال بفعل التحريش الأول، فيقع الثور في فخ منطقي محكم: النبوءة تتحقق بأسبابها المصطنعة، فيتحوّل الخداع إلى قدر محتوم.</p>
+                        
+                        <p>وتنتهي الحكاية بمشهد دموي: الأسد يرى في الثور ما يدل على العدوان، فينقض عليه، ويقتتلا حتى يهلك الثور. وهكذا تنتصر الحيلة على الطيبة، ويُثبت النص أن الكلمة أخطر من السيف، وأن النميمة لا تُظهر سلاحها حتى تنفذ إلى القلب.</p>
+                        
+                        <p><strong>خاتمة:</strong></p>
+                        <p>يظل نص "دمنة يحرش الثور على الأسد" درساً خالداً في الحكمة السياسية والأخلاقية. فهو يُحذّر من الوشاية، ويدعو إلى التثبت، ويربي في المتلقي ملكة الفطنة والاحتياط. كما أنه يُصوّر مأساة الرعية حين تتحوّل إلى لعبة في يد الحاشية الماكرة، ويُقدّم صورةً رمزية لواقع سياسي يتكرّر في كل زمان ومكان: أن الكلمة المُنمّمة قد تهدم أعظم العلاقات، وأن العاقل هو من يزن الكلام بميزان العقل قبل أن يتحرك بميزان العاطفة.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                    <span class="ArabicH-flower-decoration">✎</span> 
+                    <span class="ArabicH-flower-decoration">✍</span> 
+                    <span class="ArabicH-flower-decoration">✎</span>
+                </p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_1SY_literature_module2_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.previousLesson">الدرس السابق</a>
+                <a href="AH_1SY_literature_module2_lesson3.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        window.translations_ArabicHLiteratureModule2Lesson2 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.literatureLesson.storyTitle": "نص: دمنة يحرش الثور على الأسد (2)",
+                "ArabicH.literatureLesson.storySubtitle": "الدرس الثاني: تحليل نص من كتاب 'كليلة ودمنة' لعبد الله بن المقفع",
+                "ArabicH.literatureLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.literatureLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.literatureLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.literatureLesson.previousLesson": "الدرس السابق",
+                "ArabicH.literatureLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.literatureLesson.storyTitle": "Text: Dimna Incites the Bull Against the Lion (2)",
+                "ArabicH.literatureLesson.storySubtitle": "Lesson 2: Analysis of a Text from 'Kalila wa Dimna' by Abdullah Ibn al-Muqaffa",
+                "ArabicH.literatureLesson.showAnswer": "Show Answer",
+                "ArabicH.literatureLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.literatureLesson.backToHome": "Back to Homepage",
+                "ArabicH.literatureLesson.previousLesson": "Previous Lesson",
+                "ArabicH.literatureLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.literatureLesson.storyTitle": "Texte: Dimna Incite le Taureau Contre le Lion (2)",
+                "ArabicH.literatureLesson.storySubtitle": "Leçon 2: Analyse d'un texte du 'Kalila wa Dimna' d'Abdullah Ibn al-Muqaffa",
+                "ArabicH.literatureLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.literatureLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.literatureLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.literatureLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.literatureLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHLiteratureModule2Lesson2;
+    </script>
+    
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            const showText = button.getAttribute('data-i18n-show') || 'إظهار الإجابة';
+            const hideText = button.getAttribute('data-i18n-hide') || 'إخفاء الإجابة';
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = showText;
+            } else {
+                answer.style.display = "block";
+                button.textContent = hideText;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) { item.classList.add('active'); } else { item.classList.remove('active'); }
+            });
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => { button.setAttribute('data-i18n-value', button.textContent); });
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); themeToggle.checked = true; }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+                    else { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+                });
+            }
+        });
+    </script>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() { navigator.serviceWorker.register('/sw.js').then(r => console.log('SW registered')).catch(e => console.log('SW failed')); });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; if (manualInstallBtn) manualInstallBtn.style.display = 'flex'; });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') { manualInstallBtn.style.display = 'none'; deferredPrompt = null; }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

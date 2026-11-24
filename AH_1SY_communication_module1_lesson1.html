@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل شفوي: من تبعات تطوّر نمط الحياة - الدرس الأول | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2a7f7f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="من تبعات تطوّر نمط الحياة">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* ====== New Teal Communication Theme ====== */
+        :root {
+            --primary-color: #2a7f7f;
+            --secondary-color: #3d9d9d;
+            --accent-color: #6fc2c2;
+            --light-color: #e8f5f5;
+            --dark-color: #1a4d4d;
+            --text-color: #21393a;
+            --heading-color: #10292a;
+            --background-color: #f5fbfb;
+            --card-bg: #ffffff;
+            --definition-bg: #e0f2f2;
+            --border-color: #b3dcdc;
+            --table-even-bg: #e8f5f5;
+            --table-hover-bg: #d4eeee;
+            --border-radius: 16px;
+            --box-shadow: 0 8px 24px rgba(42, 127, 127, 0.12);
+            --gradient-primary: linear-gradient(135deg, #2a7f7f 0%, #1a4d4d 100%);
+            --gradient-secondary: linear-gradient(135deg, #3d9d9d 0%, #2a7f7f 100%);
+            --gradient-accent: linear-gradient(135deg, #6fc2c2 0%, #3d9d9d 100%);
+            --gradient-light: linear-gradient(135deg, #e8f5f5 0%, #e0f2f2 100%);
+            --highlight-color: #e8a41c;
+            --highlight-bg: rgba(232, 164, 28, 0.1);
+            --bubble-1-bg: #e0f2f2;
+            --bubble-2-bg: #fff4e0;
+            --bubble-3-bg: #e8f0fb;
+            --bubble-4-bg: #fce8ec;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #3d9d9d;
+            --secondary-color: #6fc2c2;
+            --accent-color: #9ddcdc;
+            --light-color: #1a4d4d;
+            --dark-color: #10292a;
+            --text-color: #e0f2f2;
+            --heading-color: #f5fbfb;
+            --background-color: #10292a;
+            --card-bg: #1a4d4d;
+            --definition-bg: #2a7f7f;
+            --border-color: #3d9d9d;
+            --table-even-bg: #1a4d4d;
+            --table-hover-bg: #2a7f7f;
+            --box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #3d9d9d 0%, #2a7f7f 100%);
+            --gradient-secondary: linear-gradient(135deg, #6fc2c2 0%, #3d9d9d 100%);
+            --gradient-accent: linear-gradient(135deg, #9ddcdc 0%, #6fc2c2 100%);
+            --gradient-light: linear-gradient(135deg, #1a4d4d 0%, #10292a 100%);
+            --highlight-color: #f0b93a;
+            --highlight-bg: rgba(240, 185, 58, 0.15);
+            --bubble-1-bg: rgba(61, 157, 157, 0.25);
+            --bubble-2-bg: rgba(232, 164, 28, 0.18);
+            --bubble-3-bg: rgba(100, 149, 237, 0.18);
+            --bubble-4-bg: rgba(220, 120, 150, 0.18);
+        }
+
+        /* ====== Page Layout ====== */
+        .ArabicH-lesson-page { min-height: 100vh; background: var(--background-color); display: flex; flex-direction: column; }
+        .ArabicH-lesson-main { flex: 1; display: flex; flex-direction: column; padding: 2rem; max-width: 1100px; margin: 0 auto; width: 100%; }
+        
+        .ArabicH-lesson-title {
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .ArabicH-lesson-subtitle {
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.85;
+        }
+
+        /* ====== Hero Intro Card (unique to communication) ====== */
+        .ArabicH-comm-hero {
+            background: var(--gradient-primary);
+            color: #fff;
+            border-radius: 24px;
+            padding: 2rem 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .ArabicH-comm-hero::after {
+            content: "💬";
+            position: absolute;
+            left: 20px;
+            bottom: -10px;
+            font-size: 8rem;
+            opacity: 0.12;
+            line-height: 1;
+        }
+        .ArabicH-comm-hero h2 {
+            color: #fff;
+            font-size: 1.4rem;
+            margin: 0 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .ArabicH-comm-hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+        .ArabicH-comm-chip {
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.35);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.92rem;
+            backdrop-filter: blur(6px);
+        }
+
+        /* ====== Objectives Grid ====== */
+        .ArabicH-objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 14px;
+            margin-top: 1rem;
+        }
+        .ArabicH-objective-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-right: 5px solid var(--primary-color);
+            border-radius: 12px;
+            padding: 1rem 1.1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            box-shadow: 0 3px 10px rgba(42,127,127,0.06);
+        }
+        .ArabicH-objective-card .num {
+            flex-shrink: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--gradient-accent);
+            color: #fff;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+        .ArabicH-objective-card p {
+            margin: 0;
+            color: var(--text-color);
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        /* ====== Section Titles ====== */
+        .ArabicH-comm-section {
+            margin: 2.2rem 0;
+        }
+        .ArabicH-comm-section-title {
+            font-size: 1.35rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        [data-theme="dark"] .ArabicH-comm-section-title { color: var(--accent-color); }
+        .ArabicH-comm-section-title .icon {
+            font-size: 1.4rem;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--gradient-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-color);
+        }
+
+        /* ====== Reading Text Card ====== */
+        .ArabicH-reading-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            border-top: 5px solid var(--secondary-color);
+            position: relative;
+        }
+        .ArabicH-reading-card .source {
+            display: inline-block;
+            background: var(--definition-bg);
+            color: var(--primary-color);
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .ArabicH-reading-text {
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+            font-size: 1.22rem;
+            line-height: 2.1;
+            color: var(--dark-color);
+            text-align: justify;
+        }
+        [data-theme="dark"] .ArabicH-reading-text { color: #e0f2f2; }
+
+        /* ====== Image Study Section (with Lightbox) ====== */
+        .ArabicH-image-section {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+        @media (max-width: 768px) {
+            .ArabicH-image-section { grid-template-columns: 1fr; }
+        }
+        .ArabicH-image-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            box-shadow: var(--box-shadow);
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+        .ArabicH-image-frame {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: zoom-in;
+            background: var(--definition-bg);
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ArabicH-image-frame img {
+            width: 100%;
+            height: auto;
+            max-height: 460px;
+            object-fit: contain;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .ArabicH-image-frame:hover img { transform: scale(1.03); }
+        .ArabicH-image-caption {
+            margin: 12px 0 4px 0;
+            text-align: center;
+            font-size: 0.92rem;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+        .ArabicH-image-caption strong { color: var(--primary-color); }
+        [data-theme="dark"] .ArabicH-image-caption strong { color: var(--accent-color); }
+        .ArabicH-image-hint {
+            text-align: center;
+            font-size: 0.82rem;
+            color: var(--text-color);
+            opacity: 0.75;
+            margin: 4px 0 0 0;
+        }
+        .ArabicH-image-hint .kbd {
+            display: inline-block;
+            background: var(--definition-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1px 7px;
+            font-family: monospace;
+            font-size: 0.78rem;
+            margin: 0 2px;
+        }
+        .ArabicH-zoom-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: var(--gradient-accent);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            pointer-events: none;
+        }
+
+        /* ====== Study Guide Card ====== */
+        .ArabicH-study-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 1.4rem;
+            box-shadow: var(--box-shadow);
+            border: 1px solid var(--border-color);
+            border-right: 5px solid var(--highlight-color);
+        }
+        .ArabicH-study-card h4 {
+            margin: 0 0 12px 0;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        [data-theme="dark"] .ArabicH-study-card h4 { color: var(--accent-color); }
+        .ArabicH-study-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .ArabicH-study-list li {
+            background: var(--definition-bg);
+            border-radius: 10px;
+            padding: 10px 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: var(--text-color);
+            font-size: 0.94rem;
+            line-height: 1.6;
+        }
+        .ArabicH-study-list li::before {
+            content: "💬";
+            flex-shrink: 0;
+            font-size: 1rem;
+        }
+        .ArabicH-study-list li.symbol::before { content: "🔍"; }
+        .ArabicH-study-list li.activity::before { content: "✍️"; }
+
+        /* ====== Lightbox Modal ====== */
+        .ArabicH-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(10, 29, 30, 0.94);
+            backdrop-filter: blur(6px);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+        .ArabicH-lightbox.active { display: flex; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .ArabicH-lightbox-inner {
+            position: relative;
+            max-width: 95vw;
+            max-height: 92vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .ArabicH-lightbox-img-wrap {
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+            max-width: 90vw;
+            max-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #111;
+            cursor: grab;
+            position: relative;
+        }
+        .ArabicH-lightbox-img-wrap:active { cursor: grabbing; }
+        .ArabicH-lightbox-img {
+            max-width: 90vw;
+            max-height: 80vh;
+            transition: transform 0.25s ease;
+            user-select: none;
+            -webkit-user-drag: none;
+            display: block;
+        }
+        .ArabicH-lightbox-caption {
+            color: #e0f2f2;
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: 600;
+            max-width: 700px;
+        }
+        .ArabicH-lightbox-toolbar {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: rgba(255,255,255,0.08);
+            padding: 8px 14px;
+            border-radius: 40px;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+        }
+        .ArabicH-lb-btn {
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.25);
+            color: #fff;
+            padding: 8px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        .ArabicH-lb-btn:hover {
+            background: var(--accent-color);
+            color: #fff;
+            border-color: var(--accent-color);
+            transform: translateY(-1px);
+        }
+        .ArabicH-lb-btn .zoom-level {
+            background: rgba(0,0,0,0.3);
+            padding: 1px 8px;
+            border-radius: 10px;
+            font-size: 0.78rem;
+            min-width: 46px;
+            text-align: center;
+        }
+        .ArabicH-lb-close {
+            position: absolute;
+            top: -46px;
+            left: 0;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.2s ease;
+        }
+        .ArabicH-lb-close:hover {
+            background: #c62828;
+            border-color: #c62828;
+            transform: rotate(90deg);
+        }
+        @media (max-width: 600px) {
+            .ArabicH-lb-close { top: -42px; width: 34px; height: 34px; }
+            .ArabicH-lb-btn { padding: 7px 11px; font-size: 0.82rem; }
+            .ArabicH-lightbox-caption { font-size: 0.85rem; }
+        }
+
+        /* ====== Proposed Questions (مداخل) ====== */
+        .ArabicH-questions-list { display: flex; flex-direction: column; gap: 14px; }
+        .ArabicH-proposed-q {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 1.1rem 1.3rem;
+            border: 1px solid var(--border-color);
+            border-right: 6px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: 0 3px 10px rgba(42,127,127,0.05);
+            transition: transform 0.25s ease;
+        }
+        .ArabicH-proposed-q:hover { transform: translateX(-4px); }
+        .ArabicH-proposed-q .q-badge {
+            width: 38px; height: 38px;
+            border-radius: 10px;
+            background: var(--gradient-secondary);
+            color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1rem; flex-shrink: 0;
+        }
+        .ArabicH-proposed-q p { margin: 0; color: var(--text-color); font-size: 1rem; line-height: 1.65; }
+
+        /* ====== Group Dialogue (Bubbles) ====== */
+        .ArabicH-dialogue {
+            background: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.6rem;
+            border: 1px solid var(--border-color);
+        }
+        .ArabicH-bubble {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 1.2rem;
+            align-items: flex-start;
+        }
+        .ArabicH-bubble:last-child { margin-bottom: 0; }
+        .ArabicH-bubble.alt { flex-direction: row-reverse; }
+        .ArabicH-avatar {
+            flex-shrink: 0;
+            width: 46px; height: 46px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem;
+            border: 2px solid var(--card-bg);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+        .ArabicH-bubble-content {
+            background: var(--card-bg);
+            border-radius: 16px 4px 16px 16px;
+            padding: 0.9rem 1.1rem;
+            border: 1px solid var(--border-color);
+            max-width: 88%;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .ArabicH-bubble.alt .ArabicH-bubble-content {
+            border-radius: 4px 16px 16px 16px;
+        }
+        .ArabicH-bubble-name {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 4px;
+            display: block;
+        }
+        [data-theme="dark"] .ArabicH-bubble-name { color: var(--accent-color); }
+        .ArabicH-bubble-content p { margin: 0; color: var(--text-color); font-size: 0.98rem; line-height: 1.7; }
+        .ArabicH-bubble.b1 .ArabicH-bubble-content { background: var(--bubble-1-bg); }
+        .ArabicH-bubble.b2 .ArabicH-bubble-content { background: var(--bubble-2-bg); }
+        .ArabicH-bubble.b3 .ArabicH-bubble-content { background: var(--bubble-3-bg); }
+        .ArabicH-bubble.b4 .ArabicH-bubble-content { background: var(--bubble-4-bg); }
+
+        /* ====== Exchange of Opinions ====== */
+        .ArabicH-opinions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .ArabicH-opinion-card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            padding: 1.2rem 1.3rem;
+            box-shadow: 0 3px 10px rgba(42,127,127,0.06);
+            position: relative;
+            padding-top: 2.2rem;
+        }
+        .ArabicH-opinion-card::before {
+            content: "“";
+            position: absolute;
+            top: 4px;
+            right: 14px;
+            font-size: 3rem;
+            color: var(--accent-color);
+            font-family: Georgia, serif;
+            line-height: 1;
+            opacity: 0.55;
+        }
+        .ArabicH-opinion-card .opinion-author {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 6px;
+            display: block;
+        }
+        [data-theme="dark"] .ArabicH-opinion-card .opinion-author { color: var(--accent-color); }
+        .ArabicH-opinion-card p { margin: 0; color: var(--text-color); font-size: 0.96rem; line-height: 1.7; }
+
+        /* ====== Conclusions ====== */
+        .ArabicH-conclusions {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .ArabicH-conclusion-item {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 1.1rem 1.3rem;
+            border: 1px solid var(--border-color);
+            border-right: 6px solid var(--primary-color);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            box-shadow: 0 3px 10px rgba(42,127,127,0.06);
+        }
+        .ArabicH-conclusion-item .check {
+            flex-shrink: 0;
+            width: 28px; height: 28px;
+            border-radius: 50%;
+            background: var(--gradient-accent);
+            color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.95rem;
+        }
+        .ArabicH-conclusion-item p { margin: 0; color: var(--text-color); font-size: 0.98rem; line-height: 1.7; }
+
+        /* ====== Final Summary ====== */
+        .ArabicH-final-summary {
+            background: var(--gradient-secondary);
+            color: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .ArabicH-final-summary::before {
+            content: "✅";
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 2rem;
+            opacity: 0.35;
+        }
+        .ArabicH-final-summary h3 {
+            color: #fff;
+            margin: 0 0 1rem 0;
+            font-size: 1.3rem;
+        }
+        .ArabicH-final-summary p {
+            color: #fff;
+            line-height: 1.9;
+            font-size: 1.02rem;
+            margin: 0 0 0.8rem 0;
+        }
+        .ArabicH-final-summary ul {
+            color: #fff;
+            line-height: 1.9;
+            font-size: 1rem;
+            margin: 0.5rem 0 0 0;
+            padding-right: 1.4rem;
+        }
+
+        /* ====== Flower decoration ====== */
+        .ArabicH-flower-decoration { display: inline-block; margin: 0 10px; color: var(--primary-color); font-size: 1.2rem; }
+
+        /* ====== Nav Buttons ====== */
+        .ArabicH-nav-buttons { display: flex; justify-content: space-between; margin-top: 30px; flex-wrap: wrap; gap: 10px; }
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 11px 22px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 15px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.2s;
+            display: inline-block;
+            text-align: center;
+        }
+        .ArabicH-nav-btn:hover { background-color: var(--accent-color); transform: translateY(-2px); }
+
+        /* ====== Responsive ====== */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title { font-size: 1.9rem; }
+            .ArabicH-lesson-main { padding: 1.2rem; }
+            .ArabicH-comm-hero { padding: 1.5rem; }
+            .ArabicH-comm-hero h2 { font-size: 1.15rem; }
+            .ArabicH-objectives-grid { grid-template-columns: 1fr; }
+            .ArabicH-opinions-grid { grid-template-columns: 1fr; }
+            .ArabicH-bubble-content { max-width: 85%; font-size: 0.95rem; }
+            .ArabicH-avatar { width: 40px; height: 40px; font-size: 1.2rem; }
+            .ArabicH-nav-buttons { flex-direction: column; }
+            .ArabicH-reading-card { padding: 1.3rem; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-lesson-title { font-size: 1.5rem; }
+            .ArabicH-lesson-subtitle { font-size: 1rem; }
+            .ArabicH-proposed-q { padding: 0.9rem; }
+            .ArabicH-bubble-content { max-width: 82%; }
+            .ArabicH-bubble-content p { font-size: 0.9rem; }
+        }
+        [data-theme="dark"] p, [data-theme="dark"] li, [data-theme="dark"] div:not(.ArabicH-reading-text) { color: var(--text-color) !important; }
+        [data-theme="dark"] strong { color: var(--accent-color); }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">🏠</span><span data-i18n="ArabicH.windows.home">الرئيسية</span></a>
+        <a href="authors.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">👨‍🎓</span><span data-i18n="ArabicH.windows.authors">ادباء</span></a>
+        <a href="quotes.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📖</span><span data-i18n="ArabicH.windows.quotes">شواهد</span></a>
+        <a href="resources.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📚</span><span data-i18n="ArabicH.windows.resources">موارد</span></a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.commLesson.lessonTitle">من تبعات تطوّر نمط الحياة</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.commLesson.lessonSubtitle">تواصل شفوي – المحور الأول: مظاهر من الحياة المعاصرة</p>
+
+        <!-- ====== Hero: Capacities & Situation ====== -->
+        <div class="ArabicH-comm-hero">
+            <h2><span>🎯</span> القدرات المستهدفة</h2>
+            <div class="ArabicH-objectives-grid" style="margin-top:0.4rem;">
+                <div class="ArabicH-objective-card"><span class="num">1</span><p>حسن الإصغاء إلى رأي الآخر.</p></div>
+                <div class="ArabicH-objective-card"><span class="num">2</span><p>المبادرة إلى أخذ الكلمة لطرح فكرة أو التعليق على فكرة أو تعميق النظر في مسألة.</p></div>
+                <div class="ArabicH-objective-card"><span class="num">3</span><p>استعمال السجلات اللغوية المناسبة لموضوع الحوار ووضعية التواصل.</p></div>
+                <div class="ArabicH-objective-card"><span class="num">4</span><p>احترام آداب الحوار.</p></div>
+            </div>
+            <div class="ArabicH-comm-hero-meta">
+                <span class="ArabicH-comm-chip">🗣️ حوار متعدّد الأطراف</span>
+                <span class="ArabicH-comm-chip">📌 الموضوع: من تبعات تطوّر نمط الحياة</span>
+                <span class="ArabicH-comm-chip">📖 سند الانطلاق: نصّ لأحمد أمين</span>
+            </div>
+        </div>
+
+        <!-- ====== Reading Text ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">📖</span> نصّ الانطلاق</h2>
+            <div class="ArabicH-reading-card">
+                <span class="source">✍️ أحمد أمين</span>
+                <div class="ArabicH-reading-text">
+                    <p>نجد في لغتنا الحديثة كثرة استعمال «تهدّمت أعصابه» و«تحطّمت أعصابه» و«توتّرت أعصابه» ونحو ذلك ممّا لا نجده في كتبنا القديمة، والسّببُ في هذا الشّعور بتهدّم الأعصاب كثرةُ تكاليف الحياة وزيادة أعبائها وتعدّد مطالبها، وانتقالُ كثير من الكماليّات إلى ضروريّات ممّا لم يكن له نظيرٌ عند آبائنا وأجدادنا. تعقّدت المدنيةُ وتركّبت وكثرت فيها المطالبُ، وشعَر الإنسان بأنّه لا بدّ أن يوفي هذه المطالب كلّها، وطاقته محدودة وماليّته محدودة، فينوء تحت هذه الأعباء ويشعر بتهدّم أعصابه. إنّ ميزانيّة البيت معقّدةٌ مركّبةٌ، يحصُلُ عليها النّزاعُ أوّل كلّ شهر وآخر كلّ شهر، الرّزق محدود والمطالب غيرُ محدودة. أقساط المدارس وغلاءُ المأكل وحاجةُ السّيّدة والأولاد إلى الملابس وحاجة الأب إلى مصاريف خاصّة من أجرة انتقال وشُرب دخان والمرتّبُ لا يكفي لكلّ ذلك. فينفق ما يستطيع منه والباقي يُنفقه من أعصابه.</p>
+                    <p>ويذهب الموظّف إلى ديوانه فلا يزال يسمع من أخبار الدّرجات والتّرقيات ما يثير نفسه ويهيّج مطامعه. والويل لأعصابه إذا لم تتحقّق أمانيه، ونظام كلّ شيء في الحياة مركّب معقّد، الزّواج سلسلة متاعب في الخطبة والمهر والجهاز والعقد والحفلات، والتعليم سلسلة مشاكل، وإدارة الأموال سلسلة مشاكل، حتّى الغنيّ الّذي عنده أكثر ممّا يكفيه، مُتعبٌ مهدّمُ الأعصاب من إدارة أمواله، هذا سرقه، وهذا أكل ماله، والقضايا تُرفع في المحاكم والقضيّةُ الواحدة تطول ويتفرّع عن القضيّة عشرُ قضايا والمطالبُ عليه تتكاثر. ما الحلّ؟</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Image Study (WITH LIGHTBOX) - NEW SECTION ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">🖼️</span> نشاط الصّورة: علّق على الصّورة</h2>
+            <div class="ArabicH-image-section">
+                <!-- Image with zoom -->
+                <div class="ArabicH-image-container">
+                    <div class="ArabicH-image-frame" id="imageFrame" title="انقر للتّكبير">
+                        <span class="ArabicH-zoom-badge">🔍 انقر للتّكبير</span>
+                        <img 
+                            id="lessonImage"
+                            src="assets2/year1/comm/tahaddum_al_aasab.png" 
+                            alt="رجل يصرخ من الألم بينما تضغط ملزم معدنيّ بقوّة على جانبي رأسه - تعبير رمزيّ عن الضّغط النّفسيّ وتهدّم الأعصاب" 
+                            loading="lazy"
+                            onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22420%22 viewBox=%220 0 600 420%22><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop offset=%220%22 stop-color=%22%232a7f7f%22/><stop offset=%221%22 stop-color=%22%231a4d4d%22/></linearGradient></defs><rect width=%22600%22 height=%22420%22 fill=%22url(%23g)%22/><text x=%22300%22 y=%22200%22 text-anchor=%22middle%22 fill=%22%23ffffff%22 font-size=%2248%22 font-family=%22Arial%22>😖</text><text x=%22300%22 y=%22250%22 text-anchor=%22middle%22 fill=%22%23e0f2f2%22 font-size=%2220%22 font-family=%22Arial%22>تهدّم الأعصاب - الضغط النفسي</text><text x=%22300%22 y=%22280%22 text-anchor=%22middle%22 fill=%22%23e0f2f2%22 font-size=%2216%22 font-family=%22Arial%22>(صورة توضيحيّة)</text></svg>';"
+                        >
+                    </div>
+                    <p class="ArabicH-image-caption"><strong>صورة رمزيّة:</strong> الضّغط النّفسيّ وتهدّم الأعصاب</p>
+                    <p class="ArabicH-image-hint">💡 انقر على الصّورة أو اضغط <span class="kbd">Enter</span> للتّكبير والتّصغير</p>
+                </div>
+                <!-- Study Guide -->
+                <div class="ArabicH-study-card">
+                    <h4>🎨 نشاط: علّق على الصّورة</h4>
+                    <ul class="ArabicH-study-list">
+                        <li class="activity"><strong>وصف ما تراه:</strong> رجلٌ يصرخ من الألم، بينما يضغط ملزم معدنيّ («كمّاشة») بقوّة على جانبي رأسه.</li>
+                        <li class="symbol"><strong>الدّلالة الرّمزيّة:</strong> صورة رمزيّة بالغة التّعبير عن <strong>شدّة الضّغط النّفسيّ</strong> و<strong>تهدّم الأعصاب</strong> الّذي يُعانيه الإنسان المعاصر.</li>
+                        <li class="symbol"><strong>ربط بالحياة المعاصرة:</strong> الضّغوط المتراكمة (الماليّة، الاجتماعيّة، المهنيّة) تشدّ رأس الإنسان من الجانبين، كما تشدّ الكمّاشة الحديديّة.</li>
+                        <li class="activity"><strong>المطلوب منك:</strong> علّق على الصّورة في فقرة من 5 إلى 7 أسطر، موضّحاً فيها الرّمز، وعلاقته بمضمون نصّ أحمد أمين، وموقفك الشّخصيّ من الظّاهرة.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Proposed Questions (مداخل إلى المسألة) ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">❓</span> مداخل إلى المسألة</h2>
+            <div class="ArabicH-questions-list">
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">1</span>
+                    <p>عدم التّوازن بين الدّخل والإنفاق: كيف يؤثّر في نفوس النّاس وسلوكهم؟</p>
+                </div>
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">2</span>
+                    <p>التّحوّل الاجتماعيّ: ما الّذي يترتّب عليه من تكاثر الحاجات وتغيّر قيمة الأشياء؟</p>
+                </div>
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">3</span>
+                    <p>تعدّد أسباب التّوتّر في الحياة المعاصرة: ما هي في رأيكم؟</p>
+                </div>
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">4</span>
+                    <p>كيف نستطيع أن نحدّ من التّوتّر وأثره في سلوك النّاس؟</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Group Dialogue ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">💬</span> حوار جماعي</h2>
+            <div class="ArabicH-dialogue">
+                <div class="ArabicH-bubble b1">
+                    <div class="ArabicH-avatar" style="background:#d4eeee;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">سلمى (منشّطة)</span>
+                        <p>لننطلق من سؤال مباشر: ما الّذي دفع أحمد أمين إلى القول إنّ آباءنا وأجدادنا لم يعرفوا «تهدّم الأعصاب»؟</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b2 alt">
+                    <div class="ArabicH-avatar" style="background:#ffe9c7;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">يوسف</span>
+                        <p>في رأيي السبب هو <strong>تعقّد الحياة المعاصرة</strong>. الأجداد كانت حياتهم بسيطة، مطالبهم محدودة، أمّا اليوم فكلّ شيء صار معقّداً: التعليم، الزواج، السكن، العمل... كلّها ملفات مفتوحة.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b3">
+                    <div class="ArabicH-avatar" style="background:#dbe7fb;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">مريم</span>
+                        <p>أوافقك، لكن أضيف سبباً آخر: <strong>انتقال الكماليات إلى ضروريات</strong>. أشياء كانت أمس رفاهية، صارت اليوم شروطاً للعيش الكريم: الهاتف الذكي، الإنترنت، السيارة... وهذا يضاعف الإنفاق.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b4 alt">
+                    <div class="ArabicH-avatar" style="background:#fbdbe3;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">أمين</span>
+                        <p>وأنا أرى أنّ <strong>المقارنة الاجتماعية</strong> سبب خطير. النّاس يقارنون أنفسهم بغيرهم، فيقعون في سباق استهلاكي لا ينتهي، ويظنّون أنّ السعادة في المزيد من الأشياء.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b1">
+                    <div class="ArabicH-avatar" style="background:#d4eeee;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">سلمى</span>
+                        <p>جميل. السؤال الآن: <strong>ما الحلّ؟</strong> النصّ ينتهي بسؤال مفتوح: «ما الحلّ؟» فكيف نجيب عنه؟</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b2 alt">
+                    <div class="ArabicH-avatar" style="background:#ffe9c7;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">يوسف</span>
+                        <p>الحلّ يبدأ من <strong>الوعي</strong>. علينا أن نُميّز بين الحاجة الحقيقية والرغبة المصطنعة، وأن نُعيد ترتيب أولوياتنا وفق مبدأ «ما لا يُدرك كلّه لا يُترك جلّه».</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b3">
+                    <div class="ArabicH-avatar" style="background:#dbe7fb;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">مريم</span>
+                        <p>وأضيف: <strong>التربية المالية</strong> منذ الصغر. لو تعلّم الأطفال معنى الميزانية والادّخار، لَما وقعوا في فخّ الاستهلاك في الكبر.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b4 alt">
+                    <div class="ArabicH-avatar" style="background:#fbdbe3;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">أمين</span>
+                        <p>و<strong>التوازن</strong> هو الكلمة المفتاح. توازن بين العمل والراحة، بين الطموح والرضا، بين المادّة والرّوح. الإنسان المتوازن هو من يملك حياته ولا تملكه مطالبها.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Exchange of Opinions ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">🔄</span> تبادل آراء</h2>
+            <div class="ArabicH-opinions-grid">
+                <div class="ArabicH-opinion-card">
+                    <span class="opinion-author">يوسف — الرأي الأول</span>
+                    <p>«التوتّر المعاصر ظاهرة بنيوية، لا نفسية فردية فقط. فالمجتمع هو من يفرض نمط الحياة السريع، ومن يخلق الحاجات الجديدة عبر الإشهار ووسائل الإعلام.»</p>
+                </div>
+                <div class="ArabicH-opinion-card">
+                    <span class="opinion-author">مريم — الرأي الثاني</span>
+                    <p>«لا نُبرّئ الفرد من المسؤولية. فالإنسان يملك هامش اختيار، ويمكنه أن يقاوم الإغراء الاستهلاكي إذا رَبّى نفسه على القناعة والاعتدال.»</p>
+                </div>
+                <div class="ArabicH-opinion-card">
+                    <span class="opinion-author">أمين — الرأي الثالث</span>
+                    <p>«المسألة ثقافية بالأساس. نحتاج إلى ثقافة جديدة تُعيد تعريف النجاح، لا تقيسه بالمظاهر والاستهلاك، بل بالتوازن الداخلي والرضا والإنجاز الإنساني.»</p>
+                </div>
+                <div class="ArabicH-opinion-card">
+                    <span class="opinion-author">سلمى — الرأي الرابع</span>
+                    <p>«كلّ هذه الآراء متكاملة: البنية الاجتماعية، والمسؤولية الفردية، والثقافة الجديدة. الحلّ لا يكون ببُعد واحد، بل بمقاربة شمولية تُوازن بين الفرد والمجتمع والثقافة.»</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Conclusions ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">✅</span> استنتاجات</h2>
+            <div class="ArabicH-conclusions">
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>التوتّر المعاصر ظاهرة مركّبة:</strong> تتضافر فيها العوامل الاقتصادية والاجتماعية والثقافية والنفسية، وليست ناتجة عن سبب واحد.</p>
+                </div>
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>الاستهلاك المفرط والمقارنة الاجتماعية</strong> من أبرز أسباب التوتّر، لأنّهما يخلقان مطالب لا تنتهي وإحساساً دائماً بالنقص.</p>
+                </div>
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>التربية المالية والوعي بالحاجات الحقيقية</strong> ضروريان للحدّ من التوتّر، ويجب أن يبدآ منذ الطفولة وفي الأسرة والمدرسة.</p>
+                </div>
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>التوازن بين المادة والرّوح، بين الطموح والرضا،</strong> هو مفتاح العيش الرشيد في زمنٍ تكاثرت فيه المطالب.</p>
+                </div>
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>الحوار الجادّ والمنظّم</strong> بين أفراد المجتمع (الأسرة، المدرسة، الإعلام) شرط لإيجاد حلول جماعية لهذه الظاهرة.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Final Summary: Rational Behavior ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">🎓</span> خلاصة: ملامح السّلوك الرّشيد</h2>
+            <div class="ArabicH-final-summary">
+                <h3>ما الذي يميّز الإنسان ذا السلوك الرشيد في زمن تطوّر نمط الحياة؟</h3>
+                <p>يتميّز السلوك الرشيد بجملة من الملامح التي تُعين الإنسان على العيش المتوازن وسط تعقّدات الحياة المعاصرة، ومن أبرزها:</p>
+                <ul>
+                    <li><strong>الوعي بالحاجات الحقيقية:</strong> يُميّز بين ما يحتاجه فعلاً وما يُدفع إليه بالإغراء والإشهار.</li>
+                    <li><strong>ترتيب الأولويات:</strong> ينفق بحساب، ويوازن بين الضروري والكمالي، ويُدبّر ميزانيته بعقل.</li>
+                    <li><strong>القناعة والاعتدال:</strong> لا يُقارن نفسه بالآخرين، ولا يجري في سباق استهلاكي لا نهاية له.</li>
+                    <li><strong>الاستقلال الفكري:</strong> لا يستسلم لضغط الجماعة، ولا يتبنّى نمط حياة إلا بعد تفكير.</li>
+                    <li><strong>التوازن بين العمل والراحة:</strong> يمنح جسده ونفسه حقّهما من السكون والترفيه.</li>
+                    <li><strong>الحوار بدل الصراع:</strong> يحلّ مشكلاته بالكلمة لا بالانفعال، ويُصغي إلى الآخر باحترام.</li>
+                    <li><strong>البعد الرّوحي والأخلاقي:</strong> يجعل من القيم مرجعاً لسلوكه، لا من المظاهر والمكاسب.</li>
+                </ul>
+                <p style="margin-top:1rem;">إنّ السلوك الرشيد هو الذي يُعيد للإنسان مركزه في الحياة، فلا تكون الأشياء هي التي تقوده، بل هو من يقودها بوعي واعتدال وحكمة.</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                <span class="ArabicH-flower-decoration">✎</span> 
+                <span class="ArabicH-flower-decoration">✍</span> 
+                <span class="ArabicH-flower-decoration">✎</span>
+            </p>
+        </div>
+
+        <div class="ArabicH-nav-buttons">
+            <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.commLesson.backToLessons">العودة إلى الدروس العامة</a>
+            <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.commLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+            <a href="AH_1SY_communication_module1_lesson2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.commLesson.nextLesson">الدرس التالي</a>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+
+    <!-- ====== LIGHTBOX MODAL (ZOOM FEATURE) ====== -->
+    <div class="ArabicH-lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عارض الصورة">
+        <div class="ArabicH-lightbox-inner">
+            <button class="ArabicH-lb-close" id="lbClose" title="إغلاق (Esc)" aria-label="إغلاق">✕</button>
+            <div class="ArabicH-lightbox-img-wrap" id="lbImgWrap">
+                <img class="ArabicH-lightbox-img" id="lbImg" src="" alt="صورة مكبّرة" draggable="false">
+            </div>
+            <div class="ArabicH-lightbox-caption" id="lbCaption"></div>
+            <div class="ArabicH-lightbox-toolbar">
+                <button class="ArabicH-lb-btn" id="lbZoomOut" title="تصغير (-)">➖ <span class="zoom-level" id="zoomLevel">100%</span></button>
+                <button class="ArabicH-lb-btn" id="lbZoomIn" title="تكبير (+)">➕</button>
+                <button class="ArabicH-lb-btn" id="lbReset" title="إعادة التّعيين (0)">🔄 إعادة</button>
+                <button class="ArabicH-lb-btn" id="lbFullscreen" title="ملء الشّاشة (F)">⛶ ملء الشّاشة</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        window.translations_ArabicHCommunicationModule1Lesson1 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.commLesson.lessonTitle": "من تبعات تطوّر نمط الحياة",
+                "ArabicH.commLesson.lessonSubtitle": "تواصل شفوي – المحور الأول: مظاهر من الحياة المعاصرة",
+                "ArabicH.commLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.commLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.commLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.commLesson.lessonTitle": "Consequences of Lifestyle Development",
+                "ArabicH.commLesson.lessonSubtitle": "Oral Communication – Unit 1: Aspects of Contemporary Life",
+                "ArabicH.commLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.commLesson.backToHome": "Back to Homepage",
+                "ArabicH.commLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.commLesson.lessonTitle": "Conséquences de l'évolution du mode de vie",
+                "ArabicH.commLesson.lessonSubtitle": "Communication orale – Unité 1: Aspects de la vie contemporaine",
+                "ArabicH.commLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.commLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.commLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHCommunicationModule1Lesson1;
+    </script>
+    
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) { item.classList.add('active'); } else { item.classList.remove('active'); }
+            });
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); themeToggle.checked = true; }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+                    else { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+                });
+            }
+        });
+    </script>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() { navigator.serviceWorker.register('/sw.js').then(r => console.log('SW registered')).catch(e => console.log('SW failed')); });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; if (manualInstallBtn) manualInstallBtn.style.display = 'flex'; });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') { manualInstallBtn.style.display = 'none'; deferredPrompt = null; }
+                });
+            }
+        });
+    </script>
+
+    <!-- ====== LIGHTBOX JAVASCRIPT (ZOOM FEATURE) ====== -->
+    <script>
+    (function() {
+        const frame = document.getElementById('imageFrame');
+        const lessonImg = document.getElementById('lessonImage');
+        const lightbox = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lbImg');
+        const lbCaption = document.getElementById('lbCaption');
+        const lbClose = document.getElementById('lbClose');
+        const lbZoomIn = document.getElementById('lbZoomIn');
+        const lbZoomOut = document.getElementById('lbZoomOut');
+        const lbReset = document.getElementById('lbReset');
+        const lbFullscreen = document.getElementById('lbFullscreen');
+        const zoomLevelEl = document.getElementById('zoomLevel');
+        const lbImgWrap = document.getElementById('lbImgWrap');
+
+        if (!frame || !lessonImg || !lightbox) return;
+
+        let scale = 1;
+        const MIN_SCALE = 0.5;
+        const MAX_SCALE = 4;
+        const STEP = 0.25;
+
+        function updateZoomLabel() {
+            zoomLevelEl.textContent = Math.round(scale * 100) + '%';
+            lbImg.style.transform = 'scale(' + scale + ')';
+        }
+        function zoomIn() {
+            scale = Math.min(MAX_SCALE, scale + STEP);
+            updateZoomLabel();
+        }
+        function zoomOut() {
+            scale = Math.max(MIN_SCALE, scale - STEP);
+            updateZoomLabel();
+        }
+        function resetZoom() {
+            scale = 1;
+            updateZoomLabel();
+        }
+        function openLightbox() {
+            lbImg.src = lessonImg.src;
+            lbImg.alt = lessonImg.alt;
+            const caption = lessonImg.closest('.ArabicH-image-container').querySelector('.ArabicH-image-caption');
+            lbCaption.textContent = caption ? caption.textContent.trim() : lessonImg.alt;
+            scale = 1;
+            updateZoomLabel();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => lbClose.focus(), 100);
+        }
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+            if (document.fullscreenElement) {
+                document.exitFullscreen().catch(()=>{});
+            }
+        }
+
+        // Open on image click
+        frame.addEventListener('click', openLightbox);
+        frame.setAttribute('tabindex', '0');
+        frame.setAttribute('role', 'button');
+        frame.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(); }
+        });
+
+        // Toolbar
+        lbZoomIn.addEventListener('click', zoomIn);
+        lbZoomOut.addEventListener('click', zoomOut);
+        lbReset.addEventListener('click', resetZoom);
+        lbClose.addEventListener('click', closeLightbox);
+        lbFullscreen.addEventListener('click', function() {
+            if (!document.fullscreenElement) {
+                lbImgWrap.requestFullscreen().catch(()=>{});
+            } else {
+                document.exitFullscreen();
+            }
+        });
+
+        // Click outside to close
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox || e.target === lbImgWrap) closeLightbox();
+        });
+
+        // Wheel to zoom
+        lbImgWrap.addEventListener('wheel', function(e) {
+            e.preventDefault();
+            if (e.deltaY < 0) zoomIn(); else zoomOut();
+        }, { passive: false });
+
+        // Keyboard
+        document.addEventListener('keydown', function(e) {
+            if (!lightbox.classList.contains('active')) return;
+            switch(e.key) {
+                case 'Escape': closeLightbox(); break;
+                case '+': case '=': zoomIn(); break;
+                case '-': case '_': zoomOut(); break;
+                case '0': resetZoom(); break;
+                case 'f': case 'F':
+                    if (!document.fullscreenElement) lbImgWrap.requestFullscreen().catch(()=>{});
+                    else document.exitFullscreen();
+                    break;
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

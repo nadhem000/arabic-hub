@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أدب: قصيدة "يا ابن أمي" لأبي القاسم الشابي - الدرس الأول | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#8a5a2b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="قصيدة يا ابن أمي">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* Unique Warm Ochre Theme for National Poetry Lesson */
+        :root {
+            --primary-color: #8a5a2b;
+            --secondary-color: #b17a44;
+            --accent-color: #d4a373;
+            --light-color: #fdf6ed;
+            --dark-color: #4a2e14;
+            --text-color: #3d2b18;
+            --heading-color: #2a1c0e;
+            --background-color: #fdfaf4;
+            --card-bg: #ffffff;
+            --definition-bg: #f8ede0;
+            --border-color: #e0c9a6;
+            --table-even-bg: #fdf6ed;
+            --table-hover-bg: #f8ede0;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(138, 90, 43, 0.12);
+            --gradient-primary: linear-gradient(135deg, #8a5a2b 0%, #4a2e14 100%);
+            --gradient-secondary: linear-gradient(135deg, #b17a44 0%, #8a5a2b 100%);
+            --gradient-accent: linear-gradient(135deg, #d4a373 0%, #b17a44 100%);
+            --gradient-light: linear-gradient(135deg, #fdf6ed 0%, #f8ede0 100%);
+            --highlight-color: #3a7ca5;
+            --highlight-bg: rgba(58, 124, 165, 0.1);
+            --poetry-bg: rgba(138, 90, 43, 0.08);
+            --poetry-border: #b17a44;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #b17a44;
+            --secondary-color: #d4a373;
+            --accent-color: #e8c9a8;
+            --light-color: #4a2e14;
+            --dark-color: #2a1c0e;
+            --text-color: #f8ede0;
+            --heading-color: #fdf6ed;
+            --background-color: #2a1c0e;
+            --card-bg: #4a2e14;
+            --definition-bg: #8a5a2b;
+            --border-color: #8a5a2b;
+            --table-even-bg: #4a2e14;
+            --table-hover-bg: #8a5a2b;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #b17a44 0%, #8a5a2b 100%);
+            --gradient-secondary: linear-gradient(135deg, #d4a373 0%, #b17a44 100%);
+            --gradient-accent: linear-gradient(135deg, #e8c9a8 0%, #d4a373 100%);
+            --gradient-light: linear-gradient(135deg, #4a2e14 0%, #2a1c0e 100%);
+            --highlight-color: #5ba3d0;
+            --highlight-bg: rgba(91, 163, 208, 0.15);
+            --poetry-bg: rgba(177, 122, 68, 0.15);
+            --poetry-border: #d4a373;
+        }
+
+        .ArabicH-lesson-page { min-height: 100vh; background: var(--background-color); display: flex; flex-direction: column; }
+        .ArabicH-lesson-main { flex: 1; display: flex; flex-direction: column; padding: 2rem; max-width: 1200px; margin: 0 auto; width: 100%; }
+        .ArabicH-lesson-title { font-size: 2.5rem; margin-bottom: 1rem; color: var(--heading-color); text-align: center; font-weight: 700; }
+        .ArabicH-lesson-subtitle { font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-color); text-align: center; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+        .ArabicH-lesson-container { background: var(--card-bg); border-radius: var(--border-radius); box-shadow: var(--box-shadow); padding: 2.5rem; margin-bottom: 2rem; border-top: 6px solid var(--primary-color); }
+        .ArabicH-lesson-header { background: var(--gradient-primary); color: white; padding: 1.5rem; border-radius: var(--border-radius); margin-bottom: 2rem; text-align: center; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .ArabicH-lesson-teacher, .ArabicH-lesson-class { font-size: 1.1rem; font-weight: 600; background: rgba(255,255,255,0.15); padding: 8px 15px; border-radius: 20px; backdrop-filter: blur(5px); }
+        .ArabicH-lesson-content { margin: 30px 0; }
+        .ArabicH-exercise-card { background: var(--card-bg); border-radius: var(--border-radius); box-shadow: var(--box-shadow); margin: 25px 0; padding: 1.5rem; border: 1px solid var(--border-color); }
+        .ArabicH-exercise-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--secondary-color); font-weight: 600; text-align: center; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px; }
+        [data-theme="dark"] .ArabicH-exercise-title { color: var(--accent-color); }
+        .ArabicH-exercise-content { line-height: 1.8; margin-bottom: 20px; color: var(--text-color); }
+        .ArabicH-rule-card { background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%); border-radius: var(--border-radius); margin: 20px 0; padding: 1.5rem; border-left: 6px solid var(--secondary-color); position: relative; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .ArabicH-rule-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+        .ArabicH-rule-card::before { content: "📘"; position: absolute; left: 15px; top: 15px; font-size: 1.2rem; opacity: 0.8; }
+        .ArabicH-rule-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700; padding-left: 30px; border-bottom: 2px dashed var(--secondary-color); padding-bottom: 8px; position: relative; }
+        [data-theme="dark"] .ArabicH-rule-title { color: var(--accent-color); }
+        .ArabicH-rule-title::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 60px; height: 2px; background-color: var(--primary-color); }
+
+        /* Poem text styling */
+        .ArabicH-poem-text { font-size: 1.4rem; font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif; line-height: 2.2; color: var(--dark-color); margin: 20px 0; padding: 20px; background-color: var(--poetry-bg); border-radius: var(--border-radius); border-right: 4px solid var(--poetry-border); text-align: center; direction: rtl; }
+        .ArabicH-poem-line { margin-bottom: 1.5rem; display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; position: relative; padding: 0 10px; }
+        .ArabicH-sadr { font-weight: 600; color: var(--primary-color); margin-left: 0.5rem; position: relative; text-align: left; }
+        .ArabicH-ajz { font-weight: 500; color: var(--dark-color); margin-right: 0.5rem; position: relative; text-align: right; }
+        .ArabicH-separator { color: var(--accent-color); font-weight: bold; margin: 0 10px; opacity: 0.7; font-size: 1.2rem; }
+        .ArabicH-poem-separator { height: 1.5rem; width: 60%; margin: 1.5rem auto; border-bottom: 2px dashed var(--border-color); opacity: 0.5; }
+        [data-theme="dark"] .ArabicH-poem-text { color: #fdf6ed; background-color: var(--poetry-bg); border-right: 4px solid var(--poetry-border); }
+        [data-theme="dark"] .ArabicH-sadr { color: var(--accent-color); }
+        [data-theme="dark"] .ArabicH-ajz { color: #fdf6ed; }
+        [data-theme="dark"] .ArabicH-separator { color: var(--secondary-color); }
+        @media (max-width: 768px) {
+            .ArabicH-poem-text { font-size: 1.2rem; padding: 15px; line-height: 2.0; }
+            .ArabicH-poem-line { flex-wrap: wrap; justify-content: flex-end; }
+            .ArabicH-sadr, .ArabicH-ajz { width: 100%; text-align: right; margin: 0.2rem 0; }
+            .ArabicH-separator { display: none; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-poem-text { font-size: 1.1rem; line-height: 1.9; padding: 12px; }
+            .ArabicH-poem-line { margin-bottom: 1rem; }
+        }
+
+        .ArabicH-vocab-table { width: 100%; border-collapse: collapse; margin: 20px 0; direction: rtl; }
+        .ArabicH-vocab-table th { background-color: var(--primary-color); color: white; padding: 12px; font-weight: 600; text-align: center; border: 1px solid var(--border-color); }
+        .ArabicH-vocab-table td { padding: 10px; border: 1px solid var(--border-color); text-align: right; background-color: var(--card-bg); color: var(--text-color); }
+        .ArabicH-vocab-table tr:nth-child(even) td { background-color: var(--table-even-bg); }
+        .ArabicH-vocab-table tr:hover td { background-color: var(--table-hover-bg); }
+
+        .ArabicH-question { background-color: var(--definition-bg); border-radius: var(--border-radius); padding: 1.5rem; margin: 20px 0; border-right: 4px solid var(--primary-color); position: relative; }
+        .ArabicH-question-title { font-size: 1.2rem; margin-bottom: 10px; color: var(--primary-color); font-weight: 700; text-align: right; }
+        [data-theme="dark"] .ArabicH-question-title { color: var(--accent-color); }
+        .ArabicH-question-content { line-height: 1.8; color: var(--text-color); text-align: right; margin-bottom: 15px; }
+        .ArabicH-show-answer-btn { background-color: var(--primary-color); color: white; border: none; padding: 10px 20px; border-radius: var(--border-radius); cursor: pointer; font-size: 16px; margin-top: 10px; transition: background-color 0.3s; display: block; width: 100%; max-width: 200px; margin-right: auto; margin-left: 0; }
+        .ArabicH-show-answer-btn:hover { background-color: var(--accent-color); }
+        .ArabicH-answer { display: none; margin-top: 20px; padding: 20px; border-radius: var(--border-radius); border-right: 3px solid var(--accent-color); background-color: var(--definition-bg); line-height: 1.8; color: var(--text-color); text-align: right; }
+
+        .ArabicH-prosody-table { width: 100%; border-collapse: collapse; margin: 20px 0; direction: rtl; }
+        .ArabicH-prosody-table th { background-color: var(--primary-color); color: white; padding: 12px; font-weight: 600; text-align: center; border: 1px solid var(--border-color); }
+        .ArabicH-prosody-table td { padding: 10px; border: 1px solid var(--border-color); text-align: center; background-color: var(--card-bg); color: var(--text-color); }
+
+        .ArabicH-analysis-section { background: var(--card-bg); border-radius: var(--border-radius); margin: 25px 0; padding: 1.5rem; border: 1px solid var(--border-color); }
+        .ArabicH-analysis-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700; text-align: right; border-bottom: 2px solid var(--secondary-color); padding-bottom: 8px; }
+        [data-theme="dark"] .ArabicH-analysis-title { color: var(--accent-color); }
+        .ArabicH-analysis-content { line-height: 1.8; color: var(--text-color); text-align: right; }
+
+        .ArabicH-flower-decoration { display: inline-block; margin: 0 10px; color: var(--primary-color); font-size: 1.2rem; }
+        .ArabicH-knowledge-box { background-color: var(--definition-bg); border-radius: var(--border-radius); padding: 1.5rem; margin: 25px 0; border-right: 4px solid var(--primary-color); position: relative; }
+        .ArabicH-knowledge-box::before { content: "💡"; position: absolute; right: 15px; top: 15px; font-size: 1.5rem; opacity: 0.7; }
+        .ArabicH-knowledge-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700; text-align: right; padding-right: 40px; }
+        [data-theme="dark"] .ArabicH-knowledge-title { color: var(--accent-color); }
+        .ArabicH-knowledge-content { line-height: 1.8; color: var(--text-color); text-align: right; }
+
+        .ArabicH-nav-buttons { display: flex; justify-content: space-between; margin-top: 30px; }
+        .ArabicH-nav-btn { background-color: var(--primary-color); color: white; border: none; padding: 10px 20px; border-radius: var(--border-radius); cursor: pointer; font-size: 16px; text-decoration: none; transition: background-color 0.3s; display: inline-block; text-align: center; }
+        .ArabicH-nav-btn:hover { background-color: var(--accent-color); }
+
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title { font-size: 2rem; }
+            .ArabicH-lesson-subtitle { font-size: 1.1rem; }
+            .ArabicH-lesson-container { padding: 1.5rem; }
+            .ArabicH-lesson-header { flex-direction: column; gap: 15px; text-align: center; }
+            .ArabicH-nav-buttons { flex-direction: column; gap: 10px; }
+            .ArabicH-rule-card { padding: 1.2rem; }
+            .ArabicH-rule-title { font-size: 1.2rem; padding-left: 25px; }
+            .ArabicH-rule-card::before { left: 12px; top: 12px; font-size: 1.1rem; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main { padding: 1rem; }
+            .ArabicH-lesson-title { font-size: 1.6rem; }
+            .ArabicH-exercise-card { padding: 1rem; }
+            .ArabicH-rule-card { padding: 1rem; }
+            .ArabicH-rule-title { font-size: 1.1rem; padding-left: 22px; }
+            .ArabicH-rule-card::before { left: 10px; top: 10px; font-size: 1rem; }
+        }
+        [data-theme="dark"] p, [data-theme="dark"] li, [data-theme="dark"] div:not(.ArabicH-poem-text) { color: var(--text-color) !important; }
+        [data-theme="dark"] strong { color: var(--accent-color); }
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) { color: var(--accent-color); }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">🏠</span><span data-i18n="ArabicH.windows.home">الرئيسية</span></a>
+        <a href="authors.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">👨‍🎓</span><span data-i18n="ArabicH.windows.authors">ادباء</span></a>
+        <a href="quotes.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📖</span><span data-i18n="ArabicH.windows.quotes">شواهد</span></a>
+        <a href="resources.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📚</span><span data-i18n="ArabicH.windows.resources">موارد</span></a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.literatureLesson.poemTitle">قصيدة "يا ابن أمي" لأبي القاسم الشابي</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.literatureLesson.poemSubtitle">الدرس الأول: تحليل قصيدة من الشعر الوطني – الحرية حق طبيعي وإنساني</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher"><span class="ArabicH-flower-decoration">❦</span> الاستاذ: غير معروف <span class="ArabicH-flower-decoration">❦</span></div>
+                <div class="ArabicH-lesson-class"><span class="ArabicH-flower-decoration">✿</span> المعهد: غير معروف <span class="ArabicH-flower-decoration">✿</span></div>
+            </div>
+            
+            <!-- Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">تمهيد</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p>قال أبو القاسم الشابي هذه القصيدة في شهر فيفري من سنة 1929، وفيها استطاع أن يتجاوز حدود الوطنية الضيقة ليُحلّق في الفضاء الإنساني الرحب. فهي قصيدة وطنية تنطلق من همّ التونسي المستعمر لتصبح نداءً إلى الإنسان في كل زمان ومكان، تُذكّره بحريته الطبيعية التي فُطر عليها، وتستنهض همّته للثورة على كل قيد يُكبّل وجوده.</p>
+                </div>
+            </div>
+            
+            <!-- Poem Text -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">نص القصيدة</h3>
+                <div class="ArabicH-poem-text">
+                    <!-- Line 1 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">خُلِقْتَ طَلِيقًا كَطَيْفِ النَّسِيمِ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَحُرًّا كَنُورِ الضُّحَى فِي سَمَاهْ</span>
+                    </div>
+                    <!-- Line 2 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">تُغَرِّدُ كَالطَّيْرِ أَيْنَ انْدَفَعْتَ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَتَشْدُو بِمَا شَاءَ وَحْيُ الإِلَهْ</span>
+                    </div>
+                    <!-- Line 3 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَتَمْرَحُ بَيْنَ وُرُودِ الصَّبَاحِ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَتَنْعَمُ بِالنُّورِ أَنَّى تَرَاهْ</span>
+                    </div>
+                    <!-- Line 4 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَتَمْشِي - كَمَا شِئْتَ - بَيْنَ الْمُرُوجِ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَتَقْطِفُ وَرْدَ الرُّبَى فِي رُبَاهْ</span>
+                    </div>
+                    <!-- Line 5 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">كَذَا صَاغَكَ اللَّهُ، يَا ابْنَ الْوُجُودِ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَأَلْقَتْكَ فِي الْكَوْنِ هَذِي الْحَيَاهْ</span>
+                    </div>
+                    <div class="ArabicH-poem-separator"></div>
+                    <!-- Line 6 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">فَمَا لَكَ تَرْضَى بِذُلِّ الْقُيُودِ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَتَحْنِي لِمَنْ كَبَّلُوكَ الْجِبَاهْ؟</span>
+                    </div>
+                    <!-- Line 7 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَتُسْكِتُ فِي النَّفْسِ صَوْتَ الْحَيَاةِ الْ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">قَوِيِّ إِذَا مَا تَغَنَّى صَدَاهْ؟</span>
+                    </div>
+                    <!-- Line 8 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَتُطْبِقُ أَجْفَانَكَ النَّيِّرَاتِ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">عَنِ الْفَجْرِ، وَالْفَجْرُ عَذْبٌ ضِيَاهْ؟</span>
+                    </div>
+                    <!-- Line 9 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَتَقْنَعُ بِالْعَيْشِ بَيْنَ الْكُهُوفِ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">فَأَيْنَ النَّشِيدُ؟ وَأَيْنَ الإِيَاهْ؟</span>
+                    </div>
+                    <!-- Line 10 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">أَتَخْشَى نَشِيدَ السَّمَاءِ الْجَمِيلَ؟</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">أَتَرْهَبُ نُورَ الْفَضَا فِي ضُحَاهْ؟</span>
+                    </div>
+                    <div class="ArabicH-poem-separator"></div>
+                    <!-- Line 11 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">أَلَا انْهَضْ وَسِرْ فِي سَبِيلِ الْحَيَاةِ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">فَمَنْ نَامَ لَمْ تَنْتَظِرْهُ الْحَيَاهْ</span>
+                    </div>
+                    <!-- Line 12 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَلَا تَخْشَ مِمَّا وَرَاءَ التِّلَاعِ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">فَمَا ثَمَّ إِلَّا الضُّحَى فِي صِبَاهْ</span>
+                    </div>
+                    <!-- Line 13 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَإِلَّا رَبِيعُ الْوُجُودِ الْغَرِيرُ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">يُطَرِّزُ بِالْوَرْدِ ضَافِي رِدَاهْ</span>
+                    </div>
+                    <!-- Line 14 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَإِلَّا أَرِيجُ الزُّهُورِ الصِّبَاحِ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">وَرَقْصُ الأَشِعَّةِ بَيْنَ الْمِيَاهْ</span>
+                    </div>
+                    <!-- Line 15 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">وَإِلَّا حَمَامُ الْمُرُوجِ الأَنِيقُ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">يُغَرِّدُ، مُنْطَلِقًا فِي غِنَاهْ</span>
+                    </div>
+                    <!-- Line 16 -->
+                    <div class="ArabicH-poem-line">
+                        <span class="ArabicH-sadr">إِلَى النُّورِ فَالنُّورُ عَذْبٌ جَمِيلٌ</span>
+                        <span class="ArabicH-separator"> | </span>
+                        <span class="ArabicH-ajz">إِلَى النُّورِ فَالنُّورُ ظِلُّ الإِلَهْ</span>
+                    </div>
+                </div>
+                <div class="ArabicH-exercise-content" style="text-align: center; margin-top: 15px; color: var(--secondary-color); font-style: italic;">
+                    <strong>البحر:</strong> الطويل | <strong>المصدر:</strong> أبو القاسم الشابي، الأعمال الكاملة، الدار التونسية للنشر 1984، الجزء الأول، ص 127-128
+                </div>
+            </div>
+            
+            <!-- Author Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">تقديم الشاعر</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p><strong>أبو القاسم الشابي</strong> (1909-1934م)، شاعر تونسي من مواليد قرية الشابية بمنطقة توزر. يُعدّ من أبرز رواد الشعر العربي الحديث، وأحد دعاة التجديد في الشعر العربي المعاصر. درس في جامع الزيتونة بتونس، واشتغل بالمحاماة، لكن المرض أقعده وأودى بحياته في سنّ مبكرة لم يتجاوز فيها الخامسة والعشرين.</p>
+                    <p>من أشهر أعماله ديوان "أغاني الحياة" وقصيدته الخالدة "إرادة الحياة" التي يقول في مطلعها: "إذا الشعب يوماً أراد الحياة / فلا بدّ أن يستجيب القدر". تميز شعره بروح التمرد على الظلم والاستبداد، وبالدعوة إلى الحرية والكرامة الإنسانية، وبمعجم طبيعي متوهج (النور، الفجر، النسيم، الربيع، الطيور).</p>
+                </div>
+            </div>
+            
+            <!-- Vocabulary Explanation -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">شرح المفردات</h3>
+                <div class="ArabicH-table-container">
+                    <table class="ArabicH-vocab-table">
+                        <thead>
+                            <tr>
+                                <th width="30%">المفردة</th>
+                                <th width="70%">الشرح</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>إياة الشمس</strong></td><td>ضوؤها وشعاعها</td></tr>
+                            <tr><td><strong>التِّلاع</strong></td><td>ما ارتفع من الأرض من المرتفعات والروابي</td></tr>
+                            <tr><td><strong>صباه</strong></td><td>أوّله وبدايته</td></tr>
+                            <tr><td><strong>الرداء الضافي</strong></td><td>الثوب الواسع الشامل</td></tr>
+                            <tr><td><strong>الرُّبَى</strong></td><td>جمع رَبْوة، وهي المرتفع من الأرض</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Comprehension Questions -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أفهم</h3>
+                
+                <!-- Q1 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- يمكن تقسيم القصيدة إلى ثلاثة مقاطع، بيّن حدودها وأسند إلى كل مقطع عنواناً.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer1" class="ArabicH-answer">
+                        <p><strong>المقطع الأول (الأبيات 1-5):</strong> "الحرية هبة إلهية" – يذكّر الشاعر الإنسان بحريته الأصلية التي فُطر عليها منذ الخلق، ويصوّرها بلغة الطبيعة (النسيم، الضحى، الطير، الورود، المروج).</p>
+                        <p><strong>المقطع الثاني (الأبيات 6-10):</strong> "الاستفهام والتعجب من الذل" – ينتقل الشاعر إلى الاستفهام التعجبي والإنكاري، متسائلاً عن سرّ رضا الإنسان بالقيود والذل والانطواء على نفسه.</p>
+                        <p><strong>المقطع الثالث (الأبيات 11-16):</strong> "الاستنهاض والدعوة إلى النور" – يستحثّ الشاعر الإنسان على النهوض والسير في سبيل الحياة، ويرسم أمامه آفاقاً مشرقة بالنور والربيع والعطور والحمام، في ختام يكرر فيه "إلى النور".</p>
+                        <p><strong>ملاحظة:</strong> يقوم التقسيم على أساس تطوّر الوظيفة الخطابية: من التذكير والتقرير، إلى التعجب والاستنكار، إلى الاستنهاض والحث.</p>
+                    </div>
+                </div>
+                
+                <!-- Q2 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- استخرج الأفعال الواردة في الأبيات (2-3-4) ثم بيّن ما يجمع بينها من جهة، وما يجمع بينها وبين فعل "خُلِقْتَ" من جهة ثانية.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer2" class="ArabicH-answer">
+                        <p><strong>الأفعال في الأبيات 2-3-4:</strong> تُغرّد، تَشدو، تَمرح، تَنعم، تَشْدو (مكرر)، تَمشي، تَقطِف.</p>
+                        <p><strong>ما يجمع بينها:</strong></p>
+                        <ul>
+                            <li>كلها أفعال مضارعة مرفوعة.</li>
+                            <li>كلها مسندة إلى ضمير المخاطب "أنت" (الإنسان).</li>
+                            <li>كلها تعبّر عن حركة وحياة وانطلاق (تغريد، مرح، مشي، قطف، شدو).</li>
+                            <li>كلها مسبوقة بحرف الواو في سياق تعداد نعم الحرية.</li>
+                        </ul>
+                        <p><strong>ما يجمع بينها وبين "خُلِقْتَ":</strong> الفعل "خُلِقْتَ" فعل ماضٍ مبني للمجهول، ويدل على الخلق الإلهي، بينما الأفعال الأخرى مضارعة تدل على استمرار أثر هذا الخلق في الحياة. أي أن "خُلِقْتَ" يضع الأساس (الحرية الأصلية)، والأفعال المضارعة تصف الثمار (مظاهر الحياة الحرة). فهي امتداد طبيعي لما منحه الله للإنسان عند خلقه، مما يُقيم حجّة منطقية على أن الحرية ليست مكسباً خارجياً، بل هي حق فطري أصيل.</p>
+                    </div>
+                </div>
+                
+                <!-- Q3 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">3- استخرج من النص أساليب الاستفهام ثم بيّن المعنى الذي يفيده كل منها.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer3" class="ArabicH-answer">
+                        <p><strong>أساليب الاستفهام في النص:</strong></p>
+                        <ul>
+                            <li><strong>"فَمَا لَكَ تَرْضَى بِذُلِّ الْقُيُودِ" (البيت 6):</strong> استفهام تعجبي إنكاري، يعبّر عن دهشة الشاعر واستغرابه من رضا الإنسان بالذل، ويحمل عتاباً لطيفاً.</li>
+                            <li><strong>"أَتَخْشَى نَشِيدَ السَّمَاءِ الْجَمِيلَ؟" (البيت 10):</strong> استفهام إنكاري، يستنكر الخوف من الجمال والحرية، ويُفيد أن الخوف منها غير مبرر.</li>
+                            <li><strong>"أَتَرْهَبُ نُورَ الْفَضَا فِي ضُحَاهْ؟" (البيت 10):</strong> استفهام إنكاري، يندد بخشية النور، ويُفيد التعجب من الخوف من مصدر الحياة.</li>
+                            <li><strong>"فَأَيْنَ النَّشِيدُ؟ وَأَيْنَ الإِيَاهْ؟" (البيت 9):</strong> استفهام استنكاري تحسّري، يعبّر عن الأسف على ضياع النشيد وضوء الشمس (الإياة) في حياة الكهوف والانغلاق.</li>
+                        </ul>
+                        <p><strong>الخلاصة:</strong> أفادت أساليب الاستفهام في النص – وإن اختلفت صيغها – وظيفة إنكارية تعجبية، تُحفّز المتلقي على مراجعة موقفه من الحرية، وتدفعه إلى رفض الذل والخوف، فهي استفهامات لا تنتظر جواباً، بل تُحرّك الوعي.</p>
+                    </div>
+                </div>
+                
+                <!-- Q4 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">4- علامَ يستحثّ الشاعر الإنسان؟ وما الأساليب التي وظّفها في ذلك؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer4" class="ArabicH-answer">
+                        <p><strong>على ما يستحثّه:</strong> يستحثّ الشاعر الإنسان على:</p>
+                        <ul>
+                            <li><strong>النهوض:</strong> "أَلَا انْهَضْ" – ترك الخمول والسكون.</li>
+                            <li><strong>السير في سبيل الحياة:</strong> "وَسِرْ فِي سَبِيلِ الْحَيَاةِ" – التقدّم والعمل.</li>
+                            <li><strong>التخلي عن الخوف:</strong> "وَلَا تَخْشَ مِمَّا وَرَاءَ التِّلَاعِ" – الشجاعة والإقدام.</li>
+                            <li><strong>التوجّه إلى النور:</strong> "إِلَى النُّورِ..." – طلب الحرية والحياة.</li>
+                        </ul>
+                        <p><strong>الأساليب الموظفة:</strong></p>
+                        <ul>
+                            <li><strong>أسلوب الأمر:</strong> "انهض، سِرْ" – لطلب الفعل على وجه الإلزام والحث.</li>
+                            <li><strong>أسلوب النهي:</strong> "لا تخشَ" – لطلب الكفّ عن الخوف.</li>
+                            <li><strong>أسلوب التوكيد:</strong> "فمن نام لم تنتظره الحياة" – لتأكيد عواقب التراخي.</li>
+                            <li><strong>أسلوب التكرار:</strong> تكرار "إلى النور" في الختام – لإبراز الهدف وتعميق الأثر.</li>
+                            <li><strong>أسلوب الترغيب:</strong> وصف ما وراء التلاع من جمال (الضحى، الربيع، الأريج، رقص الأشعة، تغريد الحمام) – لإغراء الإنسان بالنور.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Q5 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">5- استخلص من النص القيم التي يدافع عنها الشاعر.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer5')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer5" class="ArabicH-answer">
+                        <p><strong>القيم التي يدافع عنها الشاعر:</strong></p>
+                        <ul>
+                            <li><strong>الحرية:</strong> بوصفها حقاً فطرياً منحه الله للإنسان، لا يجوز التفريط فيه.</li>
+                            <li><strong>الكرامة الإنسانية:</strong> رفض الذل والخضوع والانحناء.</li>
+                            <li><strong>الشجاعة:</strong> عدم الخوف من المجهول، والإقدام على الحياة.</li>
+                            <li><strong>التفاؤل والأمل:</strong> الإيمان بأن ما وراء التلاع نور وربيع وخير.</li>
+                            <li><strong>الحياة الفاعلة:</strong> رفض النوم والخمول، والسير في سبيل الحياة.</li>
+                            <li><strong>التواصل مع الطبيعة:</strong> الطبيعة مصدر إلهام ورمز للحرية والجمال.</li>
+                            <li><strong>الإيمان بالقدر الإلهي:</strong> الحرية هبة إلهية، والنور ظلّ الله.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Q6 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">6- استخرج من النص عبارات توحي بدلالة النور وأخرى توحي بدلالة الظلمة. ثم بيّن أي الدلالتين أشدّ حضوراً؟ وماذا تستنتج من ذلك؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer6')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer6" class="ArabicH-answer">
+                        <p><strong>عبارات النور:</strong> طيف النسيم، نور الضحى، الصباح، الورود، النور، الفجر، الإياة (ضوء الشمس)، الضحى، ربيع الوجود، الورد، أريج الزهور، رقص الأشعة، النور (متكرر)، ظلّ الإله.</p>
+                        <p><strong>عبارات الظلمة:</strong> ذلّ القيود، كبّلوك، الكهوف، النوم، الظلام (ضمنياً من خلال ذكر النور)، إطباق الأجفان عن الفجر، الخشية، الرهبة.</p>
+                        <p><strong>أشدّ الدلالتين حضوراً:</strong> دلالة <strong>النور</strong>، فهي تتكرر لفظاً ومعنى في القصيدة كلها، وتتخلل معظم الأبيات بصورها المتنوعة (الفجر، الضحى، الإياة، الأشعة، ربيع الوجود...).</p>
+                        <p><strong>ما أستنتجه:</strong> غلبة النور على الظلمة تعكس نظرة الشاعر التفاؤلية والإيجابية إلى الحياة. فهو لا يكتب قصيدة يأس أو انكسار، بل قصيدة أمل واستنهاض. الظلمة موجودة في النص، لكنها تُذكر لتنقُصَ، بينما النور يُذكر ليتحقق. هذه الغلبة الرمزية تُترجم إيمان الشابي بأن الحرية هي الأصل، وأن الاستبداد عارض زائل. وبذلك تنتمي القصيدة إلى أدب النهضة والتفاؤل، لا إلى أدب الانكسار.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Discussion -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أناقش</h3>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">■ يستنهض الشاعر همّة الإنسان بتذكيره بالحرية الطبيعية التي كان عليها منذ بدء الخليقة. فهل تعتبر هذا حجّة كافية لتحقيق الغرض؟ ألم يعرف التاريخ العبودية أحقاباً طويلة؟ وضّح موقفك.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer7')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer7" class="ArabicH-answer">
+                        <p>حجّة الشابي ليست حجّة منطقية صارمة، بل هي حجّة <strong>خطابية وجدانية</strong> تعتمد على الاستنهاض العاطفي والإقناع الرمزي.</p>
+                        <p><strong>قوتها:</strong> تمنح الإنسان إحساساً بأن الحرية ليست مكسباً خارجياً يُنتزع، بل حق فطري مغروس في كيانه، وذلك يحرّك الكرامة الداخلية ويستفزّ الوعي.</p>
+                        <p><strong>حدودها:</strong> أن التاريخ يُثبت أن الحرية كثيراً ما سُلبت من الإنسان، وأن الشعوب عاشت قروناً تحت الاستعباد. فلا يكفي أن نقول للإنسان "أنت حُرّ بالفطرة" لنحرّره، بل لا بدّ من النضال العملي والوعي السياسي والاجتماعي.</p>
+                        <p><strong>موقفي:</strong> أرى أن الحجّة الفطرية ضرورية كأساس نفسي وأخلاقي، لكنها غير كافية بمفردها. فهي تُحرّك الوجدان، لكن التحرير الفعلي يحتاج إلى وعي وإرادة وتنظيم وعمل جماعي. والحكمة أن نجمع بين الاستنهاض الوجداني (كما فعل الشابي) والعمل المنظم (كما فعلت حركات التحرر الوطني). فالاثنان متكاملان لا متعارضان.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">■ هناك حرية طبيعية خُلق عليها الفرد وحرية مقيّدة تقوم على العقل وعلى المصلحة العامة المشتركة. فبأيّهما يأخذ الإنسان ليعتبر حرّاً؟ علّل جوابك.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer8')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer8" class="ArabicH-answer">
+                        <p>الحرية الحقيقية هي التي تجمع بين <strong>الطبيعية</strong> (حق الإنسان الأصيل) و<strong>المقيّدة</strong> (المنظّمة بقواعد العقل والمصلحة المشتركة). فلا حرية مطلقة بلا حدود، لأنها تتحول إلى فوضى واعتداء على حريات الآخرين. ولا حرية مقيّدة بلا روح، لأنها تتحول إلى عبودية مقنّعة.</p>
+                        <p><strong>التعليل:</strong> الحرية الطبيعية تحفظ كرامة الإنسان وتحميه من الاستعباد، والحرية المقيّدة بالعقل والقانون تحفظ النظام العام وحقوق الآخرين. فالتوازن بينهما هو الذي يصنع الإنسان الحرّ الحقيقي. ولهذا نجد الفلاسفة (روسو، كانط، مونتسكيو) يجمعون بين الحرية والقانون، ويعتبرون أن "الحرية هي الحق في فعل كل ما لا يضر بالآخرين".</p>
+                        <p>وهكذا، فالإنسان لا يكون حراً إلا إذا كان واعياً بحدوده كما هو واعٍ بحقوقه. فالحرية ليست غياب القيود، بل هي القدرة على الاختيار المسؤول.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">■ كيف تعتبر هذه القصيدة من الشعر الوطني والحال أنها تخاطب الإنسان عامة ولا تخاطب التونسي المكافح ضد المستعمر الفرنسي؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer9')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer9" class="ArabicH-answer">
+                        <p>تُعدّ القصيدة من الشعر الوطني لأنها تنطلق من الواقع الوطني التونسي وتعبّر عن همومه، لكنها ترتقي به إلى مستوى إنساني شامل. وهذا ما يُسمّى في الأدب <strong>بالوطني ذي البعد الإنساني</strong>.</p>
+                        <p><strong>مظاهر البعد الوطني:</strong></p>
+                        <ul>
+                            <li>ظرف كتابتها (1929) في ذروة الاستعمار الفرنسي لتونس.</li>
+                            <li>تعبيرها عن استسلام المواطن التونسي للقيود والذل، وهو ما يرمز للاستعمار.</li>
+                            <li>دعوتها إلى الثورة والنهوض، وهو ما يتوافق مع حركة التحرر الوطني.</li>
+                            <li>لغة الشاعر وصوره مستمدة من البيئة التونسية (الفجر، الضحى، التلاع، المروج...).</li>
+                        </ul>
+                        <p><strong>مظاهر البعد الإنساني:</strong></p>
+                        <ul>
+                            <li>عنوان القصيدة "يا ابن أمي" خطاب موجّه إلى الإنسان كله، لا إلى التونسي فحسب.</li>
+                            <li>موضوع الحرية موضوع إنساني كوني، لا يخصّ شعباً دون آخر.</li>
+                            <li>الإطار الطبيعي الرمزي (النور، الطير، النسيم) يتجاوز الحدود الجغرافية.</li>
+                        </ul>
+                        <p><strong>الخلاصة:</strong> الشعر الوطني الحق هو الذي لا ينغلق على ذاته، بل ينفتح على الإنسانية. فالشابي بخطابه الإنسان أراد أن يقول: تحرير تونس هو جزء من تحرير الإنسان. وبهذا يجمع بين خصوصية الوطن وعمومية الرسالة، وهو ما يمنح القصيدة قيمتها الفنية والفكرية الخالدة.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Writing -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أحرر</h3>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- تعتبر الأبيات الخمسة الأولى من القصيدة حجّة اعتمدها الشاعر لإقناع الإنسان بضرورة التمرد على المستعمر والثورة ضده. هل لك أن تأتي بحجج أخرى تستنهض بها الإنسان فيطلب الحرية لنفسه والاستقلال لبلده؟ حرّر في ذلك عشرة أسطر.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer10')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer10" class="ArabicH-answer">
+                        <p>إن حجّة الشابي الفطرية جميلة، لكنها تحتاج إلى حجج أخرى تُعضدها وتُقنع العقل قبل الوجدان. فمن الحجج التي يمكن أن تستنهض الإنسان:</p>
+                        <p><strong>الحجة التاريخية:</strong> أن الشعوب التي ناضلت من أجل حريتها استطاعت أن تنتزع استقلالها، وأن الاستعمار لا يسقط إلا بإرادة الشعوب. فالتاريخ شاهد على أن المستعمر لا يمنح الحرية، بل تُنتزع منه انتزاعاً.</p>
+                        <p><strong>الحجة الكرامية:</strong> أن الحياة تحت الاستعمار حياة ناقصة، فيها امتهان للكرامة وإهدار للحقوق وطمس للهوية. فالحرية ليست ترفاً، بل شرط أدنى للعيش الإنساني الكريم.</p>
+                        <p><strong>الحجة الحقوقية:</strong> أن المواثيق الدولية والإنسانية تكفل لكل شعب حق تقرير مصيره، وأن الاستعمار مخالف للقانون الدولي ولحقوق الإنسان.</p>
+                        <p><strong>الحجة الاقتصادية:</strong> أن الاستعمار ينهب الثروات ويعطّل التنمية ويستنزف الطاقات. فالاستقلال شرط ضروري لبناء اقتصاد عادل يحقق الرفاه لأبناء الشعب.</p>
+                        <p><strong>الحجة الحضارية:</strong> أن التحرر يفتح الباب للإبداع والابتكار والمشاركة في الحضارة الإنسانية، بينما يعيش المستعمَر في هامش التاريخ.</p>
+                        <p>هذه الحجج مع حجة الشابي الفطرية تشكل منظومة إقناعية متكاملة تخاطب القلب والعقل معاً، وتدفع الإنسان إلى طلب الحرية لنفسه والاستقلال لبلده.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- هب أنّ أحد جيرانك أزعجك بسهراته الصاخبة وهو يظنّ ذلك حرية شخصية لا يمنعه من ممارستها أحد، فخاطبته في الموضوع موضّحاً له أنّ للحرية حدوداً، فماذا قلت له؟ حرّر في ذلك فقرة تعرض فيها أفكارك وتدعمها بحجج متنوّعة.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer11')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer11" class="ArabicH-answer">
+                        <p>قلت له بلطف وحزم: "يا جاري، أقدّر فيك حبّك للحرية، وأحترم حقك في أن تعيش حياتك كما تشاء، لكنّ الحرية ليست غياب القيود، بل هي الوعي بحدودها. فالسهرات الصاخبة التي تُنغّص راحة الجيران ليست حرية، بل اعتداء على حرية الآخرين في الراحة والسكينة. وقد علّمنا الفلاسفة أن حرية الفرد تنتهي حيث تبدأ حرية غيره. ثم إن القانون نفسه يكفل حق الجار في السكينة، ويجرّم كل إزعاج يخلّ بالأمن والطمأنينة. فما أوَدّه منك هو أن نُحوّل هذه الفرصة إلى حوارٍ أخوي: أنت حرّ في أن تستمتع بسهراتك، ونحن أحرار في أن ننام في هدوء. فلنبحث معاً عن صيغة توازن بين الحقّين، دون أن يطغى طرف على طرف. فالحرية العاقلة هي التي تبني ولا تهدم، وتجمع ولا تفرّق."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Context -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">بمناسبة هذا النص</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">القراءة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>السؤال:</strong> تمثّل الأبيات الأربعة الأولى جملة واحدة. لماذا؟ وكيف ينبغي أن تقرأ هذه الأبيات؟</p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer12')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer12" class="ArabicH-answer">
+                            <p><strong>لماذا تُعدّ جملة واحدة:</strong> لأنها تتدفق في سياق واحد متصل، يبدأ بفعل "خُلِقْتَ" في البيت الأول (الخبر الرئيسي)، وتتوالى الأفعال المضارعة (تُغرّد، تَمرح، تَنعم، تَمشي، تَقطِف) معطوفة عليها بالواو، فتكوّن سلسلة صفات للحياة الحرة التي فُطر عليها الإنسان. ثم تُختم بالبيت الخامس (كذا صاغك الله) الذي يعود ليؤكد الخبر الأول ويُغلقه، فيصبح المقطع كله جملة واحدة ممتدة.</p>
+                            <p><strong>كيف تُقرأ:</strong> تُقرأ قراءة مسترسلة متصلة، بنفَس واحد طويل، دون توقف قوي عند نهايات الأبيات. يُفضّل أن يراعي القارئ التنغيم الصاعد في الأفعال المتتالية (تُغرّد، تَمرح، تَنعم...) لإبراز التعداد والتدفق، ثم يهبط التنغيم في البيت الخامس "كذا صاغك الله" ليُغلق المعنى ويُؤكده. وبهذا الأداء يتحقق للجملة تماسكها الدلالي والإيقاعي.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الحقل المعجمي</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>استخرج من النص الكلمات التي تنتمي إلى مجال "الطبيعة".</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer13')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer13" class="ArabicH-answer">
+                            <p>من النص نجد الكلمات الآتية تنتمي إلى حقل الطبيعة:</p>
+                            <ul>
+                                <li><strong>النسيم</strong> (الهواء اللطيف)</li>
+                                <li><strong>الضحى</strong> (وقت ارتفاع الشمس)</li>
+                                <li><strong>الطير</strong> (الكائن الطائر)</li>
+                                <li><strong>ورود الصباح</strong> (الأزهار)</li>
+                                <li><strong>النور</strong> (الضوء)</li>
+                                <li><strong>المروج</strong> (الأراضي الخضراء)</li>
+                                <li><strong>ورد الرُّبى</strong> (زهور المرتفعات)</li>
+                                <li><strong>الفجر</strong> (وقت انبلاج الصباح)</li>
+                                <li><strong>التِّلاع</strong> (المرتفعات)</li>
+                                <li><strong>الربيع</strong> (فصل الطبيعة)</li>
+                                <li><strong>الزهور</strong></li>
+                                <li><strong>الأشعة</strong> (أشعة الشمس)</li>
+                                <li><strong>المياه</strong></li>
+                                <li><strong>الحمام</strong> (طائر)</li>
+                                <li><strong>أريج</strong> (عطر الزهور)</li>
+                            </ul>
+                            <p>وتشكّل هذه المفردات شبكة دلالية متماسكة تُعبّر عن الطبيعة بوصفها فضاءً للحرية والجمال والانطلاق، وهي السمة المميزة لشعر الشابي.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">البحث</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>ارجع إلى كتاب "الميثاق الاجتماعي" (Le Contrat Social) لجون جاك روسو وابحث فيه عن معنى للحرية يتّفق وما يدعو إليه الشابي.</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer14')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer14" class="ArabicH-answer">
+                            <p>في كتاب "الميثاق الاجتماعي" (1762)، يقول روسو في عبارته الشهيرة: <strong>"الإنسان يولد حراً، وهو في كل مكان مُقيَّد بالأغلال"</strong> (L'homme est né libre, et partout il est dans les fers). وهي عبارة تُلخّص نظريته في الحرية الطبيعية للإنسان، ومقابلها القيود الاجتماعية والسياسية التي تُفرض عليه.</p>
+                            <p><strong>ما يتفق مع الشابي:</strong></p>
+                            <ul>
+                                <li><strong>فكرة الحرية الطبيعية:</strong> كلاهما يرى أن الحرية حق فطري مغروس في الإنسان منذ ولادته، لا منحة من أحد.</li>
+                                <li><strong>رفض الاستعباد:</strong> كلاهما يستنكر خضوع الإنسان للقيود التي تسلبه إنسانيته.</li>
+                                <li><strong>الاستنهاض:</strong> يدعو روسو إلى أن يستعيد الإنسان حريته المشروعة، وهو ما يدعو إليه الشابي في قصيدته.</li>
+                            </ul>
+                            <p><strong>ما يختلف بينهما:</strong></p>
+                            <ul>
+                                <li><strong>الأسس:</strong> روسو يبني الحرية على العقد الاجتماعي وإرادة الشعب، بينما الشابي يبنيها على الأساس الطبيعي-الإلهي (هبة الله).</li>
+                                <li><strong>الطبيعة:</strong> عند روسو الحرية مشروع سياسي اجتماعي، وعند الشابي هي مشروع روحي ووجودي أيضاً.</li>
+                            </ul>
+                            <p>فالشابي وروسو يلتقيان في الجوهر (الحرية حق طبيعي)، ويفترقان في التأصيل (روحي/إلهي عند الشابي، سياسي/اجتماعي عند روسو).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Know Section -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أعرف</h3>
+                
+                <!-- Prosodic Glimpse -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ومضة عروضية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>السؤال:</strong> هل يمكنك أن تغنّي هذه القصيدة على إيقاع النشيد الوطني الرسمي؟ لماذا؟</p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer15')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer15" class="ArabicH-answer">
+                            <p><strong>لا، لا يمكن تغنيتها على إيقاع النشيد الوطني الرسمي التونسي ("حماة الحمى")،</strong> والسبب عروضي محض:</p>
+                            <ul>
+                                <li>قصيدة "يا ابن أمي" نُظمت على <strong>بحر الطويل</strong> (فعولن مفاعيلن فعولن مفاعيلن)، وهو بحر طويل بطيء يتناسب مع التأمل والاستنهاض العميق.</li>
+                                <li>النشيد الوطني الرسمي "حماة الحمى" نُظم على <strong>بحر آخر</strong> (يغلب عليه إيقاع المشرقي/البسيط في تنويعة خاصة)، ولحنُه مصمّم ليتوافق مع تفاعيله الخاصة لا مع الطويل.</li>
+                                <li>كما أن لكل بحر إيقاعه ونَفَسه الموسيقي، وتغيير البحر يفسد اللحن ويُختل الوزن.</li>
+                            </ul>
+                            <p>لكن القصيدة، لِما فيها من نفَس حماسي وتدفق شعوري، <strong>قابلة للتلحين</strong> على إيقاع خاص بها، كما لحّنها بعض الفنّانين التونسيين في مناسبات وطنية. فالمسألة ليست في إمكانية التلحين عموماً، بل في التناسب بين البحر واللحن.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Linguistic Glimpse -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ومضة لغوية: معاني "أنّى"</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>المثال من النص:</strong> "وَتَمْرَحُ بَيْنَ وُرُودِ الصَّبَاحِ / وَتَنْعَمُ بِالنُّورِ أَنَّى تَرَاهْ"</p>
+                        <p><strong>أَنّى</strong> في هذا البيت ظرف مكان بمعنى "حيثما".</p>
+                        <p><strong>ومن استعمالاتها:</strong></p>
+                        <ul>
+                            <li><strong>ظرف مكان بمعنى "حيثما":</strong> كما في البيت.</li>
+                            <li><strong>ظرف زمان بمعنى "متى":</strong> "أنّى جئتني وجدتني" أي متى جئتني.</li>
+                            <li><strong>استفهام عن المصدر بمعنى "من أين":</strong> "يا مريم أنّى لكِ هذا؟" (آل عمران: 37).</li>
+                            <li><strong>استفهام عن الكيفية:</strong> "أنّى يُحيي هذه اللهُ بعد موتها؟" (البقرة: 259).</li>
+                        </ul>
+                        <p>وهي كلمة ذات مرونة دلالية تتيح للشاعر أن يُوسّع من أفق المعنى حسب السياق.</p>
+                    </div>
+                </div>
+                
+                <!-- Rhetorical Glimpse -->
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ومضة بلاغية: التقابل ونقيض الصفات</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>السؤال:</strong> ماذا يسمّى هذا التقابل بين: النور ≠ الظلام؟ وهات في ضوء ذلك نقيض الكلمات التالية: طليق / القويّ / الجميل / الصباح.</p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer16')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer16" class="ArabicH-answer">
+                            <p><strong>اسم هذا التقابل:</strong> يُسمّى <strong>الطباق</strong> (أو المقابلة)، وهو أسلوب بلاغي يعتمد على الجمع بين الكلمة ونقيضها في سياق واحد، لإبراز التضاد وتقوية المعنى وإحداث تأثير فني في المتلقي.</p>
+                            <p><strong>نقيض الكلمات المطلوبة:</strong></p>
+                            <ul>
+                                <li><strong>طليق ≠ مقيد / مكبّل / مأسور</strong></li>
+                                <li><strong>القويّ ≠ الضعيف / الواهن / الهزيل</strong></li>
+                                <li><strong>الجميل ≠ القبيح / الدميم / الشائن</strong></li>
+                                <li><strong>الصباح ≠ المساء / الليل / الظلام</strong></li>
+                            </ul>
+                            <p>ويُلاحظ أن الطباق في القصيدة ليس مجرد تقنية لفظية، بل هو أداة بناء فكري: العالم في نظر الشابي منقسم بين النور والظلمة، بين الحرية والعبودية، بين الحياة والموت، وعلى الإنسان أن يختار بينهما.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Analysis Section -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">قسم التحليل: مباني ومضامين</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">التقديم والتأطير</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>قصيدة "يا ابن أمي" للشاعر التونسي أبي القاسم الشابي قصيدة وطنية ذات بعد إنساني، مقتطفة من "الأعمال الكاملة". كُتبت في فيفري 1929، في ذروة الاستعمار الفرنسي لتونس، لكنها تتجاوز الواقع الوطني إلى خطاب الإنسان كله، فتُصبح نداءً لتحرير الإنسان من كل قيد. وتدخل القصيدة في إطار <strong>المحور الثالث: الشعر الوطني</strong>، وتتميز بروح التجديد الذي ميز الشابي، حيث حرّر الشعر من الأغراض التقليدية وضمّنه مضامين وطنية وإنسانية جديدة.</p>
+                        <p><strong>الموضوع:</strong> يستنهض الشاعر همّة الإنسان لاسترجاع حريته حقّه الطبيعي الذي فرّط فيه، ويحثّه على النهوض والثورة على كل قيد، متوجهاً به نحو النور والحرية.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الوحدات (المعيار: الخبر والإنشاء)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul>
+                            <li><strong>المقطع الخبري (الأبيات 1-5):</strong> الإخبار عن حقيقة الحرية كحق طبيعي مغروس في الإنسان منذ الخلق.</li>
+                            <li><strong>المقطع الإنشائي (الأبيات 6-16):</strong> الاستفهام التعجبي والإنكاري، ثم الأمر والنهي، لاستنهاض الإنسان ودعوته إلى الثورة على القيود.</li>
+                        </ul>
+                        <p>هذا التقسيم يُظهر تطور الخطاب من <strong>التقرير</strong> إلى <strong>التحريك</strong>، ومن الإقناع العقلي إلى الاستنهاض الوجداني.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تحليل المقاطع</h4>
+                    <div class="ArabicH-exercise-content">
+                        <h5 style="color: var(--primary-color); margin: 15px 0 10px 0;">المقطع الأول: الحرية هبة إلهية (الأبيات 1-5)</h5>
+                        <p><strong>مقوماته:</strong></p>
+                        <ul>
+                            <li><strong>الأفعال الماضية:</strong> خُلِقْتَ – صاغك الله – ألقتك – تُثبت الأصل الفطري للحرية.</li>
+                            <li><strong>الأفعال المضارعة المتتالية:</strong> تُغرّد، تَمرح، تَنعم، تَمشي، تَقطِف – تعرض مظاهر الحياة الحرة.</li>
+                            <li><strong>التشبيهات الطبيعية:</strong> كطيف النسيم، كنور الضحى، كالطير – لربط الحرية بالطبيعة الحرة.</li>
+                            <li><strong>الخطاب المباشر:</strong> "يا ابن الوجود" – لإضفاء طابع كوني على المخاطب.</li>
+                        </ul>
+                        <p><strong>الدلالات:</strong> يُؤسّس الشابي في هذا المقطع لحجّة فطرية على حرية الإنسان، فيُذكّره بأنه خُلق حراً وأن الله منحه هذه الحرية. وهذا الإطار يمنح الحرية مشروعية مقدّسة، ويحوّل المطالبة بها من مطلب سياسي إلى استرداد لحقّ إلهي مغتصب.</p>
+                        
+                        <h5 style="color: var(--primary-color); margin: 20px 0 10px 0;">المقطع الثاني: التعجب من الذل والإنكار (الأبيات 6-10)</h5>
+                        <p><strong>مقوماته:</strong></p>
+                        <ul>
+                            <li><strong>الاستفهام التعجبي:</strong> "فما لك ترضى بذلّ القيود" – استنكار واستغراب.</li>
+                            <li><strong>الاستفهام الإنكاري:</strong> "أتَخشى نشيد السماء الجميل؟" – نفي مضمر وتنديد بالخوف.</li>
+                            <li><strong>الأفعال المضارعة السلبية:</strong> ترضى، تحني، تُسكت، تُطبق، تقنع – لتصوير حالة الإنسان الخاضع.</li>
+                            <li><strong>الطباق:</strong> بين النور والظلمة، بين الحياة والكهوف – لإبراز التناقض.</li>
+                        </ul>
+                        <p><strong>الدلالات:</strong> ينتقل الشابي من التذكير إلى المواجهة. فبعد أن ذكّر الإنسان بحريته الفطرية، ها هو يفتح عينيه على الواقع المرير: كيف ترضى بالذل وقد خُلقت حراً؟ وهذا الاستفهام المتكرر يحرّك الوعي ويُشعل الحسّ بالكرامة. وفي هذا المقطع حضور واضح للبعد الوطني: استسلام المواطن التونسي للمستعمر يُماثل استسلام الإنسان للقيود.</p>
+                        
+                        <h5 style="color: var(--primary-color); margin: 20px 0 10px 0;">المقطع الثالث: الاستنهاض والدعوة إلى النور (الأبيات 11-16)</h5>
+                        <p><strong>مقوماته:</strong></p>
+                        <ul>
+                            <li><strong>أسلوب الأمر:</strong> "انهض، سِرْ" – طلب الحسم والنهوض.</li>
+                            <li><strong>أسلوب النهي:</strong> "لا تخشَ" – النهي عن الخوف والتوجّس.</li>
+                            <li><strong>الترغيب:</strong> وصف ما وراء التلاع (الضحى، الربيع، الورد، الأريج، رقص الأشعة، تغريد الحمام) – لشدّ المتلقي نحو المستقبل.</li>
+                            <li><strong>التكرار:</strong> "إلى النور... إلى النور" – تثبيت الهدف وتعميق الأثر.</li>
+                            <li><strong>الجمل الطويلة:</strong> الجملة التي تمتد على عدة أبيات (11-16) – لخلق تدفق شعوري يعكس الاندفاع نحو النور.</li>
+                        </ul>
+                        <p><strong>الدلالات:</strong> يبلغ النص ذروته في هذا المقطع، فيُحوّل الشابي قصيدته من وصف الحاضر إلى بناء المستقبل. فالأمر بالنور دعوة مفتوحة إلى الحرية والكرامة، والترغيب بجمال ما وراء التلاع إغراء بالأمل. وهكذا تُغلق القصيدة على نغمة تفاؤلية عالية تُجسّد إيمان الشابي بأن الحرية قادمة، وأن الظلمة إلى زوال.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المبنى (الشكل)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ol>
+                            <li><strong>البناء العروضي:</strong> البحر الطويل (فعولن مفاعيلن فعولن مفاعيلن)، وهو بحر يتناسب مع جلال الموضوع وامتداد النَّفَس الشعري.</li>
+                            <li><strong>اللغة:</strong> فصيحة واضحة، فيها معجم طبيعي (النسيم، الضحى، الورود) ومعجم روحي (الإله، الله، ظلّ الإله).</li>
+                            <li><strong>الصور الشعرية:</strong> طبيعية (كالطير، كنور الضحى) ورمزية (النور/الظلمة).</li>
+                            <li><strong>الأساليب:</strong> مزج بين الخبر (المقطع الأول) والإنشاء (المقطعان الثاني والثالث).</li>
+                            <li><strong>البناء الفني:</strong> مقدمة (التذكير بالحرية) – عرض (التعجب من الذل) – خاتمة (الاستنهاض والنور).</li>
+                            <li><strong>الإيقاع:</strong> يتغير بين الهدوء التأملي (في المقطع الأول) والتصعيد الإنشائي (في المقطعين الآخرين).</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المضمون (المعنى)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ol>
+                            <li><strong>الحرية حق طبيعي وإلهي:</strong> فُطر الإنسان عليها، ولا يجوز التفريط فيها.</li>
+                            <li><strong>رفض الذل والقيود:</strong> الاستعباد مخالف لكرامة الإنسان.</li>
+                            <li><strong>الشجاعة وعدم الخوف:</strong> فالخوف من الحرية خوف من الحياة نفسها.</li>
+                            <li><strong>التفاؤل والأمل:</strong> ما وراء التلاع نور وربيع وخير.</li>
+                            <li><strong>الدعوة إلى النهوض والعمل:</strong> فمن نام لم تنتظره الحياة.</li>
+                            <li><strong>البعد الوطني:</strong> الإشارة إلى استسلام المواطن للاستعمار، ودعوته إلى الثورة.</li>
+                            <li><strong>البعد الإنساني:</strong> الخطاب موجّه إلى "ابن أمي" أي إلى كل إنسان.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الخاتمة التحليلية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>تُجسّد قصيدة "يا ابن أمي" نموذجاً راقياً للشعر الوطني ذي البعد الإنساني. فالشابي لم يكتف بمخاطبة التونسي المستعمَر، بل رفع خطابه إلى مستوى الإنسان كله، مُحوّلاً قضية التحرير الوطني إلى قضية تحرير إنساني شاملة. وقد جمع النص بين الحجّة الفطرية (الحرية هبة إلهية) والاستنهاض الوجداني (الاستفهام التعجبي والأمر بالنور)، وبين الترغيب (بجمال ما وراء التلاع) والتنفير (من ذلّ القيود). وهكذا تُغلق القصيدة على نغمة تفاؤلية عالية، تُعبّر عن إيمان عميق بأن النور قادم، وأن الحياة لا تنتظر النائمين.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Writing Section -->
+            <div class="ArabicH-analysis-section">
+                <h3 class="ArabicH-analysis-title">قسم التحرير: تحليل معمق لقصيدة "يا ابن أمي"</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تحليل قصيدة أبي القاسم الشابي</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>تُعدّ قصيدة "يا ابن أمي" من أبرز قصائد الشعر الوطني التونسي في القرن العشرين، وأكثرها قدرة على تجاوز حدود الزمان والمكان. فالشابي، وهو يكتبها في 1929، لم يكن يخاطب التونسي المستعمَر فحسب، بل كان يخاطب الإنسان في كل مكان، ويُذكّره بحريته التي فُطر عليها. وبهذا الجمع بين الخصوصية الوطنية والعمومية الإنسانية، ارتقى الشابي بالشعر الوطني إلى مستوى الشعر الإنساني الخالد.</p>
+                        
+                        <p>يبدأ الشابي قصيدته بحجّة فطرية بليغة: "خُلِقْتَ طليقاً كطيف النسيم / وحرّاً كنور الضحى في سماه". فالإنسان في نظره وُلد حرّاً، حريةً كالنسيم لا تُقبض، وكالنور لا يُحتجز. ثم يسرد سلسلة من مظاهر الحياة الحرة (التغريد، المرح، النعم، المشي بين المروج، قطف الورد)، ليرسم صورة الإنسان الذي يعيش في انسجام مع الطبيعة. وكل هذه الأفعال مردوفة بالواو، في تدفق شعوري يؤكد أن الحرية هي الأصل، وأنها ليست مكسباً عارضاً بل جوهر الوجود.</p>
+                        
+                        <p>ثم ينتقل الشابي إلى التوبيخ والتعجب: "فما لك ترضى بذلّ القيود / وتحني لمن كبّلوك الجباه؟". وهنا يتحوّل الخطاب من التقرير إلى المواجهة، ومن الوصف إلى الاستفهام التعجبي. فالاستفهام هنا لا ينتظر جواباً، بل يهزّ الضمير ويوقظ الكرامة. ويتوالى الاستفهام بصور متعددة (أتخشى نشيد السماء الجميل؟ أترهب نور الفضا في ضحاه؟)، ليُبيّن سخافة الخوف من الجمال والنور، ويُندّد بمن يهاب الحرية نفسها. وهنا يظهر البعد الوطني للقصيدة، فاستسلام المواطن التونسي للمستعمر يُماثل استسلام الإنسان للقيود.</p>
+                        
+                        <p>وفي المقطع الثالث يتحول الشابي من التوبيخ إلى الاستنهاض: "ألا انهض وسِرْ في سبيل الحياة / فمن نام لم تنتظره الحياه". وهنا يبلغ الخطاب ذروته، فيُصبح الأمر واجباً، والنهي عن الخوف ضرورة. ثم يفتح الشابي أمام الإنسان آفاقاً مشرقة: "فما ثَمَّ إلا الضحى في صباه / وإلا ربيع الوجود الغرير / يُطرّز بالورد ضافي رداه". فيرسم صورة مستقبل مشرق، تُغري الإنسان بالنهوض. ويُكرر في الختام: "إلى النور فالنور عذب جميل / إلى النور فالنور ظلّ الإله"، فيجعل النور غايةً ومصيراً، ويربطه بالبعد الإلهي ليمنحه قداسةً.
+
+                        <p>ومن الناحية الفنية، تقوم القصيدة على البحر الطويل الذي يتناسب مع جلال الموضوع. ويُلاحظ أن الشابي يوظف معجم الطبيعة (النسيم، الضحى، الطير، الورود، المروج، الفجر، التلاع، الربيع، الزهور، الأشعة، المياه، الحمام) بشكل كثيف، حتى يُصبح هذا المعجم هو المساحة الدلالية التي تتحرك فيها القصيدة. وفي المقابل، يحضر معجم الظلمة (القيود، الكهوف، النوم، الخوف) بشكل أقل، في إشارة رمزية إلى أن النور أصل والظلمة عارض. كما يوظف الشابي الطباق (النور/الظلمة) لتأكيد الصراع بين عالمين، والاستفهام التعجبي والإنكاري لتحريك الوعي، والأمر والنهي للاستنهاض.</p>
+                        
+                        <p>وهكذا تبقى قصيدة "يا ابن أمي" نموذجاً راقياً للشعر الوطني ذي البعد الإنساني، تجمع بين الإيمان بالحرية، والحنين إلى الطبيعة، والثورة على القيود، والأمل في المستقبل. إنها قصيدة تُخاطب القلب قبل العقل، وتُشعل الروح قبل أن تُقنع الفكر. وهي بذلك تؤكد أن الشعر الحق هو الذي يُغيّر الإنسان من الداخل، ويجعله جديراً بحريته.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                    <span class="ArabicH-flower-decoration">✎</span> 
+                    <span class="ArabicH-flower-decoration">✍</span> 
+                    <span class="ArabicH-flower-decoration">✎</span>
+                </p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_1SY_literature_module2_lesson3.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.previousLesson">الدرس السابق</a>
+                <a href="AH_1SY_literature_module3_lesson2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        window.translations_ArabicHLiteratureModule3Lesson1 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.literatureLesson.poemTitle": "قصيدة \"يا ابن أمي\" لأبي القاسم الشابي",
+                "ArabicH.literatureLesson.poemSubtitle": "الدرس الأول: تحليل قصيدة من الشعر الوطني – الحرية حق طبيعي وإنساني",
+                "ArabicH.literatureLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.literatureLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.literatureLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.literatureLesson.previousLesson": "الدرس السابق",
+                "ArabicH.literatureLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.literatureLesson.poemTitle": "Poem: \"O Son of My Mother\" by Abou El Kacem Chebbi",
+                "ArabicH.literatureLesson.poemSubtitle": "Lesson 1: Analysis of a National Poetry Poem – Freedom as a Natural and Human Right",
+                "ArabicH.literatureLesson.showAnswer": "Show Answer",
+                "ArabicH.literatureLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.literatureLesson.backToHome": "Back to Homepage",
+                "ArabicH.literatureLesson.previousLesson": "Previous Lesson",
+                "ArabicH.literatureLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.literatureLesson.poemTitle": "Poème: \"Ô fils de ma mère\" d'Abou El Kacem Chebbi",
+                "ArabicH.literatureLesson.poemSubtitle": "Leçon 1: Analyse d'un poème de la poésie nationale – La liberté comme droit naturel et humain",
+                "ArabicH.literatureLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.literatureLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.literatureLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.literatureLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.literatureLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHLiteratureModule3Lesson1;
+    </script>
+    
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            const showText = button.getAttribute('data-i18n-show') || 'إظهار الإجابة';
+            const hideText = button.getAttribute('data-i18n-hide') || 'إخفاء الإجابة';
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = showText;
+            } else {
+                answer.style.display = "block";
+                button.textContent = hideText;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) { item.classList.add('active'); } else { item.classList.remove('active'); }
+            });
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => { button.setAttribute('data-i18n-value', button.textContent); });
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); themeToggle.checked = true; }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+                    else { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+                });
+            }
+        });
+    </script>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() { navigator.serviceWorker.register('/sw.js').then(r => console.log('SW registered')).catch(e => console.log('SW failed')); });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; if (manualInstallBtn) manualInstallBtn.style.display = 'flex'; });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') { manualInstallBtn.style.display = 'none'; deferredPrompt = null; }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

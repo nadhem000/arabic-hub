@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل شفوي: لماذا الرّياضة؟ - الدرس الثاني | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2e7d32">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="لماذا الرّياضة؟">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* ====== Sporty Emerald + Gold Communication Theme ====== */
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #43a047;
+            --accent-color: #ffc107;
+            --light-color: #e8f5e9;
+            --dark-color: #1b5e20;
+            --text-color: #1f2d20;
+            --heading-color: #0d3d11;
+            --background-color: #f6fbf6;
+            --card-bg: #ffffff;
+            --definition-bg: #dcedc8;
+            --border-color: #c5e1a5;
+            --table-even-bg: #e8f5e9;
+            --table-hover-bg: #dcedc8;
+            --border-radius: 16px;
+            --box-shadow: 0 8px 24px rgba(46, 125, 50, 0.14);
+            --gradient-primary: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+            --gradient-secondary: linear-gradient(135deg, #43a047 0%, #2e7d32 100%);
+            --gradient-accent: linear-gradient(135deg, #ffc107 0%, #f9a825 100%);
+            --gradient-light: linear-gradient(135deg, #e8f5e9 0%, #dcedc8 100%);
+            --highlight-color: #c62828;
+            --highlight-bg: rgba(198, 40, 40, 0.1);
+            --bubble-1-bg: #dcedc8;
+            --bubble-2-bg: #fff8e1;
+            --bubble-3-bg: #e1ecf7;
+            --bubble-4-bg: #fce8ec;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #66bb6a;
+            --secondary-color: #81c784;
+            --accent-color: #ffd54f;
+            --light-color: #1b5e20;
+            --dark-color: #0d3d11;
+            --text-color: #e8f5e9;
+            --heading-color: #f6fbf6;
+            --background-color: #0d1f0e;
+            --card-bg: #1b5e20;
+            --definition-bg: #2e7d32;
+            --border-color: #43a047;
+            --table-even-bg: #1b5e20;
+            --table-hover-bg: #2e7d32;
+            --box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+            --gradient-primary: linear-gradient(135deg, #66bb6a 0%, #43a047 100%);
+            --gradient-secondary: linear-gradient(135deg, #81c784 0%, #66bb6a 100%);
+            --gradient-accent: linear-gradient(135deg, #ffd54f 0%, #ffc107 100%);
+            --gradient-light: linear-gradient(135deg, #1b5e20 0%, #0d3d11 100%);
+            --highlight-color: #ef9a9a;
+            --highlight-bg: rgba(239, 154, 154, 0.15);
+            --bubble-1-bg: rgba(102, 187, 106, 0.25);
+            --bubble-2-bg: rgba(255, 213, 79, 0.18);
+            --bubble-3-bg: rgba(100, 149, 237, 0.18);
+            --bubble-4-bg: rgba(220, 120, 150, 0.18);
+        }
+
+        /* ====== Page Layout ====== */
+        .ArabicH-lesson-page { min-height: 100vh; background: var(--background-color); display: flex; flex-direction: column; }
+        .ArabicH-lesson-main { flex: 1; display: flex; flex-direction: column; padding: 2rem; max-width: 1100px; margin: 0 auto; width: 100%; }
+        
+        .ArabicH-lesson-title {
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .ArabicH-lesson-subtitle {
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.85;
+        }
+
+        /* ====== Hero Intro Card ====== */
+        .ArabicH-comm-hero {
+            background: var(--gradient-primary);
+            color: #fff;
+            border-radius: 24px;
+            padding: 2rem 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .ArabicH-comm-hero::after {
+            content: "⚽";
+            position: absolute;
+            left: 20px;
+            bottom: -10px;
+            font-size: 8rem;
+            opacity: 0.13;
+            line-height: 1;
+        }
+        .ArabicH-comm-hero h2 {
+            color: #fff;
+            font-size: 1.4rem;
+            margin: 0 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .ArabicH-comm-hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+        .ArabicH-comm-chip {
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.35);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.92rem;
+            backdrop-filter: blur(6px);
+        }
+
+        /* ====== Objectives Grid ====== */
+        .ArabicH-objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 14px;
+            margin-top: 1rem;
+        }
+        .ArabicH-objective-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-right: 5px solid var(--primary-color);
+            border-radius: 12px;
+            padding: 1rem 1.1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            box-shadow: 0 3px 10px rgba(46,125,50,0.08);
+        }
+        .ArabicH-objective-card .num {
+            flex-shrink: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--gradient-accent);
+            color: #3a2a00;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+        .ArabicH-objective-card p {
+            margin: 0;
+            color: var(--text-color);
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        /* ====== Section Titles ====== */
+        .ArabicH-comm-section { margin: 2.2rem 0; }
+        .ArabicH-comm-section-title {
+            font-size: 1.35rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        [data-theme="dark"] .ArabicH-comm-section-title { color: var(--accent-color); }
+        .ArabicH-comm-section-title .icon {
+            font-size: 1.4rem;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--gradient-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-color);
+        }
+
+        /* ====== Reading Text Card ====== */
+        .ArabicH-reading-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            border-top: 5px solid var(--secondary-color);
+            position: relative;
+        }
+        .ArabicH-reading-card .source {
+            display: inline-block;
+            background: var(--definition-bg);
+            color: var(--primary-color);
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        [data-theme="dark"] .ArabicH-reading-card .source { color: var(--accent-color); }
+        .ArabicH-reading-text {
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+            font-size: 1.22rem;
+            line-height: 2.1;
+            color: var(--dark-color);
+            text-align: justify;
+        }
+        [data-theme="dark"] .ArabicH-reading-text { color: #e8f5e9; }
+
+        /* ====== Supplementary Research ====== */
+        .ArabicH-research-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .ArabicH-research-item {
+            background: var(--card-bg);
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            border-right: 6px solid var(--accent-color);
+            padding: 1rem 1.2rem;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            box-shadow: 0 3px 10px rgba(46,125,50,0.06);
+            transition: transform 0.25s ease;
+        }
+        .ArabicH-research-item:hover { transform: translateX(-4px); }
+        .ArabicH-research-item .r-icon {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: var(--gradient-accent);
+            color: #3a2a00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+        .ArabicH-research-item p {
+            margin: 0;
+            color: var(--text-color);
+            font-size: 0.97rem;
+            line-height: 1.65;
+        }
+
+        /* ====== Proposed Questions ====== */
+        .ArabicH-questions-list { display: flex; flex-direction: column; gap: 14px; }
+        .ArabicH-proposed-q {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 1.1rem 1.3rem;
+            border: 1px solid var(--border-color);
+            border-right: 6px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: 0 3px 10px rgba(46,125,50,0.06);
+            transition: transform 0.25s ease;
+        }
+        .ArabicH-proposed-q:hover { transform: translateX(-4px); }
+        .ArabicH-proposed-q .q-badge {
+            width: 38px; height: 38px;
+            border-radius: 10px;
+            background: var(--gradient-secondary);
+            color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1rem; flex-shrink: 0;
+        }
+        .ArabicH-proposed-q p { margin: 0; color: var(--text-color); font-size: 1rem; line-height: 1.65; }
+
+        /* ====== Group Dialogue ====== */
+        .ArabicH-dialogue {
+            background: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.6rem;
+            border: 1px solid var(--border-color);
+        }
+        .ArabicH-bubble {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 1.2rem;
+            align-items: flex-start;
+        }
+        .ArabicH-bubble:last-child { margin-bottom: 0; }
+        .ArabicH-bubble.alt { flex-direction: row-reverse; }
+        .ArabicH-avatar {
+            flex-shrink: 0;
+            width: 46px; height: 46px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem;
+            border: 2px solid var(--card-bg);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+        .ArabicH-bubble-content {
+            background: var(--card-bg);
+            border-radius: 16px 4px 16px 16px;
+            padding: 0.9rem 1.1rem;
+            border: 1px solid var(--border-color);
+            max-width: 88%;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .ArabicH-bubble.alt .ArabicH-bubble-content {
+            border-radius: 4px 16px 16px 16px;
+        }
+        .ArabicH-bubble-name {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 4px;
+            display: block;
+        }
+        [data-theme="dark"] .ArabicH-bubble-name { color: var(--accent-color); }
+        .ArabicH-bubble-content p { margin: 0; color: var(--text-color); font-size: 0.98rem; line-height: 1.7; }
+        .ArabicH-bubble.b1 .ArabicH-bubble-content { background: var(--bubble-1-bg); }
+        .ArabicH-bubble.b2 .ArabicH-bubble-content { background: var(--bubble-2-bg); }
+        .ArabicH-bubble.b3 .ArabicH-bubble-content { background: var(--bubble-3-bg); }
+        .ArabicH-bubble.b4 .ArabicH-bubble-content { background: var(--bubble-4-bg); }
+
+        /* ====== Exchange of Opinions ====== */
+        .ArabicH-opinions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .ArabicH-opinion-card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            padding: 1.2rem 1.3rem;
+            box-shadow: 0 3px 10px rgba(46,125,50,0.08);
+            position: relative;
+            padding-top: 2.2rem;
+        }
+        .ArabicH-opinion-card::before {
+            content: "“";
+            position: absolute;
+            top: 4px;
+            right: 14px;
+            font-size: 3rem;
+            color: var(--accent-color);
+            font-family: Georgia, serif;
+            line-height: 1;
+            opacity: 0.7;
+        }
+        .ArabicH-opinion-card .opinion-author {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 6px;
+            display: block;
+        }
+        [data-theme="dark"] .ArabicH-opinion-card .opinion-author { color: var(--accent-color); }
+        .ArabicH-opinion-card p { margin: 0; color: var(--text-color); font-size: 0.96rem; line-height: 1.7; }
+
+        /* ====== Conclusions ====== */
+        .ArabicH-conclusions {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .ArabicH-conclusion-item {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 1.1rem 1.3rem;
+            border: 1px solid var(--border-color);
+            border-right: 6px solid var(--primary-color);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            box-shadow: 0 3px 10px rgba(46,125,50,0.08);
+        }
+        .ArabicH-conclusion-item .check {
+            flex-shrink: 0;
+            width: 28px; height: 28px;
+            border-radius: 50%;
+            background: var(--gradient-accent);
+            color: #3a2a00;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.95rem;
+        }
+        .ArabicH-conclusion-item p { margin: 0; color: var(--text-color); font-size: 0.98rem; line-height: 1.7; }
+
+        /* ====== Final Summary ====== */
+        .ArabicH-final-summary {
+            background: var(--gradient-secondary);
+            color: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .ArabicH-final-summary::before {
+            content: "🥇";
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 2rem;
+            opacity: 0.35;
+        }
+        .ArabicH-final-summary h3 {
+            color: #fff;
+            margin: 0 0 1rem 0;
+            font-size: 1.3rem;
+        }
+        .ArabicH-final-summary p {
+            color: #fff;
+            line-height: 1.9;
+            font-size: 1.02rem;
+            margin: 0 0 0.8rem 0;
+        }
+        .ArabicH-final-summary ul {
+            color: #fff;
+            line-height: 1.9;
+            font-size: 1rem;
+            margin: 0.5rem 0 0 0;
+            padding-right: 1.4rem;
+        }
+
+        /* ====== Flower decoration ====== */
+        .ArabicH-flower-decoration { display: inline-block; margin: 0 10px; color: var(--primary-color); font-size: 1.2rem; }
+
+        /* ====== Nav Buttons ====== */
+        .ArabicH-nav-buttons { display: flex; justify-content: space-between; margin-top: 30px; flex-wrap: wrap; gap: 10px; }
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 11px 22px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 15px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.2s;
+            display: inline-block;
+            text-align: center;
+        }
+        .ArabicH-nav-btn:hover { background-color: var(--accent-color); color: #3a2a00; transform: translateY(-2px); }
+
+        /* ====== Responsive ====== */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title { font-size: 1.9rem; }
+            .ArabicH-lesson-main { padding: 1.2rem; }
+            .ArabicH-comm-hero { padding: 1.5rem; }
+            .ArabicH-comm-hero h2 { font-size: 1.15rem; }
+            .ArabicH-objectives-grid { grid-template-columns: 1fr; }
+            .ArabicH-opinions-grid { grid-template-columns: 1fr; }
+            .ArabicH-bubble-content { max-width: 85%; font-size: 0.95rem; }
+            .ArabicH-avatar { width: 40px; height: 40px; font-size: 1.2rem; }
+            .ArabicH-nav-buttons { flex-direction: column; }
+            .ArabicH-reading-card { padding: 1.3rem; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-lesson-title { font-size: 1.5rem; }
+            .ArabicH-lesson-subtitle { font-size: 1rem; }
+            .ArabicH-proposed-q { padding: 0.9rem; }
+            .ArabicH-bubble-content { max-width: 82%; }
+            .ArabicH-bubble-content p { font-size: 0.9rem; }
+        }
+        [data-theme="dark"] p, [data-theme="dark"] li, [data-theme="dark"] div:not(.ArabicH-reading-text) { color: var(--text-color) !important; }
+        [data-theme="dark"] strong { color: var(--accent-color); }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">🏠</span><span data-i18n="ArabicH.windows.home">الرئيسية</span></a>
+        <a href="authors.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">👨‍🎓</span><span data-i18n="ArabicH.windows.authors">ادباء</span></a>
+        <a href="quotes.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📖</span><span data-i18n="ArabicH.windows.quotes">شواهد</span></a>
+        <a href="resources.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📚</span><span data-i18n="ArabicH.windows.resources">موارد</span></a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.commLesson2b.lessonTitle">لماذا الرّياضة؟</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.commLesson2b.lessonSubtitle">تواصل شفوي – المحور الثاني: الرّياضة والقيم</p>
+
+        <!-- ====== Hero: Capacities & Situation ====== -->
+        <div class="ArabicH-comm-hero">
+            <h2><span>🎯</span> القدرات المستهدفة</h2>
+            <div class="ArabicH-objectives-grid" style="margin-top:0.4rem;">
+                <div class="ArabicH-objective-card"><span class="num">1</span><p>تنغيم الخطاب عند قراءة النّصوص حسب مقتضيات المقام.</p></div>
+                <div class="ArabicH-objective-card"><span class="num">2</span><p>استثمار مصادر المعرفة المختلفة.</p></div>
+                <div class="ArabicH-objective-card"><span class="num">3</span><p>استعمال لغة سليمة في صيغها وتراكيبها.</p></div>
+                <div class="ArabicH-objective-card"><span class="num">4</span><p>استعمال السّجلّات اللّغويّة المناسبة لموضوع الحوار.</p></div>
+            </div>
+            <div class="ArabicH-comm-hero-meta">
+                <span class="ArabicH-comm-chip">🗣️ حوار متعدّد الأطراف</span>
+                <span class="ArabicH-comm-chip">📌 المحور: الرّياضة والقيم</span>
+                <span class="ArabicH-comm-chip">📖 سند الانطلاق: نصّ للطّاهر بن جلّون</span>
+            </div>
+        </div>
+
+        <!-- ====== Reading Text ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">📖</span> نصّ الانطلاق</h2>
+            <div class="ArabicH-reading-card">
+                <span class="source">✍️ الطّاهر بن جلّون</span>
+                <div class="ArabicH-reading-text">
+                    <p>أنا لم أفقه في حياتي أبداً من أمور الرّياضة شيئاً. والأمر عندي لا يقتصر على كوني غير رياضيّ، بل إنّي لا أفهم كنه تلك الأهواء الّتي تُثيرها لعبة كرة القدم، على سبيل المثال، في كافّة أنحاء العالم. وفي هذا المجال أميل إلى الاعتقاد بأنّني حالة خاصّة. منذ بدأت مباريات «المونديال» كففتُ عن مشاهدة التّلفزة بعد أن تبيّن لي أنّ كلّ الشّاشات مشغولة بنقل المباريات، وبدلاً عن ذلك رحتُ أقرأ... لم أقرأ الصّحف، بل الكتب. فالصّحف تكرّس صفحتها الأولى لكرة القدم، كرة القدم في كلّ مكان: على جدران المدينة، على موجات الأثير وفي كلّ القلوب تقريباً. أمّا أنا فشخص غير طبيعيّ. في آخر اللّيل هتف لي صديق يونانيّ ليهنّئني، على ماذا؟ على كوني قد قاومتُ موجة الكرة؟ أبداً... بل كان يريد أن يشاطرني، أنا المغربيّ، الفرحة الّتي غمرته وهو يشاهد فريق المغرب يتبارى مع فريق بولونيا. وكنت في الواقع قد أخلدت إلى الرّقاد منذ السّاعة الثّانية بعد منتصف اللّيل. لذلك شعر صاحبي بالخيبة إذ اكتشف أنّني لا أبدي قدراً كبيراً من الحماس... بعد الهاتف لم أعد قادراً على النّوم لأنّي شعرت بنفسي، فجأة، معنّى بما يحدث، أنا اللّامبالي. ما كان منّي عند ذاك إلّا أن هرعت أستعلم عن ميعاد مباراة المغرب المقبلة، باليوم وبالسّاعة.</p>
+                    <p>هذه المرّة كانت المجابهة بين المغرب وإنقلترا: الجنوب ضدّ الشّمال، الدّفء ضدّ البرد، الشّمس ضدّ الضّباب، العاطفة ضدّ المنطق... وإرادة الانتصار ضدّ التّقنية.</p>
+                    <p>شاهدت هذه المباراة واهتززت. شاهدتها بشغف، أي بكلّ مشاعري، خفت، وشعرت بحرارة وكنت حاضرا مع مواطنيّ الأحد عشر في الملعب المكسيكيّ، بالنّسبة إلينا حتّى المباراة الّتي تُسفر عن تعادل تُعتبر انتصاراً. نحن قوم متواضعون، ولا نملك الوسائل الّتي تملكه الفرق الاحترافيّة الكبرى. أقول «نحن»، لأنّني شعرت بفخر حقيقيّ، كنت سعيداً وفخوراً أمام مرأى المغرب وقد تكلّل جبينه بالغار. ومنذ ذلك الحين لم تعد تفوتني أيّة مباراة يخوضها فريق عربيّ. إلام يعود هذا الاهتمام المباغت؟ أتراه شكلاً جديداً من أشكال الشّعور الوطنيّ؟</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Supplementary Research ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">🔎</span> سند تكميليّ: ابحث عن</h2>
+            <div class="ArabicH-research-list">
+                <div class="ArabicH-research-item">
+                    <span class="r-icon">📅</span>
+                    <p><strong>تاريخ نشأة رياضة كرة القدم وتطوّرها.</strong></p>
+                </div>
+                <div class="ArabicH-research-item">
+                    <span class="r-icon">📏</span>
+                    <p><strong>مقاسات الملعب والمرمى.</strong></p>
+                </div>
+                <div class="ArabicH-research-item">
+                    <span class="r-icon">🏟️</span>
+                    <p><strong>أوّل مباراة دوليّة في كرة القدم.</strong></p>
+                </div>
+                <div class="ArabicH-research-item">
+                    <span class="r-icon">⏸️</span>
+                    <p><strong>السّنوات الّتي انقطعت فيها المباريات الدّوليّة في هذه اللّعبة.</strong></p>
+                </div>
+                <div class="ArabicH-research-item">
+                    <span class="r-icon">🇹🇳</span>
+                    <p><strong>أوّل مشاركة لتونس في كأس العالم لكرة القدم وأسماء اللّاعبين المشاركين فيها.</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Proposed Questions ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">❓</span> مداخل إلى المسألة</h2>
+            <div class="ArabicH-questions-list">
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">1</span>
+                    <p>بم تفسّر التّحوّل الّذي طرأ على الكاتب من وضع اللّامبالي بالرّياضة إلى الحريص على متابعة منافسات كأس العالم؟</p>
+                </div>
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">2</span>
+                    <p>ما هي الدّورات العالميّة الّتي شاركت فيها تونس في اختصاصي كرة القدم وكرة اليد والكرة الطّائرة وألعاب القوى...؟</p>
+                </div>
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">3</span>
+                    <p>هل تابعتَ مشاركات تونس الرّياضيّة على المستوى الدّوليّ؟ علّل جوابك.</p>
+                </div>
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">4</span>
+                    <p>صِف مقطعاً من مقابلة دوليّة كانت فيها تونس طرفاً، وبيّن المشاعر الّتي كانت تختلج في صدرك في ذلك الوقت.</p>
+                </div>
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">5</span>
+                    <p>أجب عن آخر سؤال ختم به الكاتب نصّه: «إلام يعود هذا الاهتمام المباغت؟ أتراه شكلاً جديداً من أشكال الشّعور الوطنيّ؟»</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Group Dialogue ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">💬</span> حوار جماعي</h2>
+            <div class="ArabicH-dialogue">
+                <div class="ArabicH-bubble b1">
+                    <div class="ArabicH-avatar" style="background:#dcedc8;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">سلمى (منشّطة)</span>
+                        <p>لننطلق من نصّ الطّاهر بن جلّون. الكاتب يصف نفسه في البداية بأنّه «لامبالي» بالرّياضة، ثمّ يتحوّل إلى متابع شغوف. كيف تفسّرون هذا التّحوّل المفاجئ؟</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b2 alt">
+                    <div class="ArabicH-avatar" style="background:#fff8e1;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">يوسف</span>
+                        <p>في رأيي التّحوّل لم يكن رياضيّاً محضاً، بل كان <strong>عاطفيّاً ووجدانيّاً</strong>. صديقه اليونانيّ هنّأه لأنّ فريق المغرب فاز، فشعر الكاتب بأنّه <strong>مُستهدَف في هويّته</strong> قبل أن يكون مُستهدَفاً في رياضيّته.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b3">
+                    <div class="ArabicH-avatar" style="background:#e1ecf7;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">مريم</span>
+                        <p>نعم، وأضيف أنّ الكاتب استخدم ضمير <strong>«نحن»</strong> بعد أن كان يستخدم «أنا». هذا تحوّل في الوعي: من الفرد إلى الجماعة. الرّياضة صارت عنده <strong>جسراً للانتماء</strong>، لا مجرّد لعبة.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b4 alt">
+                    <div class="ArabicH-avatar" style="background:#fce8ec;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">أمين</span>
+                        <p>وبُعد آخر: الكاتب يصف المباراة بين المغرب وإنقلترا بلغة <strong>شعريّة رمزيّة</strong>: «الجنوب ضدّ الشّمال، الدّفء ضدّ البرد، الشّمس ضدّ الضّباب، العاطفة ضدّ المنطق». هذا يعني أنّ المباراة صارت <strong>صراعاً حضاريّاً رمزيّاً</strong>، وليست مجرّد تنافس رياضي.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b1">
+                    <div class="ArabicH-avatar" style="background:#dcedc8;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">سلمى</span>
+                        <p>ملاحظات قويّة. إذن، هل الرّياضة مجرّد نشاط بدنيّ، أم أنّها تحمل <strong>شحنة رمزيّة ووطنيّة</strong> عميقة؟</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b2 alt">
+                    <div class="ArabicH-avatar" style="background:#fff8e1;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">يوسف</span>
+                        <p>الرّياضة اليوم أصبحت <strong>سفيرة الشّعوب</strong>. حين يرفع فريق عربيّ كأساً عالميّاً، يشعر كلّ العرب بالفخر. الرّياضة تُحقّق ما قد تعجز عنه السّياسة: <strong>وحدة وجدانيّة</strong> فوريّة.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b3">
+                    <div class="ArabicH-avatar" style="background:#e1ecf7;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">مريم</span>
+                        <p>وأنا أرى في ذلك <strong>خطراً أيضاً</strong>. الشّعور الوطنيّ حين يُبنى فقط على الانتصارات الرّياضيّة يصبح هشّاً. يجب أن يتأسّس على قيم أعمق: <strong>المواطنة، والعلم، والعمل، والانتماء الحضاريّ</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b4 alt">
+                    <div class="ArabicH-avatar" style="background:#fce8ec;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">أمين</span>
+                        <p>كلامك يوازن بين الحماس والنّقد. أضيف أنّ تونس مثال جيّد: مشاركاتها في كأس العالم 1978 بالأرجنتين، 1998 بفرنسا، 2002 بكوريا واليابان، 2006 بألمانيا، 2018 بروسيا، 2022 بقطر... كلّها لحظات فخر وطنيّ حقيقيّ.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b1">
+                    <div class="ArabicH-avatar" style="background:#dcedc8;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">سلمى</span>
+                        <p>جميل. نختم بجواب الكاتب: هل هذا الاهتمام المباغت شكل جديد من الشّعور الوطنيّ؟ ما رأيكم؟</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b2 alt">
+                    <div class="ArabicH-avatar" style="background:#fff8e1;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">يوسف</span>
+                        <p>نعم، هو شكل جديد من الشّعور الوطنيّ، لكنّه <strong>شكل رمزيّ وعاطفيّ</strong>، يُعبّر عن انتماء أوسع: <strong>العروبة</strong>. الرّياضة أعطت العرب <strong>مسرحاً عالميّاً</strong> للتّعبير عن وجودهم.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b3">
+                    <div class="ArabicH-avatar" style="background:#e1ecf7;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">مريم</span>
+                        <p>أوافقه، لكن بشرط: <strong>ألّا يبقى الشّعور الوطنيّ رياضيّاً فقط</strong>. فالوطن يحتاج إلى أبطال في الملاعب، وأبطال في العلم والصّناعة والفكر أيضاً.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b4 alt">
+                    <div class="ArabicH-avatar" style="background:#fce8ec;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">أمين</span>
+                        <p>اتّفق معكما. إذن <strong>الرّياضة والوطنيّة علاقة قويّة، لكنّها ليست بديلاً عن الوطنيّة الحقيقيّة الشّاملة</strong>. الرّياضة بوّابة فخر، لكنّ الوطن يُبنى بالعمل والعلم والقيم.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Exchange of Opinions ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">🔄</span> تبادل آراء</h2>
+            <div class="ArabicH-opinions-grid">
+                <div class="ArabicH-opinion-card">
+                    <span class="opinion-author">يوسف — الرأي الأول</span>
+                    <p>«الرّياضة أعطت الشّعوب العربيّة صوتاً مسموعاً في العالم. من لم يحضر مؤتمراً سياسيّاً، حضر مباراة، وهتف باسم وطنه. الرّياضة دبلوماسيّة الشّعوب.»</p>
+                </div>
+                <div class="ArabicH-opinion-card">
+                    <span class="opinion-author">مريم — الرأي الثاني</span>
+                    <p>«يجب ألّا نُسقط في فخّ الوطنية الرّياضيّة العابرة. الوطن يُبنى بالعلم والعمل لا بالميداليات فقط. من يُفرّط في تربية أبنائه ويرتاح لفوز فريق، فقد خلط بين الوظيفة والهويّة.»</p>
+                </div>
+                <div class="ArabicH-opinion-card">
+                    <span class="opinion-author">أمين — الرأي الثالث</span>
+                    <p>«نصّ الطّاهر بن جلّون كشف لنا أنّ الرّياضة قادرة على تحويل اللّامبالي إلى وطنيّ. هذا سحرها. لكن هذا السّحر يجب أن يُوظَّف لخدمة قيم أعلى: الانضباط، التّعاون، الاحترام، والفخر المشروع.»</p>
+                </div>
+                <div class="ArabicH-opinion-card">
+                    <span class="opinion-author">سلمى — الرأي الرابع</span>
+                    <p>«الرّياضة مدرسة للنّفس كما هي مدرسة للجسد. من تعلّم فيها قبول الهزيمة بكرامة، وقبول الفوز بتواضع، تعلّم درساً في المواطنة الحقيقيّة.»</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Conclusions ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">✅</span> استنتاجات</h2>
+            <div class="ArabicH-conclusions">
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>الرّياضة ظاهرة اجتماعيّة ووجدانيّة،</strong> تتجاوز الجسد إلى النّفس والهويّة والانتماء.</p>
+                </div>
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>تحوّل الكاتب من اللّامبالاة إلى الشّغف</strong> يُعبّر عن قدرة الرّياضة على إيقاظ الشّعور الوطنيّ والعروبيّ في الإنسان.</p>
+                </div>
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>الرّياضة دبلوماسيّة الشّعوب:</strong> تُقرّب بين الثّقافات وتُعبّر عن الانتماء الجماعيّ في المحافل الدّوليّة.</p>
+                </div>
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>لكنّ الشّعور الوطنيّ الرّياضيّ يجب ألّا يكون بديلاً</strong> عن الوطنيّة الشّاملة القائمة على العلم والعمل والقيم.</p>
+                </div>
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>نصّ الطّاهر بن جلّون نموذج أدبيّ رفيع</strong> في تحويل تجربة شخصيّة بسيطة إلى تأمّل في الهويّة والانتماء.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Final Summary ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">🎓</span> خلاصة: العلاقة بين الرّياضة والوطنيّة</h2>
+            <div class="ArabicH-final-summary">
+                <h3>الرّياضة بوّابة الفخر... والوطن يُبنى بالعمل</h3>
+                <p>يكشف نصّ الطّاهر بن جلّون عن علاقة عميقة بين الرّياضة والشّعور الوطنيّ. ويمكن تلخيص هذه العلاقة في المحاور الآتية:</p>
+                <ul>
+                    <li><strong>الرّياضة فضاء للانتماء:</strong> حين يتبارى فريق عربيّ، يشعر كلّ العرب بأنّهم معنيّون، فيتوحّدون وجدانيّاً خلف راية واحدة.</li>
+                    <li><strong>الرّياضة لغة عالميّة:</strong> لا تحتاج إلى ترجمة، تُوصل رسالة الشّعوب إلى العالم بلا وسيط، وتُحقّق ما تعجز عنه السّياسة أحياناً.</li>
+                    <li><strong>الرّياضة مدرسة للقيم:</strong> الانضباط، التّعاون، احترام الخصم، قبول الهزيمة بكرامة، الفوز بتواضع – كلّها قيم مواطنة حقيقيّة.</li>
+                    <li><strong>الفخر الرّياضيّ مشروع</strong> إذا كان يُعزّز الثّقة والوحدة، <strong>وخطير</strong> إذا أصبح بديلاً عن إنجازات أخرى.</li>
+                    <li><strong>الوطنيّة الشّاملة تحتاج أبطالاً في كلّ الميادين:</strong> في الملاعب، وفي المعامل، وفي الجامعات، وفي الفنون، وفي الفكر.</li>
+                    <li><strong>الشّعور الوطنيّ الحقيقيّ</strong> هو ما يجعل المواطن يعمل لوطنه يوميّاً، لا ما يهتف به في المدرّجات فقط.</li>
+                </ul>
+                <p style="margin-top:1rem;">إنّ الرّياضة حين تُمارَس بوعي، وحين تُشاهد بروح رياضيّة، تُربّي في الإنسان أجمل ما فيه: روح الفريق، الفخر الشّريف، والانتماء الصّادق. لكنّها تبقى <strong>بوّابة</strong> إلى الوطنيّة، لا <strong>بديلاً</strong> عنها. الوطن الحقيقيّ يُبنى كلّ يوم، بعرق العلماء وعمل الفلّاحين وإبداع الأدباء وبطولات الرّياضيّين معاً.</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                <span class="ArabicH-flower-decoration">🏅</span> 
+                <span class="ArabicH-flower-decoration">⚽</span> 
+                <span class="ArabicH-flower-decoration">🏆</span>
+            </p>
+        </div>
+
+        <div class="ArabicH-nav-buttons">
+            <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.commLesson.backToLessons">العودة إلى الدروس العامة</a>
+            <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.commLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+            <a href="AH_1SY_communication_module2_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.commLesson.previousLesson">الدرس السابق</a>
+            <a href="AH_1SY_communication_module2_lesson3.html" class="ArabicH-nav-btn" data-i18n="ArabicH.commLesson.nextLesson">الدرس التالي</a>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        window.translations_ArabicHCommunicationModule2Lesson2 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.commLesson2b.lessonTitle": "لماذا الرّياضة؟",
+                "ArabicH.commLesson2b.lessonSubtitle": "تواصل شفوي – المحور الثاني: الرّياضة والقيم",
+                "ArabicH.commLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.commLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.commLesson.previousLesson": "الدرس السابق",
+                "ArabicH.commLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.commLesson2b.lessonTitle": "Why Sport?",
+                "ArabicH.commLesson2b.lessonSubtitle": "Oral Communication – Unit 2: Sport and Values",
+                "ArabicH.commLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.commLesson.backToHome": "Back to Homepage",
+                "ArabicH.commLesson.previousLesson": "Previous Lesson",
+                "ArabicH.commLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.commLesson2b.lessonTitle": "Pourquoi le sport ?",
+                "ArabicH.commLesson2b.lessonSubtitle": "Communication orale – Unité 2: Sport et Valeurs",
+                "ArabicH.commLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.commLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.commLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.commLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHCommunicationModule2Lesson2;
+    </script>
+    
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) { item.classList.add('active'); } else { item.classList.remove('active'); }
+            });
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); themeToggle.checked = true; }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+                    else { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+                });
+            }
+        });
+    </script>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() { navigator.serviceWorker.register('/sw.js').then(r => console.log('SW registered')).catch(e => console.log('SW failed')); });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; if (manualInstallBtn) manualInstallBtn.style.display = 'flex'; });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') { manualInstallBtn.style.display = 'none'; deferredPrompt = null; }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

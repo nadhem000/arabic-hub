@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل شفوي: أثر الموسيقى في الإنسان - الدرس الأول | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#6a1b9a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="أثر الموسيقى في الإنسان">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        /* ====== Royal Purple Music Communication Theme ====== */
+        :root {
+            --primary-color: #6a1b9a;
+            --secondary-color: #8e24aa;
+            --accent-color: #ffc107;
+            --light-color: #f3e5f5;
+            --dark-color: #4a148c;
+            --text-color: #2a1630;
+            --heading-color: #3b0a52;
+            --background-color: #faf5fc;
+            --card-bg: #ffffff;
+            --definition-bg: #ede7f6;
+            --border-color: #d1c4e9;
+            --table-even-bg: #f3e5f5;
+            --table-hover-bg: #e1d4ee;
+            --border-radius: 16px;
+            --box-shadow: 0 8px 24px rgba(106, 27, 154, 0.14);
+            --gradient-primary: linear-gradient(135deg, #6a1b9a 0%, #4a148c 100%);
+            --gradient-secondary: linear-gradient(135deg, #8e24aa 0%, #6a1b9a 100%);
+            --gradient-accent: linear-gradient(135deg, #ffc107 0%, #ff8f00 100%);
+            --gradient-light: linear-gradient(135deg, #f3e5f5 0%, #ede7f6 100%);
+            --highlight-color: #c62828;
+            --highlight-bg: rgba(198, 40, 40, 0.1);
+            --bubble-1-bg: #ede7f6;
+            --bubble-2-bg: #fff8e1;
+            --bubble-3-bg: #e1ecf7;
+            --bubble-4-bg: #fce8ec;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #ab47bc;
+            --secondary-color: #ce93d8;
+            --accent-color: #ffd54f;
+            --light-color: #4a148c;
+            --dark-color: #2a0e3e;
+            --text-color: #f3e5f5;
+            --heading-color: #faf5fc;
+            --background-color: #1a0825;
+            --card-bg: #2a0e3e;
+            --definition-bg: #4a148c;
+            --border-color: #6a1b9a;
+            --table-even-bg: #2a0e3e;
+            --table-hover-bg: #4a148c;
+            --box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            --gradient-primary: linear-gradient(135deg, #ab47bc 0%, #8e24aa 100%);
+            --gradient-secondary: linear-gradient(135deg, #ce93d8 0%, #ab47bc 100%);
+            --gradient-accent: linear-gradient(135deg, #ffd54f 0%, #ffc107 100%);
+            --gradient-light: linear-gradient(135deg, #2a0e3e 0%, #1a0825 100%);
+            --highlight-color: #ef9a9a;
+            --highlight-bg: rgba(239, 154, 154, 0.15);
+            --bubble-1-bg: rgba(171, 71, 188, 0.25);
+            --bubble-2-bg: rgba(255, 213, 79, 0.18);
+            --bubble-3-bg: rgba(100, 149, 237, 0.18);
+            --bubble-4-bg: rgba(220, 120, 150, 0.18);
+        }
+
+        /* ====== Page Layout ====== */
+        .ArabicH-lesson-page { min-height: 100vh; background: var(--background-color); display: flex; flex-direction: column; }
+        .ArabicH-lesson-main { flex: 1; display: flex; flex-direction: column; padding: 2rem; max-width: 1100px; margin: 0 auto; width: 100%; }
+        
+        .ArabicH-lesson-title {
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--heading-color);
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .ArabicH-lesson-subtitle {
+            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.85;
+        }
+
+        /* ====== Hero Intro Card ====== */
+        .ArabicH-comm-hero {
+            background: var(--gradient-primary);
+            color: #fff;
+            border-radius: 24px;
+            padding: 2rem 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .ArabicH-comm-hero::after {
+            content: "🎼";
+            position: absolute;
+            left: 20px;
+            bottom: -10px;
+            font-size: 8rem;
+            opacity: 0.14;
+            line-height: 1;
+        }
+        .ArabicH-comm-hero h2 {
+            color: #fff;
+            font-size: 1.4rem;
+            margin: 0 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .ArabicH-comm-hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+        .ArabicH-comm-chip {
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.35);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.92rem;
+            backdrop-filter: blur(6px);
+        }
+
+        /* ====== Objectives Grid ====== */
+        .ArabicH-objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin-top: 1rem;
+        }
+        .ArabicH-objective-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-right: 5px solid var(--primary-color);
+            border-radius: 12px;
+            padding: 1rem 1.1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            box-shadow: 0 3px 10px rgba(106,27,154,0.08);
+        }
+        .ArabicH-objective-card .num {
+            flex-shrink: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--gradient-accent);
+            color: #3a2a00;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+        .ArabicH-objective-card p {
+            margin: 0;
+            color: var(--text-color);
+            font-size: 0.97rem;
+            line-height: 1.6;
+        }
+
+        /* ====== Section Titles ====== */
+        .ArabicH-comm-section { margin: 2.2rem 0; }
+        .ArabicH-comm-section-title {
+            font-size: 1.35rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        [data-theme="dark"] .ArabicH-comm-section-title { color: var(--accent-color); }
+        .ArabicH-comm-section-title .icon {
+            font-size: 1.4rem;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--gradient-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-color);
+        }
+
+        /* ====== Reading Text Card ====== */
+        .ArabicH-reading-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            border-top: 5px solid var(--secondary-color);
+            position: relative;
+        }
+        .ArabicH-reading-card .source {
+            display: inline-block;
+            background: var(--definition-bg);
+            color: var(--primary-color);
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        [data-theme="dark"] .ArabicH-reading-card .source { color: var(--accent-color); }
+        .ArabicH-reading-text {
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+            font-size: 1.22rem;
+            line-height: 2.1;
+            color: var(--dark-color);
+            text-align: justify;
+        }
+        [data-theme="dark"] .ArabicH-reading-text { color: #f3e5f5; }
+
+        /* ====== Image Study Section (with Lightbox) ====== */
+        .ArabicH-image-section {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+        @media (max-width: 768px) {
+            .ArabicH-image-section { grid-template-columns: 1fr; }
+        }
+        .ArabicH-image-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            box-shadow: var(--box-shadow);
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+        .ArabicH-image-frame {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: zoom-in;
+            background: var(--definition-bg);
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ArabicH-image-frame img {
+            width: 100%;
+            height: auto;
+            max-height: 420px;
+            object-fit: contain;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .ArabicH-image-frame:hover img { transform: scale(1.03); }
+        .ArabicH-image-caption {
+            margin: 12px 0 4px 0;
+            text-align: center;
+            font-size: 0.92rem;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+        .ArabicH-image-caption strong { color: var(--primary-color); }
+        [data-theme="dark"] .ArabicH-image-caption strong { color: var(--accent-color); }
+        .ArabicH-image-hint {
+            text-align: center;
+            font-size: 0.82rem;
+            color: var(--text-color);
+            opacity: 0.75;
+            margin: 4px 0 0 0;
+        }
+        .ArabicH-image-hint .kbd {
+            display: inline-block;
+            background: var(--definition-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1px 7px;
+            font-family: monospace;
+            font-size: 0.78rem;
+            margin: 0 2px;
+        }
+        .ArabicH-zoom-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: var(--gradient-accent);
+            color: #3a2a00;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            pointer-events: none;
+        }
+
+        /* ====== Study Guide Card ====== */
+        .ArabicH-study-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 1.4rem;
+            box-shadow: var(--box-shadow);
+            border: 1px solid var(--border-color);
+            border-right: 5px solid var(--accent-color);
+        }
+        .ArabicH-study-card h4 {
+            margin: 0 0 12px 0;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        [data-theme="dark"] .ArabicH-study-card h4 { color: var(--accent-color); }
+        .ArabicH-study-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .ArabicH-study-list li {
+            background: var(--definition-bg);
+            border-radius: 10px;
+            padding: 10px 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: var(--text-color);
+            font-size: 0.94rem;
+            line-height: 1.6;
+        }
+        .ArabicH-study-list li::before {
+            content: "🎵";
+            flex-shrink: 0;
+            font-size: 1rem;
+        }
+
+        /* ====== Lightbox Modal (EXCEPTIONAL FEATURE) ====== */
+        .ArabicH-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(15, 5, 25, 0.92);
+            backdrop-filter: blur(6px);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+        .ArabicH-lightbox.active { display: flex; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        
+        .ArabicH-lightbox-inner {
+            position: relative;
+            max-width: 95vw;
+            max-height: 92vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .ArabicH-lightbox-img-wrap {
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+            max-width: 90vw;
+            max-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #111;
+            cursor: grab;
+            position: relative;
+        }
+        .ArabicH-lightbox-img-wrap:active { cursor: grabbing; }
+        .ArabicH-lightbox-img {
+            max-width: 90vw;
+            max-height: 80vh;
+            transition: transform 0.25s ease;
+            user-select: none;
+            -webkit-user-drag: none;
+            display: block;
+        }
+        .ArabicH-lightbox-caption {
+            color: #f3e5f5;
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: 600;
+            max-width: 700px;
+        }
+        .ArabicH-lightbox-toolbar {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: rgba(255,255,255,0.08);
+            padding: 8px 14px;
+            border-radius: 40px;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+        }
+        .ArabicH-lb-btn {
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.25);
+            color: #fff;
+            padding: 8px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        .ArabicH-lb-btn:hover {
+            background: var(--accent-color);
+            color: #3a2a00;
+            border-color: var(--accent-color);
+            transform: translateY(-1px);
+        }
+        .ArabicH-lb-btn .zoom-level {
+            background: rgba(0,0,0,0.3);
+            padding: 1px 8px;
+            border-radius: 10px;
+            font-size: 0.78rem;
+            min-width: 46px;
+            text-align: center;
+        }
+        .ArabicH-lb-close {
+            position: absolute;
+            top: -46px;
+            left: 0;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.2s ease;
+        }
+        .ArabicH-lb-close:hover {
+            background: #c62828;
+            border-color: #c62828;
+            transform: rotate(90deg);
+        }
+        @media (max-width: 600px) {
+            .ArabicH-lb-close { top: -42px; width: 34px; height: 34px; }
+            .ArabicH-lb-btn { padding: 7px 11px; font-size: 0.82rem; }
+            .ArabicH-lightbox-caption { font-size: 0.85rem; }
+        }
+
+        /* ====== Proposed Questions ====== */
+        .ArabicH-questions-list { display: flex; flex-direction: column; gap: 14px; }
+        .ArabicH-proposed-q {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 1.1rem 1.3rem;
+            border: 1px solid var(--border-color);
+            border-right: 6px solid var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            box-shadow: 0 3px 10px rgba(106,27,154,0.06);
+            transition: transform 0.25s ease;
+        }
+        .ArabicH-proposed-q:hover { transform: translateX(-4px); }
+        .ArabicH-proposed-q .q-badge {
+            width: 38px; height: 38px;
+            border-radius: 10px;
+            background: var(--gradient-secondary);
+            color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1rem; flex-shrink: 0;
+        }
+        .ArabicH-proposed-q p { margin: 0; color: var(--text-color); font-size: 1rem; line-height: 1.65; }
+
+        /* ====== Group Dialogue ====== */
+        .ArabicH-dialogue {
+            background: var(--definition-bg);
+            border-radius: var(--border-radius);
+            padding: 1.6rem;
+            border: 1px solid var(--border-color);
+        }
+        .ArabicH-bubble {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 1.2rem;
+            align-items: flex-start;
+        }
+        .ArabicH-bubble:last-child { margin-bottom: 0; }
+        .ArabicH-bubble.alt { flex-direction: row-reverse; }
+        .ArabicH-avatar {
+            flex-shrink: 0;
+            width: 46px; height: 46px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem;
+            border: 2px solid var(--card-bg);
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+        .ArabicH-bubble-content {
+            background: var(--card-bg);
+            border-radius: 16px 4px 16px 16px;
+            padding: 0.9rem 1.1rem;
+            border: 1px solid var(--border-color);
+            max-width: 88%;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .ArabicH-bubble.alt .ArabicH-bubble-content {
+            border-radius: 4px 16px 16px 16px;
+        }
+        .ArabicH-bubble-name {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 4px;
+            display: block;
+        }
+        [data-theme="dark"] .ArabicH-bubble-name { color: var(--accent-color); }
+        .ArabicH-bubble-content p { margin: 0; color: var(--text-color); font-size: 0.98rem; line-height: 1.7; }
+        .ArabicH-bubble.b1 .ArabicH-bubble-content { background: var(--bubble-1-bg); }
+        .ArabicH-bubble.b2 .ArabicH-bubble-content { background: var(--bubble-2-bg); }
+        .ArabicH-bubble.b3 .ArabicH-bubble-content { background: var(--bubble-3-bg); }
+        .ArabicH-bubble.b4 .ArabicH-bubble-content { background: var(--bubble-4-bg); }
+
+        /* ====== Exchange of Opinions ====== */
+        .ArabicH-opinions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .ArabicH-opinion-card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            padding: 1.2rem 1.3rem;
+            box-shadow: 0 3px 10px rgba(106,27,154,0.08);
+            position: relative;
+            padding-top: 2.2rem;
+        }
+        .ArabicH-opinion-card::before {
+            content: "“";
+            position: absolute;
+            top: 4px;
+            right: 14px;
+            font-size: 3rem;
+            color: var(--accent-color);
+            font-family: Georgia, serif;
+            line-height: 1;
+            opacity: 0.7;
+        }
+        .ArabicH-opinion-card .opinion-author {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 6px;
+            display: block;
+        }
+        [data-theme="dark"] .ArabicH-opinion-card .opinion-author { color: var(--accent-color); }
+        .ArabicH-opinion-card p { margin: 0; color: var(--text-color); font-size: 0.96rem; line-height: 1.7; }
+
+        /* ====== Conclusions ====== */
+        .ArabicH-conclusions {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .ArabicH-conclusion-item {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 1.1rem 1.3rem;
+            border: 1px solid var(--border-color);
+            border-right: 6px solid var(--primary-color);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            box-shadow: 0 3px 10px rgba(106,27,154,0.08);
+        }
+        .ArabicH-conclusion-item .check {
+            flex-shrink: 0;
+            width: 28px; height: 28px;
+            border-radius: 50%;
+            background: var(--gradient-accent);
+            color: #3a2a00;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.95rem;
+        }
+        .ArabicH-conclusion-item p { margin: 0; color: var(--text-color); font-size: 0.98rem; line-height: 1.7; }
+
+        /* ====== Final Summary ====== */
+        .ArabicH-final-summary {
+            background: var(--gradient-secondary);
+            color: #fff;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .ArabicH-final-summary::before {
+            content: "🎻";
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            font-size: 2rem;
+            opacity: 0.4;
+        }
+        .ArabicH-final-summary h3 {
+            color: #fff;
+            margin: 0 0 1rem 0;
+            font-size: 1.3rem;
+        }
+        .ArabicH-final-summary p {
+            color: #fff;
+            line-height: 1.9;
+            font-size: 1.02rem;
+            margin: 0 0 0.8rem 0;
+        }
+        .ArabicH-final-summary ul {
+            color: #fff;
+            line-height: 1.9;
+            font-size: 1rem;
+            margin: 0.5rem 0 0 0;
+            padding-right: 1.4rem;
+        }
+
+        /* ====== Flower decoration ====== */
+        .ArabicH-flower-decoration { display: inline-block; margin: 0 10px; color: var(--primary-color); font-size: 1.2rem; }
+
+        /* ====== Nav Buttons ====== */
+        .ArabicH-nav-buttons { display: flex; justify-content: space-between; margin-top: 30px; flex-wrap: wrap; gap: 10px; }
+        .ArabicH-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 11px 22px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 15px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.2s;
+            display: inline-block;
+            text-align: center;
+        }
+        .ArabicH-nav-btn:hover { background-color: var(--accent-color); color: #3a2a00; transform: translateY(-2px); }
+
+        /* ====== Responsive ====== */
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title { font-size: 1.9rem; }
+            .ArabicH-lesson-main { padding: 1.2rem; }
+            .ArabicH-comm-hero { padding: 1.5rem; }
+            .ArabicH-comm-hero h2 { font-size: 1.15rem; }
+            .ArabicH-objectives-grid { grid-template-columns: 1fr; }
+            .ArabicH-opinions-grid { grid-template-columns: 1fr; }
+            .ArabicH-bubble-content { max-width: 85%; font-size: 0.95rem; }
+            .ArabicH-avatar { width: 40px; height: 40px; font-size: 1.2rem; }
+            .ArabicH-nav-buttons { flex-direction: column; }
+            .ArabicH-reading-card { padding: 1.3rem; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-lesson-title { font-size: 1.5rem; }
+            .ArabicH-lesson-subtitle { font-size: 1rem; }
+            .ArabicH-proposed-q { padding: 0.9rem; }
+            .ArabicH-bubble-content { max-width: 82%; }
+            .ArabicH-bubble-content p { font-size: 0.9rem; }
+        }
+        [data-theme="dark"] p, [data-theme="dark"] li, [data-theme="dark"] div:not(.ArabicH-reading-text) { color: var(--text-color) !important; }
+        [data-theme="dark"] strong { color: var(--accent-color); }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">🏠</span><span data-i18n="ArabicH.windows.home">الرئيسية</span></a>
+        <a href="authors.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">👨‍🎓</span><span data-i18n="ArabicH.windows.authors">ادباء</span></a>
+        <a href="quotes.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📖</span><span data-i18n="ArabicH.windows.quotes">شواهد</span></a>
+        <a href="resources.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📚</span><span data-i18n="ArabicH.windows.resources">موارد</span></a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.commLesson3a.lessonTitle">أثر الموسيقى في الإنسان</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.commLesson3a.lessonSubtitle">تواصل شفوي – المحور الثالث: موسيقى وأذواق</p>
+
+        <!-- ====== Hero: Capacities & Situation ====== -->
+        <div class="ArabicH-comm-hero">
+            <h2><span>🎯</span> القدرات المستهدفة</h2>
+            <div class="ArabicH-objectives-grid" style="margin-top:0.4rem;">
+                <div class="ArabicH-objective-card"><span class="num">1</span><p>حسن الإصغاء.</p></div>
+                <div class="ArabicH-objective-card"><span class="num">2</span><p>تنغيم الخطاب حسب مقتضيات المقام.</p></div>
+                <div class="ArabicH-objective-card"><span class="num">3</span><p>التّحرّي في إصدار الأحكام.</p></div>
+                <div class="ArabicH-objective-card"><span class="num">4</span><p>التّحكّم في الأهواء والانفعالات.</p></div>
+                <div class="ArabicH-objective-card"><span class="num">5</span><p>استعمال السّجلّات اللّغويّة المناسبة لموضوع الحوار.</p></div>
+            </div>
+            <div class="ArabicH-comm-hero-meta">
+                <span class="ArabicH-comm-chip">🎼 حوار متعدّد الأطراف حول أعمال تُعدّ مسبقاً</span>
+                <span class="ArabicH-comm-chip">📌 المحور: موسيقى وأذواق</span>
+                <span class="ArabicH-comm-chip">📖 سند الانطلاق: نصّ لشكيب الجابري</span>
+                <span class="ArabicH-comm-chip">🎧 وثيقة موسيقيّة صاخبة أو راقصة</span>
+            </div>
+        </div>
+
+        <!-- ====== Reading Text ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">📖</span> نصّ الانطلاق</h2>
+            <div class="ArabicH-reading-card">
+                <span class="source">✍️ شكيب الجابري</span>
+                <div class="ArabicH-reading-text">
+                    <p>كان دأب إيلزا منذ غادرت برلين قبل سنوات حضور مواسم الموسيقى في سالزبورغ عاماً فعاماً، فهي تقتصد من ههنا وههنا، فإذا لم يجتمع لها المال الكافي، اقتصدت من طعامها وملبسها، حتّى إذا حان الموسم كانت أوّل من حجز مكانه في المسرح.</p>
+                    <p>فإذا خُفضت الأنوار، وخيّم الصّمت، وخفتت الأنفاس فلا يُسمع في القاعة حسيس، وتصاعدت من المائة والعشرين آلة نغمات الافتتاحيّة الأولى، عميقة، رخيمة، مروّعة. تراخت أجفان الفتاة رويداً رويداً ثمّ انسدلت حجاباً صفيقاً بين طرفها والعالم الخارجيّ، وإذا هي في عالم جديد، فيه نُضرة وجمال، وخشوع وجلال وسموّ سليم. تتخدّر حواسّها خدَراً ناعماً. ويغيض الدّم في وجنتيها، فإذا هما ضامرتان شاحبتان، كوجنتي صنم من شمع. ويدور الزّمن في خلدها دوراناً مُضطرباً سريعاً، فتارة هي في عهد الصّبا الأوّل ترتع في جنّة من الزّهر والعطر والنّور، وتارة تطارد الفراش وتلاحق العصافير وتغزو الأوكار والأعشاش طفلة فرحة ملء أهدابها المرح وحبّ الحياة، وطوراً تستبق العمر فإذا هي في شتاء حالك طويل، تدبّ فيه على عصا عقفاء وتنفرج الرّؤى عن عهد الصّبابة والهوى، حيث عرفت من اللّذائذ أمتعها ومن الألم أقساه.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Image Study (WITH LIGHTBOX) ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">🖼️</span> دراسة الصّورة</h2>
+            <div class="ArabicH-image-section">
+                <!-- Image with zoom -->
+                <div class="ArabicH-image-container">
+                    <div class="ArabicH-image-frame" id="imageFrame" title="انقر للتّكبير">
+                        <span class="ArabicH-zoom-badge">🔍 انقر للتّكبير</span>
+                        <img 
+                            id="lessonImage"
+                            src="assets2/year1/comm/orchestra_opera_edgar_dega.jpg" 
+                            alt="أوركسترا الأوبرا - إدغار ديغا" 
+                            loading="lazy"
+                            onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22420%22 viewBox=%220 0 600 420%22><defs><linearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop offset=%220%22 stop-color=%22%236a1b9a%22/><stop offset=%221%22 stop-color=%22%234a148c%22/></linearGradient></defs><rect width=%22600%22 height=%22420%22 fill=%22url(%23g)%22/><text x=%22300%22 y=%22200%22 text-anchor=%22middle%22 fill=%22%23ffc107%22 font-size=%2248%22 font-family=%22Arial%22>🎼</text><text x=%22300%22 y=%22250%22 text-anchor=%22middle%22 fill=%22%23f3e5f5%22 font-size=%2220%22 font-family=%22Arial%22>Orchestra Opera - Edgar Degas</text><text x=%22300%22 y=%22280%22 text-anchor=%22middle%22 fill=%22%23f3e5f5%22 font-size=%2216%22 font-family=%22Arial%22>(صورة توضيحيّة)</text></svg>';"
+                        >
+                    </div>
+                    <p class="ArabicH-image-caption"><strong>أوركسترا الأوبرا</strong> — إدغار ديغا</p>
+                    <p class="ArabicH-image-hint">💡 انقر على الصّورة أو اضغط <span class="kbd">Enter</span> للتّكبير والتّصغير</p>
+                </div>
+                <!-- Study Guide -->
+                <div class="ArabicH-study-card">
+                    <h4>🎨 ادرس الصّورة من حيث:</h4>
+                    <ul class="ArabicH-study-list">
+                        <li><strong>مكوّناتها:</strong> العازفون، الآلات، الجمهور، المكان، الإضاءة.</li>
+                        <li><strong>مستويات هذه المكوّنات:</strong> المقدّمة (العازفون في الصفّ الأوّل)، الوسط (بقية الأوركسترا)، الخلفيّة (الرّاقصات أو الجمهور).</li>
+                        <li><strong>دور الأضواء:</strong> إبراز الوجوه والآلات، خلق جوّ من الخشوع والانتظار، إبراز التّباين بين الظّلّ والنّور.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Proposed Questions ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">❓</span> مداخل إلى المسألة</h2>
+            <div class="ArabicH-questions-list">
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">1</span>
+                    <p>ما الأطوار الّتي تمرّ بها «إيلزا» تحت تأثير الموسيقى؟ وكيف تنتقل من طور إلى آخر؟</p>
+                </div>
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">2</span>
+                    <p>ما أثر الموسيقى الصّاخبة فيك شخصيّاً؟ وهل تختلف عن أثر الموسيقى الرّاقية؟ لماذا؟</p>
+                </div>
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">3</span>
+                    <p>ما أسباب التّشويش أحياناً في الحفلات الموسيقيّة العامّة؟ وكيف يمكن تجنّبه؟</p>
+                </div>
+                <div class="ArabicH-proposed-q">
+                    <span class="q-badge">4</span>
+                    <p>ما شروط نجاح حفل موسيقيّ؟ (مكان، إضاءة، صمت، إنصات، احترام العازفين...)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Group Dialogue ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">💬</span> حوار جماعي</h2>
+            <div class="ArabicH-dialogue">
+                <div class="ArabicH-bubble b1">
+                    <div class="ArabicH-avatar" style="background:#ede7f6;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">سلمى (منشّطة)</span>
+                        <p>نصّ شكيب الجابري يصوّر لنا فتاة تُسافر مع الموسيقى إلى عوالم أخرى. ماذا يحدث لإيلزا بالضّبط حين تبدأ الافتتاحيّة الأولى؟</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b2 alt">
+                    <div class="ArabicH-avatar" style="background:#fff8e1;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">يوسف</span>
+                        <p>الموسيقى تُغيّر حالتها الجسديّة والنّفسيّة معاً. تنخفض أجفانها، يتغيّر لون وجهها، وتدور في ذهنها ذكريات الطّفولة والمراهقة. إنّها <strong>رحلة داخليّة في الزّمن</strong> تُشبه الحلم.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b3">
+                    <div class="ArabicH-avatar" style="background:#e1ecf7;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">مريم</span>
+                        <p>لاحظوا التّعبير «تتخدّر حواسّها خدَراً ناعماً». الموسيقى هنا <strong>مخدّر لذيذ</strong>، لكنّه مخدّر يوقظ الوعي الدّاخليّ بدل أن يُخمده. إنّها حالة من التّنويم المغناطيسيّ الوجدانيّ.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b4 alt">
+                    <div class="ArabicH-avatar" style="background:#fce8ec;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">أمين</span>
+                        <p>لكن يجب التّمييز: هذه موسيقى <strong>راقية</strong> (سيمفونيّة)، لها أثر عميق ومنظّم. أما الموسيقى الصّاخبة فلها أثر مختلف. سمعتُ أنّ الإيقاع العالي جدّاً يُهيّج أكثر ممّا يُعمّق.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b1">
+                    <div class="ArabicH-avatar" style="background:#ede7f6;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">سلمى</span>
+                        <p>ممتاز. إذن نتفق أنّ <strong>للموسيقى أثراً نفسيّاً وجسديّاً</strong>، وأنّ نوعها يحدّد نوع الأثر. الآن لننتقل إلى السّلوك المدنيّ في الحفلات: ما أبرز التّشويشات الّتي تُفسد حفلاً موسيقيّاً؟</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b2 alt">
+                    <div class="ArabicH-avatar" style="background:#fff8e1;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">يوسف</span>
+                        <p>الهواتف المحمولة! أصوات الرّنّين، والتّصوير بالفلاش، والمحادثات الجانبيّة، والدّخول والخروج أثناء العزف. هذه كلّها <strong>تدمّر جوّ الخشوع</strong> الّذي وصفه الكاتب.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b3">
+                    <div class="ArabicH-avatar" style="background:#e1ecf7;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">مريم</span>
+                        <p>وأضيف <strong>التّصفيق في غير محلّه</strong>. كثيرون يُصفّقون بين الحركات بدل الانتظار إلى النّهاية. هذا يُشوّش على العازفين والجمهور في الآن معاً.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b4 alt">
+                    <div class="ArabicH-avatar" style="background:#fce8ec;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">أمين</span>
+                        <p>إذن شروط نجاح الحفل واضحة: <strong>إضاءة هادئة، صمت مطلق، إنصات حقيقيّ، احترام العازفين، ارتداء ملابس لائقة، إغلاق الهواتف</strong>. هذه كلّها مظاهر <strong>سلوك مدنيّ</strong> راقٍ.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b1">
+                    <div class="ArabicH-avatar" style="background:#ede7f6;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">سلمى</span>
+                        <p>وهل الذّوق الموسيقيّ شخصيّ أم قابل للتّربية؟ ما رأيكم؟</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b2 alt">
+                    <div class="ArabicH-avatar" style="background:#fff8e1;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">يوسف</span>
+                        <p>الذّوق شخصيّ في بدايته، لكنّه <strong>قابل للتّربية والتّهذيب</strong>. من يتعرّض للموسيقى الرّاقية يُنمّي ذوقه رويداً رويداً. الأمر كتعلّم قراءة الشّعر: يحتاج صبراً ومثابرة.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b3">
+                    <div class="ArabicH-avatar" style="background:#e1ecf7;">👩‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">مريم</span>
+                        <p>لكن <strong>احترام أذواق الآخرين</strong> ضروريّ. من يحبّ الموسيقى الصّاخبة لا يُلام، ومن يحبّ الكلاسيكيّة لا يُلام. المهمّ ألّا يفرض أحدٌ ذوقه على غيره بأحكام متعجّلة.</p>
+                    </div>
+                </div>
+
+                <div class="ArabicH-bubble b4 alt">
+                    <div class="ArabicH-avatar" style="background:#fce8ec;">🧑‍🎓</div>
+                    <div class="ArabicH-bubble-content">
+                        <span class="ArabicH-bubble-name">أمين</span>
+                        <p>كلامك يُذكّرنا بقدرة «التّحرّي في إصدار الأحكام»: <strong>لا نُصدر حكماً على ذوق أحد قبل فهمه</strong>. لكن في الوقت نفسه، <strong>السّلوك المدنيّ</strong> في الحفل ليس ذوقاً، بل واجب على الجميع.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Exchange of Opinions ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">🔄</span> تبادل آراء</h2>
+            <div class="ArabicH-opinions-grid">
+                <div class="ArabicH-opinion-card">
+                    <span class="opinion-author">يوسف — الرأي الأول</span>
+                    <p>«الموسيقى لغة تتجاوز الكلمات. من يصغي إليها بصدق يسمع صوت نفسه. لهذا حين تسمع إيلزا سيمفونيّة، لا تسمع آلات، بل تسمع ذكرياتها وأحلامها.»</p>
+                </div>
+                <div class="ArabicH-opinion-card">
+                    <span class="opinion-author">مريم — الرأي الثاني</span>
+                    <p>«الذّوق مسألة شخصيّة، لكنّه ليس فوضى. يمكن تربيته وتوجيهه دون فرض. دور المدرسة والأسرة أن تُعرّف الأبناء بأنواع الموسيقى المختلفة، فيختاروا بوعي لا بتقليد.»</p>
+                </div>
+                <div class="ArabicH-opinion-card">
+                    <span class="opinion-author">أمين — الرأي الثالث</span>
+                    <p>«السّلوك المدنيّ في الحفلات مرآة لسلوكنا في الحياة. من يتكلّم في حفل موسيقيّ، سيتكلّم في المسجد والمحاضرة والمكتب. إنّها نفس التّربية على احترام الآخر والمكان.»</p>
+                </div>
+                <div class="ArabicH-opinion-card">
+                    <span class="opinion-author">سلمى — الرأي الرابع</span>
+                    <p>«حضور حفل موسيقيّ ليس ترفاً، بل تدريب على حسن الإصغاء والتّحكّم في الانفعالات. من تعلّم الإصغاء إلى سيمفونيّة، تعلّم الإصغاء إلى النّاس أيضاً.»</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Conclusions ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">✅</span> استنتاجات</h2>
+            <div class="ArabicH-conclusions">
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>للموسيقى أثر عميق في النّفس والجسد،</strong> فهي تُحرّك الذّكريات، وتُوقظ المشاعر، وتُغيّر الحالة الوجدانيّة للمستمع.</p>
+                </div>
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>نوع الموسيقى يحدّد نوع الأثر:</strong> فالموسيقى الرّاقية تُعمّق التّأمّل، في حين أنّ الصّاخبة قد تُهيّج أكثر ممّا تُهدّئ.</p>
+                </div>
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>الذّوق الموسيقيّ شخصيّ،</strong> لكنّه قابل للتّربية والتّهذيب، ولا يجوز إصدار أحكام متعجّلة على أذواق الآخرين.</p>
+                </div>
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>نجاح الحفل الموسيقيّ رهن بالسّلوك المدنيّ:</strong> الصّمت، الإصغاء، إغلاق الهواتف، التّصفيق في محلّه، احترام العازفين.</p>
+                </div>
+                <div class="ArabicH-conclusion-item">
+                    <span class="check">✓</span>
+                    <p><strong>حضور الحفلات مدرسة للتّحكّم في الأهواء والانفعالات،</strong> وتدريب على حسن الإصغاء الّذي هو أساس كلّ حوار ناجح.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== Final Summary ====== -->
+        <div class="ArabicH-comm-section">
+            <h2 class="ArabicH-comm-section-title"><span class="icon">🎓</span> خلاصة: الموسيقى والسّلوك المدنيّ</h2>
+            <div class="ArabicH-final-summary">
+                <h3>حين تُصغي إلى الموسيقى... تُصغي إلى نفسك</h3>
+                <p>يكشف نصّ شكيب الجابري عن علاقة عميقة بين الموسيقى والإنسان، ويُذكّرنا بأنّ الاستماع إلى الموسيقى تجربة وجدانيّة كاملة، ليست مجرّد ترف صوتيّ. ومن هذا الفهم نستخلص ملامح <strong>السّلوك المدنيّ</strong> في التّعامل مع الموسيقى:</p>
+                <ul>
+                    <li><strong>الإصغاء الحقيقيّ:</strong> ليس مجرّد حضور جسديّ، بل حضور وجدانيّ وذهنيّ كامل مع العازفين والعمل الموسيقيّ.</li>
+                    <li><strong>احترام المكان والزّمان:</strong> إغلاق الهواتف، تجنّب الكلام الجانبيّ، الانتظار إلى نهاية الحركة للتصفيق.</li>
+                    <li><strong>احترام الأذواق المختلفة:</strong> لا ذوق موسيقيّ أفضل من آخر بشكل مطلق؛ لكلّ ذوق سياقه ومبرّراته.</li>
+                    <li><strong>التّحكّم في الأهواء:</strong> من يتعلّم الإصغاء إلى سيمفونيّة يتعلّم التّمهّل في إصدار الأحكام في الحياة أيضاً.</li>
+                    <li><strong>التّربية على الجمال:</strong> الذّوق الرّفيع يُكتسب بالتّعرّض والتّجربة، لا بالفرض والإلزام.</li>
+                    <li><strong>الموسيقى جسر بين الثّقافات:</strong> تحترم أذواق الشّعوب وتُقرّب بينها، حين نتعلّم الإصغاء لا الحكم.</li>
+                </ul>
+                <p style="margin-top:1rem;">إنّ السّلوك المدنيّ في الحفلات الموسيقيّة هو صورة مصغّرة من السّلوك المدنيّ في المجتمع كلّه: <strong>احترام الآخر، الإصغاء إليه، وعدم إزعاجه</strong>. فمن يتعلّم أن يُصغي إلى سيمفونيّة، يتعلّم أن يُصغي إلى النّاس.</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                <span class="ArabicH-flower-decoration">🎼</span> 
+                <span class="ArabicH-flower-decoration">🎻</span> 
+                <span class="ArabicH-flower-decoration">🎹</span>
+            </p>
+        </div>
+
+        <div class="ArabicH-nav-buttons">
+            <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.commLesson.backToLessons">العودة إلى الدروس العامة</a>
+            <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.commLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+            <a href="AH_1SY_communication_module2_lesson2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.commLesson.previousLesson">الدرس السابق</a>
+            <a href="AH_1SY_communication_module3_lesson2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.commLesson.nextLesson">الدرس التالي</a>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+
+    <!-- ====== LIGHTBOX MODAL (EXCEPTIONAL ZOOM FEATURE) ====== -->
+    <div class="ArabicH-lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عارض الصورة">
+        <div class="ArabicH-lightbox-inner">
+            <button class="ArabicH-lb-close" id="lbClose" title="إغلاق (Esc)" aria-label="إغلاق">✕</button>
+            <div class="ArabicH-lightbox-img-wrap" id="lbImgWrap">
+                <img class="ArabicH-lightbox-img" id="lbImg" src="" alt="صورة مكبّرة" draggable="false">
+            </div>
+            <div class="ArabicH-lightbox-caption" id="lbCaption"></div>
+            <div class="ArabicH-lightbox-toolbar">
+                <button class="ArabicH-lb-btn" id="lbZoomOut" title="تصغير (-)">➖ <span class="zoom-level" id="zoomLevel">100%</span></button>
+                <button class="ArabicH-lb-btn" id="lbZoomIn" title="تكبير (+)">➕</button>
+                <button class="ArabicH-lb-btn" id="lbReset" title="إعادة التّعيين (0)">🔄 إعادة</button>
+                <button class="ArabicH-lb-btn" id="lbFullscreen" title="ملء الشّاشة (F)">⛶ ملء الشّاشة</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        window.translations_ArabicHCommunicationModule3Lesson1 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.commLesson3a.lessonTitle": "أثر الموسيقى في الإنسان",
+                "ArabicH.commLesson3a.lessonSubtitle": "تواصل شفوي – المحور الثالث: موسيقى وأذواق",
+                "ArabicH.commLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.commLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.commLesson.previousLesson": "الدرس السابق",
+                "ArabicH.commLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.commLesson3a.lessonTitle": "The Effect of Music on Humans",
+                "ArabicH.commLesson3a.lessonSubtitle": "Oral Communication – Unit 3: Music and Tastes",
+                "ArabicH.commLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.commLesson.backToHome": "Back to Homepage",
+                "ArabicH.commLesson.previousLesson": "Previous Lesson",
+                "ArabicH.commLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.commLesson3a.lessonTitle": "L'effet de la musique sur l'être humain",
+                "ArabicH.commLesson3a.lessonSubtitle": "Communication orale – Unité 3: Musique et Goûts",
+                "ArabicH.commLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.commLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.commLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.commLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHCommunicationModule3Lesson1;
+    </script>
+    
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) { item.classList.add('active'); } else { item.classList.remove('active'); }
+            });
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); themeToggle.checked = true; }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+                    else { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+                });
+            }
+        });
+    </script>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() { navigator.serviceWorker.register('/sw.js').then(r => console.log('SW registered')).catch(e => console.log('SW failed')); });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; if (manualInstallBtn) manualInstallBtn.style.display = 'flex'; });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') { manualInstallBtn.style.display = 'none'; deferredPrompt = null; }
+                });
+            }
+        });
+    </script>
+
+    <!-- ====== LIGHTBOX JAVASCRIPT (EXCEPTIONAL ZOOM FEATURE) ====== -->
+    <script>
+    (function() {
+        const frame = document.getElementById('imageFrame');
+        const lessonImg = document.getElementById('lessonImage');
+        const lightbox = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lbImg');
+        const lbCaption = document.getElementById('lbCaption');
+        const lbClose = document.getElementById('lbClose');
+        const lbZoomIn = document.getElementById('lbZoomIn');
+        const lbZoomOut = document.getElementById('lbZoomOut');
+        const lbReset = document.getElementById('lbReset');
+        const lbFullscreen = document.getElementById('lbFullscreen');
+        const zoomLevelEl = document.getElementById('zoomLevel');
+        const lbImgWrap = document.getElementById('lbImgWrap');
+
+        let scale = 1;
+        const MIN_SCALE = 0.5;
+        const MAX_SCALE = 4;
+        const STEP = 0.25;
+
+        function updateZoomLabel() {
+            zoomLevelEl.textContent = Math.round(scale * 100) + '%';
+            lbImg.style.transform = 'scale(' + scale + ')';
+        }
+        function zoomIn() {
+            scale = Math.min(MAX_SCALE, scale + STEP);
+            updateZoomLabel();
+        }
+        function zoomOut() {
+            scale = Math.max(MIN_SCALE, scale - STEP);
+            updateZoomLabel();
+        }
+        function resetZoom() {
+            scale = 1;
+            updateZoomLabel();
+        }
+        function openLightbox() {
+            lbImg.src = lessonImg.src;
+            lbImg.alt = lessonImg.alt;
+            lbCaption.textContent = lessonImg.alt + ' — ' + (lessonImg.closest('.ArabicH-image-container').querySelector('.ArabicH-image-caption').textContent || '');
+            scale = 1;
+            updateZoomLabel();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => lbClose.focus(), 100);
+        }
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+            if (document.fullscreenElement) {
+                document.exitFullscreen().catch(()=>{});
+            }
+        }
+
+        // Open on image click
+        frame.addEventListener('click', openLightbox);
+        frame.setAttribute('tabindex', '0');
+        frame.setAttribute('role', 'button');
+        frame.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(); }
+        });
+
+        // Toolbar
+        lbZoomIn.addEventListener('click', zoomIn);
+        lbZoomOut.addEventListener('click', zoomOut);
+        lbReset.addEventListener('click', resetZoom);
+        lbClose.addEventListener('click', closeLightbox);
+        lbFullscreen.addEventListener('click', function() {
+            if (!document.fullscreenElement) {
+                lbImgWrap.requestFullscreen().catch(()=>{});
+            } else {
+                document.exitFullscreen();
+            }
+        });
+
+        // Click outside to close
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox || e.target === lbImgWrap) closeLightbox();
+        });
+
+        // Wheel to zoom
+        lbImgWrap.addEventListener('wheel', function(e) {
+            e.preventDefault();
+            if (e.deltaY < 0) zoomIn(); else zoomOut();
+        }, { passive: false });
+
+        // Keyboard
+        document.addEventListener('keydown', function(e) {
+            if (!lightbox.classList.contains('active')) return;
+            switch(e.key) {
+                case 'Escape': closeLightbox(); break;
+                case '+': case '=': zoomIn(); break;
+                case '-': case '_': zoomOut(); break;
+                case '0': resetZoom(); break;
+                case 'f': case 'F':
+                    if (!document.fullscreenElement) lbImgWrap.requestFullscreen().catch(()=>{});
+                    else document.exitFullscreen();
+                    break;
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

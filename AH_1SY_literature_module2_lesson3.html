@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أدب: نص "الفحص عن أمر دمنة" - الدرس الثالث | مركز تعليم العربية</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#4a6fa5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="الفحص عن أمر دمنة">
+    <link rel="apple-touch-icon" href="assets/icons/icon-152x152.png">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <style>
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #6b8cbc;
+            --accent-color: #8faadc;
+            --light-color: #f0f5ff;
+            --dark-color: #2d3e5c;
+            --text-color: #2c3e50;
+            --heading-color: #1a2530;
+            --background-color: #f8faff;
+            --card-bg: #ffffff;
+            --definition-bg: #e8efff;
+            --border-color: #c0d0e8;
+            --table-even-bg: #f0f5ff;
+            --table-hover-bg: #e8efff;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 16px rgba(74, 111, 165, 0.12);
+            --gradient-primary: linear-gradient(135deg, #4a6fa5 0%, #2d3e5c 100%);
+            --gradient-secondary: linear-gradient(135deg, #6b8cbc 0%, #4a6fa5 100%);
+            --gradient-accent: linear-gradient(135deg, #8faadc 0%, #6b8cbc 100%);
+            --gradient-light: linear-gradient(135deg, #f0f5ff 0%, #e8efff 100%);
+            --highlight-color: #d4a017;
+            --highlight-bg: rgba(212, 160, 23, 0.1);
+            --story-bg: rgba(74, 111, 165, 0.08);
+            --story-border: #6b8cbc;
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #6b8cbc;
+            --secondary-color: #8faadc;
+            --accent-color: #b5c9f0;
+            --light-color: #2d3e5c;
+            --dark-color: #1a2530;
+            --text-color: #e8efff;
+            --heading-color: #f0f5ff;
+            --background-color: #1a2530;
+            --card-bg: #2d3e5c;
+            --definition-bg: #4a6fa5;
+            --border-color: #6b8cbc;
+            --table-even-bg: #2d3e5c;
+            --table-hover-bg: #4a6fa5;
+            --box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+            --gradient-primary: linear-gradient(135deg, #6b8cbc 0%, #4a6fa5 100%);
+            --gradient-secondary: linear-gradient(135deg, #8faadc 0%, #6b8cbc 100%);
+            --gradient-accent: linear-gradient(135deg, #b5c9f0 0%, #8faadc 100%);
+            --gradient-light: linear-gradient(135deg, #2d3e5c 0%, #1a2530 100%);
+            --highlight-color: #f0c420;
+            --highlight-bg: rgba(240, 196, 32, 0.15);
+            --story-bg: rgba(107, 140, 188, 0.15);
+            --story-border: #8faadc;
+        }
+
+        .ArabicH-lesson-page { min-height: 100vh; background: var(--background-color); display: flex; flex-direction: column; }
+        .ArabicH-lesson-main { flex: 1; display: flex; flex-direction: column; padding: 2rem; max-width: 1200px; margin: 0 auto; width: 100%; }
+        .ArabicH-lesson-title { font-size: 2.5rem; margin-bottom: 1rem; color: var(--heading-color); text-align: center; font-weight: 700; }
+        .ArabicH-lesson-subtitle { font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-color); text-align: center; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+        .ArabicH-lesson-container { background: var(--card-bg); border-radius: var(--border-radius); box-shadow: var(--box-shadow); padding: 2.5rem; margin-bottom: 2rem; border-top: 6px solid var(--primary-color); }
+        .ArabicH-lesson-header { background: var(--gradient-primary); color: white; padding: 1.5rem; border-radius: var(--border-radius); margin-bottom: 2rem; text-align: center; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .ArabicH-lesson-teacher, .ArabicH-lesson-class { font-size: 1.1rem; font-weight: 600; background: rgba(255,255,255,0.15); padding: 8px 15px; border-radius: 20px; backdrop-filter: blur(5px); }
+        .ArabicH-lesson-content { margin: 30px 0; }
+        .ArabicH-exercise-card { background: var(--card-bg); border-radius: var(--border-radius); box-shadow: var(--box-shadow); margin: 25px 0; padding: 1.5rem; border: 1px solid var(--border-color); }
+        .ArabicH-exercise-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--secondary-color); font-weight: 600; text-align: center; border-bottom: 2px solid var(--secondary-color); padding-bottom: 10px; }
+        [data-theme="dark"] .ArabicH-exercise-title { color: var(--accent-color); }
+        .ArabicH-exercise-content { line-height: 1.8; margin-bottom: 20px; color: var(--text-color); }
+        .ArabicH-rule-card { background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-color) 100%); border-radius: var(--border-radius); margin: 20px 0; padding: 1.5rem; border-left: 6px solid var(--secondary-color); position: relative; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .ArabicH-rule-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+        .ArabicH-rule-card::before { content: "📘"; position: absolute; left: 15px; top: 15px; font-size: 1.2rem; opacity: 0.8; }
+        .ArabicH-rule-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700; padding-left: 30px; border-bottom: 2px dashed var(--secondary-color); padding-bottom: 8px; position: relative; }
+        [data-theme="dark"] .ArabicH-rule-title { color: var(--accent-color); }
+        .ArabicH-rule-title::after { content: ""; position: absolute; bottom: -2px; left: 0; width: 60px; height: 2px; background-color: var(--primary-color); }
+        .ArabicH-story-text { font-size: 1.25rem; font-family: 'Traditional Arabic', 'Arial', 'Segoe UI', sans-serif; line-height: 2.0; color: var(--dark-color); margin: 20px 0; padding: 25px; background-color: var(--story-bg); border-radius: var(--border-radius); border-right: 4px solid var(--story-border); text-align: right; direction: rtl; }
+        .ArabicH-story-quote { background-color: rgba(255,255,255,0.7); border-right: 3px solid var(--accent-color); padding: 15px 20px; margin: 15px 0; border-radius: 10px; font-style: italic; color: var(--dark-color); text-align: right; direction: rtl; box-shadow: 0 3px 8px rgba(0,0,0,0.08); }
+        [data-theme="dark"] .ArabicH-story-text { color: #f0f5ff; background-color: var(--story-bg); border-right: 4px solid var(--story-border); }
+        [data-theme="dark"] .ArabicH-story-quote { background-color: rgba(45, 62, 92, 0.7); color: #f0f5ff; }
+        .ArabicH-vocab-table { width: 100%; border-collapse: collapse; margin: 20px 0; direction: rtl; }
+        .ArabicH-vocab-table th { background-color: var(--primary-color); color: white; padding: 12px; font-weight: 600; text-align: center; border: 1px solid var(--border-color); }
+        .ArabicH-vocab-table td { padding: 10px; border: 1px solid var(--border-color); text-align: right; background-color: var(--card-bg); color: var(--text-color); }
+        .ArabicH-vocab-table tr:nth-child(even) td { background-color: var(--table-even-bg); }
+        .ArabicH-vocab-table tr:hover td { background-color: var(--table-hover-bg); }
+        .ArabicH-question { background-color: var(--definition-bg); border-radius: var(--border-radius); padding: 1.5rem; margin: 20px 0; border-right: 4px solid var(--primary-color); position: relative; }
+        .ArabicH-question-title { font-size: 1.2rem; margin-bottom: 10px; color: var(--primary-color); font-weight: 700; text-align: right; }
+        [data-theme="dark"] .ArabicH-question-title { color: var(--accent-color); }
+        .ArabicH-question-content { line-height: 1.8; color: var(--text-color); text-align: right; margin-bottom: 15px; }
+        .ArabicH-show-answer-btn { background-color: var(--primary-color); color: white; border: none; padding: 10px 20px; border-radius: var(--border-radius); cursor: pointer; font-size: 16px; margin-top: 10px; transition: background-color 0.3s; display: block; width: 100%; max-width: 200px; margin-right: auto; margin-left: 0; }
+        .ArabicH-show-answer-btn:hover { background-color: var(--accent-color); }
+        .ArabicH-answer { display: none; margin-top: 20px; padding: 20px; border-radius: var(--border-radius); border-right: 3px solid var(--accent-color); background-color: var(--definition-bg); line-height: 1.8; color: var(--text-color); text-align: right; }
+        .ArabicH-highlighted-quote { background-color: var(--highlight-bg); border-right: 4px solid var(--highlight-color); padding: 20px; border-radius: var(--border-radius); margin: 20px 0; font-style: italic; color: var(--dark-color); text-align: center; direction: rtl; font-weight: 500; font-size: 1.3rem; }
+        [data-theme="dark"] .ArabicH-highlighted-quote { background-color: rgba(240, 196, 32, 0.15); color: #f0f5ff; }
+        .ArabicH-flower-decoration { display: inline-block; margin: 0 10px; color: var(--primary-color); font-size: 1.2rem; }
+        .ArabicH-knowledge-box { background-color: var(--definition-bg); border-radius: var(--border-radius); padding: 1.5rem; margin: 25px 0; border-right: 4px solid var(--primary-color); position: relative; }
+        .ArabicH-knowledge-box::before { content: "💡"; position: absolute; right: 15px; top: 15px; font-size: 1.5rem; opacity: 0.7; }
+        .ArabicH-knowledge-title { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary-color); font-weight: 700; text-align: right; padding-right: 40px; }
+        [data-theme="dark"] .ArabicH-knowledge-title { color: var(--accent-color); }
+        .ArabicH-knowledge-content { line-height: 1.8; color: var(--text-color); text-align: right; }
+        .ArabicH-nav-buttons { display: flex; justify-content: space-between; margin-top: 30px; }
+        .ArabicH-nav-btn { background-color: var(--primary-color); color: white; border: none; padding: 10px 20px; border-radius: var(--border-radius); cursor: pointer; font-size: 16px; text-decoration: none; transition: background-color 0.3s; display: inline-block; text-align: center; }
+        .ArabicH-nav-btn:hover { background-color: var(--accent-color); }
+        @media (max-width: 768px) {
+            .ArabicH-lesson-title { font-size: 2rem; }
+            .ArabicH-lesson-subtitle { font-size: 1.1rem; }
+            .ArabicH-lesson-container { padding: 1.5rem; }
+            .ArabicH-lesson-header { flex-direction: column; gap: 15px; text-align: center; }
+            .ArabicH-nav-buttons { flex-direction: column; gap: 10px; }
+            .ArabicH-rule-card { padding: 1.2rem; }
+            .ArabicH-rule-title { font-size: 1.2rem; padding-left: 25px; }
+            .ArabicH-rule-card::before { left: 12px; top: 12px; font-size: 1.1rem; }
+            .ArabicH-story-text { font-size: 1.15rem; padding: 20px; line-height: 1.9; }
+        }
+        @media (max-width: 480px) {
+            .ArabicH-lesson-main { padding: 1rem; }
+            .ArabicH-lesson-title { font-size: 1.6rem; }
+            .ArabicH-exercise-card { padding: 1rem; }
+            .ArabicH-story-text { font-size: 1.05rem; line-height: 1.8; padding: 15px; }
+            .ArabicH-rule-card { padding: 1rem; }
+            .ArabicH-rule-title { font-size: 1.1rem; padding-left: 22px; }
+            .ArabicH-rule-card::before { left: 10px; top: 10px; font-size: 1rem; }
+        }
+        [data-theme="dark"] p, [data-theme="dark"] li, [data-theme="dark"] div:not(.ArabicH-story-text) { color: var(--text-color) !important; }
+        [data-theme="dark"] strong { color: var(--accent-color); }
+        [data-theme="dark"] h4:not(.ArabicH-exercise-title):not(.ArabicH-rule-title):not(.ArabicH-knowledge-title) { color: var(--accent-color); }
+    </style>
+</head>
+<body class="ArabicH-lesson-page">
+    <header class="ArabicH-general-header">
+        <div class="ArabicH-general-header-content">
+            <div class="ArabicH-general-logo-container">
+                <a href="index.html">
+                    <img src="assets/icons/icon-96x96.png" alt="Logo" class="ArabicH-general-logo" data-i18n-alt="ArabicH.general.logoAlt">
+                </a>
+            </div>
+            <div class="ArabicH-general-title-container">
+                <h1 data-i18n="ArabicH.general.siteName">مركز تعليم العربية</h1>
+            </div>
+            <div class="ArabicH-general-header-controls">
+                <div class="ArabicH-general-theme-toggle">
+                    <label class="ArabicH-theme-toggle-label">
+                        <span data-i18n="ArabicH.general.themeToggle">الوضع الداكن</span>
+                        <div class="ArabicH-theme-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="ArabicH-theme-toggle-slider"></span>
+                        </div>
+                    </label>
+                </div>
+                <div class="ArabicH-general-language-selector">
+                    <select class="ArabicH-general-language-dropdown" id="languageSelect">
+                        <option value="ar">العربية</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="ArabicH-windows-bar">
+        <a href="index.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">🏠</span><span data-i18n="ArabicH.windows.home">الرئيسية</span></a>
+        <a href="authors.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">👨‍🎓</span><span data-i18n="ArabicH.windows.authors">ادباء</span></a>
+        <a href="quotes.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📖</span><span data-i18n="ArabicH.windows.quotes">شواهد</span></a>
+        <a href="resources.html" class="ArabicH-window-item"><span class="ArabicH-window-icon">📚</span><span data-i18n="ArabicH.windows.resources">موارد</span></a>
+    </nav>
+    
+    <main class="ArabicH-lesson-main">
+        <h1 class="ArabicH-lesson-title" data-i18n="ArabicH.literatureLesson.storyTitle">نص: الفحص عن أمر دمنة (3)</h1>
+        <p class="ArabicH-lesson-subtitle" data-i18n="ArabicH.literatureLesson.storySubtitle">الدرس الثالث: تحليل نص من كتاب "كليلة ودمنة" لعبد الله بن المقفع – الوضعية الحجاجية</p>
+        
+        <div class="ArabicH-lesson-container">
+            <!-- Lesson Header -->
+            <div class="ArabicH-lesson-header">
+                <div class="ArabicH-lesson-teacher"><span class="ArabicH-flower-decoration">❦</span> الاستاذ: غير معروف <span class="ArabicH-flower-decoration">❦</span></div>
+                <div class="ArabicH-lesson-class"><span class="ArabicH-flower-decoration">✿</span> المعهد: غير معروف <span class="ArabicH-flower-decoration">✿</span></div>
+            </div>
+            
+            <!-- Introduction -->
+            <div class="ArabicH-knowledge-box">
+                <h3 class="ArabicH-knowledge-title">التمهيد</h3>
+                <div class="ArabicH-knowledge-content">
+                    <p>عاب كليلة أخاه دمنة بإيقاع النميمة بين الأسد والثور، وعبّر له عن خشيته من انكشاف الأمر للملك فيلقى بذلك شرّ جزاء. وصادف أن سمع النمر كلامهما دون علم منهما، فأسرع لتوّه وأعلم أمّ الأسد بالسرّ، فنقلت هي بدورها هذا السرّ إلى ابنها ملك الوحوش.</p>
+                </div>
+            </div>
+            
+            <!-- Story Text -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">النص: الفحص عن أمر دمنة</h3>
+                <div class="ArabicH-story-text">
+                    <p>لَمَّا قَصَّتْ أُمُّ الأَسَدِ هَذَا الكَلاَمَ صَحَّ عِنْدَ الأَسَدِ مَا فَعَلَ دِمْنَةُ، فَاسْتَدْعَى أَصْحَابَهُ وَجُنْدَهُ فَأُدْخِلُوا عَلَيْهِ، ثُمَّ أَمَرَ أَنْ يُؤْتَى بِدِمْنَةَ، فَلَمَّا حَضَرَ دِمْنَةُ نَكَّسَ الأَسَدُ رَأْسَهُ إِلَى الأَرْضِ مَلِيًّا، فَالْتَفَتَ دِمْنَةُ إِلَى بَعْضِ الحَاضِرِينَ فَقَالَ: مَا الَّذِي حَدَثَ؟ وَعَلاَمَ اجْتَمَعْتُمْ؟ وَمَا الَّذِي أَحْزَنَ المَلِكَ؟</p>
+                    
+                    <div class="ArabicH-story-quote">
+                        فَالْتَفَتَتْ أُمُّ الأَسَدِ إِلَيْهِ وَقَالَتْ لَهُ: «أَحْزَنَ المَلِكَ بَقَاؤُكَ وَلَوْ طَرْفَةَ عَيْنٍ، وَلَنْ يَدَعَكَ بَعْدَ اليَوْمِ حَيًّا.»<br><br>
+                        قَالَ دِمْنَةُ: «وَمَا حَدَثَ مِنْ أَمْرِي حَتَّى وَجَبَ بِهِ قَتْلِي؟»<br><br>
+                        قَالَتْ: «إِنَّهُ قَدْ بَانَ لِلْمَلِكِ كَذِبُكَ وَفُجُورُكَ وَخَدِيعَتُكَ فِي قَتْلِ الثَّوْرِ مِنْ غَيْرِ ذَنْبٍ كَانَ مِنْهُ، فَلَسْتَ حَقِيقًا أَنْ تُتْرَكَ بِالحَيَاةِ طَرْفَةَ عَيْنٍ.»
+                    </div>
+                    
+                    <p>قَالَ دِمْنَةُ: مَا تَرَكَ الأَوَّلُ لِلآخِرِ شَيْئًا، لأَنَّهُ يُقَالُ: أَشَدُّ النَّاسِ فِي تَوَقِّي الشَّرِّ يُصِيبُهُ الشَّرُّ قَبْلَ المُسْتَسْلِمِ لَهُ. فَلاَ يَكُونَنَّ المَلِكُ وَخَاصَّتُهُ وَجُنُودُهُ المَثَلَ السُّوءَ. وَلَقَدْ صَدَقَ مَنْ قَالَ: كُلَّمَا ازْدَادَ الإِنْسَانُ فِي الخَيْرِ اجْتِهَادًا كَانَ الشَّرُّ إِلَيْهِ أَسْرَعَ. وَقَدْ قِيلَ: مَنْ صَحِبَ الأَشْرَارَ وَهُوَ يَعْلَمُ حَالَهُمْ كَانَ أَذَاهُ مِنْ نَفْسِهِ، وَلِذَلِكَ انْقَطَعَتِ النُّسَّاكُ بِأَنْفُسِهَا عَنِ الخَلْقِ، وَاخْتَارَتِ الوَحْدَةَ عَلَى المُخَالَطَةِ، وَحُبَّ العَمَلِ لِلَّهِ عَلَى حُبِّ الدُّنْيَا وَأَهْلِهَا. وَمَنْ يَجْزِي بِالخَيْرِ خَيْرًا وَبِالإِحْسَانِ إِحْسَانًا إِلاَّ اللَّهُ؟ وَمَنْ طَلَبَ الجَزَاءَ عَلَى الخَيْرِ مِنَ النَّاسِ كَانَ حَقِيقًا أَنْ يَحْظَى بِالحِرْمَانِ، إِذْ يُخْطِئُ الصَّوَابَ فِي خُلُوصِ العَمَلِ لِغَيْرِ اللَّهِ وَطَلَبِ الجَزَاءِ مِنَ النَّاسِ. وَلَكِنَّ عَاقِبَةَ مَا يَنْبَغِي أَنْ يُعَاقَبَ بِهِ الفُجَّارُ يُصَابُ بِهِ الأَخْيَارُ. وَهَذَا الأَمْرُ شَبِيهٌ بِشَأْنِي، لأَنَّنِي حَمَلَنِي حُبُّ المَلِكِ وَنُصْحِي لَهُ وَإِشْفَاقِي عَلَيْهِ أَنْ أُطْلِعَهُ عَلَى سِرِّ عَدُوِّهِ الخَائِنِ. وَإِنَّ المَلِكَ قَدْ شَاهَدَ مِنْهُ ذَلِكَ عِيَانًا، وَظَهَرَتْ لَهُ العَلاَمَاتُ الَّتِي ذَكَرْتُهَا لَهُ. أَفَهَذَا جَزَائِي مِنْهُ أَنْ أُقْتَلَ؟</p>
+                    
+                    <p>فَلَمَّا سَمِعَ الأَسَدُ ذَلِكَ مِنْ كَلاَمِ دِمْنَةَ، أَمَرَ أَنْ يُخْرَجَ مِنْ عِنْدِهِ حَتَّى يُنْظَرَ فِي أَمْرِهِ لِيَجْتَهِدَ فِي الفَحْصِ عَنْهُ، لِئَلاَّ يَعُودَ إِلَى العَجَلَةِ وَالنَّدَامَةِ. فَعِنْدَ ذَلِكَ سَجَدَ دِمْنَةُ لِلأَسَدِ شُكْرًا لَهُ وَدَعَا لَهُ وَقَالَ: أَيُّهَا المَلِكُ، لاَ تَعْجَلْ فِي قَتْلِي، وَلاَ تَسْمَعْ فِيَّ كَلاَمَ الأَشْرَارِ، وَلْيَبْحَثِ المَلِكُ عَنْ أَمْرِي حَتَّى يَتَبَيَّنَ لَهُ صِدْقِي. وَقَدْ قَالَتِ الحُكَمَاءُ: إِنَّ النَّارَ أُخْفِيَتْ فِي الحِجَارَةِ فَلاَ تُسْتَخْرَجُ مِنْهَا إِلاَّ بِالمُعَالَجَةِ وَالقَدْحِ.</p>
+                </div>
+                <div class="ArabicH-exercise-content" style="text-align: center; margin-top: 15px; color: var(--secondary-color); font-style: italic;">
+                    <strong>المصدر:</strong> عبد الله بن المقفّع، كتاب كليلة ودمنة، طبعة مؤسّسات عبد الكريم بن عبد الله - تونس 1976، صص 145-147
+                </div>
+            </div>
+            
+            <!-- Vocabulary -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">الشروح اللغوية</h3>
+                <div class="ArabicH-table-container">
+                    <table class="ArabicH-vocab-table">
+                        <thead>
+                            <tr>
+                                <th width="30%">المفردة</th>
+                                <th width="70%">الشرح</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>حَقِيقًا</strong></td><td>جديراً وأهلاً</td></tr>
+                            <tr><td><strong>الخَلْق</strong></td><td>الناس</td></tr>
+                            <tr><td><strong>عِيَانًا</strong></td><td>بعينه، مشاهدةً مباشرة</td></tr>
+                            <tr><td><strong>نَكَّسَ رَأْسَهُ</strong></td><td>أطأطأ رأسه إلى الأرض دلالة على الحزن أو التفكير</td></tr>
+                            <tr><td><strong>مَلِيًّا</strong></td><td>طويلاً من الزمن</td></tr>
+                            <tr><td><strong>المُعَالَجَة والقَدْح</strong></td><td>المحاولة والطرق لاستخراج النار من الحجر، كناية عن الجهد للوصول إلى الحقيقة</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Comprehension Questions -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أفهم</h3>
+                
+                <!-- Q1 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- ما هو إطار الحجاج في هذا النص؟ ومن هي أطرافه؟ وما علاقة هذه الأطراف ببعضها البعض؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer1')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer1" class="ArabicH-answer">
+                        <p><strong>إطار الحجاج:</strong> وضعية حجاجية دفاعية-تبريرية تُعقد في مجلس الملك، محورها سؤال: هل يستحق دمنة القتل بسبب دوره في مقتل الثور؟</p>
+                        <p><strong>أطراف الحجاج:</strong></p>
+                        <ul>
+                            <li><strong>دمنة:</strong> المتهم الذي يسعى إلى تبرئة نفسه بأدوات بلاغية متعددة.</li>
+                            <li><strong>الأسد:</strong> صاحب السلطة والحكم، المتردد بين الإسراع بالعقاب والتروي.</li>
+                            <li><strong>أم الأسد:</strong> المدعية التي كشفت الحقيقة وطالبت بالقصاص.</li>
+                        </ul>
+                        <p><strong>العلاقات بين الأطراف:</strong></p>
+                        <ul>
+                            <li><strong>دمنة والأسد:</strong> علاقة ولاء ظاهري يخفي خداعاً، يسعى دمنة من خلالها إلى استعادة ثقة الملك.</li>
+                            <li><strong>أم الأسد والأسد:</strong> علاقة ثقة وتأثير، فهي صوت الضمير والعدالة التي يستند إليها الملك.</li>
+                            <li><strong>دمنة وأم الأسد:</strong> علاقة عدائية وصراع، فهي تكشف كذبه وتطالب بإعدامه، وهو يرد عليها بخطاب غير مباشر.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Q2 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- بدت أم الأسد الطرف المهيمن في الوضعية الحجاجية. استخرج من النص بعض القرائن الدالة على ذلك.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer2')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer2" class="ArabicH-answer">
+                        <p><strong>قرائن هيمنة أم الأسد:</strong></p>
+                        <ul>
+                            <li><strong>الحسم في التهديد:</strong> "ولن يدعك بعد اليوم حياً" – خطاب قاطع لا يحتمل التأويل.</li>
+                            <li><strong>التقرير لا الرأي:</strong> "قد بان للملك كذبك وفجورك وخديعتك" – تصدر الأحكام بصيغة الحقيقة المقررة.</li>
+                            <li><strong>غياب التردد:</strong> على عكس الأسد الذي "نكس رأسه"، فهي تتكلم بيقين وثبات.</li>
+                            <li><strong>المبادرة بالرد:</strong> هي من تبادر دمنة بالجواب حين سأل الحاضرين، وتضع نفسها في موقع القيادة الحوارية.</li>
+                            <li><strong>قطعيّة الحكم:</strong> "فلست حقيقاً أن تُترك بالحياة طرفة عين" – صيغة تعبيرية لا تفتح باباً للتفاوض أو الاستئناف.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Q3 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">3- استخرج من النص الحجج التي اعتمدها دمنة في الدفاع عن نفسه وبيّن تدرّجها.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer3')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer3" class="ArabicH-answer">
+                        <table class="ArabicH-vocab-table">
+                            <thead>
+                                <tr>
+                                    <th>نوع الحجة</th>
+                                    <th>مضمونها</th>
+                                    <th>الهدف منها</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>مفارقة أخلاقية</td>
+                                    <td>أشد الناس في توقي الشر يصيبه الشر قبل المستسلم له</td>
+                                    <td>تصوير نفسه ضحية رغم حرصه على الخير</td>
+                                </tr>
+                                <tr>
+                                    <td>حجة الصحبة</td>
+                                    <td>من صحب الأشرار وهو يعلم حالهم كان أذاه من نفسه</td>
+                                    <td>تحميل جزء من المسؤولية للبيئة المحيطة</td>
+                                </tr>
+                                <tr>
+                                    <td>حجة الزهد والتصوف</td>
+                                    <td>انقطعت النساك بأنفسها عن الخلق واختارت الوحدة</td>
+                                    <td>إضفاء طابع روحي على موقفه، وإظهار الترفع عن الدنيا</td>
+                                </tr>
+                                <tr>
+                                    <td>حجة الجزاء الإلهي</td>
+                                    <td>من يجزي بالخير خيراً إلا الله؟</td>
+                                    <td>نقل مسألة الجزاء من البشر إلى الله، وتبرئة نفسه من طلب المكافأة</td>
+                                </tr>
+                                <tr>
+                                    <td>قلب الأدوار</td>
+                                    <td>عاقبة ما ينبغي أن يعاقب به الفجار يصاب به الأخيار</td>
+                                    <td>تحويل موقع المتهم إلى موقع الضحية</td>
+                                </tr>
+                                <tr>
+                                    <td>حجة الولاء</td>
+                                    <td>حملني حب الملك ونصحي له وإشفاقي عليه...</td>
+                                    <td>تبرير الفعل بأنه نابع من الإخلاص لا الخيانة</td>
+                                </tr>
+                                <tr>
+                                    <td>استعطاف مباشر</td>
+                                    <td>لا تعجل في قتلي، ولا تسمع فيّ كلام الأشرار</td>
+                                    <td>دفع الملك إلى التروي وعدم الإصغاء للاتهام</td>
+                                </tr>
+                                <tr>
+                                    <td>حجة رمزية</td>
+                                    <td>النار أخفيت في الحجارة فلا تستخرج إلا بالمعالجة</td>
+                                    <td>الدعوة إلى البحث للوصول إلى الحقيقة، وتأجيل العقوبة</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>تدرّج الحجج:</strong> بدأ دمنة بالحجة الأخلاقية الذاتية (تصوير نفسه ضحية)، ثم انتقل إلى الحجة الاجتماعية (لوم البيئة)، ثم إلى الحجة الدينية-الروحية (الزهد والجزاء الإلهي)، ثم إلى قلب الأدوار (تضليل الملك)، وأخيراً إلى الاستعطاف المباشر والحجة الرمزية الختامية. فالتدرج ينتقل من الذات إلى المحيط إلى المقدس إلى الملك نفسه، وكلها تصب في غاية واحدة: تأجيل الحكم وقلب صورة المتهم.</p>
+                    </div>
+                </div>
+                
+                <!-- Q4 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">4- استخلص من النص منظومة القيم التي يصدر عنها كل من دمنة وأم الأسد.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer4')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer4" class="ArabicH-answer">
+                        <p><strong>منظومة قيم دمنة:</strong> قيم انتهازية مبنية على:</p>
+                        <ul>
+                            <li>تبرير الفعل بعد وقوعه، وتحميل الآخرين مسؤوليته.</li>
+                            <li>استخدام البلاغة والحكم لخدمة المصلحة الذاتية.</li>
+                            <li>الخلط بين الولاء للملك وطلب المكافأة منه.</li>
+                            <li>توظيف الدين والزهد كوسيلة تضليل لا كقيمة سلوكية.</li>
+                        </ul>
+                        <p><strong>منظومة قيم أم الأسد:</strong> قيم العدالة والصدق:</p>
+                        <ul>
+                            <li>المطالبة بالقصاص دون تردد أو محاباة.</li>
+                            <li>الانتصار للحقيقة وفضح الخداع.</li>
+                            <li>تمثيل صوت الضمير الأخلاقي في البلاط.</li>
+                            <li>الوضوح والحسم في الحكم على الظلم.</li>
+                        </ul>
+                        <p><strong>الخلاصة:</strong> النص يجسد صراعاً بين منطقين: منطق المكر والمراوغة في شخصية دمنة، ومنطق الحق والعدالة في شخصية أم الأسد. وهو صراع قيمي يعكس جوهر الرسالة الأخلاقية في الحكاية المثلية.</p>
+                    </div>
+                </div>
+                
+                <!-- Q5 -->
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">5- أقحم دمنة الملك في حجاجه وجعله شاهداً على ما جرى بينه وبين الثور. فما غايته من ذلك؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer5')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer5" class="ArabicH-answer">
+                        <p>لغايات عدة، منها:</p>
+                        <ul>
+                            <li><strong>إضفاء المصداقية على روايته:</strong> فإذا كان الملك نفسه شاهداً على العلامات التي ظهرت من الثور، فإن دمنة لم يعد مجرد مُخبر، بل صار ناقلاً لحقيقة مشاهدة.</li>
+                            <li><strong>استثارة ضمير الملك:</strong> يذكّره بأن ما فعله كان بدافع "حب الملك ونصحه له"، فيجعله يشعر بالحرج من معاقبته.</li>
+                            <li><strong>توريط الملك عاطفياً:</strong> فإذا كان الملك هو من لاحظ العلامات وصدّقها، فالحكم عليه بالقتل يعني الحكم على الملك نفسه بالخطأ في التقدير.</li>
+                            <li><strong>قلب موقع المتهم:</strong> يتحول من متهم إلى ناصح مظلوم، فيُربك الملك ويجعله يتردد في إصدار الحكم.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Discussion -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أناقش</h3>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">■ يمثل الأسد في النص السلطة التنفيذية، فهل يحق له أن يصدر حكماً على دمنة؟ من هو المخوّل لإصدار الأحكام القضائية؟ استعن في إجابتك بما درسته في التربية المدنية.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer6')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer6" class="ArabicH-answer">
+                        <p>في ضوء مبادئ التربية المدنية ومبدأ <strong>فصل السلطات</strong>، لا يحق للسلطة التنفيذية (الأسد) أن تصدر أحكاماً قضائية، لأن ذلك يخالف مبدأ استقلالية القضاء. فالسلطة التنفيذية مهمتها تنفيذ القوانين وتسيير الشأن العام، بينما تعود صلاحية الفصل في النزاعات وإصدار الأحكام إلى <strong>السلطة القضائية</strong> المستقلة، وفق القانون وفي إطار محاكمة عادلة تحفظ حقوق المتهم.</p>
+                        <p>تدخل الأسد في إصدار الحكم يُعدّ تجاوزاً لاختصاصه، ويهدد مبدأ العدل والحياد، ويعرض المتهم لخطر الانفعال والتحامل. وفي النص، نلحظ أن الملك نفسه تردد وأمر بالفحص، وهو ما يُحسب له في اتجاه احترام مبدأ التثبت والعدالة.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">■ كان يمكن للأسد أن يقف موقف أمه ويصدر حكمه على دمنة بالموت، لكنه لم يفعل، فإلامَ يرجع ذلك في نظرك؟</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer7')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer7" class="ArabicH-answer">
+                        <p>يمكن أن يُعزى ذلك إلى أسباب متداخلة:</p>
+                        <ul>
+                            <li><strong>الحرص على تجنب العجلة والندامة:</strong> كما ورد صريحاً في النص: "ليجتهد في الفحص عنه لئلا يعود إلى العجلة والندامة".</li>
+                            <li><strong>التأثر بالحجاج الدمني:</strong> فدمنة استطاع بحججه المتعددة أن يُربك موقف الملك، ويجعله يشك في صحة الاتهام.</li>
+                            <li><strong>رغبة في تحقيق عدالة مكتملة:</strong> فالملك لا يريد أن يُحكم على أحد دون بحث وتثبت، خاصة في قضية كبرى كقتل الثور.</li>
+                            <li><strong>خشية الظلم:</strong> فدمنة نفسه حذّره من أن يُعاقب الأخيار بذنب الفجار، وأن مبدأ العدالة يقتضي التثبت لا التسرع.</li>
+                        </ul>
+                        <p>وهذا الموقف من الملك يبرز بُعداً إيجابياً في شخصيته: الحكامة الرشيدة، والتروي في إصدار الأحكام، رغم ما قد يحمله ذلك من مخاطر استغلال المتهم للوقت.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Writing -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أحرّر</h3>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">1- اكتب مشهداً مسرحياً تجسّم فيه الوضعية الحجاجية الواردة في النص.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer8')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer8" class="ArabicH-answer">
+                        <p><strong>مشهد مسرحي: "الفحص عن أمر دمنة"</strong></p>
+                        <p><strong>المكان:</strong> قاعة العرش في قصر الأسد، أرضية من الرخام، وأعمدة عالية، والجلسة متوترة.</p>
+                        <p><strong>الشخصيات:</strong> الملك الأسد (جالس على عرشه، ناكس الرأس)، أم الأسد (تقف إلى يمينه بوجه صارم)، دمنة (يدخل بين حارسين، يبدو حائراً متلفتاً)، الحاشية (واقفون في صمت).</p>
+                        
+                        <p><strong>المشهد الأول:</strong></p>
+                        <p>دمنة (يدخل متلفتاً، بنبرة مرتجفة): "ما الذي حدث؟ وعلامَ اجتمعتم؟ وما الذي أحزن الملك؟"</p>
+                        <p>أم الأسد (تقترب خطوة، بحدّة وسخرية): "أحزن الملك بقاؤك ولو طرفة عين. ولن يدعك بعد اليوم حياً."</p>
+                        <p>دمنة (يرفع يديه في دفاع، متصنعاً البراءة): "وما حدث من أمري حتى وجب به قتلي؟"</p>
+                        <p>أم الأسد (بصوت قاطع، مشيرة إليه): "قد بان للملك كذبك وفجورك وخديعتك في قتل الثور من غير ذنب. فلست حقيقاً أن تُترك بالحياة طرفة عين."</p>
+                        
+                        <p><strong>المشهد الثاني:</strong></p>
+                        <p>دمنة (يتنفس بعمق، ثم يتقدم بثبات مصطنع، يخاطب الملك مباشرة): "أيها الملك، ما ترك الأول للآخر شيئاً. أشد الناس في توقي الشر يصيبه الشر قبل المستسلم له. فلا تكن أنت وخاصتك وجندك المثل السوء."</p>
+                        <p>الملك الأسد (يرفع رأسه قليلاً، ينظر إلى دمنة بتأمل): "..."</p>
+                        <p>دمنة (يستمر بنبرة حكيم مظلوم): "ألم يحملني حبك يا مولاي ونصحي لك وإشفاقي عليك أن أطلعك على سر عدوك؟ ألم تشاهد ذلك عياناً؟ أفهذا جزائي أن أُقتل؟"</p>
+                        
+                        <p><strong>المشهد الثالث:</strong></p>
+                        <p>الملك الأسد (يتأمل، يهز رأسه ببطء، ثم يقول بصوت هادئ): "كلامك ثقيل يا دمنة. لكن لا يُحكم على أحد قبل الفحص."</p>
+                        <p>(يلتفت إلى الحرس) "أخرجوه من عندي حتى ننظر في أمره. لئلا نعود إلى العجلة والندامة."</p>
+                        <p>دمنة (يسجد للأرض بامتنان مصطنع، ثم يرفع رأسه): "أيها الملك، لا تعجل في قتلي، ولا تسمع فيّ كلام الأشرار. وقد قالت الحكماء: إن النار أخفيت في الحجارة، فلا تُستخرج منها إلا بالمعالجة والقدح."</p>
+                        <p>(يخرج دمنة بين الحارسين، والملك يبقى في تأمله، وأم الأسد تنسحب غير راضية، والستار يُسدل)</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-question">
+                    <h4 class="ArabicH-question-title">2- تخيّل أحدهم سعى بوشاية في أحد أصدقائك وهو بريء مما اتّهم به. فبماذا يمكنك أن تردّ على الواشي؟ حرّر في ذلك سبعة أسطر وأنت تعتمد ما ينص عليه القانون الداخلي للمدرسة.</h4>
+                    <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer9')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                    <div id="answer9" class="ArabicH-answer">
+                        <p>أقف أمام الواشي بثبات وأقول له: "ما حملتَ إلينا به ليس اتهاماً بل وشاية، والوشاية تهمة في حق نفسها قبل أن تكون تهمة في حق صديقي. القانون الداخلي للمدرسة يمنع كل سلوك يمس بكرامة الآخرين أو يزرع الفتنة بينهم، ويُوجب التحقق من الحقائق قبل إصدار أي حكم. صديقي بريء حتى تثبت إدانته، وهذا مبدأ منصوص عليه في القوانين الحديثة وفي قيم مدرستنا. إن كنت تملك دليلاً فاعرضه أمام إدارة المدرسة، لا أمامي في ممراتها. وإن لم تملك، فالإنصاف يقتضي أن تعتذر. نحن في فضاء تربوي يهدف إلى تربية الضمير لا إلى تعويد الألسن على التجني. فمن حق صديقي أن يُصان عرضه، ومن واجبنا جميعاً أن نحمي الحقيقة من عبث الوشاة."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Context -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">بمناسبة هذا النص</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">القراءة</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>السؤال:</strong> اقرأ القسم الأول من النص وأنت تُنغّم القراءة تنغيماً يعكس لهفة دمنة وخوفه من جهة، وسخرية أم الأسد منه وهزؤها به من جهة ثانية.</p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer10')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer10" class="ArabicH-answer">
+                            <p><strong>التنغيم المقترح للقسم الأول:</strong></p>
+                            <ul>
+                                <li><strong>دمنة (نبرة مرتجفة متسارعة):</strong> "ما الذي حدث؟ وعلامَ اجتمعتم؟ وما الذي أحزن الملك؟" – ينبغي أن تُقرأ بسرعة نسبية، مع ارتفاع في نهاية كل استفهام، لكشف القلق والاضطراب، مع تلعثم خفيف بين الجمل.</li>
+                                <li><strong>أم الأسد (نبرة ساخرة حادة، حاسمة):</strong> "أحزن الملك بقاؤك ولو طرفة عين، ولن يدعك بعد اليوم حياً" – نبرة باردة، فيها احتقار وتهديد، مع مدّ في "طرفة عين" وشدّة في "حياً" لإبراز الحكم النهائي.</li>
+                                <li><strong>دمنة (نبرة دفاعية متوترة):</strong> "وما حدث من أمري حتى وجب به قتلي؟" – تتنقل النبرة بين الاستفهام والاستنكار، وكأنه يحاول أن يبدو واثقاً لكنه ينهار في النهاية.</li>
+                                <li><strong>أم الأسد (نبرة قاطعة آمرة):</strong> "قد بان للملك كذبك وفجورك وخديعتك..." – نبرة متصاعدة، بتشديد على "كذبك وفجورك وخديعتك"، ثم تباطؤ في "فلست حقيقاً أن تُترك بالحياة طرفة عين" لتصبّ الحكم في النهاية.</li>
+                            </ul>
+                            <p>ويُحسن القارئ أن يستعمل التوقف القصير للدلالة على التردد، والإطالة في الصوامت للدلالة على الحدة، وتبديل مستوى الصوت للدلالة على تبدّل المشاعر.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الحقل المعجمي</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>استخرج من النص المفردات التي تنتمي إلى مجالَي "الخير والشر".</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer11')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer11" class="ArabicH-answer">
+                            <p><strong>مفردات تنتمي إلى مجال الخير:</strong></p>
+                            <ul>
+                                <li>الخير، الإحسان، الاجتهاد، الصدق، حب الملك، الإشفاق، النصيحة، النساك، الوحدة، العمل لله، خلوص العمل، الجزاء، الحكمة، المعالجة.</li>
+                            </ul>
+                            <p><strong>مفردات تنتمي إلى مجال الشر:</strong></p>
+                            <ul>
+                                <li>الكذب، الفجور، الخديعة، القتل، الذنب، الأشرار، الأذى، الحرمان، الفجار، العجلة، الندامة، الشّرّ.</li>
+                            </ul>
+                            <p><strong>ملاحظة:</strong> لاحظ التوازن بين المجالين في النص، وهو توازن مقصود يعكس الصراع القيمي الذي تقوم عليه الحكاية، ويكشف عن محاولة دمنة المستميتة لأن يضع نفسه في خانة الخير بينما يضع الآخرين في خانة الشر.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">البحث</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>ابحث في الدستور التونسي عن حقوق المتهم.</strong></p>
+                        <button class="ArabicH-show-answer-btn" onclick="toggleAnswer('answer12')" data-i18n="ArabicH.literatureLesson.showAnswer">إظهار الإجابة</button>
+                        <div id="answer12" class="ArabicH-answer">
+                            <p>يكرّس الدستور التونسي (خاصة دستور 2022 في بابه الثاني المتعلق بالحقوق والحريات) جملة من الحقوق للمتهم، أبرزها:</p>
+                            <ul>
+                                <li><strong>قرينة البراءة:</strong> كل متهم بريء حتى تثبت إدانته في محاكمة عادلة.</li>
+                                <li><strong>الحق في الحياة والكرامة:</strong> الحق في الحياة مقدّس، وكرامة الذات البشرية مصونة، ويُمنع التعذيب بكل أشكاله.</li>
+                                <li><strong>الحق في الدفاع:</strong> للمتهم حق الدفاع عن نفسه أو توكيل محامٍ للدفاع عنه.</li>
+                                <li><strong>الحق في الصمت:</strong> لا يُعتبر امتناع المتهم عن الإدلاء بأقواله إدانة له.</li>
+                                <li><strong>المساواة أمام القانون:</strong> جميع المواطنين متساوون في الحقوق والواجبات دون تمييز.</li>
+                                <li><strong>الحق في محاكمة عادلة:</strong> أمام محكمة مستقلة ونزيهة، مع احترام حقوق الدفاع.</li>
+                            </ul>
+                            <p><strong>علاقتها بالنص:</strong> مطلب دمنة في التروي والفحص قبل الحكم يتقاطع مع مبدأ قرينة البراءة والحق في محاكمة عادلة، ولكن توظيفه لهذا المبدأ في النص كان توظيفاً مراوغاً، يستخدم دفاعاً عن باطل لا انتصاراً للحق.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Know Section -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">أعرف</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ومضة لغوية: حذف ألف "ما" الاستفهامية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>المثال:</strong> "وعلاَمَ اجتمعتم؟"</p>
+                        <p><strong>التحليل:</strong> دخل حرف الجر "على" على اسم الاستفهام "ما"، فحُذفت ألفها وأصبحت "علاَمَ".</p>
+                        <p><strong>القاعدة:</strong> إذا دخل حرف الجر على اسم الاستفهام "ما"، كُتبت بلا ألف إذا كانت في صدر الجملة، مثل:</p>
+                        <ul>
+                            <li><strong>فِيمَ</strong> (في + ما): "فِيمَ أنت من ذكراها؟"</li>
+                            <li><strong>إِلاَمَ</strong> (إلى + ما): "إلامَ المصير؟"</li>
+                            <li><strong>بِمَ</strong> (الباء + ما): "بمَ تفكر؟"</li>
+                            <li><strong>حَتَّامَ</strong> (حتى + ما): "حتامَ الصبر؟"</li>
+                            <li><strong>عَلاَمَ</strong> (على + ما): "علامَ اجتمعتم؟"</li>
+                        </ul>
+                        <p>وإذا لم تكن "ما" في صدر الجملة، أو كانت اسمية موصولة، كُتبت بالألف، مثل: "عما قليل" لا تُحذف الألف فيها في كل الاستعمالات، والتفصيل في كتب النحو.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">ومضة بلاغية: المجاز في إسناد الفعل</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>المثال:</strong> "أشدّ الناس في توقّي الشرّ يصيبه الشرّ قبل المستسلم له".</p>
+                        <p><strong>التحليل:</strong> أسند الكاتب فعل "يصيبه" إلى "الشر" مجازاً، لأن الشرّ لا يصيب من تلقاء نفسه، بل الذي يصيب هو الله أو القدر أو أسباب الشر. ففي إسناد الفعل إلى الشرّ تجسيد له وإضفاء إرادة عليه، وهو ما يُقوّي الصورة البلاغية ويُعمّق المعنى.</p>
+                        <p><strong>نوع المجاز:</strong> مجاز عقلي، أي إسناد الفعل إلى غير فاعله الحقيقي لعلاقة بينهما (السببية هنا).</p>
+                        <p><strong>الغرض البلاغي:</strong> تصوير الشرّ كأنه كائن حيّ يتربص بالناس، وتأكيد حضور الشرّ في الحياة بشكل مفاجئ لا يُنجي منه الحذر.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">فائدة: مجالات القيم</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>تنتمي القيم عموماً إلى المجالات التالية:</p>
+                        <ul>
+                            <li><strong>مجال الأخلاق:</strong> الخير / الشر / الإخلاص / الغدر / الصدق / الكذب.</li>
+                            <li><strong>مجال الحقيقة والمعقول:</strong> الصواب / الخطأ / المعقول / اللامعقول / الواقع / الوهم.</li>
+                            <li><strong>مجال الذوق:</strong> الاستحسان / الاستهجان / المتعة / الملل / اللذة / الألم.</li>
+                            <li><strong>مجال الجمال:</strong> الجمال / القبح / الأناقة / التناسق / الفوضى.</li>
+                        </ul>
+                        <p>وفي نصنا، يغلب <strong>مجال الأخلاق</strong> بوصفه المجال الذي تدور فيه المواجهة بين دمنة وأم الأسد، مع حضور ثانوي لمجال الحقيقة والمعقول (الصدق/الكذب/الوهم/الواقع) بوصفه ساحة الصراع الحجاجي.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Analysis Section -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">قسم التحليل: مباني ومضامين</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">التقديم والتأطير</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>يُعدّ نصّ "الفحص عن أمر دمنة" الحلقة الثالثة والأخيرة في حكاية دمنة مع الأسد والثور، وهو يمثل لحظة الحساب والمواجهة بعد أن انكشف أمره. فبعد أن نجحت حيلته في إشعال الصراع بين الأسد والثور وهلاك الأخير، يأتي دور كشف الحقيقة ومحاسبته عليها.</p>
+                        <p>النص ينتمي إلى <strong>المحور الثاني: الحكاية المثلية</strong>، ويُواصل فيه ابن المقفع بناء درسه السياسي والأخلاقي، لكنه ينتقل من مستوى المكر إلى مستوى المحاكمة، ومن مستوى الفعل إلى مستوى القول والدفاع. وهو بذلك يُتيح لنا أن نقرأ الحكاية من زاوية جديدة: زاوية <strong>الوضعية الحجاجية</strong>.</p>
+                        <p><strong>الموضوع:</strong> يتناول النص محاكمة دمنة بعد كشف خديعته، ويجسّد صراعه الحجاجي للدفاع عن نفسه أمام الملك وأم الأسد، في مشهد يجمع بين السلطة والبلاغة، والحق والمكر.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الوحدات (المعيار: تطوّر الموقف الحجاجي)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ul>
+                            <li><strong>وحدة الاتهام:</strong> من "لما قصّت أم الأسد هذا الكلام..." إلى "فلست حقيقاً أن تُترك بالحياة طرفة عين" – كشف الحقيقة وبداية المواجهة.</li>
+                            <li><strong>وحدة الدفاع:</strong> من "قال دمنة: ما ترك الأول..." إلى "أفهذا جزائي منه أن أقتل؟" – يبني دمنة حجاجه التبريري على مستويات متعددة.</li>
+                            <li><strong>وحدة الفحص:</strong> من "فلما سمع الأسد ذلك..." إلى آخر النص – تراجع الملك عن العجلة، وقرار الفحص والتريّث.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">تحليل المقاطع</h4>
+                    <div class="ArabicH-exercise-content">
+                        <h5 style="color: var(--primary-color); margin: 15px 0 10px 0;">المقطع الأول: الاتهام – صوت العدالة</h5>
+                        <p><strong>مقوماته:</strong></p>
+                        <ul>
+                            <li><strong>الحسم التقريري:</strong> "قد بان للملك كذبك وفجورك وخديعتك".</li>
+                            <li><strong>التشخيص المباشر:</strong> "في قتل الثور من غير ذنب كان منه" – اتهام مُحدّد لا يقبل التأويل.</li>
+                            <li><strong>القطع بالحكم:</strong> "فلست حقيقاً أن تُترك بالحياة طرفة عين".</li>
+                            <li><strong>السخرية اللاذعة:</strong> "أحزن الملك بقاؤك ولو طرفة عين" – تلاعب لفظي يقلب الحزن من فراق إلى رغبة في الفناء.</li>
+                        </ul>
+                        <p><strong>الدلالات:</strong> يُقدّم هذا المقطع أم الأسد بوصفها صوت الضمير والعدالة، وهي صاحبة الخطاب الحاسم الذي يضع دمنة في موقف المتهم المكشوف. لكنها في الوقت نفسه تكشف عن سلطة خطابية قوية، وعن حضور المرأة في قلب البلاط بوصفها طرفاً حاسماً في المعادلة السياسية.</p>
+                        
+                        <h5 style="color: var(--primary-color); margin: 20px 0 10px 0;">المقطع الثاني: الدفاع – بلاغة المراوغة</h5>
+                        <p><strong>مقوماته:</strong> يعتمد دمنة على مجموعة من الحجج المتدرجة:</p>
+                        <ol>
+                            <li><strong>حجة المفارقة الأخلاقية:</strong> من يتوقّى الشر يصيبه الشر أكثر من المستسلم.</li>
+                            <li><strong>حجة الصحبة الفاسدة:</strong> من صحب الأشرار كان أذاه من نفسه.</li>
+                            <li><strong>حجة الزهد والتصوف:</strong> الاستشهاد بالنساك المنقطعين عن الخلق.</li>
+                            <li><strong>حجة الجزاء الإلهي:</strong> من يجزي بالخير خيراً إلا الله؟</li>
+                            <li><strong>قلب الأدوار:</strong> الأخيار يُصابون بما يُعاقب به الفجار.</li>
+                            <li><strong>حجة الولاء:</strong> حبّه للملك ونصحه وإشفاقه عليه هو ما دفعه.</li>
+                            <li><strong>حجة الاستعطاف المباشر:</strong> "لا تعجل في قتلي".</li>
+                            <li><strong>الحجة الرمزية:</strong> النار في الحجارة لا تُستخرج إلا بالقدح.</li>
+                        </ol>
+                        <p><strong>الدلالات:</strong> يكشف هذا المقطع عن عبقرية دمنة البلاغية، وعن قدرته على توظيف الحكمة والدين والمشاعر في خدمة مصلحته. وهو يُظهر أيضاً أن الشرّ لا يقف عاجزاً أمام الاتهام، بل يمتلك خطابه الخاص الذي قد يقنع أو يُربك. لكن النص يُظهر أيضاً تكلفه؛ فحججه تتناقض داخلياً (يستشهد بالزهد وهو في قلب البلاط، ويستنكر الجزاء من الناس وهو يطلبه من الملك).</p>
+                        
+                        <h5 style="color: var(--primary-color); margin: 20px 0 10px 0;">المقطع الثالث: الفحص – تردد السلطة</h5>
+                        <p><strong>مقوماته:</strong></p>
+                        <ul>
+                            <li><strong>قرار التريث:</strong> "أمر أن يُخرج من عنده حتى يُنظر في أمره".</li>
+                            <li><strong>التعليل:</strong> "ليجتهد في الفحص عنه لئلا يعود إلى العجلة والندامة".</li>
+                            <li><strong>الاستعطاف الأخير:</strong> "لا تعجل في قتلي... وليبحث الملك عن أمري".</li>
+                            <li><strong>الحكمة الختامية:</strong> "النار أخفيت في الحجارة...".</li>
+                        </ul>
+                        <p><strong>الدلالات:</strong> يكشف هذا المقطع عن أن السلطة ليست مطلقة، بل هي عرضة للتردد والتأثر بالحجاج. وبينما أرادت أم الأسد الحسم، اختار الأسد التريث، فأنقذ دمنة مؤقتاً من القتل. لكن النص يُظهر أن هذا التريث، إن لم يكن مدعوماً بمعايير واضحة، قد يكون ثغرة يستغلها الماكرون. وبذلك يُطرح سؤال العلاقة بين العدالة والحكمة في إدارة شؤون البلاط.</p>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المبنى (الشكل)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ol>
+                            <li><strong>الحجاج:</strong> هو العمود الفقري للنص، ويقوم على الحوار المباشر بين الأطراف.</li>
+                            <li><strong>الاستشهاد بالحكم والأمثال:</strong> يُكثف دمنة من استخدام الحكمة الشعبية لإضفاء المصداقية.</li>
+                            <li><strong>المفارقة:</strong> بين خطاب دمنة الداعي للزهد وموقعه في البلاط، وبين خطاب أم الأسد الساخر وواقع الملك المتردد.</li>
+                            <li><strong>اللغة:</strong> جزلة، تستمد من المعجم الأخلاقي والديني والفلسفي.</li>
+                            <li><strong>الأساليب:</strong> مزج بين الخبر (التقرير) والإنشاء (الاستفهام، الأمر، النهي).</li>
+                            <li><strong>البناء الفني:</strong> اتهام – دفاع – قرار بالفحص، في بناء ثلاثي متصاعد.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">المضمون (المعنى)</h4>
+                    <div class="ArabicH-exercise-content">
+                        <ol>
+                            <li><strong>خطر البلاغة في خدمة الباطل:</strong> فالبلاغة سلاح ذو حدين، تُخدم الحق كما تُخدم المكر.</li>
+                            <li><strong>الصراع بين العدالة والمكر:</strong> أم الأسد تمثل العدالة، ودمنة يمثل المكر، والملك بينهما.</li>
+                            <li><strong>السلطة بين الحسم والتردد:</strong> الأسد يتردد فيُهدّد استقرار العدالة.</li>
+                            <li><strong>التروي قبل الحكم:</strong> قيمة إيجابية لكنها قد تتحول إلى ثغرة إن لم تُضبط.</li>
+                            <li><strong>قرينة البراءة:</strong> يتقاطع النص مع مبدأ قانوني حديث، لكنه يُوظف هنا لصالح الباطل.</li>
+                            <li><strong>مسؤولية المثقف:</strong> فالحكمة والمعرفة قد تُستعمل لأغراض خبيثة، وهذا ما يُحذر منه النص.</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">الخاتمة التحليلية</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p>يُقدّم نصّ "الفحص عن أمر دمنة" مشهداً حجاجياً بليغاً، تتجابه فيه العدالة والمكر، وتتبارى فيه البلاغة مع الحقيقة. وقد جمع ابن المقفع بين الحكاية والحكمة، وبين المتعة والعبرة، ليُبرز خطر الكلمة حين تُوظّف في خدمة الباطل، وخطر التردد حين تتراجع السلطة عن الحسم أمام ضغط الحجاج المغرض. وهو بذلك يضعنا أمام سؤال أخلاقي دائم: كيف نميّز بين بلاغة الحق وبلاغة المكر؟ وكيف نُحقق العدالة دون أن نقع في فخ التسويف؟</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Writing Section -->
+            <div class="ArabicH-exercise-card">
+                <h3 class="ArabicH-exercise-title">قسم التحرير: تحويل التحليل إلى مقال (مقدمة - جوهر - خاتمة)</h3>
+                
+                <div class="ArabicH-rule-card">
+                    <h4 class="ArabicH-rule-title">مقال تحليلي: البلاغة بين سلطة الحق وسلطة المكر – قراءة في نص "الفحص عن أمر دمنة"</h4>
+                    <div class="ArabicH-exercise-content">
+                        <p><strong>مقدمة:</strong></p>
+                        <p>إذا كانت الحكاية المثلية في "كليلة ودمنة" قد جعلت من الحيوانات مرآة للبشر، فإن نصّ "الفحص عن أمر دمنة" يُقدّم هذه المرآة في أنصع صورها. فالمشهد هنا ليس صراعاً على السلطة أو الجاه، بل هو صراع على الكلمة نفسها: على من يملك الحقيقة، ومن يملك البلاغة، ومن يفرض روايته على المجلس. وهو صراع يختزل صراعاً أعمق بين العدالة والمكر، وبين الحسم والتردد، وبين صوت الضمير وصوت المصلحة.</p>
+                        
+                        <p><strong>الجوهر:</strong></p>
+                        <p>تنطلق الوضعية الحجاجية في النص من اتهام صريح تطلقه أم الأسد، بعد أن كُشف أمر دمنة في قضية الثور. وهي لا تكتفي بالاتهام، بل تُصدر حكمها بصيغة تقريرية لا تقبل التأويل: "قد بان للملك كذبك وفجورك وخديعتك"، و"لن يدعك بعد اليوم حياً". هذا الحسم يضع دمنة أمام خيار واحد: أن يدافع أو يُقتل. فيختار الدفاع، لكنه لا يدافع بالبراءة، بل بالبلاغة.</p>
+                        
+                        <p>يبني دمنة خطابه على حجج متعددة، تنتقل من الذات إلى المحيط إلى المقدس إلى الملك. يبدأ بالمفارقة الأخلاقية (أشد الناس في توقي الشر يصيبه الشر)، فيُصوّر نفسه ضحية رغم حرصه على الخير. ثم ينتقل إلى لوم البيئة والصحبة (من صحب الأشرار كان أذاه من نفسه). ثم يستدعي الزهد والتصوف ليرتقي بموقفه إلى مستوى روحي. ثم يستخدم الجزاء الإلهي لينقل مسألة الجزاء من البشر إلى الله. ثم يقلب الأدوار (عاقبة ما يعاقب به الفجار يصاب به الأخيار) ليجعل من نفسه ضحية لا جاني. ثم يعود إلى الملك بحجة الولاء (حملني حب الملك ونصحي له). وأخيراً يستعطفه مباشرة ويدعوه إلى الفحص والتروي، ضارباً مثلاً رمزياً: "إن النار أخفيت في الحجارة فلا تُستخرج منها إلا بالمعالجة والقدح".</p>
+                        
+                        <p>وهكذا ينجح دمنة، لا لأنّه بريء، بل لأنّه بليغ. لقد استطاع بخطابه أن يُربك الملك، وأن يجعل التريث يبدو حكمة لا جبناً، وأن يحوّل المحاكمة من لحظة عدالة إلى لحظة تفاوض بلاغي. وهذا هو أخطر ما في النص: أن البلاغة حين تُوظّف لخدمة الباطل، تستطيع أن تُعطّل العدالة وتُشوّه الحقيقة.</p>
+                        
+                        <p>ويُبرز النص في المقابل شخصية أم الأسد بوصفها صوت الضمير الذي لا يُخدع بالبلاغة. إنها تُواجه الحجاج بحجاج، والبلاغة ببلاغة من نوع آخر: بلاغة الحسم والوضوح والقطع. وهي بلاغة أقصر، لكنها أكثر فعالية، لأنها تنطلق من الحقيقة لا من المصلحة. فبينما يطيل دمنة في حججه، تُوجز أم الأسد في اتهامها، وتضع النقاط على الحروف. وهذا التوازن بين الإطالة والإيجاز هو ما يمنح النص توتره الدرامي.</p>
+                        
+                        <p>أما الملك، فيقف بين الطرفين موقف المتردد. لم يُحسم أمره، ولم يحسم موقفه. أمر بالفحص، لا لأنه مقتنع ببراءة دمنة، بل لأنه يخاف من العجلة والندامة. وهو موقف يكشف عن هشاشة السلطة حين تفتقر إلى معايير واضحة للعدالة، وعن خطر التريث حين يصبح ذريعة للتهرب من الحسم.</p>
+                        
+                        <p><strong>خاتمة:</strong></p>
+                        <p>يظل نصّ "الفحص عن أمر دمنة" درساً بالغاً في العلاقة بين البلاغة والعدالة، وفي خطر الكلمة حين تُصبح أداة تلاعب لا وسيلة إقناع. فالنص لا يحتفل بانتصار دمنة، بل يفضح آليات هذا الانتصار، ويُحذّر من بلاغة المكر التي قد تُعمّي البصائر. وهو بذلك يدعونا إلى قراءة كل خطاب قراءة نقدية، وإلى التمييز الدائم بين جمال الكلام وصدق صاحبه، لأن العدالة لا تُبنى بالبلاغة وحدها، بل بالحقيقة والوضوح والحسم.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; text-align: center;">
+                <p style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">
+                    <span class="ArabicH-flower-decoration">✎</span> 
+                    <span class="ArabicH-flower-decoration">✍</span> 
+                    <span class="ArabicH-flower-decoration">✎</span>
+                </p>
+            </div>
+            
+            <div class="ArabicH-nav-buttons">
+                <a href="AH_General_Lessons.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToLessons">العودة إلى الدروس العامة</a>
+                <a href="index.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.backToHome">العودة إلى الصفحة الرئيسية</a>
+                <a href="AH_1SY_literature_module2_lesson2.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.previousLesson">الدرس السابق</a>
+                <a href="AH_1SY_literature_module3_lesson1.html" class="ArabicH-nav-btn" data-i18n="ArabicH.literatureLesson.nextLesson">الدرس التالي</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="ArabicH-general-footer">
+        <div class="ArabicH-general-footer-content">
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.developerTitle">المطور</h4>
+                <p data-i18n="ArabicH.general.developer">زياد الماجري</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.versionTitle">الإصدار</h4>
+                <p data-i18n="ArabicH.general.version">v1.0.0</p>
+            </div>
+            <div class="ArabicH-general-footer-column">
+                <h4 data-i18n="ArabicH.general.linksTitle">الروابط</h4>
+                <div class="ArabicH-general-footer-links">
+                    <a href="#" data-i18n="ArabicH.general.termsOfUse">شروط الاستخدام</a>
+                    <a href="#" data-i18n="ArabicH.general.privacyPolicy">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <button id="manual-install-btn" class="ArabicH-pwa-install-btn" style="display: none;">
+        <span class="ArabicH-pwa-install-icon">📱</span>
+        <span data-i18n="ArabicH.pwa.install">تثبيت التطبيق</span>
+    </button>
+    
+    <script>
+        window.translations_ArabicHLiteratureModule2Lesson3 = {
+            ar: {
+                "ArabicH.general.siteName": "مركز تعليم العربية",
+                "ArabicH.general.logoAlt": "شعار مركز تعليم العربية",
+                "ArabicH.general.developerTitle": "المطور",
+                "ArabicH.general.developer": "زياد الماجري",
+                "ArabicH.general.versionTitle": "الإصدار",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "الروابط",
+                "ArabicH.general.termsOfUse": "شروط الاستخدام",
+                "ArabicH.general.privacyPolicy": "سياسة الخصوصية",
+                "ArabicH.general.themeToggle": "الوضع الداكن",
+                "ArabicH.windows.home": "الرئيسية",
+                "ArabicH.windows.authors": "ادباء",
+                "ArabicH.windows.quotes": "شواهد",
+                "ArabicH.windows.resources": "موارد",
+                "ArabicH.literatureLesson.storyTitle": "نص: الفحص عن أمر دمنة (3)",
+                "ArabicH.literatureLesson.storySubtitle": "الدرس الثالث: تحليل نص من كتاب 'كليلة ودمنة' لعبد الله بن المقفع – الوضعية الحجاجية",
+                "ArabicH.literatureLesson.showAnswer": "إظهار الإجابة",
+                "ArabicH.literatureLesson.backToLessons": "العودة إلى الدروس العامة",
+                "ArabicH.literatureLesson.backToHome": "العودة إلى الصفحة الرئيسية",
+                "ArabicH.literatureLesson.previousLesson": "الدرس السابق",
+                "ArabicH.literatureLesson.nextLesson": "الدرس التالي",
+                "ArabicH.pwa.install": "تثبيت التطبيق"
+            },
+            en: {
+                "ArabicH.general.siteName": "Arab Learning Hub",
+                "ArabicH.general.logoAlt": "Arab Learning Hub Logo",
+                "ArabicH.general.developerTitle": "Developer",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Links",
+                "ArabicH.general.termsOfUse": "Terms of Use",
+                "ArabicH.general.privacyPolicy": "Privacy Policy",
+                "ArabicH.general.themeToggle": "Dark mode",
+                "ArabicH.windows.home": "Home",
+                "ArabicH.windows.authors": "Authors",
+                "ArabicH.windows.quotes": "Quotes",
+                "ArabicH.windows.resources": "Resources",
+                "ArabicH.literatureLesson.storyTitle": "Text: The Investigation of Dimna's Affair (3)",
+                "ArabicH.literatureLesson.storySubtitle": "Lesson 3: Analysis of a Text from 'Kalila wa Dimna' by Abdullah Ibn al-Muqaffa – The Argumentative Situation",
+                "ArabicH.literatureLesson.showAnswer": "Show Answer",
+                "ArabicH.literatureLesson.backToLessons": "Back to General Lessons",
+                "ArabicH.literatureLesson.backToHome": "Back to Homepage",
+                "ArabicH.literatureLesson.previousLesson": "Previous Lesson",
+                "ArabicH.literatureLesson.nextLesson": "Next Lesson",
+                "ArabicH.pwa.install": "Install App"
+            },
+            fr: {
+                "ArabicH.general.siteName": "Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.logoAlt": "Logo du Centre d'Apprentissage d'Arabe",
+                "ArabicH.general.developerTitle": "Développeur",
+                "ArabicH.general.developer": "Mejri Ziad",
+                "ArabicH.general.versionTitle": "Version",
+                "ArabicH.general.version": "v1.0.0",
+                "ArabicH.general.linksTitle": "Liens",
+                "ArabicH.general.termsOfUse": "Conditions d'utilisation",
+                "ArabicH.general.privacyPolicy": "Politique de confidentialité",
+                "ArabicH.general.themeToggle": "Mode sombre",
+                "ArabicH.windows.home": "Accueil",
+                "ArabicH.windows.authors": "Auteurs",
+                "ArabicH.windows.quotes": "Citations",
+                "ArabicH.windows.resources": "Ressources",
+                "ArabicH.literatureLesson.storyTitle": "Texte: L'Enquête sur l'affaire de Dimna (3)",
+                "ArabicH.literatureLesson.storySubtitle": "Leçon 3: Analyse d'un texte du 'Kalila wa Dimna' d'Abdullah Ibn al-Muqaffa – La situation argumentative",
+                "ArabicH.literatureLesson.showAnswer": "Afficher la Réponse",
+                "ArabicH.literatureLesson.backToLessons": "Retour aux Leçons Générales",
+                "ArabicH.literatureLesson.backToHome": "Retour à la Page d'Accueil",
+                "ArabicH.literatureLesson.previousLesson": "Leçon Précédente",
+                "ArabicH.literatureLesson.nextLesson": "Leçon Suivante",
+                "ArabicH.pwa.install": "Installer l'application"
+            }
+        };
+        window.currentTranslations = window.translations_ArabicHLiteratureModule2Lesson3;
+    </script>
+    
+    <script src="scripts/translation.js"></script>
+    <script src="scripts/pwa-handler.js"></script>
+    
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            const button = event.target;
+            const showText = button.getAttribute('data-i18n-show') || 'إظهار الإجابة';
+            const hideText = button.getAttribute('data-i18n-hide') || 'إخفاء الإجابة';
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                button.textContent = showText;
+            } else {
+                answer.style.display = "block";
+                button.textContent = hideText;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop();
+            const windowItems = document.querySelectorAll('.ArabicH-window-item');
+            windowItems.forEach(item => {
+                if (item.getAttribute('href') === currentPage) { item.classList.add('active'); } else { item.classList.remove('active'); }
+            });
+            document.querySelectorAll('.ArabicH-show-answer-btn').forEach(button => { button.setAttribute('data-i18n-value', button.textContent); });
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                if (savedTheme === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); themeToggle.checked = true; }
+                themeToggle.addEventListener('change', function() {
+                    if (this.checked) { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+                    else { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+                });
+            }
+        });
+    </script>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() { navigator.serviceWorker.register('/sw.js').then(r => console.log('SW registered')).catch(e => console.log('SW failed')); });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const manualInstallBtn = document.getElementById('manual-install-btn');
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; if (manualInstallBtn) manualInstallBtn.style.display = 'flex'; });
+            if (manualInstallBtn) {
+                manualInstallBtn.addEventListener('click', async () => {
+                    if (!deferredPrompt) return;
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    if (outcome === 'accepted') { manualInstallBtn.style.display = 'none'; deferredPrompt = null; }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
